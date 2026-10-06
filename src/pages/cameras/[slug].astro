@@ -10,6 +10,7 @@ const { c } = Astro.props;
 const U = "Unknown";
 const list = (v: string[] | string) => (v === U ? "未知" : (v as string[]).join("、"));
 const res = (r: string) => r.replace(/x/g, "×");
+const cropText = (m: any) => m.crop === "none" ? "不裁切" : m.crop === "crop" ? `裁切${m.crop_factor ? `（約 ${m.crop_factor}×）` : ""}` : "裁切未知";
 const sensorSize = c.sensor.width_mm === U ? "尺寸未知" : `${c.sensor.width_mm} × ${c.sensor.height_mm} mm`;
 const facts: [string, string][] = [
   ["感光元件", `${c.sensor.format}（${sensorSize}）`],
@@ -61,19 +62,28 @@ const desc = `${c.name} 規格：${c.sensor.format} 感光元件、${c.lens_moun
 
   <h2>錄影模式</h2>
   <p class="cam-count">列出常用的錄影模式，不是全部組合。位元率單位 Mbps。</p>
+  <ul class="modes-m">
+    {c.recording_modes.map((m: any) => (
+      <li>
+        <b class="num">{res(m.resolution)}・{show(m.max_fps, "p")}</b>
+        <span>{m.codec}・<span class="num">{show(m.bitrate_mbps, " Mbps")}</span>・{show(m.bit_depth, "-bit")} {show(m.chroma)}・{cropText(m)}</span>
+        {m.notes && <small>{m.notes}</small>}
+      </li>
+    ))}
+  </ul>
   <div class="tbl-wrap">
     <table class="modes">
-      <thead><tr><th>解析度</th><th>最高格率</th><th>編碼</th><th>位元率</th><th>位元深度</th><th>色彩取樣</th><th>裁切</th><th>備註</th></tr></thead>
+      <thead><tr><th>解析度</th><th>格率</th><th>編碼</th><th>位元率</th><th>位元深度</th><th>色彩取樣</th><th>裁切</th><th>備註</th></tr></thead>
       <tbody>
         {c.recording_modes.map((m: any) => (
           <tr>
             <td class="first n" data-th="解析度">{res(m.resolution)}</td>
-            <td class="n" data-th="最高格率">{show(m.max_fps, " fps")}</td>
+            <td class="n" data-th="格率">{show(m.max_fps, " fps")}</td>
             <td data-th="編碼">{m.codec}</td>
             <td class="n" data-th="位元率">{show(m.bitrate_mbps, " Mbps")}</td>
             <td class="n" data-th="位元深度">{show(m.bit_depth, "-bit")}</td>
             <td class="n" data-th="色彩取樣">{show(m.chroma)}</td>
-            <td data-th="裁切">{m.crop === "none" ? "不裁切" : m.crop === "crop" ? `裁切${m.crop_factor ? `（約 ${m.crop_factor}×）` : ""}` : "未知"}</td>
+            <td data-th="裁切">{cropText(m)}</td>
             <td class={m.notes ? "note" : "note empty"} data-th="備註">{m.notes || "—"}</td>
           </tr>
         ))}

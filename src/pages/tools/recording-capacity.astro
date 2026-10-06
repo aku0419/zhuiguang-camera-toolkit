@@ -136,11 +136,13 @@ const cards = [64, 128, 256, 512, 1000, 2000];
       const o = document.createElement("option");
       o.value = String(i);
       const known = typeof m.mbps === "number";
-      o.textContent = known ? `${m.label}・${m.mbps} Mbps` : `${m.label}・位元率未知`;
+      o.textContent = (known ? `${m.label}・${m.mbps} Mbps` : `${m.label}・位元率未知`) + (m.sq ? "（慢動作）" : "");
       o.disabled = !known;
       cmode.append(o);
     });
-    const first = c.modes.findIndex((m: any) => typeof m.mbps === "number");
+    // 預設選一般錄影（不是慢動作）、60p 以下、位元率已知的第一個模式
+    let first = c.modes.findIndex((m: any) => typeof m.mbps === "number" && !m.sq && (typeof m.fps !== "number" || m.fps <= 60));
+    if (first < 0) first = c.modes.findIndex((m: any) => typeof m.mbps === "number");
     if (first >= 0) cmode.value = String(first);
     modeHint.textContent = first >= 0 ? "選一個錄影模式，位元率會自動填入。" : "這台相機的位元率原廠沒有公布，請自行輸入。";
     applyMode();

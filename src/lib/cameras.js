@@ -63,7 +63,7 @@ function enrich(c, sample) {
     ...c,
     sample,
     name: `${c.brand} ${c.model}`,
-    max_resolution: top.resolution,
+    max_resolution: isStr(c.max_resolution) ? c.max_resolution : top.resolution,
     max_fps: known.length ? Math.max(...known.map((m) => m.max_fps)) : U,
     crop_factor: factor,
   };
@@ -96,6 +96,7 @@ export const camerasForTools = cameras.map((c) => ({
     fps: m.max_fps,
     mbps: m.bitrate_mbps,
     crop: m.crop,
+    sq: /S&Q|僅慢動作/.test(m.notes || ""),
   })),
 }));
 

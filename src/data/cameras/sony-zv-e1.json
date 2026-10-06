@@ -1,0 +1,33 @@
+{
+  "slug": "sony-zv-e1",
+  "brand": "Sony",
+  "model": "ZV-E1",
+  "aliases": ["ZVE1"],
+  "type": "無反光鏡相機（Vlog）",
+  "announced": "Unknown",
+  "sensor": { "format": "Full Frame", "width_mm": 35.6, "height_mm": 23.8, "resolution_mp": 12.1 },
+  "base_iso": "Unknown",
+  "log": ["S-Log3"],
+  "raw": "不支援錄影 RAW（手冊未列 RAW 影片輸出）",
+  "open_gate": false,
+  "lens_mount": "Sony E",
+  "media": ["SD（UHS-I／UHS-II）"],
+  "timecode": "沒有時間碼輸入端子；HDMI 可輸出時間碼",
+  "sdi": "無",
+  "hdmi": "Type D（Micro HDMI）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    { "resolution": "3840x2160", "max_fps": 60, "codec": "XAVC S-I 4K", "bitrate_mbps": 600, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
+    { "resolution": "3840x2160", "max_fps": 24, "codec": "XAVC S-I 4K", "bitrate_mbps": 240, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
+    { "resolution": "3840x2160", "max_fps": 60, "codec": "XAVC HS 4K", "bitrate_mbps": 200, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
+    { "resolution": "3840x2160", "max_fps": 60, "codec": "XAVC S 4K", "bitrate_mbps": 200, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
+    { "resolution": "3840x2160", "max_fps": 30, "codec": "XAVC S 4K", "bitrate_mbps": 140, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
+    { "resolution": "1920x1080", "max_fps": 120, "codec": "XAVC S HD", "bitrate_mbps": 100, "bit_depth": 8, "chroma": "4:2:0", "crop": "none" },
+    { "resolution": "1920x1080", "max_fps": 60, "codec": "XAVC S-I HD", "bitrate_mbps": 222, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
+    { "resolution": "1920x1080", "max_fps": 60, "codec": "XAVC S HD", "bitrate_mbps": 50, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" }
+  ],
+  "source_name": "Sony ZV-E1 Help Guide（PDF）",
+  "source_url": "https://helpguide.sony.net/ilc/2310/v1/en/print.pdf",
+  "last_verified": "2026-10-06",
+  "editor_notes": "待核對：Sony 曾宣布以韌體更新支援 4K 120p／FHD 240p，但這份手冊的 S&Q 表仍寫 4K 不能選 120fps。"
+}
