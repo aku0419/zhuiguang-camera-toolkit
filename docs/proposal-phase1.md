@@ -1,205 +1,254 @@
 # 逐光 第一階段提案（待負責人確認）
 
-狀態：**草案**，負責人確認前不開始寫程式。
+狀態：**草案第 2 版**（已對照計畫書 `docs/plan.md` 第十八點），負責人確認前不開始寫程式。
 
 ---
 
-## 一、架構
+## 1. 計畫分析（重點摘要）
+
+- 核心目標只有一個：**學生第一次進來，30 秒內解決一個攝影問題**（計畫書第十七點）。所以第一版的重點是**工具好用、相機頁清楚**，資料量不是重點。
+- 計畫書和上一個對話的決定有幾處不同，我的處理方式：
+
+| 項目 | 計畫書 | 上一個對話的決定 | 提案 |
+|---|---|---|---|
+| 第一階段相機數 | 約 10 台測試資料 | 20 台 | **先做 10 台確認版面，再補到 20 台**（同一階段內分兩批） |
+| 問題回報 | 第一版可先不接 Supabase | 第一階段要做 | **放在第一階段最後一步**；網站本身完全不依賴它 |
+| 網站框架 | 可參考初光 | Astro | **Astro**（理由見第 3 點） |
+| 品牌 | 含 Fujifilm、DJI | 20 台清單沒有這兩家 | 請你決定（見第 8 點） |
+| 錄影容量／記憶卡時間 | 兩個工具 | 同一個工具可切換 | **同一頁、上方切換**；工具列表上仍列成兩個入口，學生一樣找得到 |
+
+## 2. 第一版 MVP
+
+做：
+
+1. 首頁：五個入口（CAMERAS／LENSES／MEDIA／FILM／TOOLS）＋全站搜尋。LENSES、MEDIA、FILM 顯示「即將推出」。
+2. 上方導覽列（手機版收成選單）。
+3. 攝影機列表（可依品牌、片幅篩選）＋每台一頁。
+4. 工具首頁＋5 個工具（快門角度、升降格、等效焦段、錄影容量、記憶卡可錄時間）。
+5. 相機頁的捷徑按鈕：「用這台算錄影容量」「算等效焦段」「算升降格」，自動帶入這台資料。
+6. 頁尾免責說明（用計畫書第十六點的文字）。
+7. 回報問題按鈕（不用登入）。
+
+不做：登入、收藏、比較、任何後台管理介面。
+
+## 3. 技術架構
 
 ```
 使用者的瀏覽器
-   │
-   ├─ 看網頁、用計算工具 ──► Vercel（Astro 產生的靜態網頁，全部預先做好）
-   │                         計算在瀏覽器裡完成，不經過伺服器
-   │
-   └─ 按「回報問題」送出 ──► 逐光自己的 Supabase 專案
-                              只能呼叫一個函式 submit_issue_report()
-                              函式會檢查長度、次數，通過才寫入
+   ├─ 看網頁、用計算工具 ──► Vercel（Astro 預先做好的靜態網頁）
+   │                         計算在瀏覽器裡完成
+   └─ 按「回報問題」送出 ──► 逐光自己的 Supabase（只能呼叫一個有限制的函式）
 ```
 
-- **Astro**：寫好資料檔（每台相機一個檔案），建置時自動產生每台相機的網頁。新增一台相機＝新增一個資料檔，不用改程式。
-- **全站搜尋**：建置時把所有相機和工具的名稱、別名整理成一份小清單，搜尋在瀏覽器裡完成，不需要外部服務。
-- **SEO**：每頁有自己的標題、描述、網址；自動產生 sitemap.xml；相機頁加上結構化資料。
-- **費用**：Vercel 和 Supabase 免費方案就夠用。
+- **為什麼用 Astro 而不是跟初光一樣直接寫 HTML**：初光是一頁一頁手寫的 HTML。逐光有「每台相機一頁」的需求，20 台、之後 50 台，手寫會很難維護。Astro 只是「把資料檔自動做成網頁」的工具，做出來的仍然是純 HTML，不需要伺服器、不需要 React 這類大型框架。這是最簡單又夠用的方案（B 方案）。
+- 互動部分（計算器、搜尋、回報視窗）用一般 JavaScript 寫，跟初光一樣。
+- 資料放在 repo 裡的 JSON 檔（計畫書第九點），不放資料庫。
+- 搜尋：建置時產生一份小清單，在瀏覽器裡比對關鍵字，不用外部服務。
+- SEO：每頁獨立標題與描述、自動產生 sitemap.xml。
 
-## 二、相機資料格式
+## 4. 從初光可以參考的地方（已只讀看過原始碼，沒有做任何修改）
 
-每台相機一個檔案：`src/content/cameras/<品牌>-<型號>.json`。建置時會自動檢查格式，填錯（例如位元率寫成文字）會直接報錯，不會上線。
+初光是純 HTML＋JavaScript，沒有使用框架，部署在 Vercel。
+
+| 初光的東西 | 逐光怎麼用 |
+|---|---|
+| `assets/workspace.css` 的顏色設定（深藍灰文字、橘色強調色 `#d9480f`、淺灰底）、自動深色模式 | **照抄配色**，兩個網站看起來是同一家 |
+| 字體：Barlow Condensed（英文標題）、Chiron Hei HK（中文）、IBM Plex Mono（數字） | **照用**；數字用等寬字體，計算結果比較好讀 |
+| `assets/site.css` 的卡片、按鈕、頁首、頁尾樣式 | 參考後重寫成逐光需要的版本 |
+| `assets/feedback.js` 右下角橘色「回報問題」按鈕與彈出視窗 | **外觀照做**；但初光要登入才能回報，逐光改成不用登入 |
+| `supabase/migrations/013_client_errors.sql` 的作法：資料表不開放、只能透過函式寫入、函式裡限制長度與數量 | **照這個模式**寫逐光的問題回報 |
+| `vercel.json` 的安全標頭（Content-Security-Policy 等） | 照用，但改成逐光自己的 Supabase 網址 |
+| Google 登入流程 | 第一版不用，先不參考 |
+
+## 5. 頁面與網址
+
+| 網址 | 頁面 |
+|---|---|
+| `/` | 首頁 |
+| `/cameras/` | 攝影機列表 |
+| `/cameras/sony-fx3/` 等 | 每台相機一頁（資料檔自動產生） |
+| `/tools/` | 工具首頁（5 個工具入口） |
+| `/tools/shutter-angle/` | 快門角度 |
+| `/tools/frame-rate/` | 升降格 |
+| `/tools/focal-length/` | 等效焦段 |
+| `/tools/recording-capacity/` | 錄影容量（預設） |
+| `/tools/recording-capacity/?mode=card` | 同一頁切到「記憶卡可錄時間」 |
+| `/lenses/`、`/media/`、`/film/` | 即將推出 |
+| `/about/` | 關於與免責說明完整版 |
+| `/404` | 找不到頁面 |
+
+相機頁捷徑的網址範例：`/tools/recording-capacity/?camera=sony-fx3`、`/tools/focal-length/?camera=sony-fx30`。
+
+## 6. 元件（共用的畫面零件）
+
+| 元件 | 用途 |
+|---|---|
+| `BaseLayout` | 每頁共用外框：頁首、導覽、頁尾免責、回報問題按鈕 |
+| `SiteHeader`／`SiteFooter` | 頁首導覽、頁尾 |
+| `SearchBox` | 全站搜尋 |
+| `ReportButton` | 回報問題按鈕＋視窗 |
+| `SectionCard` | 首頁五個入口卡片（含「即將推出」狀態） |
+| `CameraCard` | 列表上的每台相機 |
+| `SpecTable` | 相機規格表 |
+| `RecordingModes` | 錄影模式表（手機版改成一列一張卡片，避免左右捲動） |
+| `ToolLinks` | 相機頁的工具捷徑按鈕 |
+| `SourceNote` | 資料來源與最後確認日期 |
+
+## 7. 資料格式
+
+每台相機一個 JSON 檔：`src/data/cameras/sony-fx3.json`。
+（計畫書建議一個 `cameras.json` 放全部；但每台相機有一整串錄影模式，一台一個檔案比較好查證、好修改，我建議分開。之後的 `lenses.json`、`media.json`、`film.json` 資料比較短，就照計畫書用單一檔案。）
+
+建置時會自動檢查格式，填錯就無法上線。
 
 ```json
 {
   "slug": "sony-fx3",
   "brand": "Sony",
   "model": "FX3",
-  "aliases": ["ILME-FX3"],
-  "category": "cinema-line",
-  "status": "current",
+  "type": "電影機（Cinema Line）",
   "announced": "2021-02",
-  "mount": "Sony E",
 
   "sensor": {
-    "format": "full-frame",
-    "width_mm": 35.6,
-    "height_mm": 23.8,
-    "effective_megapixels": 10.2,
-    "source": "s1"
+    "format": "Full Frame",
+    "width_mm": 0,
+    "height_mm": 0,
+    "resolution_mp": 0
   },
-
-  "base_iso": [800, 12800],
-  "log_profiles": ["S-Log3"],
+  "base_iso": [0, 0],
+  "log": ["S-Log3"],
+  "raw": { "internal": "none", "external": "16-bit RAW (via HDMI)" },
+  "open_gate": false,
+  "lens_mount": "Sony E",
   "media": ["CFexpress Type A", "SDXC UHS-II"],
+  "timecode": "in/out (multi-terminal)",
+  "sdi": "none",
+  "hdmi": "Type A",
+  "dynamic_range_claimed": "15+ stops",
 
   "recording_modes": [
     {
       "resolution": "3840x2160",
-      "max_fps": 119.88,
+      "max_fps": 0,
       "codec": "XAVC S-I",
-      "bitrate_mbps": 1200,
+      "bitrate_mbps": 0,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "crop_factor": null,
-      "notes": "",
-      "source": "s1"
+      "notes": ""
     }
   ],
 
-  "sources": [
-    {
-      "id": "s1",
-      "source_name": "Sony 官方 FX3 規格頁",
-      "source_url": "https://...",
-      "last_verified": "2026-10-06"
-    }
+  "source_name": "Sony Official",
+  "source_url": "https://...",
+  "extra_sources": [
+    { "source_name": "Sony FX3 Help Guide", "source_url": "https://..." }
   ],
-
-  "unknown_fields": ["..."],
-  "editor_notes": "給負責人看的查證備註，不顯示在網頁上"
+  "last_verified": "2026-10-06",
+  "editor_notes": "查證備註，只給我們看，不顯示在網頁上"
 }
 ```
 
-（上面的數字只是格式示範，正式資料會一筆一筆查原廠。）
+（以上 0 和 ... 只是格式示範，正式資料一筆一筆查原廠。）
 
-欄位規則：
+規則：
 
-| 欄位 | 說明 |
-|---|---|
-| 任何數字欄位 | 查不到就填 `"Unknown"`，網頁顯示「未知（原廠未公布）」 |
-| `crop` | `"none"`（不裁切）／`"crop"`（裁切）／`"Unknown"`；有裁切且原廠有給倍率時填 `crop_factor` |
-| `bitrate_mbps` | 單位 Mbps（百萬位元／秒）。RAW 這類「位元率會變動」的格式，原廠有給最高值就填最高值並在 `notes` 註明；沒給就填 `"Unknown"` |
-| `source` | 指向 `sources` 裡的編號，表示這一筆是從哪份原廠資料查到的 |
-| `last_verified` | 實際打開原廠頁面核對的日期 |
+- 任何欄位查不到就填 `"Unknown"`，網頁顯示「未知」。
+- 「最大錄影解析度」「最大格率」不另外填，**由錄影模式列表自動算出**，避免兩個地方寫得不一樣。
+- `crop`：`"none"`／`"crop"`／`"Unknown"`；有裁切可加 `crop_factor`。
+- `bitrate_mbps` 單位 Mbps。位元率查不到的模式，在容量工具裡會顯示「位元率未知」，不能選來算。
+- Dynamic Range 只記原廠宣稱值，網頁標示「原廠宣稱」（計畫書第十五點）。
+- 每台至少一個原廠來源（`source_name`、`source_url`、`last_verified`）；用到原廠手冊等其他資料時列在 `extra_sources`。
+- 錄影模式只收常用、有意義的組合，不列出所有組合。
 
-一台相機的錄影模式可能有幾十種組合，**第一版只收「常用、有意義」的模式**（每種解析度＋編碼取最高格率那一列，加上重要的裁切模式），不會把所有組合都列出來。
+## 8. 工具算式（會寫在每個工具頁上）
 
-## 三、計算方式（會寫在每個工具頁上）
+- **快門角度**：快門速度 ＝ 1 ÷（格率 × 360 ÷ 角度）。24 fps＋180° → 1/48 秒，並提示「相機上最接近的是 1/50」。
+- **升降格**：播放速度 ＝ 時間軸格率 ÷ 拍攝格率；慢動作倍率 ＝ 拍攝格率 ÷ 時間軸格率。60 → 24：播放速度 40%、慢動作 2.5×。
+- **等效焦段**：等效焦段 ＝ 焦段 × 換算倍率。選項：Full Frame（1×）、Super35（約略值，約 1.5×）、APS-C Sony（1.5×）、APS-C Canon（1.6×）、M43（2×）、1 inch（約 2.7×）。從相機頁進來時用那台的實際感光元件尺寸計算。Sony APS-C 35mm → 52.5mm。
+- **錄影容量**：容量（GB）＝ 位元率（Mbps）× 秒數 ÷ 8 ÷ 1000。200 Mbps × 3 小時 ＝ 270 GB。
+- **記憶卡可錄時間**：同一個式子倒過來。256 GB、400 Mbps → 約 85 分鐘。
+- 都會註明：1 GB ＝ 10 億位元組（跟記憶卡包裝相同）；格式化後可用容量會比標示少；實際以相機顯示為準。
 
-- **錄影容量**：容量（GB）＝ 位元率（Mbps）× 秒數 ÷ 8 ÷ 1000
-  例：200 Mbps 錄 1 小時 ＝ 200 × 3600 ÷ 8 ÷ 1000 ＝ 90 GB
-  GB 採 1 GB ＝ 10⁹ 位元組（跟記憶卡包裝相同）；電腦 Windows 顯示的「GB」其實是 GiB，數字會看起來比較小。
-  提醒：記憶卡格式化後可用容量通常比標示少，實際可錄時間以相機顯示為準。
-  反方向（記憶卡可錄時間）＝ 同一個式子倒過來算，畫面上一個切換鈕。
-- **快門角度**：快門速度 ＝ 格率 × 360 ÷ 角度（例：24 fps、180° → 1/48 秒）。
-- **升降格**：播放速度倍率 ＝ 拍攝格率 ÷ 時間軸格率；並算出拍攝 N 秒、播放變幾秒。
-- **等效焦段**：等效焦段 ＝ 焦段 × 換算倍率；換算倍率 ＝ 43.27 mm（全片幅對角線）÷ 感光元件對角線。另顯示等效光圈（景深參考）。
+## 9. 問題回報（第一階段最後一步）
 
-## 四、檔案清單
+- 逐光自己的 Supabase 專案，不碰初光的。
+- 資料表 `issue_reports`：哪一頁、問題內容、聯絡方式（選填）、裝置、時間。
+- 照初光 013 的作法：資料表完全不開放，只能呼叫 `submit_issue_report()`，函式裡：
+  - 內容 5～2000 字、聯絡方式最多 200 字
+  - 同一個來源 10 分鐘內最多 5 則
+  - 全站一天最多 300 則，總數超過 5000 則就暫停收件
+- 你看回報的方式：第一版先直接在 Supabase 後台的資料表頁面看（不另做管理頁）。
+- 做到這一步時，我會寫 `docs/supabase-setup.md` 一步一步教你。你不需要給我任何金鑰。
 
-```
-CLAUDE.md                          專案規則（已建立）
-docs/proposal-phase1.md            本提案
-docs/data-guide.md                 新增／查證相機資料的步驟
-docs/supabase-setup.md             教負責人建立 Supabase 的步驟
-supabase/issue_reports.sql         資料表＋寫入函式（負責人貼到 Supabase 執行）
+## 10. 建議延後的功能
 
-package.json / astro.config.mjs / tsconfig.json
-src/content.config.ts              相機資料格式檢查規則
-src/content/cameras/*.json         20 台相機資料
+- 鏡頭、記憶卡、底片資料庫 → 第二階段（首頁先顯示「即將推出」）
+- ND、畫面比例、底片長度、景深、曝光 Stop 計算器 → 第二階段
+- 登入、收藏、我的器材庫 → 等有需要再說
+- 相機比較、錄影格式精靈、器材包、感光元件視覺化、教學文章 → Roadmap
+- 回報問題的管理頁面 → 先用 Supabase 後台看就好
+- 斗內按鈕 → 網站上線後再加，很簡單
 
-src/layouts/BaseLayout.astro       共用外框：頁首、頁尾免責、回報問題按鈕
-src/components/
-  SiteHeader.astro / SiteFooter.astro
-  SearchBox.astro                  全站搜尋
-  ReportIssue.astro                回報問題視窗
-  CameraSpecTable.astro            規格表
-  RecordingModesTable.astro        錄影模式表
-  SourceList.astro                 資料來源與查證日期
-  ComingSoon.astro                 「即將推出」卡片
+## 11. 開發順序（每一步都給你截圖，你說「可以」才合併）
 
-src/pages/
-  index.astro                      首頁（五個入口＋搜尋）
-  cameras/index.astro              攝影機列表（可依品牌、片幅篩選）
-  cameras/[slug].astro             每台相機一頁（自動產生 20 頁）
-  tools/index.astro                工具列表
-  tools/shutter-angle.astro        快門角度
-  tools/frame-rate.astro           升降格
-  tools/equivalent-focal-length.astro  等效焦段
-  tools/recording-capacity.astro   錄影容量／記憶卡可錄時間
-  lenses/index.astro               即將推出
-  media/index.astro                即將推出（記憶卡）
-  film/index.astro                 即將推出（底片）
-  disclaimer.astro                 免責說明完整版
-  404.astro
+1. 網站骨架：首頁、導覽、頁尾、工具首頁、即將推出頁（不含相機資料）
+2. 5 個工具
+3. 攝影機列表＋相機頁＋第一批 10 台（逐台查原廠）
+4. 補齊第二批 10 台
+5. 問題回報＋Supabase 設定教學
+6. 部署到 Vercel＋綁定 zhuiguang.riseatsun.com（教你在 Vercel、Namecheap 按哪裡）
 
-src/lib/calc/*.ts                  四個工具的計算（另附自動測試）
-src/lib/search-index.ts            產生搜尋清單
-src/styles/global.css              顏色、字體、按鈕（參考初光）
-public/robots.txt, favicon
-```
+## 12. 攝影機清單（請確認）
 
-## 五、問題回報（Supabase）
+第一批（先做這 10 台，涵蓋各品牌與片幅，用來確認版面）：
 
-- 資料表 `issue_reports`：頁面網址、問題類型、內容、聯絡方式（選填）、時間。
-- 前端**不能直接讀寫資料表**，只能呼叫函式 `submit_issue_report()`。
-- 函式檢查：
-  - 內容 5～2000 字、聯絡方式最多 200 字、網址最多 500 字
-  - 同一來源 10 分鐘內最多 5 則
-  - 全站一天最多 300 則（超過就暫停收件，避免被灌爆）
-- 這一步做到時，我會寫好 `docs/supabase-setup.md`，一步一步教你建立專案、貼 SQL、把「公開金鑰」貼到 Vercel。你不需要給我任何金鑰。
+| # | 品牌 | 型號 | 片幅 |
+|---|---|---|---|
+| 1 | Sony | FX3 | Full Frame |
+| 2 | Sony | FX30 | Super35 / APS-C |
+| 3 | Sony | A7S III | Full Frame |
+| 4 | Canon | EOS R5 C | Full Frame |
+| 5 | Canon | EOS C70 | Super35 |
+| 6 | Nikon | Z6III | Full Frame |
+| 7 | Panasonic | GH7 | M43 |
+| 8 | Blackmagic | Pocket Cinema Camera 6K Pro | Super35 |
+| 9 | RED | KOMODO 6K | Super35 |
+| 10 | ARRI | ALEXA 35 | Super35 |
 
-## 六、第一階段 20 台攝影機（請確認）
-
-查證時發現有兩台在 2025 年底已出新一代，建議調整：
+第二批：
 
 | # | 品牌 | 型號 | 備註 |
 |---|---|---|---|
-| 1 | Sony | FX3 | |
-| 2 | Sony | FX30 | Super35 |
-| 3 | Sony | A7S III | |
-| 4 | Sony | A7 IV → **建議改 A7 V**？ | A7 V 已於 2025/12 發表。A7 IV 還很多人在用，二選一或兩台都放 |
-| 5 | Sony | ZV-E1 | |
-| 6 | Sony | FX6 | |
-| 7 | Canon | EOS R6 Mark II → **建議改 R6 Mark III**？ | R6 Mark III 已於 2025/11 發表 |
-| 8 | Canon | EOS R5 C | |
-| 9 | Canon | EOS C70 | |
-| 10 | Nikon | Z6III | |
-| 11 | Nikon | Z8 | |
-| 12 | Panasonic | LUMIX S5II | |
-| 13 | Panasonic | GH7 | M4/3 |
-| 14 | Blackmagic | Pocket Cinema Camera 6K Pro | Super35 |
-| 15 | Blackmagic | Cinema Camera 6K | |
-| 16 | RED | KOMODO 6K | Super35 |
-| 17 | RED | V-RAPTOR | 有 8K VV 和 S35 版本，建議先做 8K VV |
-| 18 | ARRI | ALEXA Mini | 已停產但租賃市場仍常見 |
-| 19 | ARRI | ALEXA Mini LF | |
-| 20 | ARRI | ALEXA 35 | |
+| 11 | Sony | A7 IV → **A7 V**？ | A7 V 已於 2025/12 發表 |
+| 12 | Sony | ZV-E1 | |
+| 13 | Sony | FX6 | |
+| 14 | Canon | EOS R6 Mark II → **R6 Mark III**？ | R6 Mark III 已於 2025/11 發表 |
+| 15 | Nikon | Z8 | |
+| 16 | Panasonic | LUMIX S5II | |
+| 17 | Blackmagic | Cinema Camera 6K | |
+| 18 | RED | V-RAPTOR（8K VV） | |
+| 19 | ARRI | ALEXA Mini | 已停產，租賃市場常見 |
+| 20 | ARRI | ALEXA Mini LF | |
 
-可以考慮的替補：**Nikon ZR**（2025/9 發表，Nikon 與 RED 合作的電影機，很熱門）。若要放，建議替換其中一台。
+計畫書有 Fujifilm 和 DJI，但目前清單沒有。可以考慮的機種：
+- Fujifilm **X-H2S**（APS-C，學生常用）
+- DJI **Ronin 4D**（DJI 的電影機）
+- Nikon **ZR**（2025/9 發表，Nikon 與 RED 合作）
 
-### 預期查證困難（先跟你說）
+### 預期查證困難
 
-- **ARRI**：錄影模式非常多，位元率多半寫在獨立的「Data rates」文件，第一版只收主要模式。
-- **RED**：R3D 位元率會隨畫質設定變動，原廠多以「每秒 MB」或「每 GB 可錄分鐘數」表示，我會換算並註明。
-- **Blackmagic**：Blackmagic RAW 位元率依壓縮比不同，原廠手冊有表，資料量大。
-- **Canon / Nikon 相機**：部分模式原廠沒寫位元率，會標 Unknown。
-- 部分原廠網站對海外連線限制，查不到時會列出來請你幫忙打開核對。
+- **ARRI**：錄影模式很多，位元率在原廠另外的資料表文件，第一版只收主要模式。
+- **RED**：R3D 位元率隨畫質設定變動，原廠多用「每 GB 可錄幾分鐘」表示，我會換算並註明。
+- **Blackmagic**：BRAW 位元率依壓縮比不同，原廠手冊有表。
+- **部分相機的原廠規格沒有寫位元率**，會標 Unknown。
 
 ---
 
 ## 需要你回覆的事
 
-1. 架構、資料格式、檔案清單：可以嗎？
-2. 第 4 台：A7 IV／A7 V／兩台都放？
-3. 第 7 台：R6 Mark II／R6 Mark III／兩台都放？
-4. Nikon ZR 要不要放？要的話替換哪一台？
-5. 計畫書沒有一起貼上來（訊息在「以下是完整的計畫書」後就結束了），請再貼一次，我要對照第二十七點的順序和其他細節。
+1. 整體方向（第 1～11 點）可以嗎？
+2. 第一批 10 台可以嗎？
+3. 第 11 台：A7 IV、A7 V、還是兩台都放？
+4. 第 14 台：R6 Mark II、R6 Mark III、還是兩台都放？
+5. Fujifilm、DJI、Nikon ZR 要不要放？要的話換掉哪幾台（或把總數加到 22～23 台）？
