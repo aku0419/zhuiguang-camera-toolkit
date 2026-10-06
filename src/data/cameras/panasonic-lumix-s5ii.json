@@ -1,0 +1,141 @@
+{
+  "slug": "panasonic-lumix-s5ii",
+  "brand": "Panasonic",
+  "model": "LUMIX S5II",
+  "aliases": [
+    "S5II",
+    "S5 II",
+    "S5M2",
+    "DC-S5M2"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.6,
+    "height_mm": 23.8,
+    "resolution_mp": 24.2
+  },
+  "base_iso": [
+    640,
+    4000
+  ],
+  "log": [
+    "V-Log"
+  ],
+  "raw": "不能內錄；可經 HDMI 輸出 12-bit RAW 到外接錄影機（最高 5.9K）",
+  "open_gate": true,
+  "lens_mount": "L-Mount",
+  "media": [
+    "SD（雙卡槽，UHS-I／UHS-II，最高 V90）"
+  ],
+  "timecode": "說明書未提到時間碼輸入端子",
+  "sdi": "無",
+  "hdmi": "Type A（標準尺寸）",
+  "dynamic_range_claimed": "14+ stops（V-Log）",
+  "recording_modes": [
+    {
+      "resolution": "5952x3968",
+      "max_fps": 29.97,
+      "codec": "H.265（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "6K 3:2（Open Gate），FULL 範圍"
+    },
+    {
+      "resolution": "5952x3136",
+      "max_fps": 29.97,
+      "codec": "H.265（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "6K 17:9，FULL 範圍"
+    },
+    {
+      "resolution": "5888x3312",
+      "max_fps": 29.97,
+      "codec": "H.265（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "5.9K 16:9，FULL 範圍"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "H.264（422/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "C4K 60p 為 APS-C 範圍"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 29.97,
+      "codec": "H.264（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "C4K 30p 以下可用 FULL 範圍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "H.265（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "4K 60p 為 APS-C 範圍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 23.98,
+      "codec": "H.264（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 30p 以下可用 FULL 範圍"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 47.95,
+      "codec": "H.264（422/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "3.3K 4:3，APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 119.88,
+      "codec": "H.264（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "說明書沒有寫 FHD 120p 的影像範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 59.94,
+      "codec": "H.264（422/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    }
+  ],
+  "source_name": "Panasonic LUMIX S5II 使用說明書（PDF）",
+  "source_url": "https://help.na.panasonic.com/wp-content/uploads/2023/02/DCS5M2_DVQP2839ZA_ENG.pdf",
+  "last_verified": "2026-10-06",
+  "editor_notes": "說明書的 V-Log 錄影 ISO：base sensitivity 640／4000。裁切範圍依說明書「影像範圍」範例：6K、5.9K、C4K／4K 30p 以下為 FULL；3.3K、C4K／4K 60p 為 APS-C。位元率為 NTSC 數值。"
+}

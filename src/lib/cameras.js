@@ -85,11 +85,21 @@ export const cameras = all.sort((a, b) =>
   a.model.localeCompare(b.model, "en", { numeric: true })
 );
 
+// 感光元件尺寸未知時，用片幅名稱對應到等效焦段工具的通用倍率
+function formatId(f) {
+  if (/^Full Frame/i.test(f)) return "ff";
+  if (/^M43/i.test(f)) return "m43";
+  if (/Super ?35/i.test(f)) return "s35";
+  if (/APS-C/i.test(f)) return "apsc-sony";
+  return null;
+}
+
 // 給工具頁用的精簡資料（帶入感光元件尺寸與錄影模式）
 export const camerasForTools = cameras.map((c) => ({
   slug: c.slug,
   name: c.name,
   format: c.sensor.format,
+  format_id: formatId(c.sensor.format),
   crop_factor: c.crop_factor,
   modes: c.recording_modes.map((m) => ({
     label: `${m.resolution} ${isNum(m.max_fps) ? m.max_fps + "p" : ""} ${m.codec} ${m.bit_depth === U ? "" : m.bit_depth + "-bit"} ${m.chroma === U ? "" : m.chroma}`.replace(/\s+/g, " ").trim(),

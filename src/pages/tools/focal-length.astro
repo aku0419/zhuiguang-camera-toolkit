@@ -48,6 +48,8 @@ import { FORMATS } from "../../lib/calc.js";
   const update = () => {
     const cam = getCam();
     const useCam = cam && cam.crop_factor;
+    // 相機沒有公布尺寸時，改用片幅的通用倍率
+    if (cam && !useCam && cam.format_id && sel.value !== cam.format_id && !sel.dataset.touched) sel.value = cam.format_id;
     fmtField.hidden = !!useCam;
     const f = useCam ? { factor: cam.crop_factor, approx: false } : FORMATS.find((x) => x.id === sel.value)!;
     const r = equivalentFocal(num(focal), f.factor);
@@ -55,11 +57,11 @@ import { FORMATS } from "../../lib/calc.js";
     out.textContent = `${f.approx ? "約 " : ""}${fmt(r, 1)} mm`;
     factorEl.innerHTML = useCam
       ? `依 ${cam.name} 實際感光元件尺寸，換算倍率 <b>${fmt(f.factor, 2)}×</b>（未開裁切模式時）`
-      : `換算倍率 <b>${f.factor}×</b>${f.approx ? "（約略值）" : ""}`;
+      : `換算倍率 <b>${f.factor}×</b>${f.approx ? "（約略值）" : ""}${cam ? `（${cam.name} 原廠未公布感光元件尺寸，使用通用倍率）` : ""}`;
   };
   getCam = cameraPicker(update);
   fromQuery({ focal });
   bindChips(document.querySelector<HTMLElement>(".chips")!, focal, update);
-  sel.addEventListener("change", update);
+  sel.addEventListener("change", () => { sel.dataset.touched = "1"; update(); });
   update();
 </script>

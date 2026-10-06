@@ -1,0 +1,172 @@
+{
+  "slug": "panasonic-lumix-gh7",
+  "brand": "Panasonic",
+  "model": "LUMIX GH7",
+  "aliases": [
+    "GH7",
+    "DC-GH7"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "max_resolution": "5760×4320（5.8K 4:3）",
+  "sensor": {
+    "format": "M43",
+    "width_mm": "Unknown",
+    "height_mm": "Unknown",
+    "resolution_mp": 25.2
+  },
+  "base_iso": [
+    500
+  ],
+  "log": [
+    "V-Log",
+    "ARRI LogC3"
+  ],
+  "raw": "可內錄 Apple ProRes RAW／RAW HQ（CFexpress 卡）；也可經 HDMI 輸出 RAW",
+  "open_gate": true,
+  "lens_mount": "Micro Four Thirds",
+  "media": [
+    "卡槽 1：CFexpress Type B",
+    "卡槽 2：SD／SDHC／SDXC"
+  ],
+  "timecode": "可輸入／輸出（使用附贈的 BNC 轉接線）",
+  "sdi": "無",
+  "hdmi": "Type A（標準尺寸）",
+  "dynamic_range_claimed": "13+ stops（V-Log，感光元件輸出 60fps 以下）；61fps 以上為 12+ stops",
+  "recording_modes": [
+    {
+      "resolution": "5728x3024",
+      "max_fps": 29.97,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 4200,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "原廠標示 4.2 Gbps；ProRes 不能錄到 SD 卡（FHD 除外）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 4200,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "原廠標示 4.2 Gbps"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1900,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "原廠標示 1.9 Gbps"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 23.98,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 778,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "5760x4320",
+      "max_fps": 29.97,
+      "codec": "H.265（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "5.8K 4:3（Open Gate）"
+    },
+    {
+      "resolution": "5728x3024",
+      "max_fps": 59.94,
+      "codec": "H.265（420/10-L）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 119.88,
+      "codec": "H.265（420/10-L）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "H.264 ALL-Intra（422/10-I(H)）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "H.264（422/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 23.98,
+      "codec": "H.264 ALL-Intra（422/10-I）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 23.98,
+      "codec": "H.265（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 239.76,
+      "codec": "H.264 ALL-Intra（422/10-I）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 239.76,
+      "codec": "H.265（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "MP4 H.265（10bit）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    }
+  ],
+  "source_name": "Panasonic LUMIX GH7 使用說明書（PDF）",
+  "source_url": "https://help.na.panasonic.com/wp-content/uploads/2024/07/DCGH7_OperatingInstructions_ENG.pdf",
+  "last_verified": "2026-10-06",
+  "editor_notes": "說明書錄影品質表全部列在 FULL 影像範圍下，未見強制裁切。說明書的錄影 ISO 寫 V-Log 時 base sensitivity 為 ISO500（61fps 以上為 ISO250），沒有寫雙原生 ISO。感光元件只寫 4/3 吋，沒有寫毫米尺寸。ProRes 位元率原廠以 Gbps 標示，這裡換成 Mbps（1 Gbps = 1000 Mbps）。"
+}

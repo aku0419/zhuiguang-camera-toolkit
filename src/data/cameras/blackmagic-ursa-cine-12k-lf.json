@@ -1,0 +1,120 @@
+{
+  "slug": "blackmagic-ursa-cine-12k-lf",
+  "brand": "Blackmagic Design",
+  "model": "URSA Cine 12K LF",
+  "aliases": [
+    "URSA Cine 12K",
+    "URSA Cine LF",
+    "BMD URSA Cine"
+  ],
+  "type": "電影機",
+  "announced": "Unknown",
+  "max_resolution": "12,288×8040（12K 3:2 Open Gate）",
+  "sensor": {
+    "format": "Large Format（全片幅級）",
+    "width_mm": 35.64,
+    "height_mm": 23.32,
+    "resolution_mp": "Unknown"
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "Film 動態範圍（Blackmagic RAW）"
+  ],
+  "raw": "內錄 Blackmagic RAW（固定位元率 3:1～18:1，或固定畫質 Q0～Q5）",
+  "open_gate": true,
+  "lens_mount": "PL（可換 EF）",
+  "media": [
+    "Blackmagic Media Module（8TB 內建儲存）",
+    "可換 CFexpress 媒體模組"
+  ],
+  "timecode": "Reference 輸入可接 Timecode；內建高精度時間碼時鐘",
+  "sdi": "12G-SDI（共 2 路視訊輸出）",
+  "hdmi": "無（以 USB-C 接螢幕／觀景窗）",
+  "dynamic_range_claimed": "16 stops",
+  "recording_modes": [
+    {
+      "resolution": "12288x8040",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 9552,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 3:2 Open Gate，最高 80fps。原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）；格率越高資料量越大"
+    },
+    {
+      "resolution": "12288x8040",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 8:1",
+      "bitrate_mbps": 3584,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）；格率越高資料量越大"
+    },
+    {
+      "resolution": "12288x8040",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 18:1",
+      "bitrate_mbps": 1592,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）；格率越高資料量越大"
+    },
+    {
+      "resolution": "12288x6480",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 17:9，最高 100fps；原廠只列 12K 3:2 的資料量"
+    },
+    {
+      "resolution": "8192x5360",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 4264,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 3:2 Open Gate（全寬縮放），最高 144fps。原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）；格率越高資料量越大"
+    },
+    {
+      "resolution": "8192x5360",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 8:1",
+      "bitrate_mbps": 1600,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）；格率越高資料量越大"
+    },
+    {
+      "resolution": "4096x2680",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 1080,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 3:2 Open Gate（全寬縮放），最高 144fps。原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）；格率越高資料量越大"
+    },
+    {
+      "resolution": "4096x2680",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 6:1",
+      "bitrate_mbps": 544,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）；格率越高資料量越大"
+    }
+  ],
+  "source_name": "Blackmagic Design 官網：URSA Cine 技術規格",
+  "source_url": "https://www.blackmagicdesign.com/products/blackmagicursacine/techspecs",
+  "last_verified": "2026-10-06",
+  "editor_notes": "資料量以 24fps 計（原廠 Storage Rates）。最高格率：12K 3:2 80fps、12K 17:9 100fps、12K 2.4:1 120fps、8K／4K 3:2 144fps、8K／4K 2.4:1 224fps。原廠頁面把 9K 的資料量標成「17,520 x 8,040」疑似誤植，所以 9K 先不列。內建 ND：清除、2、4、6 檔。位元深度與原生 ISO 規格頁未寫。"
+}
