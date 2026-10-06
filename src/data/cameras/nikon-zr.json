@@ -1,0 +1,177 @@
+{
+  "slug": "nikon-zr",
+  "brand": "Nikon",
+  "model": "ZR",
+  "aliases": [
+    "Nikon RED ZR",
+    "ZR"
+  ],
+  "type": "電影機（Z CINEMA）",
+  "announced": "2025-09",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.9,
+    "height_mm": 23.9,
+    "resolution_mp": 24.5
+  },
+  "base_iso": [
+    800,
+    6400
+  ],
+  "log": [
+    "N-Log",
+    "Log3G10（R3D）"
+  ],
+  "raw": "可內錄 R3D NE、N-RAW（12-bit）與 ProRes RAW HQ（12-bit）",
+  "open_gate": false,
+  "lens_mount": "Nikon Z",
+  "media": [
+    "CFexpress Type B／XQD",
+    "microSD（UHS-I）"
+  ],
+  "timecode": "有時間碼功能；規格表未列時間碼端子",
+  "sdi": "無",
+  "hdmi": "Type D（Micro HDMI）",
+  "dynamic_range_claimed": "15+ stops",
+  "recording_modes": [
+    {
+      "resolution": "6048x3402",
+      "max_fps": 59.94,
+      "codec": "R3D NE",
+      "bitrate_mbps": 3730,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍"
+    },
+    {
+      "resolution": "6048x3402",
+      "max_fps": 23.976,
+      "codec": "R3D NE",
+      "bitrate_mbps": 1490,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 119.88,
+      "codec": "R3D NE",
+      "bitrate_mbps": 3240,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍"
+    },
+    {
+      "resolution": "6048x3402",
+      "max_fps": 59.94,
+      "codec": "N-RAW（高畫質）",
+      "bitrate_mbps": 3730,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍"
+    },
+    {
+      "resolution": "6048x3402",
+      "max_fps": 59.94,
+      "codec": "N-RAW（一般畫質）",
+      "bitrate_mbps": 1870,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍"
+    },
+    {
+      "resolution": "5376x3024",
+      "max_fps": 59.94,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "5.4K，FX 範圍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 119.88,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "4K 120p 固定為 DX 範圍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 340,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 29.97,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 190,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "25p、23.976p 相同"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Nikon 說明書未列 ProRes 位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 239.76,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 340,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.05,
+      "notes": "240p 視角約為 FX 的 95%"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 59.94,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none"
+    }
+  ],
+  "source_name": "Nikon ZR 線上說明書：影片尺寸與格率",
+  "source_url": "https://onlinemanual.nikonimglib.com/zr/en/19-02.html",
+  "extra_sources": [
+    {
+      "source_name": "Nikon ZR 線上說明書：規格",
+      "source_url": "https://onlinemanual.nikonimglib.com/zr/en/15-08.html"
+    },
+    {
+      "source_name": "Nikon ZR 線上說明書：影片影像範圍",
+      "source_url": "https://onlinemanual.nikonimglib.com/zr/en/19-11.html"
+    },
+    {
+      "source_name": "Nikon 新聞稿：ZR 發表（2025-09-10）",
+      "source_url": "https://www.nikon.com/company/news/2025/0910_imaging_01/"
+    }
+  ],
+  "last_verified": "2026-10-06",
+  "editor_notes": "Base ISO 800／6400 在規格頁註明為 R3D NE 時可選；新聞稿也寫兩個 base ISO 與 15+ stops。位元率為原廠表格數值。H.265 色彩取樣與 ProRes 位元率說明書未寫。"
+}

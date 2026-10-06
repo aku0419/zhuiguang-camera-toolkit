@@ -1,0 +1,124 @@
+{
+  "slug": "canon-eos-r6-mark-ii",
+  "brand": "Canon",
+  "model": "EOS R6 Mark II",
+  "aliases": [
+    "R6 Mark II",
+    "R6 II",
+    "R6M2",
+    "R6II"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 36.0,
+    "height_mm": 24.0,
+    "resolution_mp": 24.2
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "Canon Log 3"
+  ],
+  "raw": "不能內錄；可經 HDMI 輸出 RAW（6000×3374，最高 59.94p）",
+  "open_gate": false,
+  "lens_mount": "Canon RF",
+  "media": [
+    "SD（雙卡槽，UHS-II）"
+  ],
+  "timecode": "規格表未列時間碼端子",
+  "sdi": "無",
+  "hdmi": "Type D（Micro HDMI）",
+  "dynamic_range_claimed": "Canon Log：約 1600%（ISO 800 以上）",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "IPB Standard，MP4（Canon Log 3／HDR PQ，10-bit）",
+      "bitrate_mbps": 340,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 29.97,
+      "codec": "IPB Standard，MP4（Canon Log 3／HDR PQ，10-bit）",
+      "bitrate_mbps": 170,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "23.98p 同樣是 170 Mbps"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "IPB Light，MP4（Canon Log 3／HDR PQ，10-bit）",
+      "bitrate_mbps": 170,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "IPB Standard，MP4（8-bit）",
+      "bitrate_mbps": 230,
+      "bit_depth": 8,
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 29.97,
+      "codec": "IPB Standard，MP4（8-bit）",
+      "bitrate_mbps": 120,
+      "bit_depth": 8,
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 179.82,
+      "codec": "IPB Standard，MP4（Canon Log 3／HDR PQ，10-bit）",
+      "bitrate_mbps": 270,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "高格率短片；不能用裁切模式或 RF-S／EF-S 鏡頭"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 119.88,
+      "codec": "IPB Standard，MP4（Canon Log 3／HDR PQ，10-bit）",
+      "bitrate_mbps": 180,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "高格率短片"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 59.94,
+      "codec": "IPB Standard，MP4（Canon Log 3／HDR PQ，10-bit）",
+      "bitrate_mbps": 90,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    }
+  ],
+  "source_name": "Canon EOS R6 Mark II 使用說明書：規格",
+  "source_url": "https://cam.start.canon/en/C012/manual/html/UG-10_Reference_0100.html",
+  "extra_sources": [
+    {
+      "source_name": "Canon EOS R6 Mark II 使用說明書：短片記錄尺寸",
+      "source_url": "https://cam.start.canon/en/C012/manual/html/UG-04_Shooting-2_0040.html"
+    },
+    {
+      "source_name": "Canon EOS R6 Mark II 使用說明書：Canon Log 設定",
+      "source_url": "https://cam.start.canon/en/C012/manual/html/UG-04_Shooting-2_0090.html"
+    }
+  ],
+  "last_verified": "2026-10-06",
+  "editor_notes": "原廠位元率分成 8-bit 與 10-bit（Canon Log 3／HDR PQ）兩張表。10-bit 為 YCbCr 4:2:2；8-bit 的色彩取樣與影片編碼（H.264／H.265）在說明書上沒找到，標 Unknown。4K 不開裁切時為全片幅寬度。動態範圍原廠以百分比表示（約 1600%）。"
+}

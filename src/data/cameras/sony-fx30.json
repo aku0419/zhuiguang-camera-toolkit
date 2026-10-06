@@ -2,36 +2,177 @@
   "slug": "sony-fx30",
   "brand": "Sony",
   "model": "FX30",
-  "aliases": ["ILME-FX30"],
+  "aliases": [
+    "ILME-FX30"
+  ],
   "type": "電影機（Cinema Line）",
   "announced": "Unknown",
-  "sensor": { "format": "Super35 / APS-C", "width_mm": 23.3, "height_mm": 15.5, "resolution_mp": 20.1 },
-  "base_iso": [800, 2500],
-  "log": ["S-Log3"],
+  "sensor": {
+    "format": "Super35 / APS-C",
+    "width_mm": 23.3,
+    "height_mm": 15.5,
+    "resolution_mp": 20.1
+  },
+  "base_iso": [
+    800,
+    2500
+  ],
+  "log": [
+    "S-Log3"
+  ],
   "raw": "不能內錄；可經 HDMI 輸出 RAW 到外接錄影機（4672×2628）",
   "open_gate": false,
   "lens_mount": "Sony E",
-  "media": ["CFexpress Type A", "SD（UHS-I／UHS-II）"],
+  "media": [
+    "CFexpress Type A",
+    "SD（UHS-I／UHS-II）"
+  ],
   "timecode": "可經 Multi/Micro USB 端子輸入（需專用轉接線）",
   "sdi": "無",
   "hdmi": "Type A（標準尺寸）",
-  "dynamic_range_claimed": "Unknown",
+  "dynamic_range_claimed": "14 stops（latitude）",
   "recording_modes": [
-    { "resolution": "3840x2160", "max_fps": 119.88, "codec": "XAVC S-I 4K", "bitrate_mbps": 1200, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "crop_factor": 1.6, "notes": "僅慢動作（S&Q）模式；位元率為原廠標示最高值。裁切倍率是相對於拍照時的視角" },
-    { "resolution": "4096x2160", "max_fps": 59.94, "codec": "XAVC S-I DCI 4K", "bitrate_mbps": 600, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "crop_factor": 1.04, "notes": "韌體 Ver.2.00 以後。裁切倍率是相對於拍照時的視角" },
-    { "resolution": "3840x2160", "max_fps": 59.94, "codec": "XAVC S-I 4K", "bitrate_mbps": 600, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "crop_factor": 1.04, "notes": "裁切倍率是相對於拍照時的視角" },
-    { "resolution": "3840x2160", "max_fps": 23.98, "codec": "XAVC S-I 4K", "bitrate_mbps": 240, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "crop_factor": 1.04, "notes": "裁切倍率是相對於拍照時的視角" },
-    { "resolution": "3840x2160", "max_fps": 119.88, "codec": "XAVC HS 4K", "bitrate_mbps": 280, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "crop_factor": 1.6, "notes": "裁切倍率是相對於拍照時的視角" },
-    { "resolution": "3840x2160", "max_fps": 59.94, "codec": "XAVC HS 4K", "bitrate_mbps": 200, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "crop_factor": 1.04, "notes": "裁切倍率是相對於拍照時的視角" },
-    { "resolution": "3840x2160", "max_fps": 23.98, "codec": "XAVC HS 4K", "bitrate_mbps": 100, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "crop_factor": 1.04, "notes": "裁切倍率是相對於拍照時的視角" },
-    { "resolution": "3840x2160", "max_fps": 119.88, "codec": "XAVC S 4K", "bitrate_mbps": 280, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "crop_factor": 1.6, "notes": "裁切倍率是相對於拍照時的視角" },
-    { "resolution": "3840x2160", "max_fps": 59.94, "codec": "XAVC S 4K", "bitrate_mbps": 200, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "crop_factor": 1.04, "notes": "裁切倍率是相對於拍照時的視角" },
-    { "resolution": "1920x1080", "max_fps": 239.76, "codec": "XAVC S-I HD", "bitrate_mbps": 890, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "crop_factor": 1.5, "notes": "僅慢動作（S&Q）模式；位元率為原廠標示最高值。裁切倍率是相對於拍照時的視角" },
-    { "resolution": "1920x1080", "max_fps": 59.94, "codec": "XAVC S-I HD", "bitrate_mbps": 222, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "crop_factor": 1.04, "notes": "裁切倍率是相對於拍照時的視角" },
-    { "resolution": "1920x1080", "max_fps": 59.94, "codec": "XAVC S HD", "bitrate_mbps": 50, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "crop_factor": 1.04, "notes": "裁切倍率是相對於拍照時的視角" }
+    {
+      "resolution": "3840x2160",
+      "max_fps": 119.88,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.6,
+      "notes": "僅慢動作（S&Q）模式；位元率為原廠標示最高值。裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "XAVC S-I DCI 4K",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.04,
+      "notes": "韌體 Ver.2.00 以後。裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.04,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 23.98,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.04,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 119.88,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 280,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.6,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.04,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 23.98,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.04,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 119.88,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 280,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.6,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.04,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 239.76,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 890,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "僅慢動作（S&Q）模式；位元率為原廠標示最高值。裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 59.94,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 222,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.04,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 59.94,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.04,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    }
   ],
   "source_name": "Sony ILME-FX30 Help Guide（PDF）",
   "source_url": "https://helpguide.sony.net/ilc/2220/v1/en/print.pdf",
   "last_verified": "2026-10-06",
-  "editor_notes": "有效像素：拍照約 2600 萬、錄影約 2010 萬，這裡填錄影值。手冊的視角說明：一般錄影約 1.04 倍、HDMI RAW 輸出約 1.3 倍、240fps 慢動作約 1.5 倍、4K 120p 約 1.6 倍（相對於拍照視角）。動態範圍手冊未寫。"
+  "editor_notes": "有效像素：拍照約 2600 萬、錄影約 2010 萬，這裡填錄影值。手冊的視角說明：一般錄影約 1.04 倍、HDMI RAW 輸出約 1.3 倍、240fps 慢動作約 1.5 倍、4K 120p 約 1.6 倍（相對於拍照視角）。 新聞稿：14 stops of latitude、dual base ISO 800/2500。",
+  "extra_sources": [
+    {
+      "source_name": "Sony 新聞稿：FX30（Alpha Universe）",
+      "source_url": "https://alphauniverse.com/stories/sony-fx30-gives-creators-a-4k-super-35-powerhouse/"
+    }
+  ]
 }

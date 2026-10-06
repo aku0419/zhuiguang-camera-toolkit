@@ -1,0 +1,185 @@
+{
+  "slug": "canon-eos-r6-mark-iii",
+  "brand": "Canon",
+  "model": "EOS R6 Mark III",
+  "aliases": [
+    "R6 Mark III",
+    "R6 III",
+    "R6M3",
+    "R6III"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "2025-11",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.9,
+    "height_mm": 23.9,
+    "resolution_mp": 32.5
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "Canon Log 2",
+    "Canon Log 3"
+  ],
+  "raw": "可內錄 Cinema RAW Light（12-bit，需 CFexpress 卡）；也可經 HDMI 輸出 RAW",
+  "open_gate": true,
+  "lens_mount": "Canon RF",
+  "media": [
+    "卡槽 1：CFexpress 2.0 Type B",
+    "卡槽 2：SD（UHS-II）"
+  ],
+  "timecode": "規格表未列時間碼端子",
+  "sdi": "無",
+  "hdmi": "Type A（標準尺寸）",
+  "dynamic_range_claimed": "Unknown",
+  "max_resolution": "6960×4640（Open Gate RAW）",
+  "recording_modes": [
+    {
+      "resolution": "6960x4640",
+      "max_fps": 29.97,
+      "codec": "RAW（Standard）",
+      "bitrate_mbps": 2600,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "Open Gate 3:2；只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "6960x4640",
+      "max_fps": 29.97,
+      "codec": "RAW（Light）",
+      "bitrate_mbps": 1520,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "Open Gate 3:2"
+    },
+    {
+      "resolution": "6912x4608",
+      "max_fps": 29.97,
+      "codec": "XF-HEVC S YCC422 10bit（Standard LGOP）",
+      "bitrate_mbps": 486,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Open Gate 3:2"
+    },
+    {
+      "resolution": "6960x3672",
+      "max_fps": 29.97,
+      "codec": "RAW（Standard）",
+      "bitrate_mbps": 2600,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none"
+    },
+    {
+      "resolution": "6960x3672",
+      "max_fps": 59.94,
+      "codec": "RAW（Light）",
+      "bitrate_mbps": 2410,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "XF-AVC S YCC422 10bit（High Quality Intra，Fine）",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Fine 為較高畫質、較低壓縮"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "XF-HEVC S YCC422 10bit（Standard LGOP，Fine）",
+      "bitrate_mbps": 225,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 23.98,
+      "codec": "XF-HEVC S YCC422 10bit（Standard LGOP，Fine）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 119.88,
+      "codec": "XF-AVC S YCC422 10bit（Standard Intra）",
+      "bitrate_mbps": 1800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "原廠表格標示 119.9 fps；只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 119.88,
+      "codec": "XF-HEVC S YCC422 10bit（Standard LGOP）",
+      "bitrate_mbps": 450,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "原廠表格標示 119.9 fps"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "XF-HEVC S YCC422 10bit（Standard LGOP，Fine）",
+      "bitrate_mbps": 225,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "XF-HEVC S YCC420 10bit（Standard LGOP，Fine）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 179.82,
+      "codec": "XF-HEVC S YCC422 10bit（Standard LGOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "原廠表格標示 179.8 fps；高於 120fps 時水平視角約為拍照的 82.8%"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 59.94,
+      "codec": "XF-HEVC S YCC422 10bit（Standard LGOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    }
+  ],
+  "source_name": "Canon EOS R6 Mark III 使用說明書：規格",
+  "source_url": "https://cam.start.canon/en/C022/manual/html/UG-11_Reference_0090.html",
+  "extra_sources": [
+    {
+      "source_name": "Canon EOS R6 Mark III 使用說明書：短片記錄尺寸",
+      "source_url": "https://cam.start.canon/en/C022/manual/html/UG-04_Shooting_0050.html"
+    },
+    {
+      "source_name": "Canon EOS R6 Mark III 使用說明書：Open Gate",
+      "source_url": "https://cam.start.canon/en/C022/manual/html/UG-04_Shooting_0090.html"
+    }
+  ],
+  "last_verified": "2026-10-06",
+  "editor_notes": "位元率取自原廠規格頁的「短片位元率」表（只含影像、不含聲音）。4K DCI 不論 Fine 或一般都是 100% 水平視角，4K 120p 不裁切。原廠說明書沒有寫動態範圍和原生 ISO。發表日期 2025-11 來自 Canon USA 新聞稿標題（頁面被擋，未能開啟）。"
+}

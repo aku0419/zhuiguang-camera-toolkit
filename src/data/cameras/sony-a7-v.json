@@ -2,34 +2,146 @@
   "slug": "sony-a7-v",
   "brand": "Sony",
   "model": "α7 V",
-  "aliases": ["A7 V", "A7V", "A7M5", "ILCE-7M5"],
+  "aliases": [
+    "A7 V",
+    "A7V",
+    "A7M5",
+    "ILCE-7M5"
+  ],
   "type": "無反光鏡相機",
   "announced": "2025-12",
-  "sensor": { "format": "Full Frame", "width_mm": 35.9, "height_mm": 23.9, "resolution_mp": 27.6 },
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.9,
+    "height_mm": 23.9,
+    "resolution_mp": 27.6
+  },
   "base_iso": "Unknown",
-  "log": ["S-Log3"],
+  "log": [
+    "S-Log3"
+  ],
   "raw": "不支援錄影 RAW（手冊未列 RAW 影片輸出）",
   "open_gate": false,
   "lens_mount": "Sony E",
-  "media": ["卡槽 1：CFexpress Type A／SD", "卡槽 2：SD（UHS-I／UHS-II）"],
+  "media": [
+    "卡槽 1：CFexpress Type A／SD",
+    "卡槽 2：SD（UHS-I／UHS-II）"
+  ],
   "timecode": "沒有時間碼輸入端子；HDMI 可輸出時間碼",
   "sdi": "無",
   "hdmi": "Type A（標準尺寸）",
-  "dynamic_range_claimed": "Unknown",
+  "dynamic_range_claimed": "最高 16 stops（新聞稿寫在拍照性能段落）",
   "recording_modes": [
-    { "resolution": "3840x2160", "max_fps": 120, "codec": "XAVC S-I 4K", "bitrate_mbps": 1200, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "crop_factor": 1.5, "notes": "僅慢動作（S&Q）模式；位元率為原廠標示最高值。4K 120p 為 APS-C／Super35 視角" },
-    { "resolution": "3840x2160", "max_fps": 60, "codec": "XAVC S-I 4K", "bitrate_mbps": 600, "bit_depth": 10, "chroma": "4:2:2", "crop": "none", "notes": "「4K 視角優先」設為 On 時為全片幅視角；設為 Off（預設）時視角會略窄" },
-    { "resolution": "3840x2160", "max_fps": 24, "codec": "XAVC S-I 4K", "bitrate_mbps": 240, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "3840x2160", "max_fps": 120, "codec": "XAVC HS 4K", "bitrate_mbps": 280, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "crop_factor": 1.5, "notes": "4K 120p 為 APS-C／Super35 視角" },
-    { "resolution": "3840x2160", "max_fps": 60, "codec": "XAVC HS 4K", "bitrate_mbps": 200, "bit_depth": 10, "chroma": "4:2:2", "crop": "none", "notes": "「4K 視角優先」設為 Off（預設）時視角會略窄" },
-    { "resolution": "3840x2160", "max_fps": 120, "codec": "XAVC S 4K", "bitrate_mbps": 280, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "crop_factor": 1.5, "notes": "4K 120p 為 APS-C／Super35 視角" },
-    { "resolution": "3840x2160", "max_fps": 60, "codec": "XAVC S 4K", "bitrate_mbps": 200, "bit_depth": 10, "chroma": "4:2:2", "crop": "none", "notes": "「4K 視角優先」設為 Off（預設）時視角會略窄" },
-    { "resolution": "1920x1080", "max_fps": 240, "codec": "XAVC S-I HD", "bitrate_mbps": 890, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "crop_factor": 1.5, "notes": "僅慢動作（S&Q）模式；位元率為原廠標示最高值。HD 240fps 為 APS-C／Super35 視角" },
-    { "resolution": "1920x1080", "max_fps": 60, "codec": "XAVC S-I HD", "bitrate_mbps": 222, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "1920x1080", "max_fps": 120, "codec": "XAVC S HD", "bitrate_mbps": 100, "bit_depth": 8, "chroma": "4:2:0", "crop": "none" }
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "僅慢動作（S&Q）模式；位元率為原廠標示最高值。4K 120p 為 APS-C／Super35 視角"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "「4K 視角優先」設為 On 時為全片幅視角；設為 Off（預設）時視角會略窄"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 280,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "4K 120p 為 APS-C／Super35 視角"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "「4K 視角優先」設為 Off（預設）時視角會略窄"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 280,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "4K 120p 為 APS-C／Super35 視角"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "「4K 視角優先」設為 Off（預設）時視角會略窄"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 890,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "僅慢動作（S&Q）模式；位元率為原廠標示最高值。HD 240fps 為 APS-C／Super35 視角"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 222,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    }
   ],
   "source_name": "Sony ILCE-7M5 Help Guide（PDF）",
   "source_url": "https://helpguide.sony.net/ilc/2540/v1/en/print.pdf",
   "last_verified": "2026-10-06",
-  "editor_notes": "有效像素：拍照約 3300 萬、錄影約 2760 萬，這裡填錄影值。「4K 視角優先」關閉時 4K 60p 視角變窄，但手冊沒寫倍率。發表日期 2025-12 來自新聞（CineD／Newsshooter），待原廠新聞稿確認。"
+  "editor_notes": "有效像素：拍照約 3300 萬、錄影約 2760 萬，這裡填錄影值。「4K 視角優先」關閉時 4K 60p 視角變窄，但手冊沒寫倍率。發表日期 2025-12 來自新聞（CineD／Newsshooter），待原廠新聞稿確認。 16 stops 出現在新聞稿的拍照性能段落，錄影的動態範圍原廠沒有另外寫。",
+  "extra_sources": [
+    {
+      "source_name": "Sony 新聞稿：α7 V 發表（Alpha Universe）",
+      "source_url": "https://alphauniverse.com/stories/sony-electronics-launches-alpha-7-v-and-fe-28-70mm-f-3-5-5-6-oss-ii/"
+    }
+  ]
 }

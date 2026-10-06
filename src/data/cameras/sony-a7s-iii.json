@@ -2,35 +2,149 @@
   "slug": "sony-a7s-iii",
   "brand": "Sony",
   "model": "α7S III",
-  "aliases": ["A7S III", "A7SIII", "A7S3", "ILCE-7SM3"],
+  "aliases": [
+    "A7S III",
+    "A7SIII",
+    "A7S3",
+    "ILCE-7SM3"
+  ],
   "type": "無反光鏡相機",
-  "announced": "Unknown",
-  "sensor": { "format": "Full Frame", "width_mm": 35.6, "height_mm": 23.8, "resolution_mp": 12.1 },
+  "announced": "2020-07",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.6,
+    "height_mm": 23.8,
+    "resolution_mp": 12.1
+  },
   "base_iso": "Unknown",
-  "log": ["S-Log2", "S-Log3"],
+  "log": [
+    "S-Log2",
+    "S-Log3"
+  ],
   "raw": "不能內錄；可經 HDMI 輸出 RAW 到外接錄影機",
   "open_gate": false,
   "lens_mount": "Sony E",
-  "media": ["CFexpress Type A", "SD（UHS-I／UHS-II）"],
+  "media": [
+    "CFexpress Type A",
+    "SD（UHS-I／UHS-II）"
+  ],
   "timecode": "沒有時間碼輸入端子；HDMI 可輸出時間碼",
   "sdi": "無",
   "hdmi": "Type A（標準尺寸）",
-  "dynamic_range_claimed": "Unknown",
+  "dynamic_range_claimed": "15+ stops（錄影）",
   "recording_modes": [
-    { "resolution": "3840x2160", "max_fps": 120, "codec": "XAVC S-I 4K", "bitrate_mbps": 1200, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "notes": "僅慢動作（S&Q）模式；位元率為原廠標示最高值。4K 120p 視角略窄，原廠未標倍率" },
-    { "resolution": "3840x2160", "max_fps": 60, "codec": "XAVC S-I 4K", "bitrate_mbps": 600, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "3840x2160", "max_fps": 24, "codec": "XAVC S-I 4K", "bitrate_mbps": 240, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "3840x2160", "max_fps": 120, "codec": "XAVC HS 4K", "bitrate_mbps": 280, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "notes": "4K 120p 視角略窄，原廠未標倍率" },
-    { "resolution": "3840x2160", "max_fps": 60, "codec": "XAVC HS 4K", "bitrate_mbps": 200, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "3840x2160", "max_fps": 24, "codec": "XAVC HS 4K", "bitrate_mbps": 100, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "3840x2160", "max_fps": 120, "codec": "XAVC S 4K", "bitrate_mbps": 280, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "notes": "4K 120p 視角略窄，原廠未標倍率" },
-    { "resolution": "3840x2160", "max_fps": 60, "codec": "XAVC S 4K", "bitrate_mbps": 200, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "1920x1080", "max_fps": 240, "codec": "XAVC S-I HD", "bitrate_mbps": 890, "bit_depth": 10, "chroma": "4:2:2", "crop": "none", "notes": "僅慢動作（S&Q）模式；位元率為原廠標示最高值" },
-    { "resolution": "1920x1080", "max_fps": 60, "codec": "XAVC S-I HD", "bitrate_mbps": 222, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "1920x1080", "max_fps": 60, "codec": "XAVC S HD", "bitrate_mbps": 50, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" }
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "僅慢動作（S&Q）模式；位元率為原廠標示最高值。4K 120p 視角略窄，原廠未標倍率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 280,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "4K 120p 視角略窄，原廠未標倍率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 280,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "4K 120p 視角略窄，原廠未標倍率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 890,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅慢動作（S&Q）模式；位元率為原廠標示最高值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 222,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    }
   ],
   "source_name": "Sony ILCE-7SM3 Help Guide（PDF）",
   "source_url": "https://helpguide.sony.net/ilc/2010/v1/en/print.pdf",
   "last_verified": "2026-10-06",
-  "editor_notes": "手冊格率寫 60p／120p／24p（NTSC）。手冊沒有 Base ISO 設定項目，原廠產品頁的雙原生 ISO 說明目前連不到，先標 Unknown。"
+  "editor_notes": "手冊格率寫 60p／120p／24p（NTSC）。手冊沒有 Base ISO 設定項目，原廠產品頁的雙原生 ISO 說明目前連不到，先標 Unknown。 新聞稿寫「15+ stop dynamic range for movies」。新聞稿的「base ISO lowered to 80」指的是最低 ISO，不是雙原生 ISO，所以 Base ISO 仍標 Unknown。",
+  "extra_sources": [
+    {
+      "source_name": "Sony 新聞稿：α7S III 發表（Alpha Universe）",
+      "source_url": "https://alphauniverse.com/stories/sony-announces-the-a7s-iii-redefining-the-possibilities-for-creatives/"
+    }
+  ]
 }

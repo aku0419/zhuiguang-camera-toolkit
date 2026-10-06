@@ -2,39 +2,164 @@
   "slug": "sony-fx5",
   "brand": "Sony",
   "model": "FX5",
-  "aliases": ["ILME-FX5", "ILME-FX5B"],
+  "aliases": [
+    "ILME-FX5",
+    "ILME-FX5B"
+  ],
   "type": "電影機（Cinema Line）",
   "announced": "2026-07",
   "max_resolution": "5K 3:2（Open Gate，X-OCN）",
-  "sensor": { "format": "Full Frame", "width_mm": 35.9, "height_mm": 24.0, "resolution_mp": 16.6 },
-  "base_iso": [800, 4000, 12800],
-  "log": ["S-Log3"],
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.9,
+    "height_mm": 24.0,
+    "resolution_mp": 16.6
+  },
+  "base_iso": [
+    800,
+    4000,
+    12800
+  ],
+  "log": [
+    "S-Log3"
+  ],
   "raw": "可內錄 X-OCN（LT／C1／C2）；也可經 HDMI 輸出 RAW",
   "open_gate": true,
   "lens_mount": "Sony E",
-  "media": ["CFexpress Type A", "SD（UHS-I／UHS-II）"],
+  "media": [
+    "CFexpress Type A",
+    "SD（UHS-I／UHS-II）"
+  ],
   "timecode": "可用 VMC-BNCU1 時間碼轉接線（接 USB PORT 2）與外部設備同步",
   "sdi": "無",
   "hdmi": "Type A（標準尺寸）",
   "dynamic_range_claimed": "15+ stops（S-Log3）",
   "recording_modes": [
-    { "resolution": "5K 3:2（Open Gate）", "max_fps": 59.94, "codec": "X-OCN LT／C1／C2", "bitrate_mbps": "Unknown", "bit_depth": "Unknown", "chroma": "RAW", "crop": "none", "notes": "需要 CFexpress Type A VPG400。原廠說明書沒有寫 X-OCN 位元率" },
-    { "resolution": "4096x2160", "max_fps": 59.94, "codec": "XAVC S-I", "bitrate_mbps": 600, "bit_depth": "Unknown", "chroma": "4:2:2", "crop": "none", "notes": "FF 5K 17:9 模式；開啟 Dual Gain 時最高 60fps" },
-    { "resolution": "3840x2160", "max_fps": 119.88, "codec": "XAVC S-I", "bitrate_mbps": "Unknown", "bit_depth": "Unknown", "chroma": "4:2:2", "crop": "none", "notes": "慢動作最高 120fps；原廠位元率表沒有列 120p 的 S-I 數值" },
-    { "resolution": "3840x2160", "max_fps": 59.94, "codec": "XAVC S-I", "bitrate_mbps": 600, "bit_depth": "Unknown", "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "3840x2160", "max_fps": 23.98, "codec": "XAVC S-I", "bitrate_mbps": 240, "bit_depth": "Unknown", "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "3840x2160", "max_fps": 119.88, "codec": "XAVC HS-L 422", "bitrate_mbps": 280, "bit_depth": "Unknown", "chroma": "4:2:2", "crop": "none", "notes": "FF 5K 16:9 模式可到 120fps；開啟 Dual Gain 時最高 60fps" },
-    { "resolution": "3840x2160", "max_fps": 59.94, "codec": "XAVC HS-L 422", "bitrate_mbps": 200, "bit_depth": "Unknown", "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "3840x2160", "max_fps": 23.98, "codec": "XAVC HS-L 422", "bitrate_mbps": 100, "bit_depth": "Unknown", "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "3840x2160", "max_fps": 119.88, "codec": "XAVC S-L 422", "bitrate_mbps": 280, "bit_depth": "Unknown", "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "3840x2160", "max_fps": 59.94, "codec": "XAVC S-L 422", "bitrate_mbps": 200, "bit_depth": "Unknown", "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "1920x1080", "max_fps": 239.76, "codec": "XAVC S-L 420", "bitrate_mbps": 100, "bit_depth": "Unknown", "chroma": "4:2:0", "crop": "none", "notes": "FF 5K 16:9 或 S35 3.2K 模式可到 240fps；位元率取原廠表 119.88 專案的最高值" },
-    { "resolution": "1920x1080", "max_fps": 59.94, "codec": "XAVC S-I", "bitrate_mbps": 222, "bit_depth": "Unknown", "chroma": "4:2:2", "crop": "none" }
+    {
+      "resolution": "5K 3:2（Open Gate）",
+      "max_fps": 59.94,
+      "codec": "X-OCN LT／C1／C2",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "需要 CFexpress Type A VPG400。原廠說明書沒有寫 X-OCN 位元率"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "XAVC S-I",
+      "bitrate_mbps": 600,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "FF 5K 17:9 模式；開啟 Dual Gain 時最高 60fps"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 119.88,
+      "codec": "XAVC S-I",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "慢動作最高 120fps；原廠位元率表沒有列 120p 的 S-I 數值"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "XAVC S-I",
+      "bitrate_mbps": 600,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 23.98,
+      "codec": "XAVC S-I",
+      "bitrate_mbps": 240,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 119.88,
+      "codec": "XAVC HS-L 422",
+      "bitrate_mbps": 280,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "FF 5K 16:9 模式可到 120fps；開啟 Dual Gain 時最高 60fps"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "XAVC HS-L 422",
+      "bitrate_mbps": 200,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 23.98,
+      "codec": "XAVC HS-L 422",
+      "bitrate_mbps": 100,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 119.88,
+      "codec": "XAVC S-L 422",
+      "bitrate_mbps": 280,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "XAVC S-L 422",
+      "bitrate_mbps": 200,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 239.76,
+      "codec": "XAVC S-L 420",
+      "bitrate_mbps": 100,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "FF 5K 16:9 或 S35 3.2K 模式可到 240fps；位元率取原廠表 119.88 專案的最高值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 59.94,
+      "codec": "XAVC S-I",
+      "bitrate_mbps": 222,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    }
   ],
   "source_name": "Sony ILME-FX5 Help Guide（PDF）",
   "source_url": "https://helpguide.sony.net/ilc/2630/v1/en/print.pdf",
   "extra_sources": [
-    { "source_name": "Sony FX5 Help Guide 規格頁", "source_url": "https://helpguide.sony.net/ilc/2630/v1/en/contents/spec.html" }
+    {
+      "source_name": "Sony FX5 Help Guide 規格頁",
+      "source_url": "https://helpguide.sony.net/ilc/2630/v1/en/contents/spec.html"
+    },
+    {
+      "source_name": "Sony 新聞稿：FX5 發表（Alpha Universe）",
+      "source_url": "https://alphauniverse.com/stories/sony-electronics-launches-the-fx5/"
+    }
   ],
   "last_verified": "2026-10-06",
   "editor_notes": "原廠說明書：Base ISO 可選 800／4000／12800／800(Dual Gain)。手冊沒有寫位元深度與 X-OCN 位元率。5K 解析度的實際像素數手冊沒寫。發表日期 2026-07 來自 Sony 新聞稿（sony.eu）。"

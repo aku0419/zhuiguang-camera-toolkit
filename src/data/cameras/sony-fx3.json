@@ -2,36 +2,158 @@
   "slug": "sony-fx3",
   "brand": "Sony",
   "model": "FX3",
-  "aliases": ["ILME-FX3"],
+  "aliases": [
+    "ILME-FX3"
+  ],
   "type": "電影機（Cinema Line）",
   "announced": "Unknown",
-  "sensor": { "format": "Full Frame", "width_mm": 35.6, "height_mm": 23.8, "resolution_mp": 12.1 },
-  "base_iso": [800, 12800],
-  "log": ["S-Log3"],
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.6,
+    "height_mm": 23.8,
+    "resolution_mp": 12.1
+  },
+  "base_iso": [
+    800,
+    12800
+  ],
+  "log": [
+    "S-Log3"
+  ],
   "raw": "不能內錄；可經 HDMI 輸出 RAW 到外接錄影機（最高 59.94p）",
   "open_gate": false,
   "lens_mount": "Sony E",
-  "media": ["CFexpress Type A", "SD（UHS-I／UHS-II）"],
+  "media": [
+    "CFexpress Type A",
+    "SD（UHS-I／UHS-II）"
+  ],
   "timecode": "可經 Multi/Micro USB 端子輸入（需 VMC-BNCM1 轉接線）；HDMI 可輸出",
   "sdi": "無",
   "hdmi": "Type A（標準尺寸）",
-  "dynamic_range_claimed": "Unknown",
+  "dynamic_range_claimed": "15+ stops",
   "recording_modes": [
-    { "resolution": "3840x2160", "max_fps": 119.88, "codec": "XAVC S-I 4K", "bitrate_mbps": 1200, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "notes": "僅慢動作（S&Q）模式；位元率為原廠標示最高值。4K 120p 視角略窄，原廠未標倍率" },
-    { "resolution": "4096x2160", "max_fps": 59.94, "codec": "XAVC S-I DCI 4K", "bitrate_mbps": 600, "bit_depth": 10, "chroma": "4:2:2", "crop": "none", "notes": "韌體 Ver.3.00 以後" },
-    { "resolution": "3840x2160", "max_fps": 59.94, "codec": "XAVC S-I 4K", "bitrate_mbps": 600, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "3840x2160", "max_fps": 23.98, "codec": "XAVC S-I 4K", "bitrate_mbps": 240, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "3840x2160", "max_fps": 119.88, "codec": "XAVC HS 4K", "bitrate_mbps": 280, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "notes": "4K 120p 視角略窄，原廠未標倍率" },
-    { "resolution": "3840x2160", "max_fps": 59.94, "codec": "XAVC HS 4K", "bitrate_mbps": 200, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "3840x2160", "max_fps": 23.98, "codec": "XAVC HS 4K", "bitrate_mbps": 100, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "3840x2160", "max_fps": 119.88, "codec": "XAVC S 4K", "bitrate_mbps": 280, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "notes": "4K 120p 視角略窄，原廠未標倍率" },
-    { "resolution": "3840x2160", "max_fps": 59.94, "codec": "XAVC S 4K", "bitrate_mbps": 200, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "1920x1080", "max_fps": 239.76, "codec": "XAVC S-I HD", "bitrate_mbps": 890, "bit_depth": 10, "chroma": "4:2:2", "crop": "none", "notes": "僅慢動作（S&Q）模式；位元率為原廠標示最高值" },
-    { "resolution": "1920x1080", "max_fps": 59.94, "codec": "XAVC S-I HD", "bitrate_mbps": 222, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
-    { "resolution": "1920x1080", "max_fps": 59.94, "codec": "XAVC S HD", "bitrate_mbps": 50, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" }
+    {
+      "resolution": "3840x2160",
+      "max_fps": 119.88,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "僅慢動作（S&Q）模式；位元率為原廠標示最高值。4K 120p 視角略窄，原廠未標倍率"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "XAVC S-I DCI 4K",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "韌體 Ver.3.00 以後"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 23.98,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 119.88,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 280,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "4K 120p 視角略窄，原廠未標倍率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 23.98,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 119.88,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 280,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "4K 120p 視角略窄，原廠未標倍率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 239.76,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 890,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅慢動作（S&Q）模式；位元率為原廠標示最高值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 59.94,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 222,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 59.94,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    }
   ],
   "source_name": "Sony ILME-FX3 Help Guide（Ver.2 以後，PDF）",
   "source_url": "https://helpguide.sony.net/ilc/2210/v1/en/print.pdf",
   "last_verified": "2026-10-06",
-  "editor_notes": "格率以 NTSC 標示（PAL 為 50p/25p/100p）。動態範圍原廠手冊未寫，產品頁目前連不到，先標 Unknown。發表日期待原廠產品頁確認。"
+  "editor_notes": "格率以 NTSC 標示（PAL 為 50p/25p/100p）。 新聞稿頁面寫的發表日期是 2020-02-23，但 FX3 實際是 2021 年發表，頁面日期疑似誤植，所以發表日期仍標 Unknown。",
+  "extra_sources": [
+    {
+      "source_name": "Sony 新聞稿：FX3 發表（Alpha Universe）",
+      "source_url": "https://alphauniverse.com/stories/sony-electronics-launches-fx3-full-frame-camera-for-cinematic-look-and-enhanced-operability-for-creators/"
+    }
+  ]
 }

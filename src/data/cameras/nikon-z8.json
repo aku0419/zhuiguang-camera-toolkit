@@ -1,0 +1,185 @@
+{
+  "slug": "nikon-z8",
+  "brand": "Nikon",
+  "model": "Z8",
+  "aliases": [
+    "Z 8"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.9,
+    "height_mm": 23.9,
+    "resolution_mp": 45.7
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "N-Log"
+  ],
+  "raw": "可內錄 N-RAW（12-bit）與 ProRes RAW HQ（12-bit）",
+  "open_gate": false,
+  "lens_mount": "Nikon Z",
+  "media": [
+    "CFexpress Type B／XQD",
+    "SD（UHS-II）"
+  ],
+  "timecode": "有時間碼功能；規格表未列時間碼端子",
+  "sdi": "無",
+  "hdmi": "Type A（標準尺寸）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "8256x4644",
+      "max_fps": 59.94,
+      "codec": "N-RAW（高畫質）",
+      "bitrate_mbps": 5780,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍"
+    },
+    {
+      "resolution": "8256x4644",
+      "max_fps": 23.976,
+      "codec": "N-RAW（高畫質）",
+      "bitrate_mbps": 2780,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍"
+    },
+    {
+      "resolution": "8256x4644",
+      "max_fps": 59.94,
+      "codec": "N-RAW（一般畫質）",
+      "bitrate_mbps": 3470,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍"
+    },
+    {
+      "resolution": "4128x2322",
+      "max_fps": 119.88,
+      "codec": "N-RAW（高畫質）",
+      "bitrate_mbps": 3480,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍"
+    },
+    {
+      "resolution": "5392x3032",
+      "max_fps": 59.94,
+      "codec": "N-RAW（高畫質）",
+      "bitrate_mbps": 2960,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 119.88,
+      "codec": "N-RAW（高畫質）",
+      "bitrate_mbps": 3020,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.3,
+      "notes": "2.3× 裁切範圍"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 29.97,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "8K，FX 範圍；25p、24p 相同"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 119.88,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "選 DX 範圍或用 DX 鏡頭時為 2.3× 裁切"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 340,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 29.97,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 190,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "25p、24p 相同"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Nikon 說明書未列 ProRes 位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 119.88,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 190,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 59.94,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 59.94,
+      "codec": "H.264 8-bit",
+      "bitrate_mbps": 50,
+      "bit_depth": 8,
+      "chroma": "Unknown",
+      "crop": "none"
+    }
+  ],
+  "source_name": "Nikon Z8 線上說明書：影片尺寸與格率",
+  "source_url": "https://onlinemanual.nikonimglib.com/z8/en/video_frame_size_and_rate_options_41.html",
+  "extra_sources": [
+    {
+      "source_name": "Nikon Z8 線上說明書：規格",
+      "source_url": "https://onlinemanual.nikonimglib.com/z8/en/specifications_384.html"
+    },
+    {
+      "source_name": "Nikon Z8 線上說明書：影片影像範圍",
+      "source_url": "https://onlinemanual.nikonimglib.com/z8/en/video_image_area_options_42.html"
+    }
+  ],
+  "last_verified": "2026-10-06",
+  "editor_notes": "位元率為原廠表格的平均值（Approx.）。原廠說明書沒有寫 H.265 的色彩取樣，也沒有列 ProRes／ProRes RAW 的位元率。H.265 的 4K 120p 位元率與 8K 30p 同欄（約 400 Mbps）。"
+}
