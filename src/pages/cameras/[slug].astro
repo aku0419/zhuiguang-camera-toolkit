@@ -1,0 +1,96 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { cameras, show } from "../../lib/cameras.js";
+import { fmt } from "../../lib/calc.js";
+
+export function getStaticPaths() {
+  return cameras.map((c) => ({ params: { slug: c.slug }, props: { c } }));
+}
+const { c } = Astro.props;
+const U = "Unknown";
+const list = (v: string[] | string) => (v === U ? "未知" : (v as string[]).join("、"));
+const res = (r: string) => r.replace(/x/g, "×");
+const sensorSize = c.sensor.width_mm === U ? "尺寸未知" : `${c.sensor.width_mm} × ${c.sensor.height_mm} mm`;
+const facts: [string, string][] = [
+  ["感光元件", `${c.sensor.format}（${sensorSize}）`],
+  ["卡口", show(c.lens_mount)],
+  ["記憶卡", list(c.media)],
+  ["最高錄影", `${res(c.max_resolution)}・最高 ${show(c.max_fps, " fps")}`],
+  ["Log", list(c.log)],
+  ["RAW", show(c.raw)],
+];
+const specs: [string, string][] = [
+  ["品牌", c.brand],
+  ["型號", c.model],
+  ["類型", c.type],
+  ["發表", show(c.announced)],
+  ["感光元件片幅", c.sensor.format],
+  ["感光元件尺寸", sensorSize],
+  ["換算倍率（對全片幅）", c.crop_factor ? `約 ${fmt(c.crop_factor, 2)}×` : "未知"],
+  ["有效像素", show(c.sensor.resolution_mp, " MP")],
+  ["Base ISO", c.base_iso === U ? "未知" : c.base_iso.join(" / ")],
+  ["Open Gate", c.open_gate === U ? "未知" : c.open_gate ? "支援" : "不支援"],
+  ["Timecode", show(c.timecode)],
+  ["SDI", show(c.sdi)],
+  ["HDMI", show(c.hdmi)],
+  ["動態範圍（原廠宣稱）", show(c.dynamic_range_claimed)],
+];
+const desc = `${c.name} 規格：${c.sensor.format} 感光元件、${c.lens_mount} 卡口、${list(c.media)}。錄影模式、位元率與記憶卡，並可直接計算錄影容量與等效焦段。`;
+---
+<BaseLayout title={`${c.name} 規格與錄影格式`} description={desc} section="cameras">
+  {c.sample && <p class="sample-warn">這是版面預覽用的範例資料，不是真實規格。</p>}
+  <p class="crumb"><a href="/cameras/">攝影機</a> › {c.brand}</p>
+  <h1>{c.name}</h1>
+  <div class="cam-head">
+    <span class="pill hot">{c.type}</span>
+    <span class="pill">{c.sensor.format}</span>
+    <span class="pill">最後確認 {c.last_verified}</span>
+  </div>
+
+  <div class="actions">
+    <a class="btn primary" href={`/tools/recording-capacity/?camera=${c.slug}`}>用這台算錄影容量</a>
+    <a class="btn" href={`/tools/recording-capacity/?mode=card&camera=${c.slug}`}>記憶卡可錄多久</a>
+    <a class="btn" href={`/tools/focal-length/?camera=${c.slug}`}>算等效焦段</a>
+    <a class="btn" href={`/tools/frame-rate/?camera=${c.slug}`}>算升降格</a>
+  </div>
+
+  <h2>重點規格</h2>
+  <dl class="facts">
+    {facts.map(([k, v]) => <div><dt>{k}</dt><dd class={v === "未知" ? "unknown" : undefined}>{v}</dd></div>)}
+  </dl>
+
+  <h2>錄影模式</h2>
+  <p class="cam-count">列出常用的錄影模式，不是全部組合。位元率單位 Mbps。</p>
+  <div class="tbl-wrap">
+    <table class="modes">
+      <thead><tr><th>解析度</th><th>最高格率</th><th>編碼</th><th>位元率</th><th>位元深度</th><th>色彩取樣</th><th>裁切</th><th>備註</th></tr></thead>
+      <tbody>
+        {c.recording_modes.map((m: any) => (
+          <tr>
+            <td class="first n" data-th="解析度">{res(m.resolution)}</td>
+            <td class="n" data-th="最高格率">{show(m.max_fps, " fps")}</td>
+            <td data-th="編碼">{m.codec}</td>
+            <td class="n" data-th="位元率">{show(m.bitrate_mbps, " Mbps")}</td>
+            <td class="n" data-th="位元深度">{show(m.bit_depth, "-bit")}</td>
+            <td class="n" data-th="色彩取樣">{show(m.chroma)}</td>
+            <td data-th="裁切">{m.crop === "none" ? "不裁切" : m.crop === "crop" ? `裁切${m.crop_factor ? `（約 ${m.crop_factor}×）` : ""}` : "未知"}</td>
+            <td class={m.notes ? "note" : "note empty"} data-th="備註">{m.notes || "—"}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>完整規格</h2>
+  <dl class="facts">
+    {specs.map(([k, v]) => <div><dt>{k}</dt><dd class={v === "未知" ? "unknown" : undefined}>{v}</dd></div>)}
+  </dl>
+
+  <h2>資料來源</h2>
+  <div class="src">
+    <p>原廠資料：<a href={c.source_url} rel="noopener" target="_blank">{c.source_name}</a>
+      {c.extra_sources?.map((s: any) => <>、<a href={s.source_url} rel="noopener" target="_blank">{s.source_name}</a></>)}
+    </p>
+    <p>最後確認日期：{c.last_verified}。規格可能因韌體更新而改變，重要拍攝前請以原廠最新文件為準。標示「未知」表示原廠資料查不到，不代表不支援。</p>
+  </div>
+</BaseLayout>

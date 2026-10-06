@@ -1,0 +1,28 @@
+{
+  "slug": "sample-x1",
+  "brand": "範例品牌",
+  "model": "X1（版面預覽用，非真實規格）",
+  "type": "電影機",
+  "announced": "2026-01",
+  "sensor": { "format": "Full Frame", "width_mm": 35.6, "height_mm": 23.8, "resolution_mp": 12 },
+  "base_iso": [800, 12800],
+  "log": ["Log A"],
+  "raw": "外接 RAW（HDMI）",
+  "open_gate": false,
+  "lens_mount": "範例卡口",
+  "media": ["CFexpress Type A", "SDXC UHS-II"],
+  "timecode": "輸入／輸出",
+  "sdi": "無",
+  "hdmi": "Type A",
+  "dynamic_range_claimed": "15+ stops",
+  "recording_modes": [
+    { "resolution": "3840x2160", "max_fps": 120, "codec": "XAVC S-I", "bitrate_mbps": 1200, "bit_depth": 10, "chroma": "4:2:2", "crop": "crop", "crop_factor": 1.1, "notes": "120p 時裁切" },
+    { "resolution": "3840x2160", "max_fps": 60, "codec": "XAVC S-I", "bitrate_mbps": 600, "bit_depth": 10, "chroma": "4:2:2", "crop": "none" },
+    { "resolution": "3840x2160", "max_fps": 60, "codec": "XAVC HS", "bitrate_mbps": 200, "bit_depth": 10, "chroma": "4:2:0", "crop": "none" },
+    { "resolution": "1920x1080", "max_fps": 240, "codec": "XAVC S", "bitrate_mbps": "Unknown", "bit_depth": 8, "chroma": "4:2:0", "crop": "Unknown" }
+  ],
+  "source_name": "範例來源",
+  "source_url": "https://example.com/",
+  "last_verified": "2026-10-06",
+  "editor_notes": "版面預覽用的假資料，只在 ZG_SAMPLE=1 時載入"
+}

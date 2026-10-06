@@ -201,7 +201,7 @@
 
 ## 12. 攝影機清單（2026-10-06 負責人回覆後更新）
 
-負責人決定：A7 IV／A7 V 兩台都放、R6 Mark II／III 兩台都放、加入 FX5、Fujifilm、Nikon ZR／Z9／Z8；DJI 不放；Blackmagic 不放舊機，以新的 12K 機種為主。
+負責人決定：A7 IV／A7 V 兩台都放、R6 Mark II／III 兩台都放、加入 FX5、Fujifilm（X-H2S、GFX ETERNA 55）、Nikon ZR／Z9／Z8；DJI 不放；Blackmagic 只放 URSA Cine 系列。
 
 | 品牌 | 型號 |
 |---|---|
@@ -209,12 +209,12 @@
 | Canon（4） | EOS R6 Mark II、EOS R6 Mark III、EOS R5 C、EOS C70 |
 | Nikon（4） | Z6III、Z8、Z9、ZR |
 | Panasonic（2） | LUMIX S5II、GH7 |
-| Fujifilm（1～2） | X-H2S（待確認是否加 GFX ETERNA 55） |
-| Blackmagic（2） | PYXIS 12K、URSA Cine 12K LF（待確認） |
+| Fujifilm（2） | X-H2S、GFX ETERNA 55 |
+| Blackmagic（2） | URSA Cine 12K LF、URSA Cine 17K 65（Immersive 是 VR 專用機，不放） |
 | RED（2） | KOMODO 6K、V-RAPTOR（8K VV） |
 | ARRI（3） | ALEXA Mini、ALEXA Mini LF、ALEXA 35 |
 
-合計 26～27 台。分兩批上線（每批都給負責人看截圖）。
+合計 27 台。分兩批上線（每批都給負責人看截圖）。
 
 ### 預期查證困難
 

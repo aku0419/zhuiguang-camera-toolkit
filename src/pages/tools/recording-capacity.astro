@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ToolHead from "../../components/ToolHead.astro";
 import Chips from "../../components/Chips.astro";
+import CameraPicker from "../../components/CameraPicker.astro";
 const cards = [64, 128, 256, 512, 1000, 2000];
 ---
 <BaseLayout title="錄影容量與記憶卡可錄時間計算器" description="用位元率（Mbps）算錄影需要多少 GB，或一張記憶卡可以錄多久。例如 200Mbps 拍 3 小時約 270GB；256GB 卡用 400Mbps 約可錄 85 分鐘。" section="tools">
@@ -10,6 +11,13 @@ const cards = [64, 128, 256, 512, 1000, 2000];
     <div class="seg" role="group" aria-label="計算方向">
       <button type="button" data-mode="size" aria-pressed="true">需要多少容量</button>
       <button type="button" data-mode="card" aria-pressed="false">記憶卡可錄多久</button>
+    </div>
+
+    <CameraPicker />
+    <div class="field" id="mode-field" hidden>
+      <label for="cmode">錄影模式</label>
+      <select id="cmode"></select>
+      <span class="hint" id="mode-hint"></span>
     </div>
 
     <div class="field">
@@ -57,7 +65,7 @@ const cards = [64, 128, 256, 512, 1000, 2000];
 
 <script>
   import { capacityGB, recordSeconds, toMbps, fmt, fmtSize, fmtDuration } from "../../lib/calc.js";
-  import { bindChips, num, fromQuery } from "../../lib/ui.js";
+  import { bindChips, num, fromQuery, cameraPicker } from "../../lib/ui.js";
   const $ = (id: string) => document.getElementById(id) as HTMLInputElement;
   const rate = $("rate"), unit = document.getElementById("unit") as HTMLSelectElement;
   const hours = $("hours"), mins = $("mins"), card = $("card");
@@ -106,4 +114,38 @@ const cards = [64, 128, 256, 512, 1000, 2000];
   unit.addEventListener("change", update);
   for (const b of modeBtns) b.addEventListener("click", () => setMode(b.dataset.mode!));
   setMode(q.get("mode") || "size", false);
+
+  // 從攝影機帶入錄影模式的位元率
+  const modeField = document.getElementById("mode-field")!;
+  const cmode = document.getElementById("cmode") as HTMLSelectElement;
+  const modeHint = document.getElementById("mode-hint")!;
+  let cam: any = null;
+  const applyMode = () => {
+    const m = cam?.modes[Number(cmode.value)];
+    if (!m || typeof m.mbps !== "number") return;
+    rate.value = String(m.mbps);
+    unit.value = "Mbps";
+    rate.dispatchEvent(new Event("input"));
+  };
+  const onCamera = (c: any) => {
+    cam = c;
+    modeField.hidden = !c;
+    if (!c) return;
+    cmode.innerHTML = "";
+    c.modes.forEach((m: any, i: number) => {
+      const o = document.createElement("option");
+      o.value = String(i);
+      const known = typeof m.mbps === "number";
+      o.textContent = known ? `${m.label}・${m.mbps} Mbps` : `${m.label}・位元率未知`;
+      o.disabled = !known;
+      cmode.append(o);
+    });
+    const first = c.modes.findIndex((m: any) => typeof m.mbps === "number");
+    if (first >= 0) cmode.value = String(first);
+    modeHint.textContent = first >= 0 ? "選一個錄影模式，位元率會自動填入。" : "這台相機的位元率原廠沒有公布，請自行輸入。";
+    applyMode();
+  };
+  cmode.addEventListener("change", applyMode);
+  const getCam = cameraPicker(onCamera);
+  if (getCam()) onCamera(getCam());
 </script>

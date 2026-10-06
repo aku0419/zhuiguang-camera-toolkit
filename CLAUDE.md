@@ -65,7 +65,7 @@
 ## 第一階段範圍
 
 - 首頁：五個入口（攝影機、工具、鏡頭、記憶卡、底片）＋全站搜尋。鏡頭／記憶卡／底片先顯示「即將推出」。
-- 攝影機列表頁，每台攝影機一頁（第一階段約 26 台，名單見 `docs/proposal-phase1.md` 第 12 點；DJI 不放、Blackmagic 不放舊機）。
+- 攝影機列表頁，每台攝影機一頁（第一階段 27 台，名單見 `docs/proposal-phase1.md` 第 12 點；DJI 不放、Blackmagic 只放 URSA Cine 系列）。
 - 工具：快門角度、升降格、等效焦段、錄影容量（含記憶卡可錄時間）。
 - 頁尾免責說明、問題回報。
 
@@ -75,6 +75,8 @@
 - `npm run dev`：本機預覽
 - `npm run build`：建置（輸出在 `dist/`）
 - `npm test`：檢查計算式（計畫書的例子都要算對）
+- `ZG_SAMPLE=1 npm run build`：加入 `tests/fixtures/cameras/` 的範例相機，只用來預覽版面；正式建置不會出現
+- 相機資料放 `src/data/cameras/<slug>.json`，格式檢查在 `src/lib/cameras.js`，填錯建置會失敗
 - 計算式只寫在 `src/lib/calc.js`，網頁和測試共用。
 
 ## 其他

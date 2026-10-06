@@ -1,0 +1,14 @@
+---
+// 工具頁上的「從攝影機帶入」選單。沒有相機資料時不顯示。
+import { camerasForTools } from "../lib/cameras.js";
+---
+{camerasForTools.length > 0 && (
+  <div class="field">
+    <label for="cam">從攝影機帶入（選填）</label>
+    <select id="cam">
+      <option value="">不指定</option>
+      {camerasForTools.map((c) => <option value={c.slug}>{c.name}</option>)}
+    </select>
+    <script type="application/json" id="cam-data" set:html={JSON.stringify(camerasForTools)} />
+  </div>
+)}

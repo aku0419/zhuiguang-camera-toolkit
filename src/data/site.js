@@ -11,6 +11,10 @@ export const SECTIONS = [
   { id: "tools", en: "Tools", zh: "工具", href: "/tools/", desc: "快門、升降格、焦段、容量", ready: true },
 ];
 
+// 攝影機資料庫有資料時才算「已上線」
+export const sections = (camerasReady) =>
+  SECTIONS.map((s) => (s.id === "cameras" ? { ...s, ready: camerasReady } : s));
+
 export const TOOLS = [
   {
     id: "shutter-angle", href: "/tools/shutter-angle/", name: "快門角度",

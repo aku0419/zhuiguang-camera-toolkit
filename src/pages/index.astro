@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SearchBox from "../components/SearchBox.astro";
-import { SECTIONS, TOOLS } from "../data/site.js";
+import { sections, TOOLS } from "../data/site.js";
+import { cameras } from "../lib/cameras.js";
 ---
 <BaseLayout description="免費的中文攝影工具與器材資料庫：快門角度、升降格、等效焦段、錄影容量計算，攝影機規格與錄影格式查詢。給影視科學生、學生劇組與獨立影像工作者。">
   <p class="eyebrow">Camera Toolkit</p>
@@ -21,7 +22,7 @@ import { SECTIONS, TOOLS } from "../data/site.js";
 
   <h2>資料庫</h2>
   <div class="grid">
-    {SECTIONS.filter((s) => s.id !== "tools").map((s) => (
+    {sections(cameras.length > 0).filter((s) => s.id !== "tools").map((s) => (
       <a class={s.ready ? "card" : "card soon"} href={s.href}>
         <span class="k">{s.en}</span>
         <h3>{s.zh}</h3>

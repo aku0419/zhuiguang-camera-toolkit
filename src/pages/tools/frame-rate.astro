@@ -2,14 +2,17 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ToolHead from "../../components/ToolHead.astro";
 import Chips from "../../components/Chips.astro";
+import CameraPicker from "../../components/CameraPicker.astro";
 ---
 <BaseLayout title="升降格計算器" description="輸入拍攝格率和時間軸格率，算出播放速度與慢動作倍率。例如 60fps 放到 24fps 時間軸 = 40% 速度、2.5 倍慢動作。" section="tools">
   <ToolHead title="升降格計算器" question="拍攝格率放到時間軸上，會變成幾 % 速度？" />
   <div class="tool">
+    <CameraPicker />
     <div class="field">
       <label for="shoot">拍攝格率</label>
       <div class="inrow"><input id="shoot" type="number" inputmode="decimal" min="1" step="any" value="60" /><span class="unit">fps</span></div>
       <Chips label="常用拍攝格率" values={[24, 30, 48, 50, 60, 100, 120, 240]} />
+      <span class="hint" id="cam-fps" hidden></span>
     </div>
     <div class="field">
       <label for="timeline">時間軸格率（剪接專案）</label>
@@ -36,7 +39,7 @@ import Chips from "../../components/Chips.astro";
 
 <script>
   import { frameRate, fmt } from "../../lib/calc.js";
-  import { bindChips, num, fromQuery } from "../../lib/ui.js";
+  import { bindChips, num, fromQuery, cameraPicker } from "../../lib/ui.js";
   const shoot = document.getElementById("shoot") as HTMLInputElement;
   const timeline = document.getElementById("timeline") as HTMLInputElement;
   const secs = document.getElementById("secs") as HTMLInputElement;
@@ -58,5 +61,23 @@ import Chips from "../../components/Chips.astro";
   bindChips(groups[0], shoot, update);
   bindChips(groups[1], timeline, update);
   secs.addEventListener("input", update);
+
+  // 從攝影機帶入：列出這台各解析度的最高格率
+  const camFps = document.getElementById("cam-fps")!;
+  const onCamera = (c: any) => {
+    camFps.hidden = !c;
+    if (!c) return;
+    const seen = new Map<string, number>();
+    for (const m of c.modes) {
+      if (typeof m.fps !== "number") continue;
+      const r = m.label.split(" ")[0].replace("x", "×");
+      if (!seen.has(r) || seen.get(r)! < m.fps) seen.set(r, m.fps);
+    }
+    camFps.textContent = seen.size
+      ? `${c.name} 最高格率：` + [...seen].map(([r, f]) => `${r} ${f}p`).join("、")
+      : `${c.name} 的格率資料未知`;
+  };
+  const getCam = cameraPicker(onCamera);
+  if (getCam()) onCamera(getCam());
   update();
 </script>

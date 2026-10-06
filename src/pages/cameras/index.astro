@@ -1,4 +1,58 @@
 ---
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import ComingSoon from "../../components/ComingSoon.astro";
+import { cameras } from "../../lib/cameras.js";
+const brands = [...new Set(cameras.map((c) => c.brand))];
+const formats = [...new Set(cameras.map((c) => c.sensor.format))];
 ---
-<ComingSoon id="cameras" intro="常用攝影機的規格、錄影模式、支援的記憶卡，並可以直接帶入工具計算。" />
+{cameras.length === 0 ? (
+  <ComingSoon id="cameras" intro="常用攝影機的規格、錄影模式、支援的記憶卡，並可以直接帶入工具計算。" />
+) : (
+  <BaseLayout title="攝影機資料庫" description={`${cameras.length} 台常用攝影機的規格、錄影模式、記憶卡與卡口，資料整理自原廠公開資訊。`} section="cameras">
+    <p class="eyebrow">Cameras</p>
+    <h1>攝影機資料庫</h1>
+    <p class="lead">點進每台相機，可以看錄影格式、記憶卡，並直接算容量、焦段。</p>
+    <div class="filters">
+      <div class="chips" role="group" aria-label="品牌" data-filter="brand">
+        <button type="button" class="chip" data-f="" aria-pressed="true">全部</button>
+        {brands.map((b) => <button type="button" class="chip" data-f={b} aria-pressed="false">{b}</button>)}
+      </div>
+      <div class="chips" role="group" aria-label="片幅" data-filter="format">
+        <button type="button" class="chip" data-f="" aria-pressed="true">全部片幅</button>
+        {formats.map((f) => <button type="button" class="chip" data-f={f} aria-pressed="false">{f}</button>)}
+      </div>
+    </div>
+    <p class="cam-count" aria-live="polite"><span id="count">{cameras.length}</span> 台</p>
+    <div class="grid">
+      {cameras.map((c) => (
+        <a class="card cam-card" href={`/cameras/${c.slug}/`} data-brand={c.brand} data-format={c.sensor.format}>
+          <span class="k">{c.brand}</span>
+          <h3>{c.model}</h3>
+          <p>{c.type}・{c.lens_mount}</p>
+          <div class="meta"><span class="pill">{c.sensor.format}</span><span class="pill">最高 {c.max_resolution.replace("x", "×")}</span></div>
+        </a>
+      ))}
+    </div>
+  </BaseLayout>
+)}
+
+<script>
+  const state: Record<string, string> = { brand: "", format: "" };
+  const cards = [...document.querySelectorAll<HTMLElement>(".cam-card")];
+  for (const group of document.querySelectorAll<HTMLElement>("[data-filter]")) {
+    const key = group.dataset.filter!;
+    for (const btn of group.querySelectorAll<HTMLButtonElement>("button")) {
+      btn.addEventListener("click", () => {
+        state[key] = btn.dataset.f || "";
+        group.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
+        let n = 0;
+        for (const c of cards) {
+          const ok = (!state.brand || c.dataset.brand === state.brand) && (!state.format || c.dataset.format === state.format);
+          c.hidden = !ok;
+          if (ok) n++;
+        }
+        document.getElementById("count")!.textContent = String(n);
+      });
+    }
+  }
+</script>

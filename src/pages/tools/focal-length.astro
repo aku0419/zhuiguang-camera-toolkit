@@ -2,12 +2,14 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ToolHead from "../../components/ToolHead.astro";
 import Chips from "../../components/Chips.astro";
+import CameraPicker from "../../components/CameraPicker.astro";
 import { FORMATS } from "../../lib/calc.js";
 ---
 <BaseLayout title="等效焦段計算器" description="把 APS-C、Super35、M43、1 吋相機的焦段換算成全片幅等效焦段。例如 Sony APS-C 35mm ≈ 全片幅 52.5mm。" section="tools">
   <ToolHead title="等效焦段計算器" question="這顆鏡頭裝在我的相機上，等於全片幅的幾 mm？" />
   <div class="tool">
-    <div class="field">
+    <CameraPicker />
+    <div class="field" id="fmt-field">
       <label for="fmt">相機片幅</label>
       <select id="fmt">
         {FORMATS.map((f) => <option value={f.id} data-factor={f.factor}>{f.label}</option>)}
@@ -34,20 +36,28 @@ import { FORMATS } from "../../lib/calc.js";
 
 <script>
   import { equivalentFocal, FORMATS, fmt } from "../../lib/calc.js";
-  import { bindChips, num, fromQuery } from "../../lib/ui.js";
+  import { bindChips, num, fromQuery, cameraPicker } from "../../lib/ui.js";
   const sel = document.getElementById("fmt") as HTMLSelectElement;
   const focal = document.getElementById("focal") as HTMLInputElement;
   const out = document.getElementById("out")!;
   const factorEl = document.getElementById("factor")!;
   const q = new URLSearchParams(location.search);
   if (FORMATS.some((f) => f.id === q.get("format"))) sel.value = q.get("format")!;
+  let getCam: () => any = () => null;
+  const fmtField = document.getElementById("fmt-field")!;
   const update = () => {
-    const f = FORMATS.find((x) => x.id === sel.value)!;
+    const cam = getCam();
+    const useCam = cam && cam.crop_factor;
+    fmtField.hidden = !!useCam;
+    const f = useCam ? { factor: cam.crop_factor, approx: false } : FORMATS.find((x) => x.id === sel.value)!;
     const r = equivalentFocal(num(focal), f.factor);
     if (r == null) { out.textContent = "—"; factorEl.textContent = "請輸入焦段"; return; }
     out.textContent = `${f.approx ? "約 " : ""}${fmt(r, 1)} mm`;
-    factorEl.innerHTML = `換算倍率 <b>${f.factor}×</b>${f.approx ? "（約略值）" : ""}`;
+    factorEl.innerHTML = useCam
+      ? `依 ${cam.name} 實際感光元件尺寸，換算倍率 <b>${fmt(f.factor, 2)}×</b>（未開裁切模式時）`
+      : `換算倍率 <b>${f.factor}×</b>${f.approx ? "（約略值）" : ""}`;
   };
+  getCam = cameraPicker(update);
   fromQuery({ focal });
   bindChips(document.querySelector<HTMLElement>(".chips")!, focal, update);
   sel.addEventListener("change", update);

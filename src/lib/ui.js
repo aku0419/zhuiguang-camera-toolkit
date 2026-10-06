@@ -30,3 +30,20 @@ export function fromQuery(map) {
     if (v != null && v !== "" && isFinite(Number(v))) input.value = v;
   }
 }
+
+// 讀取工具頁內嵌的相機資料，並依網址 ?camera= 預先選好
+export function cameraPicker(onChange) {
+  const sel = document.getElementById("cam");
+  const data = JSON.parse(document.getElementById("cam-data")?.textContent || "[]");
+  if (!sel) return () => null;
+  const get = () => data.find((c) => c.slug === sel.value) || null;
+  const slug = new URLSearchParams(location.search).get("camera");
+  if (slug && data.some((c) => c.slug === slug)) sel.value = slug;
+  sel.addEventListener("change", () => {
+    const u = new URL(location.href);
+    if (sel.value) u.searchParams.set("camera", sel.value); else u.searchParams.delete("camera");
+    history.replaceState(null, "", u);
+    onChange(get());
+  });
+  return get;
+}
