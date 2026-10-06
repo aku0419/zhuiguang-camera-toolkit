@@ -1,0 +1,91 @@
+{
+  "slug": "arri-alexa-mini",
+  "brand": "ARRI",
+  "model": "ALEXA Mini",
+  "aliases": [
+    "Alexa Mini"
+  ],
+  "type": "電影機（已停產）",
+  "announced": "Unknown",
+  "max_resolution": "3424×2202（Open Gate 3.4K）",
+  "sensor": {
+    "format": "Super35",
+    "width_mm": 28.25,
+    "height_mm": 18.17,
+    "resolution_mp": "Unknown"
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "ARRI LogC3"
+  ],
+  "raw": "內錄 ARRIRAW",
+  "open_gate": true,
+  "lens_mount": "PL／LPL／EF（可換）",
+  "media": "Unknown",
+  "timecode": "有時間碼 jam-sync 功能（官網 FAQ）",
+  "sdi": "有（HD-SDI）",
+  "hdmi": "Unknown",
+  "dynamic_range_claimed": "14+ stops（exposure latitude）",
+  "recording_modes": [
+    {
+      "resolution": "3424x2202",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 2214,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "Open Gate 3.4K，最高 30fps。位元率依原廠每格檔案大小 × 24fps 換算（1 MB = 10⁶ 位元組）；最高格率見格率欄"
+    },
+    {
+      "resolution": "2880x1620",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 1386,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "2.8K 16:9，最高 48fps。位元率依原廠每格檔案大小 × 24fps 換算（1 MB = 10⁶ 位元組）；最高格率見格率欄"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "ProRes",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "notes": "4K UHD（由 3.2K 區域放大），原廠未列 ProRes 位元率"
+    },
+    {
+      "resolution": "3200x1800",
+      "max_fps": 60,
+      "codec": "ProRes",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "notes": "3.2K"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 200,
+      "codec": "ProRes",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "notes": "HD（由 2.8K 區域縮放）"
+    }
+  ],
+  "source_name": "ARRI Formats and Resolutions Overview V6.3（PDF，第 3 頁 AMIRA & ALEXA Mini）",
+  "source_url": "https://www.arri.com/resource/blob/405022/a7f09a1b2b341f7231be2503b9660c84/2026-07-arri-formatsandresolutionsoverview-v6-3-data.pdf",
+  "extra_sources": [
+    {
+      "source_name": "ARRI 官網：ALEXA Mini",
+      "source_url": "https://www.arri.com/en/camera-systems/cameras/alexa-mini"
+    }
+  ],
+  "last_verified": "2026-10-06",
+  "editor_notes": "ALEXA Mini 已停產，但租賃市場常見。格式表同時列 AMIRA 與 ALEXA Mini（SUP 6.1），只列 ALEXA Mini 可用的格式。記錄媒體在目前官網頁面上沒有讀到，先標 Unknown。"
+}

@@ -1,0 +1,114 @@
+{
+  "slug": "arri-alexa-mini-lf",
+  "brand": "ARRI",
+  "model": "ALEXA Mini LF",
+  "aliases": [
+    "Alexa Mini LF",
+    "Mini LF"
+  ],
+  "type": "電影機",
+  "announced": "Unknown",
+  "max_resolution": "4448×3096（4.5K LF 3:2 Open Gate）",
+  "sensor": {
+    "format": "Large Format（LF）",
+    "width_mm": 36.7,
+    "height_mm": 25.54,
+    "resolution_mp": "Unknown"
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "ARRI LogC3"
+  ],
+  "raw": "內錄 ARRIRAW",
+  "open_gate": true,
+  "lens_mount": "ARRI LPL（可用 PL 轉接環）",
+  "media": [
+    "Codex Compact Drive（1TB／2TB）"
+  ],
+  "timecode": "Unknown",
+  "sdi": "有（6G-SDI，可 4K 監看）",
+  "hdmi": "Unknown",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "4448x3096",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 4008,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4.5K LF 3:2 Open Gate，最高 40fps。位元率依原廠每格檔案大小 × 24fps 換算（1 MB = 10⁶ 位元組）；最高格率見格率欄"
+    },
+    {
+      "resolution": "4448x3096",
+      "max_fps": 40,
+      "codec": "ProRes",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "4.5K LF 3:2 Open Gate；原廠未列 ProRes 位元率"
+    },
+    {
+      "resolution": "4448x1856",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 2420,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4.5K LF 2.39:1，最高 60fps。位元率依原廠每格檔案大小 × 24fps 換算（1 MB = 10⁶ 位元組）；最高格率見格率欄"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 2431,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "3.8K LF 16:9，最高 60fps。位元率依原廠每格檔案大小 × 24fps 換算（1 MB = 10⁶ 位元組）；最高格率見格率欄"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "ProRes",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "4.3K LF 16:9 區域縮放成 UHD"
+    },
+    {
+      "resolution": "3424x2202",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 2214,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "3.4K S35 3:2（Super35 範圍），最高 60fps。位元率依原廠每格檔案大小 × 24fps 換算（1 MB = 10⁶ 位元組）；最高格率見格率欄"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 100,
+      "codec": "ProRes",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "notes": "2.8K S35 16:9 區域縮放成 HD"
+    }
+  ],
+  "source_name": "ARRI Formats and Resolutions Overview V6.3（PDF，第 3 頁 ALEXA Mini LF）",
+  "source_url": "https://www.arri.com/resource/blob/405022/a7f09a1b2b341f7231be2503b9660c84/2026-07-arri-formatsandresolutionsoverview-v6-3-data.pdf",
+  "extra_sources": [
+    {
+      "source_name": "ARRI 官網：ALEXA Mini LF",
+      "source_url": "https://www.arri.com/en/camera-systems/cameras/alexa-mini-lf"
+    }
+  ],
+  "last_verified": "2026-10-06",
+  "editor_notes": "格式表（SUP 7.1 以上）提供 ARRIRAW 每格位元組數。動態範圍、EI、時間碼端子在目前官網頁面上沒有讀到，先標 Unknown。"
+}

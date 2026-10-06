@@ -11,7 +11,7 @@
   "announced": "Unknown",
   "max_resolution": "12,288×8040（12K 3:2 Open Gate）",
   "sensor": {
-    "format": "Large Format（全片幅級）",
+    "format": "Full Frame（原廠稱 Large Format）",
     "width_mm": 35.64,
     "height_mm": 23.32,
     "resolution_mp": "Unknown"

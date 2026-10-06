@@ -137,3 +137,9 @@ table.modes{border-collapse:collapse;width:100%;font-size:14px}
 .src{font-size:14px;color:var(--muted)}
 .src a{color:var(--ink)}
 .sample-warn{background:var(--accent-soft);color:var(--accent);border-radius:8px;padding:10px 14px;font-weight:700;margin-bottom:12px}
+@media (max-width:640px){
+  .cam-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .cam-grid .cam-card{padding:10px 12px}
+  .cam-grid .cam-card h3{font-size:16px}
+  .cam-grid .cam-card p,.cam-grid .cam-card .max{display:none}
+}

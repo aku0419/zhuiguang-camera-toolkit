@@ -1,0 +1,132 @@
+{
+  "slug": "red-komodo-6k",
+  "brand": "RED",
+  "model": "KOMODO 6K",
+  "aliases": [
+    "KOMODO",
+    "Komodo 6K"
+  ],
+  "type": "電影機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Super35",
+    "width_mm": 27.03,
+    "height_mm": 14.26,
+    "resolution_mp": 19.9
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "Log3G10（IPP2）"
+  ],
+  "raw": "內錄 REDCODE RAW（R3D，HQ／MQ／LQ）",
+  "open_gate": false,
+  "lens_mount": "Canon RF",
+  "media": [
+    "CFast 2.0（RED Pro CFast 或認證卡）"
+  ],
+  "timecode": "Timecode In（經 9-pin EXT 端子）",
+  "sdi": "12G-SDI（可切 6G／3G／1.5G）",
+  "hdmi": "無",
+  "dynamic_range_claimed": "16+ stops",
+  "recording_modes": [
+    {
+      "resolution": "6144x3240",
+      "max_fps": 40,
+      "codec": "REDCODE RAW HQ",
+      "bitrate_mbps": 2240,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "原廠：最高約 280 MB/s。原廠以 6K 17:9、23.98fps 計算的約略資料量（MB/s × 8 換算成 Mbps），實際依畫面複雜度而異"
+    },
+    {
+      "resolution": "6144x3240",
+      "max_fps": 40,
+      "codec": "REDCODE RAW MQ",
+      "bitrate_mbps": 1400,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "預設畫質，約 175 MB/s。原廠以 6K 17:9、23.98fps 計算的約略資料量（MB/s × 8 換算成 Mbps），實際依畫面複雜度而異"
+    },
+    {
+      "resolution": "6144x3240",
+      "max_fps": 40,
+      "codec": "REDCODE RAW LQ",
+      "bitrate_mbps": 880,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "約 110 MB/s。原廠以 6K 17:9、23.98fps 計算的約略資料量（MB/s × 8 換算成 Mbps），實際依畫面複雜度而異"
+    },
+    {
+      "resolution": "6144x2592",
+      "max_fps": 50,
+      "codec": "REDCODE RAW",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "6K 2.4:1 最高 50fps"
+    },
+    {
+      "resolution": "5120x2700",
+      "max_fps": 48,
+      "codec": "REDCODE RAW",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "5K 17:9"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "REDCODE RAW",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "4K 17:9"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "Unknown",
+      "notes": "原廠規格未寫 ProRes 位元率"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 120,
+      "codec": "REDCODE RAW",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "2K 17:9"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 120,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "Unknown"
+    }
+  ],
+  "source_name": "RED KOMODO 操作手冊 v1.3：技術規格",
+  "source_url": "https://docs.red.com/955-0190_v1.3/955-0190_v1.3_REV-1.1_1_RED_PS_KOMODO_Operation_Guide/Content/A_TechSpecs/Specs_KOMODO_6K.htm",
+  "extra_sources": [
+    {
+      "source_name": "RED KOMODO 操作手冊 v1.3：R3D Quality",
+      "source_url": "https://docs.red.com/955-0190_v1.3/955-0190_v1.3_REV-1.3_RED_PS_KOMODO_Operation_Guide/Content/4_Menus/ProjSet/R3D_Quality.htm"
+    }
+  ],
+  "last_verified": "2026-10-06",
+  "editor_notes": "全域快門感光元件。各解析度的 R3D 資料量原廠只列 6K 17:9 23.98fps。5K／4K／2K 是否為感光元件裁切：原廠以「6K、5K、4K、2K 17:9」列出取樣格式，依像素數推定為裁切（待核對）。Log3G10 名稱出自 IPP2 色彩管理，規格頁只寫 IPP2。原生 ISO 規格頁未寫。"
+}

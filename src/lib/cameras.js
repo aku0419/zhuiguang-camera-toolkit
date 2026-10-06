@@ -54,6 +54,14 @@ function pixels(res) {
   return m ? Number(m[1]) * Number(m[2]) : 0;
 }
 
+// 篩選用的片幅分類（原廠名稱五花八門，列表頁統一成四類）
+export function formatGroup(f) {
+  if (/M43|Four Thirds/i.test(f)) return "M43";
+  if (/Super ?35|APS-C/i.test(f)) return "Super35／APS-C";
+  if (/^Full Frame/i.test(f)) return "全片幅";
+  return "大片幅（比全片幅大）";
+}
+
 function enrich(c, sample) {
   const known = c.recording_modes.filter((m) => isNum(m.max_fps));
   const top = [...c.recording_modes].sort((a, b) => pixels(b.resolution) - pixels(a.resolution))[0];
@@ -63,6 +71,7 @@ function enrich(c, sample) {
     ...c,
     sample,
     name: `${c.brand} ${c.model}`,
+    format_group: formatGroup(c.sensor.format),
     max_resolution: isStr(c.max_resolution) ? c.max_resolution : top.resolution,
     max_fps: known.length ? Math.max(...known.map((m) => m.max_fps)) : U,
     crop_factor: factor,

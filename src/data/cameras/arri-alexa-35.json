@@ -1,0 +1,115 @@
+{
+  "slug": "arri-alexa-35",
+  "brand": "ARRI",
+  "model": "ALEXA 35",
+  "aliases": [
+    "Alexa 35",
+    "A35"
+  ],
+  "type": "電影機",
+  "announced": "Unknown",
+  "max_resolution": "4608×3164（4.6K 3:2 Open Gate）",
+  "sensor": {
+    "format": "Super35",
+    "width_mm": 27.99,
+    "height_mm": 19.22,
+    "resolution_mp": "Unknown"
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "ARRI LogC4"
+  ],
+  "raw": "內錄 ARRIRAW（需 Premium 機型或 ARRIRAW 授權）",
+  "open_gate": true,
+  "lens_mount": "ARRI LPL（附 PL 轉接環）",
+  "media": [
+    "Codex Compact Drive（1TB／2TB）",
+    "Codex Compact Drive Express（只能錄 ProRes）"
+  ],
+  "timecode": "Unknown",
+  "sdi": "2 路獨立 12G-SDI",
+  "hdmi": "Unknown",
+  "dynamic_range_claimed": "17 stops",
+  "recording_modes": [
+    {
+      "resolution": "4608x3164",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 4550,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4.6K 3:2 Open Gate，Compact Drive 2TB 最高 75fps。位元率依原廠每格檔案大小 × 24fps 換算（1 MB = 10⁶ 位元組）；最高格率見格率欄"
+    },
+    {
+      "resolution": "4608x3164",
+      "max_fps": 60,
+      "codec": "ProRes",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "4.6K 3:2 Open Gate；原廠未列 ProRes 位元率"
+    },
+    {
+      "resolution": "4608x2592",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 3725,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4.6K 16:9，最高 75fps。位元率依原廠每格檔案大小 × 24fps 換算（1 MB = 10⁶ 位元組）；最高格率見格率欄"
+    },
+    {
+      "resolution": "4096x2304",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 2957,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "4K 16:9，最高 120fps（2TB 卡）。位元率依原廠每格檔案大小 × 24fps 換算（1 MB = 10⁶ 位元組）；最高格率見格率欄"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "notes": "UHD（由 4K 16:9 區域縮放），4444 XQ 最高 105fps"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 2592,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "3.8K 16:9，最高 120fps。位元率依原廠每格檔案大小 × 24fps 換算（1 MB = 10⁶ 位元組）；最高格率見格率欄"
+    },
+    {
+      "resolution": "2048x1152",
+      "max_fps": 120,
+      "codec": "ProRes",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "notes": "2K 16:9 S16（Super 16 範圍）"
+    }
+  ],
+  "source_name": "ARRI Formats and Resolutions Overview V6.3（PDF，第 2 頁 ALEXA 35 Premium）",
+  "source_url": "https://www.arri.com/resource/blob/405022/a7f09a1b2b341f7231be2503b9660c84/2026-07-arri-formatsandresolutionsoverview-v6-3-data.pdf",
+  "extra_sources": [
+    {
+      "source_name": "ARRI 官網：ALEXA 35",
+      "source_url": "https://www.arri.com/en/cine-systems/cine-cameras/legacy-cine-cameras/alexa-35"
+    }
+  ],
+  "last_verified": "2026-10-06",
+  "editor_notes": "ARRI 官網已把 ALEXA 35 列為舊機種（由 ALEXA 35 Xtreme 取代）。官網：17 stops、EI 160–6400、LogC4（REVEAL Color Science）。格式表只列 ARRIRAW 每格大小，ProRes 位元率未列。Base 機型的 ProRes 最高 60fps，部分格式需授權。"
+}

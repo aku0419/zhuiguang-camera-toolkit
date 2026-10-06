@@ -1,0 +1,138 @@
+{
+  "slug": "red-v-raptor-8k-vv",
+  "brand": "RED",
+  "model": "V-RAPTOR 8K VV",
+  "aliases": [
+    "V-RAPTOR",
+    "VRAPTOR",
+    "V RAPTOR"
+  ],
+  "type": "電影機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "VistaVision（VV）",
+    "width_mm": 40.96,
+    "height_mm": 21.6,
+    "resolution_mp": 35.4
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "Log3G10（IPP2）"
+  ],
+  "raw": "內錄 REDCODE RAW（R3D，HQ／MQ／LQ／ELQ）",
+  "open_gate": false,
+  "lens_mount": "Canon RF",
+  "media": [
+    "CFexpress（RED 品牌或認證卡）"
+  ],
+  "timecode": "Timecode In（經 9-pin EXT 端子）",
+  "sdi": "雙 12G-SDI（10-bit 4:2:2）",
+  "hdmi": "無",
+  "dynamic_range_claimed": "17+ stops",
+  "recording_modes": [
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "REDCODE RAW HQ",
+      "bitrate_mbps": 3568,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 17:9 最高 120fps（120fps 只有 LQ）。原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "REDCODE RAW MQ",
+      "bitrate_mbps": 2496,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "預設畫質。原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "REDCODE RAW LQ",
+      "bitrate_mbps": 1560,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "REDCODE RAW ELQ",
+      "bitrate_mbps": 832,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "6144x3240",
+      "max_fps": 24,
+      "codec": "REDCODE RAW HQ",
+      "bitrate_mbps": 2008,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.33,
+      "notes": "6K 17:9 最高 160fps（HQ 到 96fps）。裁切倍率依像素數推算（相對於 8K 全寬），待核對。原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "6144x3240",
+      "max_fps": 24,
+      "codec": "REDCODE RAW MQ",
+      "bitrate_mbps": 1408,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.33,
+      "notes": "原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 240,
+      "codec": "REDCODE RAW",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.0,
+      "notes": "4K 17:9 最高 240fps。裁切倍率依像素數推算（相對於 8K 全寬），待核對"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "Apple ProRes 4444 XQ／422 HQ 等",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "Unknown",
+      "notes": "ProRes 最高 4K 120P；原廠未列 ProRes 位元率"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 480,
+      "codec": "REDCODE RAW",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 4.0,
+      "notes": "2K 17:9 最高 480fps。裁切倍率依像素數推算（相對於 8K 全寬），待核對"
+    }
+  ],
+  "source_name": "RED V-RAPTOR 8K VV 操作手冊 V1.3：技術規格",
+  "source_url": "https://docs.red.com/955-0199/955-0199_V1.3_Rev-A_RED_PS_V-RAPTOR_8K_VV_Operation_Guide/Content/C_TechSpecs/Specs_V-RAPTOR.htm",
+  "extra_sources": [
+    {
+      "source_name": "RED V-RAPTOR 8K VV 操作手冊：R3D Quality",
+      "source_url": "https://docs.red.com/955-0199/955-0199_V1.3_Rev-B_RED_PS_V-RAPTOR_8K_VV_Operation_Guide/Content/4_Menus/b_ProjSet/R3D_Quality.htm"
+    }
+  ],
+  "last_verified": "2026-10-06",
+  "editor_notes": "這是第一代 V-RAPTOR 8K VV（捲簾快門）。目前 RED 另有 V-RAPTOR [X]（全域快門）、V-RAPTOR XL、V-RAPTOR XE 等版本，規格不同。R3D 資料量原廠只列 8K 與 6K 17:9 的 24P。原生 ISO 規格頁未寫。"
+}

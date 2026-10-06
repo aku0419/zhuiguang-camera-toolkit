@@ -3,7 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import ComingSoon from "../../components/ComingSoon.astro";
 import { cameras } from "../../lib/cameras.js";
 const brands = [...new Set(cameras.map((c) => c.brand))];
-const formats = [...new Set(cameras.map((c) => c.sensor.format))];
+const formats = ["全片幅", "大片幅（比全片幅大）", "Super35／APS-C", "M43"].filter((f) => cameras.some((c) => c.format_group === f));
 ---
 {cameras.length === 0 ? (
   <ComingSoon id="cameras" intro="常用攝影機的規格、錄影模式、支援的記憶卡，並可以直接帶入工具計算。" />
@@ -23,13 +23,13 @@ const formats = [...new Set(cameras.map((c) => c.sensor.format))];
       </div>
     </div>
     <p class="cam-count" aria-live="polite"><span id="count">{cameras.length}</span> 台</p>
-    <div class="grid">
+    <div class="grid cam-grid">
       {cameras.map((c) => (
-        <a class="card cam-card" href={`/cameras/${c.slug}/`} data-brand={c.brand} data-format={c.sensor.format}>
+        <a class="card cam-card" href={`/cameras/${c.slug}/`} data-brand={c.brand} data-format={c.format_group}>
           <span class="k">{c.brand}</span>
           <h3>{c.model}</h3>
           <p>{c.type}・{c.lens_mount}</p>
-          <div class="meta"><span class="pill">{c.sensor.format}</span><span class="pill">最高 {c.max_resolution.replace("x", "×")}</span></div>
+          <div class="meta"><span class="pill">{c.sensor.format}</span><span class="pill max">最高 {c.max_resolution.replace("x", "×")}</span></div>
         </a>
       ))}
     </div>

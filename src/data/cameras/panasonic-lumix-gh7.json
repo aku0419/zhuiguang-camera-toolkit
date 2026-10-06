@@ -35,45 +35,6 @@
   "dynamic_range_claimed": "13+ stops（V-Log，感光元件輸出 60fps 以下）；61fps 以上為 12+ stops",
   "recording_modes": [
     {
-      "resolution": "5728x3024",
-      "max_fps": 29.97,
-      "codec": "Apple ProRes RAW HQ",
-      "bitrate_mbps": 4200,
-      "bit_depth": "Unknown",
-      "chroma": "RAW",
-      "crop": "none",
-      "notes": "原廠標示 4.2 Gbps；ProRes 不能錄到 SD 卡（FHD 除外）"
-    },
-    {
-      "resolution": "4096x2160",
-      "max_fps": 59.94,
-      "codec": "Apple ProRes RAW HQ",
-      "bitrate_mbps": 4200,
-      "bit_depth": "Unknown",
-      "chroma": "RAW",
-      "crop": "none",
-      "notes": "原廠標示 4.2 Gbps"
-    },
-    {
-      "resolution": "4096x2160",
-      "max_fps": 59.94,
-      "codec": "Apple ProRes 422 HQ",
-      "bitrate_mbps": 1900,
-      "bit_depth": "Unknown",
-      "chroma": "4:2:2",
-      "crop": "none",
-      "notes": "原廠標示 1.9 Gbps"
-    },
-    {
-      "resolution": "4096x2160",
-      "max_fps": 23.98,
-      "codec": "Apple ProRes 422 HQ",
-      "bitrate_mbps": 778,
-      "bit_depth": "Unknown",
-      "chroma": "4:2:2",
-      "crop": "none"
-    },
-    {
       "resolution": "5760x4320",
       "max_fps": 29.97,
       "codec": "H.265（420/10-L）",
@@ -162,6 +123,45 @@
       "bitrate_mbps": 100,
       "bit_depth": 10,
       "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "5728x3024",
+      "max_fps": 29.97,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 4200,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "原廠標示 4.2 Gbps；ProRes 不能錄到 SD 卡（FHD 除外）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 4200,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "原廠標示 4.2 Gbps"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1900,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "原廠標示 1.9 Gbps"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 23.98,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 778,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
       "crop": "none"
     }
   ],

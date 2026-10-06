@@ -10,6 +10,13 @@ const { c } = Astro.props;
 const U = "Unknown";
 const list = (v: string[] | string) => (v === U ? "未知" : (v as string[]).join("、"));
 const res = (r: string) => r.replace(/x/g, "×");
+// 手機版一行摘要：未知的位元深度、色彩取樣直接省略，位元率未知時寫「位元率未知」
+const modeLine = (m: any) => [
+  m.codec,
+  m.bitrate_mbps === U ? "位元率未知" : `${m.bitrate_mbps} Mbps`,
+  [m.bit_depth === U ? "" : `${m.bit_depth}-bit`, m.chroma === U ? "" : m.chroma].filter(Boolean).join(" "),
+  cropText(m),
+].filter(Boolean).join("・");
 const cropText = (m: any) => m.crop === "none" ? "不裁切" : m.crop === "crop" ? `裁切${m.crop_factor ? `（約 ${m.crop_factor}×）` : ""}` : "裁切未知";
 const sensorSize = c.sensor.width_mm === U ? "尺寸未知" : `${c.sensor.width_mm} × ${c.sensor.height_mm} mm`;
 const facts: [string, string][] = [
@@ -66,7 +73,7 @@ const desc = `${c.name} 規格：${c.sensor.format} 感光元件、${c.lens_moun
     {c.recording_modes.map((m: any) => (
       <li>
         <b class="num">{res(m.resolution)}・{show(m.max_fps, "p")}</b>
-        <span>{m.codec}・<span class="num">{show(m.bitrate_mbps, " Mbps")}</span>・{show(m.bit_depth, "-bit")} {show(m.chroma)}・{cropText(m)}</span>
+        <span>{modeLine(m)}</span>
         {m.notes && <small>{m.notes}</small>}
       </li>
     ))}
