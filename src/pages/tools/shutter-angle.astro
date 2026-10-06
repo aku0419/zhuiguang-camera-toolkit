@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+import Chips from "../../components/Chips.astro";
+---
+<BaseLayout title="快門角度計算器" description="輸入格率（fps）和快門角度，算出快門速度。例如 24fps、180° = 1/48 秒，相機上最接近 1/50。" section="tools">
+  <ToolHead title="快門角度計算器" question="輸入格率和快門角度，算出快門速度。" />
+  <div class="tool">
+    <div class="field">
+      <label for="fps">格率</label>
+      <div class="inrow"><input id="fps" type="number" inputmode="decimal" min="1" step="any" value="24" /><span class="unit">fps</span></div>
+      <Chips label="常用格率" values={[23.976, 24, 25, 29.97, 30, 50, 59.94, 60, 120]} />
+    </div>
+    <div class="field">
+      <label for="angle">快門角度</label>
+      <div class="inrow"><input id="angle" type="number" inputmode="decimal" min="1" max="360" step="any" value="180" /><span class="unit">度</span></div>
+      <Chips label="常用角度" values={[45, 90, 144, 172.8, 180, 270, 360]} suffix="°" />
+    </div>
+    <div class="result" aria-live="polite">
+      <p class="lbl">快門速度</p>
+      <p class="big" id="out">—</p>
+      <p class="sub" id="near"></p>
+    </div>
+    <p class="formula">算法：快門速度 ＝ 1 ÷（格率 × 360 ÷ 角度）</p>
+    <ul class="notes">
+      <li>180° 是最常用的設定，動態模糊看起來最接近一般電影。</li>
+      <li>在台灣（電力 60Hz），一般燈具下用 1/60、1/120 比較不容易閃爍；24fps 時可用 144°（＝1/60）。</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  import { shutterFromAngle, fmt } from "../../lib/calc.js";
+  import { bindChips, num, fromQuery } from "../../lib/ui.js";
+  const fps = document.getElementById("fps") as HTMLInputElement;
+  const angle = document.getElementById("angle") as HTMLInputElement;
+  const out = document.getElementById("out")!;
+  const near = document.getElementById("near")!;
+  const update = () => {
+    const r = shutterFromAngle(num(fps), num(angle));
+    if (!r) { out.textContent = "—"; near.textContent = "請輸入格率，角度介於 1～360 度"; return; }
+    out.textContent = `1/${fmt(r.denominator, 1)} 秒`;
+    near.innerHTML = Math.abs(r.nearest - r.denominator) < 0.05
+      ? "相機上可以直接設定這個快門。"
+      : `相機上最接近的快門：<b>1/${r.nearest}</b>`;
+  };
+  fromQuery({ fps, angle });
+  document.querySelectorAll<HTMLElement>(".chips").forEach((g, i) => bindChips(g, i === 0 ? fps : angle, update));
+  update();
+</script>

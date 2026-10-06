@@ -1,0 +1,73 @@
+---
+import { TOOLS, SECTIONS } from "../data/site.js";
+
+// 搜尋清單：建置時整理好，搜尋在瀏覽器裡比對。之後加入相機、鏡頭等資料。
+const items = [
+  ...TOOLS.map((t) => ({ title: t.name, type: "工具", href: t.href, text: [t.name, t.q, ...t.keywords].join(" ") })),
+  ...SECTIONS.map((s) => ({
+    title: s.zh + (s.ready ? "" : "（即將推出）"), type: "分類", href: s.href, text: [s.zh, s.en, s.desc].join(" "),
+  })),
+];
+---
+<div class="search" data-search>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+  <input type="search" placeholder="搜尋：FX3、升降格、快門、容量…" aria-label="全站搜尋" autocomplete="off" />
+  <ul class="search-results" hidden></ul>
+  <script type="application/json" set:html={JSON.stringify(items)} />
+</div>
+
+<script>
+  const norm = (s: string) => s.toLowerCase().replace(/[\s\-_/｜|·・.,，、]/g, "");
+  for (const box of document.querySelectorAll<HTMLElement>("[data-search]")) {
+    const input = box.querySelector("input")!;
+    const list = box.querySelector("ul")!;
+    const items: { title: string; type: string; href: string; text: string }[] = JSON.parse(
+      box.querySelector("script[type='application/json']")!.textContent || "[]"
+    );
+    const hay = items.map((it) => norm(it.title + " " + it.text));
+    let active = -1;
+
+    const render = () => {
+      const q = input.value.trim();
+      active = -1;
+      if (!q) { list.hidden = true; list.innerHTML = ""; return; }
+      const words = q.split(/\s+/).map(norm).filter(Boolean);
+      const hits = items.filter((_, i) => words.every((w) => hay[i].includes(w))).slice(0, 8);
+      list.innerHTML = "";
+      if (!hits.length) {
+        const li = document.createElement("li");
+        li.className = "none";
+        li.textContent = "找不到符合的結果。攝影機、鏡頭、記憶卡、底片資料陸續上線中。";
+        list.append(li);
+      }
+      for (const it of hits) {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = it.href;
+        const t = document.createElement("span");
+        t.textContent = it.title;
+        const ty = document.createElement("span");
+        ty.className = "t";
+        ty.textContent = it.type;
+        a.append(t, ty);
+        li.append(a);
+        list.append(li);
+      }
+      list.hidden = false;
+    };
+
+    input.addEventListener("input", render);
+    input.addEventListener("keydown", (e) => {
+      const links = [...list.querySelectorAll("a")];
+      if (!links.length) return;
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        active = (active + (e.key === "ArrowDown" ? 1 : -1) + links.length) % links.length;
+        links.forEach((l, i) => l.classList.toggle("active", i === active));
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        location.href = (links[active] || links[0]).href;
+      }
+    });
+  }
+</script>

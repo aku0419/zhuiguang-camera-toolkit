@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+import Chips from "../../components/Chips.astro";
+import { FORMATS } from "../../lib/calc.js";
+---
+<BaseLayout title="等效焦段計算器" description="把 APS-C、Super35、M43、1 吋相機的焦段換算成全片幅等效焦段。例如 Sony APS-C 35mm ≈ 全片幅 52.5mm。" section="tools">
+  <ToolHead title="等效焦段計算器" question="這顆鏡頭裝在我的相機上，等於全片幅的幾 mm？" />
+  <div class="tool">
+    <div class="field">
+      <label for="fmt">相機片幅</label>
+      <select id="fmt">
+        {FORMATS.map((f) => <option value={f.id} data-factor={f.factor}>{f.label}</option>)}
+      </select>
+    </div>
+    <div class="field">
+      <label for="focal">鏡頭焦段</label>
+      <div class="inrow"><input id="focal" type="number" inputmode="decimal" min="1" step="any" value="35" /><span class="unit">mm</span></div>
+      <Chips label="常用焦段" values={[14, 24, 35, 50, 85, 135]} />
+    </div>
+    <div class="result" aria-live="polite">
+      <p class="lbl">全片幅等效焦段</p>
+      <p class="big" id="out">—</p>
+      <p class="sub" id="factor"></p>
+    </div>
+    <p class="formula">算法：等效焦段 ＝ 鏡頭焦段 × 換算倍率（以全片幅 36 × 24 mm 為準）</p>
+    <ul class="notes">
+      <li>等效焦段只代表「視角」，鏡頭本身的焦段不會改變。</li>
+      <li>Super35 沒有統一尺寸，每台攝影機略有不同（約 1.4～1.6 倍）。這裡的 1.5 倍是約略值；從攝影機頁面進來時，會用那台的實際感光元件尺寸計算。</li>
+      <li>相機開啟裁切模式（例如 4K 120p 裁切）時，視角會再變窄。</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  import { equivalentFocal, FORMATS, fmt } from "../../lib/calc.js";
+  import { bindChips, num, fromQuery } from "../../lib/ui.js";
+  const sel = document.getElementById("fmt") as HTMLSelectElement;
+  const focal = document.getElementById("focal") as HTMLInputElement;
+  const out = document.getElementById("out")!;
+  const factorEl = document.getElementById("factor")!;
+  const q = new URLSearchParams(location.search);
+  if (FORMATS.some((f) => f.id === q.get("format"))) sel.value = q.get("format")!;
+  const update = () => {
+    const f = FORMATS.find((x) => x.id === sel.value)!;
+    const r = equivalentFocal(num(focal), f.factor);
+    if (r == null) { out.textContent = "—"; factorEl.textContent = "請輸入焦段"; return; }
+    out.textContent = `${f.approx ? "約 " : ""}${fmt(r, 1)} mm`;
+    factorEl.innerHTML = `換算倍率 <b>${f.factor}×</b>${f.approx ? "（約略值）" : ""}`;
+  };
+  fromQuery({ focal });
+  bindChips(document.querySelector<HTMLElement>(".chips")!, focal, update);
+  sel.addEventListener("change", update);
+  update();
+</script>

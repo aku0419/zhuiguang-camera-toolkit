@@ -199,56 +199,26 @@
 5. 問題回報＋Supabase 設定教學
 6. 部署到 Vercel＋綁定 zhuiguang.riseatsun.com（教你在 Vercel、Namecheap 按哪裡）
 
-## 12. 攝影機清單（請確認）
+## 12. 攝影機清單（2026-10-06 負責人回覆後更新）
 
-第一批（先做這 10 台，涵蓋各品牌與片幅，用來確認版面）：
+負責人決定：A7 IV／A7 V 兩台都放、R6 Mark II／III 兩台都放、加入 FX5、Fujifilm、Nikon ZR／Z9／Z8；DJI 不放；Blackmagic 不放舊機，以新的 12K 機種為主。
 
-| # | 品牌 | 型號 | 片幅 |
-|---|---|---|---|
-| 1 | Sony | FX3 | Full Frame |
-| 2 | Sony | FX30 | Super35 / APS-C |
-| 3 | Sony | A7S III | Full Frame |
-| 4 | Canon | EOS R5 C | Full Frame |
-| 5 | Canon | EOS C70 | Super35 |
-| 6 | Nikon | Z6III | Full Frame |
-| 7 | Panasonic | GH7 | M43 |
-| 8 | Blackmagic | Pocket Cinema Camera 6K Pro | Super35 |
-| 9 | RED | KOMODO 6K | Super35 |
-| 10 | ARRI | ALEXA 35 | Super35 |
+| 品牌 | 型號 |
+|---|---|
+| Sony（8） | FX3、FX30、FX5、FX6、A7S III、A7 IV、A7 V、ZV-E1 |
+| Canon（4） | EOS R6 Mark II、EOS R6 Mark III、EOS R5 C、EOS C70 |
+| Nikon（4） | Z6III、Z8、Z9、ZR |
+| Panasonic（2） | LUMIX S5II、GH7 |
+| Fujifilm（1～2） | X-H2S（待確認是否加 GFX ETERNA 55） |
+| Blackmagic（2） | PYXIS 12K、URSA Cine 12K LF（待確認） |
+| RED（2） | KOMODO 6K、V-RAPTOR（8K VV） |
+| ARRI（3） | ALEXA Mini、ALEXA Mini LF、ALEXA 35 |
 
-第二批：
-
-| # | 品牌 | 型號 | 備註 |
-|---|---|---|---|
-| 11 | Sony | A7 IV → **A7 V**？ | A7 V 已於 2025/12 發表 |
-| 12 | Sony | ZV-E1 | |
-| 13 | Sony | FX6 | |
-| 14 | Canon | EOS R6 Mark II → **R6 Mark III**？ | R6 Mark III 已於 2025/11 發表 |
-| 15 | Nikon | Z8 | |
-| 16 | Panasonic | LUMIX S5II | |
-| 17 | Blackmagic | Cinema Camera 6K | |
-| 18 | RED | V-RAPTOR（8K VV） | |
-| 19 | ARRI | ALEXA Mini | 已停產，租賃市場常見 |
-| 20 | ARRI | ALEXA Mini LF | |
-
-計畫書有 Fujifilm 和 DJI，但目前清單沒有。可以考慮的機種：
-- Fujifilm **X-H2S**（APS-C，學生常用）
-- DJI **Ronin 4D**（DJI 的電影機）
-- Nikon **ZR**（2025/9 發表，Nikon 與 RED 合作）
+合計 26～27 台。分兩批上線（每批都給負責人看截圖）。
 
 ### 預期查證困難
 
 - **ARRI**：錄影模式很多，位元率在原廠另外的資料表文件，第一版只收主要模式。
-- **RED**：R3D 位元率隨畫質設定變動，原廠多用「每 GB 可錄幾分鐘」表示，我會換算並註明。
+- **RED**：R3D 位元率隨畫質設定變動，原廠多用「每 GB 可錄幾分鐘」表示，會換算並註明。
 - **Blackmagic**：BRAW 位元率依壓縮比不同，原廠手冊有表。
 - **部分相機的原廠規格沒有寫位元率**，會標 Unknown。
-
----
-
-## 需要你回覆的事
-
-1. 整體方向（第 1～11 點）可以嗎？
-2. 第一批 10 台可以嗎？
-3. 第 11 台：A7 IV、A7 V、還是兩台都放？
-4. 第 14 台：R6 Mark II、R6 Mark III、還是兩台都放？
-5. Fujifilm、DJI、Nikon ZR 要不要放？要的話換掉哪幾台（或把總數加到 22～23 台）？

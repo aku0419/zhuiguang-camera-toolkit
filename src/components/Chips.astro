@@ -1,0 +1,7 @@
+---
+interface Props { values: (number | string)[]; label: string; suffix?: string }
+const { values, label, suffix = "" } = Astro.props;
+---
+<div class="chips" role="group" aria-label={label}>
+  {values.map((v) => <button type="button" class="chip" data-v={v} aria-pressed="false">{v}{suffix}</button>)}
+</div>

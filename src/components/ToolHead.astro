@@ -1,0 +1,7 @@
+---
+interface Props { title: string; question: string }
+const { title, question } = Astro.props;
+---
+<p class="crumb"><a href="/tools/">攝影工具</a> ›</p>
+<h1>{title}</h1>
+<p class="lead">{question}</p>

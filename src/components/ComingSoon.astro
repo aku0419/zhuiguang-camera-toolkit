@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SECTIONS } from "../data/site.js";
+
+interface Props { id: string; intro: string }
+const { id, intro } = Astro.props;
+const s = SECTIONS.find((x) => x.id === id)!;
+---
+<BaseLayout title={`${s.zh}資料庫`} description={`逐光${s.zh}資料庫：${s.desc}。整理中，即將推出。`} section={id}>
+  <p class="eyebrow">{s.en}</p>
+  <h1>{s.zh}資料庫</h1>
+  <p class="lead">{intro}</p>
+  <div class="card soon" style="max-width:560px">
+    <span class="pill">即將推出</span>
+    <p>資料正在依原廠公開資訊整理中。現在可以先用計算工具。</p>
+    <p><a href="/tools/">前往攝影工具 →</a></p>
+  </div>
+</BaseLayout>

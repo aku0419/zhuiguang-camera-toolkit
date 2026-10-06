@@ -1,0 +1,35 @@
+// 全站共用的文字與導覽
+export const SITE_NAME = "逐光｜攝影工具組";
+export const DISCLAIMER =
+  "逐光資料整理自原廠公開資訊，實際錄影格式、記憶卡需求與相容性可能因韌體版本而異，重要拍攝前請以原廠最新文件為準。";
+
+export const SECTIONS = [
+  { id: "cameras", en: "Cameras", zh: "攝影機", href: "/cameras/", desc: "規格、錄影格式、記憶卡", ready: false },
+  { id: "lenses", en: "Lenses", zh: "鏡頭", href: "/lenses/", desc: "卡口、片幅涵蓋、焦段", ready: false },
+  { id: "media", en: "Media", zh: "記憶卡", href: "/media/", desc: "SD、CFexpress 等格式與速度", ready: false },
+  { id: "film", en: "Film", zh: "底片", href: "/film/", desc: "Kodak 電影底片資料", ready: false },
+  { id: "tools", en: "Tools", zh: "工具", href: "/tools/", desc: "快門、升降格、焦段、容量", ready: true },
+];
+
+export const TOOLS = [
+  {
+    id: "shutter-angle", href: "/tools/shutter-angle/", name: "快門角度",
+    q: "24fps、180° 是幾分之一秒？", keywords: ["shutter angle", "快門", "180度", "1/48", "1/50"],
+  },
+  {
+    id: "frame-rate", href: "/tools/frame-rate/", name: "升降格",
+    q: "60fps 放到 24fps 是幾 %？", keywords: ["slow motion", "慢動作", "fps", "格率", "升格", "降格"],
+  },
+  {
+    id: "focal-length", href: "/tools/focal-length/", name: "等效焦段",
+    q: "APS-C 35mm 等於全片幅多少？", keywords: ["crop factor", "裁切係數", "APS-C", "Super35", "M43", "全片幅"],
+  },
+  {
+    id: "recording-capacity", href: "/tools/recording-capacity/", name: "錄影容量",
+    q: "200Mbps 拍三小時要多少 GB？", keywords: ["bitrate", "位元率", "Mbps", "容量", "GB", "TB"],
+  },
+  {
+    id: "card-time", href: "/tools/recording-capacity/?mode=card", name: "記憶卡可錄時間",
+    q: "256GB 卡、400Mbps 可以錄多久？", keywords: ["記憶卡", "card", "可錄時間", "SD", "CFexpress"],
+  },
+];

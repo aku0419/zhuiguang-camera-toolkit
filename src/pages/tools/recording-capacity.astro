@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+import Chips from "../../components/Chips.astro";
+const cards = [64, 128, 256, 512, 1000, 2000];
+---
+<BaseLayout title="錄影容量與記憶卡可錄時間計算器" description="用位元率（Mbps）算錄影需要多少 GB，或一張記憶卡可以錄多久。例如 200Mbps 拍 3 小時約 270GB；256GB 卡用 400Mbps 約可錄 85 分鐘。" section="tools">
+  <ToolHead title="錄影容量／記憶卡可錄時間" question="拍這麼久要多少容量？一張卡可以錄多久？" />
+  <div class="tool">
+    <div class="seg" role="group" aria-label="計算方向">
+      <button type="button" data-mode="size" aria-pressed="true">需要多少容量</button>
+      <button type="button" data-mode="card" aria-pressed="false">記憶卡可錄多久</button>
+    </div>
+
+    <div class="field">
+      <label for="rate">位元率（Bitrate）</label>
+      <div class="inrow">
+        <input id="rate" type="number" inputmode="decimal" min="0" step="any" value="200" />
+        <select id="unit" aria-label="位元率單位" style="flex:none;width:auto">
+          <option value="Mbps">Mbps</option>
+          <option value="MBps">MB/s</option>
+        </select>
+      </div>
+      <Chips label="常見位元率（Mbps）" values={[50, 100, 150, 200, 400, 600]} />
+      <span class="hint">相機規格上通常寫 Mbps（小寫 b）；RED、ARRI 等有時寫 MB/s（大寫 B），1 MB/s ＝ 8 Mbps。</span>
+    </div>
+
+    <div class="field" data-for="size">
+      <span class="label">拍攝時間</span>
+      <div class="inrow">
+        <input id="hours" type="number" inputmode="decimal" min="0" step="any" value="3" aria-label="小時" /><span class="unit">小時</span>
+        <input id="mins" type="number" inputmode="decimal" min="0" step="any" value="0" aria-label="分鐘" /><span class="unit">分鐘</span>
+      </div>
+    </div>
+
+    <div class="field" data-for="card" hidden>
+      <label for="card">記憶卡容量</label>
+      <div class="inrow"><input id="card" type="number" inputmode="decimal" min="0" step="any" value="256" /><span class="unit">GB</span></div>
+      <div class="chips" role="group" aria-label="常見記憶卡容量">
+        {cards.map((c) => <button type="button" class="chip" data-v={c} aria-pressed="false">{c >= 1000 ? `${c / 1000}TB` : `${c}GB`}</button>)}
+      </div>
+    </div>
+
+    <div class="result" aria-live="polite">
+      <p class="lbl" id="lbl">需要容量</p>
+      <p class="big" id="out">—</p>
+      <p class="sub" id="sub"></p>
+    </div>
+    <p class="formula" id="formula"></p>
+    <ul class="notes">
+      <li>這裡的 GB 跟記憶卡包裝相同：1 GB ＝ 1,000,000,000 位元組。電腦顯示的容量算法不同，數字會看起來比較小。</li>
+      <li>記憶卡格式化後，實際可用容量會比標示少；實際可錄時間以相機顯示為準。</li>
+      <li>RAW 等可變位元率的格式，實際檔案大小會隨畫面內容變動，建議多留餘裕。</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  import { capacityGB, recordSeconds, toMbps, fmt, fmtSize, fmtDuration } from "../../lib/calc.js";
+  import { bindChips, num, fromQuery } from "../../lib/ui.js";
+  const $ = (id: string) => document.getElementById(id) as HTMLInputElement;
+  const rate = $("rate"), unit = document.getElementById("unit") as HTMLSelectElement;
+  const hours = $("hours"), mins = $("mins"), card = $("card");
+  const out = document.getElementById("out")!, sub = document.getElementById("sub")!;
+  const lbl = document.getElementById("lbl")!, formula = document.getElementById("formula")!;
+  const modeBtns = [...document.querySelectorAll<HTMLButtonElement>("[data-mode]")];
+  let mode = "size";
+
+  const update = () => {
+    const mbps = toMbps(num(rate), unit.value);
+    if (mode === "size") {
+      const secs = (num(hours) || 0) * 3600 + (num(mins) || 0) * 60;
+      const gb = capacityGB(mbps, secs);
+      lbl.textContent = "需要容量";
+      out.textContent = gb == null ? "—" : `約 ${fmtSize(gb)}`;
+      sub.innerHTML = gb == null ? "請輸入位元率和拍攝時間" : `每小時約 <b>${fmt(capacityGB(mbps, 3600)!, 1)} GB</b>`;
+      formula.textContent = "算法：容量（GB）＝ 位元率（Mbps）× 秒數 ÷ 8 ÷ 1000";
+    } else {
+      const s = recordSeconds(num(card), mbps);
+      lbl.textContent = "大約可以錄";
+      out.textContent = s == null ? "—" : fmtDuration(s);
+      sub.innerHTML = s == null ? "請輸入記憶卡容量和位元率" : `約 <b>${fmt(s / 60, 1)}</b> 分鐘`;
+      formula.textContent = "算法：可錄秒數 ＝ 容量（GB）× 1000 × 8 ÷ 位元率（Mbps）";
+    }
+  };
+
+  const setMode = (m: string, push = true) => {
+    mode = m === "card" ? "card" : "size";
+    for (const b of modeBtns) b.setAttribute("aria-pressed", String(b.dataset.mode === mode));
+    for (const f of document.querySelectorAll<HTMLElement>("[data-for]")) f.hidden = f.dataset.for !== mode;
+    if (push) {
+      const u = new URL(location.href);
+      if (mode === "card") u.searchParams.set("mode", "card"); else u.searchParams.delete("mode");
+      history.replaceState(null, "", u);
+    }
+    update();
+  };
+
+  const q = new URLSearchParams(location.search);
+  if (q.get("unit") === "MBps") unit.value = "MBps";
+  fromQuery({ bitrate: rate, card, hours, mins });
+  const groups = document.querySelectorAll<HTMLElement>(".chips");
+  bindChips(groups[0], rate, update);
+  bindChips(groups[1], card, update);
+  for (const el of [hours, mins]) el.addEventListener("input", update);
+  unit.addEventListener("change", update);
+  for (const b of modeBtns) b.addEventListener("click", () => setMode(b.dataset.mode!));
+  setMode(q.get("mode") || "size", false);
+</script>

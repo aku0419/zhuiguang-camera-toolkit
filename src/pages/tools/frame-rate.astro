@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+import Chips from "../../components/Chips.astro";
+---
+<BaseLayout title="升降格計算器" description="輸入拍攝格率和時間軸格率，算出播放速度與慢動作倍率。例如 60fps 放到 24fps 時間軸 = 40% 速度、2.5 倍慢動作。" section="tools">
+  <ToolHead title="升降格計算器" question="拍攝格率放到時間軸上，會變成幾 % 速度？" />
+  <div class="tool">
+    <div class="field">
+      <label for="shoot">拍攝格率</label>
+      <div class="inrow"><input id="shoot" type="number" inputmode="decimal" min="1" step="any" value="60" /><span class="unit">fps</span></div>
+      <Chips label="常用拍攝格率" values={[24, 30, 48, 50, 60, 100, 120, 240]} />
+    </div>
+    <div class="field">
+      <label for="timeline">時間軸格率（剪接專案）</label>
+      <div class="inrow"><input id="timeline" type="number" inputmode="decimal" min="1" step="any" value="24" /><span class="unit">fps</span></div>
+      <Chips label="常用時間軸格率" values={[23.976, 24, 25, 29.97, 30]} />
+    </div>
+    <div class="field">
+      <label for="secs">拍攝長度（選填）</label>
+      <div class="inrow"><input id="secs" type="number" inputmode="decimal" min="0" step="any" value="10" /><span class="unit">秒</span></div>
+    </div>
+    <div class="result" aria-live="polite">
+      <p class="lbl">播放速度</p>
+      <p class="big" id="out">—</p>
+      <p class="sub" id="factor"></p>
+      <p class="sub" id="len"></p>
+    </div>
+    <p class="formula">算法：播放速度 ＝ 時間軸格率 ÷ 拍攝格率</p>
+    <ul class="notes">
+      <li>拍攝格率比時間軸高 → 慢動作（升格）；比時間軸低 → 快動作（降格）。</li>
+      <li>剪接軟體要把素材設成「依時間軸格率播放」才會變慢，否則軟體只會跳格播放、速度不變。</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  import { frameRate, fmt } from "../../lib/calc.js";
+  import { bindChips, num, fromQuery } from "../../lib/ui.js";
+  const shoot = document.getElementById("shoot") as HTMLInputElement;
+  const timeline = document.getElementById("timeline") as HTMLInputElement;
+  const secs = document.getElementById("secs") as HTMLInputElement;
+  const out = document.getElementById("out")!;
+  const factor = document.getElementById("factor")!;
+  const len = document.getElementById("len")!;
+  const update = () => {
+    const r = frameRate(num(shoot), num(timeline));
+    if (!r) { out.textContent = "—"; factor.textContent = "請輸入兩個格率"; len.textContent = ""; return; }
+    out.textContent = `${fmt(r.speedPercent, 2)}%`;
+    if (Math.abs(r.factor - 1) < 1e-9) factor.textContent = "原速播放";
+    else if (r.factor > 1) factor.innerHTML = `慢動作 <b>${fmt(r.factor, 2)}×</b>`;
+    else factor.innerHTML = `快動作 <b>${fmt(1 / r.factor, 2)}×</b>`;
+    const s = num(secs);
+    len.innerHTML = s > 0 ? `拍 <b>${fmt(s, 2)}</b> 秒 → 播放 <b>${fmt(s * r.factor, 2)}</b> 秒` : "";
+  };
+  fromQuery({ shoot, timeline });
+  const groups = document.querySelectorAll<HTMLElement>(".chips");
+  bindChips(groups[0], shoot, update);
+  bindChips(groups[1], timeline, update);
+  secs.addEventListener("input", update);
+  update();
+</script>
