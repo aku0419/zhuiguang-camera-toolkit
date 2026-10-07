@@ -1,4 +1,63 @@
 ---
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import ComingSoon from "../../components/ComingSoon.astro";
+import { lenses, focalText, apertureText, typeText } from "../../lib/lenses.js";
+const brands = [...new Set(lenses.map((l) => l.brand))];
+const mounts = [...new Set(lenses.map((l) => l.mount))];
+const types = ["定焦", "變焦"];
 ---
-<ComingSoon id="lenses" intro="這是什麼鏡頭？能不能裝？能不能涵蓋我的感光元件？" />
+{lenses.length === 0 ? (
+  <ComingSoon id="lenses" intro="這是什麼鏡頭？能不能裝？能不能涵蓋我的感光元件？" />
+) : (
+  <BaseLayout title="鏡頭資料庫" description={`${lenses.length} 支常用鏡頭的卡口、焦段、光圈、涵蓋片幅與重量，資料整理自原廠公開資訊。`} section="lenses">
+    <p class="eyebrow">Lenses</p>
+    <h1>鏡頭資料庫</h1>
+    <p class="lead">看焦段、光圈、卡口、涵蓋片幅，以及能裝在哪些相機。</p>
+    <div class="filters">
+      <div class="chips" role="group" aria-label="品牌" data-filter="brand">
+        <button type="button" class="chip" data-f="" aria-pressed="true">全部</button>
+        {brands.map((b) => <button type="button" class="chip" data-f={b} aria-pressed="false">{b}</button>)}
+      </div>
+      <div class="chips" role="group" aria-label="卡口" data-filter="mount">
+        <button type="button" class="chip" data-f="" aria-pressed="true">全部卡口</button>
+        {mounts.map((m) => <button type="button" class="chip" data-f={m} aria-pressed="false">{m}</button>)}
+      </div>
+      <div class="chips" role="group" aria-label="類型" data-filter="type">
+        <button type="button" class="chip" data-f="" aria-pressed="true">定焦＋變焦</button>
+        {types.map((t) => <button type="button" class="chip" data-f={t} aria-pressed="false">{t}</button>)}
+      </div>
+    </div>
+    <p class="cam-count" aria-live="polite"><span id="count">{lenses.length}</span> 支</p>
+    <div class="grid cam-grid lens-grid">
+      {lenses.map((l) => (
+        <a class="card cam-card" href={`/lenses/${l.slug}/`} data-brand={l.brand} data-mount={l.mount} data-type={typeText(l)}>
+          <span class="k">{l.brand}・{l.series}</span>
+          <h3>{l.model}</h3>
+          <p>{focalText(l)}・{apertureText(l)}</p>
+          <div class="meta"><span class="pill">{typeText(l)}</span><span class="pill max">{l.coverage === "Full Frame" ? "全片幅" : l.coverage}</span></div>
+        </a>
+      ))}
+    </div>
+  </BaseLayout>
+)}
+
+<script>
+  const state: Record<string, string> = { brand: "", mount: "", type: "" };
+  const cards = [...document.querySelectorAll<HTMLElement>(".cam-card")];
+  for (const group of document.querySelectorAll<HTMLElement>("[data-filter]")) {
+    const key = group.dataset.filter!;
+    for (const btn of group.querySelectorAll<HTMLButtonElement>("button")) {
+      btn.addEventListener("click", () => {
+        state[key] = btn.dataset.f || "";
+        group.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
+        let n = 0;
+        for (const c of cards) {
+          const ok = (!state.brand || c.dataset.brand === state.brand) && (!state.mount || c.dataset.mount === state.mount) && (!state.type || c.dataset.type === state.type);
+          c.hidden = !ok;
+          if (ok) n++;
+        }
+        document.getElementById("count")!.textContent = String(n);
+      });
+    }
+  }
+</script>

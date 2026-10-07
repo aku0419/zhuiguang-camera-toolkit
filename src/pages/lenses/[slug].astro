@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { lenses, camerasFor, focalText, apertureText, typeText } from "../../lib/lenses.js";
+
+export function getStaticPaths() {
+  return lenses.map((l) => ({ params: { slug: l.slug }, props: { l } }));
+}
+const { l } = Astro.props;
+const U = "Unknown";
+const cov = l.coverage === "Full Frame" ? "全片幅（Full Frame）" : l.coverage === U ? "未知" : l.coverage;
+const filter = l.filter_mm != null ? `${l.filter_mm} mm` : l.filter_note ?? "未知";
+const weight = l.weight_g === U ? "未知" : `約 ${l.weight_g} g${l.weight_note ? `（${l.weight_note}）` : ""}`;
+const ap = apertureText(l) + (l.t_stop ? `（實際透光量 T${l.t_stop}）` : "");
+const facts: [string, string][] = [
+  ["焦段", focalText(l)],
+  ["最大光圈", ap],
+  ["卡口", l.mount],
+  ["涵蓋片幅", cov],
+  ["最近對焦距離", l.min_focus],
+  ["重量", weight],
+];
+const specs: [string, string][] = [
+  ["品牌", l.brand],
+  ["系列", l.series],
+  ["型號", l.model],
+  ["原廠型號代碼", l.model_code ?? "未知"],
+  ["類型", typeText(l)],
+  ["最大光圈", ap],
+  ["光圈葉片", l.aperture_blades ? `${l.aperture_blades} 片` : "未知"],
+  ...(l.autofocus && l.autofocus !== U ? [["對焦", l.autofocus] as [string, string]] : []),
+  ["防震", l.stabilization ?? "未知"],
+  ["最大放大倍率", l.magnification ?? "未知"],
+  ["濾鏡口徑", filter],
+  ["最大直徑 × 長度", `${l.diameter_mm} × ${l.length_mm} mm`],
+];
+const users = camerasFor(l);
+const desc = `${l.brand} ${l.model} 規格：${focalText(l)}、${apertureText(l)}、${l.mount} 卡口、${cov}。可裝的相機、最近對焦、重量與濾鏡口徑。`;
+---
+<BaseLayout title={`${l.brand} ${l.model} 規格`} description={desc} section="lenses">
+  <p class="crumb"><a href="/lenses/">鏡頭</a> › {l.brand}</p>
+  <h1>{l.brand} {l.model}</h1>
+  <div class="cam-head">
+    <span class="pill hot">{typeText(l)}</span>
+    <span class="pill">{l.mount}</span>
+    <span class="pill">最後確認 {l.last_verified}</span>
+  </div>
+
+  <h2>重點規格</h2>
+  <dl class="facts">
+    {facts.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
+  </dl>
+
+  <h2>能裝在哪些相機（{users.length} 台）</h2>
+  <p class="cam-count">依「卡口」比對逐光收錄的相機。能不能裝以卡口為準；實際對焦、防震等功能因機身而異。</p>
+  <div class="grid cam-grid">
+    {users.map(({ c, fit }) => (
+      <a class="card cam-card" href={`/cameras/${c.slug}/`}>
+        <span class="k">{c.brand}</span>
+        <h3>{c.model}</h3>
+        {fit && <p>{fit}</p>}
+      </a>
+    ))}
+  </div>
+
+  <h2>完整規格</h2>
+  <dl class="facts">
+    {specs.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
+  </dl>
+
+  <h2>資料來源</h2>
+  <div class="src">
+    <p>原廠資料：<a href={l.source_url} rel="noopener" target="_blank">{l.source_name}</a></p>
+    <p>最後確認日期：{l.last_verified}。規格可能因改款而不同，重要拍攝前請以原廠最新文件為準。</p>
+  </div>
+</BaseLayout>

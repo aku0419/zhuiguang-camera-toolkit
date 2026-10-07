@@ -77,6 +77,14 @@
 - 相機頁錄影模式表有「需要的寫入速度（估算）」：位元率 ÷ 8 = MB/s，相機有 SD 卡槽時再標 SD 影片速度等級（V6／V10／V30／V60／V90，算式在 `calc.js` 的 `sdVideoClass`）。這是估算，頁面要註明以原廠說明書為準。
 - 已完成：SD／SDHC／SDXC／SDUC、UHS-I、UHS-II、影片速度等級、CFexpress Type A／B、CFexpress 影片效能保證（VPG）、CFast 2.0、XQD、Codex CompactDrive、RED PRO CFexpress。RED PRO CFast（KOMODO 用）還沒找到官方頁面，先不收。
 
+## 鏡頭資料庫（第二階段，進行中）
+
+- 資料放 `src/data/lenses/<slug>.json`，檢查在 `src/lib/lenses.js`；列表 `/lenses/`（可依品牌、卡口、定焦／變焦篩選），每支一頁 `/lenses/<slug>/`，自動列出「卡口相同」的相機。
+- 一個品牌一個品牌做，每批至少 20 支，先請負責人確認再合併。順序：Sony → Canon → Nikon → Sigma → Tamron → Viltrox → Panasonic → Fujifilm → ARRI → Cooke → Zeiss → Sirui／Laowa 等。
+- 規格只採原廠資料，標示來源與查證日期；原廠表沒寫的欄位寫 `Unknown`，不用猜。
+- Sony：美國、台灣等官網會擋，目前用 Sony Japan 的官方規格頁（`https://www.sony.jp/ichigan/products/<型號>/spec.html`，日文）整理成繁體中文。已收 37 支（FE／E 卡口 G Master、G、標準系列）。
+- 還沒做：電影鏡頭用的 T 值、Image Circle、前徑（有資料再填）。
+
 ## 開發指令
 
 - `npm install`：安裝

@@ -180,3 +180,4 @@ html.gate body{visibility:hidden}
   table.stack td::before{content:attr(data-th);color:var(--muted);text-align:left;flex:none}
   table.stack td.first{font-weight:700}
 }
+@media (max-width:640px){.lens-grid .cam-card p{display:block;font-size:13px}}
