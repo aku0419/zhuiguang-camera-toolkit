@@ -143,3 +143,23 @@ table.modes{border-collapse:collapse;width:100%;font-size:14px}
   .cam-grid .cam-card h3{font-size:16px}
   .cam-grid .cam-card p,.cam-grid .cam-card .max{display:none}
 }
+
+/* 回報問題 */
+.fb-btn{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:50;display:inline-flex;align-items:center;gap:8px;border:0;background:var(--accent);color:var(--accent-ink);border-radius:26px;padding:12px 18px;font-size:15px;font-weight:700;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.fb-btn svg{width:20px;height:20px}
+.fb-btn:hover{filter:brightness(1.08)}
+@media (max-width:640px){.fb-btn{padding:11px 14px;font-size:14px}}
+.fb-mask{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:60;display:flex;align-items:flex-end;justify-content:center;padding:12px}
+@media (min-width:640px){.fb-mask{align-items:center}}
+.fb-box{position:relative;background:var(--paper);color:var(--ink);border-radius:12px;width:100%;max-width:480px;max-height:92vh;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.fb-box h3{margin:0;font-size:18px}
+.fb-l{display:flex;flex-direction:column;gap:4px;font-size:14px;font-weight:700}
+.fb-l select,.fb-l input,.fb-l textarea{font-weight:400;font-size:16px;border:1px solid var(--line);background:var(--soft);border-radius:8px;padding:9px 10px;width:100%}
+.fb-l textarea{resize:vertical;min-height:110px}
+.fb-meta{font-size:13px;color:var(--muted);margin:0}
+.fb-status{min-height:20px;margin:0;font-size:14px}
+.fb-status.good{color:var(--ok);font-weight:700}
+.fb-status.bad{color:var(--warn);font-weight:700}
+.fb-row{display:flex;gap:8px;justify-content:flex-end}
+.btn:disabled{opacity:.6;cursor:default}
+@media print{.fb-btn,.fb-mask{display:none}}

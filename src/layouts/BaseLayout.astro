@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import { SITE_NAME, DISCLAIMER, SECTIONS } from "../data/site.js";
+import ReportButton from "../components/ReportButton.astro";
 
 interface Props {
   title?: string;
@@ -53,5 +54,6 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         <p>© {new Date().getFullYear()} 逐光｜攝影工具組・免費使用</p>
       </footer>
     </div>
+    <ReportButton />
   </body>
 </html>

@@ -1,0 +1,100 @@
+---
+// 回報問題：每頁右下角的按鈕。不用登入；送出時呼叫 Supabase 的 submit_issue_report() 函式。
+// 網址與公開金鑰（publishable key）由 Vercel 環境變數提供，沒設定時按鈕仍會出現，但會告訴使用者暫時無法送出。
+const url = import.meta.env.PUBLIC_SUPABASE_URL ?? "";
+const key = import.meta.env.PUBLIC_SUPABASE_KEY ?? "";
+---
+<button type="button" class="fb-btn" id="fb-open" data-url={url} data-key={key}>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /><path d="M12 7v4M12 14h.01" /></svg>
+  回報問題
+</button>
+
+<div class="fb-mask" id="fb-mask" hidden>
+  <form class="fb-box" id="fb-form" role="dialog" aria-modal="true" aria-labelledby="fb-title" novalidate>
+    <h3 id="fb-title">回報問題</h3>
+    <p class="fb-meta">資料有錯、算出來怪怪的、網站壞掉，或有想要的功能，都可以告訴我們。不用登入。</p>
+    <label class="fb-l">問題類型
+      <select id="fb-kind">
+        <option>資料錯誤</option>
+        <option>計算錯誤</option>
+        <option>網站壞掉</option>
+        <option>建議</option>
+        <option>其他</option>
+      </select>
+    </label>
+    <label class="fb-l">說明（至少 5 個字）
+      <textarea id="fb-msg" maxlength="2000" rows="5" placeholder="例如：Sony FX3 的 4K 120p 位元率和原廠說明書不一樣…"></textarea>
+    </label>
+    <label class="fb-l">聯絡方式（選填，需要我們回覆時才填）
+      <input id="fb-contact" type="text" maxlength="200" autocomplete="off" placeholder="Email 或 Instagram" />
+    </label>
+    <!-- 防機器人的陷阱欄位：真人看不到，機器人會填 -->
+    <input id="fb-trap" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
+    <p class="fb-meta" id="fb-where"></p>
+    <p class="fb-status" id="fb-status" role="status" aria-live="polite"></p>
+    <div class="fb-row">
+      <button type="button" class="btn" id="fb-cancel">取消</button>
+      <button type="submit" class="btn primary" id="fb-send">送出</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  const $ = (id: string) => document.getElementById(id) as any;
+  const openBtn = $("fb-open"), mask = $("fb-mask"), form = $("fb-form");
+  const msg = $("fb-msg"), kind = $("fb-kind"), contact = $("fb-contact"), trap = $("fb-trap");
+  const status = $("fb-status"), send = $("fb-send"), where = $("fb-where");
+
+  const device = () => {
+    const ua = navigator.userAgent;
+    const os = /iPhone|iPad/.test(ua) ? "iOS" : /Android/.test(ua) ? "Android" : /Mac/.test(ua) ? "Mac" : /Windows/.test(ua) ? "Windows" : "其他";
+    const br = /Edg\//.test(ua) ? "Edge" : /Chrome\//.test(ua) ? "Chrome" : /Safari\//.test(ua) ? "Safari" : /Firefox\//.test(ua) ? "Firefox" : "其他";
+    return `${os}・${br}・${innerWidth}×${innerHeight}`;
+  };
+  const MESSAGES: Record<string, string> = {
+    ok: "已收到，謝謝你！",
+    too_short: "說明太短了，請至少寫 5 個字。",
+    too_long: "內容太長了，請縮短一點（說明最多 2000 字、聯絡方式最多 200 字）。",
+    rate_limited: "你剛剛送出太多則了，請 10 分鐘後再試。",
+    daily_limit: "今天的回報已達上限，請明天再試，謝謝。",
+    closed: "回報功能暫時關閉，請稍後再試。",
+  };
+
+  const close = () => { mask.hidden = true; openBtn.focus(); };
+  const open = () => {
+    status.textContent = ""; status.className = "fb-status";
+    where.textContent = `回報頁面：${location.pathname}`;
+    send.disabled = false; mask.hidden = false; msg.focus();
+  };
+  openBtn.addEventListener("click", open);
+  $("fb-cancel").addEventListener("click", close);
+  mask.addEventListener("click", (e: Event) => { if (e.target === mask) close(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !mask.hidden) close(); });
+
+  form.addEventListener("submit", async (e: Event) => {
+    e.preventDefault();
+    const url = (openBtn.dataset.url || "").replace(/\/$/, ""), key = openBtn.dataset.key || "";
+    const text = msg.value.trim();
+    const fail = (t: string) => { status.textContent = t; status.className = "fb-status bad"; send.disabled = false; };
+    if (text.length < 5) return fail(MESSAGES.too_short);
+    if (trap.value) { status.textContent = MESSAGES.ok; status.className = "fb-status good"; return; } // 機器人：假裝成功，不送出
+    if (!url || !key) return fail("回報功能還在設定中，暫時無法送出，抱歉。");
+    send.disabled = true; status.className = "fb-status"; status.textContent = "送出中…";
+    try {
+      const res = await fetch(`${url}/rest/v1/rpc/submit_issue_report`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", apikey: key },
+        body: JSON.stringify({ p_kind: kind.value, p_page: location.pathname + location.search, p_message: text, p_contact: contact.value.trim(), p_device: device() }),
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      const code = await res.json();
+      if (code === "ok") {
+        status.textContent = MESSAGES.ok; status.className = "fb-status good";
+        msg.value = ""; contact.value = "";
+        setTimeout(() => { if (!mask.hidden) close(); }, 1600);
+      } else fail(MESSAGES[code] || "送出失敗，請稍後再試。");
+    } catch {
+      fail("送出失敗，請檢查網路後再試一次。");
+    }
+  });
+</script>

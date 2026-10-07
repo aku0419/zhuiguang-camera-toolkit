@@ -79,6 +79,15 @@
 - 相機資料放 `src/data/cameras/<slug>.json`，格式檢查在 `src/lib/cameras.js`，填錯建置會失敗
 - 計算式只寫在 `src/lib/calc.js`，網頁和測試共用。
 
+## 問題回報（已做好，待負責人設定 Supabase）
+
+- 前端：`src/components/ReportButton.astro`（每頁右下角按鈕＋視窗），用 `fetch` 呼叫 Supabase REST 的 `submit_issue_report()`，只帶 `apikey`（公開金鑰），不用 supabase-js。
+- 資料庫：`supabase/issue_reports.sql`（資料表不開放、只開放函式；長度、次數、總量限制；只存 IP 雜湊）。改這份 SQL 要保持可重複執行，並重新用本機測試（pglite）驗證限制都有效。
+- 設定值：Vercel 環境變數 `PUBLIC_SUPABASE_URL`、`PUBLIC_SUPABASE_KEY`（只放公開金鑰，**絕對不放 secret key**）。沒設定時按鈕仍出現，送出時顯示暫時無法送出。
+- CSP（`vercel.json`）的 `connect-src` 已允許 `https://*.supabase.co`。
+- 操作說明給負責人：`docs/supabase-setup.md`、`docs/deploy-vercel.md`。
+- 隱私說明寫在 `/about/`；若新增收集的欄位，要同步改那裡。
+
 ## 其他
 
 - commit 訊息、程式碼註解、PR 內容不要寫任何 AI 模型名稱。
