@@ -204,3 +204,9 @@ html.gate body{visibility:hidden}
 .gloss dt{font-weight:700;font-size:16px}
 .gloss dt small{font-weight:400;font-size:13px;color:var(--muted);margin-left:6px}
 .gloss dd{margin:4px 0 0;font-size:14.5px;line-height:1.7;color:var(--ink)}
+@media print{
+  .topbar,.foot,.report-btn,.tool,.eyebrow,.lead,.crumb,#report-fab{display:none!important}
+  body{background:#fff}
+  .dof-table{font-size:11pt}
+}
+.dof-table th,.dof-table td{padding:8px 8px;font-size:13px;white-space:nowrap}

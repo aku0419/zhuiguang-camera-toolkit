@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+---
+<BaseLayout title="照度換算（lux、呎燭光、EV）" description="lux、呎燭光（foot-candle）、EV 互相換算。1 呎燭光約 10.76 lux；2.5 lux 約為 EV 0（ISO 100）。" section="tools">
+  <ToolHead title="照度換算" question="lux、呎燭光、EV 互相換算。" />
+  <div class="tool">
+    <div class="field">
+      <label for="unit">輸入的單位</label>
+      <select id="unit">
+        <option value="lux">lux（勒克斯）</option>
+        <option value="fc">呎燭光（foot-candle）</option>
+        <option value="ev">EV（ISO 100）</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="val">數值</label>
+      <input id="val" type="number" inputmode="decimal" step="any" value="1000" />
+    </div>
+    <div class="result" aria-live="polite">
+      <p class="lbl">換算結果</p>
+      <p class="big" id="out">—</p>
+      <p class="sub" id="sub"></p>
+    </div>
+    <p class="formula">算法：1 呎燭光 ＝ 10.7639 lux；EV（ISO 100）＝ log₂（lux ÷ 2.5）</p>
+    <ul class="notes">
+      <li>lux 是每平方公尺的照度，呎燭光是每平方呎的照度，美國的燈光規格常用呎燭光。</li>
+      <li>lux 換 EV 是入射式測光的常用算法（ISO 100），實際測光表的校正常數可能略有不同。</li>
+      <li>要換成光圈、快門，請用<a href="/tools/exposure-stops/">曝光級數</a>與<a href="/tools/exposure-guide/">戶外曝光速查</a>。</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  import { luxToFc, fcToLux, luxToEV, evToLux, fmt } from "../../lib/calc.js";
+  import { num } from "../../lib/ui.js";
+  const unit = document.getElementById("unit") as HTMLSelectElement;
+  const val = document.getElementById("val") as HTMLInputElement;
+  const out = document.getElementById("out")!, sub = document.getElementById("sub")!;
+  const update = () => {
+    const v = num(val);
+    if (!isFinite(v) || (unit.value !== "ev" && v <= 0)) { out.textContent = "—"; sub.textContent = "請輸入數值"; return; }
+    const lux = unit.value === "lux" ? v : unit.value === "fc" ? fcToLux(v) : evToLux(v);
+    out.textContent = `${fmt(lux, lux < 10 ? 2 : 0)} lux`;
+    sub.innerHTML = `＝ <b>${fmt(luxToFc(lux), 2)}</b> 呎燭光<br>＝ EV <b>${fmt(luxToEV(lux)!, 1)}</b>（ISO 100）`;
+  };
+  val.addEventListener("input", update); unit.addEventListener("change", update);
+  update();
+</script>

@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+import Chips from "../../components/Chips.astro";
+import CameraPicker from "../../components/CameraPicker.astro";
+import { FORMATS } from "../../lib/calc.js";
+---
+<BaseLayout title="景深對照表（可列印）" description="選相機片幅和焦段，列出各光圈、各對焦距離的景深範圍（近點～遠點），可以列印帶到現場。" section="tools">
+  <ToolHead title="景深對照表" question="一張表看光圈與距離的清楚範圍，可以印出來。" />
+  <div class="tool no-print-pad">
+    <CameraPicker />
+    <div class="field" id="fmt-field">
+      <label for="fmt">相機片幅</label>
+      <select id="fmt">
+        {FORMATS.map((f) => <option value={f.id} data-factor={f.factor}>{f.label}</option>)}
+      </select>
+    </div>
+    <div class="field">
+      <label for="focal">鏡頭實際焦段</label>
+      <div class="inrow"><input id="focal" type="number" inputmode="decimal" min="1" step="any" value="50" /><span class="unit">mm</span></div>
+      <Chips label="常用焦段" values={[24, 35, 50, 85, 135]} />
+    </div>
+    <p class="actions"><button type="button" class="btn" id="print">列印這張表</button></p>
+  </div>
+  <h2 id="title-line">景深對照表</h2>
+  <p class="cam-count" id="caption"></p>
+  <div class="tbl-wrap">
+    <table class="modes dof-table" id="tbl"></table>
+  </div>
+  <p class="cam-count">表中數字是「近點～遠點」，單位公尺；「∞」表示到無限遠都算清楚。算法與假設見<a href="/tools/depth-of-field/">景深計算器</a>，是理論估算，實際以監看為準。</p>
+</BaseLayout>
+
+<script>
+  import { depthOfField, FORMATS, fmt } from "../../lib/calc.js";
+  import { bindChips, num, fromQuery, cameraPicker } from "../../lib/ui.js";
+  const sel = document.getElementById("fmt") as HTMLSelectElement;
+  const focal = document.getElementById("focal") as HTMLInputElement;
+  const fmtField = document.getElementById("fmt-field")!;
+  const tbl = document.getElementById("tbl")!;
+  const caption = document.getElementById("caption")!;
+  const APS = [1.4, 2, 2.8, 4, 5.6, 8, 11, 16];
+  const DIST = [1, 1.5, 2, 3, 5, 10];
+  let getCam: () => any = () => null;
+  const m = (v: number) => (v === Infinity ? "∞" : fmt(v, v < 10 ? 2 : 1));
+  const update = () => {
+    const cam = getCam();
+    const useCam = cam && cam.crop_factor;
+    if (cam && !useCam && cam.format_id && !sel.dataset.touched) sel.value = cam.format_id;
+    fmtField.hidden = !!useCam;
+    const f = useCam ? cam.crop_factor : FORMATS.find((x) => x.id === sel.value)!.factor;
+    const fl = num(focal);
+    if (!(fl > 0)) { tbl.innerHTML = ""; caption.textContent = "請輸入焦段"; return; }
+    const label = useCam ? cam.name : FORMATS.find((x) => x.id === sel.value)!.label;
+    caption.textContent = `${label}・${fmt(fl, 1)}mm 鏡頭`;
+    let h = "<thead><tr><th>光圈 ＼ 對焦距離（公尺）</th>" + DIST.map((d) => `<th>${d}</th>`).join("") + "</tr></thead><tbody>";
+    for (const n of APS) {
+      h += `<tr><td class="first n">f/${n}</td>`;
+      for (const d of DIST) {
+        const r = depthOfField(fl, n, d, f)!;
+        h += `<td class="n">${m(r.near)}～${m(r.far)}</td>`;
+      }
+      h += "</tr>";
+    }
+    tbl.innerHTML = h + "</tbody>";
+  };
+  getCam = cameraPicker(update);
+  fromQuery({ focal });
+  bindChips(document.querySelector<HTMLElement>(".chips")!, focal, update);
+  sel.addEventListener("change", () => { sel.dataset.touched = "1"; update(); });
+  document.getElementById("print")!.addEventListener("click", () => window.print());
+  update();
+</script>

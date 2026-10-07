@@ -20,12 +20,18 @@ import { FORMATS } from "../../lib/calc.js";
       <div class="inrow"><input id="focal" type="number" inputmode="decimal" min="1" step="any" value="35" /><span class="unit">mm</span></div>
       <Chips label="常用焦段" values={[14, 24, 35, 50, 85, 135]} />
     </div>
+    <div class="field">
+      <label for="dist">拍攝距離（選填）</label>
+      <div class="inrow"><input id="dist" type="number" inputmode="decimal" min="0" step="any" value="5" /><span class="unit">公尺</span></div>
+      <Chips label="常用距離" values={[1, 2, 3, 5, 10, 20]} />
+      <span class="hint">填了距離，會算出那個距離拍到的範圍。看景、決定機位時很好用。</span>
+    </div>
     <div class="result" aria-live="polite">
       <p class="lbl">水平視角</p>
       <p class="big" id="out">—</p>
       <p class="sub" id="sub"></p>
     </div>
-    <p class="formula">算法：視角 ＝ 2 × arctan（感光元件邊長 ÷ （2 × 焦段））</p>
+    <p class="formula">算法：視角 ＝ 2 × arctan（感光元件邊長 ÷ （2 × 焦段））；拍攝範圍 ＝ 2 × 距離 × tan（視角 ÷ 2）</p>
     <ul class="notes">
       <li>焦段請填鏡頭上標示的<b>實際焦段</b>。視角越大，畫面拍到越寬。</li>
       <li>沒有選相機時，感光元件尺寸用片幅的通用倍率推算（全片幅 36 × 24 mm，長寬比 3:2），是約略值。選了相機，就用那台的實際尺寸。</li>
@@ -35,10 +41,11 @@ import { FORMATS } from "../../lib/calc.js";
 </BaseLayout>
 
 <script>
-  import { fieldOfView, FORMATS, fmt } from "../../lib/calc.js";
+  import { fieldOfView, frameSizeAt, FORMATS, fmt } from "../../lib/calc.js";
   import { bindChips, num, fromQuery, cameraPicker } from "../../lib/ui.js";
   const sel = document.getElementById("fmt") as HTMLSelectElement;
   const focal = document.getElementById("focal") as HTMLInputElement;
+  const dist = document.getElementById("dist") as HTMLInputElement;
   const out = document.getElementById("out")!, sub = document.getElementById("sub")!;
   const fmtField = document.getElementById("fmt-field")!;
   let getCam: () => any = () => null;
@@ -57,11 +64,16 @@ import { FORMATS } from "../../lib/calc.js";
     const r = fieldOfView(num(focal), w, h);
     if (!r) { out.textContent = "—"; sub.textContent = "請輸入焦段"; return; }
     out.textContent = `${fmt(r.h, 1)}°`;
-    sub.innerHTML = `垂直 <b>${fmt(r.v, 1)}°</b>・對角 <b>${fmt(r.d, 1)}°</b>${note}`;
+    const d = num(dist);
+    const cw = d > 0 ? frameSizeAt(r.h, d) : null, ch = d > 0 ? frameSizeAt(r.v, d) : null;
+    const m = (v: number) => (v < 1 ? `${fmt(v * 100, 0)} 公分` : `${fmt(v, 2)} 公尺`);
+    const range = cw && ch ? `<br>${fmt(d, 1)} 公尺處拍到 <b>${m(cw)} × ${m(ch)}</b>（寬 × 高）` : "";
+    sub.innerHTML = `垂直 <b>${fmt(r.v, 1)}°</b>・對角 <b>${fmt(r.d, 1)}°</b>${range}${note}`;
   };
   getCam = cameraPicker(update);
-  fromQuery({ focal });
-  bindChips(document.querySelector<HTMLElement>(".chips")!, focal, update);
+  fromQuery({ focal, dist });
+  const chips = document.querySelectorAll<HTMLElement>(".chips");
+  bindChips(chips[0], focal, update); bindChips(chips[1], dist, update);
   sel.addEventListener("change", () => { sel.dataset.touched = "1"; update(); });
   update();
 </script>

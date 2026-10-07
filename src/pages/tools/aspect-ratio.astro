@@ -35,10 +35,39 @@ import ToolHead from "../../components/ToolHead.astro";
       <li>若是「加黑邊」而不是裁切，畫面大小不變，黑邊會出現在上下（目標比較寬）或左右（目標比較窄）。</li>
     </ul>
   </div>
+  <h2 id="anamorphic">變形鏡頭：解壓縮後的比例</h2>
+  <div class="tool">
+    <div class="field">
+      <label>錄下來的畫面（壓縮的）</label>
+      <div class="inrow"><input id="aw" type="number" inputmode="decimal" min="1" step="any" value="4" aria-label="寬" /><span class="unit">：</span><input id="ah" type="number" inputmode="decimal" min="1" step="any" value="3" aria-label="高" /></div>
+      <span class="hint">可以填比例（4 ： 3），也可以填解析度。Open Gate 4:3 是常見的搭配。</span>
+    </div>
+    <div class="field">
+      <label for="sq">變形倍率</label>
+      <select id="sq">
+        <option value="1.25">1.25×</option>
+        <option value="1.33">1.33×</option>
+        <option value="1.5">1.5×</option>
+        <option value="1.6">1.6×</option>
+        <option value="1.8">1.8×</option>
+        <option value="2" selected>2×</option>
+      </select>
+    </div>
+    <div class="result" aria-live="polite">
+      <p class="lbl">解壓縮後的比例</p>
+      <p class="big" id="aout">—</p>
+      <p class="sub" id="asub"></p>
+    </div>
+    <p class="formula">算法：解壓縮後比例 ＝ 錄製寬 ÷ 高 × 變形倍率</p>
+    <ul class="notes">
+      <li>監看和後製都要設定「解壓縮」，畫面才不會是瘦長的。</li>
+      <li>要拍成想要的比例（例如 2.39:1），可以對照上面的裁切計算。</li>
+    </ul>
+  </div>
 </BaseLayout>
 
 <script>
-  import { aspectOf, cropToRatio, fmt } from "../../lib/calc.js";
+  import { aspectOf, cropToRatio, desqueezedRatio, fmt } from "../../lib/calc.js";
   import { num, fromQuery } from "../../lib/ui.js";
   const w = document.getElementById("w") as HTMLInputElement;
   const h = document.getElementById("h") as HTMLInputElement;
@@ -56,4 +85,17 @@ import ToolHead from "../../components/ToolHead.astro";
   fromQuery({ w, h });
   w.addEventListener("input", update); h.addEventListener("input", update); target.addEventListener("change", update);
   update();
+
+  const aw = document.getElementById("aw") as HTMLInputElement, ah = document.getElementById("ah") as HTMLInputElement;
+  const sq = document.getElementById("sq") as HTMLSelectElement;
+  const aout = document.getElementById("aout")!, asub = document.getElementById("asub")!;
+  const upA = () => {
+    const r = desqueezedRatio(num(aw), num(ah), Number(sq.value));
+    if (r == null) { aout.textContent = "—"; asub.textContent = "請輸入畫面的寬和高"; return; }
+    aout.textContent = `${fmt(r, 2)}:1`;
+    asub.innerHTML = `錄下來是 ${fmt(num(aw) / num(ah), 2)}:1，加上 ${sq.value}× 變形`;
+  };
+  for (const el of [aw, ah]) el.addEventListener("input", upA);
+  sq.addEventListener("change", upA);
+  upA();
 </script>

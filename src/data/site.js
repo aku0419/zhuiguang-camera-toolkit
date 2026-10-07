@@ -73,6 +73,22 @@ export const TOOLS = [
     q: "拍三天要準備幾張卡、幾 TB 硬碟？", keywords: ["備份", "硬碟", "素材", "DIT", "記憶卡", "數量", "規劃"],
   },
   {
+    id: "color-temperature", href: "/tools/color-temperature/", name: "色溫換算",
+    q: "5600K 換 3200K 要加什麼校正片？", keywords: ["色溫", "mired", "K", "Kelvin", "鎢絲燈", "日光", "校正片", "CTO", "CTB", "燈光"],
+  },
+  {
+    id: "light-units", href: "/tools/light-units/", name: "照度換算",
+    q: "1000 lux 是幾呎燭光、EV 多少？", keywords: ["lux", "勒克斯", "呎燭光", "foot-candle", "照度", "EV", "燈光"],
+  },
+  {
+    id: "timecode", href: "/tools/timecode/", name: "時間碼計算",
+    q: "兩段素材加起來多長？", keywords: ["timecode", "時間碼", "影格", "29.97", "DF", "遺漏格式", "剪接", "frame"],
+  },
+  {
+    id: "depth-of-field-table", href: "/tools/depth-of-field-table/", name: "景深對照表（可列印）",
+    q: "一張表看光圈與距離的清楚範圍", keywords: ["景深", "對照表", "列印", "DoF", "對焦", "焦點", "攝影助理"],
+  },
+  {
     id: "card-time", href: "/tools/recording-capacity/?mode=card", name: "記憶卡可錄時間",
     q: "256GB 卡、400Mbps 可以錄多久？", keywords: ["記憶卡", "card", "可錄時間", "SD", "CFexpress"],
   },

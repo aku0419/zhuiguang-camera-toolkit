@@ -219,3 +219,84 @@ export function shootStorage({ mbps, hoursPerDay, days, copies, cardGB, usable =
     cardsPerDay: Math.ceil(dayGB / (cardGB * usable)),
   };
 }
+
+// ---- 拍攝範圍：某個距離拍得到多寬、多高 ----
+export function frameSizeAt(fovDeg, distM) {
+  if (!(fovDeg > 0) || !(distM > 0)) return null;
+  return 2 * distM * Math.tan((fovDeg * Math.PI) / 360);
+}
+
+// ---- 變形鏡頭：解壓縮後的畫面比例（寬 ÷ 高）----
+export function desqueezedRatio(w, h, squeeze) {
+  if (!(w > 0) || !(h > 0) || !(squeeze > 0)) return null;
+  return (w / h) * squeeze;
+}
+
+// ---- 色溫 ----
+export function mired(kelvin) {
+  return kelvin > 0 ? 1e6 / kelvin : null;
+}
+// 從色溫 a 換成色溫 b 需要的 mired 位移。正值＝要偏暖（加暖色片），負值＝要偏冷
+export function miredShift(a, b) {
+  const x = mired(a), y = mired(b);
+  return x == null || y == null ? null : y - x;
+}
+
+// ---- 照度 ----
+export const LUX_PER_FC = 10.7639;
+export const luxToFc = (lux) => lux / LUX_PER_FC;
+export const fcToLux = (fc) => fc * LUX_PER_FC;
+// 入射式測光常用換算：EV（ISO 100）＝ log2（lux ÷ 2.5）
+export const luxToEV = (lux) => (lux > 0 ? Math.log2(lux / 2.5) : null);
+export const evToLux = (ev) => 2.5 * 2 ** ev;
+
+// ---- 時間碼 ----
+// 格率選項：nominal 是時間碼每秒的格數，drop 代表遺漏格式（只用在 29.97、59.94）
+export const TC_RATES = [
+  { id: "23.976", label: "23.976", nominal: 24, drop: false, fps: 24000 / 1001 },
+  { id: "24", label: "24", nominal: 24, drop: false, fps: 24 },
+  { id: "25", label: "25", nominal: 25, drop: false, fps: 25 },
+  { id: "29.97df", label: "29.97 遺漏格式（DF）", nominal: 30, drop: true, fps: 30000 / 1001 },
+  { id: "29.97", label: "29.97 非遺漏格式（NDF）", nominal: 30, drop: false, fps: 30000 / 1001 },
+  { id: "30", label: "30", nominal: 30, drop: false, fps: 30 },
+  { id: "50", label: "50", nominal: 50, drop: false, fps: 50 },
+  { id: "59.94df", label: "59.94 遺漏格式（DF）", nominal: 60, drop: true, fps: 60000 / 1001 },
+  { id: "59.94", label: "59.94 非遺漏格式（NDF）", nominal: 60, drop: false, fps: 60000 / 1001 },
+  { id: "60", label: "60", nominal: 60, drop: false, fps: 60 },
+];
+
+// "01:02:03:04"（遺漏格式可用 ; ）→ 總格數；格式不對回傳 null
+export function tcToFrames(text, rate) {
+  const m = String(text).trim().match(/^(\d+)[:;](\d+)[:;](\d+)[:;.](\d+)$/);
+  if (!m) return null;
+  const [h, mi, s, f] = m.slice(1).map(Number);
+  if (mi > 59 || s > 59 || f >= rate.nominal) return null;
+  let n = (h * 3600 + mi * 60 + s) * rate.nominal + f;
+  if (rate.drop) {
+    const d = rate.nominal / 15; // 29.97 每分鐘遺漏 2 格，59.94 遺漏 4 格
+    const totalMin = h * 60 + mi;
+    if (s === 0 && f < d && mi % 10 !== 0) return null; // 這些時間碼在遺漏格式不存在
+    n -= d * (totalMin - Math.floor(totalMin / 10));
+  }
+  return n;
+}
+
+export function framesToTc(frames, rate) {
+  if (!(frames >= 0)) return null;
+  let n = Math.round(frames);
+  const nom = rate.nominal;
+  if (rate.drop) {
+    const d = nom / 15;
+    const per10 = nom * 600 - d * 9;
+    const perMin = nom * 60 - d;
+    const blocks = Math.floor(n / per10);
+    const rest = n % per10;
+    n += d * 9 * blocks + (rest < d ? 0 : d * Math.floor((rest - d) / perMin));
+  }
+  const f = n % nom;
+  const s = Math.floor(n / nom) % 60;
+  const mi = Math.floor(n / (nom * 60)) % 60;
+  const h = Math.floor(n / (nom * 3600));
+  const p = (x) => String(x).padStart(2, "0");
+  return `${p(h)}:${p(mi)}:${p(s)}${rate.drop ? ";" : ":"}${p(f)}`;
+}

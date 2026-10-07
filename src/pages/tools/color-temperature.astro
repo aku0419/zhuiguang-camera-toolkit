@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+import Chips from "../../components/Chips.astro";
+---
+<BaseLayout title="色溫換算（K 與 mired）" description="算出兩個色溫差多少 mired，要加暖色還是冷色校正片。例如 5600K 換成 3200K 要偏暖約 134 mired。" section="tools">
+  <ToolHead title="色溫換算" question="兩種光的色溫差多少？校正片要加暖還是加冷？" />
+  <div class="tool">
+    <div class="field">
+      <label for="from">現有光源的色溫</label>
+      <div class="inrow"><input id="from" type="number" inputmode="numeric" min="1000" step="any" value="5600" /><span class="unit">K</span></div>
+      <Chips label="現有光源常用色溫" values={[2700, 3200, 4300, 5000, 5600, 6500]} />
+    </div>
+    <div class="field">
+      <label for="to">想要的色溫</label>
+      <div class="inrow"><input id="to" type="number" inputmode="numeric" min="1000" step="any" value="3200" /><span class="unit">K</span></div>
+      <Chips label="想要的常用色溫" values={[2700, 3200, 4300, 5000, 5600, 6500]} />
+    </div>
+    <div class="result" aria-live="polite">
+      <p class="lbl">需要的 mired 位移</p>
+      <p class="big" id="out">—</p>
+      <p class="sub" id="sub"></p>
+    </div>
+    <p class="formula">算法：mired ＝ 1,000,000 ÷ 色溫（K）；位移 ＝ 想要的 mired － 現有的 mired</p>
+    <ul class="notes">
+      <li>mired 是用來比較色溫差的單位：同樣差多少 mired，校正片的效果大致相同，不管原本是幾 K。</li>
+      <li>位移是正的（偏暖）要加暖色校正片，是負的（偏冷）要加冷色校正片。實際用哪一片，請看校正片廠商的對照表。</li>
+      <li>常見參考：鎢絲燈約 3200K，日光（HMI）約 5600K。實際燈具會有差異，以燈具規格或色溫計為準。</li>
+      <li>用數位相機時，也可以直接調相機白平衡。校正片的好處是讓燈光本身就一致。</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  import { mired, miredShift, fmt } from "../../lib/calc.js";
+  import { bindChips, num, fromQuery } from "../../lib/ui.js";
+  const from = document.getElementById("from") as HTMLInputElement;
+  const to = document.getElementById("to") as HTMLInputElement;
+  const out = document.getElementById("out")!, sub = document.getElementById("sub")!;
+  const update = () => {
+    const sh = miredShift(num(from), num(to));
+    if (sh == null) { out.textContent = "—"; sub.textContent = "請輸入兩個色溫（K）"; return; }
+    const r = Math.round(sh);
+    out.textContent = r === 0 ? "0 mired" : `${r > 0 ? "+" : ""}${r} mired`;
+    sub.innerHTML = `${fmt(num(from), 0)}K ＝ ${fmt(mired(num(from))!, 0)} mired，${fmt(num(to), 0)}K ＝ ${fmt(mired(num(to))!, 0)} mired<br>`
+      + (r === 0 ? "色溫相同，不用校正。" : r > 0 ? "要<b>偏暖</b>（加暖色校正片）" : "要<b>偏冷</b>（加冷色校正片）");
+  };
+  fromQuery({ from, to });
+  const g = document.querySelectorAll<HTMLElement>(".chips");
+  bindChips(g[0], from, update); bindChips(g[1], to, update);
+  update();
+</script>

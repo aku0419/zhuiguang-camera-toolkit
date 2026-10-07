@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+import { TC_RATES } from "../../lib/calc.js";
+---
+<BaseLayout title="時間碼計算器" description="時間碼相加相減、時間碼與影格數互換，支援 23.976、24、25、29.97（遺漏／非遺漏格式）、59.94 等格率。" section="tools">
+  <ToolHead title="時間碼計算器" question="兩段素材加起來多長？這個時間碼是第幾格？" />
+  <div class="tool">
+    <div class="field">
+      <label for="rate">格率</label>
+      <select id="rate">
+        {TC_RATES.map((r) => <option value={r.id} selected={r.id === "24"}>{r.label}</option>)}
+      </select>
+    </div>
+    <div class="field">
+      <label>時間碼 A　（時:分:秒:格）</label>
+      <input id="a" type="text" inputmode="numeric" value="00:10:00:00" placeholder="00:00:00:00" />
+    </div>
+    <div class="field">
+      <label for="op">運算</label>
+      <select id="op"><option value="+">＋ 相加</option><option value="-">－ 相減</option></select>
+    </div>
+    <div class="field">
+      <label>時間碼 B</label>
+      <input id="b" type="text" inputmode="numeric" value="00:01:30:12" placeholder="00:00:00:00" />
+    </div>
+    <div class="result" aria-live="polite">
+      <p class="lbl">結果</p>
+      <p class="big" id="out">—</p>
+      <p class="sub" id="sub"></p>
+    </div>
+    <div class="field" style="margin-top:16px">
+      <label for="fr">影格數 → 時間碼</label>
+      <input id="fr" type="number" inputmode="numeric" min="0" step="1" value="1000" />
+      <span class="hint" id="frout"></span>
+    </div>
+    <p class="formula">算法：時間碼換成總格數，加減之後再換回時間碼。29.97、59.94 的「遺漏格式（DF）」每分鐘會略過少數編號（每第 10 分鐘除外），讓時間碼和真實時間對得上。</p>
+    <ul class="notes">
+      <li>遺漏格式只是編號方式，不會真的丟掉畫面。遺漏格式用「;」分隔，非遺漏格式用「:」，兩種都可以輸入。</li>
+      <li>「實際長度」是用真實格率（29.97 其實是 30000/1001）算的，跟時間碼顯示會有差距，這是正常的。</li>
+      <li>23.976 的時間碼是以每秒 24 格編號。</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  import { TC_RATES, tcToFrames, framesToTc, fmt } from "../../lib/calc.js";
+  const $ = (id: string) => document.getElementById(id) as HTMLInputElement;
+  const rateSel = document.getElementById("rate") as HTMLSelectElement;
+  const opSel = document.getElementById("op") as HTMLSelectElement;
+  const out = document.getElementById("out")!, sub = document.getElementById("sub")!, frout = document.getElementById("frout")!;
+  const real = (frames: number, fps: number) => {
+    const s = frames / fps, h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+    return `${h > 0 ? h + " 小時 " : ""}${h > 0 || m > 0 ? m + " 分 " : ""}${fmt(sec, 2)} 秒`;
+  };
+  const update = () => {
+    const rate = TC_RATES.find((r) => r.id === rateSel.value)!;
+    const a = tcToFrames($("a").value, rate), b = tcToFrames($("b").value, rate);
+    if (a == null || b == null) { out.textContent = "—"; sub.textContent = "時間碼格式不對，請輸入 時:分:秒:格（格數要小於每秒格數）"; }
+    else {
+      const total = opSel.value === "+" ? a + b : a - b;
+      if (total < 0) { out.textContent = "—"; sub.textContent = "相減結果小於 0，請調整 A 和 B"; }
+      else {
+        out.textContent = framesToTc(total, rate)!;
+        sub.innerHTML = `共 <b>${fmt(total, 0)}</b> 格，實際長度約 ${real(total, rate.fps)}`;
+      }
+    }
+    const f = Number($("fr").value);
+    frout.textContent = f >= 0 && isFinite(f) ? `＝ ${framesToTc(f, rate)}（實際長度約 ${real(f, rate.fps)}）` : "請輸入影格數";
+  };
+  for (const id of ["a", "b", "fr"]) $(id).addEventListener("input", update);
+  rateSel.addEventListener("change", update); opSel.addEventListener("change", update);
+  update();
+</script>

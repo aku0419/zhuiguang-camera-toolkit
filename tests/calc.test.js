@@ -6,6 +6,7 @@ import {
   capacityGB, recordSeconds, toMbps, fmtDuration, fmtSize, neededMBps, sdVideoClass,
   ndInfo, parseShutter, fmtShutter, aspectOf, cropToRatio, depthOfField, stopsBetween,
   fieldOfView, sunnyAperture, ndStopsNeeded, shootStorage,
+  frameSizeAt, desqueezedRatio, mired, miredShift, luxToEV, luxToFc, TC_RATES, tcToFrames, framesToTc,
 } from "../src/lib/calc.js";
 
 test("24fps + 180° → 1/48 秒，最接近 1/50", () => {
@@ -119,4 +120,35 @@ test("拍攝日素材量：200Mbps 每天 2 小時 = 180GB；3 天 3 份 = 1620G
   assert.equal(r.allCopiesGB, 1620);
   assert.equal(r.cardsPerDay, 1);
   assert.equal(shootStorage({ mbps: 200, hoursPerDay: 2, days: 3, copies: 3, cardGB: 128 }).cardsPerDay, 2);
+});
+
+test("拍攝範圍：全片幅 50mm 在 5 公尺處水平拍到 3.6 公尺", () => {
+  const h = fieldOfView(50, 36, 24).h;
+  assert.ok(Math.abs(frameSizeAt(h, 5) - 3.6) < 0.001);
+});
+
+test("變形鏡頭：4:3 加 2 倍 = 2.67:1；16:9 加 1.33 倍 ≈ 2.36:1", () => {
+  assert.ok(Math.abs(desqueezedRatio(4, 3, 2) - 2.667) < 0.001);
+  assert.ok(Math.abs(desqueezedRatio(16, 9, 1.33) - 2.364) < 0.001);
+});
+
+test("色溫：5600K = 178.6 mired；5600K 換 3200K 位移 +133.9", () => {
+  assert.ok(Math.abs(mired(5600) - 178.57) < 0.01);
+  assert.ok(Math.abs(miredShift(5600, 3200) - 133.93) < 0.01);
+});
+
+test("照度：2.5 lux = EV 0；10.764 lux = 1 呎燭光", () => {
+  assert.equal(luxToEV(2.5), 0);
+  assert.ok(Math.abs(luxToFc(10.7639) - 1) < 1e-9);
+});
+
+test("時間碼：24fps 1 小時 = 86400 格；29.97 DF 1 小時 = 107892 格、NDF = 108000 格", () => {
+  const r = (id) => TC_RATES.find((x) => x.id === id);
+  assert.equal(tcToFrames("01:00:00:00", r("24")), 86400);
+  assert.equal(tcToFrames("01:00:00;00", r("29.97df")), 107892);
+  assert.equal(tcToFrames("01:00:00:00", r("29.97")), 108000);
+  assert.equal(framesToTc(107892, r("29.97df")), "01:00:00;00");
+  assert.equal(framesToTc(tcToFrames("00:00:59;29", r("29.97df")) + 1, r("29.97df")), "00:01:00;02");
+  assert.equal(tcToFrames("00:01:00;00", r("29.97df")), null); // 遺漏格式沒有這個時間碼
+  assert.equal(tcToFrames("00:00:00:24", r("24")), null);
 });
