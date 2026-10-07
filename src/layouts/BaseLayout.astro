@@ -12,6 +12,7 @@ interface Props {
 }
 const { title, description, section, gate = true } = Astro.props;
 const fullTitle = title ? `${title}｜${SITE_NAME}` : SITE_NAME;
+const isHome = Astro.url.pathname === "/";
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 <!doctype html>
@@ -39,11 +40,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
           <img src="/logo.svg" alt="" width="30" height="30" />
           <b>Zhuiguang</b><span>逐光</span>
         </a>
-        <nav class="nav" aria-label="主要導覽">
+        {!isHome && gate && <nav class="nav" aria-label="主要導覽">
           {SECTIONS.map((s) => (
             <a href={s.href} aria-current={section === s.id ? "page" : undefined}>{s.zh}</a>
           ))}
-        </nav>
+        </nav>}
         {gate && (
           <div class="account" id="account" hidden>
             <span></span>

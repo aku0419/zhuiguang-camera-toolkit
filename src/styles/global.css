@@ -29,7 +29,7 @@ button,select,input,textarea{font:inherit;color:inherit}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
 .logo img{width:30px;height:30px;flex:none}
 .logo b{font-family:var(--display);font-size:22px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-.logo span{font-size:13px;color:var(--muted)}
+.logo span{font-size:13px;color:var(--muted);margin-left:-2px}
 .nav{display:flex;gap:4px;flex-wrap:wrap}
 .nav a{text-decoration:none;font-size:15px;padding:6px 10px;border-radius:6px;color:var(--muted)}
 .nav a:hover{background:var(--paper);color:var(--ink)}
