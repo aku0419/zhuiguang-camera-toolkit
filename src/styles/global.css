@@ -28,8 +28,8 @@ button,select,input,textarea{font:inherit;color:inherit}
 .topbar{display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;margin-bottom:24px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
 .logo img{width:30px;height:30px;flex:none}
-.logo b{font-size:20px;font-weight:700;letter-spacing:.04em}
-.logo span{font-family:var(--display);font-size:13px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase}
+.logo b{font-family:var(--display);font-size:22px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.logo span{font-size:13px;color:var(--muted)}
 .nav{display:flex;gap:4px;flex-wrap:wrap}
 .nav a{text-decoration:none;font-size:15px;padding:6px 10px;border-radius:6px;color:var(--muted)}
 .nav a:hover{background:var(--paper);color:var(--ink)}

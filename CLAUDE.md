@@ -70,14 +70,20 @@
 - 工具：快門角度、升降格、等效焦段、錄影容量（含記憶卡可錄時間）。
 - 頁尾免責說明、問題回報。
 
-## 記憶卡資料庫（第二階段，進行中）
+## 新增工具（已完成）
+
+- ND 減光、畫面比例、景深、曝光級數（`/tools/nd-filter/`、`aspect-ratio/`、`depth-of-field/`、`exposure-stops/`），算式在 `calc.js`。景深用容許彌散圓＝全片幅對角線 ÷ 1500 再依片幅倍率縮小，相機頁、鏡頭頁都有「算景深」按鈕。
+- 對負責人與網站上，不要說「第幾階段」，只說「預計增加」。底片資料庫與底片長度計算還沒做，工具頁寫「預計增加」。
+- 網站左上 logo 跟初光一樣：英文粗體在前（ZHUIGUANG）、小的中文在後（逐光）。
+
+## 記憶卡資料庫（進行中）
 
 - 資料放 `src/data/media/<slug>.json`，檢查在 `src/lib/media.js`；每種格式一頁（`/media/<slug>/`），自動列出用到這種卡的相機（用相機「記憶卡」欄的文字比對，設定在 `camera_match`）。
 - 只做「格式」，不收品牌 SKU、不放價格。規格只採官方組織資料（SD 協會、CFA 等），標示來源與查證日期。
 - 相機頁錄影模式表有「需要的寫入速度（估算）」：位元率 ÷ 8 = MB/s，相機有 SD 卡槽時再標 SD 影片速度等級（V6／V10／V30／V60／V90，算式在 `calc.js` 的 `sdVideoClass`）。這是估算，頁面要註明以原廠說明書為準。
 - 已完成：SD／SDHC／SDXC／SDUC、UHS-I、UHS-II、影片速度等級、CFexpress Type A／B、CFexpress 影片效能保證（VPG）、CFast 2.0、XQD、Codex CompactDrive、RED PRO CFexpress。RED PRO CFast（KOMODO 用）還沒找到官方頁面，先不收。
 
-## 鏡頭資料庫（第二階段，進行中）
+## 鏡頭資料庫（進行中）
 
 - 資料放 `src/data/lenses/<slug>.json`，檢查在 `src/lib/lenses.js`；列表 `/lenses/`（可依品牌、卡口、定焦／變焦篩選），每支一頁 `/lenses/<slug>/`，自動列出「卡口相同」的相機。
 - 列表頁功能：搜尋框（空白分隔、全部符合）、品牌／卡口／定焦變焦／焦段（廣角≤28、標準、望遠≥85）／光圈／片幅篩選，依品牌分區顯示，可用網址參數預設（例如 `/lenses/?brand=Sony`）。鏡頭頁有「算等效焦段」按鈕（帶 `?focal=`）與「看更多該品牌鏡頭」。

@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+import Chips from "../../components/Chips.astro";
+---
+<BaseLayout title="ND 減光計算器" description="ND8 是幾級？加上 ND 之後快門要怎麼調？輸入減光級數或 ND 倍數，算出濃度與補償後的快門速度。" section="tools">
+  <ToolHead title="ND 減光計算器" question="ND 濾鏡是減幾級？加了之後快門要調到多少？" />
+  <div class="tool">
+    <div class="field">
+      <label for="stops">減光級數</label>
+      <div class="inrow"><input id="stops" type="number" inputmode="decimal" min="0" step="any" value="3" /><span class="unit">級</span></div>
+      <Chips label="常用級數" values={[1, 2, 3, 4, 5, 6, 8, 10]} />
+    </div>
+    <div class="field">
+      <label for="shutter">原本的快門（選填）</label>
+      <input id="shutter" type="text" inputmode="text" value="1/48" placeholder="例如 1/48" />
+      <span class="hint">可輸入 1/48 或 0.5（秒）。</span>
+    </div>
+    <div class="result" aria-live="polite">
+      <p class="lbl">ND 倍數</p>
+      <p class="big" id="out">—</p>
+      <p class="sub" id="sub"></p>
+    </div>
+    <p class="formula">算法：倍數 ＝ 2 的「級數」次方；濃度 ＝ 級數 × 0.3；加 ND 後快門時間 × 倍數</p>
+    <ul class="notes">
+      <li>常見對照：ND8＝3 級＝0.9、ND64＝6 級＝1.8、ND1000＝約 10 級＝3.0。</li>
+      <li>「補償後快門」是指：加了 ND 之後，要維持同樣亮度，快門要拉長到多少（光圈、ISO 不變）。若想維持 180° 快門，通常改用光圈或 ISO 調整。</li>
+      <li>各品牌 ND 的標示方式不同，實際減光量以濾鏡廠商標示為準。</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  import { ndInfo, parseShutter, fmtShutter, fmt } from "../../lib/calc.js";
+  import { bindChips, num, fromQuery } from "../../lib/ui.js";
+  const stops = document.getElementById("stops") as HTMLInputElement;
+  const shutter = document.getElementById("shutter") as HTMLInputElement;
+  const out = document.getElementById("out")!;
+  const sub = document.getElementById("sub")!;
+  const update = () => {
+    const r = ndInfo(num(stops));
+    if (!r) { out.textContent = "—"; sub.textContent = "請輸入減光級數"; return; }
+    out.textContent = `ND${fmt(r.factor, 0)}`;
+    let t = `濃度 <b>${fmt(r.density, 1)}</b>，光量剩 1/${fmt(r.factor, 0)}`;
+    const s = shutter.value.trim() ? parseShutter(shutter.value) : null;
+    if (s) t += `<br>快門 ${fmtShutter(s)} → 補償後 <b>${fmtShutter(s * r.factor)}</b>`;
+    else if (shutter.value.trim()) t += "<br>快門格式不對，請輸入 1/48 或 0.5";
+    sub.innerHTML = t;
+  };
+  fromQuery({ stops });
+  bindChips(document.querySelector<HTMLElement>(".chips")!, stops, update);
+  shutter.addEventListener("input", update);
+  update();
+</script>

@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+import Chips from "../../components/Chips.astro";
+import CameraPicker from "../../components/CameraPicker.astro";
+import { FORMATS } from "../../lib/calc.js";
+---
+<BaseLayout title="景深計算器" description="輸入焦段、光圈、對焦距離和片幅，算出景深範圍（近點、遠點）與過焦距離。" section="tools">
+  <ToolHead title="景深計算器" question="這樣拍，從哪裡到哪裡是清楚的？" />
+  <div class="tool">
+    <CameraPicker />
+    <div class="field" id="fmt-field">
+      <label for="fmt">相機片幅</label>
+      <select id="fmt">
+        {FORMATS.map((f) => <option value={f.id} data-factor={f.factor}>{f.label}</option>)}
+      </select>
+    </div>
+    <div class="field">
+      <label for="focal">鏡頭實際焦段</label>
+      <div class="inrow"><input id="focal" type="number" inputmode="decimal" min="1" step="any" value="50" /><span class="unit">mm</span></div>
+      <Chips label="常用焦段" values={[24, 35, 50, 85, 135]} />
+    </div>
+    <div class="field">
+      <label for="ap">光圈值</label>
+      <div class="inrow"><span class="unit">f/</span><input id="ap" type="number" inputmode="decimal" min="0.5" step="any" value="2.8" /></div>
+      <Chips label="常用光圈" values={[1.4, 2, 2.8, 4, 5.6, 8, 11]} />
+    </div>
+    <div class="field">
+      <label for="dist">對焦距離</label>
+      <div class="inrow"><input id="dist" type="number" inputmode="decimal" min="0.01" step="any" value="3" /><span class="unit">公尺</span></div>
+      <Chips label="常用距離" values={[0.5, 1, 2, 3, 5, 10]} />
+    </div>
+    <div class="result" aria-live="polite">
+      <p class="lbl">清楚的範圍</p>
+      <p class="big" id="out">—</p>
+      <p class="sub" id="sub"></p>
+    </div>
+    <p class="formula">算法：標準薄透鏡景深公式；容許彌散圓＝全片幅對角線 ÷ 1500（約 0.029 mm），其他片幅依換算倍率縮小</p>
+    <ul class="notes">
+      <li>焦段請填鏡頭上標示的<b>實際焦段</b>，不要填等效焦段。</li>
+      <li>這是理論估算，「多清楚算清楚」跟畫面放大倍率、觀看距離有關，實際拍攝以監看畫面為準。</li>
+      <li>用 T 值的電影鏡頭，請填 T 值對應的大約光圈（T 值略大於 f 值）。</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  import { depthOfField, FORMATS, fmt } from "../../lib/calc.js";
+  import { bindChips, num, fromQuery, cameraPicker } from "../../lib/ui.js";
+  const sel = document.getElementById("fmt") as HTMLSelectElement;
+  const focal = document.getElementById("focal") as HTMLInputElement;
+  const ap = document.getElementById("ap") as HTMLInputElement;
+  const dist = document.getElementById("dist") as HTMLInputElement;
+  const out = document.getElementById("out")!;
+  const sub = document.getElementById("sub")!;
+  const fmtField = document.getElementById("fmt-field")!;
+  const m = (v: number) => (v < 1 ? `${fmt(v * 100, 0)} 公分` : `${fmt(v, 2)} 公尺`);
+  let getCam: () => any = () => null;
+  const update = () => {
+    const cam = getCam();
+    const useCam = cam && cam.crop_factor;
+    if (cam && !useCam && cam.format_id && !sel.dataset.touched) sel.value = cam.format_id;
+    fmtField.hidden = !!useCam;
+    const factor = useCam ? cam.crop_factor : FORMATS.find((x) => x.id === sel.value)!.factor;
+    const r = depthOfField(num(focal), num(ap), num(dist), factor);
+    if (!r) { out.textContent = "—"; sub.textContent = "請輸入焦段、光圈和距離"; return; }
+    out.textContent = r.far === Infinity ? `${m(r.near)} 到無限遠` : `${m(r.near)} ～ ${m(r.far)}`;
+    sub.innerHTML = (r.far === Infinity ? "對焦距離已超過過焦距離，後方全部清楚。" : `景深共 <b>${m(r.total)}</b>`)
+      + `<br>過焦距離 <b>${m(r.hyperfocal)}</b>${useCam ? `<br>依 ${cam.name} 感光元件尺寸計算` : ""}`;
+  };
+  getCam = cameraPicker(update);
+  fromQuery({ focal, ap, dist });
+  const chips = document.querySelectorAll<HTMLElement>(".chips");
+  bindChips(chips[0], focal, update); bindChips(chips[1], ap, update); bindChips(chips[2], dist, update);
+  sel.addEventListener("change", () => { sel.dataset.touched = "1"; update(); });
+  update();
+</script>

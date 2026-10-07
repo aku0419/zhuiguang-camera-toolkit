@@ -52,6 +52,7 @@ const desc = `${l.brand} ${l.model} 規格：${focalText(l)}、${apertureText(l)
   <div class="actions">
     <a class="btn primary" href={`/tools/focal-length/?focal=${l.focal_min}`}>算等效焦段{l.type === "zoom" ? `（${l.focal_min}mm）` : `（${l.focal_min}mm）`}</a>
     {l.type === "zoom" && <a class="btn" href={`/tools/focal-length/?focal=${l.focal_max}`}>算等效焦段（{l.focal_max}mm）</a>}
+    {l.max_aperture > 0 && <a class="btn" href={`/tools/depth-of-field/?focal=${l.focal_min}&ap=${l.max_aperture}`}>算景深</a>}
     <a class="btn" href={`/lenses/?brand=${encodeURIComponent(l.brand)}`}>看更多 {l.brand} 鏡頭</a>
   </div>
 

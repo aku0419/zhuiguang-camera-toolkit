@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+---
+<BaseLayout title="畫面比例計算器" description="算出解析度的畫面比例，或把 16:9 的畫面裁成 2.39:1、1.85:1 等電影比例，得到裁切後的解析度。" section="tools">
+  <ToolHead title="畫面比例計算器" question="這個解析度是什麼比例？裁成電影比例剩多少像素？" />
+  <div class="tool">
+    <div class="field">
+      <label>畫面解析度</label>
+      <div class="inrow"><input id="w" type="number" inputmode="numeric" min="1" step="1" value="3840" aria-label="寬" /><span class="unit">×</span><input id="h" type="number" inputmode="numeric" min="1" step="1" value="2160" aria-label="高" /></div>
+    </div>
+    <div class="field">
+      <label for="target">想裁成的比例</label>
+      <select id="target">
+        <option value="2.39">2.39:1（電影寬螢幕）</option>
+        <option value="2.35">2.35:1</option>
+        <option value="2">2:1</option>
+        <option value="1.85">1.85:1（電影標準）</option>
+        <option value="1.7778">16:9</option>
+        <option value="1.3333">4:3</option>
+        <option value="1.2">6:5</option>
+        <option value="1">1:1（正方形）</option>
+        <option value="0.8">4:5（直式）</option>
+        <option value="0.5625">9:16（直式）</option>
+      </select>
+    </div>
+    <div class="result" aria-live="polite">
+      <p class="lbl">裁成目標比例後</p>
+      <p class="big" id="out">—</p>
+      <p class="sub" id="sub"></p>
+    </div>
+    <p class="formula">算法：比例 ＝ 寬 ÷ 高；裁切時保留最多畫面（比原本寬就裁高度，比原本窄就裁寬度）</p>
+    <ul class="notes">
+      <li>像素會四捨五入成整數，剪接軟體建立時間軸時可再微調成偶數。</li>
+      <li>若是「加黑邊」而不是裁切，畫面大小不變，黑邊會出現在上下（目標比較寬）或左右（目標比較窄）。</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  import { aspectOf, cropToRatio, fmt } from "../../lib/calc.js";
+  import { num, fromQuery } from "../../lib/ui.js";
+  const w = document.getElementById("w") as HTMLInputElement;
+  const h = document.getElementById("h") as HTMLInputElement;
+  const target = document.getElementById("target") as HTMLSelectElement;
+  const out = document.getElementById("out")!;
+  const sub = document.getElementById("sub")!;
+  const update = () => {
+    const a = aspectOf(num(w), num(h));
+    if (!a) { out.textContent = "—"; sub.textContent = "請輸入寬和高"; return; }
+    const c = cropToRatio(num(w), num(h), Number(target.value))!;
+    out.textContent = `${fmt(c.w, 0)} × ${fmt(c.h, 0)}`;
+    sub.innerHTML = `原本比例 <b>${a.simple ? a.simple + "（" : ""}${fmt(a.ratio, 3)}:1${a.simple ? "）" : ""}</b>`
+      + (Math.abs(c.w - num(w)) < 0.5 && Math.abs(c.h - num(h)) < 0.5 ? "<br>已經是這個比例，不用裁切。" : `<br>若改成加黑邊，會是${c.bars}。`);
+  };
+  fromQuery({ w, h });
+  w.addEventListener("input", update); h.addEventListener("input", update); target.addEventListener("change", update);
+  update();
+</script>

@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 import {
   shutterFromAngle, frameRate, equivalentFocal, FORMATS, cropFactorFromSize,
   capacityGB, recordSeconds, toMbps, fmtDuration, fmtSize, neededMBps, sdVideoClass,
+  ndInfo, parseShutter, fmtShutter, aspectOf, cropToRatio, depthOfField, stopsBetween,
 } from "../src/lib/calc.js";
 
 test("24fps + 180° → 1/48 秒，最接近 1/50", () => {
@@ -66,4 +67,35 @@ test("位元率換成需要的 MB/s，並對應 SD 影片速度等級", () => {
   assert.equal(sdVideoClass(600), "V90");   // 75 MB/s
   assert.equal(sdVideoClass(800), null);    // 100 MB/s 超過 V90
   assert.equal(sdVideoClass(0), undefined);
+});
+
+test("ND：3 級 = ND8 = 濃度 0.9；快門 1/48 加 3 級變 1/6", () => {
+  const r = ndInfo(3);
+  assert.equal(r.factor, 8);
+  assert.ok(Math.abs(r.density - 0.9) < 1e-9);
+  assert.equal(fmtShutter(parseShutter("1/48") * r.factor), "1/6 秒");
+  assert.equal(parseShutter("2"), 2);
+  assert.equal(parseShutter("abc"), null);
+});
+
+test("畫面比例：3840×2160 是 16:9；裁成 2.39:1 高度約 1607", () => {
+  assert.equal(aspectOf(3840, 2160).simple, "16:9");
+  const c = cropToRatio(3840, 2160, 2.39);
+  assert.equal(c.w, 3840);
+  assert.equal(Math.round(c.h), 1607);
+  assert.equal(cropToRatio(3840, 2160, 1).h, 2160);
+});
+
+test("景深：全片幅 50mm f/1.8 對焦 3 公尺，約 2.83～3.19 公尺", () => {
+  const r = depthOfField(50, 1.8, 3, 1);
+  assert.ok(Math.abs(r.near - 2.83) < 0.02, String(r.near));
+  assert.ok(Math.abs(r.far - 3.19) < 0.02, String(r.far));
+  assert.equal(depthOfField(50, 8, 100, 1).far, Infinity);
+});
+
+test("曝光級數：B 比 A 亮 1 級（f/4→f/2.8、1/100→1/50、ISO 400→800）", () => {
+  const near = (v, e) => assert.ok(Math.abs(v - e) < 0.1, String(v));
+  near(stopsBetween({ n: 4, t: 1 / 50, iso: 400 }, { n: 2.8, t: 1 / 50, iso: 400 }), 1);
+  near(stopsBetween({ n: 2.8, t: 1 / 100, iso: 400 }, { n: 2.8, t: 1 / 50, iso: 400 }), 1);
+  near(stopsBetween({ n: 2.8, t: 1 / 50, iso: 400 }, { n: 2.8, t: 1 / 50, iso: 800 }), 1);
 });

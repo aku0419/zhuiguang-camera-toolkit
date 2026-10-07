@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+---
+<BaseLayout title="曝光級數計算器" description="比較兩組光圈、快門、ISO，算出差幾級（stop）。例如 f/4 改成 f/2.8 多 1 級。" section="tools">
+  <ToolHead title="曝光級數計算器" question="兩組曝光設定，差幾級？" />
+  <div class="tool">
+    <p class="label" style="font-weight:700">原本的設定 A</p>
+    <div class="field"><div class="inrow"><span class="unit">f/</span><input id="a-n" type="number" inputmode="decimal" min="0.5" step="any" value="4" aria-label="A 光圈" /><input id="a-t" type="text" value="1/50" aria-label="A 快門" /><input id="a-i" type="number" inputmode="numeric" min="1" step="any" value="400" aria-label="A ISO" /></div>
+      <span class="hint">光圈 ／ 快門（1/50 或 0.5 秒）／ ISO</span></div>
+    <p class="label" style="font-weight:700">想改成的設定 B</p>
+    <div class="field"><div class="inrow"><span class="unit">f/</span><input id="b-n" type="number" inputmode="decimal" min="0.5" step="any" value="2.8" aria-label="B 光圈" /><input id="b-t" type="text" value="1/50" aria-label="B 快門" /><input id="b-i" type="number" inputmode="numeric" min="1" step="any" value="400" aria-label="B ISO" /></div>
+      <span class="hint">光圈 ／ 快門 ／ ISO</span></div>
+    <div class="result" aria-live="polite">
+      <p class="lbl">B 和 A 相比</p>
+      <p class="big" id="out">—</p>
+      <p class="sub" id="sub"></p>
+    </div>
+    <p class="formula">算法：EV ＝ log₂（光圈² ÷ 快門秒數）－ log₂（ISO ÷ 100）；兩組 EV 相減</p>
+    <ul class="notes">
+      <li>1 級＝進光量加倍或減半。光圈每差 1 級約差 √2 倍（f/2.8 → f/4）。</li>
+      <li>光圈標示是四捨五入的（f/2.8 實際是 f/2.83），所以結果只顯示到 0.1 級。</li>
+      <li>各品牌 ISO 的實際感光度略有差異，這裡以標示值計算。</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  import { stopsBetween, parseShutter, fmt } from "../../lib/calc.js";
+  import { num, fromQuery } from "../../lib/ui.js";
+  const g = (id: string) => document.getElementById(id) as HTMLInputElement;
+  const out = document.getElementById("out")!;
+  const sub = document.getElementById("sub")!;
+  const update = () => {
+    const a = { n: num(g("a-n")), t: parseShutter(g("a-t").value), iso: num(g("a-i")) };
+    const b = { n: num(g("b-n")), t: parseShutter(g("b-t").value), iso: num(g("b-i")) };
+    const d = a.t && b.t ? stopsBetween(a as any, b as any) : null;
+    if (d == null) { out.textContent = "—"; sub.textContent = "請把光圈、快門、ISO 都填好（快門例如 1/50）"; return; }
+    const r = Math.round(d * 10) / 10;
+    out.textContent = r === 0 ? "一樣亮" : `${r > 0 ? "亮" : "暗"} ${fmt(Math.abs(r), 1)} 級`;
+    sub.innerHTML = r === 0 ? "兩組曝光量差不多。" : `亮度約為 A 的 <b>${fmt(2 ** r, 2)}</b> 倍`;
+  };
+  fromQuery({});
+  for (const id of ["a-n", "a-t", "a-i", "b-n", "b-t", "b-i"]) g(id).addEventListener("input", update);
+  update();
+</script>

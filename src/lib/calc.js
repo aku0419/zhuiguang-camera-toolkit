@@ -104,3 +104,73 @@ export function sdVideoClass(bitrateMbps) {
   const hit = SD_VIDEO_CLASSES.find((c) => c.mbps >= need);
   return hit ? hit.name : null;
 }
+
+// ---- ND 減光 ----
+// 每 1 級（stop）光量減半；ND 濃度每級約 0.3
+export function ndInfo(stops) {
+  if (!isFinite(stops) || stops < 0) return null;
+  return { stops, factor: 2 ** stops, density: stops * 0.3 };
+}
+
+// 快門字串轉秒數：接受 "1/48"、"0.5"、"2"
+export function parseShutter(text) {
+  const t = String(text).trim().replace(/秒$/, "").replace(/"$/, "");
+  const m = t.match(/^1\s*\/\s*(\d+(?:\.\d+)?)$/);
+  if (m) return 1 / Number(m[1]);
+  const v = Number(t);
+  return v > 0 && isFinite(v) ? v : null;
+}
+
+export function fmtShutter(seconds) {
+  if (!(seconds > 0) || !isFinite(seconds)) return "—";
+  if (seconds < 0.5) return `1/${Math.round(1 / seconds)} 秒`;
+  return `${Number(seconds.toFixed(seconds < 10 ? 1 : 0))} 秒`;
+}
+
+// ---- 畫面比例 ----
+export function gcd(a, b) { return b ? gcd(b, a % b) : a; }
+
+// 寬高 → 比例。回傳小數比（寬 ÷ 高）與簡化後的比例文字
+export function aspectOf(w, h) {
+  if (!(w > 0) || !(h > 0)) return null;
+  const ratio = w / h;
+  const wi = Math.round(w), hi = Math.round(h);
+  const g = gcd(wi, hi);
+  return { ratio, simple: Number.isInteger(w) && Number.isInteger(h) && g > 0 ? `${wi / g}:${hi / g}` : null };
+}
+
+// 把來源畫面裁成目標比例（寬 ÷ 高），盡量保留最多畫面
+export function cropToRatio(w, h, target) {
+  if (!(w > 0) || !(h > 0) || !(target > 0)) return null;
+  const src = w / h;
+  if (target >= src) return { w, h: h * (src / target), bars: "上下黑邊" };
+  return { w: w * (target / src), h, bars: "左右黑邊" };
+}
+
+// ---- 景深 ----
+// 容許彌散圓：全片幅對角線 ÷ 1500，約 0.029 mm；其他片幅依換算倍率縮小
+export function cocMm(cropFactor) {
+  return FULL_FRAME_DIAGONAL / 1500 / cropFactor;
+}
+
+// focalMm 鏡頭實際焦段、n 光圈值、distM 對焦距離（公尺）。回傳公尺
+export function depthOfField(focalMm, n, distM, cropFactor) {
+  if (!(focalMm > 0) || !(n > 0) || !(distM > 0) || !(cropFactor > 0)) return null;
+  const f = focalMm, s = distM * 1000, c = cocMm(cropFactor);
+  const H = (f * f) / (n * c) + f;
+  const near = (s * (H - f)) / (H + s - 2 * f);
+  const far = s < H ? (s * (H - f)) / (H - s) : Infinity;
+  return { hyperfocal: H / 1000, near: near / 1000, far: far / 1000, total: (far - near) / 1000, coc: c };
+}
+
+// ---- 曝光級數 ----
+// 兩組曝光（光圈、快門秒數、ISO）相差幾級。正值＝B 比 A 亮
+export function exposureValue(n, seconds, iso) {
+  if (!(n > 0) || !(seconds > 0) || !(iso > 0)) return null;
+  return Math.log2((n * n) / seconds) - Math.log2(iso / 100);
+}
+export function stopsBetween(a, b) {
+  const ea = exposureValue(a.n, a.t, a.iso), eb = exposureValue(b.n, b.t, b.iso);
+  if (ea == null || eb == null) return null;
+  return ea - eb; // EV 越低＝進光越多＝越亮
+}
