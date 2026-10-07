@@ -16,6 +16,7 @@ function check(file, l) {
   need(isNum(l.focal_min) && isNum(l.focal_max) && l.focal_min <= l.focal_max, "focal_min / focal_max");
   need(l.type === "zoom" ? l.focal_min < l.focal_max : l.focal_min === l.focal_max, "type 與焦段不一致");
   need(isNum(l.max_aperture), "max_aperture");
+  need(l.aperture_type == null || ["F", "T"].includes(l.aperture_type), "aperture_type（F / T）");
   need(["Full Frame", "APS-C", "Super35", "Medium Format", U].includes(l.coverage), "coverage");
   need(isStr(l.min_focus), "min_focus");
   need(l.filter_mm == null || isNum(l.filter_mm), "filter_mm");
@@ -45,14 +46,14 @@ export const focalText = (l) => {
 };
 export const apertureText = (l) => {
   const tele = l.max_aperture_tele ? `–${l.max_aperture_tele}` : "";
-  return `F${l.max_aperture}${tele}`;
+  return `${l.aperture_type || "F"}${l.max_aperture}${tele}`;
 };
 export const typeText = (l) => (l.type === "zoom" ? "變焦" : "定焦");
 
 // 這支鏡頭能裝在哪些相機：用卡口名稱比對相機的「卡口」欄
 export function camerasFor(l) {
   return cameras
-    .filter((c) => typeof c.lens_mount === "string" && c.lens_mount.includes(l.mount))
+    .filter((c) => typeof c.lens_mount === "string" && (l.mount_match || [l.mount]).some((m) => c.lens_mount.includes(m)))
     .map((c) => {
       let fit;
       if (l.coverage === "APS-C" && /全片幅|大片幅/.test(c.format_group)) {

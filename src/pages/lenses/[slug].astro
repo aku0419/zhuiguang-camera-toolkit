@@ -11,6 +11,7 @@ const cov = l.coverage === "Full Frame" ? "全片幅（Full Frame）" : l.covera
 const filter = l.filter_mm != null ? `${l.filter_mm} mm` : l.filter_note ?? "未知";
 const weight = l.weight_g === U ? "未知" : `約 ${l.weight_g} g${l.weight_note ? `（${l.weight_note}）` : ""}`;
 const ap = apertureText(l) + (l.t_stop ? `（實際透光量 T${l.t_stop}）` : "");
+const size = l.size_text ?? `${l.diameter_mm} × ${l.length_mm} mm${l.size_note ? `（${l.size_note}）` : ""}`;
 const facts: [string, string][] = [
   ["焦段", focalText(l)],
   ["最大光圈", ap],
@@ -23,15 +24,18 @@ const specs: [string, string][] = [
   ["品牌", l.brand],
   ["系列", l.series],
   ["型號", l.model],
-  ["原廠型號代碼", l.model_code ?? "未知"],
+  ...(l.model_code ? [["原廠型號代碼", l.model_code] as [string, string]] : []),
   ["類型", typeText(l)],
   ["最大光圈", ap],
   ["光圈葉片", l.aperture_blades ? `${l.aperture_blades} 片` : "未知"],
   ...(l.autofocus && l.autofocus !== U ? [["對焦", l.autofocus] as [string, string]] : []),
-  ["防震", l.stabilization ?? "未知"],
-  ["最大放大倍率", l.magnification ?? "未知"],
+  ["防震", l.stabilization && l.stabilization !== U ? l.stabilization : "未知"],
+  ["最大放大倍率", l.magnification && l.magnification !== U ? l.magnification : "未知"],
   ["濾鏡口徑", filter],
-  ["最大直徑 × 長度", `${l.diameter_mm} × ${l.length_mm} mm`],
+  ["尺寸", size],
+  ...(l.front_diameter_mm ? [["鏡頭前端直徑", `Φ${l.front_diameter_mm} mm`] as [string, string]] : []),
+  ...(l.image_circle_mm ? [["成像範圍（Image Circle）", `Φ${l.image_circle_mm} mm`] as [string, string]] : []),
+  ...(l.af_drive ? [["對焦驅動", l.af_drive] as [string, string]] : []),
 ];
 const users = camerasFor(l);
 const desc = `${l.brand} ${l.model} 規格：${focalText(l)}、${apertureText(l)}、${l.mount} 卡口、${cov}。可裝的相機、最近對焦、重量與濾鏡口徑。`;

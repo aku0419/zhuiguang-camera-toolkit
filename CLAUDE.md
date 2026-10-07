@@ -83,7 +83,8 @@
 - 一個品牌一個品牌做，每批至少 20 支，先請負責人確認再合併。順序：Sony → Canon → Nikon → Sigma → Tamron → Viltrox → Panasonic → Fujifilm → ARRI → Cooke → Zeiss → Sirui／Laowa 等。
 - 規格只採原廠資料，標示來源與查證日期；原廠表沒寫的欄位寫 `Unknown`，不用猜。
 - Sony：美國、台灣等官網會擋，目前用 Sony Japan 的官方規格頁（`https://www.sony.jp/ichigan/products/<型號>/spec.html`，日文）整理成繁體中文。已收 37 支（FE／E 卡口 G Master、G、標準系列）。
-- 還沒做：電影鏡頭用的 T 值、Image Circle、前徑（有資料再填）。
+- Canon：用 Canon 台灣官方產品頁（繁體中文，規格在頁面的 `#specifications` 區塊；電影鏡頭頁的規格表在「鏡頭接環」那一段）整理。已收 42 支 RF／RF-S 鏡頭與 7 支 CN-R 電影定焦（T 值、成像範圍）。CN-E 變焦（EF/PL）頁面版型不同，還沒收。
+- 電影鏡頭用 T 值：`aperture_type: "T"`；可填 `front_diameter_mm`、`image_circle_mm`、`size_text`。一支鏡頭可裝的卡口不只一個時（例如 EF／PL 可換），用 `mount_match` 列出要比對的相機卡口文字。
 
 ## 開發指令
 
