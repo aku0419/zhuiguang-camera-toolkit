@@ -20,11 +20,11 @@
    - 還沒建好 Supabase 的話可以先跳過，網站照樣能用，只是「回報問題」會顯示「暫時無法送出」。之後補上再 Redeploy 就好。
 7. 按 **Deploy**，等 1～2 分鐘，出現慶祝畫面。
 
-## 步驟 2：確認 Node 版本
+## 步驟 2：確認 Node 版本（通常不用改）
 
-1. 專案頁 → **Settings** → **General**。
-2. 找到 **Node.js Version**，選 **22.x**（逐光需要 22.12 以上）。
-3. 如果剛剛改了，到 **Deployments** 對最新一筆按 **Redeploy**。
+1. 專案頁 → **Settings** → 左邊 **Build and Deployment**。
+2. 往下找 **Node.js Version**。逐光需要 22.12 以上，**22.x 或 24.x 都可以**（Vercel 預設是 24.x，不用改）。
+3. 如果顯示的版本低於 22，改成 22.x 或 24.x 並按 **Save**，再到 **Deployments** 對最新一筆按 **Redeploy**。
 
 ## 步驟 3：先用 Vercel 給的網址檢查
 
