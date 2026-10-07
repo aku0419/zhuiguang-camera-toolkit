@@ -1,0 +1,33 @@
+{
+  "slug": "cooke-panchro-i-classic-s35-50mm",
+  "brand": "Cooke",
+  "series": "Panchro/i Classic S35",
+  "model": "Panchro/i Classic S35 50mm",
+  "type": "prime",
+  "focal_min": 50.0,
+  "focal_max": 50.0,
+  "max_aperture": 2.2,
+  "aperture_type": "T",
+  "mount": "PL",
+  "mounts": [
+    "PL"
+  ],
+  "mount_match": [
+    "PL"
+  ],
+  "coverage": "Super35",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.38 m",
+  "magnification": "Unknown",
+  "filter_mm": 105,
+  "diameter_mm": 110.0,
+  "length_mm": 118.0,
+  "front_diameter_mm": 110.0,
+  "size_text": "長度（鏡頭前端到接環）118 mm；前端直徑 Φ110 mm",
+  "weight_g": 1500,
+  "weight_note": "原廠標示（Cooke 規格表）",
+  "source_name": "Cooke Optics 官網（Panchro/i Classic S35 規格表）",
+  "source_url": "https://cookeoptics.com/lens/panchro-classic-i-s35/",
+  "last_verified": "2026-10-07"
+}

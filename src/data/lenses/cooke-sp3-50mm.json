@@ -1,0 +1,39 @@
+{
+  "slug": "cooke-sp3-50mm",
+  "brand": "Cooke",
+  "series": "SP3",
+  "model": "SP3 50mm",
+  "type": "prime",
+  "focal_min": 50.0,
+  "focal_max": 50.0,
+  "max_aperture": 2.4,
+  "aperture_type": "T",
+  "mount": "Sony E／Canon RF／L-Mount／Nikon Z",
+  "mounts": [
+    "Sony E",
+    "Canon RF",
+    "L-Mount",
+    "Nikon Z"
+  ],
+  "mount_match": [
+    "Sony E",
+    "Canon RF",
+    "L-Mount",
+    "Nikon Z"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.394 m",
+  "magnification": "Unknown",
+  "filter_mm": 58,
+  "diameter_mm": 64.0,
+  "length_mm": 94.0,
+  "front_diameter_mm": 64.0,
+  "size_text": "長度（鏡頭前端到接環）94 mm；前端直徑 Φ64 mm",
+  "weight_g": 500,
+  "weight_note": "原廠標示（Cooke 規格表）；卡口可更換（E 為出廠安裝，RF／L／Z 等為選配）",
+  "source_name": "Cooke Optics 官網（SP3 規格表）",
+  "source_url": "https://cookeoptics.com/lens/sp3/",
+  "last_verified": "2026-10-07"
+}

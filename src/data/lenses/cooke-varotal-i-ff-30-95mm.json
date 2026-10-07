@@ -1,0 +1,33 @@
+{
+  "slug": "cooke-varotal-i-ff-30-95mm",
+  "brand": "Cooke",
+  "series": "Varotal/i FF",
+  "model": "Varotal/i FF 30-95mm",
+  "type": "zoom",
+  "focal_min": 30.0,
+  "focal_max": 95.0,
+  "max_aperture": 2.9,
+  "aperture_type": "T",
+  "mount": "PL",
+  "mounts": [
+    "PL"
+  ],
+  "mount_match": [
+    "PL"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.5 m",
+  "magnification": "Unknown",
+  "filter_mm": 112,
+  "diameter_mm": 114.0,
+  "length_mm": 255.0,
+  "front_diameter_mm": 114.0,
+  "size_text": "長度（鏡頭前端到接環）255 mm；前端直徑 Φ114 mm",
+  "weight_g": 4000,
+  "weight_note": "原廠標示（Cooke 規格表）",
+  "source_name": "Cooke Optics 官網（Varotal/i FF 規格表）",
+  "source_url": "https://cookeoptics.com/lens/varotal-i-ff/",
+  "last_verified": "2026-10-07"
+}

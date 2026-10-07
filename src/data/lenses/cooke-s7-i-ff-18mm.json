@@ -1,0 +1,36 @@
+{
+  "slug": "cooke-s7-i-ff-18mm",
+  "brand": "Cooke",
+  "series": "S7/i FF",
+  "model": "S7/i FF 18mm",
+  "type": "prime",
+  "focal_min": 18.0,
+  "focal_max": 18.0,
+  "max_aperture": 2.0,
+  "aperture_type": "T",
+  "mount": "PL／LPL",
+  "mounts": [
+    "PL",
+    "LPL"
+  ],
+  "mount_match": [
+    "PL",
+    "LPL"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.158 m",
+  "magnification": "Unknown",
+  "filter_mm": null,
+  "diameter_mm": 110.0,
+  "length_mm": 200.0,
+  "front_diameter_mm": 110.0,
+  "size_text": "長度（鏡頭前端到接環）200 mm；前端直徑 Φ110 mm",
+  "weight_g": 3500,
+  "weight_note": "原廠標示（Cooke 規格表）",
+  "source_name": "Cooke Optics 官網（S7/i FF 規格表）",
+  "source_url": "https://cookeoptics.com/lens/cooke-s7-i-ff/",
+  "last_verified": "2026-10-07",
+  "filter_note": "規格表標示 N/A"
+}

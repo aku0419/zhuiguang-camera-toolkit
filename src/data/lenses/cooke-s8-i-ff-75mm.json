@@ -1,0 +1,36 @@
+{
+  "slug": "cooke-s8-i-ff-75mm",
+  "brand": "Cooke",
+  "series": "S8/i FF",
+  "model": "S8/i FF 75mm",
+  "type": "prime",
+  "focal_min": 75.0,
+  "focal_max": 75.0,
+  "max_aperture": 1.4,
+  "aperture_type": "T",
+  "mount": "PL／LPL",
+  "mounts": [
+    "PL",
+    "LPL"
+  ],
+  "mount_match": [
+    "PL",
+    "LPL"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.585 m",
+  "magnification": "Unknown",
+  "filter_mm": 99,
+  "diameter_mm": 104.0,
+  "length_mm": 157.0,
+  "front_diameter_mm": 104.0,
+  "size_text": "長度（鏡頭前端到接環）157 mm；前端直徑 Φ104 mm",
+  "weight_g": 2400,
+  "weight_note": "原廠標示（Cooke 規格表）",
+  "source_name": "Cooke Optics 官網（S8/i FF 規格表）",
+  "source_url": "https://cookeoptics.com/lens/s8-i-ff/",
+  "last_verified": "2026-10-07",
+  "image_circle_mm": 46.3
+}

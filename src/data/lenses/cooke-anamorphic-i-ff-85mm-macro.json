@@ -1,0 +1,35 @@
+{
+  "slug": "cooke-anamorphic-i-ff-85mm-macro",
+  "brand": "Cooke",
+  "series": "Anamorphic/i FF",
+  "model": "Anamorphic/i FF 85mm Macro",
+  "type": "prime",
+  "focal_min": 85.0,
+  "focal_max": 85.0,
+  "max_aperture": 2.8,
+  "aperture_type": "T",
+  "mount": "PL／LPL",
+  "mounts": [
+    "PL",
+    "LPL"
+  ],
+  "mount_match": [
+    "PL",
+    "LPL"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.181 m",
+  "magnification": "Unknown",
+  "filter_mm": 131,
+  "diameter_mm": 136.0,
+  "length_mm": 272.0,
+  "front_diameter_mm": 136.0,
+  "size_text": "長度（鏡頭前端到接環）272 mm；前端直徑 Φ136 mm",
+  "weight_g": 5200,
+  "weight_note": "原廠標示（Cooke 規格表）",
+  "source_name": "Cooke Optics 官網（Anamorphic/i FF 規格表）",
+  "source_url": "https://cookeoptics.com/lens/anamorphic-i-ff/",
+  "last_verified": "2026-10-07"
+}

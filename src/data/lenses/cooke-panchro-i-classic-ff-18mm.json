@@ -1,0 +1,33 @@
+{
+  "slug": "cooke-panchro-i-classic-ff-18mm",
+  "brand": "Cooke",
+  "series": "Panchro/i Classic FF",
+  "model": "Panchro/i Classic FF 18mm",
+  "type": "prime",
+  "focal_min": 18.0,
+  "focal_max": 18.0,
+  "max_aperture": 2.2,
+  "aperture_type": "T",
+  "mount": "PL",
+  "mounts": [
+    "PL"
+  ],
+  "mount_match": [
+    "PL"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.098 m",
+  "magnification": "Unknown",
+  "filter_mm": 105,
+  "diameter_mm": 125.0,
+  "length_mm": 127.0,
+  "front_diameter_mm": 125.0,
+  "size_text": "長度（鏡頭前端到接環）127 mm；前端直徑 Φ125 mm",
+  "weight_g": 2200,
+  "weight_note": "原廠標示（Cooke 規格表）",
+  "source_name": "Cooke Optics 官網（Panchro/i Classic FF 規格表）",
+  "source_url": "https://cookeoptics.com/lens/cooke-panchro-classic-i-ff/",
+  "last_verified": "2026-10-07"
+}

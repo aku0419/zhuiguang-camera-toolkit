@@ -1,0 +1,33 @@
+{
+  "slug": "cooke-anamorphic-i-s35-50mm",
+  "brand": "Cooke",
+  "series": "Anamorphic/i S35",
+  "model": "Anamorphic/i S35 50mm",
+  "type": "prime",
+  "focal_min": 50.0,
+  "focal_max": 50.0,
+  "max_aperture": 2.3,
+  "aperture_type": "T",
+  "mount": "PL",
+  "mounts": [
+    "PL"
+  ],
+  "mount_match": [
+    "PL"
+  ],
+  "coverage": "Super35",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.55 m",
+  "magnification": "Unknown",
+  "filter_mm": 105,
+  "diameter_mm": 110.0,
+  "length_mm": 195.0,
+  "front_diameter_mm": 110.0,
+  "size_text": "長度（鏡頭前端到接環）195 mm；前端直徑 Φ110 mm",
+  "weight_g": 3600,
+  "weight_note": "原廠標示（Cooke 規格表）",
+  "source_name": "Cooke Optics 官網（Anamorphic/i S35 規格表）",
+  "source_url": "https://cookeoptics.com/lens/anamorphic-i-s35/",
+  "last_verified": "2026-10-07"
+}

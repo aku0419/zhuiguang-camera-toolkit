@@ -1,0 +1,40 @@
+{
+  "slug": "cooke-ap3-35mm",
+  "brand": "Cooke",
+  "series": "AP3",
+  "model": "AP3 35mm",
+  "type": "prime",
+  "focal_min": 35.0,
+  "focal_max": 35.0,
+  "max_aperture": 2.4,
+  "aperture_type": "T",
+  "mount": "Sony E／Canon RF／L-Mount／Nikon Z",
+  "mounts": [
+    "Sony E",
+    "Canon RF",
+    "L-Mount",
+    "Nikon Z"
+  ],
+  "mount_match": [
+    "Sony E",
+    "Canon RF",
+    "L-Mount",
+    "Nikon Z"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.5 m",
+  "magnification": "Unknown",
+  "filter_mm": null,
+  "diameter_mm": 87.0,
+  "length_mm": 153.0,
+  "front_diameter_mm": 87.0,
+  "size_text": "長度（鏡頭前端到接環）153 mm；前端直徑 Φ87 mm",
+  "weight_g": 1300,
+  "weight_note": "原廠標示（Cooke 規格表）；變形鏡頭，壓縮比 1.5x",
+  "source_name": "Cooke Optics 官網（AP3 規格表）",
+  "source_url": "https://cookeoptics.com/lens/ap3/",
+  "last_verified": "2026-10-07",
+  "filter_note": "規格表標示 N/A"
+}
