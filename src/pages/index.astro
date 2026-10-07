@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SearchBox from "../components/SearchBox.astro";
-import { sections, TOOLS } from "../data/site.js";
+import { sections, TOOLS, PROBLEMS } from "../data/site.js";
 import { cameras } from "../lib/cameras.js";
 ---
 <BaseLayout description="免費的中文攝影工具與器材資料庫：快門角度、升降格、等效焦段、錄影容量計算，攝影機規格與錄影格式查詢。給影視科學生、學生劇組與獨立影像工作者。">
@@ -9,7 +9,12 @@ import { cameras } from "../lib/cameras.js";
   <h1>逐光｜攝影工具組</h1>
   <SearchBox />
 
-  <h2>常用工具</h2>
+  <h2>遇到什麼問題？</h2>
+  <ul class="problems">
+    {PROBLEMS.map((p) => <li><a href={p.href}>{p.q}</a></li>)}
+  </ul>
+
+  <h2>全部工具</h2>
   <div class="grid">
     {TOOLS.map((t) => (
       <a class="card" href={t.href}>

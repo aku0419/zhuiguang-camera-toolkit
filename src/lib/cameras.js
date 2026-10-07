@@ -59,7 +59,7 @@ export function formatGroup(f) {
   if (/M43|Four Thirds/i.test(f)) return "M43";
   if (/Super ?35|APS-C/i.test(f)) return "Super35／APS-C";
   if (/^Full Frame/i.test(f)) return "全片幅";
-  return "大片幅（比全片幅大）";
+  return "中片幅／大片幅（比全片幅大）";
 }
 
 function enrich(c, sample) {
@@ -110,6 +110,8 @@ export const camerasForTools = cameras.map((c) => ({
   format: c.sensor.format,
   format_id: formatId(c.sensor.format),
   crop_factor: c.crop_factor,
+  width_mm: isNum(c.sensor.width_mm) ? c.sensor.width_mm : null,
+  height_mm: isNum(c.sensor.height_mm) ? c.sensor.height_mm : null,
   modes: c.recording_modes.map((m) => ({
     label: `${m.resolution} ${isNum(m.max_fps) ? m.max_fps + "p" : ""} ${m.codec} ${m.bit_depth === U ? "" : m.bit_depth + "-bit"} ${m.chroma === U ? "" : m.chroma}`.replace(/\s+/g, " ").trim(),
     fps: m.max_fps,

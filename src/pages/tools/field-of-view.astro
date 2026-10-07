@@ -1,0 +1,67 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+import Chips from "../../components/Chips.astro";
+import CameraPicker from "../../components/CameraPicker.astro";
+import { FORMATS } from "../../lib/calc.js";
+---
+<BaseLayout title="視角計算器" description="輸入鏡頭焦段和相機片幅，算出水平、垂直、對角視角（度）。例如全片幅 50mm 水平視角約 39.6°。" section="tools">
+  <ToolHead title="視角計算器" question="這顆鏡頭裝在這台相機上，拍得到多寬？" />
+  <div class="tool">
+    <CameraPicker />
+    <div class="field" id="fmt-field">
+      <label for="fmt">相機片幅</label>
+      <select id="fmt">
+        {FORMATS.map((f) => <option value={f.id} data-factor={f.factor}>{f.label}</option>)}
+      </select>
+    </div>
+    <div class="field">
+      <label for="focal">鏡頭實際焦段</label>
+      <div class="inrow"><input id="focal" type="number" inputmode="decimal" min="1" step="any" value="35" /><span class="unit">mm</span></div>
+      <Chips label="常用焦段" values={[14, 24, 35, 50, 85, 135]} />
+    </div>
+    <div class="result" aria-live="polite">
+      <p class="lbl">水平視角</p>
+      <p class="big" id="out">—</p>
+      <p class="sub" id="sub"></p>
+    </div>
+    <p class="formula">算法：視角 ＝ 2 × arctan（感光元件邊長 ÷ （2 × 焦段））</p>
+    <ul class="notes">
+      <li>焦段請填鏡頭上標示的<b>實際焦段</b>。視角越大，畫面拍到越寬。</li>
+      <li>沒有選相機時，感光元件尺寸用片幅的通用倍率推算（全片幅 36 × 24 mm，長寬比 3:2），是約略值。選了相機，就用那台的實際尺寸。</li>
+      <li>相機開啟裁切模式時，視角會再變窄。</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  import { fieldOfView, FORMATS, fmt } from "../../lib/calc.js";
+  import { bindChips, num, fromQuery, cameraPicker } from "../../lib/ui.js";
+  const sel = document.getElementById("fmt") as HTMLSelectElement;
+  const focal = document.getElementById("focal") as HTMLInputElement;
+  const out = document.getElementById("out")!, sub = document.getElementById("sub")!;
+  const fmtField = document.getElementById("fmt-field")!;
+  let getCam: () => any = () => null;
+  const update = () => {
+    const cam = getCam();
+    const hasSize = cam && cam.width_mm && cam.height_mm;
+    if (cam && !hasSize && cam.format_id && !sel.dataset.touched) sel.value = cam.format_id;
+    fmtField.hidden = !!hasSize;
+    let w = 36, h = 24, note = "";
+    if (hasSize) { w = cam.width_mm; h = cam.height_mm; note = `<br>依 ${cam.name} 感光元件 ${w} × ${h} mm 計算`; }
+    else {
+      const k = cam && cam.crop_factor ? cam.crop_factor : FORMATS.find((x) => x.id === sel.value)!.factor;
+      w = 36 / k; h = 24 / k;
+      note = `<br>感光元件約 ${fmt(w, 1)} × ${fmt(h, 1)} mm（用通用倍率推算）`;
+    }
+    const r = fieldOfView(num(focal), w, h);
+    if (!r) { out.textContent = "—"; sub.textContent = "請輸入焦段"; return; }
+    out.textContent = `${fmt(r.h, 1)}°`;
+    sub.innerHTML = `垂直 <b>${fmt(r.v, 1)}°</b>・對角 <b>${fmt(r.d, 1)}°</b>${note}`;
+  };
+  getCam = cameraPicker(update);
+  fromQuery({ focal });
+  bindChips(document.querySelector<HTMLElement>(".chips")!, focal, update);
+  sel.addEventListener("change", () => { sel.dataset.touched = "1"; update(); });
+  update();
+</script>

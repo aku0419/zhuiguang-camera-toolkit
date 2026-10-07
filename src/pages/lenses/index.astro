@@ -14,8 +14,8 @@ const ranges = (l: any) => {
   if (l.focal_max >= 85) r.push("t");
   return r.join("|");
 };
-const covGroup = (l: any) => ({ "Full Frame": "全片幅", "APS-C": "APS-C", Super35: "Super35", "Micro Four Thirds": "M43", "Large Format": "大片幅", "Medium Format": "大片幅" } as Record<string, string>)[l.coverage] || "其他";
-const covs = ["全片幅", "APS-C", "Super35", "M43", "大片幅"].filter((c) => lenses.some((l) => covGroup(l) === c));
+const covGroup = (l: any) => ({ "Full Frame": "全片幅", "APS-C": "APS-C", Super35: "Super35", "Micro Four Thirds": "M43", "Large Format": "中／大片幅", "Medium Format": "中／大片幅" } as Record<string, string>)[l.coverage] || "其他";
+const covs = ["全片幅", "APS-C", "Super35", "M43", "中／大片幅"].filter((c) => lenses.some((l) => covGroup(l) === c));
 const searchText = (l: any) => [l.brand, l.series, l.model, l.model_code, focalText(l), apertureText(l), mountsOf(l).join(" "), typeText(l)].filter(Boolean).join(" ");
 const groups = brands.map((b) => ({ brand: b, items: lenses.filter((l) => l.brand === b) }));
 ---

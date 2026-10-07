@@ -174,3 +174,48 @@ export function stopsBetween(a, b) {
   if (ea == null || eb == null) return null;
   return ea - eb; // EV 越低＝進光越多＝越亮
 }
+
+// ---- 視角（FOV）----
+// 感光元件寬高（mm）與焦段 → 水平、垂直、對角視角（度）
+export function fieldOfView(focalMm, widthMm, heightMm) {
+  if (!(focalMm > 0) || !(widthMm > 0) || !(heightMm > 0)) return null;
+  const deg = (d) => (2 * Math.atan(d / (2 * focalMm)) * 180) / Math.PI;
+  return { h: deg(widthMm), v: deg(heightMm), d: deg(Math.hypot(widthMm, heightMm)) };
+}
+
+// ---- 戶外曝光（Sunny 16 經驗法則）----
+// 以 ISO 100、快門 1/100 為基準的光圈值
+export const SUNNY_SCENES = [
+  { id: "snow", label: "雪地或白沙灘（強烈反光）", n: 22 },
+  { id: "sunny", label: "晴天，影子清楚", n: 16 },
+  { id: "slight", label: "薄雲，影子較淡", n: 11 },
+  { id: "overcast", label: "陰天，沒有影子", n: 8 },
+  { id: "heavy", label: "厚雲或大陰天", n: 5.6 },
+  { id: "shade", label: "開放式陰影、日落", n: 4 },
+];
+
+// 換成指定 ISO、快門（秒）後，剛好曝光的光圈值
+export function sunnyAperture(baseN, iso, seconds) {
+  if (!(baseN > 0) || !(iso > 0) || !(seconds > 0)) return null;
+  return baseN * Math.sqrt(seconds * iso);
+}
+
+// 想用光圈 n 時，需要幾級 ND（負值＝光圈還可以再縮小）
+export function ndStopsNeeded(baseN, iso, seconds, n) {
+  const ok = sunnyAperture(baseN, iso, seconds);
+  if (ok == null || !(n > 0)) return null;
+  return 2 * Math.log2(ok / n);
+}
+
+// ---- 拍攝日素材量 ----
+// 回傳一天的素材量、全部備份總量、需要幾張卡
+export function shootStorage({ mbps, hoursPerDay, days, copies, cardGB, usable = 0.9 }) {
+  if (!(mbps > 0) || !(hoursPerDay > 0) || !(days > 0) || !(copies >= 1) || !(cardGB > 0)) return null;
+  const dayGB = capacityGB(mbps, hoursPerDay * 3600);
+  const totalGB = dayGB * days;
+  return {
+    dayGB, totalGB,
+    allCopiesGB: totalGB * copies,
+    cardsPerDay: Math.ceil(dayGB / (cardGB * usable)),
+  };
+}

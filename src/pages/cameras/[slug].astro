@@ -37,6 +37,22 @@ const facts: [string, string][] = [
   ["Log", list(c.log)],
   ["RAW", show(c.raw)],
 ];
+// 「這台能拍什麼」：從錄影模式整理幾句白話重點（只用有數字的模式）
+const px = (m: any) => { const [w, h] = String(m.resolution).split("x").map(Number); return w * h || 0; };
+const fpsOf = (m: any) => (typeof m.max_fps === "number" ? m.max_fps : 0);
+const fpsTxt = (m: any) => `${res(m.resolution)} ${fmt(fpsOf(m), 2).replace(/\.00$/, "")}p`;
+const usable = c.recording_modes.filter((m: any) => px(m) > 0 && fpsOf(m) > 0);
+const noCrop = usable.filter((m: any) => m.crop === "none");
+const best = (arr: any[], key: (m: any) => number) => arr.reduce((a: any, m: any) => (!a || key(m) > key(a) ? m : a), null);
+const topRes = best(usable, (m) => px(m) * 1000 + fpsOf(m));
+const topFps = best(usable, fpsOf);
+const topNoCrop = best(noCrop, (m) => px(m) * 1000 + fpsOf(m));
+const heaviest = best(c.recording_modes.filter((m: any) => typeof m.bitrate_mbps === "number"), (m) => m.bitrate_mbps);
+const can: string[] = [];
+if (topRes) can.push(`最大解析度：${fpsTxt(topRes)}（${cropText(topRes)}）`);
+if (topNoCrop && topNoCrop !== topRes) can.push(`不裁切的最高規格：${fpsTxt(topNoCrop)}`);
+if (topFps && topFps !== topRes) can.push(`最高格率：${fpsTxt(topFps)}（${cropText(topFps)}）`);
+if (heaviest) can.push(`位元率最高的模式約 ${heaviest.bitrate_mbps} Mbps，需要寫入速度${speedText(heaviest).replace(/^約 /, "約 ")}`);
 const specs: [string, string][] = [
   ["品牌", c.brand],
   ["型號", c.model],
@@ -70,6 +86,8 @@ const desc = `${c.name} 規格：${c.sensor.format} 感光元件、${c.lens_moun
     <a class="btn" href={`/tools/recording-capacity/?mode=card&camera=${c.slug}`}>記憶卡可錄多久</a>
     <a class="btn" href={`/tools/focal-length/?camera=${c.slug}`}>算等效焦段</a>
     <a class="btn" href={`/tools/depth-of-field/?camera=${c.slug}`}>算景深</a>
+    <a class="btn" href={`/tools/field-of-view/?camera=${c.slug}`}>算視角</a>
+    <a class="btn" href={`/tools/shoot-storage/?camera=${c.slug}`}>規劃素材量</a>
     <a class="btn" href={`/tools/frame-rate/?camera=${c.slug}`}>算升降格</a>
   </div>
 
@@ -77,6 +95,13 @@ const desc = `${c.name} 規格：${c.sensor.format} 感光元件、${c.lens_moun
   <dl class="facts">
     {facts.map(([k, v]) => <div><dt>{k}</dt><dd class={v === "未知" ? "unknown" : undefined}>{v}</dd></div>)}
   </dl>
+
+  {can.length > 0 && (
+    <>
+      <h2>這台能拍什麼</h2>
+      <ul class="can">{can.map((t) => <li>{t}</li>)}</ul>
+    </>
+  )}
 
   <h2>錄影模式</h2>
   <p class="cam-count">列出常用的錄影模式，不是全部組合。位元率單位 Mbps。</p>

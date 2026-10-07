@@ -5,6 +5,7 @@ import {
   shutterFromAngle, frameRate, equivalentFocal, FORMATS, cropFactorFromSize,
   capacityGB, recordSeconds, toMbps, fmtDuration, fmtSize, neededMBps, sdVideoClass,
   ndInfo, parseShutter, fmtShutter, aspectOf, cropToRatio, depthOfField, stopsBetween,
+  fieldOfView, sunnyAperture, ndStopsNeeded, shootStorage,
 } from "../src/lib/calc.js";
 
 test("24fps + 180° → 1/48 秒，最接近 1/50", () => {
@@ -98,4 +99,24 @@ test("曝光級數：B 比 A 亮 1 級（f/4→f/2.8、1/100→1/50、ISO 400→
   near(stopsBetween({ n: 4, t: 1 / 50, iso: 400 }, { n: 2.8, t: 1 / 50, iso: 400 }), 1);
   near(stopsBetween({ n: 2.8, t: 1 / 100, iso: 400 }, { n: 2.8, t: 1 / 50, iso: 400 }), 1);
   near(stopsBetween({ n: 2.8, t: 1 / 50, iso: 400 }, { n: 2.8, t: 1 / 50, iso: 800 }), 1);
+});
+
+test("視角：全片幅 50mm 水平約 39.6°、對角約 46.8°", () => {
+  const r = fieldOfView(50, 36, 24);
+  assert.ok(Math.abs(r.h - 39.6) < 0.1);
+  assert.ok(Math.abs(r.d - 46.8) < 0.1);
+});
+
+test("Sunny 16：ISO 100、1/100 晴天 f/16；ISO 800、1/48 約 f/65，f/2.8 需要約 9 級 ND", () => {
+  assert.equal(sunnyAperture(16, 100, 1 / 100), 16);
+  assert.ok(Math.abs(sunnyAperture(16, 800, 1 / 48) - 65.3) < 0.2);
+  assert.ok(Math.abs(ndStopsNeeded(16, 800, 1 / 48, 2.8) - 9.1) < 0.1);
+});
+
+test("拍攝日素材量：200Mbps 每天 2 小時 = 180GB；3 天 3 份 = 1620GB；256GB 卡每天 1 張", () => {
+  const r = shootStorage({ mbps: 200, hoursPerDay: 2, days: 3, copies: 3, cardGB: 256 });
+  assert.equal(r.dayGB, 180);
+  assert.equal(r.allCopiesGB, 1620);
+  assert.equal(r.cardsPerDay, 1);
+  assert.equal(shootStorage({ mbps: 200, hoursPerDay: 2, days: 3, copies: 3, cardGB: 128 }).cardsPerDay, 2);
 });

@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+import Chips from "../../components/Chips.astro";
+import CameraPicker from "../../components/CameraPicker.astro";
+---
+<BaseLayout title="拍攝日素材量規劃" description="算出一天拍幾小時、拍幾天，需要幾張記憶卡、幾 TB 硬碟（含備份份數）。給學生劇組規劃器材與備份。" section="tools">
+  <ToolHead title="拍攝日素材量規劃" question="這次拍攝要準備幾張卡、多大的硬碟？" />
+  <div class="tool">
+    <CameraPicker />
+    <div class="field" id="mode-field" hidden>
+      <label for="cmode">錄影模式</label>
+      <select id="cmode"></select>
+    </div>
+    <div class="field">
+      <label for="rate">位元率</label>
+      <div class="inrow"><input id="rate" type="number" inputmode="decimal" min="0" step="any" value="200" /><span class="unit">Mbps</span></div>
+      <Chips label="常見位元率" values={[50, 100, 200, 400, 600, 1200]} />
+    </div>
+    <div class="field">
+      <label for="hours">每天實際錄影</label>
+      <div class="inrow"><input id="hours" type="number" inputmode="decimal" min="0" step="any" value="2" /><span class="unit">小時</span></div>
+      <span class="hint">不是拍攝時間，是「按下錄影」的總時數。一般劇情拍攝很多時間在布光和走位。</span>
+    </div>
+    <div class="field">
+      <label for="days">拍攝天數</label>
+      <div class="inrow"><input id="days" type="number" inputmode="numeric" min="1" step="1" value="3" /><span class="unit">天</span></div>
+    </div>
+    <div class="field">
+      <label for="copies">備份份數（含原卡以外的備份）</label>
+      <div class="inrow"><input id="copies" type="number" inputmode="numeric" min="1" step="1" value="2" /><span class="unit">份</span></div>
+      <Chips label="備份份數" values={[1, 2, 3]} />
+      <span class="hint">常見做法是至少 2 份備份，分放在不同硬碟，卡在備份確認完成前不要格式化。</span>
+    </div>
+    <div class="field">
+      <label for="card">記憶卡容量</label>
+      <div class="inrow"><input id="card" type="number" inputmode="decimal" min="1" step="any" value="256" /><span class="unit">GB</span></div>
+      <Chips label="記憶卡容量" values={[128, 256, 512, 1000, 2000]} />
+    </div>
+    <div class="result" aria-live="polite">
+      <p class="lbl">每天素材量</p>
+      <p class="big" id="out">—</p>
+      <p class="sub" id="sub"></p>
+    </div>
+    <p class="formula">算法：每天素材量 ＝ 位元率 × 秒數 ÷ 8 ÷ 1000（GB）；備份總量 ＝ 全部素材量 × 備份份數；每天卡數 ＝ 每天素材量 ÷（卡容量 × 0.9）無條件進位</p>
+    <ul class="notes">
+      <li>卡容量預留 10%（格式化後可用容量比標示少），實際可錄時間以相機顯示為準。</li>
+      <li>硬碟建議再多留約 20% 餘裕，並多帶一顆備用。</li>
+      <li>RAW 等可變位元率的格式，實際大小會隨畫面變動；另外還有聲音、代理檔等，也要預留空間。</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  import { shootStorage, fmtSize, fmt } from "../../lib/calc.js";
+  import { bindChips, num, fromQuery, cameraPicker } from "../../lib/ui.js";
+  const $ = (id: string) => document.getElementById(id) as HTMLInputElement;
+  const rate = $("rate"), hours = $("hours"), days = $("days"), copies = $("copies"), card = $("card");
+  const out = document.getElementById("out")!, sub = document.getElementById("sub")!;
+  const update = () => {
+    const r = shootStorage({ mbps: num(rate), hoursPerDay: num(hours), days: num(days), copies: num(copies), cardGB: num(card) });
+    if (!r) { out.textContent = "—"; sub.textContent = "請把每一欄都填好"; return; }
+    out.textContent = `約 ${fmtSize(r.dayGB)}`;
+    const cards = r.cardsPerDay;
+    sub.innerHTML = `全部拍攝約 <b>${fmtSize(r.totalGB)}</b>；備份 ${num(copies)} 份共 <b>${fmtSize(r.allCopiesGB)}</b>`
+      + `<br>每天約需 <b>${cards} 張</b> ${fmt(num(card), 0)}GB 的記憶卡（不中途倒卡）`
+      + `<br>硬碟建議每份至少 <b>${fmtSize(r.totalGB * 1.2)}</b>（含 20% 餘裕）`;
+  };
+  fromQuery({ rate, hours, days, copies, card });
+  const g = document.querySelectorAll<HTMLElement>(".chips");
+  bindChips(g[0], rate, update); bindChips(g[1], copies, update); bindChips(g[2], card, update);
+  for (const el of [hours, days]) el.addEventListener("input", update);
+  const modeField = document.getElementById("mode-field")!;
+  const cmode = document.getElementById("cmode") as HTMLSelectElement;
+  let cam: any = null;
+  const applyMode = () => {
+    const m = cam?.modes[Number(cmode.value)];
+    if (!m || typeof m.mbps !== "number") return;
+    rate.value = String(m.mbps); rate.dispatchEvent(new Event("input"));
+  };
+  const onCamera = (c: any) => {
+    cam = c; modeField.hidden = !c;
+    if (!c) return;
+    cmode.innerHTML = "";
+    c.modes.forEach((m: any, i: number) => {
+      const o = document.createElement("option"); o.value = String(i);
+      const known = typeof m.mbps === "number";
+      o.textContent = (known ? `${m.label}・${m.mbps} Mbps` : `${m.label}・位元率未知`) + (m.sq ? "（慢動作）" : "");
+      o.disabled = !known; cmode.append(o);
+    });
+    let first = c.modes.findIndex((m: any) => typeof m.mbps === "number" && !m.sq && (typeof m.fps !== "number" || m.fps <= 60));
+    if (first < 0) first = c.modes.findIndex((m: any) => typeof m.mbps === "number");
+    if (first >= 0) cmode.value = String(first);
+    applyMode();
+  };
+  cmode.addEventListener("change", applyMode);
+  const getCam = cameraPicker(onCamera);
+  if (getCam()) onCamera(getCam());
+  update();
+</script>

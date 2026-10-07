@@ -15,6 +15,18 @@ export const SECTIONS = [
 export const sections = (camerasReady) =>
   SECTIONS.map((s) => (s.id === "cameras" ? { ...s, ready: camerasReady } : s));
 
+// 首頁「遇到什麼問題」：用白話問題帶到對的工具
+export const PROBLEMS = [
+  { q: "畫面太暗／太亮，要怎麼調？", href: "/tools/exposure-stops/" },
+  { q: "快門要設多少才有電影感？", href: "/tools/shutter-angle/" },
+  { q: "想拍慢動作，要設幾 fps？", href: "/tools/frame-rate/" },
+  { q: "白天戶外，要加幾級 ND？", href: "/tools/exposure-guide/" },
+  { q: "這顆鏡頭裝在我的相機上拍多寬？", href: "/tools/field-of-view/" },
+  { q: "背景想要模糊，光圈要開多大？", href: "/tools/depth-of-field/" },
+  { q: "記憶卡要買多大、多快？", href: "/tools/recording-capacity/?mode=card" },
+  { q: "這次拍攝要準備幾張卡、多大硬碟？", href: "/tools/shoot-storage/" },
+];
+
 export const TOOLS = [
   {
     id: "shutter-angle", href: "/tools/shutter-angle/", name: "快門角度",
@@ -47,6 +59,18 @@ export const TOOLS = [
   {
     id: "exposure-stops", href: "/tools/exposure-stops/", name: "曝光級數",
     q: "f/4 改 f/2.8 差幾級？", keywords: ["stop", "EV", "曝光", "光圈", "快門", "ISO", "級數"],
+  },
+  {
+    id: "field-of-view", href: "/tools/field-of-view/", name: "視角",
+    q: "35mm 裝在這台相機上拍多寬？", keywords: ["FOV", "視角", "view angle", "水平視角", "廣角", "畫角"],
+  },
+  {
+    id: "exposure-guide", href: "/tools/exposure-guide/", name: "戶外曝光速查",
+    q: "大太陽下要幾級 ND？", keywords: ["sunny 16", "戶外", "曝光", "ND", "光圈", "天氣", "太陽"],
+  },
+  {
+    id: "shoot-storage", href: "/tools/shoot-storage/", name: "拍攝日素材量規劃",
+    q: "拍三天要準備幾張卡、幾 TB 硬碟？", keywords: ["備份", "硬碟", "素材", "DIT", "記憶卡", "數量", "規劃"],
   },
   {
     id: "card-time", href: "/tools/recording-capacity/?mode=card", name: "記憶卡可錄時間",

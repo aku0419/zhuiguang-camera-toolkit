@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+import Chips from "../../components/Chips.astro";
+import { SUNNY_SCENES } from "../../lib/calc.js";
+---
+<BaseLayout title="戶外曝光速查" description="用 Sunny 16 經驗法則，依天氣、ISO、快門算出戶外大約要用什麼光圈，以及想開大光圈時需要幾級 ND。" section="tools">
+  <ToolHead title="戶外曝光速查" question="戶外拍攝，光圈大約要多少？要加幾級 ND？" />
+  <div class="tool">
+    <div class="field">
+      <label for="scene">天氣與光線</label>
+      <select id="scene">
+        {SUNNY_SCENES.map((s) => <option value={s.n} selected={s.id === "sunny"}>{s.label}</option>)}
+      </select>
+    </div>
+    <div class="field">
+      <label for="iso">ISO</label>
+      <input id="iso" type="number" inputmode="numeric" min="1" step="any" value="800" />
+      <Chips label="常用 ISO" values={[100, 200, 400, 800, 1600, 3200]} />
+    </div>
+    <div class="field">
+      <label for="shutter">快門</label>
+      <input id="shutter" type="text" value="1/48" placeholder="例如 1/48" />
+      <span class="hint">可輸入 1/48 或 0.5（秒）。24fps 的 180° 快門是 1/48。</span>
+    </div>
+    <div class="field">
+      <label for="want">想用的光圈（選填）</label>
+      <div class="inrow"><span class="unit">f/</span><input id="want" type="number" inputmode="decimal" min="0.5" step="any" value="2.8" /></div>
+      <Chips label="常用光圈" values={[1.4, 2, 2.8, 4, 5.6, 8]} />
+    </div>
+    <div class="result" aria-live="polite">
+      <p class="lbl">剛好曝光的光圈</p>
+      <p class="big" id="out">—</p>
+      <p class="sub" id="sub"></p>
+    </div>
+    <p class="formula">算法（Sunny 16）：ISO 100、快門 1/100 時晴天是 f/16，其他天氣每差一級光圈調一級；換成別的 ISO 或快門，光圈 ＝ 基準光圈 × √（快門秒數 × ISO）</p>
+    <ul class="notes">
+      <li>這是經驗法則的估算，不是測光表。實際請看相機的曝光監看（波形、假色），再微調。</li>
+      <li>光圈會超過 f/22 很多是正常的：戶外白天要用 24fps 的 1/48 快門，又想開大光圈，就需要 ND 濾鏡。</li>
+      <li>配合 <a href="/tools/nd-filter/">ND 減光計算器</a> 看補償後的快門。</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  import { sunnyAperture, ndStopsNeeded, parseShutter, SUNNY_SCENES, fmt } from "../../lib/calc.js";
+  import { bindChips, num } from "../../lib/ui.js";
+  const scene = document.getElementById("scene") as HTMLSelectElement;
+  const iso = document.getElementById("iso") as HTMLInputElement;
+  const shutter = document.getElementById("shutter") as HTMLInputElement;
+  const want = document.getElementById("want") as HTMLInputElement;
+  const out = document.getElementById("out")!, sub = document.getElementById("sub")!;
+  const update = () => {
+    const t = parseShutter(shutter.value);
+    const base = Number(scene.value);
+    const n = t ? sunnyAperture(base, num(iso), t) : null;
+    if (n == null) { out.textContent = "—"; sub.textContent = "請輸入 ISO 和快門（例如 1/48）"; return; }
+    out.textContent = `約 f/${fmt(n, n < 10 ? 1 : 0)}`;
+    let s = "";
+    const nd = num(want) > 0 ? ndStopsNeeded(base, num(iso), t, num(want)) : null;
+    if (nd != null) {
+      s = nd > 0.3
+        ? `想用 f/${num(want)}，要加約 <b>${fmt(nd, 1)} 級 ND</b>（約 ND${fmt(2 ** Math.round(nd), 0)}）`
+        : nd < -0.3 ? `想用 f/${num(want)}，會曝光不足，光圈要開大或提高 ISO`
+        : `想用 f/${num(want)}，不用加 ND`;
+    }
+    const rows = SUNNY_SCENES.map((x) => `${x.label.split("（")[0]} f/${fmt(sunnyAperture(x.n, num(iso), t)!, 1)}`).join("・");
+    sub.innerHTML = `${s}<br><small>各種天氣：${rows}</small>`;
+  };
+  scene.addEventListener("change", update);
+  shutter.addEventListener("input", update);
+  const g = document.querySelectorAll<HTMLElement>(".chips");
+  bindChips(g[0], iso, update); bindChips(g[1], want, update);
+  update();
+</script>
