@@ -1,0 +1,46 @@
+{
+  "slug": "red-media",
+  "name": "RED PRO CFexpress（RED 專用媒體）",
+  "group": "廠商專用媒體",
+  "summary": "RED 與 Angelbird 合作，為 V-RAPTOR 與 KOMODO-X 做的 CFexpress v4 Type B 記憶卡，是 RED 認證、核准用於這些機種的官方媒體。",
+  "rows": [
+    [
+      "容量",
+      "1 TB、2 TB"
+    ],
+    [
+      "規格",
+      "CFexpress v4 Type B"
+    ],
+    [
+      "尺寸",
+      "約 29.6 × 38.5 × 3.8 mm（寬 × 長 × 厚）"
+    ],
+    [
+      "最大資料速率（RED 標示）",
+      "V-RAPTOR 8K 最高 800 MB/s；KOMODO-X 6K 最高 560 MB/s"
+    ],
+    [
+      "相容機種（RED 標示）",
+      "KOMODO-X、V-RAPTOR、V-RAPTOR XL（DSMC、DSMC2、RANGER、KOMODO 不相容）"
+    ],
+    [
+      "韌體需求",
+      "RED PRO CFexpress v4 Type B 需要韌體 2.0.4 beta 或更新版本"
+    ],
+    [
+      "保固",
+      "Angelbird 提供 3 年有限保固"
+    ]
+  ],
+  "tips": [
+    "RED 建議盡量使用 RED PRO CFexpress v4 Type B；若要用其他品牌，請參考 RED 的核准配件清單（RED APPROVED）。",
+    "KOMODO 使用的是 CFast 2.0 卡（RED 另有 RED PRO CFast），規格請以 RED 說明書為準。"
+  ],
+  "camera_match": [
+    "RED"
+  ],
+  "last_verified": "2026-10-07",
+  "source_name": "RED Digital Cinema：RED PRO CFexpress",
+  "source_url": "https://www.reddigitalcinema.com/red-pro-cfexpress"
+}

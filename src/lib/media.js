@@ -30,4 +30,4 @@ export const media = Object.entries(files)
   .sort((a, b) => GROUPS.indexOf(a.group) - GROUPS.indexOf(b.group) || 0);
 
 // 還在整理的格式（資料查證完才開頁）
-export const mediaSoon = ["RED Media"];
+export const mediaSoon = [];
