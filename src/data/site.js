@@ -18,7 +18,7 @@ export const sections = (camerasReady) =>
 // 首頁「遇到什麼問題」：用白話問題帶到對的工具
 export const PROBLEMS = [
   { q: "畫面太暗／太亮，要怎麼調？", href: "/tools/exposure-stops/" },
-  { q: "快門要設多少才有電影感？", href: "/tools/shutter-angle/" },
+  { q: "為什麼電影都拍 24 格？常見格率有哪些？", href: "/glossary/#why-24" },
   { q: "想拍慢動作，要設幾 fps？", href: "/tools/frame-rate/" },
   { q: "白天戶外，要加幾級 ND？", href: "/tools/exposure-guide/" },
   { q: "這顆鏡頭裝在我的相機上拍多寬？", href: "/tools/field-of-view/" },
