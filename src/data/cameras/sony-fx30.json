@@ -55,6 +55,28 @@
       "notes": "韌體 Ver.2.00 以後。裁切倍率是相對於拍照時的視角"
     },
     {
+      "resolution": "4096x2160",
+      "max_fps": 23.98,
+      "codec": "XAVC S-I DCI 4K",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.04,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XAVC S-I DCI 4K",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.04,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    },
+    {
       "resolution": "3840x2160",
       "max_fps": 59.94,
       "codec": "XAVC S-I 4K",
@@ -70,6 +92,17 @@
       "max_fps": 23.98,
       "codec": "XAVC S-I 4K",
       "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.04,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 300,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "crop",
@@ -132,6 +165,28 @@
       "notes": "裁切倍率是相對於拍照時的視角"
     },
     {
+      "resolution": "3840x2160",
+      "max_fps": 23.98,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.04,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 140,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.04,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    },
+    {
       "resolution": "1920x1080",
       "max_fps": 239.76,
       "codec": "XAVC S-I HD",
@@ -155,7 +210,51 @@
     },
     {
       "resolution": "1920x1080",
+      "max_fps": 23.98,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 89,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.04,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 111,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.04,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "1920x1080",
       "max_fps": 59.94,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.04,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 23.98,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.04,
+      "notes": "裁切倍率是相對於拍照時的視角"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
       "codec": "XAVC S HD",
       "bitrate_mbps": 50,
       "bit_depth": 10,
@@ -167,7 +266,7 @@
   ],
   "source_name": "Sony ILME-FX30 Help Guide（PDF）",
   "source_url": "https://helpguide.sony.net/ilc/2220/v1/en/print.pdf",
-  "last_verified": "2026-10-06",
+  "last_verified": "2026-10-07",
   "editor_notes": "有效像素：拍照約 2600 萬、錄影約 2010 萬，這裡填錄影值。手冊的視角說明：一般錄影約 1.04 倍、HDMI RAW 輸出約 1.3 倍、240fps 慢動作約 1.5 倍、4K 120p 約 1.6 倍（相對於拍照視角）。 新聞稿：14 stops of latitude、dual base ISO 800/2500。",
   "extra_sources": [
     {

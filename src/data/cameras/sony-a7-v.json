@@ -64,6 +64,15 @@
     },
     {
       "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
       "max_fps": 120,
       "codec": "XAVC HS 4K",
       "bitrate_mbps": 280,
@@ -85,6 +94,15 @@
     },
     {
       "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
       "max_fps": 120,
       "codec": "XAVC S 4K",
       "bitrate_mbps": 280,
@@ -103,6 +121,24 @@
       "chroma": "4:2:2",
       "crop": "none",
       "notes": "「4K 視角優先」設為 Off（預設）時視角會略窄"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 140,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
     },
     {
       "resolution": "1920x1080",
@@ -126,17 +162,53 @@
     },
     {
       "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 89,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 111,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
       "max_fps": 120,
       "codec": "XAVC S HD",
       "bitrate_mbps": 100,
       "bit_depth": 8,
       "chroma": "4:2:0",
       "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
     }
   ],
   "source_name": "Sony ILCE-7M5 Help Guide（PDF）",
   "source_url": "https://helpguide.sony.net/ilc/2540/v1/en/print.pdf",
-  "last_verified": "2026-10-06",
+  "last_verified": "2026-10-07",
   "editor_notes": "有效像素：拍照約 3300 萬、錄影約 2760 萬，這裡填錄影值。「4K 視角優先」關閉時 4K 60p 視角變窄，但手冊沒寫倍率。發表日期 2025-12 來自新聞（CineD／Newsshooter），待原廠新聞稿確認。 16 stops 出現在新聞稿的拍照性能段落，錄影的動態範圍原廠沒有另外寫。",
   "extra_sources": [
     {

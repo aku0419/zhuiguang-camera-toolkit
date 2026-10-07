@@ -63,6 +63,15 @@
     },
     {
       "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
       "max_fps": 120,
       "codec": "XAVC HS 4K",
       "bitrate_mbps": 280,
@@ -109,6 +118,24 @@
       "crop": "none"
     },
     {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 140,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
       "resolution": "1920x1080",
       "max_fps": 240,
       "codec": "XAVC S-I HD",
@@ -129,7 +156,43 @@
     },
     {
       "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 89,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 111,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
       "max_fps": 60,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
       "codec": "XAVC S HD",
       "bitrate_mbps": 50,
       "bit_depth": 10,
@@ -139,7 +202,7 @@
   ],
   "source_name": "Sony ILCE-7SM3 Help Guide（PDF）",
   "source_url": "https://helpguide.sony.net/ilc/2010/v1/en/print.pdf",
-  "last_verified": "2026-10-06",
+  "last_verified": "2026-10-07",
   "editor_notes": "手冊格率寫 60p／120p／24p（NTSC）。手冊沒有 Base ISO 設定項目，原廠產品頁的雙原生 ISO 說明目前連不到，先標 Unknown。 新聞稿寫「15+ stop dynamic range for movies」。新聞稿的「base ISO lowered to 80」指的是最低 ISO，不是雙原生 ISO，所以 Base ISO 仍標 Unknown。",
   "extra_sources": [
     {

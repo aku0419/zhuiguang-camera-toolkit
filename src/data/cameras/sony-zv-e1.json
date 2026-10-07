@@ -68,9 +68,27 @@
     },
     {
       "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
       "max_fps": 60,
       "codec": "XAVC HS 4K",
       "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 100,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none"
@@ -89,6 +107,15 @@
       "max_fps": 30,
       "codec": "XAVC S 4K",
       "bitrate_mbps": 140,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 100,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none"
@@ -123,7 +150,43 @@
     },
     {
       "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 89,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 111,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
       "max_fps": 60,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
       "codec": "XAVC S HD",
       "bitrate_mbps": 50,
       "bit_depth": 10,
@@ -133,7 +196,7 @@
   ],
   "source_name": "Sony ZV-E1 Help Guide（PDF）",
   "source_url": "https://helpguide.sony.net/ilc/2310/v1/en/print.pdf",
-  "last_verified": "2026-10-06",
+  "last_verified": "2026-10-07",
   "editor_notes": "4K 120p／FHD 240fps 需要安裝 Sony 的 4K 120p 升級授權（見 extra_sources），XAVC S-I 不能用 120p。",
   "extra_sources": [
     {

@@ -103,6 +103,15 @@
       "crop": "none"
     },
     {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
       "resolution": "1920x1080",
       "max_fps": 120,
       "codec": "XAVC S HD",
@@ -122,7 +131,43 @@
     },
     {
       "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 89,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 111,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
       "max_fps": 60,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
       "codec": "XAVC S HD",
       "bitrate_mbps": 50,
       "bit_depth": 10,
@@ -132,7 +177,7 @@
   ],
   "source_name": "Sony ILCE-7M4 Help Guide（PDF）",
   "source_url": "https://helpguide.sony.net/ilc/2110/v1/en/print.pdf",
-  "last_verified": "2026-10-06",
+  "last_verified": "2026-10-07",
   "editor_notes": "手冊：4K 60p/50p 時 APS-C/Super35mm 拍攝固定為開啟。4K 最高 60p，120p 只有 HD。手冊沒有 Base ISO 設定項目，先標 Unknown。 新聞稿寫「15-stop dynamic range」。",
   "extra_sources": [
     {
