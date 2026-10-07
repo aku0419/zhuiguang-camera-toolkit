@@ -20,6 +20,13 @@
 5. **不要 Over-engineering**：有「完整但複雜」和「簡單但夠用」兩種方案時，選簡單夠用的。
 6. 成功標準：學生第一次進網站，不用教學，30 秒內解決一個攝影問題。
 
+## 用語規定（台灣用語）
+
+- 全站只用台灣用語，介面字照初光的對照表（`/home/user/film-production-tool/docs/glossary.md`）：新增、檢視、資料、設定、連結、產生、聯絡、剪接、調光、器材；不用添加、查看、數據、設置、鏈接、生成、聯繫、剪輯、調色、設備。
+- 器材用語：**接環**（不用卡口，glossary 有註明「也有人叫卡口」）、**防手震**（不用防震）、**超音波馬達**（不用超聲波）、**檢查碼**（不用校驗碼）、前端（不用先端）。
+- 日文、英文原文翻成繁體中文時，要先改成台灣常用說法；沒把握的詞，問負責人。
+- 地名一律用「台」，不用「臺」。
+
 ## 跟「First Light 初光」的關係
 
 - 初光（程式庫 `aku0419/film-production-tool`，網址 firstlight.riseatsun.com）是另一個正在使用的工具。
@@ -91,22 +98,22 @@
 
 ## 鏡頭資料庫（進行中）
 
-- 資料放 `src/data/lenses/<slug>.json`，檢查在 `src/lib/lenses.js`；列表 `/lenses/`（可依品牌、卡口、定焦／變焦篩選），每支一頁 `/lenses/<slug>/`，自動列出「卡口相同」的相機。
-- 列表頁功能：搜尋框（空白分隔、全部符合）、品牌／卡口／定焦變焦／焦段（廣角≤28、標準、望遠≥85）／光圈／片幅篩選，依品牌分區顯示，可用網址參數預設（例如 `/lenses/?brand=Sony`）。鏡頭頁有「算等效焦段」按鈕（帶 `?focal=`）與「看更多該品牌鏡頭」。
+- 資料放 `src/data/lenses/<slug>.json`，檢查在 `src/lib/lenses.js`；列表 `/lenses/`（可依品牌、接環、定焦／變焦篩選），每支一頁 `/lenses/<slug>/`，自動列出「接環相同」的相機。
+- 列表頁功能：搜尋框（空白分隔、全部符合）、品牌／接環／定焦變焦／焦段（廣角≤28、標準、望遠≥85）／光圈／片幅篩選，依品牌分區顯示，可用網址參數預設（例如 `/lenses/?brand=Sony`）。鏡頭頁有「算等效焦段」按鈕（帶 `?focal=`）與「看更多該品牌鏡頭」。
 - 一個品牌一個品牌做，每批至少 20 支，先請負責人確認再合併。順序：Sony → Canon → Nikon → Sigma → Tamron → Viltrox → Panasonic → Fujifilm → ARRI → Cooke → Zeiss → Sirui／Laowa 等。
 - 規格只採原廠資料，標示來源與查證日期；原廠表沒寫的欄位寫 `Unknown`，不用猜。
-- Sony：美國、台灣等官網會擋，目前用 Sony Japan 的官方規格頁（`https://www.sony.jp/ichigan/products/<型號>/spec.html`，日文）整理成繁體中文。已收 37 支（FE／E 卡口 G Master、G、標準系列）。
+- Sony：美國、台灣等官網會擋，目前用 Sony Japan 的官方規格頁（`https://www.sony.jp/ichigan/products/<型號>/spec.html`，日文）整理成繁體中文。已收 37 支（FE／E 接環 G Master、G、標準系列）。
 - Canon：用 Canon 台灣官方產品頁（繁體中文，規格在頁面的 `#specifications` 區塊；電影鏡頭頁的規格表在「鏡頭接環」那一段）整理。已收 42 支 RF／RF-S 鏡頭與 7 支 CN-R 電影定焦（T 值、成像範圍）。CN-E 變焦（EF/PL）頁面版型不同，還沒收。
 - Nikon：用 Nikon 全球官網（`imaging.nikon.com/imaging/lineup/lens/z-mount/<鏡頭>/`，英文）的 Specifications 區塊整理成繁體中文。已收 41 支 NIKKOR Z（S-Line、非 S、DX、微距），超望遠（400／600／800 等）先不收。對焦（AF）欄位各家規格表多半沒寫，目前 Sony、Nikon 一律 `Unknown` 不顯示。
-- Sigma：用 Sigma 全球官網（`www.sigma-global.com/en/lenses/<型號>/`、`/en/cine-lenses/...`，英文）整理。已收 39 支（Art、Contemporary、Sports 部分；DG／DN／DC）與 15 支 Cine（FF High Speed Prime、AF Cine、High Speed Zoom）。一支鏡頭有多個卡口版本時只做一頁，用 `mounts`（篩選用）與 `mount_match`（比對相機）列出，各卡口不同的重量、尺寸寫在 `weight_note`、`size_text`。長焦大砲（150-600、500mm 等）、魚眼、Aizu、Classic Prime 先不收。
-- Tamron：用 Tamron 全球官網的規格頁（`www.tamron.com/global/consumer/lenses/<型號代碼>/spec.html`，英文，欄位以 Tab 分隔）整理。已收 24 支現行無反光鏡鏡頭（Sony E／Nikon Z／Fujifilm X／Canon RF）；已停產（End of sale）與單反（EF／F／A 卡口）、M43 的不收。Di III-A、Di II 當作 APS-C 專用。
+- Sigma：用 Sigma 全球官網（`www.sigma-global.com/en/lenses/<型號>/`、`/en/cine-lenses/...`，英文）整理。已收 39 支（Art、Contemporary、Sports 部分；DG／DN／DC）與 15 支 Cine（FF High Speed Prime、AF Cine、High Speed Zoom）。一支鏡頭有多個接環版本時只做一頁，用 `mounts`（篩選用）與 `mount_match`（比對相機）列出，各接環不同的重量、尺寸寫在 `weight_note`、`size_text`。長焦大砲（150-600、500mm 等）、魚眼、Aizu、Classic Prime 先不收。
+- Tamron：用 Tamron 全球官網的規格頁（`www.tamron.com/global/consumer/lenses/<型號代碼>/spec.html`，英文，欄位以 Tab 分隔）整理。已收 24 支現行無反光鏡鏡頭（Sony E／Nikon Z／Fujifilm X／Canon RF）；已停產（End of sale）與單反（EF／F／A 接環）、M43 的不收。Di III-A、Di II 當作 APS-C 專用。
 - Viltrox：用 Viltrox 官方網站商品頁的 Specs 區塊整理（英文）。已收 21 支（Air、EVO、Pro、LAB 定焦；Sony E／Nikon Z／Fujifilm X／L-Mount）。舊款頁面格式不同、找不到規格的先跳過（負責人決定：這不是台灣主流品牌，找不到就不補）。
 - Panasonic：用 Panasonic 日本官網的規格頁（`panasonic.jp/dc/p-db/<型號>_spec.html`，日文表格）整理。鏡頭清單是 JavaScript 動態載入、我讀不到，所以用型號試探網址（S-R／S-E／S-S／S-X、H-ES／H-X／H-HS 等），頁面存在才收。已收 41 支（LUMIX S 的 L-Mount 15 支、LUMIX G／LEICA DG 的 M43 26 支）。M43 鏡頭的 `coverage` 是 `Micro Four Thirds`。
-- Fujifilm：用 Fujifilm X 官網（`www.fujifilm-x.com/en-us/products/lenses/<鏡頭>/specifications/`，英文）整理。已收 52 支（XF／XC 的 Fujifilm X 卡口、GF 的 Fujifilm G 卡口含 PZ 電影變焦 T 值）。官網有幾頁會顯示成別支鏡頭的規格（例如 XC13-33、XF16mmF2.8），收錄前一定要檢查頁面的 `Type` 欄位跟鏡頭名稱一致，不一致就跳過。500mm、T/S、增距鏡、Fujinon Premista／MK 電影鏡頭還沒收。
-- ARRI：用 ARRI 官網 Signature Prime／Signature Zoom 頁面的鏡頭卡片（T 值、長度、前端直徑、重量、最近對焦距離）整理，卡口 LPL、成像範圍 46 mm（`coverage: "Large Format"`）來自總覽頁。已收 20 支（Signature Prime 16 支、Signature Zoom 4 支）。Master Prime、Ultra Prime、Ultra Wide Zoom、Ensō 的規格表在官網被截斷或抓不到，先不收（不猜）。
-- Cooke：用 Cooke Optics 官網各系列頁面最下方的規格表（橫向表格：第一列是焦段，往下每一列是一個項目，每個值對應一支鏡頭）整理，卡口、涵蓋片幅來自頁面上方的 Focal length range／Format／Mount 摘要。已收 89 支（S8/i FF、S7/i FF、Panchro/i Classic FF／S35、Panchro 65/i、Macro/i FF、Anamorphic/i FF／S35、Varotal/i FF 變焦、SP3、AP3）。規格表某一列的數量跟焦段數量對不上時，該項寫 Unknown 不硬配；5/i 頁面沒有規格表先不收。
+- Fujifilm：用 Fujifilm X 官網（`www.fujifilm-x.com/en-us/products/lenses/<鏡頭>/specifications/`，英文）整理。已收 52 支（XF／XC 的 Fujifilm X 接環、GF 的 Fujifilm G 接環含 PZ 電影變焦 T 值）。官網有幾頁會顯示成別支鏡頭的規格（例如 XC13-33、XF16mmF2.8），收錄前一定要檢查頁面的 `Type` 欄位跟鏡頭名稱一致，不一致就跳過。500mm、T/S、增距鏡、Fujinon Premista／MK 電影鏡頭還沒收。
+- ARRI：用 ARRI 官網 Signature Prime／Signature Zoom 頁面的鏡頭卡片（T 值、長度、前端直徑、重量、最近對焦距離）整理，接環 LPL、成像範圍 46 mm（`coverage: "Large Format"`）來自總覽頁。已收 20 支（Signature Prime 16 支、Signature Zoom 4 支）。Master Prime、Ultra Prime、Ultra Wide Zoom、Ensō 的規格表在官網被截斷或抓不到，先不收（不猜）。
+- Cooke：用 Cooke Optics 官網各系列頁面最下方的規格表（橫向表格：第一列是焦段，往下每一列是一個項目，每個值對應一支鏡頭）整理，接環、涵蓋片幅來自頁面上方的 Focal length range／Format／Mount 摘要。已收 89 支（S8/i FF、S7/i FF、Panchro/i Classic FF／S35、Panchro 65/i、Macro/i FF、Anamorphic/i FF／S35、Varotal/i FF 變焦、SP3、AP3）。規格表某一列的數量跟焦段數量對不上時，該項寫 Unknown 不硬配；5/i 頁面沒有規格表先不收。
 - Zeiss：用 ZEISS Cinematography 官網（`www.zeiss.com/photonics-and-optics/en/cinematography/lenses/<系列>.html`）頁面最下方的 Technical Data 整理（英文）。已收 48 支：CP.3、Supreme Prime、Supreme Prime Radiance、Nano Prime、Cinema Zoom、Supreme Zoom Radiance、Lightweight Zoom LWZ.3。Horizon Anamorphic、Aatma、Panoptes 65 的表格格式不同先不收。Zeiss 的攝影鏡頭（Otus、Batis、Loxia 等）還沒收。
-- 電影鏡頭用 T 值：`aperture_type: "T"`；可填 `front_diameter_mm`、`image_circle_mm`、`size_text`。一支鏡頭可裝的卡口不只一個時（例如 EF／PL 可換），用 `mount_match` 列出要比對的相機卡口文字。
+- 電影鏡頭用 T 值：`aperture_type: "T"`；可填 `front_diameter_mm`、`image_circle_mm`、`size_text`。一支鏡頭可裝的接環不只一個時（例如 EF／PL 可換），用 `mount_match` 列出要比對的相機接環文字。
 
 ## 開發指令
 

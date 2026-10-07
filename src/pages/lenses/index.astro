@@ -22,10 +22,10 @@ const groups = brands.map((b) => ({ brand: b, items: lenses.filter((l) => l.bran
 {lenses.length === 0 ? (
   <ComingSoon id="lenses" intro="這是什麼鏡頭？能不能裝？能不能涵蓋我的感光元件？" />
 ) : (
-  <BaseLayout title="鏡頭資料庫" description={`${lenses.length} 支鏡頭的卡口、焦段、光圈、涵蓋片幅與重量，資料整理自原廠公開資訊。`} section="lenses">
+  <BaseLayout title="鏡頭資料庫" description={`${lenses.length} 支鏡頭的接環、焦段、光圈、涵蓋片幅與重量，資料整理自原廠公開資訊。`} section="lenses">
     <p class="eyebrow">Lenses</p>
     <h1>鏡頭資料庫</h1>
-    <p class="lead">看焦段、光圈、卡口、涵蓋片幅，以及能裝在哪些相機。</p>
+    <p class="lead">看焦段、光圈、接環、涵蓋片幅，以及能裝在哪些相機。</p>
 
     <div class="field lens-search">
       <input type="search" id="q" placeholder="搜尋：24-70、f1.4、Sony、Cooke S7…" aria-label="搜尋鏡頭" autocomplete="off" />
@@ -48,9 +48,9 @@ const groups = brands.map((b) => ({ brand: b, items: lenses.filter((l) => l.bran
         <button type="button" class="chip" data-f="2.8" aria-pressed="false">F2.8／T2.8 以內</button>
       </div>
       <details class="more-filters">
-        <summary>更多篩選（卡口、類型、片幅）</summary>
-        <div class="chips" role="group" aria-label="卡口" data-filter="mount">
-          <button type="button" class="chip" data-f="" aria-pressed="true">全部卡口</button>
+        <summary>更多篩選（接環、類型、片幅）</summary>
+        <div class="chips" role="group" aria-label="接環" data-filter="mount">
+          <button type="button" class="chip" data-f="" aria-pressed="true">全部接環</button>
           {mounts.map((m) => <button type="button" class="chip" data-f={m} aria-pressed="false">{m}</button>)}
         </div>
         <div class="chips" role="group" aria-label="類型" data-filter="type">

@@ -15,7 +15,7 @@ const size = l.size_text ?? `${l.diameter_mm} × ${l.length_mm} mm${l.size_note 
 const facts: [string, string][] = [
   ["焦段", focalText(l)],
   ["最大光圈", ap],
-  ["卡口", l.mount],
+  ["接環", l.mount],
   ["涵蓋片幅", cov],
   ["最近對焦距離", l.min_focus],
   ["重量", weight],
@@ -29,7 +29,7 @@ const specs: [string, string][] = [
   ["最大光圈", ap],
   ["光圈葉片", l.aperture_blades ? `${l.aperture_blades} 片` : "未知"],
   ...(l.autofocus && l.autofocus !== U ? [["對焦", l.autofocus] as [string, string]] : []),
-  ["防震", l.stabilization && l.stabilization !== U ? l.stabilization : "未知"],
+  ["防手震", l.stabilization && l.stabilization !== U ? l.stabilization : "未知"],
   ["最大放大倍率", l.magnification && l.magnification !== U ? l.magnification : "未知"],
   ["濾鏡口徑", filter],
   ["尺寸", size],
@@ -38,7 +38,7 @@ const specs: [string, string][] = [
   ...(l.af_drive ? [["對焦驅動", l.af_drive] as [string, string]] : []),
 ];
 const users = camerasFor(l);
-const desc = `${l.brand} ${l.model} 規格：${focalText(l)}、${apertureText(l)}、${l.mount} 卡口、${cov}。可裝的相機、最近對焦、重量與濾鏡口徑。`;
+const desc = `${l.brand} ${l.model} 規格：${focalText(l)}、${apertureText(l)}、${l.mount} 接環、${cov}。可裝的相機、最近對焦、重量與濾鏡口徑。`;
 ---
 <BaseLayout title={`${l.brand} ${l.model} 規格`} description={desc} section="lenses">
   <p class="crumb"><a href="/lenses/">鏡頭</a> › {l.brand}</p>
@@ -63,7 +63,7 @@ const desc = `${l.brand} ${l.model} 規格：${focalText(l)}、${apertureText(l)
   </dl>
 
   <h2>能裝在哪些相機（{users.length} 台）</h2>
-  <p class="cam-count">依「卡口」比對逐光收錄的相機。能不能裝以卡口為準；實際對焦、防震等功能因機身而異。</p>
+  <p class="cam-count">依「接環」比對逐光收錄的相機。能不能裝以接環為準；實際對焦、防手震等功能因機身而異。</p>
   <div class="grid cam-grid">
     {users.map(({ c, fit }) => (
       <a class="card cam-card" href={`/cameras/${c.slug}/`}>

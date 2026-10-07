@@ -55,7 +55,7 @@ export const apertureText = (l) => {
 };
 export const typeText = (l) => (l.type === "zoom" ? "變焦" : "定焦");
 
-// 這支鏡頭能裝在哪些相機：用卡口名稱比對相機的「卡口」欄
+// 這支鏡頭能裝在哪些相機：用接環名稱比對相機的「接環」欄
 export function camerasFor(l) {
   return cameras
     .filter((c) => typeof c.lens_mount === "string" && (l.mount_match || [l.mount]).some((m) => c.lens_mount.includes(m)))

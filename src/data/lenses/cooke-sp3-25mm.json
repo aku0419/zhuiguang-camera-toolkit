@@ -32,7 +32,7 @@
   "front_diameter_mm": 64.0,
   "size_text": "長度（鏡頭前端到接環）98 mm；前端直徑 Φ64 mm",
   "weight_g": 575,
-  "weight_note": "原廠標示（Cooke 規格表）；卡口可更換（E 為出廠安裝，RF／L／Z 等為選配）",
+  "weight_note": "原廠標示（Cooke 規格表）；接環可更換（E 為出廠安裝，RF／L／Z 等為選配）",
   "source_name": "Cooke Optics 官網（SP3 規格表）",
   "source_url": "https://cookeoptics.com/lens/sp3/",
   "last_verified": "2026-10-07"

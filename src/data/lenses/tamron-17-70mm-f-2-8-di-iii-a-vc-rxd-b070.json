@@ -24,7 +24,7 @@
   ],
   "coverage": "APS-C",
   "autofocus": "Unknown",
-  "stabilization": "鏡頭內防震（VC）",
+  "stabilization": "鏡頭內防手震（VC）",
   "min_focus": "0.19 m（廣端）～ 0.39 m（望端）",
   "magnification": "1:4.8（廣端）～ 1:5.2（望端）",
   "filter_mm": 67,
@@ -36,5 +36,5 @@
   "source_name": "Tamron 全球官網（規格）",
   "source_url": "https://www.tamron.com/global/consumer/lenses/b070/spec.html",
   "last_verified": "2026-10-07",
-  "weight_note": "各卡口重量：Sony E 525 g；Nikon Z 540 g；Canon RF 530 g；Fujifilm X 530 g"
+  "weight_note": "各接環重量：Sony E 525 g；Nikon Z 540 g；Canon RF 530 g；Fujifilm X 530 g"
 }

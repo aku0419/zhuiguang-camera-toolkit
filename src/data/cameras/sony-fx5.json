@@ -30,7 +30,7 @@
     "CFexpress Type A",
     "SD（UHS-I／UHS-II）"
   ],
-  "timecode": "可用 VMC-BNCU1 時間碼轉接線（接 USB PORT 2）與外部設備同步",
+  "timecode": "可用 VMC-BNCU1 時間碼轉接線（接 USB PORT 2）與外接器材同步",
   "sdi": "無",
   "hdmi": "Type A（標準尺寸）",
   "dynamic_range_claimed": "15+ stops（S-Log3）",

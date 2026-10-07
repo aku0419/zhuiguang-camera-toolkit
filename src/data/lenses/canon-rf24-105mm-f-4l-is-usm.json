@@ -10,7 +10,7 @@
   "mount": "Canon RF",
   "coverage": "Full Frame",
   "autofocus": "AF",
-  "stabilization": "鏡頭內防震（IS）",
+  "stabilization": "鏡頭內防手震（IS）",
   "min_focus": "0.45 m",
   "magnification": "0.19",
   "filter_mm": 77,
@@ -21,5 +21,5 @@
   "source_name": "Canon 台灣官方產品頁（規格）",
   "source_url": "https://tw.canon/taiwan/zh_TW/consumer/rf24-105mm-f-4l-is-usm/main/product",
   "last_verified": "2026-10-07",
-  "af_drive": "Nano超聲波馬達（Nano USM）"
+  "af_drive": "Nano超音波馬達（Nano USM）"
 }

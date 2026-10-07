@@ -31,7 +31,7 @@ const speedText = (m: any) => {
 const sensorSize = c.sensor.width_mm === U ? "尺寸未知" : `${c.sensor.width_mm} × ${c.sensor.height_mm} mm`;
 const facts: [string, string][] = [
   ["感光元件", `${c.sensor.format}（${sensorSize}）`],
-  ["卡口", show(c.lens_mount)],
+  ["接環", show(c.lens_mount)],
   ["記憶卡", list(c.media)],
   ["最高錄影", `${res(c.max_resolution)}・最高 ${show(c.max_fps, " fps")}`],
   ["Log", list(c.log)],
@@ -69,7 +69,7 @@ const specs: [string, string][] = [
   ["HDMI", show(c.hdmi)],
   ["動態範圍（原廠宣稱）", show(c.dynamic_range_claimed)],
 ];
-const desc = `${c.name} 規格：${c.sensor.format} 感光元件、${c.lens_mount} 卡口、${list(c.media)}。錄影模式、位元率與記憶卡，並可直接計算錄影容量與等效焦段。`;
+const desc = `${c.name} 規格：${c.sensor.format} 感光元件、${c.lens_mount} 接環、${list(c.media)}。錄影模式、位元率與記憶卡，並可直接計算錄影容量與等效焦段。`;
 ---
 <BaseLayout title={`${c.name} 規格與錄影格式`} description={desc} section="cameras">
   {c.sample && <p class="sample-warn">這是版面預覽用的範例資料，不是真實規格。</p>}

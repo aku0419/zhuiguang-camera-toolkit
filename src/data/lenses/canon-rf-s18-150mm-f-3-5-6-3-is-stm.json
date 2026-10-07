@@ -11,7 +11,7 @@
   "mount": "Canon RF",
   "coverage": "APS-C",
   "autofocus": "AF",
-  "stabilization": "鏡頭內防震（IS）",
+  "stabilization": "鏡頭內防手震（IS）",
   "min_focus": "AF：0.17 m（18mm 端）；MF：0.12 m（150mm 端）",
   "magnification": "AF：0.44×（50mm 端）；MF：0.59×（35mm 端）",
   "filter_mm": 55,
