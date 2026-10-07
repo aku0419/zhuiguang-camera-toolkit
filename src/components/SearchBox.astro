@@ -27,7 +27,10 @@
       active = -1;
       if (!q) { list.hidden = true; list.innerHTML = ""; return; }
       const words = q.split(/\s+/).map(norm).filter(Boolean);
-      const hits = items.filter((_, i) => words.every((w) => hay[i].includes(w))).slice(0, 8);
+      // 名稱有符合的排前面，只有內文符合的排後面
+      const hits = items.filter((_, i) => words.every((w) => hay[i].includes(w)))
+        .map((it) => ({ it, s: words.every((w) => norm(it.title).includes(w)) ? 0 : 1 }))
+        .sort((a, b) => a.s - b.s).map((x) => x.it).slice(0, 8);
       list.innerHTML = "";
       if (!hits.length) {
         const li = document.createElement("li");

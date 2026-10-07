@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { GLOSSARY, GLOSSARY_GROUPS } from "../data/glossary.js";
+---
+<BaseLayout title="名詞小辭典" description="攝影新手常見名詞白話說明：光圈、T 值、ISO、ND、快門角度、片幅、景深、位元率、Log、LUT、記憶卡速度等級、備份與 DIT。" section="tools">
+  <p class="eyebrow">Glossary</p>
+  <h1>名詞小辭典</h1>
+  <p class="lead">看不懂的名詞，在這裡用白話查。有對應的工具會附連結。</p>
+  <div class="lens-search">
+    <input id="gq" type="search" placeholder="搜尋名詞，例如：ND、Log、片幅…" aria-label="搜尋名詞" autocomplete="off" />
+  </div>
+  <p class="cam-count" id="gcount"></p>
+  {GLOSSARY_GROUPS.map((g) => (
+    <section class="brand-sec" data-sec={g}>
+      <h2>{g}</h2>
+      <dl class="gloss">
+        {GLOSSARY.filter((x) => x.group === g).map((x) => (
+          <div class="gl" id={x.id} data-text={`${x.term} ${x.en} ${x.text}`}>
+            <dt>{x.term} <small>{x.en}</small></dt>
+            <dd>{x.text}{x.link && <> <a href={x.link[0]}>{x.link[1]} →</a></>}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  ))}
+  <p class="empty" id="gempty" hidden>找不到符合的名詞。</p>
+  <p class="cam-count" style="margin-top:24px">這裡是觀念說明，不放各家相機的規格數字；實際規格請看相機頁，並以原廠資料為準。</p>
+</BaseLayout>
+
+<script>
+  const norm = (s: string) => s.toLowerCase().replace(/[\s\-–—_/·・.,，、|()（）]/g, "");
+  const q = document.getElementById("gq") as HTMLInputElement;
+  const items = [...document.querySelectorAll<HTMLElement>(".gl")];
+  const hay = items.map((e) => norm(e.dataset.text || ""));
+  const count = document.getElementById("gcount")!;
+  const run = () => {
+    const words = q.value.trim().split(/\s+/).map(norm).filter(Boolean);
+    let n = 0;
+    items.forEach((e, i) => { const ok = words.every((w) => hay[i].includes(w)); e.hidden = !ok; if (ok) n++; });
+    document.querySelectorAll<HTMLElement>("[data-sec]").forEach((s) => { s.hidden = !s.querySelector(".gl:not([hidden])"); });
+    document.getElementById("gempty")!.hidden = n > 0;
+    count.textContent = `${n} 個名詞`;
+  };
+  q.addEventListener("input", run);
+  run();
+</script>
