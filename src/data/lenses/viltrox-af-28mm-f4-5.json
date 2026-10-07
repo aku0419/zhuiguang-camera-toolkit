@@ -1,0 +1,36 @@
+{
+  "slug": "viltrox-af-28mm-f4-5",
+  "brand": "Viltrox",
+  "series": "標準",
+  "model": "AF 28mm F4.5",
+  "type": "prime",
+  "focal_min": 28.0,
+  "focal_max": 28.0,
+  "max_aperture": 4.5,
+  "mount": "Sony E／Nikon Z",
+  "mounts": [
+    "Sony E",
+    "Nikon Z"
+  ],
+  "mount_match": [
+    "Sony E",
+    "Nikon Z"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "Unknown",
+  "min_focus": "0.38 m",
+  "magnification": "0.11×",
+  "filter_mm": null,
+  "diameter_mm": 60.3,
+  "length_mm": 15.3,
+  "weight_g": 60,
+  "aperture_blades": null,
+  "source_name": "Viltrox 官方網站（規格）",
+  "source_url": "https://viltrox.com/products/28mm-f4-5-fe",
+  "last_verified": "2026-10-07",
+  "size_text": "Sony E：Φ60.3 × 15.3 mm；Nikon Z：Φ65.3 × 16.8 mm",
+  "weight_note": "各卡口重量：Sony E 60 g；Nikon Z 80 g（原廠標示不含鏡頭蓋、遮光罩）",
+  "af_drive": "VCM",
+  "filter_note": "規格未列"
+}

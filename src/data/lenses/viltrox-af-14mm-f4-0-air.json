@@ -1,0 +1,37 @@
+{
+  "slug": "viltrox-af-14mm-f4-0-air",
+  "brand": "Viltrox",
+  "series": "Air",
+  "model": "AF 14mm F4.0 Air",
+  "type": "prime",
+  "focal_min": 14.0,
+  "focal_max": 14.0,
+  "max_aperture": 4.0,
+  "mount": "Sony E／Nikon Z／L-Mount",
+  "mounts": [
+    "Sony E",
+    "Nikon Z",
+    "L-Mount"
+  ],
+  "mount_match": [
+    "Sony E",
+    "Nikon Z",
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "Unknown",
+  "min_focus": "0.13 m",
+  "magnification": "0.23×",
+  "filter_mm": 58,
+  "diameter_mm": 68.0,
+  "length_mm": 58.4,
+  "weight_g": 185,
+  "aperture_blades": 7,
+  "source_name": "Viltrox 官方網站（規格）",
+  "source_url": "https://viltrox.com/products/af-14mm-f4-0-fe",
+  "last_verified": "2026-10-07",
+  "size_text": "Sony E：Φ68 × 58.4 mm；Nikon Z：Φ68 × 58.4 mm；L-Mount：Φ65.1 × 54.4 mm",
+  "weight_note": "各卡口重量：Sony E 185 g；Nikon Z 185 g；L-Mount 172 g（原廠標示不含鏡頭蓋、遮光罩）",
+  "af_drive": "STM+Lead screw"
+}

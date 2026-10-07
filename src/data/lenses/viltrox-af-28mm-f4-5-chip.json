@@ -1,0 +1,34 @@
+{
+  "slug": "viltrox-af-28mm-f4-5-chip",
+  "brand": "Viltrox",
+  "series": "Chip",
+  "model": "AF 28mm F4.5 Chip",
+  "type": "prime",
+  "focal_min": 28.0,
+  "focal_max": 28.0,
+  "max_aperture": 4.5,
+  "mount": "L-Mount",
+  "mounts": [
+    "L-Mount"
+  ],
+  "mount_match": [
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "Unknown",
+  "min_focus": "0.32 m",
+  "magnification": "0.1×",
+  "filter_mm": null,
+  "diameter_mm": 60.6,
+  "length_mm": 13.2,
+  "weight_g": 60,
+  "aperture_blades": null,
+  "source_name": "Viltrox 官方網站（規格）",
+  "source_url": "https://viltrox.com/products/af-28mm-f4-5-l",
+  "last_verified": "2026-10-07",
+  "size_text": "L-Mount：Φ60.6 × 13.2 mm",
+  "weight_note": "原廠標示不含鏡頭蓋、遮光罩",
+  "af_drive": "VCM",
+  "filter_note": "規格未列"
+}

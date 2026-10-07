@@ -1,0 +1,37 @@
+{
+  "slug": "viltrox-af-9mm-f2-8-air",
+  "brand": "Viltrox",
+  "series": "Air",
+  "model": "AF 9mm F2.8 Air",
+  "type": "prime",
+  "focal_min": 9.0,
+  "focal_max": 9.0,
+  "max_aperture": 2.8,
+  "mount": "Sony E／Nikon Z／Fujifilm X",
+  "mounts": [
+    "Sony E",
+    "Nikon Z",
+    "Fujifilm X"
+  ],
+  "mount_match": [
+    "Sony E",
+    "Nikon Z",
+    "Fujifilm X"
+  ],
+  "coverage": "APS-C",
+  "autofocus": "AF／MF",
+  "stabilization": "Unknown",
+  "min_focus": "0.13 m",
+  "magnification": "0.15×",
+  "filter_mm": 58,
+  "diameter_mm": 65.0,
+  "length_mm": 56.4,
+  "weight_g": 175,
+  "aperture_blades": 7,
+  "source_name": "Viltrox 官方網站（規格）",
+  "source_url": "https://viltrox.com/products/af-9mm-f2-8-e",
+  "last_verified": "2026-10-07",
+  "size_text": "Sony E：Φ65 × 56.4 mm；Nikon Z：Φ65 × 58.4 mm；Fujifilm X：Φ65 × 56.7 mm",
+  "weight_note": "各卡口重量：Sony E 175 g；Nikon Z 190 g；Fujifilm X 175 g（原廠標示不含鏡頭蓋、遮光罩）",
+  "af_drive": "STM+Lead screw"
+}

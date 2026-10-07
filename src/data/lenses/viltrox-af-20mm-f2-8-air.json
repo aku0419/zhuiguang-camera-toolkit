@@ -1,0 +1,33 @@
+{
+  "slug": "viltrox-af-20mm-f2-8-air",
+  "brand": "Viltrox",
+  "series": "Air",
+  "model": "AF 20mm F2.8 Air",
+  "type": "prime",
+  "focal_min": 20.0,
+  "focal_max": 20.0,
+  "max_aperture": 2.8,
+  "mount": "L-Mount",
+  "mounts": [
+    "L-Mount"
+  ],
+  "mount_match": [
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "Unknown",
+  "min_focus": "0.19 m",
+  "magnification": "0.17×",
+  "filter_mm": 52,
+  "diameter_mm": 64.0,
+  "length_mm": 52.3,
+  "weight_g": 159,
+  "aperture_blades": 7,
+  "source_name": "Viltrox 官方網站（規格）",
+  "source_url": "https://viltrox.com/products/af-20mm-f2-8-l",
+  "last_verified": "2026-10-07",
+  "size_text": "L-Mount：Φ64 × 52.3 mm",
+  "weight_note": "原廠標示不含鏡頭蓋、遮光罩",
+  "af_drive": "STM+Lead screw"
+}

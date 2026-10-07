@@ -1,0 +1,35 @@
+{
+  "slug": "viltrox-af-135mm-f1-8-lab",
+  "brand": "Viltrox",
+  "series": "LAB",
+  "model": "AF 135mm F1.8 LAB",
+  "type": "prime",
+  "focal_min": 135.0,
+  "focal_max": 135.0,
+  "max_aperture": 1.8,
+  "mount": "Sony E／Nikon Z",
+  "mounts": [
+    "Sony E",
+    "Nikon Z"
+  ],
+  "mount_match": [
+    "Sony E",
+    "Nikon Z"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "Unknown",
+  "min_focus": "0.72 m",
+  "magnification": "0.25×",
+  "filter_mm": 82,
+  "diameter_mm": 93.0,
+  "length_mm": 145.7,
+  "weight_g": 1235,
+  "aperture_blades": 11,
+  "source_name": "Viltrox 官方網站（規格）",
+  "source_url": "https://viltrox.com/products/af-135mm-f1-8-lab-fe",
+  "last_verified": "2026-10-07",
+  "size_text": "Sony E：Φ93 × 145.7 mm；Nikon Z：Φ93 × 147.6 mm",
+  "weight_note": "各卡口重量：Sony E 1235 g；Nikon Z 1265 g（原廠標示不含鏡頭蓋、遮光罩）",
+  "af_drive": "VCM"
+}

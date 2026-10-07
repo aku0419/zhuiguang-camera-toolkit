@@ -1,0 +1,33 @@
+{
+  "slug": "viltrox-af-35mm-f1-2-lab",
+  "brand": "Viltrox",
+  "series": "LAB",
+  "model": "AF 35mm F1.2 LAB",
+  "type": "prime",
+  "focal_min": 35.0,
+  "focal_max": 35.0,
+  "max_aperture": 1.2,
+  "mount": "Nikon Z",
+  "mounts": [
+    "Nikon Z"
+  ],
+  "mount_match": [
+    "Nikon Z"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "Unknown",
+  "min_focus": "0.34 m",
+  "magnification": "0.17×",
+  "filter_mm": 77,
+  "diameter_mm": 89.2,
+  "length_mm": 123.5,
+  "weight_g": 970,
+  "aperture_blades": 11,
+  "source_name": "Viltrox 官方網站（規格）",
+  "source_url": "https://viltrox.com/products/af-35mm-f1-2-z",
+  "last_verified": "2026-10-07",
+  "size_text": "Nikon Z：Φ89.2 × 123.5 mm",
+  "weight_note": "原廠標示不含鏡頭蓋、遮光罩",
+  "af_drive": "VCM"
+}
