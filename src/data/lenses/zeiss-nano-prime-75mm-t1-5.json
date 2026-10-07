@@ -1,0 +1,39 @@
+{
+  "slug": "zeiss-nano-prime-75mm-t1-5",
+  "brand": "Zeiss",
+  "series": "Nano Prime",
+  "model": "Nano Prime 75mm T1.5",
+  "type": "prime",
+  "focal_min": 75.0,
+  "focal_max": 75.0,
+  "max_aperture": 1.5,
+  "aperture_type": "T",
+  "mount": "Sony E／Canon RF／Nikon Z／L-Mount",
+  "mounts": [
+    "Sony E",
+    "Canon RF",
+    "Nikon Z",
+    "L-Mount"
+  ],
+  "mount_match": [
+    "Sony E",
+    "Canon RF",
+    "Nikon Z",
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.75 m（由感光元件平面算起）",
+  "magnification": "Unknown",
+  "filter_mm": 86,
+  "diameter_mm": 95.0,
+  "length_mm": 112.0,
+  "front_diameter_mm": 95.0,
+  "size_text": "長度 112 mm（原廠標示）；前端直徑 Φ95 mm",
+  "weight_g": 1130,
+  "weight_note": "原廠標示約 1.13 kg；卡口：E 為原廠（native），RF、Z、L 為第三方",
+  "source_name": "ZEISS Cinematography 官網（Nano Prime）",
+  "source_url": "https://www.zeiss.com/photonics-and-optics/en/cinematography/lenses/nano-prime-lenses.html",
+  "last_verified": "2026-10-07"
+}

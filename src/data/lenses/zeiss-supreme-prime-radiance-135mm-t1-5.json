@@ -1,0 +1,34 @@
+{
+  "slug": "zeiss-supreme-prime-radiance-135mm-t1-5",
+  "brand": "Zeiss",
+  "series": "Supreme Prime Radiance",
+  "model": "Supreme Prime Radiance 135mm T1.5",
+  "type": "prime",
+  "focal_min": 135.0,
+  "focal_max": 135.0,
+  "max_aperture": 1.5,
+  "aperture_type": "T",
+  "mount": "PL",
+  "mounts": [
+    "PL"
+  ],
+  "mount_match": [
+    "PL"
+  ],
+  "coverage": "Large Format",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "1.4 m（由感光元件平面算起）",
+  "magnification": "Unknown",
+  "filter_mm": null,
+  "diameter_mm": 114.0,
+  "length_mm": 146.0,
+  "front_diameter_mm": 114.0,
+  "size_text": "長度（鏡頭前端到 PL 接環基準面）146 mm；前端直徑 Φ114 mm",
+  "weight_g": 2270,
+  "weight_note": "原廠標示約 2.27 kg",
+  "source_name": "ZEISS Cinematography 官網（Supreme Prime Radiance）",
+  "source_url": "https://www.zeiss.com/photonics-and-optics/en/cinematography/lenses/supreme-prime-radiance-lenses.html",
+  "last_verified": "2026-10-07",
+  "filter_note": "規格表未列"
+}

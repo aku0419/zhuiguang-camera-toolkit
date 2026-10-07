@@ -1,0 +1,38 @@
+{
+  "slug": "zeiss-cp-3-35mm-t2-1",
+  "brand": "Zeiss",
+  "series": "CP.3",
+  "model": "CP.3 35mm T2.1",
+  "type": "prime",
+  "focal_min": 35.0,
+  "focal_max": 35.0,
+  "max_aperture": 2.1,
+  "aperture_type": "T",
+  "mount": "PL／Sony E／Micro Four Thirds",
+  "mounts": [
+    "PL",
+    "Sony E",
+    "Micro Four Thirds"
+  ],
+  "mount_match": [
+    "PL",
+    "Sony E",
+    "Micro Four Thirds"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.3 m（由感光元件平面算起）",
+  "magnification": "Unknown",
+  "filter_mm": null,
+  "diameter_mm": 95.0,
+  "length_mm": 83.7,
+  "front_diameter_mm": 95.0,
+  "size_text": "長度（鏡頭前端到 PL 接環基準面）83.7 mm；前端直徑 Φ95 mm",
+  "weight_g": 800,
+  "weight_note": "原廠標示約 0.8 kg；卡口可更換（PL、Canon EF、Nikon F、Sony E、MFT）",
+  "source_name": "ZEISS Cinematography 官網（CP.3）",
+  "source_url": "https://www.zeiss.com/photonics-and-optics/en/cinematography/lenses/compact-prime-cp-3-lenses.html",
+  "last_verified": "2026-10-07",
+  "filter_note": "規格表未列"
+}

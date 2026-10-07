@@ -92,6 +92,7 @@
 - Fujifilm：用 Fujifilm X 官網（`www.fujifilm-x.com/en-us/products/lenses/<鏡頭>/specifications/`，英文）整理。已收 52 支（XF／XC 的 Fujifilm X 卡口、GF 的 Fujifilm G 卡口含 PZ 電影變焦 T 值）。官網有幾頁會顯示成別支鏡頭的規格（例如 XC13-33、XF16mmF2.8），收錄前一定要檢查頁面的 `Type` 欄位跟鏡頭名稱一致，不一致就跳過。500mm、T/S、增距鏡、Fujinon Premista／MK 電影鏡頭還沒收。
 - ARRI：用 ARRI 官網 Signature Prime／Signature Zoom 頁面的鏡頭卡片（T 值、長度、前端直徑、重量、最近對焦距離）整理，卡口 LPL、成像範圍 46 mm（`coverage: "Large Format"`）來自總覽頁。已收 20 支（Signature Prime 16 支、Signature Zoom 4 支）。Master Prime、Ultra Prime、Ultra Wide Zoom、Ensō 的規格表在官網被截斷或抓不到，先不收（不猜）。
 - Cooke：用 Cooke Optics 官網各系列頁面最下方的規格表（橫向表格：第一列是焦段，往下每一列是一個項目，每個值對應一支鏡頭）整理，卡口、涵蓋片幅來自頁面上方的 Focal length range／Format／Mount 摘要。已收 89 支（S8/i FF、S7/i FF、Panchro/i Classic FF／S35、Panchro 65/i、Macro/i FF、Anamorphic/i FF／S35、Varotal/i FF 變焦、SP3、AP3）。規格表某一列的數量跟焦段數量對不上時，該項寫 Unknown 不硬配；5/i 頁面沒有規格表先不收。
+- Zeiss：用 ZEISS Cinematography 官網（`www.zeiss.com/photonics-and-optics/en/cinematography/lenses/<系列>.html`）頁面最下方的 Technical Data 整理（英文）。已收 48 支：CP.3、Supreme Prime、Supreme Prime Radiance、Nano Prime、Cinema Zoom、Supreme Zoom Radiance、Lightweight Zoom LWZ.3。Horizon Anamorphic、Aatma、Panoptes 65 的表格格式不同先不收。Zeiss 的攝影鏡頭（Otus、Batis、Loxia 等）還沒收。
 - 電影鏡頭用 T 值：`aperture_type: "T"`；可填 `front_diameter_mm`、`image_circle_mm`、`size_text`。一支鏡頭可裝的卡口不只一個時（例如 EF／PL 可換），用 `mount_match` 列出要比對的相機卡口文字。
 
 ## 開發指令
