@@ -53,6 +53,26 @@
       "notes": "韌體 Ver.3.00 以後"
     },
     {
+      "resolution": "4096x2160",
+      "max_fps": 29.97,
+      "codec": "XAVC S-I DCI 4K",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "韌體 Ver.3.00 以後"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 23.98,
+      "codec": "XAVC S-I DCI 4K",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "韌體 Ver.3.00 以後；24.00p 同為 240M"
+    },
+    {
       "resolution": "3840x2160",
       "max_fps": 59.94,
       "codec": "XAVC S-I 4K",
@@ -60,6 +80,16 @@
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 29.97,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "原廠另有 250M 選項（25p）"
     },
     {
       "resolution": "3840x2160",
@@ -118,6 +148,26 @@
       "crop": "none"
     },
     {
+      "resolution": "3840x2160",
+      "max_fps": 29.97,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 140,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "每個格率另有較低位元率、8-bit 4:2:0 的設定"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 23.98,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "每個格率另有較低位元率、8-bit 4:2:0 的設定"
+    },
+    {
       "resolution": "1920x1080",
       "max_fps": 239.76,
       "codec": "XAVC S-I HD",
@@ -138,7 +188,43 @@
     },
     {
       "resolution": "1920x1080",
+      "max_fps": 29.97,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 111,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 23.98,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 89,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
       "max_fps": 59.94,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 29.97,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 23.98,
       "codec": "XAVC S HD",
       "bitrate_mbps": 50,
       "bit_depth": 10,
@@ -148,7 +234,7 @@
   ],
   "source_name": "Sony ILME-FX3 Help Guide（Ver.2 以後，PDF）",
   "source_url": "https://helpguide.sony.net/ilc/2210/v1/en/print.pdf",
-  "last_verified": "2026-10-06",
+  "last_verified": "2026-10-07",
   "editor_notes": "格率以 NTSC 標示（PAL 為 50p/25p/100p）。 新聞稿頁面寫的發表日期是 2020-02-23，但 FX3 實際是 2021 年發表，頁面日期疑似誤植，所以發表日期仍標 Unknown。",
   "extra_sources": [
     {
