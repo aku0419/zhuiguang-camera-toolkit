@@ -1,0 +1,35 @@
+{
+  "slug": "arri-signature-prime-47mm-t1-8",
+  "brand": "ARRI",
+  "series": "Signature Prime",
+  "model": "Signature Prime 47mm T1.8",
+  "type": "prime",
+  "focal_min": 47.0,
+  "focal_max": 47.0,
+  "max_aperture": 1.8,
+  "aperture_type": "T",
+  "mount": "LPL",
+  "mounts": [
+    "LPL"
+  ],
+  "mount_match": [
+    "LPL"
+  ],
+  "coverage": "Large Format",
+  "image_circle_mm": 46.0,
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.23 m",
+  "magnification": "Unknown",
+  "filter_mm": null,
+  "filter_note": "規格未列",
+  "diameter_mm": 114.0,
+  "length_mm": 178.0,
+  "front_diameter_mm": 114.0,
+  "size_text": "長度 178 mm；前端直徑 Φ114 mm",
+  "weight_g": 1800,
+  "weight_note": "原廠標示約 1.8 kg",
+  "source_name": "ARRI 官網（Signature Prime）",
+  "source_url": "https://www.arri.com/en/cine-lenses/signature-lenses/signature-primes-zooms/signature-primes",
+  "last_verified": "2026-10-07"
+}

@@ -17,7 +17,7 @@ function check(file, l) {
   need(l.type === "zoom" ? l.focal_min < l.focal_max : l.focal_min === l.focal_max, "type 與焦段不一致");
   need(isNum(l.max_aperture), "max_aperture");
   need(l.aperture_type == null || ["F", "T"].includes(l.aperture_type), "aperture_type（F / T）");
-  need(["Full Frame", "APS-C", "Super35", "Medium Format", "Micro Four Thirds", U].includes(l.coverage), "coverage");
+  need(["Full Frame", "APS-C", "Super35", "Medium Format", "Large Format", "Micro Four Thirds", U].includes(l.coverage), "coverage");
   need(isStr(l.min_focus), "min_focus");
   need(l.mounts == null || (Array.isArray(l.mounts) && l.mounts.every(isStr)), "mounts");
   need(l.mount_match == null || (Array.isArray(l.mount_match) && l.mount_match.every(isStr)), "mount_match");

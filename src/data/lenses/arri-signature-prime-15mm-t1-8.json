@@ -1,0 +1,35 @@
+{
+  "slug": "arri-signature-prime-15mm-t1-8",
+  "brand": "ARRI",
+  "series": "Signature Prime",
+  "model": "Signature Prime 15mm T1.8",
+  "type": "prime",
+  "focal_min": 15.0,
+  "focal_max": 15.0,
+  "max_aperture": 1.8,
+  "aperture_type": "T",
+  "mount": "LPL",
+  "mounts": [
+    "LPL"
+  ],
+  "mount_match": [
+    "LPL"
+  ],
+  "coverage": "Large Format",
+  "image_circle_mm": 46.0,
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.1 m",
+  "magnification": "Unknown",
+  "filter_mm": null,
+  "filter_note": "規格未列",
+  "diameter_mm": 156.0,
+  "length_mm": 197.0,
+  "front_diameter_mm": 156.0,
+  "size_text": "長度 197 mm；前端直徑 Φ156 mm",
+  "weight_g": 2800,
+  "weight_note": "原廠標示約 2.8 kg",
+  "source_name": "ARRI 官網（Signature Prime）",
+  "source_url": "https://www.arri.com/en/cine-lenses/signature-lenses/signature-primes-zooms/signature-primes",
+  "last_verified": "2026-10-07"
+}

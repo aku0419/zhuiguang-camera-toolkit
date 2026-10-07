@@ -1,0 +1,35 @@
+{
+  "slug": "arri-signature-zoom-16-32mm-t2-8",
+  "brand": "ARRI",
+  "series": "Signature Zoom",
+  "model": "Signature Zoom 16-32mm T2.8",
+  "type": "zoom",
+  "focal_min": 16.0,
+  "focal_max": 32.0,
+  "max_aperture": 2.8,
+  "aperture_type": "T",
+  "mount": "LPL",
+  "mounts": [
+    "LPL"
+  ],
+  "mount_match": [
+    "LPL"
+  ],
+  "coverage": "Large Format",
+  "image_circle_mm": 46.0,
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.194 m",
+  "magnification": "Unknown",
+  "filter_mm": null,
+  "filter_note": "規格未列",
+  "diameter_mm": 156.0,
+  "length_mm": 212.0,
+  "front_diameter_mm": 156.0,
+  "size_text": "長度 212 mm；前端直徑 Φ156 mm",
+  "weight_g": 3200,
+  "weight_note": "原廠標示約 3.2 kg",
+  "source_name": "ARRI 官網（Signature Zoom）",
+  "source_url": "https://www.arri.com/en/cine-lenses/signature-lenses/signature-primes-zooms/signature-zooms",
+  "last_verified": "2026-10-07"
+}

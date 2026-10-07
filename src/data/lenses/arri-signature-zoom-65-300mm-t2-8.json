@@ -1,0 +1,35 @@
+{
+  "slug": "arri-signature-zoom-65-300mm-t2-8",
+  "brand": "ARRI",
+  "series": "Signature Zoom",
+  "model": "Signature Zoom 65-300mm T2.8",
+  "type": "zoom",
+  "focal_min": 65.0,
+  "focal_max": 300.0,
+  "max_aperture": 2.8,
+  "aperture_type": "T",
+  "mount": "LPL",
+  "mounts": [
+    "LPL"
+  ],
+  "mount_match": [
+    "LPL"
+  ],
+  "coverage": "Large Format",
+  "image_circle_mm": 46.0,
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "1.337 m",
+  "magnification": "Unknown",
+  "filter_mm": null,
+  "filter_note": "規格未列",
+  "diameter_mm": 156.0,
+  "length_mm": 420.0,
+  "front_diameter_mm": 156.0,
+  "size_text": "長度 420 mm；前端直徑 Φ156 mm",
+  "weight_g": 8100,
+  "weight_note": "原廠標示約 8.1 kg",
+  "source_name": "ARRI 官網（Signature Zoom）",
+  "source_url": "https://www.arri.com/en/cine-lenses/signature-lenses/signature-primes-zooms/signature-zooms",
+  "last_verified": "2026-10-07"
+}
