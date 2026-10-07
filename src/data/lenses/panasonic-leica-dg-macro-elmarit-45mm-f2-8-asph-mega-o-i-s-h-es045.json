@@ -1,0 +1,33 @@
+{
+  "slug": "panasonic-leica-dg-macro-elmarit-45mm-f2-8-asph-mega-o-i-s-h-es045",
+  "brand": "Panasonic",
+  "series": "LEICA DG",
+  "model": "LEICA DG MACRO-ELMARIT 45mm / F2.8 ASPH. / MEGA O.I.S.",
+  "model_code": "H-ES045",
+  "type": "prime",
+  "focal_min": 45.0,
+  "focal_max": 45.0,
+  "max_aperture": 2.8,
+  "max_aperture_tele": null,
+  "mount": "Micro Four Thirds",
+  "mounts": [
+    "Micro Four Thirds"
+  ],
+  "mount_match": [
+    "Micro Four Thirds"
+  ],
+  "coverage": "Micro Four Thirds",
+  "autofocus": "Unknown",
+  "stabilization": "鏡頭內防震（O.I.S.）",
+  "min_focus": "0.15 m",
+  "magnification": "1.0×（35mm 判換算 2.0×）",
+  "filter_mm": 46,
+  "diameter_mm": 63.0,
+  "length_mm": 62.5,
+  "size_note": "長度為先端到鏡頭接環基準面",
+  "weight_g": 225,
+  "aperture_blades": 7,
+  "source_name": "Panasonic 日本官網（規格）",
+  "source_url": "https://panasonic.jp/dc/p-db/H-ES045_spec.html",
+  "last_verified": "2026-10-07"
+}

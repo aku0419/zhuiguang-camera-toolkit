@@ -88,6 +88,7 @@
 - Sigma：用 Sigma 全球官網（`www.sigma-global.com/en/lenses/<型號>/`、`/en/cine-lenses/...`，英文）整理。已收 39 支（Art、Contemporary、Sports 部分；DG／DN／DC）與 15 支 Cine（FF High Speed Prime、AF Cine、High Speed Zoom）。一支鏡頭有多個卡口版本時只做一頁，用 `mounts`（篩選用）與 `mount_match`（比對相機）列出，各卡口不同的重量、尺寸寫在 `weight_note`、`size_text`。長焦大砲（150-600、500mm 等）、魚眼、Aizu、Classic Prime 先不收。
 - Tamron：用 Tamron 全球官網的規格頁（`www.tamron.com/global/consumer/lenses/<型號代碼>/spec.html`，英文，欄位以 Tab 分隔）整理。已收 24 支現行無反光鏡鏡頭（Sony E／Nikon Z／Fujifilm X／Canon RF）；已停產（End of sale）與單反（EF／F／A 卡口）、M43 的不收。Di III-A、Di II 當作 APS-C 專用。
 - Viltrox：用 Viltrox 官方網站商品頁的 Specs 區塊整理（英文）。已收 21 支（Air、EVO、Pro、LAB 定焦；Sony E／Nikon Z／Fujifilm X／L-Mount）。舊款頁面格式不同、找不到規格的先跳過（負責人決定：這不是台灣主流品牌，找不到就不補）。
+- Panasonic：用 Panasonic 日本官網的規格頁（`panasonic.jp/dc/p-db/<型號>_spec.html`，日文表格）整理。鏡頭清單是 JavaScript 動態載入、我讀不到，所以用型號試探網址（S-R／S-E／S-S／S-X、H-ES／H-X／H-HS 等），頁面存在才收。已收 41 支（LUMIX S 的 L-Mount 15 支、LUMIX G／LEICA DG 的 M43 26 支）。M43 鏡頭的 `coverage` 是 `Micro Four Thirds`。
 - 電影鏡頭用 T 值：`aperture_type: "T"`；可填 `front_diameter_mm`、`image_circle_mm`、`size_text`。一支鏡頭可裝的卡口不只一個時（例如 EF／PL 可換），用 `mount_match` 列出要比對的相機卡口文字。
 
 ## 開發指令

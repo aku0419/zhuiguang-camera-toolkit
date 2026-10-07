@@ -1,0 +1,33 @@
+{
+  "slug": "panasonic-lumix-g-x-vario-12-35mm-f2-8-asph-power-o-i-s-h-hs12035",
+  "brand": "Panasonic",
+  "series": "G X VARIO",
+  "model": "LUMIX G X VARIO 12-35mm / F2.8 ASPH. / POWER O.I.S.",
+  "model_code": "H-HS12035",
+  "type": "zoom",
+  "focal_min": 12.0,
+  "focal_max": 35.0,
+  "max_aperture": 2.8,
+  "max_aperture_tele": null,
+  "mount": "Micro Four Thirds",
+  "mounts": [
+    "Micro Four Thirds"
+  ],
+  "mount_match": [
+    "Micro Four Thirds"
+  ],
+  "coverage": "Micro Four Thirds",
+  "autofocus": "Unknown",
+  "stabilization": "鏡頭內防震（O.I.S.）",
+  "min_focus": "0.25 m",
+  "magnification": "Unknown",
+  "filter_mm": 58,
+  "diameter_mm": 67.6,
+  "length_mm": 73.8,
+  "size_note": "長度為先端到鏡頭接環基準面",
+  "weight_g": 305,
+  "aperture_blades": 7,
+  "source_name": "Panasonic 日本官網（規格）",
+  "source_url": "https://panasonic.jp/dc/p-db/H-HS12035_spec.html",
+  "last_verified": "2026-10-07"
+}

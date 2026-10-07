@@ -17,7 +17,7 @@ function check(file, l) {
   need(l.type === "zoom" ? l.focal_min < l.focal_max : l.focal_min === l.focal_max, "type 與焦段不一致");
   need(isNum(l.max_aperture), "max_aperture");
   need(l.aperture_type == null || ["F", "T"].includes(l.aperture_type), "aperture_type（F / T）");
-  need(["Full Frame", "APS-C", "Super35", "Medium Format", U].includes(l.coverage), "coverage");
+  need(["Full Frame", "APS-C", "Super35", "Medium Format", "Micro Four Thirds", U].includes(l.coverage), "coverage");
   need(isStr(l.min_focus), "min_focus");
   need(l.mounts == null || (Array.isArray(l.mounts) && l.mounts.every(isStr)), "mounts");
   need(l.mount_match == null || (Array.isArray(l.mount_match) && l.mount_match.every(isStr)), "mount_match");
@@ -65,6 +65,8 @@ export function camerasFor(l) {
         fit = "這是 APS-C 專用鏡頭，裝在較大片幅的機身會裁切成較小的畫面範圍";
       } else if (l.coverage === "Full Frame" && c.crop_factor && c.crop_factor > 1.15) {
         fit = `涵蓋全片幅；這台感光元件較小，視角約變窄 ${Math.round(c.crop_factor * 10) / 10} 倍（等效焦段 ${Math.round(l.focal_min * c.crop_factor * 10) / 10}${l.type === "zoom" ? `–${Math.round(l.focal_max * c.crop_factor * 10) / 10}` : ""}mm）`;
+      } else if (l.coverage === "Micro Four Thirds" && c.format_group === "M43") {
+        fit = "M43 鏡頭，對應這台的感光元件";
       } else if (l.coverage === "Full Frame" && /全片幅/.test(c.format_group)) {
         fit = "全片幅鏡頭，對應這台的感光元件";
       } else {

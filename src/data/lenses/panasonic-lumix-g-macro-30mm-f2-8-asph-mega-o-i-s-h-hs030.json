@@ -1,0 +1,34 @@
+{
+  "slug": "panasonic-lumix-g-macro-30mm-f2-8-asph-mega-o-i-s-h-hs030",
+  "brand": "Panasonic",
+  "series": "LUMIX G",
+  "model": "LUMIX G MACRO 30mm / F2.8 ASPH. / MEGA O.I.S.",
+  "model_code": "H-HS030",
+  "type": "prime",
+  "focal_min": 30.0,
+  "focal_max": 30.0,
+  "max_aperture": 2.8,
+  "max_aperture_tele": null,
+  "mount": "Micro Four Thirds",
+  "mounts": [
+    "Micro Four Thirds"
+  ],
+  "mount_match": [
+    "Micro Four Thirds"
+  ],
+  "coverage": "Micro Four Thirds",
+  "autofocus": "Unknown",
+  "stabilization": "鏡頭內防震（O.I.S.）",
+  "min_focus": "0.105 m",
+  "magnification": "1.0×（35mm 判換算 2.0×）",
+  "filter_mm": 46,
+  "diameter_mm": 58.8,
+  "length_mm": 63.5,
+  "size_note": "長度為先端到鏡頭接環基準面",
+  "weight_g": 180,
+  "aperture_blades": 7,
+  "source_name": "Panasonic 日本官網（規格）",
+  "source_url": "https://panasonic.jp/dc/p-db/H-HS030_spec.html",
+  "last_verified": "2026-10-07",
+  "weight_note": "不含前後蓋與遮光罩"
+}

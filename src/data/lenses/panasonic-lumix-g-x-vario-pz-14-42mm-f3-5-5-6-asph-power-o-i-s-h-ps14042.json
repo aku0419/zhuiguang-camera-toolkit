@@ -1,0 +1,33 @@
+{
+  "slug": "panasonic-lumix-g-x-vario-pz-14-42mm-f3-5-5-6-asph-power-o-i-s-h-ps14042",
+  "brand": "Panasonic",
+  "series": "G X VARIO",
+  "model": "LUMIX G X VARIO PZ 14-42mm / F3.5-5.6 ASPH. / POWER O.I.S.",
+  "model_code": "H-PS14042",
+  "type": "zoom",
+  "focal_min": 14.0,
+  "focal_max": 42.0,
+  "max_aperture": 3.5,
+  "max_aperture_tele": 5.6,
+  "mount": "Micro Four Thirds",
+  "mounts": [
+    "Micro Four Thirds"
+  ],
+  "mount_match": [
+    "Micro Four Thirds"
+  ],
+  "coverage": "Micro Four Thirds",
+  "autofocus": "Unknown",
+  "stabilization": "鏡頭內防震（O.I.S.）",
+  "min_focus": "0.2 m（廣端）～ 0.3 m（望端）",
+  "magnification": "0.17×（35mm 判換算 0.34×）",
+  "filter_mm": 37,
+  "diameter_mm": 61.0,
+  "length_mm": 26.8,
+  "size_note": "長度為先端到鏡頭接環基準面",
+  "weight_g": 95,
+  "aperture_blades": 7,
+  "source_name": "Panasonic 日本官網（規格）",
+  "source_url": "https://panasonic.jp/dc/p-db/H-PS14042_spec.html",
+  "last_verified": "2026-10-07"
+}

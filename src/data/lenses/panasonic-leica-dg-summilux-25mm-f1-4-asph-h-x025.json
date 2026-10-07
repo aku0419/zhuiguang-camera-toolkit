@@ -1,0 +1,33 @@
+{
+  "slug": "panasonic-leica-dg-summilux-25mm-f1-4-asph-h-x025",
+  "brand": "Panasonic",
+  "series": "LEICA DG",
+  "model": "LEICA DG SUMMILUX 25mm / F1.4 ASPH.",
+  "model_code": "H-X025",
+  "type": "prime",
+  "focal_min": 25.0,
+  "focal_max": 25.0,
+  "max_aperture": 1.4,
+  "max_aperture_tele": null,
+  "mount": "Micro Four Thirds",
+  "mounts": [
+    "Micro Four Thirds"
+  ],
+  "mount_match": [
+    "Micro Four Thirds"
+  ],
+  "coverage": "Micro Four Thirds",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 O.I.S.）",
+  "min_focus": "0.3 m",
+  "magnification": "0.11×（35mm 判換算 0.22×）",
+  "filter_mm": 46,
+  "diameter_mm": 63.0,
+  "length_mm": 54.5,
+  "size_note": "長度為先端到鏡頭接環基準面",
+  "weight_g": 200,
+  "aperture_blades": 7,
+  "source_name": "Panasonic 日本官網（規格）",
+  "source_url": "https://panasonic.jp/dc/p-db/H-X025_spec.html",
+  "last_verified": "2026-10-07"
+}
