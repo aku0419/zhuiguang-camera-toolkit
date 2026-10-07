@@ -1,0 +1,145 @@
+{
+  "slug": "sony-fx6",
+  "brand": "Sony",
+  "model": "FX6",
+  "aliases": [
+    "ILME-FX6",
+    "ILME-FX6V",
+    "FX6V"
+  ],
+  "type": "電影機（Cinema Line）",
+  "announced": "2020-11",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": "Unknown",
+    "height_mm": "Unknown",
+    "resolution_mp": 10.2
+  },
+  "base_iso": [
+    800,
+    12800
+  ],
+  "log": "Unknown",
+  "raw": "不能內錄；可經 SDI 輸出 RAW（4096×2160 一般模式，最高 59.94P）到外接錄影機",
+  "open_gate": false,
+  "lens_mount": "Sony E",
+  "media": [
+    "CFexpress Type A／SD（雙卡槽）"
+  ],
+  "timecode": "TC IN／TC OUT 端子",
+  "sdi": "12G-SDI（BNC，可切 6G／3G／HD）",
+  "hdmi": "Unknown",
+  "dynamic_range_claimed": "15+ stops",
+  "recording_modes": [
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "XAVC-I",
+      "bitrate_mbps": 600,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "原廠標示的最大位元率（VBR）；4K／QFHD 的 XAVC-I 都是這個上限"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 23.98,
+      "codec": "XAVC-I",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "說明書只列最大位元率 600 Mbps，沒有列各格率的數值"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "XAVC-I",
+      "bitrate_mbps": 600,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "原廠標示的最大位元率（VBR）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 119.88,
+      "codec": "XAVC-I（慢動作）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "Unknown",
+      "notes": "慢動作（S&Q）最高 120fps（全片幅）；說明書未列此模式位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "XAVC-L",
+      "bitrate_mbps": 150,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "原廠標示的最大位元率（VBR）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 59.94,
+      "codec": "XAVC-I",
+      "bitrate_mbps": 223,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "原廠標示 CBG（固定位元率）223 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 239.76,
+      "codec": "XAVC-I／XAVC-L（慢動作）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "HD 慢動作最高 240fps；說明書未列此模式位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 59.94,
+      "codec": "XAVC-L（HD 50）",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "原廠標示的最大位元率（VBR）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 59.94,
+      "codec": "XAVC-L（HD 35）",
+      "bitrate_mbps": 35,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "原廠標示的最大位元率（VBR）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 119.88,
+      "codec": "XAVC-I／XAVC-L（Super35 掃描）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "notes": "成像儀掃描設為 S35（Super 35mm 尺寸）時，只能錄 1920×1080，慢動作最高 120fps；說明書未標裁切倍率"
+    }
+  ],
+  "source_name": "Sony 台灣官網：FX6 說明書下載頁（使用說明書繁體中文版 5-026-227-68）",
+  "source_url": "https://www.sony.com.tw/zh/electronics/support/camcorders-and-video-cameras-interchangeable-lens-camcorders/ilme-fx6v/manuals",
+  "extra_sources": [
+    {
+      "source_name": "Sony 新聞稿：FX6 發表（Alpha Universe，2020-11-17）",
+      "source_url": "https://alphauniverse.com/stories/sony-launches-fx6-full-frame-cinema-camera-and-e-mount-cinema-lens/"
+    }
+  ],
+  "last_verified": "2026-10-07",
+  "editor_notes": "說明書由負責人從 Sony 台灣網站下載後提供（Sony 網站擋自動讀取，來源網址為下載頁）。說明書的「規格」頁列出最大位元率與錄製格式；位元深度、色彩取樣、Log 名稱在文字裡沒有明寫，所以標未知（待核對）。內建 ND：1/4、1/16、1/64、線性可變 1/4–1/128。動態範圍 15+ stops 說明書與新聞稿一致。"
+}
