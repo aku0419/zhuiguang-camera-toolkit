@@ -1,0 +1,38 @@
+{
+  "slug": "sd-capacity",
+  "name": "SD／SDHC／SDXC／SDUC",
+  "group": "SD",
+  "summary": "SD 卡依容量分成四種標準。容量越大，檔案系統不同；有些舊相機不認新標準的大容量卡。",
+  "rows": [
+    [
+      "SD",
+      "最多 2GB，檔案系統 FAT12／FAT16"
+    ],
+    [
+      "SDHC",
+      "超過 2GB 到 32GB，檔案系統 FAT32"
+    ],
+    [
+      "SDXC",
+      "超過 32GB 到 2TB，檔案系統 exFAT"
+    ],
+    [
+      "SDUC",
+      "超過 2TB 到 128TB，檔案系統 exFAT"
+    ],
+    [
+      "尺寸",
+      "SD：32 × 24 × 2.1 mm；microSD：11 × 15 × 1.0 mm"
+    ]
+  ],
+  "tips": [
+    "相機是否支援 SDUC（2TB 以上）要看相機說明書，不要假設支援。",
+    "記憶卡格式化後，實際可用容量會比標示少。"
+  ],
+  "camera_match": [
+    "SD"
+  ],
+  "source_name": "SD 協會（SD Association）：容量標準",
+  "source_url": "https://www.sdcard.org/developers/sd-standard-overview/capacity-sd-sdhc-sdxc-sduc/",
+  "last_verified": "2026-10-07"
+}

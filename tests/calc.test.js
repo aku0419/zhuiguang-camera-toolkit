@@ -3,7 +3,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
   shutterFromAngle, frameRate, equivalentFocal, FORMATS, cropFactorFromSize,
-  capacityGB, recordSeconds, toMbps, fmtDuration, fmtSize,
+  capacityGB, recordSeconds, toMbps, fmtDuration, fmtSize, neededMBps, sdVideoClass,
 } from "../src/lib/calc.js";
 
 test("24fps + 180° → 1/48 秒，最接近 1/50", () => {
@@ -56,4 +56,14 @@ test("MB/s 換成 Mbps", () => {
 test("超過 1000 GB 顯示成 TB", () => {
   assert.equal(fmtSize(1500), "1.5 TB");
   assert.equal(fmtSize(270), "270 GB");
+});
+
+test("位元率換成需要的 MB/s，並對應 SD 影片速度等級", () => {
+  assert.equal(neededMBps(240), 30);
+  assert.equal(sdVideoClass(100), "V30");   // 12.5 MB/s → V30
+  assert.equal(sdVideoClass(240), "V30");   // 剛好 30 MB/s
+  assert.equal(sdVideoClass(250), "V60");   // 31.25 MB/s
+  assert.equal(sdVideoClass(600), "V90");   // 75 MB/s
+  assert.equal(sdVideoClass(800), null);    // 100 MB/s 超過 V90
+  assert.equal(sdVideoClass(0), undefined);
 });

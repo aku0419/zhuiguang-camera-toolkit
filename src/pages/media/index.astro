@@ -1,4 +1,26 @@
 ---
-import ComingSoon from "../../components/ComingSoon.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { media, mediaSoon, camerasUsing } from "../../lib/media.js";
 ---
-<ComingSoon id="media" intro="SD、CFexpress、CFast 等記憶卡格式，最低持續寫入速度與常見用途。" />
+<BaseLayout title="記憶卡資料庫" description="SD、UHS-I、UHS-II、影片速度等級 V30／V60／V90 的規格說明，以及哪些攝影機使用，資料整理自 SD 協會公開資訊。" section="media">
+  <p class="eyebrow">Media</p>
+  <h1>記憶卡資料庫</h1>
+  <p class="lead">記憶卡格式與速度等級說明，點進去可以看哪些攝影機用得到。</p>
+  <div class="grid cam-grid">
+    {media.map((m) => (
+      <a class="card cam-card" href={`/media/${m.slug}/`}>
+        <span class="k">{m.group}</span>
+        <h3>{m.name}</h3>
+        <p>{camerasUsing(m).length} 台攝影機使用</p>
+      </a>
+    ))}
+    {mediaSoon.map((n) => (
+      <div class="card soon cam-card">
+        <span class="k">整理中</span>
+        <h3>{n}</h3>
+        <p>即將推出</p>
+      </div>
+    ))}
+  </div>
+  <p class="cam-count" style="margin-top:20px">想知道一張卡能錄多久？<a href="/tools/recording-capacity/?mode=card">用記憶卡可錄時間工具</a>。</p>
+</BaseLayout>

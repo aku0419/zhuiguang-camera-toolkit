@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { media, camerasUsing } from "../../lib/media.js";
+
+export function getStaticPaths() {
+  return media.map((m) => ({ params: { slug: m.slug }, props: { m } }));
+}
+const { m } = Astro.props;
+const users = camerasUsing(m);
+---
+<BaseLayout title={`${m.name} 規格說明`} description={`${m.name}：${m.summary}`} section="media">
+  <p class="crumb"><a href="/media/">記憶卡</a> › {m.group}</p>
+  <h1>{m.name}</h1>
+  <p class="lead">{m.summary}</p>
+
+  <h2>規格</h2>
+  {m.table && (
+    <div class="tbl-wrap">
+      <table class="modes">
+        <thead><tr>{m.table.head.map((h: string) => <th>{h}</th>)}</tr></thead>
+        <tbody>{m.table.rows.map((r: string[]) => <tr>{r.map((c, i) => <td class={i === 0 ? "first n" : "n"} data-th={m.table.head[i]}>{c}</td>)}</tr>)}</tbody>
+      </table>
+    </div>
+  )}
+  <dl class="facts">
+    {m.rows.map(([k, v]: string[]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
+  </dl>
+
+  {m.tips && (
+    <>
+      <h2>選卡小提醒</h2>
+      <ul class="tips">{m.tips.map((t: string) => <li>{t}</li>)}</ul>
+    </>
+  )}
+
+  <h2>使用這種卡的攝影機（{users.length} 台）</h2>
+  <p class="cam-count">依各機「記憶卡」欄位自動整理；雙卡槽機種可能只有其中一個卡槽符合。</p>
+  <div class="grid cam-grid">
+    {users.map((c) => (
+      <a class="card cam-card" href={`/cameras/${c.slug}/`}>
+        <span class="k">{c.brand}</span>
+        <h3>{c.model}</h3>
+        <p>{Array.isArray(c.media) ? c.media.join("、") : ""}</p>
+      </a>
+    ))}
+  </div>
+
+  <h2>資料來源</h2>
+  <div class="src">
+    <p>官方資料：<a href={m.source_url} rel="noopener" target="_blank">{m.source_name}</a></p>
+    <p>最後確認日期：{m.last_verified}。實際相容性請以相機原廠說明書為準。</p>
+  </div>
+</BaseLayout>

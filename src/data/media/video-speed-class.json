@@ -1,0 +1,60 @@
+{
+  "slug": "video-speed-class",
+  "name": "影片速度等級 V6～V90",
+  "group": "SD",
+  "summary": "卡面上的 V30、V60、V90 是「最低持續寫入速度」的保證，專為錄影設計。數字就是 MB/s（每秒百萬位元組）。",
+  "table": {
+    "head": [
+      "等級",
+      "最低持續寫入",
+      "可用的匯流排"
+    ],
+    "rows": [
+      [
+        "V6",
+        "6 MB/s",
+        "高速模式與 UHS"
+      ],
+      [
+        "V10",
+        "10 MB/s",
+        "高速模式與 UHS"
+      ],
+      [
+        "V30",
+        "30 MB/s",
+        "UHS"
+      ],
+      [
+        "V60",
+        "60 MB/s",
+        "UHS-II／UHS-III"
+      ],
+      [
+        "V90",
+        "90 MB/s",
+        "UHS-II／UHS-III"
+      ]
+    ]
+  },
+  "rows": [
+    [
+      "其他速度標示",
+      "Speed Class（C2、C4、C6、C10）、UHS Speed Class（U1、U3）也代表最低寫入速度，但 V 系列是為新一代快閃記憶體與高解析度錄影設計的。"
+    ],
+    [
+      "怎麼選",
+      "選跟相機要求相同或更高等級的卡。不同系列的標示不能互相換算，例如相機要求 U3，用 V30 並不保證相容。"
+    ]
+  ],
+  "tips": [
+    "逐光在相機頁用錄影模式的位元率估算需要的等級，只是參考；以原廠說明書建議的記憶卡為準。",
+    "高位元率模式（例如 ProRes、RAW）常常超過 V90，需要 CFexpress 或 SSD。"
+  ],
+  "camera_match": [
+    "SD"
+  ],
+  "source_name": "SD 協會（SD Association）：速度等級",
+  "source_url": "https://www.sdcard.org/developers/sd-standard-overview/speed-class/",
+  "last_verified": "2026-10-07"
+}

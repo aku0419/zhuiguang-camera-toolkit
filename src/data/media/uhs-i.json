@@ -1,0 +1,34 @@
+{
+  "slug": "uhs-i",
+  "name": "UHS-I",
+  "group": "SD",
+  "summary": "SD 卡的高速匯流排之一，單排接點。卡的匯流排速度只是上限，實際寫入速度還要看卡本身的規格。",
+  "rows": [
+    [
+      "匯流排速度",
+      "50 MB/s（SDR50、DDR50）；104 MB/s（SDR104）"
+    ],
+    [
+      "適用卡",
+      "SDHC、SDXC、SDUC"
+    ],
+    [
+      "可搭配的速度等級",
+      "C2／C4／C6／C10、U1／U3、V6／V10／V30"
+    ],
+    [
+      "規格版本",
+      "3.01"
+    ]
+  ],
+  "tips": [
+    "V60、V90 需要 UHS-II 以上，UHS-I 的卡最高到 V30。",
+    "匯流排速度是上限，不等於實際持續寫入速度，錄影要看速度等級。"
+  ],
+  "camera_match": [
+    "UHS-I(?!I)"
+  ],
+  "source_name": "SD 協會（SD Association）：匯流排速度",
+  "source_url": "https://www.sdcard.org/developers/sd-standard-overview/bus-speed-default-speed-high-speed-uhs-sd-express/",
+  "last_verified": "2026-10-07"
+}

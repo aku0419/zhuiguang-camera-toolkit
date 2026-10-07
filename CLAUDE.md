@@ -70,6 +70,13 @@
 - 工具：快門角度、升降格、等效焦段、錄影容量（含記憶卡可錄時間）。
 - 頁尾免責說明、問題回報。
 
+## 記憶卡資料庫（第二階段，進行中）
+
+- 資料放 `src/data/media/<slug>.json`，檢查在 `src/lib/media.js`；每種格式一頁（`/media/<slug>/`），自動列出用到這種卡的相機（用相機「記憶卡」欄的文字比對，設定在 `camera_match`）。
+- 只做「格式」，不收品牌 SKU、不放價格。規格只採官方組織資料（SD 協會、CFA 等），標示來源與查證日期。
+- 相機頁錄影模式表有「需要的寫入速度（估算）」：位元率 ÷ 8 = MB/s，相機有 SD 卡槽時再標 SD 影片速度等級（V6／V10／V30／V60／V90，算式在 `calc.js` 的 `sdVideoClass`）。這是估算，頁面要註明以原廠說明書為準。
+- 已完成：SD／SDHC／SDXC／SDUC、UHS-I、UHS-II、影片速度等級。待做（等官方資料查證）：CFexpress Type A／B、CFast 2.0、XQD、RED Media、Codex Compact Drive。
+
 ## 開發指令
 
 - `npm install`：安裝

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { cameras, show } from "../../lib/cameras.js";
-import { fmt } from "../../lib/calc.js";
+import { fmt, neededMBps, sdVideoClass } from "../../lib/calc.js";
 
 export function getStaticPaths() {
   return cameras.map((c) => ({ params: { slug: c.slug }, props: { c } }));
@@ -16,8 +16,18 @@ const modeLine = (m: any) => [
   m.bitrate_mbps === U ? "位元率未知" : `${m.bitrate_mbps} Mbps`,
   [m.bit_depth === U ? "" : `${m.bit_depth}-bit`, m.chroma === U ? "" : m.chroma].filter(Boolean).join(" "),
   cropText(m),
+  typeof m.bitrate_mbps === "number" ? `需寫入${speedText(m)}` : "",
 ].filter(Boolean).join("・");
 const cropText = (m: any) => m.crop === "none" ? "不裁切" : m.crop === "crop" ? `裁切${m.crop_factor ? `（約 ${m.crop_factor}×）` : ""}` : "裁切未知";
+// 由位元率估算需要的持續寫入速度；相機有 SD 卡槽時，再標示 SD 影片速度等級
+const hasSD = Array.isArray(c.media) && c.media.some((x: string) => /SD/.test(x));
+const speedText = (m: any) => {
+  if (typeof m.bitrate_mbps !== "number") return "位元率未知";
+  const need = `約 ${fmt(neededMBps(m.bitrate_mbps), 0)} MB/s`;
+  if (!hasSD) return need;
+  const cls = sdVideoClass(m.bitrate_mbps);
+  return cls ? `${need}（SD 至少 ${cls}）` : `${need}（超過 V90）`;
+};
 const sensorSize = c.sensor.width_mm === U ? "尺寸未知" : `${c.sensor.width_mm} × ${c.sensor.height_mm} mm`;
 const facts: [string, string][] = [
   ["感光元件", `${c.sensor.format}（${sensorSize}）`],
@@ -80,7 +90,7 @@ const desc = `${c.name} 規格：${c.sensor.format} 感光元件、${c.lens_moun
   </ul>
   <div class="tbl-wrap">
     <table class="modes">
-      <thead><tr><th>解析度</th><th>格率</th><th>編碼</th><th>位元率</th><th>位元深度</th><th>色彩取樣</th><th>裁切</th><th>備註</th></tr></thead>
+      <thead><tr><th>解析度</th><th>格率</th><th>編碼</th><th>位元率</th><th>位元深度</th><th>色彩取樣</th><th>裁切</th><th>需要的寫入速度（估算）</th><th>備註</th></tr></thead>
       <tbody>
         {c.recording_modes.map((m: any) => (
           <tr>
@@ -91,12 +101,15 @@ const desc = `${c.name} 規格：${c.sensor.format} 感光元件、${c.lens_moun
             <td class="n" data-th="位元深度">{show(m.bit_depth, "-bit")}</td>
             <td class="n" data-th="色彩取樣">{show(m.chroma)}</td>
             <td data-th="裁切">{cropText(m)}</td>
+            <td class="n" data-th="需寫入速度">{speedText(m)}</td>
             <td class={m.notes ? "note" : "note empty"} data-th="備註">{m.notes || "—"}</td>
           </tr>
         ))}
       </tbody>
     </table>
   </div>
+
+  <p class="cam-count">「需要的寫入速度」是用位元率換算（Mbps ÷ 8 = MB/s）的估算值，實際要求可能更高，請以原廠說明書建議的記憶卡為準。等級說明見<a href="/media/video-speed-class/">影片速度等級 V30／V60／V90</a>。</p>
 
   <h2>完整規格</h2>
   <dl class="facts">

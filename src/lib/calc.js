@@ -85,3 +85,22 @@ export function fmtSize(gb) {
   if (gb >= 1000) return `${fmt(gb / 1000, 2)} TB`;
   return `${fmt(gb, gb < 10 ? 2 : 1)} GB`;
 }
+
+// 記憶卡速度：位元率（Mbps）換成需要的持續寫入速度（MB/s）。1 MB/s = 8 Mbps。
+export function neededMBps(bitrateMbps) {
+  return bitrateMbps > 0 ? bitrateMbps / 8 : null;
+}
+
+// SD 協會的影片速度等級（最低持續寫入速度，MB/s）
+export const SD_VIDEO_CLASSES = [
+  { name: "V6", mbps: 6 }, { name: "V10", mbps: 10 }, { name: "V30", mbps: 30 },
+  { name: "V60", mbps: 60 }, { name: "V90", mbps: 90 },
+];
+
+// 這個位元率至少要哪一級的 SD 卡；超過 V90 回傳 null（SD 卡不夠）
+export function sdVideoClass(bitrateMbps) {
+  const need = neededMBps(bitrateMbps);
+  if (need == null) return undefined;
+  const hit = SD_VIDEO_CLASSES.find((c) => c.mbps >= need);
+  return hit ? hit.name : null;
+}

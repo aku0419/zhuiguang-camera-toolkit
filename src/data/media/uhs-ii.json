@@ -1,0 +1,34 @@
+{
+  "slug": "uhs-ii",
+  "name": "UHS-II",
+  "group": "SD",
+  "summary": "SD 卡的高速匯流排，多一排接點（兩條傳輸通道）。V60、V90 速度等級需要 UHS-II 以上。",
+  "rows": [
+    [
+      "匯流排速度",
+      "156 MB/s（全雙工）；312 MB/s（半雙工）"
+    ],
+    [
+      "適用卡",
+      "SDHC、SDXC、SDUC"
+    ],
+    [
+      "可搭配的速度等級",
+      "C4／C6／C10、U1／U3、V6／V10／V30／V60／V90"
+    ],
+    [
+      "規格版本",
+      "4.00"
+    ]
+  ],
+  "tips": [
+    "V60、V90 只能用在 UHS-II／UHS-III 匯流排。相機的卡槽是否支援 UHS-II，要看相機規格（逐光相機頁的「記憶卡」欄）。",
+    "匯流排速度是上限，不等於實際持續寫入速度，錄影要看速度等級。"
+  ],
+  "camera_match": [
+    "UHS-II"
+  ],
+  "source_name": "SD 協會（SD Association）：匯流排速度",
+  "source_url": "https://www.sdcard.org/developers/sd-standard-overview/bus-speed-default-speed-high-speed-uhs-sd-express/",
+  "last_verified": "2026-10-07"
+}
