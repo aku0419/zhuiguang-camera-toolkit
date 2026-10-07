@@ -17,6 +17,11 @@
 
 ## 步驟 1：建立新的 Supabase 專案
 
+> **名額限制：** Supabase 免費方案，**每個帳號最多同時 2 個運作中的專案**。如果畫面出現「members who have exceeded their free project limits」，表示你的帳號已經有 2 個了。處理方式：
+> - 有不用的測試專案 → 到那個專案 **Project Settings → General**，按 **Pause project**（暫停不計名額，之後可以 Restore）。
+> - 兩個都在用 → 用另一個 Email 註冊**新的 Supabase 帳號**來建逐光的專案，並把這個帳號記在密碼管理員。
+> - **初光的專案（網址列 `project/kibbcydfbuqwdssngfmz`）絕對不要暫停或刪除。**
+
 1. 打開 https://supabase.com/dashboard ，用你平常的帳號登入。
 2. 按右上角 **New project**（新增專案）。
 3. 選組織（Organization）：用你平常那個就可以。
