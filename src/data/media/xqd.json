@@ -1,0 +1,37 @@
+{
+  "slug": "xqd",
+  "name": "XQD",
+  "group": "CFast／XQD",
+  "summary": "2012 年發表的記憶卡規格，外型與 CFexpress Type B 相同，已被 CFexpress 取代，但部分相機仍支援。",
+  "rows": [
+    [
+      "發表",
+      "2012 年"
+    ],
+    [
+      "介面",
+      "PCI Express（PCIe）Gen 1"
+    ],
+    [
+      "匯流排速度",
+      "最高 250 MB/s"
+    ],
+    [
+      "外型",
+      "與 CFexpress Type B 相同"
+    ],
+    [
+      "商標",
+      "XQD 商標與標誌屬於 Sony，授權給 CFA"
+    ]
+  ],
+  "tips": [
+    "部分原本使用 XQD 的相機也支援 CFexpress Type B 卡；是否支援以相機規格為準。"
+  ],
+  "camera_match": [
+    "XQD"
+  ],
+  "source_name": "CompactFlash Association（CFA）：Card Types",
+  "source_url": "https://compactflash.org/card-types/",
+  "last_verified": "2026-10-07"
+}

@@ -24,9 +24,10 @@ export function camerasUsing(m) {
   return cameras.filter((c) => Array.isArray(c.media) && c.media.some((x) => res.some((r) => r.test(x))));
 }
 
+const GROUPS = ["SD", "CFexpress", "CFast／XQD", "廠商專用媒體"];
 export const media = Object.entries(files)
   .map(([f, m]) => { check(f, m); return m; })
-  .sort((a, b) => a.group.localeCompare(b.group) || a.name.localeCompare(b.name, "zh-Hant"));
+  .sort((a, b) => GROUPS.indexOf(a.group) - GROUPS.indexOf(b.group) || 0);
 
 // 還在整理的格式（資料查證完才開頁）
-export const mediaSoon = ["CFexpress Type A", "CFexpress Type B", "CFast 2.0", "XQD", "RED Media", "Codex Compact Drive"];
+export const mediaSoon = ["RED Media"];

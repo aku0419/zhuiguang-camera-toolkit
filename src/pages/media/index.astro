@@ -11,7 +11,7 @@ import { media, mediaSoon, camerasUsing } from "../../lib/media.js";
       <a class="card cam-card" href={`/media/${m.slug}/`}>
         <span class="k">{m.group}</span>
         <h3>{m.name}</h3>
-        <p>{camerasUsing(m).length} 台攝影機使用</p>
+        <p>{m.camera_match.length ? `${camerasUsing(m).length} 台攝影機使用` : "規格說明"}</p>
       </a>
     ))}
     {mediaSoon.map((n) => (

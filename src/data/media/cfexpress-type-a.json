@@ -1,0 +1,50 @@
+{
+  "slug": "cfexpress-type-a",
+  "name": "CFexpress Type A",
+  "group": "CFexpress",
+  "summary": "CFexpress 三種外型中最小的一種，只用 1 條 PCIe 通道，常用在體積較小的專業機身。",
+  "table": {
+    "head": [
+      "CFexpress 版本",
+      "理論匯流排速度（1 條通道）",
+      "介面"
+    ],
+    "rows": [
+      [
+        "v4.0（2023）",
+        "2 GB/s",
+        "PCIe Gen 4、NVMe 1.4c"
+      ],
+      [
+        "v2.0（2019）",
+        "1 GB/s",
+        "PCIe Gen 3、NVMe 1.3"
+      ]
+    ]
+  },
+  "rows": [
+    [
+      "尺寸",
+      "20 × 28 × 2.8 mm（寬 × 長 × 厚）"
+    ],
+    [
+      "PCIe 通道數",
+      "1 條"
+    ],
+    [
+      "怎麼認",
+      "卡面 CFexpress 標誌右下角有字母「A」；標誌左下角有「4」代表 v4.0 版本"
+    ]
+  ],
+  "tips": [
+    "CFA 說明：目前只有部分 Sony 相機相容 Type A。",
+    "v4.0 卡使用 PCIe Gen 4，CFA 說明可向下相容只有 PCIe Gen 3 的相機，速度由相機決定。",
+    "匯流排速度是理論上限；錄影要看卡的「最低持續寫入速度」，見「CFexpress 影片效能保證（VPG）」。"
+  ],
+  "camera_match": [
+    "CFexpress Type A"
+  ],
+  "source_name": "CompactFlash Association（CFA）：Card Types",
+  "source_url": "https://compactflash.org/card-types/",
+  "last_verified": "2026-10-07"
+}

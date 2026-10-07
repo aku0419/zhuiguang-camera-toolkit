@@ -1,0 +1,33 @@
+{
+  "slug": "cfast-2",
+  "name": "CFast 2.0",
+  "group": "CFast／XQD",
+  "summary": "CFA 在 2012 年訂的記憶卡規格，使用 SATA 介面，較舊，常見於部分電影機。",
+  "rows": [
+    [
+      "發表",
+      "2012 年（v2.0）；v1.1 為 2009 年"
+    ],
+    [
+      "介面",
+      "Serial ATA Gen II（SATA-II）"
+    ],
+    [
+      "匯流排速度",
+      "CFast 2.0 最高 600 MB/s；CFast 1.1 最高 300 MB/s"
+    ],
+    [
+      "VPG 等級",
+      "VPG130（Profile 3）、VPG65（Profile 2）"
+    ]
+  ],
+  "tips": [
+    "CFA 把 CFast 列為舊規格（legacy）。"
+  ],
+  "camera_match": [
+    "CFast"
+  ],
+  "source_name": "CompactFlash Association（CFA）：Card Types、VPG",
+  "source_url": "https://compactflash.org/card-types/",
+  "last_verified": "2026-10-07"
+}

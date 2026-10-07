@@ -1,0 +1,25 @@
+{
+  "slug": "codex-compactdrive",
+  "name": "Codex CompactDrive",
+  "group": "廠商專用媒體",
+  "summary": "Codex 為 ARRI 電影機做的專用記錄媒體，不是通用記憶卡格式。",
+  "rows": [
+    [
+      "CompactDrive",
+      "1TB／2TB，供 ARRI ALEXA Mini LF、ALEXA 35、ALEXA 35 Xtreme、ALEXA 265 使用"
+    ],
+    [
+      "CompactDrive Express",
+      "1TB，只能用於 ALEXA 35、ALEXA 35 Xtreme 錄 Apple ProRes"
+    ]
+  ],
+  "tips": [
+    "這是原廠指定的專用媒體，請依 ARRI 與 Codex 的說明選購。"
+  ],
+  "camera_match": [
+    "Codex"
+  ],
+  "source_name": "Codex：ARRI CompactDrive",
+  "source_url": "https://codex.online/us/products/arri-media",
+  "last_verified": "2026-10-07"
+}

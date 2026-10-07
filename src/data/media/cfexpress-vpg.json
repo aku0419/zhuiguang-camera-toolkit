@@ -1,0 +1,79 @@
+{
+  "slug": "cfexpress-vpg",
+  "name": "CFexpress 影片效能保證（VPG）",
+  "group": "CFexpress",
+  "summary": "VPG 是 CFA 訂的標準，保證 CFexpress 卡的「最低持續寫入速度」，讓高位元率錄影不會掉格。卡面的數字就是 MB/s。",
+  "table": {
+    "head": [
+      "VPG 等級",
+      "保證的最低持續寫入速度",
+      "適用的 CFexpress 版本",
+      "VPG 規格版本"
+    ],
+    "rows": [
+      [
+        "VPG1600",
+        "1600 MB/s",
+        "v4.0",
+        "Profile 5"
+      ],
+      [
+        "VPG800",
+        "800 MB/s",
+        "v4.0／v2.0",
+        "Profile 5"
+      ],
+      [
+        "VPG400",
+        "400 MB/s",
+        "v2.0／v1.0",
+        "Profile 4"
+      ],
+      [
+        "VPG200",
+        "200 MB/s",
+        "v2.0／v1.0",
+        "Profile 4"
+      ],
+      [
+        "VPG130",
+        "130 MB/s",
+        "CFast 2.0",
+        "Profile 3"
+      ],
+      [
+        "VPG65",
+        "65 MB/s",
+        "CFast 2.0、XQD v1.10、CompactFlash",
+        "Profile 2"
+      ],
+      [
+        "VPG20",
+        "20 MB/s",
+        "CompactFlash",
+        "Profile 1"
+      ]
+    ]
+  },
+  "rows": [
+    [
+      "重要提醒",
+      "VPG-5（VPG800／VPG1600）不向下相容 VPG-4（VPG200／VPG400）：只有 VPG800 的卡，不一定能用在要求 VPG200 或 VPG400 的相機模式。如果卡上同時有 VPG-4 與 VPG-5 標誌，才代表兩種都支援。"
+    ],
+    [
+      "認證",
+      "有 VPG 標誌的卡由 CFA 認證；CFA 另外維護 VPG 認證卡清單。部分廠商可能未經認證就使用標誌，要小心。"
+    ],
+    [
+      "不是每台相機都要求",
+      "不是所有相機或錄影模式都要求 VPG；沒有 VPG 的卡通常可用於一般模式。是否要求請看相機說明書。"
+    ]
+  ],
+  "tips": [
+    "相機要求 VPG200，就選 VPG200 或標有 VPG-4 的更高等級卡；不要只看「更快」。"
+  ],
+  "camera_match": [],
+  "source_name": "CompactFlash Association（CFA）：Video Performance Guarantee",
+  "source_url": "https://compactflash.org/video-performance-guarantee-vpg/",
+  "last_verified": "2026-10-07"
+}
