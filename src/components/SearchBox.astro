@@ -1,29 +1,9 @@
 ---
-import { TOOLS, sections } from "../data/site.js";
-import { cameras } from "../lib/cameras.js";
-import { lenses } from "../lib/lenses.js";
-
-// 搜尋清單：建置時整理好，搜尋在瀏覽器裡比對。之後加入相機、鏡頭等資料。
-const items = [
-  ...cameras.map((c) => ({
-    title: c.name, type: "攝影機", href: `/cameras/${c.slug}/`,
-    text: [c.brand, c.model, c.sensor.format, c.lens_mount, ...(c.aliases || [])].join(" "),
-  })),
-  ...lenses.map((l) => ({
-    title: `${l.brand} ${l.model}`, type: "鏡頭", href: `/lenses/${l.slug}/`,
-    text: [l.brand, l.series, l.model, l.model_code, l.mount, l.coverage].filter(Boolean).join(" "),
-  })),
-  ...TOOLS.map((t) => ({ title: t.name, type: "工具", href: t.href, text: [t.name, t.q, ...t.keywords].join(" ") })),
-  ...sections(cameras.length > 0).map((s) => ({
-    title: s.zh + (s.ready ? "" : "（即將推出）"), type: "分類", href: s.href, text: [s.zh, s.en, s.desc].join(" "),
-  })),
-];
 ---
 <div class="search" data-search>
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
   <input type="search" placeholder="搜尋：FX3、升降格、快門、容量…" aria-label="全站搜尋" autocomplete="off" />
   <ul class="search-results" hidden></ul>
-  <script type="application/json" set:html={JSON.stringify(items)} />
 </div>
 
 <script>
@@ -31,13 +11,18 @@ const items = [
   for (const box of document.querySelectorAll<HTMLElement>("[data-search]")) {
     const input = box.querySelector("input")!;
     const list = box.querySelector("ul")!;
-    const items: { title: string; type: string; href: string; text: string }[] = JSON.parse(
-      box.querySelector("script[type='application/json']")!.textContent || "[]"
-    );
-    const hay = items.map((it) => norm(it.title + " " + it.text));
+    // 第一次點進搜尋框才下載清單，不拖慢首頁
+    let items: { title: string; type: string; href: string; text: string }[] = [];
+    let hay: string[] = [];
+    let loading: Promise<void> | null = null;
+    const load = () => (loading ??= fetch("/search-index.json").then((r) => r.json()).then((d) => {
+      items = d; hay = items.map((it) => norm(it.title + " " + it.text));
+    }).catch(() => { loading = null; }));
+    input.addEventListener("focus", load, { once: true });
     let active = -1;
 
-    const render = () => {
+    const render = async () => {
+      await load();
       const q = input.value.trim();
       active = -1;
       if (!q) { list.hidden = true; list.innerHTML = ""; return; }
