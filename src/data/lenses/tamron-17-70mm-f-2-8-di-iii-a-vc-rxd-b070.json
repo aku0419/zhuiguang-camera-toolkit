@@ -1,0 +1,40 @@
+{
+  "slug": "tamron-17-70mm-f-2-8-di-iii-a-vc-rxd-b070",
+  "brand": "Tamron",
+  "series": "Di III-A",
+  "model": "17-70mm F/2.8 Di III-A VC RXD",
+  "model_code": "B070",
+  "type": "zoom",
+  "focal_min": 17.0,
+  "focal_max": 70.0,
+  "max_aperture": 2.8,
+  "max_aperture_tele": null,
+  "mount": "Sony E／Nikon Z／Canon RF／Fujifilm X",
+  "mounts": [
+    "Sony E",
+    "Nikon Z",
+    "Canon RF",
+    "Fujifilm X"
+  ],
+  "mount_match": [
+    "Sony E",
+    "Nikon Z",
+    "Canon RF",
+    "Fujifilm X"
+  ],
+  "coverage": "APS-C",
+  "autofocus": "Unknown",
+  "stabilization": "鏡頭內防震（VC）",
+  "min_focus": "0.19 m（廣端）～ 0.39 m（望端）",
+  "magnification": "1:4.8（廣端）～ 1:5.2（望端）",
+  "filter_mm": 67,
+  "diameter_mm": 74.6,
+  "length_mm": 119.3,
+  "size_text": "Sony E：Φ74.6 × 119.3 mm；Nikon Z：Φ74.6 × 121.3 mm；Canon RF：Φ74.6 × 117.3 mm；Fujifilm X：Φ74.6 × 119.6 mm",
+  "weight_g": 525,
+  "aperture_blades": 9,
+  "source_name": "Tamron 全球官網（規格）",
+  "source_url": "https://www.tamron.com/global/consumer/lenses/b070/spec.html",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 525 g；Nikon Z 540 g；Canon RF 530 g；Fujifilm X 530 g"
+}

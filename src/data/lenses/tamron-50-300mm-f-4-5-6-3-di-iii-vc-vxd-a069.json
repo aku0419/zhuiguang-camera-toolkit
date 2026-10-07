@@ -1,0 +1,33 @@
+{
+  "slug": "tamron-50-300mm-f-4-5-6-3-di-iii-vc-vxd-a069",
+  "brand": "Tamron",
+  "series": "Di III",
+  "model": "50-300mm F/4.5-6.3 Di III VC VXD",
+  "model_code": "A069",
+  "type": "zoom",
+  "focal_min": 50.0,
+  "focal_max": 300.0,
+  "max_aperture": 4.5,
+  "max_aperture_tele": 6.3,
+  "mount": "Sony E",
+  "mounts": [
+    "Sony E"
+  ],
+  "mount_match": [
+    "Sony E"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "鏡頭內防震（VC）",
+  "min_focus": "0.22 m（廣端）～ 0.9 m（望端）",
+  "magnification": "1:2（廣端）～ 1:3.1（望端）",
+  "filter_mm": 67,
+  "diameter_mm": 78.0,
+  "length_mm": 150.0,
+  "size_text": "Sony E：Φ78 × 150 mm",
+  "weight_g": 665,
+  "aperture_blades": 9,
+  "source_name": "Tamron 全球官網（規格）",
+  "source_url": "https://www.tamron.com/global/consumer/lenses/a069/spec.html",
+  "last_verified": "2026-10-07"
+}

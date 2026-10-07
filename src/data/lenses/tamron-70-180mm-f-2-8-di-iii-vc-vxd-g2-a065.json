@@ -1,0 +1,36 @@
+{
+  "slug": "tamron-70-180mm-f-2-8-di-iii-vc-vxd-g2-a065",
+  "brand": "Tamron",
+  "series": "G2",
+  "model": "70-180mm F/2.8 Di III VC VXD G2",
+  "model_code": "A065",
+  "type": "zoom",
+  "focal_min": 70.0,
+  "focal_max": 180.0,
+  "max_aperture": 2.8,
+  "max_aperture_tele": null,
+  "mount": "Sony E／Nikon Z",
+  "mounts": [
+    "Sony E",
+    "Nikon Z"
+  ],
+  "mount_match": [
+    "Sony E",
+    "Nikon Z"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "鏡頭內防震（VC）",
+  "min_focus": "0.3 m（廣端）～ 0.85 m（望端）",
+  "magnification": "1:2.6（廣端）～ 1:4.7（望端）",
+  "filter_mm": 67,
+  "diameter_mm": 83.0,
+  "length_mm": 156.5,
+  "size_text": "Sony E：Φ83 × 156.5 mm；Nikon Z：Φ83 × 158.7 mm",
+  "weight_g": 855,
+  "aperture_blades": 9,
+  "source_name": "Tamron 全球官網（規格）",
+  "source_url": "https://www.tamron.com/global/consumer/lenses/a065/spec.html",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 855 g；Nikon Z 865 g"
+}

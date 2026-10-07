@@ -1,0 +1,33 @@
+{
+  "slug": "tamron-24mm-f-2-8-di-iii-osd-m1-2-f051",
+  "brand": "Tamron",
+  "series": "Di III",
+  "model": "24mm F/2.8 Di III OSD M1:2",
+  "model_code": "F051",
+  "type": "prime",
+  "focal_min": 24.0,
+  "focal_max": 24.0,
+  "max_aperture": 2.8,
+  "max_aperture_tele": null,
+  "mount": "Sony E",
+  "mounts": [
+    "Sony E"
+  ],
+  "mount_match": [
+    "Sony E"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 VC）",
+  "min_focus": "0.12 m",
+  "magnification": "1:2",
+  "filter_mm": 67,
+  "diameter_mm": 73.0,
+  "length_mm": 64.0,
+  "size_text": "Sony E：Φ73 × 64 mm",
+  "weight_g": 215,
+  "aperture_blades": 7,
+  "source_name": "Tamron 全球官網（規格）",
+  "source_url": "https://www.tamron.com/global/consumer/lenses/f051/spec.html",
+  "last_verified": "2026-10-07"
+}

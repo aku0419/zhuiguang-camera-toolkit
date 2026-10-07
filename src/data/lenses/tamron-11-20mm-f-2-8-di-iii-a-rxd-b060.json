@@ -1,0 +1,38 @@
+{
+  "slug": "tamron-11-20mm-f-2-8-di-iii-a-rxd-b060",
+  "brand": "Tamron",
+  "series": "Di III-A",
+  "model": "11-20mm F/2.8 Di III-A RXD",
+  "model_code": "B060",
+  "type": "zoom",
+  "focal_min": 11.0,
+  "focal_max": 20.0,
+  "max_aperture": 2.8,
+  "max_aperture_tele": null,
+  "mount": "Sony E／Canon RF／Fujifilm X",
+  "mounts": [
+    "Sony E",
+    "Canon RF",
+    "Fujifilm X"
+  ],
+  "mount_match": [
+    "Sony E",
+    "Canon RF",
+    "Fujifilm X"
+  ],
+  "coverage": "APS-C",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 VC）",
+  "min_focus": "0.15 m（廣端）～ 0.24 m（望端）",
+  "magnification": "1:4（廣端）～ 1:7.6（望端）",
+  "filter_mm": 67,
+  "diameter_mm": 73.0,
+  "length_mm": 86.2,
+  "size_text": "Sony E：Φ73 × 86.2 mm；Canon RF：Φ73 × 84.2 mm；Fujifilm X：Φ73 × 86.5 mm",
+  "weight_g": 335,
+  "aperture_blades": 7,
+  "source_name": "Tamron 全球官網（規格）",
+  "source_url": "https://www.tamron.com/global/consumer/lenses/b060/spec.html",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 335 g；Canon RF 340 g；Fujifilm X 335 g"
+}

@@ -1,0 +1,40 @@
+{
+  "slug": "tamron-18-300mm-f-3-5-6-3-di-iii-a-vc-vxd-b061",
+  "brand": "Tamron",
+  "series": "Di III-A",
+  "model": "18-300mm F/3.5-6.3 Di III-A VC VXD",
+  "model_code": "B061",
+  "type": "zoom",
+  "focal_min": 18.0,
+  "focal_max": 300.0,
+  "max_aperture": 3.5,
+  "max_aperture_tele": 6.3,
+  "mount": "Sony E／Nikon Z／Canon RF／Fujifilm X",
+  "mounts": [
+    "Sony E",
+    "Nikon Z",
+    "Canon RF",
+    "Fujifilm X"
+  ],
+  "mount_match": [
+    "Sony E",
+    "Nikon Z",
+    "Canon RF",
+    "Fujifilm X"
+  ],
+  "coverage": "APS-C",
+  "autofocus": "Unknown",
+  "stabilization": "鏡頭內防震（VC）",
+  "min_focus": "0.15 m（廣端）～ 0.99 m（望端）",
+  "magnification": "1:2（廣端）～ 1:4（望端）",
+  "filter_mm": 67,
+  "diameter_mm": 75.5,
+  "length_mm": 125.6,
+  "size_text": "Sony E：Φ75.5 × 125.6 mm；Nikon Z：Φ75.5 × 127.6 mm；Canon RF：Φ75.5 × 123.6 mm；Fujifilm X：Φ75.5 × 125.8 mm",
+  "weight_g": 620,
+  "aperture_blades": 7,
+  "source_name": "Tamron 全球官網（規格）",
+  "source_url": "https://www.tamron.com/global/consumer/lenses/b061/spec.html",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 620 g；Nikon Z 635 g；Canon RF 625 g；Fujifilm X 620 g"
+}

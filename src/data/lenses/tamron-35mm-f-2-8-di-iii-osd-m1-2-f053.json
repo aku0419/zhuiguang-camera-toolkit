@@ -1,0 +1,33 @@
+{
+  "slug": "tamron-35mm-f-2-8-di-iii-osd-m1-2-f053",
+  "brand": "Tamron",
+  "series": "Di III",
+  "model": "35mm F/2.8 Di III OSD M1:2",
+  "model_code": "F053",
+  "type": "prime",
+  "focal_min": 35.0,
+  "focal_max": 35.0,
+  "max_aperture": 2.8,
+  "max_aperture_tele": null,
+  "mount": "Sony E",
+  "mounts": [
+    "Sony E"
+  ],
+  "mount_match": [
+    "Sony E"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 VC）",
+  "min_focus": "0.15 m",
+  "magnification": "1:2",
+  "filter_mm": 67,
+  "diameter_mm": 73.0,
+  "length_mm": 64.0,
+  "size_text": "Sony E：Φ73 × 64 mm",
+  "weight_g": 210,
+  "aperture_blades": 7,
+  "source_name": "Tamron 全球官網（規格）",
+  "source_url": "https://www.tamron.com/global/consumer/lenses/f053/spec.html",
+  "last_verified": "2026-10-07"
+}

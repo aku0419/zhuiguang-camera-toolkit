@@ -1,0 +1,36 @@
+{
+  "slug": "tamron-70-300mm-f-4-5-6-3-di-iii-rxd-a047",
+  "brand": "Tamron",
+  "series": "Di III",
+  "model": "70-300mm F/4.5-6.3 Di III RXD",
+  "model_code": "A047",
+  "type": "zoom",
+  "focal_min": 70.0,
+  "focal_max": 300.0,
+  "max_aperture": 4.5,
+  "max_aperture_tele": 6.3,
+  "mount": "Sony E／Nikon Z",
+  "mounts": [
+    "Sony E",
+    "Nikon Z"
+  ],
+  "mount_match": [
+    "Sony E",
+    "Nikon Z"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 VC）",
+  "min_focus": "0.8 m（廣端）～ 1.5 m（望端）",
+  "magnification": "1:9.4（廣端）～ 1:5.1（望端）",
+  "filter_mm": 67,
+  "diameter_mm": 77.0,
+  "length_mm": 148.0,
+  "size_text": "Sony E：Φ77 × 148 mm；Nikon Z：Φ77 × 150.3 mm",
+  "weight_g": 545,
+  "aperture_blades": 7,
+  "source_name": "Tamron 全球官網（規格）",
+  "source_url": "https://www.tamron.com/global/consumer/lenses/a047/spec.html",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 545 g；Nikon Z 580 g"
+}

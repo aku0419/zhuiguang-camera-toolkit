@@ -1,0 +1,36 @@
+{
+  "slug": "tamron-50-400mm-f-4-5-6-3-di-iii-vc-vxd-a067",
+  "brand": "Tamron",
+  "series": "Di III",
+  "model": "50-400mm F/4.5-6.3 Di III VC VXD",
+  "model_code": "A067",
+  "type": "zoom",
+  "focal_min": 50.0,
+  "focal_max": 400.0,
+  "max_aperture": 4.5,
+  "max_aperture_tele": 6.3,
+  "mount": "Sony E／Nikon Z",
+  "mounts": [
+    "Sony E",
+    "Nikon Z"
+  ],
+  "mount_match": [
+    "Sony E",
+    "Nikon Z"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "鏡頭內防震（VC）",
+  "min_focus": "0.25 m（廣端）～ 1.5 m（望端）",
+  "magnification": "1:2（廣端）～ 1:4（望端）",
+  "filter_mm": 67,
+  "diameter_mm": 88.5,
+  "length_mm": 183.4,
+  "size_text": "Sony E：Φ88.5 × 183.4 mm；Nikon Z：Φ88.5 × 185.8 mm",
+  "weight_g": 1155,
+  "aperture_blades": 9,
+  "source_name": "Tamron 全球官網（規格）",
+  "source_url": "https://www.tamron.com/global/consumer/lenses/a067/spec.html",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 1,155 g；Nikon Z 1,180 g"
+}
