@@ -1,0 +1,22 @@
+---
+// 登入牆：沒登入就送去 /login/；有登入就顯示頁面，並在右上角顯示帳號與登出。
+---
+<script>
+  import { currentUser, signOut, safeNext } from "../lib/auth.js";
+  (async () => {
+    let user = null;
+    try { user = await currentUser(); } catch (e) {}
+    if (!user) {
+      try { sessionStorage.setItem("zg-after-login", safeNext(location.pathname + location.search)); } catch (e) {}
+      location.replace("/login/");
+      return;
+    }
+    const box = document.getElementById("account");
+    if (box) {
+      box.querySelector("span").textContent = user.email || "";
+      box.querySelector("button").addEventListener("click", () => signOut());
+      box.hidden = false;
+    }
+    document.documentElement.classList.remove("gate");
+  })();
+</script>

@@ -65,4 +65,4 @@
 
 - 程式有更新（合併到 `main`）時，Vercel 會**自動重新部署**。
 - Claude 在分支上做的修改，Vercel 會自動產生**預覽網址**（在 GitHub 分支或 Vercel 的 Deployments 頁看得到），可以在手機上直接測試，滿意再合併到 main。
-- 網站完成後可以到 Google Search Console 提交 `https://zhuiguang.riseatsun.com/sitemap-index.xml`，讓 Google 更快收錄。（需要時跟 Claude 說，我會一步一步帶。）
+- 目前是封閉測試，不要提交網站地圖給 Google。正式公開時再跟 Claude 說。

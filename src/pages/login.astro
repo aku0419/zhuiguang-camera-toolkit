@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="登入" description="用 Google 帳號登入逐光｜攝影工具組。" gate={false}>
+  <div class="login">
+    <p class="eyebrow">Sign in</p>
+    <h1>登入逐光</h1>
+    <p class="lead">用 Google 帳號登入就能使用全部查詢與計算工具，免費。</p>
+    <button class="btn primary gbtn" type="button" id="login">用 Google 帳號登入</button>
+    <p class="hint" id="err" hidden></p>
+    <p class="hint">登入只會用到你的 Google 帳號 Email，用來辨識你是誰。詳情見<a href="/about/">關於逐光</a>。</p>
+  </div>
+  <script>
+    import { configured, currentUser, signInWithGoogle, safeNext } from "../lib/auth.js";
+    const err = document.getElementById("err");
+    const show = (t) => { err.hidden = false; err.textContent = t; };
+    (async () => {
+      if (!configured) { show("登入功能還在設定中，暫時無法登入，抱歉。"); return; }
+      const params = new URLSearchParams(location.search);
+      if (params.get("error") || params.get("error_description")) show("登入沒有成功，請再試一次。如果一直失敗，請用「回報問題」告訴我們。");
+      // 從 Google 回來時，supabase-js 會自動換成登入狀態；有登入就回到原本的頁面
+      let user = null;
+      try { user = await currentUser(); } catch (e) {}
+      if (user) {
+        let next = "/";
+        try { next = safeNext(sessionStorage.getItem("zg-after-login")); sessionStorage.removeItem("zg-after-login"); } catch (e) {}
+        location.replace(next);
+      }
+    })();
+    document.getElementById("login").addEventListener("click", async () => {
+      if (!configured) { show("登入功能還在設定中，暫時無法登入，抱歉。"); return; }
+      try { await signInWithGoogle(); }
+      catch (e) { show("登入沒有成功，請再試一次。如果一直失敗，請用「回報問題」告訴我們。"); }
+    });
+  </script>
+</BaseLayout>

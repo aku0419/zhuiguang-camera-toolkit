@@ -2,22 +2,25 @@
 import "../styles/global.css";
 import { SITE_NAME, DISCLAIMER, SECTIONS } from "../data/site.js";
 import ReportButton from "../components/ReportButton.astro";
+import AuthGate from "../components/AuthGate.astro";
 
 interface Props {
   title?: string;
   description: string;
   section?: string;
+  gate?: boolean; // false = 不需要登入（只有登入頁）
 }
-const { title, description, section } = Astro.props;
+const { title, description, section, gate = true } = Astro.props;
 const fullTitle = title ? `${title}｜${SITE_NAME}` : SITE_NAME;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 <!doctype html>
-<html lang="zh-Hant-TW">
+<html lang="zh-Hant-TW" class={gate ? "gate" : undefined}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
     <title>{fullTitle}</title>
+    <meta name="robots" content="noindex" />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <meta property="og:title" content={fullTitle} />
@@ -41,6 +44,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
             <a href={s.href} aria-current={section === s.id ? "page" : undefined}>{s.zh}</a>
           ))}
         </nav>
+        {gate && (
+          <div class="account" id="account" hidden>
+            <span></span>
+            <button type="button">登出</button>
+          </div>
+        )}
       </header>
       <main>
         <slot />
@@ -55,5 +64,6 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       </footer>
     </div>
     <ReportButton />
+    {gate && <AuthGate />}
   </body>
 </html>
