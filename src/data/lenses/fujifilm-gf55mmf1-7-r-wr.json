@@ -1,0 +1,33 @@
+{
+  "slug": "fujifilm-gf55mmf1-7-r-wr",
+  "brand": "Fujifilm",
+  "series": "GF",
+  "model": "GF55mmF1.7 R WR",
+  "type": "prime",
+  "focal_min": 55.0,
+  "focal_max": 55.0,
+  "max_aperture": 1.7,
+  "max_aperture_tele": null,
+  "mount": "Fujifilm G",
+  "mounts": [
+    "Fujifilm G"
+  ],
+  "mount_match": [
+    "Fujifilm G"
+  ],
+  "coverage": "Medium Format",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OIS）",
+  "min_focus": "0.5 m",
+  "magnification": "0.17×",
+  "filter_mm": 77,
+  "diameter_mm": 94.7,
+  "length_mm": 99.3,
+  "size_note": "長度為鏡頭接環到鏡頭前端",
+  "weight_g": 780,
+  "weight_note": "原廠標示不含鏡頭蓋、遮光罩",
+  "aperture_blades": 11,
+  "source_name": "Fujifilm X 官網（規格）",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/lenses/gf55mmf17-r-wr/specifications/",
+  "last_verified": "2026-10-07"
+}

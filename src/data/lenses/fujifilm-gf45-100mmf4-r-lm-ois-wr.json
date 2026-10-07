@@ -1,0 +1,33 @@
+{
+  "slug": "fujifilm-gf45-100mmf4-r-lm-ois-wr",
+  "brand": "Fujifilm",
+  "series": "GF",
+  "model": "GF45-100mmF4 R LM OIS WR",
+  "type": "zoom",
+  "focal_min": 45.0,
+  "focal_max": 100.0,
+  "max_aperture": 4.0,
+  "max_aperture_tele": null,
+  "mount": "Fujifilm G",
+  "mounts": [
+    "Fujifilm G"
+  ],
+  "mount_match": [
+    "Fujifilm G"
+  ],
+  "coverage": "Medium Format",
+  "autofocus": "Unknown",
+  "stabilization": "鏡頭內防震（OIS）",
+  "min_focus": "0.65 m",
+  "magnification": "0.13×",
+  "filter_mm": 82,
+  "diameter_mm": 93.0,
+  "length_mm": 144.5,
+  "size_note": "長度為鏡頭接環到鏡頭前端",
+  "weight_g": 1005,
+  "weight_note": "原廠標示不含鏡頭蓋、遮光罩",
+  "aperture_blades": 1,
+  "source_name": "Fujifilm X 官網（規格）",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/lenses/gf45-100mmf4-r-lm-ois-wr/specifications/",
+  "last_verified": "2026-10-07"
+}

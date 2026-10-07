@@ -1,0 +1,33 @@
+{
+  "slug": "fujifilm-xf16-50mmf2-8-4-8-r-lm-wr",
+  "brand": "Fujifilm",
+  "series": "XF",
+  "model": "XF16-50mmF2.8-4.8 R LM WR",
+  "type": "zoom",
+  "focal_min": 16.0,
+  "focal_max": 50.0,
+  "max_aperture": 2.8,
+  "max_aperture_tele": 4.8,
+  "mount": "Fujifilm X",
+  "mounts": [
+    "Fujifilm X"
+  ],
+  "mount_match": [
+    "Fujifilm X"
+  ],
+  "coverage": "APS-C",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OIS）",
+  "min_focus": "0.24 m",
+  "magnification": "0.3×（望端）",
+  "filter_mm": 58,
+  "diameter_mm": 65.0,
+  "length_mm": 71.4,
+  "size_note": "長度為鏡頭接環到鏡頭前端",
+  "weight_g": 240,
+  "weight_note": "原廠標示不含鏡頭蓋、遮光罩",
+  "aperture_blades": null,
+  "source_name": "Fujifilm X 官網（規格）",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/lenses/xf16-50mmf28-48-r-lm-wr/specifications/",
+  "last_verified": "2026-10-07"
+}

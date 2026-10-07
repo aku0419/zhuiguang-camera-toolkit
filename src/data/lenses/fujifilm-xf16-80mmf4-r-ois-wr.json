@@ -1,0 +1,33 @@
+{
+  "slug": "fujifilm-xf16-80mmf4-r-ois-wr",
+  "brand": "Fujifilm",
+  "series": "XF",
+  "model": "XF16-80mmF4 R OIS WR",
+  "type": "zoom",
+  "focal_min": 16.0,
+  "focal_max": 80.0,
+  "max_aperture": 4.0,
+  "max_aperture_tele": null,
+  "mount": "Fujifilm X",
+  "mounts": [
+    "Fujifilm X"
+  ],
+  "mount_match": [
+    "Fujifilm X"
+  ],
+  "coverage": "APS-C",
+  "autofocus": "Unknown",
+  "stabilization": "鏡頭內防震（OIS）",
+  "min_focus": "0.35 m",
+  "magnification": "0.25×",
+  "filter_mm": 72,
+  "diameter_mm": 78.3,
+  "length_mm": 88.9,
+  "size_note": "長度為鏡頭接環到鏡頭前端",
+  "weight_g": 440,
+  "weight_note": "原廠標示不含鏡頭蓋、遮光罩",
+  "aperture_blades": 9,
+  "source_name": "Fujifilm X 官網（規格）",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/lenses/xf16-80mmf4-r-ois-wr/specifications/",
+  "last_verified": "2026-10-07"
+}

@@ -1,0 +1,33 @@
+{
+  "slug": "fujifilm-xf18-120mmf4-lm-pz-wr",
+  "brand": "Fujifilm",
+  "series": "XF",
+  "model": "XF18-120mmF4 LM PZ WR",
+  "type": "zoom",
+  "focal_min": 18.0,
+  "focal_max": 120.0,
+  "max_aperture": 4.0,
+  "max_aperture_tele": null,
+  "mount": "Fujifilm X",
+  "mounts": [
+    "Fujifilm X"
+  ],
+  "mount_match": [
+    "Fujifilm X"
+  ],
+  "coverage": "APS-C",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OIS）",
+  "min_focus": "0.6 m",
+  "magnification": "0.2×（望端）",
+  "filter_mm": 72,
+  "diameter_mm": 77.3,
+  "length_mm": 123.5,
+  "size_note": "長度為鏡頭接環到鏡頭前端",
+  "weight_g": 460,
+  "weight_note": "原廠標示不含鏡頭蓋、遮光罩",
+  "aperture_blades": 7,
+  "source_name": "Fujifilm X 官網（規格）",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/lenses/xf18-120mmf4-lm-pz-wr/specifications/",
+  "last_verified": "2026-10-07"
+}

@@ -65,6 +65,10 @@ export function camerasFor(l) {
         fit = "這是 APS-C 專用鏡頭，裝在較大片幅的機身會裁切成較小的畫面範圍";
       } else if (l.coverage === "Full Frame" && c.crop_factor && c.crop_factor > 1.15) {
         fit = `涵蓋全片幅；這台感光元件較小，視角約變窄 ${Math.round(c.crop_factor * 10) / 10} 倍（等效焦段 ${Math.round(l.focal_min * c.crop_factor * 10) / 10}${l.type === "zoom" ? `–${Math.round(l.focal_max * c.crop_factor * 10) / 10}` : ""}mm）`;
+      } else if (l.coverage === "APS-C" && /Super35|APS-C/.test(c.format_group)) {
+        fit = "APS-C 鏡頭，對應這台的感光元件";
+      } else if (l.coverage === "Medium Format" && /大片幅/.test(c.format_group)) {
+        fit = "中片幅鏡頭，對應這台的感光元件";
       } else if (l.coverage === "Micro Four Thirds" && c.format_group === "M43") {
         fit = "M43 鏡頭，對應這台的感光元件";
       } else if (l.coverage === "Full Frame" && /全片幅/.test(c.format_group)) {

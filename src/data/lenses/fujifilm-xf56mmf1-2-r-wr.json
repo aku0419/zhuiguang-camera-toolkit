@@ -1,0 +1,33 @@
+{
+  "slug": "fujifilm-xf56mmf1-2-r-wr",
+  "brand": "Fujifilm",
+  "series": "XF",
+  "model": "XF56mmF1.2 R WR",
+  "type": "prime",
+  "focal_min": 56.0,
+  "focal_max": 56.0,
+  "max_aperture": 1.2,
+  "max_aperture_tele": null,
+  "mount": "Fujifilm X",
+  "mounts": [
+    "Fujifilm X"
+  ],
+  "mount_match": [
+    "Fujifilm X"
+  ],
+  "coverage": "APS-C",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OIS）",
+  "min_focus": "0.5 m",
+  "magnification": "0.14×",
+  "filter_mm": 67,
+  "diameter_mm": 79.4,
+  "length_mm": 76.0,
+  "size_note": "長度為鏡頭接環到鏡頭前端",
+  "weight_g": 445,
+  "weight_note": "原廠標示不含鏡頭蓋、遮光罩",
+  "aperture_blades": 11,
+  "source_name": "Fujifilm X 官網（規格）",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/lenses/xf56mmf12-r-wr/specifications/",
+  "last_verified": "2026-10-07"
+}

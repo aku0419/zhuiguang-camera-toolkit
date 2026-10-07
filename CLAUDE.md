@@ -89,6 +89,7 @@
 - Tamron：用 Tamron 全球官網的規格頁（`www.tamron.com/global/consumer/lenses/<型號代碼>/spec.html`，英文，欄位以 Tab 分隔）整理。已收 24 支現行無反光鏡鏡頭（Sony E／Nikon Z／Fujifilm X／Canon RF）；已停產（End of sale）與單反（EF／F／A 卡口）、M43 的不收。Di III-A、Di II 當作 APS-C 專用。
 - Viltrox：用 Viltrox 官方網站商品頁的 Specs 區塊整理（英文）。已收 21 支（Air、EVO、Pro、LAB 定焦；Sony E／Nikon Z／Fujifilm X／L-Mount）。舊款頁面格式不同、找不到規格的先跳過（負責人決定：這不是台灣主流品牌，找不到就不補）。
 - Panasonic：用 Panasonic 日本官網的規格頁（`panasonic.jp/dc/p-db/<型號>_spec.html`，日文表格）整理。鏡頭清單是 JavaScript 動態載入、我讀不到，所以用型號試探網址（S-R／S-E／S-S／S-X、H-ES／H-X／H-HS 等），頁面存在才收。已收 41 支（LUMIX S 的 L-Mount 15 支、LUMIX G／LEICA DG 的 M43 26 支）。M43 鏡頭的 `coverage` 是 `Micro Four Thirds`。
+- Fujifilm：用 Fujifilm X 官網（`www.fujifilm-x.com/en-us/products/lenses/<鏡頭>/specifications/`，英文）整理。已收 52 支（XF／XC 的 Fujifilm X 卡口、GF 的 Fujifilm G 卡口含 PZ 電影變焦 T 值）。官網有幾頁會顯示成別支鏡頭的規格（例如 XC13-33、XF16mmF2.8），收錄前一定要檢查頁面的 `Type` 欄位跟鏡頭名稱一致，不一致就跳過。500mm、T/S、增距鏡、Fujinon Premista／MK 電影鏡頭還沒收。
 - 電影鏡頭用 T 值：`aperture_type: "T"`；可填 `front_diameter_mm`、`image_circle_mm`、`size_text`。一支鏡頭可裝的卡口不只一個時（例如 EF／PL 可換），用 `mount_match` 列出要比對的相機卡口文字。
 
 ## 開發指令

@@ -1,0 +1,33 @@
+{
+  "slug": "fujifilm-xc15-45mmf3-5-5-6-ois-pz",
+  "brand": "Fujifilm",
+  "series": "XC",
+  "model": "XC15-45mmF3.5-5.6 OIS PZ",
+  "type": "zoom",
+  "focal_min": 15.0,
+  "focal_max": 45.0,
+  "max_aperture": 3.5,
+  "max_aperture_tele": 5.6,
+  "mount": "Fujifilm X",
+  "mounts": [
+    "Fujifilm X"
+  ],
+  "mount_match": [
+    "Fujifilm X"
+  ],
+  "coverage": "APS-C",
+  "autofocus": "Unknown",
+  "stabilization": "鏡頭內防震（OIS）",
+  "min_focus": "0.13 m",
+  "magnification": "0.24×",
+  "filter_mm": 52,
+  "diameter_mm": 62.6,
+  "length_mm": 44.2,
+  "size_note": "長度為鏡頭接環到鏡頭前端",
+  "weight_g": 135,
+  "weight_note": "原廠標示不含鏡頭蓋、遮光罩",
+  "aperture_blades": 7,
+  "source_name": "Fujifilm X 官網（規格）",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/lenses/xc15-45mmf35-56-ois-pz/specifications/",
+  "last_verified": "2026-10-07"
+}

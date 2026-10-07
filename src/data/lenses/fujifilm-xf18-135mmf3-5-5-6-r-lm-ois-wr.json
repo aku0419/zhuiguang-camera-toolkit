@@ -1,0 +1,33 @@
+{
+  "slug": "fujifilm-xf18-135mmf3-5-5-6-r-lm-ois-wr",
+  "brand": "Fujifilm",
+  "series": "XF",
+  "model": "XF18-135mmF3.5-5.6 R LM OIS WR",
+  "type": "zoom",
+  "focal_min": 18.0,
+  "focal_max": 135.0,
+  "max_aperture": 3.5,
+  "max_aperture_tele": 5.6,
+  "mount": "Fujifilm X",
+  "mounts": [
+    "Fujifilm X"
+  ],
+  "mount_match": [
+    "Fujifilm X"
+  ],
+  "coverage": "APS-C",
+  "autofocus": "Unknown",
+  "stabilization": "鏡頭內防震（OIS）",
+  "min_focus": "0.6 m",
+  "magnification": "0.27×",
+  "filter_mm": 67,
+  "diameter_mm": 75.7,
+  "length_mm": 97.8,
+  "size_note": "長度為鏡頭接環到鏡頭前端",
+  "weight_g": 490,
+  "weight_note": "原廠標示不含鏡頭蓋、遮光罩",
+  "aperture_blades": 7,
+  "source_name": "Fujifilm X 官網（規格）",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/lenses/xf18-135mmf35-56-r-lm-ois-wr/specifications/",
+  "last_verified": "2026-10-07"
+}

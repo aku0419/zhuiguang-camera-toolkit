@@ -1,0 +1,33 @@
+{
+  "slug": "fujifilm-xf23mmf2-r-wr",
+  "brand": "Fujifilm",
+  "series": "XF",
+  "model": "XF23mmF2 R WR",
+  "type": "prime",
+  "focal_min": 23.0,
+  "focal_max": 23.0,
+  "max_aperture": 2.0,
+  "max_aperture_tele": null,
+  "mount": "Fujifilm X",
+  "mounts": [
+    "Fujifilm X"
+  ],
+  "mount_match": [
+    "Fujifilm X"
+  ],
+  "coverage": "APS-C",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OIS）",
+  "min_focus": "0.22 m",
+  "magnification": "0.13×",
+  "filter_mm": 43,
+  "diameter_mm": 60.0,
+  "length_mm": 51.9,
+  "size_note": "長度為鏡頭接環到鏡頭前端",
+  "weight_g": 180,
+  "weight_note": "原廠標示不含鏡頭蓋、遮光罩",
+  "aperture_blades": 9,
+  "source_name": "Fujifilm X 官網（規格）",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/lenses/xf23mmf2-r-wr/specifications/",
+  "last_verified": "2026-10-07"
+}

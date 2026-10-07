@@ -1,0 +1,34 @@
+{
+  "slug": "fujifilm-gf32-90mmt3-5-pz-ois-wr",
+  "brand": "Fujifilm",
+  "series": "GF PZ（電影變焦）",
+  "model": "GF32-90mmT3.5 PZ OIS WR",
+  "type": "zoom",
+  "focal_min": 32.0,
+  "focal_max": 90.0,
+  "max_aperture": 3.5,
+  "max_aperture_tele": null,
+  "aperture_type": "T",
+  "mount": "Fujifilm G",
+  "mounts": [
+    "Fujifilm G"
+  ],
+  "mount_match": [
+    "Fujifilm G"
+  ],
+  "coverage": "Medium Format",
+  "autofocus": "Unknown",
+  "stabilization": "鏡頭內防震（OIS）",
+  "min_focus": "0.8 m",
+  "magnification": "0.06×（廣端）",
+  "filter_mm": 111,
+  "diameter_mm": 123.5,
+  "length_mm": 222.5,
+  "size_note": "長度為鏡頭接環到鏡頭前端",
+  "weight_g": 2150,
+  "weight_note": "原廠標示不含鏡頭蓋、遮光罩",
+  "aperture_blades": 13,
+  "source_name": "Fujifilm X 官網（規格）",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/lenses/gf32-90mmt35-pz-ois-wr/specifications/",
+  "last_verified": "2026-10-07"
+}

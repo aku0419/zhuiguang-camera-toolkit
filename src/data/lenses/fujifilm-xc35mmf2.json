@@ -1,0 +1,33 @@
+{
+  "slug": "fujifilm-xc35mmf2",
+  "brand": "Fujifilm",
+  "series": "XC",
+  "model": "XC35mmF2",
+  "type": "prime",
+  "focal_min": 35.0,
+  "focal_max": 35.0,
+  "max_aperture": 2.0,
+  "max_aperture_tele": null,
+  "mount": "Fujifilm X",
+  "mounts": [
+    "Fujifilm X"
+  ],
+  "mount_match": [
+    "Fujifilm X"
+  ],
+  "coverage": "APS-C",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OIS）",
+  "min_focus": "0.35 m",
+  "magnification": "0.14×",
+  "filter_mm": 43,
+  "diameter_mm": 58.4,
+  "length_mm": 46.5,
+  "size_note": "長度為鏡頭接環到鏡頭前端",
+  "weight_g": 130,
+  "weight_note": "原廠標示不含鏡頭蓋、遮光罩",
+  "aperture_blades": 1,
+  "source_name": "Fujifilm X 官網（規格）",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/lenses/xc35mmf2/specifications/",
+  "last_verified": "2026-10-07"
+}

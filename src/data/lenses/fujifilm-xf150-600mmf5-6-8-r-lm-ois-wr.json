@@ -1,0 +1,33 @@
+{
+  "slug": "fujifilm-xf150-600mmf5-6-8-r-lm-ois-wr",
+  "brand": "Fujifilm",
+  "series": "XF",
+  "model": "XF150-600mmF5.6-8 R LM OIS WR",
+  "type": "zoom",
+  "focal_min": 150.0,
+  "focal_max": 600.0,
+  "max_aperture": 5.6,
+  "max_aperture_tele": 8.0,
+  "mount": "Fujifilm X",
+  "mounts": [
+    "Fujifilm X"
+  ],
+  "mount_match": [
+    "Fujifilm X"
+  ],
+  "coverage": "APS-C",
+  "autofocus": "Unknown",
+  "stabilization": "鏡頭內防震（OIS）",
+  "min_focus": "2.4 m",
+  "magnification": "0.24×（望端）",
+  "filter_mm": 82,
+  "diameter_mm": 99.0,
+  "length_mm": 314.5,
+  "size_note": "長度為鏡頭接環到鏡頭前端",
+  "weight_g": 1605,
+  "weight_note": "原廠標示不含鏡頭蓋、遮光罩",
+  "aperture_blades": 9,
+  "source_name": "Fujifilm X 官網（規格）",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/lenses/xf150-600mmf56-8-r-lm-ois-wr/specifications/",
+  "last_verified": "2026-10-07"
+}

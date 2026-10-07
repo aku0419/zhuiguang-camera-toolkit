@@ -1,0 +1,33 @@
+{
+  "slug": "fujifilm-xf30mmf2-8-r-lm-wr-macro",
+  "brand": "Fujifilm",
+  "series": "XF",
+  "model": "XF30mmF2.8 R LM WR Macro",
+  "type": "prime",
+  "focal_min": 30.0,
+  "focal_max": 30.0,
+  "max_aperture": 2.8,
+  "max_aperture_tele": null,
+  "mount": "Fujifilm X",
+  "mounts": [
+    "Fujifilm X"
+  ],
+  "mount_match": [
+    "Fujifilm X"
+  ],
+  "coverage": "APS-C",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OIS）",
+  "min_focus": "0.1 m",
+  "magnification": "1×",
+  "filter_mm": 43,
+  "diameter_mm": 60.0,
+  "length_mm": 69.5,
+  "size_note": "長度為鏡頭接環到鏡頭前端",
+  "weight_g": 195,
+  "weight_note": "原廠標示不含鏡頭蓋、遮光罩",
+  "aperture_blades": 9,
+  "source_name": "Fujifilm X 官網（規格）",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/lenses/xf30mmf28-r-lm-wr-macro/specifications/",
+  "last_verified": "2026-10-07"
+}
