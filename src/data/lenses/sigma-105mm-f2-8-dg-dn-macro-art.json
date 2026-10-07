@@ -1,0 +1,35 @@
+{
+  "slug": "sigma-105mm-f2-8-dg-dn-macro-art",
+  "brand": "Sigma",
+  "series": "Art",
+  "model": "105mm F2.8 DG DN MACRO | Art",
+  "type": "prime",
+  "focal_min": 105.0,
+  "focal_max": 105.0,
+  "max_aperture": 2.8,
+  "max_aperture_tele": null,
+  "mount": "Sony E／L-Mount",
+  "mounts": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OS）",
+  "min_focus": "0.295 m",
+  "magnification": "1:1",
+  "filter_mm": 62,
+  "diameter_mm": 74.0,
+  "length_mm": 135.6,
+  "size_text": "Sony E：Φ74 × 135.6 mm；L-Mount：Φ74 × 133.6 mm",
+  "weight_g": 710,
+  "aperture_blades": 9,
+  "source_name": "Sigma 全球官網（規格）",
+  "source_url": "https://www.sigma-global.com/en/lenses/a020_105_28/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 710 g；L-Mount 715 g"
+}

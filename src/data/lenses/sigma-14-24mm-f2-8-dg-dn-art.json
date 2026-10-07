@@ -1,0 +1,35 @@
+{
+  "slug": "sigma-14-24mm-f2-8-dg-dn-art",
+  "brand": "Sigma",
+  "series": "Art",
+  "model": "14–24mm F2.8 DG DN | Art",
+  "type": "zoom",
+  "focal_min": 14.0,
+  "focal_max": 24.0,
+  "max_aperture": 2.8,
+  "max_aperture_tele": null,
+  "mount": "Sony E／L-Mount",
+  "mounts": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OS）",
+  "min_focus": "0.28 m",
+  "magnification": "1:7.3",
+  "filter_mm": null,
+  "diameter_mm": 85.0,
+  "length_mm": 133.0,
+  "size_text": "Sony E：Φ85 × 133 mm；L-Mount：Φ85 × 131 mm",
+  "weight_g": 795,
+  "aperture_blades": 11,
+  "source_name": "Sigma 全球官網（規格）",
+  "source_url": "https://www.sigma-global.com/en/lenses/a019_14_24_28/",
+  "last_verified": "2026-10-07",
+  "filter_note": "原廠標示「-」，未列口徑"
+}

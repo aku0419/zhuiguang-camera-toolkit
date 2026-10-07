@@ -1,0 +1,43 @@
+{
+  "slug": "sigma-56mm-f1-4-dc-dn-contemporary",
+  "brand": "Sigma",
+  "series": "Contemporary",
+  "model": "56mm F1.4 DC DN | Contemporary",
+  "type": "prime",
+  "focal_min": 56.0,
+  "focal_max": 56.0,
+  "max_aperture": 1.4,
+  "max_aperture_tele": null,
+  "mount": "Sony E／L-Mount／Canon RF／Nikon Z／Fujifilm X／Micro Four Thirds",
+  "mounts": [
+    "Sony E",
+    "L-Mount",
+    "Canon RF",
+    "Nikon Z",
+    "Fujifilm X",
+    "Micro Four Thirds"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount",
+    "Canon RF",
+    "Nikon Z",
+    "Fujifilm X",
+    "Micro Four Thirds"
+  ],
+  "coverage": "APS-C",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OS）",
+  "min_focus": "0.5 m",
+  "magnification": "1:7.4",
+  "filter_mm": 55,
+  "diameter_mm": 66.5,
+  "length_mm": 59.5,
+  "size_text": "Sony E：Φ66.5 × 59.5 mm；L-Mount：Φ66.5 × 57.5 mm；Canon RF：Φ69 × 57.5 mm；Nikon Z：Φ70 × 61.5 mm；Fujifilm X：Φ66.5 × 59.8 mm；Micro Four Thirds：Φ66.5 × 58.1 mm",
+  "weight_g": 280,
+  "aperture_blades": 9,
+  "source_name": "Sigma 全球官網（規格）",
+  "source_url": "https://www.sigma-global.com/en/lenses/c018_56_14/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 280 g；L-Mount 285 g；Canon RF 290 g；Nikon Z 295 g；Fujifilm X 280 g；Micro Four Thirds 256 g"
+}

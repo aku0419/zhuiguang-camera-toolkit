@@ -1,0 +1,35 @@
+{
+  "slug": "sigma-200mm-f2-dg-os-sports",
+  "brand": "Sigma",
+  "series": "Sports",
+  "model": "200mm F2 DG OS | Sports",
+  "type": "prime",
+  "focal_min": 200.0,
+  "focal_max": 200.0,
+  "max_aperture": 2.0,
+  "max_aperture_tele": null,
+  "mount": "Sony E／L-Mount",
+  "mounts": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "鏡頭內防震（OS）",
+  "min_focus": "1.7 m",
+  "magnification": "1:7.6",
+  "filter_mm": 105,
+  "diameter_mm": 118.9,
+  "length_mm": 203.0,
+  "size_text": "Sony E：Φ118.9 × 203 mm；L-Mount：Φ118.9 × 201 mm",
+  "weight_g": 1800,
+  "aperture_blades": 11,
+  "source_name": "Sigma 全球官網（規格）",
+  "source_url": "https://www.sigma-global.com/en/lenses/s025_200_2/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 1,800 g；L-Mount 1,820 g"
+}

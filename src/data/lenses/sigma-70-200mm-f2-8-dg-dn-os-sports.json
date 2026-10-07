@@ -1,0 +1,35 @@
+{
+  "slug": "sigma-70-200mm-f2-8-dg-dn-os-sports",
+  "brand": "Sigma",
+  "series": "Sports",
+  "model": "70–200mm F2.8 DG DN OS | Sports",
+  "type": "zoom",
+  "focal_min": 70.0,
+  "focal_max": 200.0,
+  "max_aperture": 2.8,
+  "max_aperture_tele": null,
+  "mount": "Sony E／L-Mount",
+  "mounts": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "鏡頭內防震（OS）",
+  "min_focus": "0.65 m（廣端）～ 1 m（望端）",
+  "magnification": "1:5.2（200mm）",
+  "filter_mm": 77,
+  "diameter_mm": 90.6,
+  "length_mm": 207.0,
+  "size_text": "Sony E：Φ90.6 × 207 mm；L-Mount：Φ90.6 × 205 mm",
+  "weight_g": 1335,
+  "aperture_blades": 11,
+  "source_name": "Sigma 全球官網（規格）",
+  "source_url": "https://www.sigma-global.com/en/lenses/s023_70_200_28/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 1,335 g；L-Mount 1,345 g"
+}

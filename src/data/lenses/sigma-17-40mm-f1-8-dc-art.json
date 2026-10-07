@@ -1,0 +1,39 @@
+{
+  "slug": "sigma-17-40mm-f1-8-dc-art",
+  "brand": "Sigma",
+  "series": "Art",
+  "model": "17–40mm F1.8 DC | Art",
+  "type": "zoom",
+  "focal_min": 17.0,
+  "focal_max": 40.0,
+  "max_aperture": 1.8,
+  "max_aperture_tele": null,
+  "mount": "Sony E／L-Mount／Canon RF／Fujifilm X",
+  "mounts": [
+    "Sony E",
+    "L-Mount",
+    "Canon RF",
+    "Fujifilm X"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount",
+    "Canon RF",
+    "Fujifilm X"
+  ],
+  "coverage": "APS-C",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OS）",
+  "min_focus": "0.28 m",
+  "magnification": "1:4.8（40mm）",
+  "filter_mm": 67,
+  "diameter_mm": 72.9,
+  "length_mm": 117.9,
+  "size_text": "Sony E：Φ72.9 × 117.9 mm；L-Mount：Φ72.9 × 115.9 mm；Canon RF：Φ72.9 × 115.9 mm；Fujifilm X：Φ72.9 × 118.2 mm",
+  "weight_g": 525,
+  "aperture_blades": 11,
+  "source_name": "Sigma 全球官網（規格）",
+  "source_url": "https://www.sigma-global.com/en/lenses/a025_17_40_18/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 525 g；L-Mount 535 g；Canon RF 560 g；Fujifilm X 530 g"
+}

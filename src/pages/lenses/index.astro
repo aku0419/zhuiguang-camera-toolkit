@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ComingSoon from "../../components/ComingSoon.astro";
-import { lenses, focalText, apertureText, typeText } from "../../lib/lenses.js";
+import { lenses, focalText, apertureText, typeText, mountsOf, MOUNT_ORDER } from "../../lib/lenses.js";
 const brands = [...new Set(lenses.map((l) => l.brand))];
-const mounts = [...new Set(lenses.map((l) => l.mount))];
+const mounts = [...new Set(lenses.flatMap(mountsOf))].sort((a, b) => (MOUNT_ORDER.indexOf(a) + 1 || 99) - (MOUNT_ORDER.indexOf(b) + 1 || 99));
 const types = ["定焦", "變焦"];
 ---
 {lenses.length === 0 ? (
@@ -30,7 +30,7 @@ const types = ["定焦", "變焦"];
     <p class="cam-count" aria-live="polite"><span id="count">{lenses.length}</span> 支</p>
     <div class="grid cam-grid lens-grid">
       {lenses.map((l) => (
-        <a class="card cam-card" href={`/lenses/${l.slug}/`} data-brand={l.brand} data-mount={l.mount} data-type={typeText(l)}>
+        <a class="card cam-card" href={`/lenses/${l.slug}/`} data-brand={l.brand} data-mount={mountsOf(l).join("|")} data-type={typeText(l)}>
           <span class="k">{l.brand}・{l.series}</span>
           <h3>{l.model}</h3>
           <p>{focalText(l)}・{apertureText(l)}</p>
@@ -52,7 +52,7 @@ const types = ["定焦", "變焦"];
         group.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
         let n = 0;
         for (const c of cards) {
-          const ok = (!state.brand || c.dataset.brand === state.brand) && (!state.mount || c.dataset.mount === state.mount) && (!state.type || c.dataset.type === state.type);
+          const ok = (!state.brand || c.dataset.brand === state.brand) && (!state.mount || (c.dataset.mount || "").split("|").includes(state.mount)) && (!state.type || c.dataset.type === state.type);
           c.hidden = !ok;
           if (ok) n++;
         }

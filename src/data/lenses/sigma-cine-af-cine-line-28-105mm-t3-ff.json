@@ -1,0 +1,36 @@
+{
+  "slug": "sigma-cine-af-cine-line-28-105mm-t3-ff",
+  "brand": "Sigma",
+  "series": "Cine｜AF CINE LINE",
+  "model": "AF CINE LINE 28–105mm T3 FF",
+  "type": "zoom",
+  "focal_min": 28.0,
+  "focal_max": 105.0,
+  "max_aperture": 3.0,
+  "aperture_type": "T",
+  "mount": "Sony E／L-Mount",
+  "mounts": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.4 m（由感光元件平面算起）",
+  "magnification": "1:3.1",
+  "filter_mm": 82,
+  "diameter_mm": 95.0,
+  "length_mm": 159.9,
+  "front_diameter_mm": 95.0,
+  "size_text": "長度（鏡頭前端到接環）：Sony E 159.9 mm；L-Mount 157.9 mm；前端直徑 Φ95 mm",
+  "weight_g": 1300,
+  "aperture_blades": 12,
+  "source_name": "Sigma 全球官網（Cine 鏡頭規格）",
+  "source_url": "https://www.sigma-global.com/en/cine-lenses/af-cine/28_105_3/",
+  "last_verified": "2026-10-07",
+  "weight_note": "原廠以 kg 標示，已換算；不含鏡頭支撐腳"
+}

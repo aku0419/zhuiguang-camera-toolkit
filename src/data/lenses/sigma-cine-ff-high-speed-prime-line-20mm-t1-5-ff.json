@@ -1,0 +1,38 @@
+{
+  "slug": "sigma-cine-ff-high-speed-prime-line-20mm-t1-5-ff",
+  "brand": "Sigma",
+  "series": "Cine｜FF High Speed Prime",
+  "model": "FF High Speed Prime Line 20mm T1.5 FF",
+  "type": "prime",
+  "focal_min": 20.0,
+  "focal_max": 20.0,
+  "max_aperture": 1.5,
+  "aperture_type": "T",
+  "mount": "PL／Sony E",
+  "mounts": [
+    "PL",
+    "Sony E"
+  ],
+  "mount_match": [
+    "PL",
+    "Sony E"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.28 m（由感光元件平面算起）",
+  "magnification": "1:7.1",
+  "filter_mm": null,
+  "diameter_mm": 95.0,
+  "length_mm": 110.0,
+  "front_diameter_mm": 95.0,
+  "size_text": "長度（鏡頭前端到接環）：PL 110 mm；Sony E 144 mm；前端直徑 Φ95 mm",
+  "weight_g": 1300,
+  "aperture_blades": 9,
+  "source_name": "Sigma 全球官網（Cine 鏡頭規格）",
+  "source_url": "https://www.sigma-global.com/en/cine-lenses/ff-high-speed-prime/20_15/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量（原廠以 kg 標示，已換算）：PL 1,300 g；Sony E 1,400 g（不含鏡頭支撐腳）",
+  "image_circle_mm": 43.3,
+  "filter_note": "規格未列"
+}

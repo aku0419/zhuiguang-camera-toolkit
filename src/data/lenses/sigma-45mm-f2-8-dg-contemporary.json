@@ -1,0 +1,35 @@
+{
+  "slug": "sigma-45mm-f2-8-dg-contemporary",
+  "brand": "Sigma",
+  "series": "Contemporary",
+  "model": "45mm F2.8 DG | Contemporary",
+  "type": "prime",
+  "focal_min": 45.0,
+  "focal_max": 45.0,
+  "max_aperture": 2.8,
+  "max_aperture_tele": null,
+  "mount": "Sony E／L-Mount",
+  "mounts": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OS）",
+  "min_focus": "0.24 m",
+  "magnification": "1:4",
+  "filter_mm": 55,
+  "diameter_mm": 64.0,
+  "length_mm": 48.2,
+  "size_text": "Sony E：Φ64 × 48.2 mm；L-Mount：Φ64 × 46.2 mm",
+  "weight_g": 235,
+  "aperture_blades": 7,
+  "source_name": "Sigma 全球官網（規格）",
+  "source_url": "https://www.sigma-global.com/en/lenses/c019_45_28_re/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 235 g；L-Mount 220 g"
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "sigma-cine-ff-high-speed-prime-line-35mm-t1-5-ff",
+  "brand": "Sigma",
+  "series": "Cine｜FF High Speed Prime",
+  "model": "FF High Speed Prime Line 35mm T1.5 FF",
+  "type": "prime",
+  "focal_min": 35.0,
+  "focal_max": 35.0,
+  "max_aperture": 1.5,
+  "aperture_type": "T",
+  "mount": "PL／Sony E",
+  "mounts": [
+    "PL",
+    "Sony E"
+  ],
+  "mount_match": [
+    "PL",
+    "Sony E"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.3 m（由感光元件平面算起）",
+  "magnification": "1:5.2",
+  "filter_mm": 82,
+  "diameter_mm": 95.0,
+  "length_mm": 87.0,
+  "front_diameter_mm": 95.0,
+  "size_text": "長度（鏡頭前端到接環）：PL 87 mm；Sony E 121 mm；前端直徑 Φ95 mm",
+  "weight_g": 1100,
+  "aperture_blades": 9,
+  "source_name": "Sigma 全球官網（Cine 鏡頭規格）",
+  "source_url": "https://www.sigma-global.com/en/cine-lenses/ff-high-speed-prime/35_15/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量（原廠以 kg 標示，已換算）：PL 1,100 g；Sony E 1,200 g（不含鏡頭支撐腳）",
+  "image_circle_mm": 43.3
+}

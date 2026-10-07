@@ -1,0 +1,35 @@
+{
+  "slug": "sigma-50mm-f1-4-dg-dn-art",
+  "brand": "Sigma",
+  "series": "Art",
+  "model": "50mm F1.4 DG DN | Art",
+  "type": "prime",
+  "focal_min": 50.0,
+  "focal_max": 50.0,
+  "max_aperture": 1.4,
+  "max_aperture_tele": null,
+  "mount": "Sony E／L-Mount",
+  "mounts": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OS）",
+  "min_focus": "0.45 m",
+  "magnification": "1:6.8",
+  "filter_mm": 72,
+  "diameter_mm": 78.2,
+  "length_mm": 111.5,
+  "size_text": "Sony E：Φ78.2 × 111.5 mm；L-Mount：Φ78.2 × 109.5 mm",
+  "weight_g": 660,
+  "aperture_blades": 11,
+  "source_name": "Sigma 全球官網（規格）",
+  "source_url": "https://www.sigma-global.com/en/lenses/a023_50_14/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 660 g；L-Mount 670 g"
+}

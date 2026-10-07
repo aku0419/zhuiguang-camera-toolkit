@@ -1,0 +1,39 @@
+{
+  "slug": "sigma-18-50mm-f2-8-dc-dn-contemporary",
+  "brand": "Sigma",
+  "series": "Contemporary",
+  "model": "18–50mm F2.8 DC DN | Contemporary",
+  "type": "zoom",
+  "focal_min": 18.0,
+  "focal_max": 50.0,
+  "max_aperture": 2.8,
+  "max_aperture_tele": null,
+  "mount": "Sony E／L-Mount／Canon RF／Fujifilm X",
+  "mounts": [
+    "Sony E",
+    "L-Mount",
+    "Canon RF",
+    "Fujifilm X"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount",
+    "Canon RF",
+    "Fujifilm X"
+  ],
+  "coverage": "APS-C",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OS）",
+  "min_focus": "0.121 m（廣端）～ 0.3 m（望端）",
+  "magnification": "1:2.8（廣端）～ 1:5（望端）",
+  "filter_mm": 55,
+  "diameter_mm": 61.6,
+  "length_mm": 76.5,
+  "size_text": "Sony E：Φ61.6 × 76.5 mm；L-Mount：Φ65.4 × 74.5 mm；Canon RF：Φ69.2 × 74.5 mm；Fujifilm X：Φ61.6 × 76.8 mm",
+  "weight_g": 290,
+  "aperture_blades": 7,
+  "source_name": "Sigma 全球官網（規格）",
+  "source_url": "https://www.sigma-global.com/en/lenses/c021_18_50_28/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 290 g；L-Mount 290 g；Canon RF 300 g；Fujifilm X 285 g"
+}

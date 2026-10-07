@@ -1,0 +1,35 @@
+{
+  "slug": "sigma-17mm-f4-dg-contemporary",
+  "brand": "Sigma",
+  "series": "Contemporary",
+  "model": "17mm F4 DG | Contemporary",
+  "type": "prime",
+  "focal_min": 17.0,
+  "focal_max": 17.0,
+  "max_aperture": 4.0,
+  "max_aperture_tele": null,
+  "mount": "Sony E／L-Mount",
+  "mounts": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OS）",
+  "min_focus": "0.12 m",
+  "magnification": "1:3.6",
+  "filter_mm": 55,
+  "diameter_mm": 64.0,
+  "length_mm": 50.8,
+  "size_text": "Sony E：Φ64 × 50.8 mm；L-Mount：Φ64 × 48.8 mm",
+  "weight_g": 220,
+  "aperture_blades": 7,
+  "source_name": "Sigma 全球官網（規格）",
+  "source_url": "https://www.sigma-global.com/en/lenses/c023_17_4_re/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 220 g；L-Mount 225 g"
+}

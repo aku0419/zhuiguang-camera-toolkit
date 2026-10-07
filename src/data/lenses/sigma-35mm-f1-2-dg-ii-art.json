@@ -1,0 +1,35 @@
+{
+  "slug": "sigma-35mm-f1-2-dg-ii-art",
+  "brand": "Sigma",
+  "series": "Art",
+  "model": "35mm F1.2 DG II | Art",
+  "type": "prime",
+  "focal_min": 35.0,
+  "focal_max": 35.0,
+  "max_aperture": 1.2,
+  "max_aperture_tele": null,
+  "mount": "Sony E／L-Mount",
+  "mounts": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OS）",
+  "min_focus": "0.28 m",
+  "magnification": "1:5.3",
+  "filter_mm": 72,
+  "diameter_mm": 81.0,
+  "length_mm": 113.4,
+  "size_text": "Sony E：Φ81 × 113.4 mm；L-Mount：Φ81 × 111.4 mm",
+  "weight_g": 745,
+  "aperture_blades": 11,
+  "source_name": "Sigma 全球官網（規格）",
+  "source_url": "https://www.sigma-global.com/en/lenses/a025_35_12/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 745 g；L-Mount 755 g"
+}

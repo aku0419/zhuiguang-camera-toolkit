@@ -1,0 +1,35 @@
+{
+  "slug": "sigma-24mm-f1-4-dg-dn-art",
+  "brand": "Sigma",
+  "series": "Art",
+  "model": "24mm F1.4 DG DN | Art",
+  "type": "prime",
+  "focal_min": 24.0,
+  "focal_max": 24.0,
+  "max_aperture": 1.4,
+  "max_aperture_tele": null,
+  "mount": "Sony E／L-Mount",
+  "mounts": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OS）",
+  "min_focus": "0.25 m",
+  "magnification": "1:7.1",
+  "filter_mm": 72,
+  "diameter_mm": 75.7,
+  "length_mm": 97.5,
+  "size_text": "Sony E：Φ75.7 × 97.5 mm；L-Mount：Φ75.7 × 95.5 mm",
+  "weight_g": 510,
+  "aperture_blades": 11,
+  "source_name": "Sigma 全球官網（規格）",
+  "source_url": "https://www.sigma-global.com/en/lenses/a022_24_14/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 510 g；L-Mount 520 g"
+}

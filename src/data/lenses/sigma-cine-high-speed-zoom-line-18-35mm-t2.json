@@ -1,0 +1,37 @@
+{
+  "slug": "sigma-cine-high-speed-zoom-line-18-35mm-t2",
+  "brand": "Sigma",
+  "series": "Cine｜High Speed Zoom",
+  "model": "High Speed Zoom Line 18–35mm T2",
+  "type": "zoom",
+  "focal_min": 18.0,
+  "focal_max": 35.0,
+  "max_aperture": 2.0,
+  "aperture_type": "T",
+  "mount": "PL／Sony E",
+  "mounts": [
+    "PL",
+    "Sony E"
+  ],
+  "mount_match": [
+    "PL",
+    "Sony E"
+  ],
+  "coverage": "Super35",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.28 m（由感光元件平面算起）",
+  "magnification": "1:4.3",
+  "filter_mm": 82,
+  "diameter_mm": 95.0,
+  "length_mm": 121.5,
+  "front_diameter_mm": 95.0,
+  "size_text": "長度（鏡頭前端到接環）：PL 121.5 mm；Sony E 155.5 mm；前端直徑 Φ95 mm",
+  "weight_g": 1400,
+  "aperture_blades": 9,
+  "source_name": "Sigma 全球官網（Cine 鏡頭規格）",
+  "source_url": "https://www.sigma-global.com/en/cine-lenses/high-speed-zoom/18_35_2/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量（原廠以 kg 標示，已換算）：PL 1,400 g；Sony E 1,600 g（不含鏡頭支撐腳）",
+  "image_circle_mm": 28.4
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "sigma-28-45mm-f1-8-dg-dn-art",
+  "brand": "Sigma",
+  "series": "Art",
+  "model": "28–45mm F1.8 DG DN | Art",
+  "type": "zoom",
+  "focal_min": 28.0,
+  "focal_max": 45.0,
+  "max_aperture": 1.8,
+  "max_aperture_tele": null,
+  "mount": "Sony E／L-Mount",
+  "mounts": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OS）",
+  "min_focus": "0.3 m",
+  "magnification": "1:4（45mm）",
+  "filter_mm": 82,
+  "diameter_mm": 87.8,
+  "length_mm": 153.4,
+  "size_text": "Sony E：Φ87.8 × 153.4 mm；L-Mount：Φ87.8 × 151.4 mm",
+  "weight_g": 950,
+  "aperture_blades": 11,
+  "source_name": "Sigma 全球官網（規格）",
+  "source_url": "https://www.sigma-global.com/en/lenses/a024_28_45_18/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 950 g；L-Mount 960 g"
+}

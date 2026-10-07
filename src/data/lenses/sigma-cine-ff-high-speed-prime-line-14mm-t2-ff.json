@@ -1,0 +1,38 @@
+{
+  "slug": "sigma-cine-ff-high-speed-prime-line-14mm-t2-ff",
+  "brand": "Sigma",
+  "series": "Cine｜FF High Speed Prime",
+  "model": "FF High Speed Prime Line 14mm T2 FF",
+  "type": "prime",
+  "focal_min": 14.0,
+  "focal_max": 14.0,
+  "max_aperture": 2.0,
+  "aperture_type": "T",
+  "mount": "PL／Sony E",
+  "mounts": [
+    "PL",
+    "Sony E"
+  ],
+  "mount_match": [
+    "PL",
+    "Sony E"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.27 m（由感光元件平面算起）",
+  "magnification": "1:9.8",
+  "filter_mm": null,
+  "diameter_mm": 95.0,
+  "length_mm": 111.5,
+  "front_diameter_mm": 95.0,
+  "size_text": "長度（鏡頭前端到接環）：PL 111.5 mm；Sony E 145.5 mm；前端直徑 Φ95 mm",
+  "weight_g": 1400,
+  "aperture_blades": 9,
+  "source_name": "Sigma 全球官網（Cine 鏡頭規格）",
+  "source_url": "https://www.sigma-global.com/en/cine-lenses/ff-high-speed-prime/14_2/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量（原廠以 kg 標示，已換算）：PL 1,400 g；Sony E 1,500 g（不含鏡頭支撐腳）",
+  "image_circle_mm": 43.3,
+  "filter_note": "規格未列"
+}

@@ -19,6 +19,8 @@ function check(file, l) {
   need(l.aperture_type == null || ["F", "T"].includes(l.aperture_type), "aperture_type（F / T）");
   need(["Full Frame", "APS-C", "Super35", "Medium Format", U].includes(l.coverage), "coverage");
   need(isStr(l.min_focus), "min_focus");
+  need(l.mounts == null || (Array.isArray(l.mounts) && l.mounts.every(isStr)), "mounts");
+  need(l.mount_match == null || (Array.isArray(l.mount_match) && l.mount_match.every(isStr)), "mount_match");
   need(l.filter_mm == null || isNum(l.filter_mm), "filter_mm");
   need(isNum(l.weight_g) || l.weight_g === U, "weight_g");
   need(/^https:\/\//.test(l.source_url || ""), "source_url");
@@ -39,6 +41,9 @@ export const lenses = all.sort((a, b) =>
   (LENS_BRAND_ORDER.indexOf(a.brand) + 1 || 99) - (LENS_BRAND_ORDER.indexOf(b.brand) + 1 || 99) ||
   kind(a) - kind(b) || a.focal_min - b.focal_min || a.max_aperture - b.max_aperture
 );
+
+export const MOUNT_ORDER = ["Sony E", "Canon RF", "Nikon Z", "L-Mount", "Fujifilm X", "Micro Four Thirds", "PL"];
+export const mountsOf = (l) => l.mounts || [l.mount];
 
 export const focalText = (l) => {
   const n = (v) => String(v);

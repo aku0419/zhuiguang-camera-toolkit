@@ -1,0 +1,35 @@
+{
+  "slug": "sigma-28-105mm-f2-8-dg-dn-art",
+  "brand": "Sigma",
+  "series": "Art",
+  "model": "28–105mm F2.8 DG DN | Art",
+  "type": "zoom",
+  "focal_min": 28.0,
+  "focal_max": 105.0,
+  "max_aperture": 2.8,
+  "max_aperture_tele": null,
+  "mount": "Sony E／L-Mount",
+  "mounts": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OS）",
+  "min_focus": "0.4 m",
+  "magnification": "1:3.1",
+  "filter_mm": 82,
+  "diameter_mm": 87.8,
+  "length_mm": 159.9,
+  "size_text": "Sony E：Φ87.8 × 159.9 mm；L-Mount：Φ87.8 × 157.9 mm",
+  "weight_g": 990,
+  "aperture_blades": 12,
+  "source_name": "Sigma 全球官網（規格）",
+  "source_url": "https://www.sigma-global.com/en/lenses/a024_28_105_28/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 990 g；L-Mount 995 g"
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "sigma-20-60mm-f2-8-4-dg-contemporary",
+  "brand": "Sigma",
+  "series": "Contemporary",
+  "model": "20–60mm F2.8–4 DG | Contemporary",
+  "type": "zoom",
+  "focal_min": 20.0,
+  "focal_max": 60.0,
+  "max_aperture": 2.8,
+  "max_aperture_tele": 4.0,
+  "mount": "Sony E／L-Mount",
+  "mounts": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OS）",
+  "min_focus": "0.2 m（廣端）～ 0.25 m（望端）；28mm 時最近 0.158 m",
+  "magnification": "1:2.3（35mm）",
+  "filter_mm": 67,
+  "diameter_mm": 72.2,
+  "length_mm": 88.0,
+  "size_text": "Sony E：Φ72.2 × 88 mm；L-Mount：Φ72.2 × 86 mm",
+  "weight_g": 375,
+  "aperture_blades": 9,
+  "source_name": "Sigma 全球官網（規格）",
+  "source_url": "https://www.sigma-global.com/en/lenses/c026_20_60_28_4/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 375 g；L-Mount 385 g"
+}

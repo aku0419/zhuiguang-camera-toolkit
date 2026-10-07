@@ -1,0 +1,34 @@
+{
+  "slug": "sigma-85mm-f1-2-dg-art",
+  "brand": "Sigma",
+  "series": "Art",
+  "model": "85mm F1.2 DG | Art",
+  "type": "prime",
+  "focal_min": 85.0,
+  "focal_max": 85.0,
+  "max_aperture": 1.2,
+  "max_aperture_tele": null,
+  "mount": "Sony E／L-Mount",
+  "mounts": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OS）",
+  "min_focus": "0.84 m",
+  "magnification": "1:8.9",
+  "filter_mm": 82,
+  "diameter_mm": 87.2,
+  "length_mm": 121.7,
+  "size_text": "Sony E：Φ87.2 × 121.7 mm；L-Mount：Φ87.2 × 119.7 mm",
+  "weight_g": 905,
+  "aperture_blades": 13,
+  "source_name": "Sigma 全球官網（規格）",
+  "source_url": "https://www.sigma-global.com/en/lenses/a026_85_12/",
+  "last_verified": "2026-10-07"
+}

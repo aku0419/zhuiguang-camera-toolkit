@@ -1,0 +1,35 @@
+{
+  "slug": "sigma-135mm-f1-4-dg-art",
+  "brand": "Sigma",
+  "series": "Art",
+  "model": "135mm F1.4 DG | Art",
+  "type": "prime",
+  "focal_min": 135.0,
+  "focal_max": 135.0,
+  "max_aperture": 1.4,
+  "max_aperture_tele": null,
+  "mount": "Sony E／L-Mount",
+  "mounts": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "mount_match": [
+    "Sony E",
+    "L-Mount"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "無（型號未標示 OS）",
+  "min_focus": "1.1 m",
+  "magnification": "1:6.9",
+  "filter_mm": 105,
+  "diameter_mm": 111.7,
+  "length_mm": 137.5,
+  "size_text": "Sony E：Φ111.7 × 137.5 mm；L-Mount：Φ111.7 × 135.5 mm",
+  "weight_g": 1420,
+  "aperture_blades": 13,
+  "source_name": "Sigma 全球官網（規格）",
+  "source_url": "https://www.sigma-global.com/en/lenses/a025_135_14/",
+  "last_verified": "2026-10-07",
+  "weight_note": "各卡口重量：Sony E 1,420 g；L-Mount 1,430 g"
+}
