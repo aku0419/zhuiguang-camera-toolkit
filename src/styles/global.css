@@ -181,3 +181,13 @@ html.gate body{visibility:hidden}
   table.stack td.first{font-weight:700}
 }
 @media (max-width:640px){.lens-grid .cam-card p{display:block;font-size:13px}}
+.lens-search input{width:100%;font-size:16px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink)}
+.more-filters{margin-top:4px}
+.more-filters summary{cursor:pointer;color:var(--muted);font-size:14px;margin:4px 0 8px}
+.more-filters .chips{margin-bottom:8px}
+.brand-sec{margin-top:24px}
+.brand-sec[hidden],.cam-card[hidden],.empty[hidden]{display:none!important}
+.brand-sec h2{font-size:20px;margin:0 0 10px}
+.brand-sec h2 small{font-size:13px;color:var(--muted);font-weight:400;margin-left:6px}
+.linkbtn{background:none;border:0;color:var(--accent);cursor:pointer;font-size:14px;padding:0;text-decoration:underline}
+.empty{color:var(--muted)}

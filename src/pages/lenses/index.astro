@@ -2,62 +2,145 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ComingSoon from "../../components/ComingSoon.astro";
 import { lenses, focalText, apertureText, typeText, mountsOf, MOUNT_ORDER } from "../../lib/lenses.js";
+
 const brands = [...new Set(lenses.map((l) => l.brand))];
 const mounts = [...new Set(lenses.flatMap(mountsOf))].sort((a, b) => (MOUNT_ORDER.indexOf(a) + 1 || 99) - (MOUNT_ORDER.indexOf(b) + 1 || 99));
-const types = ["定焦", "變焦"];
+
+// 焦段分類：變焦只要範圍有碰到就算（例如 24-70 同時算廣角與標準）
+const ranges = (l: any) => {
+  const r: string[] = [];
+  if (l.focal_min <= 28) r.push("w");
+  if (l.focal_min <= 70 && l.focal_max >= 29) r.push("s");
+  if (l.focal_max >= 85) r.push("t");
+  return r.join("|");
+};
+const covGroup = (l: any) => ({ "Full Frame": "全片幅", "APS-C": "APS-C", Super35: "Super35", "Micro Four Thirds": "M43", "Large Format": "大片幅", "Medium Format": "大片幅" } as Record<string, string>)[l.coverage] || "其他";
+const covs = ["全片幅", "APS-C", "Super35", "M43", "大片幅"].filter((c) => lenses.some((l) => covGroup(l) === c));
+const searchText = (l: any) => [l.brand, l.series, l.model, l.model_code, focalText(l), apertureText(l), mountsOf(l).join(" "), typeText(l)].filter(Boolean).join(" ");
+const groups = brands.map((b) => ({ brand: b, items: lenses.filter((l) => l.brand === b) }));
 ---
 {lenses.length === 0 ? (
   <ComingSoon id="lenses" intro="這是什麼鏡頭？能不能裝？能不能涵蓋我的感光元件？" />
 ) : (
-  <BaseLayout title="鏡頭資料庫" description={`${lenses.length} 支常用鏡頭的卡口、焦段、光圈、涵蓋片幅與重量，資料整理自原廠公開資訊。`} section="lenses">
+  <BaseLayout title="鏡頭資料庫" description={`${lenses.length} 支鏡頭的卡口、焦段、光圈、涵蓋片幅與重量，資料整理自原廠公開資訊。`} section="lenses">
     <p class="eyebrow">Lenses</p>
     <h1>鏡頭資料庫</h1>
     <p class="lead">看焦段、光圈、卡口、涵蓋片幅，以及能裝在哪些相機。</p>
+
+    <div class="field lens-search">
+      <input type="search" id="q" placeholder="搜尋：24-70、f1.4、Sony、Cooke S7…" aria-label="搜尋鏡頭" autocomplete="off" />
+    </div>
+
     <div class="filters">
       <div class="chips" role="group" aria-label="品牌" data-filter="brand">
-        <button type="button" class="chip" data-f="" aria-pressed="true">全部</button>
+        <button type="button" class="chip" data-f="" aria-pressed="true">全部品牌</button>
         {brands.map((b) => <button type="button" class="chip" data-f={b} aria-pressed="false">{b}</button>)}
       </div>
-      <div class="chips" role="group" aria-label="卡口" data-filter="mount">
-        <button type="button" class="chip" data-f="" aria-pressed="true">全部卡口</button>
-        {mounts.map((m) => <button type="button" class="chip" data-f={m} aria-pressed="false">{m}</button>)}
+      <div class="chips" role="group" aria-label="焦段" data-filter="range">
+        <button type="button" class="chip" data-f="" aria-pressed="true">全部焦段</button>
+        <button type="button" class="chip" data-f="w" aria-pressed="false">廣角（28mm 以內）</button>
+        <button type="button" class="chip" data-f="s" aria-pressed="false">標準（約 29–70mm）</button>
+        <button type="button" class="chip" data-f="t" aria-pressed="false">望遠（85mm 以上）</button>
       </div>
-      <div class="chips" role="group" aria-label="類型" data-filter="type">
-        <button type="button" class="chip" data-f="" aria-pressed="true">定焦＋變焦</button>
-        {types.map((t) => <button type="button" class="chip" data-f={t} aria-pressed="false">{t}</button>)}
+      <div class="chips" role="group" aria-label="光圈" data-filter="ap">
+        <button type="button" class="chip" data-f="" aria-pressed="true">全部光圈</button>
+        <button type="button" class="chip" data-f="1.8" aria-pressed="false">大光圈（F1.8／T1.8 以內）</button>
+        <button type="button" class="chip" data-f="2.8" aria-pressed="false">F2.8／T2.8 以內</button>
       </div>
+      <details class="more-filters">
+        <summary>更多篩選（卡口、類型、片幅）</summary>
+        <div class="chips" role="group" aria-label="卡口" data-filter="mount">
+          <button type="button" class="chip" data-f="" aria-pressed="true">全部卡口</button>
+          {mounts.map((m) => <button type="button" class="chip" data-f={m} aria-pressed="false">{m}</button>)}
+        </div>
+        <div class="chips" role="group" aria-label="類型" data-filter="type">
+          <button type="button" class="chip" data-f="" aria-pressed="true">定焦＋變焦</button>
+          <button type="button" class="chip" data-f="定焦" aria-pressed="false">定焦</button>
+          <button type="button" class="chip" data-f="變焦" aria-pressed="false">變焦</button>
+        </div>
+        <div class="chips" role="group" aria-label="涵蓋片幅" data-filter="cov">
+          <button type="button" class="chip" data-f="" aria-pressed="true">全部片幅</button>
+          {covs.map((c) => <button type="button" class="chip" data-f={c} aria-pressed="false">{c}</button>)}
+        </div>
+      </details>
     </div>
-    <p class="cam-count" aria-live="polite"><span id="count">{lenses.length}</span> 支</p>
-    <div class="grid cam-grid lens-grid">
-      {lenses.map((l) => (
-        <a class="card cam-card" href={`/lenses/${l.slug}/`} data-brand={l.brand} data-mount={mountsOf(l).join("|")} data-type={typeText(l)}>
-          <span class="k">{l.brand}・{l.series}</span>
-          <h3>{l.model}</h3>
-          <p>{focalText(l)}・{apertureText(l)}</p>
-          <div class="meta"><span class="pill">{typeText(l)}</span><span class="pill max">{l.coverage === "Full Frame" ? "全片幅" : l.coverage}</span></div>
-        </a>
-      ))}
-    </div>
+
+    <p class="cam-count" aria-live="polite"><span id="count">{lenses.length}</span> 支　<button type="button" class="linkbtn" id="reset" hidden>清除篩選</button></p>
+    <p class="empty" id="empty" hidden>沒有符合的鏡頭，試著放寬條件或清除篩選。</p>
+
+    {groups.map((g) => (
+      <section class="brand-sec" data-sec>
+        <h2>{g.brand} <small>{g.items.length} 支</small></h2>
+        <div class="grid cam-grid lens-grid">
+          {g.items.map((l) => (
+            <a class="card cam-card" href={`/lenses/${l.slug}/`}
+              data-brand={l.brand} data-mount={mountsOf(l).join("|")} data-type={typeText(l)} data-range={ranges(l)}
+              data-ap={l.max_aperture} data-cov={covGroup(l)} data-text={searchText(l)}>
+              <span class="k">{l.series}</span>
+              <h3>{l.model}</h3>
+              <p>{focalText(l)}・{apertureText(l)}</p>
+              <div class="meta"><span class="pill">{typeText(l)}</span><span class="pill max">{covGroup(l)}</span></div>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
   </BaseLayout>
 )}
 
 <script>
-  const state: Record<string, string> = { brand: "", mount: "", type: "" };
+  const norm = (s: string) => s.toLowerCase().replace(/[\s\-–—_/·・.,，、|()（）]/g, "");
+  const state: Record<string, string> = { brand: "", range: "", ap: "", mount: "", type: "", cov: "" };
   const cards = [...document.querySelectorAll<HTMLElement>(".cam-card")];
+  const hay = new Map(cards.map((c) => [c, norm(c.dataset.text || "")]));
+  const secs = [...document.querySelectorAll<HTMLElement>("[data-sec]")];
+  const q = document.getElementById("q") as HTMLInputElement | null;
+  const reset = document.getElementById("reset") as HTMLButtonElement;
+  const empty = document.getElementById("empty")!;
+  const apply = () => {
+    const words = (q?.value || "").trim().split(/\s+/).map(norm).filter(Boolean);
+    let n = 0;
+    for (const c of cards) {
+      const d = c.dataset;
+      const ok =
+        (!state.brand || d.brand === state.brand) &&
+        (!state.range || (d.range || "").split("|").includes(state.range)) &&
+        (!state.ap || Number(d.ap) <= Number(state.ap)) &&
+        (!state.mount || (d.mount || "").split("|").includes(state.mount)) &&
+        (!state.type || d.type === state.type) &&
+        (!state.cov || d.cov === state.cov) &&
+        words.every((w) => hay.get(c)!.includes(w));
+      c.hidden = !ok;
+      if (ok) n++;
+    }
+    for (const s of secs) s.hidden = !s.querySelector(".cam-card:not([hidden])");
+    document.getElementById("count")!.textContent = String(n);
+    empty.hidden = n > 0;
+    reset.hidden = !(words.length || Object.values(state).some(Boolean));
+  };
   for (const group of document.querySelectorAll<HTMLElement>("[data-filter]")) {
     const key = group.dataset.filter!;
     for (const btn of group.querySelectorAll<HTMLButtonElement>("button")) {
       btn.addEventListener("click", () => {
         state[key] = btn.dataset.f || "";
         group.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
-        let n = 0;
-        for (const c of cards) {
-          const ok = (!state.brand || c.dataset.brand === state.brand) && (!state.mount || (c.dataset.mount || "").split("|").includes(state.mount)) && (!state.type || c.dataset.type === state.type);
-          c.hidden = !ok;
-          if (ok) n++;
-        }
-        document.getElementById("count")!.textContent = String(n);
+        apply();
       });
     }
   }
+  q?.addEventListener("input", apply);
+  reset.addEventListener("click", () => {
+    for (const k of Object.keys(state)) state[k] = "";
+    if (q) q.value = "";
+    document.querySelectorAll<HTMLElement>("[data-filter]").forEach((g) => g.querySelectorAll("button").forEach((b, i) => b.setAttribute("aria-pressed", String(i === 0))));
+    apply();
+  });
+  // 網址參數預先篩選：/lenses/?brand=Sony&mount=Sony%20E&q=24-70
+  const params = new URLSearchParams(location.search);
+  for (const key of Object.keys(state)) {
+    const v = params.get(key);
+    const btn = v ? [...document.querySelectorAll<HTMLButtonElement>(`[data-filter="${key}"] button`)].find((b) => b.dataset.f === v) : null;
+    if (btn) btn.click();
+  }
+  if (q && params.get("q")) { q.value = params.get("q")!; apply(); }
 </script>

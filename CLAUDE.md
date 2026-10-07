@@ -80,6 +80,7 @@
 ## 鏡頭資料庫（第二階段，進行中）
 
 - 資料放 `src/data/lenses/<slug>.json`，檢查在 `src/lib/lenses.js`；列表 `/lenses/`（可依品牌、卡口、定焦／變焦篩選），每支一頁 `/lenses/<slug>/`，自動列出「卡口相同」的相機。
+- 列表頁功能：搜尋框（空白分隔、全部符合）、品牌／卡口／定焦變焦／焦段（廣角≤28、標準、望遠≥85）／光圈／片幅篩選，依品牌分區顯示，可用網址參數預設（例如 `/lenses/?brand=Sony`）。鏡頭頁有「算等效焦段」按鈕（帶 `?focal=`）與「看更多該品牌鏡頭」。
 - 一個品牌一個品牌做，每批至少 20 支，先請負責人確認再合併。順序：Sony → Canon → Nikon → Sigma → Tamron → Viltrox → Panasonic → Fujifilm → ARRI → Cooke → Zeiss → Sirui／Laowa 等。
 - 規格只採原廠資料，標示來源與查證日期；原廠表沒寫的欄位寫 `Unknown`，不用猜。
 - Sony：美國、台灣等官網會擋，目前用 Sony Japan 的官方規格頁（`https://www.sony.jp/ichigan/products/<型號>/spec.html`，日文）整理成繁體中文。已收 37 支（FE／E 卡口 G Master、G、標準系列）。
