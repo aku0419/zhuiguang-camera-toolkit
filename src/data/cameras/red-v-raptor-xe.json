@@ -1,14 +1,14 @@
 {
-  "slug": "red-v-raptor-8k-vv",
+  "slug": "red-v-raptor-xe",
   "brand": "RED",
-  "model": "V-RAPTOR 8K VV",
+  "model": "V-RAPTOR XE",
   "aliases": [
-    "V-RAPTOR",
-    "VRAPTOR",
-    "V RAPTOR"
+    "V-RAPTOR XE",
+    "VRAPTOR XE",
+    "XE"
   ],
   "type": "電影機",
-  "announced": "Unknown",
+  "announced": "2025-09",
   "sensor": {
     "format": "VistaVision（VV）",
     "width_mm": 40.96,
@@ -19,14 +19,14 @@
   "log": [
     "Log3G10（IPP2）"
   ],
-  "raw": "內錄 REDCODE RAW（R3D，HQ／MQ／LQ／ELQ）",
+  "raw": "內錄 REDCODE RAW（R3D，HQ／MQ／LQ／ELQ）；也可錄 Apple ProRes",
   "open_gate": false,
-  "lens_mount": "Canon RF",
+  "lens_mount": "Nikon Z（鎖定式；可用 RED PL 轉接環）",
   "media": [
-    "CFexpress（RED 品牌或認證卡）"
+    "CFexpress Type B（RED 品牌或認證卡）"
   ],
-  "timecode": "Timecode In（經 9-pin EXT 端子）",
-  "sdi": "雙 12G-SDI（10-bit 4:2:2）",
+  "timecode": "LTC Timecode 輸入（經 9-pin EXT 端子）",
+  "sdi": "雙 12G-SDI",
   "hdmi": "無",
   "dynamic_range_claimed": "17+ stops",
   "recording_modes": [
@@ -34,17 +34,17 @@
       "resolution": "8192x4320",
       "max_fps": 24,
       "codec": "REDCODE RAW HQ",
-      "bitrate_mbps": 3568,
+      "bitrate_mbps": 3400,
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "8K 17:9 最高 120fps（120fps 只有 LQ）。原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）"
+      "notes": "8K 17:9 最高 60fps。原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）"
     },
     {
       "resolution": "8192x4320",
       "max_fps": 24,
       "codec": "REDCODE RAW MQ",
-      "bitrate_mbps": 2496,
+      "bitrate_mbps": 2384,
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
@@ -54,7 +54,7 @@
       "resolution": "8192x4320",
       "max_fps": 24,
       "codec": "REDCODE RAW LQ",
-      "bitrate_mbps": 1560,
+      "bitrate_mbps": 1488,
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
@@ -64,7 +64,7 @@
       "resolution": "8192x4320",
       "max_fps": 24,
       "codec": "REDCODE RAW ELQ",
-      "bitrate_mbps": 832,
+      "bitrate_mbps": 800,
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
@@ -74,18 +74,18 @@
       "resolution": "6144x3240",
       "max_fps": 24,
       "codec": "REDCODE RAW HQ",
-      "bitrate_mbps": 2008,
+      "bitrate_mbps": 1912,
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "crop",
       "crop_factor": 1.33,
-      "notes": "6K 17:9 最高 160fps（HQ 到 96fps）。裁切倍率依像素數推算（相對於 8K 全寬），待核對。原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）"
+      "notes": "6K 17:9（Super35 範圍）最高 80fps。只使用感光元件的一部分（Sensor Window），不是從 8K 縮小。原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）"
     },
     {
       "resolution": "6144x3240",
       "max_fps": 24,
       "codec": "REDCODE RAW MQ",
-      "bitrate_mbps": 1408,
+      "bitrate_mbps": 1344,
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "crop",
@@ -94,14 +94,14 @@
     },
     {
       "resolution": "4096x2160",
-      "max_fps": 240,
+      "max_fps": 120,
       "codec": "REDCODE RAW",
       "bitrate_mbps": "Unknown",
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "crop",
       "crop_factor": 2.0,
-      "notes": "4K 17:9 最高 240fps。裁切倍率依像素數推算（相對於 8K 全寬），待核對"
+      "notes": "4K 17:9。只使用感光元件的一部分（Sensor Window），不是從 8K 縮小"
     },
     {
       "resolution": "4096x2160",
@@ -115,24 +115,24 @@
     },
     {
       "resolution": "2048x1080",
-      "max_fps": 480,
+      "max_fps": 240,
       "codec": "REDCODE RAW",
       "bitrate_mbps": "Unknown",
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "crop",
       "crop_factor": 4.0,
-      "notes": "2K 17:9 最高 480fps。裁切倍率依像素數推算（相對於 8K 全寬），待核對"
+      "notes": "2K 17:9。只使用感光元件的一部分（Sensor Window），不是從 8K 縮小"
     }
   ],
-  "source_name": "RED V-RAPTOR 8K VV 操作手冊 V1.3：技術規格",
-  "source_url": "https://docs.red.com/955-0199/955-0199_V1.3_Rev-A_RED_PS_V-RAPTOR_8K_VV_Operation_Guide/Content/C_TechSpecs/Specs_V-RAPTOR.htm",
+  "source_name": "RED V-RAPTOR XE 操作手冊：技術規格",
+  "source_url": "https://docs.red.com/955-0233/955-0233_V2.1%20Rev-A%20RED%20PS,%20V-RAPTOR%20XE%20Operation%20Guide%20HTML/Content/B_TechSpecs/Specs_V-RAPTOR%20XE.htm",
   "extra_sources": [
     {
-      "source_name": "RED V-RAPTOR 8K VV 操作手冊：R3D Quality",
-      "source_url": "https://docs.red.com/955-0199/955-0199_V1.3_Rev-B_RED_PS_V-RAPTOR_8K_VV_Operation_Guide/Content/4_Menus/b_ProjSet/R3D_Quality.htm"
+      "source_name": "RED V-RAPTOR XE 操作手冊：R3D Quality",
+      "source_url": "https://docs.red.com/955-0233/955-0233_V2.1%20Rev-A%20RED%20PS,%20V-RAPTOR%20XE%20Operation%20Guide%20HTML/Content/4_Menus/b_ProjSet/R3D_Quality.htm"
     }
   ],
   "last_verified": "2026-10-06",
-  "editor_notes": "這是第一代 V-RAPTOR 8K VV（捲簾快門）。目前 RED 另有 V-RAPTOR [X]（全域快門）、V-RAPTOR XL、V-RAPTOR XE 等版本，規格不同。R3D 資料量原廠只列 8K 與 6K 17:9 的 24P。原生 ISO 規格頁未寫。"
+  "editor_notes": "全域快門感光元件。R3D 資料量原廠只列 8K 與 6K 17:9 的 24P。低解析度為感光元件裁切（Sensor Window），倍率以相同 17:9 比例相對 8K：7K≈1.14、6K≈1.33、5K=1.6、4K=2.0、3K≈2.67、2K=4.0（負責人依 RED 官方文件核對）。XE 的最高格率約為 [X] 的一半（8K 60fps）。發表日期依 Nikon 新聞稿（2025-09-10）。"
 }

@@ -21,7 +21,9 @@
   "raw": "內錄 ARRIRAW",
   "open_gate": true,
   "lens_mount": "PL／LPL／EF（可換）",
-  "media": "Unknown",
+  "media": [
+    "CFast 2.0（可錄 ProRes 與 MXF／ARRIRAW）"
+  ],
   "timecode": "有時間碼 jam-sync 功能（官網 FAQ）",
   "sdi": "有（HD-SDI）",
   "hdmi": "Unknown",
@@ -87,5 +89,5 @@
     }
   ],
   "last_verified": "2026-10-06",
-  "editor_notes": "ALEXA Mini 已停產，但租賃市場常見。格式表同時列 AMIRA 與 ALEXA Mini（SUP 6.1），只列 ALEXA Mini 可用的格式。記錄媒體在目前官網頁面上沒有讀到，先標 Unknown。"
+  "editor_notes": "ALEXA Mini 已停產，但租賃市場常見。格式表同時列 AMIRA 與 ALEXA Mini（SUP 6.1），只列 ALEXA Mini 可用的格式。記錄媒體 CFast 2.0：負責人依 ARRI 官方規格（Recording Media: CFast 2.0 Cards）核對。"
 }

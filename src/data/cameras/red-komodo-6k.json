@@ -77,7 +77,8 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "crop",
-      "notes": "5K 17:9"
+      "notes": "5K 17:9；只使用感光元件的一部分（Sensor Window），不是從 6K 縮小",
+      "crop_factor": 1.2
     },
     {
       "resolution": "4096x2160",
@@ -87,7 +88,8 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "crop",
-      "notes": "4K 17:9"
+      "notes": "4K 17:9；只使用感光元件的一部分（Sensor Window），不是從 6K 縮小",
+      "crop_factor": 1.5
     },
     {
       "resolution": "4096x2160",
@@ -107,7 +109,8 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "crop",
-      "notes": "2K 17:9"
+      "notes": "2K 17:9；只使用感光元件的一部分（Sensor Window），不是從 6K 縮小",
+      "crop_factor": 3.0
     },
     {
       "resolution": "2048x1080",
@@ -128,5 +131,5 @@
     }
   ],
   "last_verified": "2026-10-06",
-  "editor_notes": "全域快門感光元件。各解析度的 R3D 資料量原廠只列 6K 17:9 23.98fps。5K／4K／2K 是否為感光元件裁切：原廠以「6K、5K、4K、2K 17:9」列出取樣格式，依像素數推定為裁切（待核對）。Log3G10 名稱出自 IPP2 色彩管理，規格頁只寫 IPP2。原生 ISO 規格頁未寫。"
+  "editor_notes": "全域快門感光元件。各解析度的 R3D 資料量原廠只列 6K 17:9 23.98fps。低解析度為感光元件裁切（Sensor Window）：RED 官方表格 4K 17:9 使用 18.02 × 9.50 mm、2K 使用 9.01 × 4.75 mm（負責人核對）；倍率以相同 17:9 比例相對 6K 計算。Log3G10 名稱出自 IPP2 色彩管理，規格頁只寫 IPP2。原生 ISO 規格頁未寫。"
 }

@@ -9,12 +9,12 @@
   ],
   "type": "電影機（大片幅）",
   "announced": "Unknown",
-  "max_resolution": "8K（多種比例）",
+  "max_resolution": "8192×4320（8K 17:9）",
   "sensor": {
     "format": "GFX 大片幅（Large Format）",
     "width_mm": 43.8,
     "height_mm": 32.9,
-    "resolution_mp": "Unknown"
+    "resolution_mp": 102
   },
   "base_iso": "Unknown",
   "log": [
@@ -27,71 +27,107 @@
   "lens_mount": "Fujifilm G（另有 PL 轉接環）",
   "media": [
     "CFexpress Type B",
-    "SD（UHS-II）"
+    "SD（UHS-I／UHS-II，V90）",
+    "SSD"
   ],
   "timecode": "TC IN／TC OUT（BNC）；另有 Genlock 端子",
-  "sdi": "有（BNC）",
+  "sdi": "12G-SDI OUT（最高 4K 59.94p）",
   "hdmi": "Type A（標準尺寸）",
-  "dynamic_range_claimed": "Unknown",
+  "dynamic_range_claimed": "14+ stops（F-Log2／F-Log2 C）",
   "recording_modes": [
     {
-      "resolution": "8K 17:9",
-      "max_fps": "Unknown",
-      "codec": "H.265 10-bit 422",
-      "bitrate_mbps": "Unknown",
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "H.265 10-bit 4:2:2（All Intra）",
+      "bitrate_mbps": 720,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "可選 8K 2.76:1、2.39:1、16:9、17:9。原廠說明書：H.265 可選 50／100／200／360／720 Mbps，可用的選項依解析度、格率與壓縮方式而異"
+      "notes": "8K 17:9，最高 24p。H.265 可選 720／360／200／100／50 Mbps（All Intra 只有 720／360）"
     },
     {
-      "resolution": "4.6K 1.38:1",
-      "max_fps": "Unknown",
-      "codec": "H.265 10-bit 422",
-      "bitrate_mbps": "Unknown",
+      "resolution": "7680x4320",
+      "max_fps": 29.97,
+      "codec": "H.265 10-bit 4:2:2（Long GOP）",
+      "bitrate_mbps": 360,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "高片幅比例（可搭配變形鏡頭）"
+      "notes": "8K 16:9。H.265 可選 720／360／200／100／50 Mbps（All Intra 只有 720／360）"
     },
     {
-      "resolution": "4K 16:9",
+      "resolution": "8192x2968",
+      "max_fps": 24,
+      "codec": "H.265 10-bit 4:2:2",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "8K 2.76:1。H.265 可選 720／360／200／100／50 Mbps（All Intra 只有 720／360）"
+    },
+    {
+      "resolution": "4664x3380",
+      "max_fps": 24,
+      "codec": "H.265 10-bit 4:2:2",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4.6K 1.38:1（適合變形鏡頭）。H.265 可選 720／360／200／100／50 Mbps（All Intra 只有 720／360）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "H.265 10-bit 4:2:2（All Intra）",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "DCI 4K。H.265 可選 720／360／200／100／50 Mbps（All Intra 只有 720／360）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "H.265 10-bit 4:2:2（Long GOP）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 16:9。H.265 可選 720／360／200／100／50 Mbps（All Intra 只有 720／360）"
+    },
+    {
+      "resolution": "3840x2160",
       "max_fps": 59.94,
       "codec": "ProRes 422 HQ",
       "bitrate_mbps": "Unknown",
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "原廠功耗測試條件寫 4K 16:9 59.94P ProRes HQ"
+      "notes": "原廠規格未列 ProRes 位元率"
     },
     {
-      "resolution": "4K 16:9",
-      "max_fps": 59.94,
-      "codec": "H.265 10-bit 422",
-      "bitrate_mbps": "Unknown",
+      "resolution": "1920x1080",
+      "max_fps": 119.88,
+      "codec": "H.265 10-bit 4:2:2",
+      "bitrate_mbps": 200,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "原廠說明書：H.265 可選 50／100／200／360／720 Mbps，可用的選項依解析度、格率與壓縮方式而異"
-    },
-    {
-      "resolution": "FHD 16:9",
-      "max_fps": "Unknown",
-      "codec": "H.265 10-bit 422",
-      "bitrate_mbps": "Unknown",
-      "bit_depth": 10,
-      "chroma": "4:2:2",
-      "crop": "none"
+      "notes": "Full HD 最高 119.8p。H.265 可選 720／360／200／100／50 Mbps（All Intra 只有 720／360）"
     }
   ],
-  "source_name": "Fujifilm GFX ETERNA 55 使用說明書：規格",
-  "source_url": "https://fujifilm-dsc.com/en/manual/gfx-eterna-55/technical_notes/spec/",
+  "source_name": "Fujifilm 官網：GFX ETERNA 55 規格",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/cameras/gfx-eterna-55/specifications/",
   "extra_sources": [
+    {
+      "source_name": "Fujifilm GFX ETERNA 55 使用說明書：規格",
+      "source_url": "https://fujifilm-dsc.com/en/manual/gfx-eterna-55/technical_notes/spec/"
+    },
     {
       "source_name": "Fujifilm GFX ETERNA 55 使用說明書（PDF）",
       "source_url": "https://fujifilm-dsc.com/en/manual/gfx-eterna-55/gfx-eterna-55_manual_en_s_f.pdf"
     }
   ],
   "last_verified": "2026-10-06",
-  "editor_notes": "規格頁：格率最高 59.94P；錄影格式 H.265（10-bit 4:2:2；720／360／200／100／50 Mbps）與 ProRes 422 HQ／422／LT。各解析度可用的格率與位元率說明書沒有列表。內建電子可變 ND 0.6–2.1。雙原生 ISO 800／3200 與 14+ stops 出自新聞報導，原廠新聞稿目前連不到，先標 Unknown。"
+  "editor_notes": "官網規格：每種解析度的 H.265 位元率選項都是 720／360／200／100／50 Mbps（All Intra 只有 720／360），表中位元率為範例值。ISO 400–12800。內建電子可變 ND 0.6–2.1。ProRes 位元率與原生 ISO 官網未寫。"
 }

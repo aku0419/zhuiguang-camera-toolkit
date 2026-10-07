@@ -8,7 +8,7 @@
   ],
   "type": "無反光鏡相機",
   "announced": "Unknown",
-  "max_resolution": "6.2K 3:2",
+  "max_resolution": "6240×4160（6.2K 3:2）",
   "sensor": {
     "format": "APS-C",
     "width_mm": 23.5,
@@ -33,82 +33,124 @@
   "dynamic_range_claimed": "Unknown",
   "recording_modes": [
     {
-      "resolution": "6.2K 3:2",
+      "resolution": "6240x4160",
       "max_fps": 29.97,
-      "codec": "H.265 ALL-I／LongGOP 422 10-bit",
-      "bitrate_mbps": "Unknown",
+      "codec": "H.265 All-Intra 4:2:2",
+      "bitrate_mbps": 720,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "3:2 全感光元件（Open Gate）。最高格率依原廠格率選項推定為 29.97p 以下，待核對。原廠說明書：H.265 可選 50／100／200／360／720 Mbps，可用的選項依解析度、格率與壓縮方式而異"
+      "notes": "6.2K 3:2（Open Gate）；也可選 360 Mbps"
     },
     {
-      "resolution": "DCI 4K 17:9",
-      "max_fps": "Unknown",
-      "codec": "H.265 ALL-I／LongGOP 422 10-bit",
-      "bitrate_mbps": "Unknown",
+      "resolution": "6240x4160",
+      "max_fps": 29.97,
+      "codec": "H.265 Long GOP 4:2:2",
+      "bitrate_mbps": 200,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "原廠說明書：H.265 可選 50／100／200／360／720 Mbps，可用的選項依解析度、格率與壓縮方式而異"
+      "notes": "可選 720／360／200／100／50 Mbps"
+    },
+    {
+      "resolution": "6240x4160",
+      "max_fps": 29.97,
+      "codec": "ProRes 422 HQ",
+      "bitrate_mbps": 2754,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "原廠標示 29.97p 時的位元率"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "H.265 All-Intra 4:2:2",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "DCI 4K；也可選 360 Mbps。開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "ProRes 422 HQ",
+      "bitrate_mbps": 1877,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "原廠標示 DCI4K 59.94p 時的位元率"
     },
     {
       "resolution": "3840x2160",
       "max_fps": 59.94,
-      "codec": "H.265 ALL-I／LongGOP 422 10-bit",
-      "bitrate_mbps": "Unknown",
+      "codec": "H.265 Long GOP 4:2:2",
+      "bitrate_mbps": 360,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "原廠說明書：H.265 可選 50／100／200／360／720 Mbps，可用的選項依解析度、格率與壓縮方式而異"
+      "notes": "可選 720／360／200／100／50 Mbps"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 23.98,
+      "codec": "H.265 Long GOP 4:2:2",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 720／360／200／100／50 Mbps（取 200 為範例）"
     },
     {
       "resolution": "3840x2160",
       "max_fps": 119.88,
-      "codec": "H.265（高速錄影）",
-      "bitrate_mbps": "Unknown",
+      "codec": "H.265 All-Intra（高速錄影）",
+      "bitrate_mbps": 720,
       "bit_depth": 10,
-      "chroma": "Unknown",
-      "crop": "none",
-      "notes": "高速錄影 4K 最高 120P，無聲音"
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "高速錄影（無聲音），也可選 360／200 Mbps；位元率為錄影當下"
     },
     {
       "resolution": "1920x1080",
       "max_fps": 239.76,
-      "codec": "H.265（高速錄影）",
-      "bitrate_mbps": "Unknown",
+      "codec": "H.265 All-Intra（高速錄影）",
+      "bitrate_mbps": 720,
       "bit_depth": 10,
-      "chroma": "Unknown",
-      "crop": "none",
-      "notes": "高速錄影 240P／200P 只限 Full HD，無聲音"
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.38,
+      "notes": "高速錄影（無聲音）；240p／200p 裁切 1.38×，120p 不裁切"
     },
     {
-      "resolution": "3840x2160",
+      "resolution": "1920x1080",
       "max_fps": 59.94,
-      "codec": "ProRes 422 HQ",
-      "bitrate_mbps": "Unknown",
+      "codec": "H.265 Long GOP 4:2:2",
+      "bitrate_mbps": 100,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "ProRes 位元率依格式自動設定（原廠說明書指向 Apple 網站）"
+      "notes": "可選 720～50 Mbps"
     },
     {
       "resolution": "3840x2160",
       "max_fps": 59.94,
-      "codec": "H.264 LongGOP 420 8-bit",
-      "bitrate_mbps": "Unknown",
+      "codec": "H.264 Long GOP 4:2:0",
+      "bitrate_mbps": 200,
       "bit_depth": 8,
       "chroma": "4:2:0",
       "crop": "none",
-      "notes": "H.264 可選 50／100／200／360 Mbps"
+      "notes": "可選 360／200／100／50 Mbps"
     }
   ],
-  "source_name": "Fujifilm X-H2S 使用說明書：規格",
-  "source_url": "https://fujifilm-dsc.com/en/manual/x-h2s/technical_notes/spec/",
+  "source_name": "Fujifilm 官網：X-H2S 規格",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/cameras/x-h2s/specifications/",
   "extra_sources": [
     {
-      "source_name": "Fujifilm X-H2S 使用說明書：MOVIE SETTING",
-      "source_url": "https://fujifilm-dsc.com/en/manual/x-h2s/menu_shooting/movie_setting/"
+      "source_name": "Fujifilm X-H2S 使用說明書：規格",
+      "source_url": "https://fujifilm-dsc.com/en/manual/x-h2s/technical_notes/spec/"
     },
     {
       "source_name": "Fujifilm X-H2S 使用說明書（PDF）",
@@ -116,5 +158,5 @@
     }
   ],
   "last_verified": "2026-10-06",
-  "editor_notes": "Fujifilm 說明書以圖示表示影片尺寸，沒有列出每種尺寸的像素數與可用位元率；fujifilm-x.com 產品規格頁目前連不到。F-Log 時 ISO 640–12800、F-Log2 時 ISO 1250–12800（說明書）。"
+  "editor_notes": "位元率與裁切倍率來自 Fujifilm 官網 Movie Specification 表。H.265 的 4:2:2／4:2:0 可選，位元率選項相同。F-Log 時 ISO 640–12800、F-Log2 時 ISO 1250–12800（說明書）。"
 }

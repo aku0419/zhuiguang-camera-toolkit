@@ -1,0 +1,164 @@
+{
+  "slug": "canon-eos-r5-c",
+  "brand": "Canon",
+  "model": "EOS R5 C",
+  "aliases": [
+    "R5 C",
+    "R5C"
+  ],
+  "type": "電影機（Cinema EOS）",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": "Unknown",
+    "height_mm": "Unknown",
+    "resolution_mp": 35.4
+  },
+  "base_iso": [
+    800,
+    3200
+  ],
+  "log": [
+    "Canon Log 2",
+    "Canon Log 3"
+  ],
+  "raw": "可內錄 Cinema RAW Light（RAW HQ／ST／LT，12-bit）",
+  "open_gate": false,
+  "lens_mount": "Canon RF",
+  "media": [
+    "CFexpress 2.0 Type B",
+    "SD"
+  ],
+  "timecode": "TIME CODE 端子（DIN 1.0/2.3，可輸入／輸出）",
+  "sdi": "無",
+  "hdmi": "Type D（Micro HDMI，只能輸出）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "8192x4320",
+      "max_fps": 29.97,
+      "codec": "Cinema RAW Light ST",
+      "bitrate_mbps": 1980,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "全片幅模式。原廠標示為可變位元率（VBR）的數值；650 Mbps 以上不能錄到 SD 卡"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 59.94,
+      "codec": "Cinema RAW Light LT",
+      "bitrate_mbps": 2570,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "全片幅模式。原廠標示為可變位元率（VBR）的數值；650 Mbps 以上不能錄到 SD 卡"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 23.98,
+      "codec": "Cinema RAW Light LT",
+      "bitrate_mbps": 1030,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "全片幅模式。原廠標示為可變位元率（VBR）的數值；650 Mbps 以上不能錄到 SD 卡"
+    },
+    {
+      "resolution": "5952x3140",
+      "max_fps": 29.97,
+      "codec": "Cinema RAW Light HQ",
+      "bitrate_mbps": 2120,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.46,
+      "notes": "Super35（裁切）模式。原廠標示為可變位元率（VBR）的數值；650 Mbps 以上不能錄到 SD 卡"
+    },
+    {
+      "resolution": "5952x3140",
+      "max_fps": 59.94,
+      "codec": "Cinema RAW Light ST",
+      "bitrate_mbps": 2090,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.46,
+      "notes": "Super35（裁切）模式。原廠標示為可變位元率（VBR）的數值；650 Mbps 以上不能錄到 SD 卡"
+    },
+    {
+      "resolution": "2976x1570",
+      "max_fps": 59.94,
+      "codec": "Cinema RAW Light HQ",
+      "bitrate_mbps": 1080,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "Super16（裁切）模式。原廠標示為可變位元率（VBR）的數值；650 Mbps 以上不能錄到 SD 卡",
+      "crop_factor": 2.92
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "XF-AVC YCC422 10bit（Intra-frame）",
+      "bitrate_mbps": 810,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "全片幅模式。原廠標示為可變位元率（VBR）的數值；650 Mbps 以上不能錄到 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 29.97,
+      "codec": "XF-AVC YCC422 10bit（Intra-frame）",
+      "bitrate_mbps": 410,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "全片幅模式"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "XF-AVC YCC422 10bit（Long GOP）",
+      "bitrate_mbps": 260,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "全片幅模式"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 29.97,
+      "codec": "XF-AVC YCC422 10bit（Long GOP）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "全片幅模式"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 119.88,
+      "codec": "XF-AVC（慢動作）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "慢動作錄影最高 120fps（全片幅可用）；說明書未列此模式位元率"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 59.94,
+      "codec": "XF-AVC YCC422 10bit（Intra-frame）",
+      "bitrate_mbps": 310,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    }
+  ],
+  "source_name": "Canon EOS R5 C 進階使用說明書（VIDEO 版，PDF）",
+  "source_url": "https://gdlp01.c-wss.com/gds/5/0300043545/06/eosr5c-aug7-video-en.pdf",
+  "last_verified": "2026-10-06",
+  "editor_notes": "RAW 與 XF-AVC 位元率表已對照說明書第 61–62 頁圖片確認。Super35（裁切）模式換算倍率：水平 5952／4096／2048 時 1.460、3840／1920／1280 時 1.534（說明書）。說明書沒有寫感光元件毫米尺寸、動態範圍與原生 ISO。 Base ISO 800／3200 為 Canon Log 3 或 RAW 時可選（說明書）。Super16 模式倍率 2.920（水平 2976／2048）。"
+}

@@ -1,0 +1,157 @@
+{
+  "slug": "canon-eos-c70",
+  "brand": "Canon",
+  "model": "EOS C70",
+  "aliases": [
+    "C70"
+  ],
+  "type": "電影機（Cinema EOS）",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Super35",
+    "width_mm": "Unknown",
+    "height_mm": "Unknown",
+    "resolution_mp": 8.85
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "Canon Log 2",
+    "Canon Log 3"
+  ],
+  "raw": "可內錄 Cinema RAW Light（RAW ST／LT／HQ，12-bit）",
+  "open_gate": false,
+  "lens_mount": "Canon RF",
+  "media": [
+    "SD（雙卡槽）"
+  ],
+  "timecode": "TIME CODE 端子（BNC，可輸入／輸出）",
+  "sdi": "無",
+  "hdmi": "有（HDMI OUT，只能輸出）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "Cinema RAW Light LT",
+      "bitrate_mbps": 645,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "Super35 模式。原廠標示為可變位元率（VBR）的數值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 29.97,
+      "codec": "Cinema RAW Light ST",
+      "bitrate_mbps": 497,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "Super35 模式，最高 29.97P（59.94P 不可用）。原廠標示為可變位元率（VBR）的數值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 59.94,
+      "codec": "Cinema RAW Light HQ",
+      "bitrate_mbps": 511,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "Super16（裁切）模式。原廠標示為可變位元率（VBR）的數值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "XF-AVC YCC422 10bit（Intra-frame）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "原廠標示為可變位元率（VBR）的數值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 29.97,
+      "codec": "XF-AVC YCC422 10bit（Intra-frame）",
+      "bitrate_mbps": 410,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 410 或 300 Mbps。原廠標示為可變位元率（VBR）的數值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 23.98,
+      "codec": "XF-AVC YCC422 10bit（Intra-frame）",
+      "bitrate_mbps": 410,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 410 或 240 Mbps。原廠標示為可變位元率（VBR）的數值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 59.94,
+      "codec": "XF-AVC YCC422 10bit（Long GOP）",
+      "bitrate_mbps": 260,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "原廠標示為可變位元率（VBR）的數值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 29.97,
+      "codec": "XF-AVC YCC422 10bit（Long GOP）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "原廠標示為可變位元率（VBR）的數值"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 119.88,
+      "codec": "XF-AVC Long GOP（慢動作）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "慢動作錄影最高 120fps；說明書未列此模式位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 59.94,
+      "codec": "MP4（HEVC）YCC422 10bit",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "說明書未列 MP4 位元率"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 179.82,
+      "codec": "XF-AVC Long GOP（慢動作）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "Super16（裁切）模式慢動作可到 180fps"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 59.94,
+      "codec": "XF-AVC YCC422 10bit（Intra-frame）",
+      "bitrate_mbps": 310,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "原廠標示為可變位元率（VBR）的數值"
+    }
+  ],
+  "source_name": "Canon EOS C70 使用說明書（韌體 1.0.8.1，PDF）",
+  "source_url": "https://gdlp01.c-wss.com/gds/4/0300040134/08/eosc70-im9-en.pdf",
+  "last_verified": "2026-10-06",
+  "editor_notes": "感光元件說明書只寫「相當於 Super 35mm」，沒有毫米尺寸；有效像素 885 萬（4096×2160）。慢動作在 Super35 模式 4K 最高 120fps，Super16（裁切）模式 2K 最高 180fps。動態範圍與原生 ISO 說明書未寫。 RAW 表格已對照說明書 PDF 第 57 頁圖片確認：Super35 4K 只有 RAW ST／LT，RAW HQ 只在 Super16（裁切）2K。"
+}
