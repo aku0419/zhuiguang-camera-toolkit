@@ -29,7 +29,11 @@
    - **Name**：`zhuiguang`
    - **Database Password**：按旁邊的 **Generate a password** 讓它產生一組，**複製後存到你的密碼管理員**（之後幾乎用不到，但請存好）。
    - **Region**：選 **Northeast Asia (Tokyo)**（離台灣近）。
-   - **Plan**：免費方案（Free）。
+   - **GitHub (optional)**：不用管，不要按 Connect GitHub。
+   - **Security** 三個選項：
+     - **Enable Data API**：**保持勾選**（回報按鈕靠它送出，取消就送不出去）。
+     - **Automatically expose new tables**：**取消勾選**（Supabase 也建議關閉；我們的資料表要完全不開放，只開放一個送出函式）。
+     - **Enable automatic RLS**：建議**勾選**（之後新增資料表時自動套上保護，多一層保險）。
 5. 按 **Create new project**，等 1～2 分鐘，直到畫面不再轉圈圈。
 
 ## 步驟 2：貼上 SQL（建立資料表與送出函式）
