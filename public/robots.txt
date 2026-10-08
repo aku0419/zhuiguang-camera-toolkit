@@ -1,3 +1,17 @@
-# 封閉測試中：整站要登入才能使用，不讓搜尋引擎收錄
+# 封閉測試中：整站要登入才能使用，不讓搜尋引擎收錄。
+# 但聊天軟體、社群貼連結時要抓標題與預覽，所以讓這些「連結預覽」程式可以讀取。
 User-agent: *
 Disallow: /
+
+User-agent: facebookexternalhit
+User-agent: Facebot
+User-agent: meta-externalagent
+User-agent: meta-externalhit
+User-agent: Twitterbot
+User-agent: Slackbot
+User-agent: Discordbot
+User-agent: TelegramBot
+User-agent: WhatsApp
+User-agent: LinkedInBot
+User-agent: Line-Poker
+Allow: /

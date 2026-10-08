@@ -39,7 +39,7 @@
 - 用 **Astro** 產生靜態網站，部署在**新的 Vercel 專案**，之後綁定 `zhuiguang.riseatsun.com`。
 - 每台器材、每個工具都是一個獨立網頁（獨立網址、標題、描述）。
 - **要用 Gmail（Google 登入）才能使用整站**（負責人 2026-10 決定，跟初光一樣）。做法跟初光一樣：網頁上的登入牆（`src/lib/auth.js`、`src/components/AuthGate.astro`、`/login/`），用逐光自己的 Supabase 專案的 Google 登入，不是真正保密。
-- **封閉測試**：Google 登入維持測試模式，只有負責人手動加入「測試使用者」的 Gmail 能登入；先不公開、不發布、不送 Google 搜尋。`robots.txt` 禁止收錄，已停用網站地圖。
+- **封閉測試**：Google 登入維持測試模式，只有負責人手動加入「測試使用者」的 Gmail 能登入；先不公開、不發布、不送 Google 搜尋。`robots.txt` 禁止搜尋引擎收錄、已停用網站地圖，但放行聊天軟體與社群的「連結預覽」程式（facebookexternalhit、Twitterbot、Line 等），這樣貼連結才會顯示標題；頁面仍有 `noindex`。
 - 計算全部在瀏覽器裡完成，不需要伺服器。
 - 問題回報用**獨立的 Supabase 專案**（不跟初光共用）。寫入只能透過有**長度限制和次數限制**的資料庫函式，前端不能直接寫資料表。
 
