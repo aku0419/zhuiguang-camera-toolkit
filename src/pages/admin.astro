@@ -11,6 +11,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <span class="by" id="onBy"></span>
     <span class="hint">分頁開著就算一人，切到背景超過 2 分鐘不算；只記頁面名稱，不會記錄是誰。管理頁本身不算。</span>
   </div>
+  <section id="stats" hidden>
+    <div class="rp-head">
+      <h2>使用統計</h2>
+      <span class="hint" id="st-at"></span>
+      <button type="button" class="btn" id="st-reload">重新整理</button>
+    </div>
+    <div id="st-body"><p class="cam-count">讀取中…</p></div>
+  </section>
+
   <section id="reports" hidden>
     <div class="rp-head">
       <h2>問題回報</h2>
@@ -25,6 +34,81 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <script>
   import { sb } from "../lib/auth.js";
   import { watchOnline } from "../lib/online.js";
+  import { TOOLS } from "../data/site.js";
+  // ---- 使用統計 ----
+  const nf = (x: unknown) => Number(x || 0).toLocaleString();
+  const md = (d: string) => `${+d.slice(5, 7)}/${+d.slice(8, 10)}`;
+  const toolName = new Map(TOOLS.map((t) => [t.href.split("?")[0], t.name]));
+  const pageName = (p: string) => (p === "/" ? "首頁" : toolName.get(p) ? `${toolName.get(p)}（${p}）` : p);
+  async function loadStats() {
+    const sec = document.getElementById("stats")!;
+    const body = document.getElementById("st-body")!;
+    sec.hidden = false;
+    const btn = document.getElementById("st-reload") as HTMLButtonElement;
+    btn.disabled = true;
+    const { data, error } = await sb!.rpc("admin_stats");
+    btn.disabled = false;
+    body.innerHTML = "";
+    if (error || !data) {
+      const missing = !!error && (error.code === "PGRST202" || /admin_stats|could not find the function|does not exist/i.test(error.message || ""));
+      body.append(el("p", "cam-count", missing
+        ? "要先在 Supabase 執行 supabase/usage_stats.sql，才看得到使用統計。"
+        : "統計讀取失敗，請按「重新整理」再試一次。"));
+      return;
+    }
+    const tiles = el("div", "stiles");
+    const tile = (k: string, v: unknown, sub: string) => {
+      const t = el("div", "stile");
+      t.append(el("div", "k", k), el("div", "v", nf(v)), el("div", "s", sub));
+      tiles.append(t);
+    };
+    tile("註冊人數", data.users_total, `今天 +${nf(data.users_today)}・近 7 天 +${nf(data.users_7d)}`);
+    tile("今天活躍人數", data.active_today, `近 7 天 ${nf(data.active_7d)} 人`);
+    tile("今天頁面瀏覽", data.views_today, `近 7 天 ${nf(data.views_7d)} 次`);
+    body.append(tiles);
+
+    const days: { d: string; n: number }[] = data.daily || [];
+    const max = Math.max(1, ...days.map((x) => x.n));
+    const peak = days.reduce<{ d: string; n: number } | null>((a, x) => (x.n > (a?.n ?? -1) ? x : a), null);
+    const bars = el("div", "sbars");
+    bars.append(el("div", "k", "近 14 天每天活躍人數（當天有來過的人）"));
+    const wrap = el("div", "sbarw");
+    wrap.setAttribute("role", "img");
+    wrap.setAttribute("aria-label", "近 14 天每天活躍人數：" + days.map((x) => `${md(x.d)} ${x.n} 人`).join("，"));
+    const labels = el("div", "sbarl");
+    days.forEach((x, i) => {
+      const b = el("div", "sbar");
+      b.title = `${md(x.d)}　${x.n} 人`;
+      if (x.n && (i === days.length - 1 || x === peak)) b.append(el("span", "n", String(x.n)));
+      const bar = el("i", x.n ? "" : "zero");
+      bar.style.height = `${(x.n / max) * 82}%`;
+      b.append(bar);
+      wrap.append(b);
+      labels.append(el("span", (days.length - 1 - i) % 3 ? "hm" : "", i === days.length - 1 ? "今天" : md(x.d)));
+    });
+    bars.append(wrap, labels);
+    body.append(bars);
+
+    const top: { page: string; views: number }[] = data.top_pages || [];
+    const topBox = el("div", "stop");
+    topBox.append(el("div", "k", "近 7 天最多人看的頁面"));
+    if (!top.length) topBox.append(el("p", "cam-count", "還沒有資料。"));
+    else {
+      const ol = el("ol");
+      for (const t of top) {
+        const li = el("li");
+        li.append(el("span", "", pageName(t.page)), el("b", "", `${nf(t.views)} 次`));
+        ol.append(li);
+      }
+      topBox.append(ol);
+    }
+    body.append(topBox);
+    body.append(el("p", "cam-count", "只統計人數與次數，不會顯示是誰。「活躍」是當天登入後有打開過頁面的帳號；頁面瀏覽次數與帳號分開記錄，無法得知誰看了哪一頁。日期以台灣時間計算。"));
+    const t = new Date();
+    document.getElementById("st-at")!.textContent = `${t.getHours()}:${String(t.getMinutes()).padStart(2, "0")} 更新`;
+  }
+  document.getElementById("st-reload")!.addEventListener("click", loadStats);
+
   const STATUSES = ["新回報", "處理中", "已修好", "不處理"];
   type Report = { id: number; created_at: string; kind: string; page: string; message: string; contact: string; device: string; status: string; admin_note: string };
   let rows: Report[] = [];
@@ -146,6 +230,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     }
     msg.hidden = true;
     box.hidden = false;
+    loadStats();
     loadReports();
     watchOnline((st: { n: number; by: [string, number][] }) => {
       document.getElementById("onN")!.textContent = String(st.n);

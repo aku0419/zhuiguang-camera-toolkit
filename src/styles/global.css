@@ -237,3 +237,24 @@ html.gate body{visibility:hidden}
 .account .admin-link{color:var(--ink);text-decoration:none;border:1px solid var(--line);background:var(--paper);border-radius:6px;padding:4px 10px}
 .account .admin-link:hover{border-color:var(--muted)}
 .account .admin-link[hidden]{display:none}
+.stiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:8px 0 14px;max-width:760px}
+.stile{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.stile .k{font-size:13px;color:var(--muted)}
+.stile .v{font-family:var(--display);font-size:34px;font-weight:700;line-height:1.1;margin:4px 0}
+.stile .s{font-size:13px;color:var(--muted)}
+.sbars{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-bottom:14px;max-width:760px}
+.sbars .k,.stop .k{font-size:13px;color:var(--muted);margin-bottom:8px}
+.sbarw{display:flex;align-items:flex-end;gap:4px;height:120px;border-bottom:1px solid var(--line)}
+.sbar{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;position:relative}
+.sbar i{display:block;width:100%;max-width:28px;background:var(--accent);border-radius:3px 3px 0 0;min-height:0}
+.sbar i.zero{height:3px!important;background:var(--line)}
+.sbar .n{font-size:12px;margin-bottom:2px}
+.sbarl{display:flex;gap:4px;margin-top:4px;font-size:11px;color:var(--muted)}
+.sbarl span{flex:1;text-align:center;white-space:nowrap;overflow:hidden}
+.sbarl span.hm{visibility:hidden}
+.stop{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-bottom:10px;max-width:760px}
+.stop ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:4px;font-size:14px}
+.stop li span{word-break:break-all}
+.stop li b{float:right;font-weight:500;color:var(--muted);margin-left:12px}
+#stats{margin-top:16px}
+.rp-head .hint{font-size:12px;color:var(--muted);margin-left:auto;margin-right:10px}

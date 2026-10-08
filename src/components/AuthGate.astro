@@ -4,6 +4,7 @@
 <script>
   import { currentUser, signOut, safeNext, sb } from "../lib/auth.js";
   import { startTracking } from "../lib/online.js";
+  import { logVisit } from "../lib/usage.js";
   (async () => {
     let user = null;
     try { user = await currentUser(); } catch (e) {}
@@ -35,6 +36,9 @@
     }
     document.documentElement.classList.remove("gate");
     // 計算線上人數：管理頁本身不算
-    if (!location.pathname.startsWith("/admin")) setTimeout(startTracking, 1500);
+    if (!location.pathname.startsWith("/admin")) {
+      setTimeout(startTracking, 1500);
+      logVisit(); // 使用統計：只記「這個帳號今天來過」和「這一頁被打開一次」，兩者分開存
+    }
   })();
 </script>

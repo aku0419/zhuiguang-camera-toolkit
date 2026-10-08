@@ -145,6 +145,8 @@
 - 問題回報管理（同在 `/admin/`）：列出回報、依狀態篩選（未結案／新回報／處理中／已修好／不處理／全部）、改狀態、寫備註（只有管理者看得到）。回報是匿名的，沒辦法直接回覆對方；對方有留聯絡方式時，管理者自己去聯絡，再把處理情形寫在備註。
 - 資料庫：`supabase/admin_reports.sql`（要先執行 `issue_reports.sql`、`site_admins.sql`）。資料表仍然完全不開放，只有 `admin_list_reports()`、`admin_update_report()` 兩個函式，函式裡先檢查 `is_site_admin()`。用 pglite 測過：非管理者與 anon 都被拒絕，壞狀態、過長備註、找不到都有擋。畫面上回報內容一律用 `textContent` 顯示，不會執行裡面的 HTML。
 
+- 使用統計（同在 `/admin/`，仿初光）：註冊人數、今天／近 7 天活躍人數、頁面瀏覽次數、近 14 天每天活躍人數長條圖、近 7 天最多人看的頁面。登入後每打開一頁（管理頁除外）由 `src/lib/usage.js` 呼叫 `log_visit()`；資料庫 `supabase/usage_stats.sql`（要先執行 `site_admins.sql`）：`usage_daily`（某天哪些帳號來過）與 `usage_pages`（某天某頁幾次）分開存、資料表完全不開放，無法對應「誰看了哪一頁」；只有管理者能呼叫 `admin_stats()`。日期以台灣時間算；頁面路徑只收簡單字元、一天最多 500 種。已用 pglite 測過權限與限制。隱私說明 `/about/` 已寫明。
+
 ## 其他
 
 - commit 訊息、程式碼註解、PR 內容不要寫任何 AI 模型名稱。
