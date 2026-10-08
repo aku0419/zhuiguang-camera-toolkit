@@ -160,16 +160,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     if (!list.length) { box.append(el("p", "cam-count", "這個分類目前沒有回報。")); return; }
     for (const r of list) {
       const card = el("div", `rp s-${r.status}`);
+      const colL = el("div", "rp-l"), colR = el("div", "rp-r");
+      card.append(colL, colR);
       card.dataset.id = String(r.id);
       const top = el("div", "rp-top");
       top.append(el("span", "pill", r.kind), el("span", "rp-time", fmtTime(r.created_at)));
       if (r.page) top.append(el("span", "rp-page", r.page));
-      card.append(top, el("p", "rp-msg", r.message));
+      colL.append(top, el("p", "rp-msg", r.message));
       const meta: string[] = [];
       if (r.email) meta.push(`帳號：${r.email}`);
       if (r.contact) meta.push(`聯絡：${r.contact}`);
       if (r.device) meta.push(r.device);
-      if (meta.length) card.append(el("p", "rp-meta", meta.join("　")));
+      if (meta.length) colL.append(el("p", "rp-meta", meta.join("　")));
       const st = el("div", "rp-st");
       for (const s of STATUSES) {
         const b = el("button", s === r.status ? "on" : "", s);
@@ -182,7 +184,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         });
         st.append(b);
       }
-      card.append(st);
+      colR.append(st);
       const replyBox = el("textarea") as HTMLTextAreaElement;
       replyBox.placeholder = r.email ? "回覆（送出者會在「我的回報」看到）" : "這則是登入功能開放前的匿名回報，無法回覆";
       replyBox.maxLength = 2000;
@@ -196,7 +198,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         if (error || data !== "ok") { toast("儲存失敗，請再試一次"); return; }
         r.reply = replyBox.value.trim(); draw(); toast("已儲存回覆");
       });
-      card.append(replyBox, saveReply);
+      colR.append(replyBox, saveReply);
       const note = el("textarea") as HTMLTextAreaElement;
       note.placeholder = "備註（只有你看得到，例如怎麼處理的）";
       note.maxLength = 2000;
@@ -208,7 +210,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         if (error || data !== "ok") { toast("儲存失敗，請再試一次"); return; }
         r.admin_note = note.value.trim(); draw(); toast("已儲存備註");
       });
-      card.append(note, save);
+      colR.append(note, save);
       box.append(card);
     }
   }

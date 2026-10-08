@@ -271,3 +271,10 @@ html.gate body{visibility:hidden}
 .legal ul{padding-left:20px;display:flex;flex-direction:column;gap:6px;margin:8px 0}
 .legal p{margin:8px 0}
 .legal-links{margin-top:28px!important}
+.rp{max-width:none}
+.rp-l,.rp-r{min-width:0}
+.rp-r textarea{display:block;margin-top:6px}
+.rp-r .btn{width:100%;margin-bottom:8px}
+@media (min-width:900px){
+  .rp{display:grid;grid-template-columns:1fr 340px;gap:16px;align-items:start}
+}
