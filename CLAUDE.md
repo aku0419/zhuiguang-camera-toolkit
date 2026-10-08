@@ -137,7 +137,7 @@
 
 ## 管理頁（現在線上人數）
 
-- 管理頁 `/admin/`：只有 `site_admins` 資料表裡的帳號看得到，目前顯示「現在線上人數」與各頁人數。做法跟初光一樣：Supabase Realtime Presence，頻道 `zg-online`，每個登入後的分頁匿名加入，只送頁面名稱（不送帳號、姓名）；分頁切到背景超過 2 分鐘不算；管理頁本身不算。
+- 管理頁 `/admin/`：只有 `site_admins` 資料表裡的帳號看得到；管理者登入後，右上角帳號列會多一顆「管理」按鈕（`AuthGate.astro` 用 `is_site_admin()` 判斷，結果記在該分頁的 sessionStorage），一般使用者看不到。目前顯示「現在線上人數」與各頁人數。做法跟初光一樣：Supabase Realtime Presence，頻道 `zg-online`，每個登入後的分頁匿名加入，只送頁面名稱（不送帳號、姓名）；分頁切到背景超過 2 分鐘不算；管理頁本身不算。
 - 程式：`src/lib/online.js`（連線）、`src/lib/online-summary.js`（整理人數，有測試）、`src/pages/admin.astro`；`AuthGate.astro` 登入後啟動計算。
 - 資料庫：`supabase/site_admins.sql`（資料表不開放，只開放 `is_site_admin()` 函式；要先用負責人的 Gmail 登入過一次才能執行）。
 - CSP（`vercel.json`）的 `connect-src` 要有 `wss://*.supabase.co`，Realtime 才連得上。

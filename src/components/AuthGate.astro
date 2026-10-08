@@ -2,7 +2,7 @@
 // 登入牆：沒登入就送去 /login/；有登入就顯示頁面，並在右上角顯示帳號與登出。
 ---
 <script>
-  import { currentUser, signOut, safeNext } from "../lib/auth.js";
+  import { currentUser, signOut, safeNext, sb } from "../lib/auth.js";
   import { startTracking } from "../lib/online.js";
   (async () => {
     let user = null;
@@ -17,6 +17,21 @@
       box.querySelector("span").textContent = user.email || "";
       box.querySelector("button").addEventListener("click", () => signOut());
       box.hidden = false;
+    }
+    // 管理者才看得到「管理」連結（結果記在這個分頁，不用每頁都問一次）
+    const link = document.getElementById("admin-link");
+    if (link) {
+      const ck = "zg-admin:" + user.id;
+      let cached: string | null = null;
+      try { cached = sessionStorage.getItem(ck); } catch (e) {}
+      if (cached === "1") link.hidden = false;
+      else if (cached == null && sb) {
+        sb.rpc("is_site_admin").then(({ data }: { data: unknown }) => {
+          const ok = data === true;
+          try { sessionStorage.setItem(ck, ok ? "1" : "0"); } catch (e) {}
+          if (ok) link.hidden = false;
+        }, () => {});
+      }
     }
     document.documentElement.classList.remove("gate");
     // 計算線上人數：管理頁本身不算

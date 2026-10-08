@@ -48,6 +48,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
         </nav>}
         {gate && (
           <div class="account" id="account" hidden>
+            <a class="admin-link" id="admin-link" href="/admin/" hidden>管理</a>
             <span></span>
             <button type="button">登出</button>
           </div>
