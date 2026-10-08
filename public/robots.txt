@@ -2,6 +2,8 @@
 # 但聊天軟體、社群貼連結時要抓標題與預覽，所以讓這些「連結預覽」程式可以讀取。
 User-agent: *
 Disallow: /
+Allow: /privacy/
+Allow: /terms/
 
 User-agent: facebookexternalhit
 User-agent: Facebot

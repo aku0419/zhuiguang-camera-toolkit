@@ -110,7 +110,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   document.getElementById("st-reload")!.addEventListener("click", loadStats);
 
   const STATUSES = ["新回報", "處理中", "已修好", "不處理"];
-  type Report = { id: number; created_at: string; kind: string; page: string; message: string; contact: string; device: string; status: string; admin_note: string };
+  type Report = { id: number; created_at: string; kind: string; page: string; message: string; contact: string; device: string; status: string; admin_note: string; email: string; reply: string };
   let rows: Report[] = [];
   let filter = "未結案"; // 未結案＝新回報＋處理中
   const el = (tag: string, cls?: string, text?: string) => {
@@ -147,10 +147,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     drawChips();
     const box = document.getElementById("rp-list")!;
     const keep = new Map<number, string>();
+    const keepReply = new Map<number, string>();
     box.querySelectorAll<HTMLElement>("[data-id]").forEach((c) => {
-      const t = c.querySelector<HTMLTextAreaElement>("textarea");
+      const [tr, tn] = Array.from(c.querySelectorAll<HTMLTextAreaElement>("textarea"));
       const r = rows.find((x) => x.id === Number(c.dataset.id));
-      if (t && r && t.value !== r.admin_note) keep.set(r.id, t.value); // 沒存的備註不要被清掉
+      if (!r) return;
+      if (tn && tn.value !== r.admin_note) keep.set(r.id, tn.value); // 沒存的備註、回覆不要被清掉
+      if (tr && tr.value !== r.reply) keepReply.set(r.id, tr.value);
     });
     box.innerHTML = "";
     const list = rows.filter(matches);
@@ -163,6 +166,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       if (r.page) top.append(el("span", "rp-page", r.page));
       card.append(top, el("p", "rp-msg", r.message));
       const meta: string[] = [];
+      if (r.email) meta.push(`帳號：${r.email}`);
       if (r.contact) meta.push(`聯絡：${r.contact}`);
       if (r.device) meta.push(r.device);
       if (meta.length) card.append(el("p", "rp-meta", meta.join("　")));
@@ -179,8 +183,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         st.append(b);
       }
       card.append(st);
+      const replyBox = el("textarea") as HTMLTextAreaElement;
+      replyBox.placeholder = r.email ? "回覆（送出者會在「我的回報」看到）" : "這則是登入功能開放前的匿名回報，無法回覆";
+      replyBox.maxLength = 2000;
+      replyBox.disabled = !r.email;
+      replyBox.value = keepReply.has(r.id) ? keepReply.get(r.id)! : r.reply;
+      const saveReply = el("button", "btn", "儲存回覆");
+      saveReply.setAttribute("type", "button");
+      saveReply.disabled = !r.email;
+      saveReply.addEventListener("click", async () => {
+        const { data, error } = await sb!.rpc("admin_update_report", { p_id: r.id, p_status: null, p_note: null, p_reply: replyBox.value.trim() });
+        if (error || data !== "ok") { toast("儲存失敗，請再試一次"); return; }
+        r.reply = replyBox.value.trim(); draw(); toast("已儲存回覆");
+      });
+      card.append(replyBox, saveReply);
       const note = el("textarea") as HTMLTextAreaElement;
-      note.placeholder = "備註（只有你看得到，例如怎麼處理的、有沒有回覆對方）";
+      note.placeholder = "備註（只有你看得到，例如怎麼處理的）";
       note.maxLength = 2000;
       note.value = keep.has(r.id) ? keep.get(r.id)! : r.admin_note;
       const save = el("button", "btn", "儲存備註");

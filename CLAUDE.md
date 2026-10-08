@@ -41,7 +41,7 @@
 - **要用 Gmail（Google 登入）才能使用整站**（負責人 2026-10 決定，跟初光一樣）。做法跟初光一樣：網頁上的登入牆（`src/lib/auth.js`、`src/components/AuthGate.astro`、`/login/`），用逐光自己的 Supabase 專案的 Google 登入，不是真正保密。
 - **封閉測試**：Google 登入維持測試模式，只有負責人手動加入「測試使用者」的 Gmail 能登入；先不公開、不發布、不送 Google 搜尋。`robots.txt` 禁止搜尋引擎收錄、已停用網站地圖，但放行聊天軟體與社群的「連結預覽」程式（facebookexternalhit、Twitterbot、Line 等），這樣貼連結才會顯示標題；頁面仍有 `noindex`。
 - 計算全部在瀏覽器裡完成，不需要伺服器。
-- 問題回報用**獨立的 Supabase 專案**（不跟初光共用）。寫入只能透過有**長度限制和次數限制**的資料庫函式，前端不能直接寫資料表。
+- 問題回報用**獨立的 Supabase 專案**（不跟初光共用）。寫入只能透過有**長度限制和次數限制**的資料庫函式，前端不能直接寫資料表。回報要登入才能送，會記帳號與 Email。
 
 ## 內容規則（已確定）
 
@@ -68,7 +68,7 @@
 - 沿用初光風格：簡單乾淨、**手機優先**、繁體中文介面。
 - 頁尾一定要有免責說明，文字：「逐光資料整理自原廠公開資訊，實際錄影格式、記憶卡需求與相容性可能因韌體版本而異，重要拍攝前請以原廠最新文件為準。」
 - 網站完全免費，不鎖功能、不做付費會員。未來只放自願斗內。
-- 每頁都要有「回報問題」按鈕（回報本身不需要額外登入資料，只帶公開金鑰）。
+- 每頁都要有「回報問題」按鈕；**回報要登入才能送**（負責人 2026-10 決定），送出者可以在「我的回報」看到狀態與管理者的回覆。
 
 ## 第一階段範圍
 
@@ -128,12 +128,12 @@
 
 ## 問題回報（已設定完成）
 
-- 前端：`src/components/ReportButton.astro`（每頁右下角按鈕＋視窗），用 `fetch` 呼叫 Supabase REST 的 `submit_issue_report()`，只帶 `apikey`（公開金鑰），不用 supabase-js。
-- 資料庫：`supabase/issue_reports.sql`（資料表不開放、只開放函式；長度、次數、總量限制；只存 IP 雜湊）。改這份 SQL 要保持可重複執行，並重新用本機測試（pglite）驗證限制都有效。
+- 前端：`src/components/ReportButton.astro`（每頁右下角按鈕＋視窗），用 supabase-js（`src/lib/auth.js` 的 `sb`）呼叫 `submit_issue_report()`；**要登入才能送**，沒登入會顯示「前往登入」。視窗裡有「我的回報」，用 `my_reports()` 顯示自己送過的回報、狀態、管理者回覆（一律 `textContent`）。
+- 資料庫（依序執行，都可重複執行）：`supabase/issue_reports.sql`（資料表與基本限制）→ `site_admins.sql` → `admin_reports.sql` → `issue_reports_login.sql`（改成要登入、記帳號與 Email、加管理者回覆、每帳號 10 分鐘最多 5 則）→ `usage_stats.sql`。資料表完全不開放，只開放函式。改 SQL 要保持可重複執行，並用本機 pglite 重新驗證限制與權限（非管理者、anon、別人的回報都要擋住）。
 - 設定值：Vercel 環境變數 `PUBLIC_SUPABASE_URL`、`PUBLIC_SUPABASE_KEY`（只放公開金鑰，**絕對不放 secret key**）。沒設定時按鈕仍出現，送出時顯示暫時無法送出。
 - CSP（`vercel.json`）的 `connect-src` 已允許 `https://*.supabase.co`。
 - 操作說明給負責人：`docs/supabase-setup.md`、`docs/deploy-vercel.md`。
-- 隱私說明寫在 `/about/`；若新增收集的欄位，要同步改那裡。
+- 隱私權政策 `/privacy/` 與服務條款 `/terms/`（不用登入就能看，`robots.txt` 特別放行，給 Google 登入驗證用）；`/about/` 有簡短版。**若新增收集的資料、換服務廠商、改保存期間，要同步改這三個地方。** 頁尾與登入頁都有連結。
 
 ## 管理頁（現在線上人數）
 
@@ -142,8 +142,8 @@
 - 資料庫：`supabase/site_admins.sql`（資料表不開放，只開放 `is_site_admin()` 函式；要先用負責人的 Gmail 登入過一次才能執行）。
 - CSP（`vercel.json`）的 `connect-src` 要有 `wss://*.supabase.co`，Realtime 才連得上。
 - 隱私說明 `/about/` 已寫明匿名線上人數；若改變記錄內容要同步改。
-- 問題回報管理（同在 `/admin/`）：列出回報、依狀態篩選（未結案／新回報／處理中／已修好／不處理／全部）、改狀態、寫備註（只有管理者看得到）。回報是匿名的，沒辦法直接回覆對方；對方有留聯絡方式時，管理者自己去聯絡，再把處理情形寫在備註。
-- 資料庫：`supabase/admin_reports.sql`（要先執行 `issue_reports.sql`、`site_admins.sql`）。資料表仍然完全不開放，只有 `admin_list_reports()`、`admin_update_report()` 兩個函式，函式裡先檢查 `is_site_admin()`。用 pglite 測過：非管理者與 anon 都被拒絕，壞狀態、過長備註、找不到都有擋。畫面上回報內容一律用 `textContent` 顯示，不會執行裡面的 HTML。
+- 問題回報管理（同在 `/admin/`）：列出回報（含送出者 Email）、依狀態篩選（未結案／新回報／處理中／已修好／不處理／全部）、改狀態、寫「回覆」（送出者在「我的回報」看得到）與「備註」（只有管理者看得到）。登入功能開放前的匿名回報沒有帳號，無法回覆。
+- 資料庫：`supabase/admin_reports.sql`＋`issue_reports_login.sql`。資料表仍然完全不開放，管理用的只有 `admin_list_reports()`、`admin_update_report()` 兩個函式，函式裡先檢查 `is_site_admin()`。用 pglite 測過：非管理者與 anon 都被拒絕，壞狀態、過長備註、找不到都有擋。畫面上回報內容一律用 `textContent` 顯示，不會執行裡面的 HTML。
 
 - 使用統計（同在 `/admin/`，仿初光）：註冊人數、今天／近 7 天活躍人數、頁面瀏覽次數、近 14 天每天活躍人數長條圖、近 7 天最多人看的頁面。登入後每打開一頁（管理頁除外）由 `src/lib/usage.js` 呼叫 `log_visit()`；資料庫 `supabase/usage_stats.sql`（要先執行 `site_admins.sql`）：`usage_daily`（某天哪些帳號來過）與 `usage_pages`（某天某頁幾次）分開存、資料表完全不開放，無法對應「誰看了哪一頁」；只有管理者能呼叫 `admin_stats()`。日期以台灣時間算；頁面路徑只收簡單字元、一天最多 500 種。已用 pglite 測過權限與限制。隱私說明 `/about/` 已寫明。
 

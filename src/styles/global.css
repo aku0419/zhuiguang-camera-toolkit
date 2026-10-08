@@ -258,3 +258,16 @@ html.gate body{visibility:hidden}
 .stop li b{float:right;font-weight:500;color:var(--muted);margin-left:12px}
 #stats{margin-top:16px}
 .rp-head .hint{font-size:12px;color:var(--muted);margin-left:auto;margin-right:10px}
+.fb-sp{flex:1}
+.fb-row .btn[hidden]{display:none}
+.fb-mylist{max-height:240px;overflow:auto;border-top:1px solid var(--line);padding-top:10px;font-size:14px;color:var(--muted)}
+.fb-mylist[hidden]{display:none}
+.fb-my{border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin-bottom:8px;background:var(--soft);color:var(--ink)}
+.fb-my-top{font-size:12px;color:var(--muted)}
+.fb-my-msg{margin:4px 0;white-space:pre-wrap;word-break:break-word}
+.fb-my-reply{margin-top:4px;padding:6px 8px;border-left:3px solid var(--ok);background:var(--paper);white-space:pre-wrap;word-break:break-word}
+.legal{max-width:760px;line-height:1.85}
+.legal h2{font-size:18px;margin:26px 0 8px}
+.legal ul{padding-left:20px;display:flex;flex-direction:column;gap:6px;margin:8px 0}
+.legal p{margin:8px 0}
+.legal-links{margin-top:28px!important}

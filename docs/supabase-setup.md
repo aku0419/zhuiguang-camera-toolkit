@@ -46,6 +46,10 @@
    - 重複按幾次 Run 也沒關係，不會弄壞資料。
    - 如果出現紅色錯誤，把錯誤文字複製給 Claude 就好（不含任何金鑰）。
 
+> **目前的設定順序**（問題回報改成要登入、加上管理頁之後）：到 SQL Editor 依序貼上並 Run 這幾份，每份都可以重複執行：
+> 1. `supabase/issue_reports.sql`　2. `supabase/site_admins.sql`（要先用你的 Gmail 登入過逐光一次）　3. `supabase/admin_reports.sql`　4. `supabase/issue_reports_login.sql`　5. `supabase/usage_stats.sql`
+> 後面三份是之後新增功能時才需要的，已經執行過的不用重做。
+
 ## 步驟 3：複製「專案網址」和「公開金鑰」
 
 1. 左下角點 **Project Settings**（齒輪圖示）。
