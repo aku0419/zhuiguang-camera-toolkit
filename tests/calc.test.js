@@ -8,6 +8,7 @@ import {
   fieldOfView, sunnyAperture, ndStopsNeeded, shootStorage,
   frameSizeAt, desqueezedRatio, mired, miredShift, luxToEV, luxToFc, TC_RATES, tcToFrames, framesToTc,
 } from "../src/lib/calc.js";
+import { summarize, pageLabel } from "../src/lib/online-summary.js";
 
 test("24fps + 180° → 1/48 秒，最接近 1/50", () => {
   const r = shutterFromAngle(24, 180);
@@ -151,4 +152,16 @@ test("時間碼：24fps 1 小時 = 86400 格；29.97 DF 1 小時 = 107892 格、
   assert.equal(framesToTc(tcToFrames("00:00:59;29", r("29.97df")) + 1, r("29.97df")), "00:01:00;02");
   assert.equal(tcToFrames("00:01:00;00", r("29.97df")), null); // 遺漏格式沒有這個時間碼
   assert.equal(tcToFrames("00:00:00:24", r("24")), null);
+});
+
+test("線上人數：整理成總人數與各頁人數，頁面名稱對應", () => {
+  const st = { a: [{ p: "首頁" }], b: [{ p: "鏡頭" }], c: [{ p: "鏡頭" }], d: [] };
+  const r = summarize(st);
+  assert.equal(r.n, 3);
+  assert.deepEqual(r.by[0], ["鏡頭", 2]);
+  assert.equal(summarize({}).n, 0);
+  assert.equal(pageLabel("/"), "首頁");
+  assert.equal(pageLabel("/lenses/sony-fe-24-70mm-f2-8-gm-ii/"), "鏡頭");
+  assert.equal(pageLabel("/tools/timecode/"), "工具");
+  assert.equal(pageLabel("/xyz/"), "其他");
 });

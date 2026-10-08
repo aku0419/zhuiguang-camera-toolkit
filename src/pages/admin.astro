@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="管理頁" description="逐光管理頁（僅網站管理者可見）。">
+  <p class="eyebrow">Admin</p>
+  <h1>管理頁</h1>
+  <div id="msg" class="cam-count">讀取中…</div>
+  <div class="online" id="online" hidden>
+    <span><span class="dot"></span>現在線上</span>
+    <b id="onN">0</b>
+    <span class="by" id="onBy"></span>
+    <span class="hint">分頁開著就算一人，切到背景超過 2 分鐘不算；只記頁面名稱，不會記錄是誰。管理頁本身不算。</span>
+  </div>
+</BaseLayout>
+
+<script>
+  import { sb } from "../lib/auth.js";
+  import { watchOnline } from "../lib/online.js";
+  const msg = document.getElementById("msg")!;
+  const box = document.getElementById("online")!;
+  (async () => {
+    let ok = false, missing = false;
+    try {
+      const { data, error } = await sb!.rpc("is_site_admin");
+      ok = data === true;
+      missing = !!error && /is_site_admin|could not find the function|does not exist/i.test(error.message || "");
+    } catch (e) {}
+    if (!ok) {
+      msg.textContent = missing
+        ? "這一頁需要先在 Supabase 執行 supabase/site_admins.sql，才能使用。"
+        : "這一頁只有網站管理者能看。";
+      return;
+    }
+    msg.hidden = true;
+    box.hidden = false;
+    watchOnline((st: { n: number; by: [string, number][] }) => {
+      document.getElementById("onN")!.textContent = String(st.n);
+      const by = document.getElementById("onBy")!;
+      by.textContent = st.by.map(([p, c]) => `${p} ${c}`).join("　");
+    });
+  })();
+</script>

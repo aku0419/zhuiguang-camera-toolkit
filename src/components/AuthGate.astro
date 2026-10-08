@@ -3,6 +3,7 @@
 ---
 <script>
   import { currentUser, signOut, safeNext } from "../lib/auth.js";
+  import { startTracking } from "../lib/online.js";
   (async () => {
     let user = null;
     try { user = await currentUser(); } catch (e) {}
@@ -18,5 +19,7 @@
       box.hidden = false;
     }
     document.documentElement.classList.remove("gate");
+    // 計算線上人數：管理頁本身不算
+    if (!location.pathname.startsWith("/admin")) setTimeout(startTracking, 1500);
   })();
 </script>

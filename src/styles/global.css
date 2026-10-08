@@ -210,3 +210,9 @@ html.gate body{visibility:hidden}
   .dof-table{font-size:11pt}
 }
 .dof-table th,.dof-table td{padding:8px 8px;font-size:13px;white-space:nowrap}
+.online{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-bottom:16px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px}
+.online b{font-size:28px;color:var(--accent);font-family:var(--display);line-height:1}
+.online .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ok);margin-right:6px}
+.online .by{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 12px}
+.online .hint{font-size:12px;color:var(--muted)}
+.online[hidden]{display:none!important}
