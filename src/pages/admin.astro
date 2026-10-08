@@ -11,11 +11,124 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <span class="by" id="onBy"></span>
     <span class="hint">分頁開著就算一人，切到背景超過 2 分鐘不算；只記頁面名稱，不會記錄是誰。管理頁本身不算。</span>
   </div>
+  <section id="reports" hidden>
+    <div class="rp-head">
+      <h2>問題回報</h2>
+      <button type="button" class="btn" id="rp-reload">重新整理</button>
+    </div>
+    <div class="fchips" id="rp-chips" role="group" aria-label="依狀態篩選"></div>
+    <div id="rp-list"><p class="cam-count">讀取中…</p></div>
+  </section>
+  <div class="rp-toast" id="rp-toast" hidden></div>
 </BaseLayout>
 
 <script>
   import { sb } from "../lib/auth.js";
   import { watchOnline } from "../lib/online.js";
+  const STATUSES = ["新回報", "處理中", "已修好", "不處理"];
+  type Report = { id: number; created_at: string; kind: string; page: string; message: string; contact: string; device: string; status: string; admin_note: string };
+  let rows: Report[] = [];
+  let filter = "未結案"; // 未結案＝新回報＋處理中
+  const el = (tag: string, cls?: string, text?: string) => {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  };
+  const toast = (m: string) => {
+    const t = document.getElementById("rp-toast")!;
+    t.textContent = m; t.hidden = false;
+    setTimeout(() => (t.hidden = true), 2200);
+  };
+  const fmtTime = (iso: string) => {
+    const d = new Date(iso);
+    return `${d.getMonth() + 1}/${d.getDate()} ${d.getHours()}:${String(d.getMinutes()).padStart(2, "0")}`;
+  };
+  const matches = (r: Report) => filter === "全部" || (filter === "未結案" ? r.status === "新回報" || r.status === "處理中" : r.status === filter);
+
+  function drawChips() {
+    const box = document.getElementById("rp-chips")!;
+    box.innerHTML = "";
+    const count = (f: string) => rows.filter((r) => (f === "全部" ? true : f === "未結案" ? r.status === "新回報" || r.status === "處理中" : r.status === f)).length;
+    for (const f of ["未結案", ...STATUSES, "全部"]) {
+      const b = el("button", f === filter ? "on" : "", f);
+      b.setAttribute("type", "button");
+      b.append(el("b", "", String(count(f))));
+      b.addEventListener("click", () => { filter = f; draw(); });
+      box.append(b);
+    }
+  }
+
+  function draw() {
+    drawChips();
+    const box = document.getElementById("rp-list")!;
+    const keep = new Map<number, string>();
+    box.querySelectorAll<HTMLElement>("[data-id]").forEach((c) => {
+      const t = c.querySelector<HTMLTextAreaElement>("textarea");
+      const r = rows.find((x) => x.id === Number(c.dataset.id));
+      if (t && r && t.value !== r.admin_note) keep.set(r.id, t.value); // 沒存的備註不要被清掉
+    });
+    box.innerHTML = "";
+    const list = rows.filter(matches);
+    if (!list.length) { box.append(el("p", "cam-count", "這個分類目前沒有回報。")); return; }
+    for (const r of list) {
+      const card = el("div", `rp s-${r.status}`);
+      card.dataset.id = String(r.id);
+      const top = el("div", "rp-top");
+      top.append(el("span", "pill", r.kind), el("span", "rp-time", fmtTime(r.created_at)));
+      if (r.page) top.append(el("span", "rp-page", r.page));
+      card.append(top, el("p", "rp-msg", r.message));
+      const meta: string[] = [];
+      if (r.contact) meta.push(`聯絡：${r.contact}`);
+      if (r.device) meta.push(r.device);
+      if (meta.length) card.append(el("p", "rp-meta", meta.join("　")));
+      const st = el("div", "rp-st");
+      for (const s of STATUSES) {
+        const b = el("button", s === r.status ? "on" : "", s);
+        b.setAttribute("type", "button");
+        b.addEventListener("click", async () => {
+          if (s === r.status) return;
+          const { data, error } = await sb!.rpc("admin_update_report", { p_id: r.id, p_status: s, p_note: null });
+          if (error || data !== "ok") { toast("儲存失敗，請再試一次"); return; }
+          r.status = s; draw(); toast(`已改成「${s}」`);
+        });
+        st.append(b);
+      }
+      card.append(st);
+      const note = el("textarea") as HTMLTextAreaElement;
+      note.placeholder = "備註（只有你看得到，例如怎麼處理的、有沒有回覆對方）";
+      note.maxLength = 2000;
+      note.value = keep.has(r.id) ? keep.get(r.id)! : r.admin_note;
+      const save = el("button", "btn", "儲存備註");
+      save.setAttribute("type", "button");
+      save.addEventListener("click", async () => {
+        const { data, error } = await sb!.rpc("admin_update_report", { p_id: r.id, p_status: null, p_note: note.value.trim() });
+        if (error || data !== "ok") { toast("儲存失敗，請再試一次"); return; }
+        r.admin_note = note.value.trim(); draw(); toast("已儲存備註");
+      });
+      card.append(note, save);
+      box.append(card);
+    }
+  }
+
+  async function loadReports() {
+    const sec = document.getElementById("reports")!;
+    const list = document.getElementById("rp-list")!;
+    sec.hidden = false;
+    const { data, error } = await sb!.rpc("admin_list_reports", { p_limit: 200 });
+    if (error) {
+      const missing = error.code === "PGRST202" || /admin_list_reports|could not find the function|does not exist/i.test(error.message || "");
+      list.innerHTML = "";
+      list.append(el("p", "cam-count", missing
+        ? "要先在 Supabase 執行 supabase/admin_reports.sql，才看得到問題回報。"
+        : "讀取失敗，請按「重新整理」再試一次。"));
+      return;
+    }
+    rows = (data || []) as Report[];
+    draw();
+  }
+  document.getElementById("rp-reload")!.addEventListener("click", loadReports);
+
   const msg = document.getElementById("msg")!;
   const box = document.getElementById("online")!;
   (async () => {
@@ -33,6 +146,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     }
     msg.hidden = true;
     box.hidden = false;
+    loadReports();
     watchOnline((st: { n: number; by: [string, number][] }) => {
       document.getElementById("onN")!.textContent = String(st.n);
       const by = document.getElementById("onBy")!;

@@ -142,7 +142,8 @@
 - 資料庫：`supabase/site_admins.sql`（資料表不開放，只開放 `is_site_admin()` 函式；要先用負責人的 Gmail 登入過一次才能執行）。
 - CSP（`vercel.json`）的 `connect-src` 要有 `wss://*.supabase.co`，Realtime 才連得上。
 - 隱私說明 `/about/` 已寫明匿名線上人數；若改變記錄內容要同步改。
-- 還沒做：問題回報列表（目前在 Supabase 後台的 Table Editor 看）。
+- 問題回報管理（同在 `/admin/`）：列出回報、依狀態篩選（未結案／新回報／處理中／已修好／不處理／全部）、改狀態、寫備註（只有管理者看得到）。回報是匿名的，沒辦法直接回覆對方；對方有留聯絡方式時，管理者自己去聯絡，再把處理情形寫在備註。
+- 資料庫：`supabase/admin_reports.sql`（要先執行 `issue_reports.sql`、`site_admins.sql`）。資料表仍然完全不開放，只有 `admin_list_reports()`、`admin_update_report()` 兩個函式，函式裡先檢查 `is_site_admin()`。用 pglite 測過：非管理者與 anon 都被拒絕，壞狀態、過長備註、找不到都有擋。畫面上回報內容一律用 `textContent` 顯示，不會執行裡面的 HTML。
 
 ## 其他
 
