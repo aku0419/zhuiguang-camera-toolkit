@@ -130,6 +130,42 @@
       "crop": "none"
     },
     {
+      "resolution": "3840x2160",
+      "max_fps": 29.97,
+      "codec": "XAVC S-L 422",
+      "bitrate_mbps": 140,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 23.98,
+      "codec": "XAVC S-L 422",
+      "bitrate_mbps": 100,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 29.97,
+      "codec": "XAVC S-L 422",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 23.98,
+      "codec": "XAVC S-L 422",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
       "resolution": "1920x1080",
       "max_fps": 239.76,
       "codec": "XAVC S-L 420",
@@ -147,6 +183,51 @@
       "bit_depth": "Unknown",
       "chroma": "4:2:2",
       "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 29.97,
+      "codec": "XAVC S-I",
+      "bitrate_mbps": 300,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 23.98,
+      "codec": "XAVC S-I",
+      "bitrate_mbps": 240,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 29.97,
+      "codec": "XAVC S-I",
+      "bitrate_mbps": 300,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 29.97,
+      "codec": "XAVC S-I",
+      "bitrate_mbps": 111,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 23.98,
+      "codec": "XAVC S-I",
+      "bitrate_mbps": 89,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
     }
   ],
   "source_name": "Sony ILME-FX5 Help Guide（PDF）",
@@ -161,6 +242,6 @@
       "source_url": "https://alphauniverse.com/stories/sony-electronics-launches-the-fx5/"
     }
   ],
-  "last_verified": "2026-10-06",
-  "editor_notes": "原廠說明書：Base ISO 可選 800／4000／12800／800(Dual Gain)。手冊沒有寫位元深度與 X-OCN 位元率。5K 解析度的實際像素數手冊沒寫。發表日期 2026-07 來自 Sony 新聞稿（sony.eu）。"
+  "last_verified": "2026-10-08",
+  "editor_notes": "原廠說明書：Base ISO 可選 800／4000／12800／800(Dual Gain)。手冊沒有寫位元深度與 X-OCN 位元率。5K 解析度的實際像素數手冊沒寫。發表日期 2026-07 來自 Sony 新聞稿（sony.eu）。 2026-10-08：24p／30p 的位元率取自 FX5 Help Guide「Video Format／Quality／Bit Rate Settings」表（各格率以 Quality = High 的數值為準）。"
 }

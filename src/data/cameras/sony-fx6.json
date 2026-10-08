@@ -45,11 +45,21 @@
       "resolution": "4096x2160",
       "max_fps": 23.98,
       "codec": "XAVC-I",
-      "bitrate_mbps": "Unknown",
-      "bit_depth": "Unknown",
-      "chroma": "Unknown",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
       "crop": "none",
-      "notes": "說明書只列最大位元率 600 Mbps，沒有列各格率的數值"
+      "notes": "位元率 240 Mbps 來自 Sony 支援文章「XAVC 位元率一覽」（FX6 說明書只列最大 600 Mbps）；24.00p 同為 240 Mbps"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 29.97,
+      "codec": "XAVC-I",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "位元率來自 Sony 支援文章「XAVC 位元率一覽」（FX6 說明書未列各格率數值），Wikipedia 數字相同"
     },
     {
       "resolution": "3840x2160",
@@ -60,6 +70,26 @@
       "chroma": "Unknown",
       "crop": "none",
       "notes": "原廠標示的最大位元率（VBR）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 23.98,
+      "codec": "XAVC-I",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "位元率來自 Sony 支援文章「XAVC 位元率一覽」（FX6 說明書未列各格率數值），Wikipedia 數字相同"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 29.97,
+      "codec": "XAVC-I",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "位元率來自 Sony 支援文章「XAVC 位元率一覽」（FX6 說明書未列各格率數值），Wikipedia 數字相同"
     },
     {
       "resolution": "3840x2160",
@@ -82,6 +112,26 @@
       "notes": "原廠標示的最大位元率（VBR）"
     },
     {
+      "resolution": "3840x2160",
+      "max_fps": 29.97,
+      "codec": "XAVC-L",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "位元率來自 Sony 支援文章「XAVC 位元率一覽」（FX6 說明書未列各格率數值），Wikipedia 數字相同；QFHD 的 XAVC-L 為 8-bit 4:2:0"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 23.98,
+      "codec": "XAVC-L",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "位元率來自 Sony 支援文章「XAVC 位元率一覽」（FX6 說明書未列各格率數值），Wikipedia 數字相同；QFHD 的 XAVC-L 為 8-bit 4:2:0"
+    },
+    {
       "resolution": "1920x1080",
       "max_fps": 59.94,
       "codec": "XAVC-I",
@@ -90,6 +140,26 @@
       "chroma": "Unknown",
       "crop": "none",
       "notes": "原廠標示 CBG（固定位元率）223 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 23.98,
+      "codec": "XAVC-I",
+      "bitrate_mbps": 89,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "位元率來自 Sony 支援文章「XAVC 位元率一覽」（FX6 說明書未列各格率數值），Wikipedia 數字相同；HD 的 XAVC-I 為固定位元率（CBG）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 29.97,
+      "codec": "XAVC-I",
+      "bitrate_mbps": 111,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "位元率來自 Sony 支援文章「XAVC 位元率一覽」（FX6 說明書未列各格率數值），Wikipedia 數字相同；HD 的 XAVC-I 為固定位元率（CBG）"
     },
     {
       "resolution": "1920x1080",
@@ -138,8 +208,16 @@
     {
       "source_name": "Sony 新聞稿：FX6 發表（Alpha Universe，2020-11-17）",
       "source_url": "https://alphauniverse.com/stories/sony-launches-fx6-full-frame-cinema-camera-and-e-mount-cinema-lens/"
+    },
+    {
+      "source_name": "Sony 支援文章：XAVC 錄影格式與位元率一覽（Article 00253978）",
+      "source_url": "https://www.sony.ca/en/electronics/support/articles/00253978"
+    },
+    {
+      "source_name": "Wikipedia：Sony FX6（錄影格式表，用來交叉比對）",
+      "source_url": "https://en.wikipedia.org/wiki/Sony_FX6"
     }
   ],
-  "last_verified": "2026-10-07",
-  "editor_notes": "說明書由負責人從 Sony 台灣網站下載後提供（Sony 網站擋自動讀取，來源網址為下載頁）。說明書的「規格」頁列出最大位元率與錄製格式；位元深度、色彩取樣、Log 名稱在文字裡沒有明寫，所以標未知（待核對）。內建 ND：1/4、1/16、1/64、線性可變 1/4–1/128。動態範圍 15+ stops 說明書與新聞稿一致。"
+  "last_verified": "2026-10-08",
+  "editor_notes": "說明書由負責人從 Sony 台灣網站下載後提供（Sony 網站擋自動讀取，來源網址為下載頁）。說明書的「規格」頁列出最大位元率與錄製格式；位元深度、色彩取樣、Log 名稱在文字裡沒有明寫，所以標未知（待核對）。內建 ND：1/4、1/16、1/64、線性可變 1/4–1/128。動態範圍 15+ stops 說明書與新聞稿一致。 2026-10-08：24p／30p 的位元率來自 Sony 支援文章與 Wikipedia（FX6 說明書沒有各格率數值）。待核對：HD XAVC-I 59.94p 說明書寫 223 Mbps，支援文章寫 222 Mbps（50p 才是 223），目前保留說明書的數字。"
 }
