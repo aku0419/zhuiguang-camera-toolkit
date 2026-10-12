@@ -96,7 +96,9 @@
 - 每呎格數是用 Kodak 公布的運行時間換算（35mm 每呎 64 孔；4 孔 16 格、3 孔 64÷3、2 孔 32、8 孔 8；65mm 5 孔 12.8；16mm 40；Super 8 72），測試會逐一對照 Kodak 的運行時間。
 - 底片長度計算 `/tools/film-length/`：呎／公尺與時間互相換算，可選片幅與格率，算式 `filmRuntime`、`filmFeetFor`（`calc.js`）。
 - 底片型號 `/film/<slug>/`（資料 `src/data/film-stocks/<slug>.json`，檢查 `src/lib/film.js`）：目前只收 Kodak 還買得到的拍攝用底片 8 種（VISION3 500T／250D／200T／50D、VERITA 200D、EKTACHROME 100D、DOUBLE-X、TRI-X 反轉片），依據 Kodak 價目表（美國版，2026-08-28 生效，用來確認哪些還在賣與可買規格）與各片技術資料（H-1-xxxx）；記感光度（EI）、色溫平衡、各光源的濾鏡與 EI、沖洗方式、片基、保存。**不放價格**；價目表上有「價格洽詢」的 VERITA 也不放。曲線圖才有的數字（粒子、MTF）不收。Fujifilm 2013 年已停產電影底片，不收。
-- 還沒做：ORWO（黑白電影底片，需要先確認官方資料）、底片曝光補償、底片成本粗估。
+- 底片曝光補償 `/tools/film-exposure/`：選底片與光源，列出 Kodak 原廠的濾鏡與 EI；可填刻意加減曝（級數）與測光表光圈，算出要設的 EI 與實際光圈（`eiAdjusted`、`eiStopsBetween`、`apertureForEI`）。不含增感／減感沖洗。
+- 底片成本粗估 `/tools/film-cost/`：成片長度 × 拍攝比 → 呎數 → 卷數，加上沖洗費、掃描費（價格全部由使用者輸入，工具不內建任何價格，算式 `filmCost`）。
+- 還沒做：ORWO（黑白電影底片，需要先確認官方資料）。
 
 ## 記憶卡資料庫（進行中）
 

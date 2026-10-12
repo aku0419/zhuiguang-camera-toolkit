@@ -1,0 +1,103 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+import { filmStocks } from "../../lib/film.js";
+const data = filmStocks.map((f) => ({
+  slug: f.slug, name: `${f.brand} ${f.name}`, ei: f.ei, filters: f.filters,
+}));
+---
+<BaseLayout title="底片曝光補償" description="選底片和光源，查 Kodak 原廠建議的濾鏡與感光度（EI）；也能算刻意加曝、減曝，以及用測光表測得的光圈要改成多少。" section="tools">
+  <ToolHead title="底片曝光補償" question="這卷底片在這種光下，要加什麼濾鏡？測光表要設多少？" />
+  <div class="tool">
+    <div class="field">
+      <label for="stock">底片</label>
+      <select id="stock">
+        {data.map((d) => <option value={d.slug}>{d.name}</option>)}
+      </select>
+    </div>
+    <div class="field">
+      <label for="light">光源</label>
+      <select id="light"></select>
+      <span class="hint">感光度與濾鏡來自 Kodak 技術資料，是約略值；最後的色彩修正請在調光時完成。</span>
+    </div>
+    <div class="field">
+      <label for="adj">刻意加曝／減曝</label>
+      <div class="inrow"><input id="adj" type="number" inputmode="decimal" step="0.5" min="-4" max="4" value="0" /><span class="unit">級</span></div>
+      <div class="chips" role="group" aria-label="常用加減曝">
+        {[-2, -1, 0, 1, 2].map((v) => <button type="button" class="chip" data-v={v} aria-pressed="false">{v > 0 ? `+${v}` : v}</button>)}
+      </div>
+      <span class="hint">正數＝加曝（給底片更多光，感光度要調低），負數＝減曝。要不要加減曝，請依你的拍攝與調光流程決定。</span>
+    </div>
+    <div class="field">
+      <label for="metered">測光表讀到的光圈（選填）</label>
+      <div class="inrow"><span class="unit">f/</span><input id="metered" type="number" inputmode="decimal" min="0.5" step="any" placeholder="例如 5.6" /></div>
+      <span class="hint">用「這卷底片的標準感光度」測得的光圈。填了會算出實際要用的光圈。</span>
+    </div>
+    <div class="result" aria-live="polite">
+      <p class="lbl">測光表要設定的感光度</p>
+      <p class="big" id="out">—</p>
+      <p class="sub" id="sub"></p>
+    </div>
+    <p class="formula">算法：設定的感光度 ＝ 原廠 EI × 2^（－加曝級數）；改變感光度後的光圈 ＝ 原光圈 × √（新 EI ÷ 原 EI）</p>
+    <ul class="notes">
+      <li>標準感光度用原廠的主要光源（鎢絲燈型用鎢絲燈、日光型用日光）。加濾鏡會讓進光量減少，所以感光度會比較低，不是底片變慢了。</li>
+      <li>這裡不包含「增感、減感沖洗」，那要跟沖洗廠討論。</li>
+      <li>各底片的完整資料見<a href="/film/#stocks">底片型號</a>；測光與曝光級數換算請配合<a href="/tools/exposure-stops/">曝光級數</a>。</li>
+    </ul>
+  </div>
+  <script type="application/json" id="film-data" set:html={JSON.stringify(data)} />
+</BaseLayout>
+
+<script>
+  import { eiAdjusted, eiStopsBetween, apertureForEI, fmt } from "../../lib/calc.js";
+  import { num } from "../../lib/ui.js";
+  type Light = { label: string; filter: string; ei: number };
+  const data: { slug: string; name: string; ei: { label: string; ei: number; filter: string }[]; filters: { source: string; filter: string; ei: number }[] }[] =
+    JSON.parse(document.getElementById("film-data")!.textContent || "[]");
+  const stock = document.getElementById("stock") as HTMLSelectElement;
+  const light = document.getElementById("light") as HTMLSelectElement;
+  const adj = document.getElementById("adj") as HTMLInputElement;
+  const metered = document.getElementById("metered") as HTMLInputElement;
+  const out = document.getElementById("out")!, sub = document.getElementById("sub")!;
+  const chips = [...document.querySelectorAll<HTMLElement>(".chip")];
+  const cur = () => data.find((d) => d.slug === stock.value)!;
+  const lightsOf = (d: (typeof data)[number]): Light[] =>
+    d.filters.length ? d.filters.map((x) => ({ label: x.source, filter: x.filter, ei: x.ei })) : d.ei.map((x) => ({ label: x.label, filter: x.filter, ei: x.ei }));
+  const fillLights = () => {
+    light.innerHTML = "";
+    lightsOf(cur()).forEach((l, i) => {
+      const o = document.createElement("option");
+      o.value = String(i); o.textContent = `${l.label}（${l.filter}）`;
+      light.append(o);
+    });
+    // 預設選原廠的主要光源（例如 500T 的鎢絲燈 3200K）
+    const main = lightsOf(cur()).findIndex((l) => l.label === cur().ei[0].label);
+    light.value = String(main >= 0 ? main : 0);
+  };
+  const update = () => {
+    const d = cur(), l = lightsOf(d)[Number(light.value)] || lightsOf(d)[0];
+    const base = d.ei[0].ei; // 標準感光度＝原廠列在第一個的光源
+    const a = num(adj) || 0;
+    const ei = eiAdjusted(l.ei, a);
+    chips.forEach((c) => c.setAttribute("aria-pressed", String(Number(c.dataset.v) === a)));
+    if (ei == null) { out.textContent = "—"; sub.textContent = "請輸入加減曝級數"; return; }
+    out.textContent = `EI ${fmt(ei, ei < 100 ? 1 : 0)}`;
+    const lost = eiStopsBetween(base, l.ei) as number;
+    let t = `原廠：${l.label}，${l.filter}，EI <b>${l.ei}</b>`
+      + (Math.abs(lost) > 0.05 ? `<br>跟標準感光度（EI ${base}）相比，多給 <b>${fmt(lost, 2)}</b> 級光` : "<br>跟標準感光度相同");
+    if (a !== 0) t += `<br>${a > 0 ? "加曝" : "減曝"} ${fmt(Math.abs(a), 1)} 級 → EI ${fmt(ei, ei < 100 ? 1 : 0)}`;
+    const n = num(metered);
+    if (n > 0) {
+      const na = apertureForEI(n, base, ei)!;
+      t += `<br>用 EI ${base} 測得 f/${fmt(n, 1)} → 實際要用 <b>f/${fmt(na, 1)}</b>（${na < n ? "要開大" : na > n ? "可以縮小" : "不用改"}）`;
+    }
+    sub.innerHTML = t;
+  };
+  const q = new URLSearchParams(location.search).get("stock");
+  if (q && data.some((d) => d.slug === q)) stock.value = q;
+  fillLights(); update();
+  stock.addEventListener("change", () => { fillLights(); update(); });
+  light.addEventListener("change", update);
+  adj.addEventListener("input", update); metered.addEventListener("input", update);
+  chips.forEach((c) => c.addEventListener("click", () => { adj.value = c.dataset.v!; update(); }));
+</script>

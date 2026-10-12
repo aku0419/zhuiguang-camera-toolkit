@@ -1,0 +1,96 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+import { FILM_FORMATS } from "../../data/film-formats.js";
+---
+<BaseLayout title="底片成本粗估" description="輸入成片長度、拍攝比、底片與沖洗掃描的單價，粗估需要幾呎、幾卷底片，以及底片、沖洗、掃描的總費用。價格由你自己輸入，工具不內建價格。" section="tools">
+  <ToolHead title="底片成本粗估" question="拍這部片，底片、沖洗、掃描大概要準備多少預算？" />
+  <div class="tool">
+    <div class="field">
+      <label for="fmt">底片片幅</label>
+      <select id="fmt">
+        {FILM_FORMATS.map((f) => <option value={f.id} data-fpf={f.framesPerFoot} data-roll={f.rollFeet} selected={f.id === "s16"}>{f.name}</option>)}
+      </select>
+    </div>
+    <div class="field">
+      <label>成片要用的長度</label>
+      <div class="inrow">
+        <input id="mins" type="number" inputmode="decimal" min="0" step="any" value="5" aria-label="分鐘" /><span class="unit">分</span>
+        <input id="secs" type="number" inputmode="decimal" min="0" step="any" value="0" aria-label="秒" /><span class="unit">秒</span>
+      </div>
+    </div>
+    <div class="field">
+      <label for="ratio">拍攝比（拍的長度 ÷ 用的長度）</label>
+      <div class="inrow"><input id="ratio" type="number" inputmode="decimal" min="1" step="any" value="5" /><span class="unit">：1</span></div>
+      <span class="hint">例如要用 5 分鐘、拍了 25 分鐘，拍攝比就是 5:1。要多少請依劇本、導演與預算自己決定。</span>
+    </div>
+    <div class="field">
+      <label for="fps">拍攝格率</label>
+      <div class="inrow"><input id="fps" type="number" inputmode="decimal" min="1" step="any" value="24" /><span class="unit">fps</span></div>
+    </div>
+    <div class="field">
+      <label for="waste">預留餘裕（片頭片尾、重拍、測試）</label>
+      <div class="inrow"><input id="waste" type="number" inputmode="decimal" min="0" step="any" value="10" /><span class="unit">%</span></div>
+    </div>
+    <h2 style="margin:18px 0 8px">價格（請自己輸入，單位自訂，例如新台幣）</h2>
+    <div class="field">
+      <label for="roll">一卷底片的長度</label>
+      <div class="inrow"><input id="roll" type="number" inputmode="decimal" min="1" step="any" value="400" /><span class="unit">呎</span></div>
+    </div>
+    <div class="field">
+      <label for="price">一卷底片的價格</label>
+      <input id="price" type="number" inputmode="decimal" min="0" step="any" value="0" />
+    </div>
+    <div class="field">
+      <label for="proc">沖洗費（每呎）</label>
+      <input id="proc" type="number" inputmode="decimal" min="0" step="any" value="0" />
+    </div>
+    <div class="field">
+      <label for="scan">掃描費（每呎）</label>
+      <input id="scan" type="number" inputmode="decimal" min="0" step="any" value="0" />
+    </div>
+    <div class="field">
+      <label for="scanpct">要掃描的比例</label>
+      <div class="inrow"><input id="scanpct" type="number" inputmode="decimal" min="0" max="100" step="any" value="100" /><span class="unit">%</span></div>
+      <span class="hint">全部掃描填 100；只掃要用的片段，就填比例（例如只掃 20%）。</span>
+    </div>
+    <div class="result" aria-live="polite">
+      <p class="lbl">預估總費用</p>
+      <p class="big" id="out">—</p>
+      <p class="sub" id="sub"></p>
+    </div>
+    <p class="formula">算法：拍的長度 ＝ 用的長度 × 拍攝比；呎數 ＝ 拍的長度 × 格率 ÷ 每呎格數 ×（1＋餘裕）；卷數 ＝ 呎數 ÷ 每卷呎數（無條件進位）；總費用 ＝ 卷數 × 每卷價格 ＋ 呎數 × 沖洗費 ＋ 呎數 × 掃描比例 × 掃描費</p>
+    <ul class="notes">
+      <li>價格請向 Kodak 代理商與沖洗廠、掃描廠詢價（價格常變，也跟底片與數量有關），本工具不放任何價格。</li>
+      <li>底片買整卷，所以底片費用是用「卷數」算的；沖洗與掃描多半依呎數計價，實際收費方式請跟廠商確認。</li>
+      <li>這只是粗估，不含攝影機租借、器材、運費、稅、影像後製與調光等其他費用。</li>
+      <li>各片幅可買到的長度見<a href="/film/#stocks">底片型號</a>；拍多久用多少底片，可以用<a href="/tools/film-length/">底片長度計算</a>驗算。</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  import { filmCost, fmt } from "../../lib/calc.js";
+  import { num } from "../../lib/ui.js";
+  const $ = (id: string) => document.getElementById(id) as HTMLInputElement;
+  const fmtSel = document.getElementById("fmt") as HTMLSelectElement;
+  const out = document.getElementById("out")!, sub = document.getElementById("sub")!;
+  const money = (v: number) => Number(v.toFixed(0)).toLocaleString("zh-TW");
+  const fpf = () => Number(fmtSel.selectedOptions[0].dataset.fpf);
+  const update = () => {
+    const r = filmCost({
+      finalSeconds: (num($("mins")) || 0) * 60 + (num($("secs")) || 0), ratio: num($("ratio")), fps: num($("fps")), framesPerFoot: fpf(),
+      wastePct: num($("waste")) || 0, rollFeet: num($("roll")), rollPrice: num($("price")) || 0,
+      procPerFoot: num($("proc")) || 0, scanPerFoot: num($("scan")) || 0, scanPct: num($("scanpct")),
+    });
+    if (!r) { out.textContent = "—"; sub.textContent = "請輸入成片長度、拍攝比（至少 1）、格率與每卷長度"; return; }
+    const noPrice = !(num($("price")) > 0) && !(num($("proc")) > 0) && !(num($("scan")) > 0);
+    out.textContent = noPrice ? "請輸入價格" : money(r.total);
+    sub.innerHTML = `拍的長度約 <b>${fmt(r.shotSeconds / 60, 1)}</b> 分鐘，需要底片約 <b>${fmt(r.feet, 0)}</b> 呎，買 <b>${r.rolls}</b> 卷（每卷 ${fmt(num($("roll")), 0)} 呎）`
+      + (noPrice ? "" : `<br>底片 ${money(r.stockCost)}＋沖洗 ${money(r.procCost)}＋掃描 ${money(r.scanCost)}<br>成片每分鐘約 <b>${money(r.perFinalMinute)}</b>`);
+  };
+  const syncRoll = () => { $("roll").value = fmtSel.selectedOptions[0].dataset.roll!; };
+  fmtSel.addEventListener("change", () => { syncRoll(); update(); });
+  for (const id of ["mins", "secs", "ratio", "fps", "waste", "roll", "price", "proc", "scan", "scanpct"]) $(id).addEventListener("input", update);
+  syncRoll(); update();
+</script>

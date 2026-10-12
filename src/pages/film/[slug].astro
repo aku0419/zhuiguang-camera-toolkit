@@ -31,8 +31,9 @@ const facts: [string, string][] = [
   <p class="lead">{f.summary}</p>
 
   <div class="actions">
-    <a class="btn primary" href="/tools/film-length/">算底片長度</a>
-    <a class="btn" href="/tools/exposure-stops/">算曝光級數</a>
+    <a class="btn primary" href={`/tools/film-exposure/?stock=${f.slug}`}>算曝光補償</a>
+    <a class="btn" href="/tools/film-length/">算底片長度</a>
+    <a class="btn" href="/tools/film-cost/">成本粗估</a>
     <a class="btn" href="/tools/color-temperature/">色溫換算</a>
     <a class="btn" href="/film/#formats">片幅對照</a>
   </div>

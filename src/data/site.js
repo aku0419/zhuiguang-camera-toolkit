@@ -25,6 +25,7 @@ export const PROBLEMS = [
   { q: "背景想要模糊，光圈要開多大？", href: "/tools/depth-of-field/" },
   { q: "記憶卡要買多大、多快？", href: "/tools/recording-capacity/?mode=card" },
   { q: "這次拍攝要準備幾張卡、多大硬碟？", href: "/tools/shoot-storage/" },
+  { q: "拍底片要準備多少預算？", href: "/tools/film-cost/" },
 ];
 
 export const TOOLS = [
@@ -91,6 +92,14 @@ export const TOOLS = [
   {
     id: "film-length", href: "/tools/film-length/", name: "底片長度",
     q: "400 呎底片 24fps 可以拍多久？", keywords: ["film", "底片", "呎", "feet", "35mm", "16mm", "Super 8", "Super 16", "底片長度", "運行時間"],
+  },
+  {
+    id: "film-exposure", href: "/tools/film-exposure/", name: "底片曝光補償",
+    q: "500T 在日光下要加什麼濾鏡？", keywords: ["底片", "film", "EI", "濾鏡", "85", "80A", "加曝", "減曝", "曝光補償", "VISION3", "感光度"],
+  },
+  {
+    id: "film-cost", href: "/tools/film-cost/", name: "底片成本粗估",
+    q: "拍 5 分鐘 16mm，底片沖洗掃描要準備多少？", keywords: ["底片", "film", "成本", "預算", "拍攝比", "沖洗", "掃描", "16mm", "35mm", "Super 8", "費用"],
   },
   {
     id: "card-time", href: "/tools/recording-capacity/?mode=card", name: "記憶卡可錄時間",

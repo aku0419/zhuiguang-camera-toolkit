@@ -8,6 +8,7 @@ import {
   fieldOfView, sunnyAperture, ndStopsNeeded, shootStorage,
   frameSizeAt, desqueezedRatio, mired, miredShift, luxToEV, luxToFc, TC_RATES, tcToFrames, framesToTc,
   filmRuntime, filmFeetFor, filmFeetPerMinute, fmtMinSec,
+  eiAdjusted, eiStopsBetween, apertureForEI, filmCost,
 } from "../src/lib/calc.js";
 import { FILM_FORMATS } from "../src/data/film-formats.js";
 import { summarize, pageLabel } from "../src/lib/online-summary.js";
@@ -188,4 +189,26 @@ test("底片長度：反推需要的呎數與每分鐘用量", () => {
   assert.ok(Math.abs(filmFeetFor(60, 24, 16) - 90) < 1e-9);       // 35mm 4 孔 1 分鐘 = 90 呎
   assert.ok(Math.abs(filmFeetPerMinute(24, 40) - 36) < 1e-9);     // 16mm 1 分鐘 = 36 呎
   assert.equal(filmRuntime(0, 24, 16), null);
+});
+
+test("底片曝光補償：500T 日光加 85 濾鏡 EI 320 約少 0.64 級；加曝 1 級 EI 減半；f/5.6 改 EI 320 要開到約 f/4.5", () => {
+  assert.ok(Math.abs(eiStopsBetween(500, 320) - 0.644) < 0.001);
+  assert.equal(eiAdjusted(500, 1), 250);
+  assert.equal(eiAdjusted(500, -1), 1000);
+  assert.ok(Math.abs(apertureForEI(5.6, 500, 320) - 4.48) < 0.01);
+  assert.equal(apertureForEI(5.6, 500, 500), 5.6);
+});
+
+test("底片成本粗估：成片 10 分鐘、拍攝比 5:1、35mm 4 孔 24fps → 4,500 呎、12 卷 400 呎", () => {
+  const r = filmCost({ finalSeconds: 600, ratio: 5, fps: 24, framesPerFoot: 16, rollFeet: 400, rollPrice: 100, procPerFoot: 1, scanPerFoot: 2, scanPct: 50 });
+  assert.equal(r.shotSeconds, 3000);
+  assert.equal(r.feet, 4500);
+  assert.equal(r.rolls, 12);
+  assert.equal(r.stockCost, 1200);
+  assert.equal(r.procCost, 4500);
+  assert.equal(r.scanCost, 4500);
+  assert.equal(r.total, 10200);
+  assert.equal(r.perFinalMinute, 1020);
+  assert.equal(filmCost({ finalSeconds: 600, ratio: 0.5, fps: 24, framesPerFoot: 16, rollFeet: 400, rollPrice: 100 }), null);
+  assert.ok(Math.abs(filmCost({ finalSeconds: 600, ratio: 1, fps: 24, framesPerFoot: 16, rollFeet: 400, rollPrice: 100, wastePct: 10 }).feet - 990) < 1e-6); // 900 呎 + 10% 餘裕
 });

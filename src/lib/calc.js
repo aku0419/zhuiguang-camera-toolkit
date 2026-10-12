@@ -325,3 +325,35 @@ export function fmtMinSec(seconds) {
   const m = Math.floor(s / 60);
   return m > 0 ? `${m} 分 ${String(s % 60).padStart(2, "0")} 秒` : `${s} 秒`;
 }
+
+// ---- 底片曝光補償 ----
+// 刻意加曝（stops > 0）或減曝（stops < 0）時要設定的感光度：加曝 1 級 = 感光度減半
+export function eiAdjusted(ei, stops) {
+  if (!(ei > 0) || !isFinite(stops)) return null;
+  return ei * 2 ** -stops;
+}
+// 兩個感光度差幾級（基準 EI 比較高時為正，代表要多給這麼多級光）
+export function eiStopsBetween(baseEI, ei) {
+  if (!(baseEI > 0) || !(ei > 0)) return null;
+  return Math.log2(baseEI / ei);
+}
+// 用感光度 eiRef 測得光圈 n，改用感光度 eiNew 時要用的光圈（光圈值變小＝開大）
+export function apertureForEI(n, eiRef, eiNew) {
+  if (!(n > 0) || !(eiRef > 0) || !(eiNew > 0)) return null;
+  return n * Math.sqrt(eiNew / eiRef);
+}
+
+// ---- 底片成本粗估 ----
+// finalSeconds：成片要用的長度（秒）；ratio：拍攝比（拍的長度 ÷ 用的長度）；
+// price、rate 是使用者自己輸入的單價（工具不內建任何價格）
+export function filmCost({ finalSeconds, ratio, fps, framesPerFoot, wastePct = 0, rollFeet, rollPrice, procPerFoot = 0, scanPerFoot = 0, scanPct = 100 }) {
+  if (!(finalSeconds > 0) || !(ratio >= 1) || !(fps > 0) || !(framesPerFoot > 0) || !(rollFeet > 0) || !(rollPrice >= 0)) return null;
+  const shotSeconds = finalSeconds * ratio;
+  const feet = filmFeetFor(shotSeconds, fps, framesPerFoot) * (1 + Math.max(0, wastePct) / 100);
+  const rolls = Math.ceil(feet / rollFeet - 1e-9);
+  const stockCost = rolls * rollPrice;
+  const procCost = feet * Math.max(0, procPerFoot);
+  const scanCost = feet * (Math.min(100, Math.max(0, scanPct)) / 100) * Math.max(0, scanPerFoot);
+  const total = stockCost + procCost + scanCost;
+  return { shotSeconds, feet, rolls, stockCost, procCost, scanCost, total, perFinalMinute: total / (finalSeconds / 60) };
+}
