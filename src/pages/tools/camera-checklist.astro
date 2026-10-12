@@ -1,0 +1,138 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+import { cameras, show } from "../../lib/cameras.js";
+
+// 檢查清單：一般的攝影助理準備流程，不含任何機型規格。項目由大家討論後可以再調整。
+const sections = [
+  { id: "prep", title: "開拍前一天：準備與測試", items: [
+    "對照器材清單，數量與型號都確認",
+    "機身韌體與設定：跟攝影師、導演、調光確認要用的版本與設定",
+    "電池全部充飽，備用電池夠一整天（機身、監看螢幕、無線傳輸的電池都要算）",
+    "記憶卡數量比預估用量多，先在機器上格式化，並測試可以錄影、可以讀取",
+    "鏡頭檢查：前後鏡片乾淨沒刮傷、對焦環與光圈環順暢、接環鎖得緊",
+    "濾鏡與 ND：口徑對、沒有指紋與灰塵，備好清潔工具",
+    "腳架、雲台、快拆板：水平泡正確、鎖得緊、阻尼順暢",
+    "線材與接頭（HDMI、SDI、電源、延長線、轉接頭）都有，而且有備用",
+    "監看螢幕、無線影像等外接設備可以開機並收到畫面",
+    "試錄一小段，回放確認畫面、聲音、檔案都正常",
+  ]},
+  { id: "out", title: "出發前", items: [
+    "清潔用品：吹球、拭鏡紙、鏡頭清潔液、小毛刷",
+    "膠帶、標籤、油性筆、剪刀等小物",
+    "備用電池與充電器、電源延長線",
+    "防雨、防塵套與防潮用品（看天氣與場地）",
+    "租借的器材與配件都已清點，沒有漏帶",
+  ]},
+  { id: "setup", title: "每個鏡位開拍前：機器設定", items: [
+    "格率與快門（角度）正確；要升降格的話，確認拍攝格率與時間軸格率",
+    "解析度、編碼、位元率與記憶卡剩餘時間足夠",
+    "ISO、白平衡、Log／色彩設定跟攝影師確認過",
+    "時間碼設定（多機拍攝或有同步需求時）",
+    "監看用的 LUT、波形、假色等輔助工具設定好",
+    "對焦模式、對焦位置確認；有跟焦器的話，標記已經對好",
+    "畫面比例的取景輔助線設定正確",
+    "確認畫面邊緣沒有被擋住、鏡頭沒有髒",
+    "拍板或場次資訊清楚入鏡",
+  ]},
+  { id: "wrap", title: "收工後", items: [
+    "素材至少備份兩份，用有檢查碼功能的軟體，確認備份完成與檔案正常之後才格式化卡",
+    "記憶卡標示「已備份／未備份」，不要混在一起",
+    "電池充電，記憶卡歸位",
+    "器材清點，跟清單對照；損壞或遺失立刻回報",
+    "鏡頭與機身擦拭，潮濕的環境要晾乾再收",
+    "完成攝影報告（見下面欄位建議）",
+  ]},
+];
+const camData = cameras.map((c) => ({
+  slug: c.slug, name: c.name, mount: show(c.lens_mount),
+  media: Array.isArray(c.media) ? c.media.join("、") : show(c.media),
+  log: Array.isArray(c.log) ? c.log.join("、") : show(c.log),
+  timecode: show(c.timecode), hdmi: show(c.hdmi), sdi: show(c.sdi),
+}));
+const reportFields = ["日期與場次、鏡次", "卡號（A001 這類編號）", "格率、快門（角度）", "ISO、白平衡", "Log／LUT／色彩設定", "鏡頭與焦段、光圈", "時間碼", "備註（NG、重拍、特別狀況）"];
+---
+<BaseLayout title="攝影助理檢查清單" description="攝影助理開拍前準備、出發前、每個鏡位設定、收工備份的檢查清單，可以勾選、列印，並依選擇的相機顯示這台的記憶卡與接環資料。" section="tools">
+  <ToolHead title="攝影助理檢查清單" question="開拍前、開拍中、收工後，該確認的事都在這裡。" />
+
+  <div class="tool no-print">
+    <div class="field">
+      <label for="cam">選相機（選填）</label>
+      <select id="cam">
+        <option value="">不指定</option>
+        {camData.map((c) => <option value={c.slug}>{c.name}</option>)}
+      </select>
+      <span class="hint">選了會顯示這台的記憶卡、Log、時間碼等提醒，方便對照。</span>
+    </div>
+    <div class="cam-note" id="cam-note" hidden></div>
+    <p class="actions">
+      <button type="button" class="btn primary" id="print">列印</button>
+      <button type="button" class="btn" id="reset">全部取消勾選</button>
+      <span class="hint" id="progress"></span>
+    </p>
+  </div>
+
+  {sections.map((s) => (
+    <section class="chk" data-sec={s.id}>
+      <h2>{s.title}</h2>
+      <ul class="chk-list">
+        {s.items.map((t, i) => (
+          <li><label><input type="checkbox" data-id={`${s.id}-${i}`} /><span>{t}</span></label></li>
+        ))}
+      </ul>
+    </section>
+  ))}
+
+  <section class="chk">
+    <h2>攝影報告欄位建議</h2>
+    <p class="cam-count">每張記憶卡或每個鏡次記下這些，剪接與調光會很感謝你。</p>
+    <ul class="chk-list">
+      {reportFields.map((t) => <li><label><span class="box">☐</span><span>{t}</span></label></li>)}
+    </ul>
+  </section>
+
+  <p class="cam-count no-print">這份清單是一般的準備流程，不是某台相機的專屬手冊；每台機器、每個劇組的做法不同，請依你們的需求調整。勾選的狀態只存在這個瀏覽器裡。場記、器材清單等製片表單，可以用<a href="https://firstlight.riseatsun.com/" target="_blank" rel="noopener">First Light 初光</a>。</p>
+  <script type="application/json" id="cam-data" set:html={JSON.stringify(camData)} />
+</BaseLayout>
+
+<script>
+  const KEY = "zg-camera-checklist";
+  const boxes = [...document.querySelectorAll<HTMLInputElement>('input[type="checkbox"][data-id]')];
+  const progress = document.getElementById("progress")!;
+  let state: Record<string, boolean> = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} };
+  const refresh = () => {
+    const done = boxes.filter((b) => b.checked).length;
+    progress.textContent = `已完成 ${done} / ${boxes.length}`;
+  };
+  for (const b of boxes) {
+    b.checked = !!state[b.dataset.id!];
+    b.addEventListener("change", () => { state[b.dataset.id!] = b.checked; save(); refresh(); });
+  }
+  refresh();
+  document.getElementById("reset")!.addEventListener("click", () => {
+    if (!confirm("要把全部勾選取消嗎？")) return;
+    state = {}; save(); boxes.forEach((b) => (b.checked = false)); refresh();
+  });
+  document.getElementById("print")!.addEventListener("click", () => window.print());
+
+  // 選相機：顯示這台的資料提醒（一律用 textContent）
+  const cams: any[] = JSON.parse(document.getElementById("cam-data")!.textContent || "[]");
+  const sel = document.getElementById("cam") as HTMLSelectElement;
+  const note = document.getElementById("cam-note")!;
+  const drawCam = () => {
+    const c = cams.find((x) => x.slug === sel.value);
+    note.innerHTML = "";
+    if (!c) { note.hidden = true; return; }
+    const rows: [string, string][] = [["記憶卡", c.media], ["接環", c.mount], ["Log", c.log], ["時間碼", c.timecode], ["HDMI", c.hdmi], ["SDI", c.sdi]];
+    const h = document.createElement("b"); h.textContent = c.name; note.append(h);
+    for (const [k, v] of rows) { const p = document.createElement("div"); p.textContent = `${k}：${v}`; note.append(p); }
+    const a = document.createElement("a"); a.href = `/cameras/${c.slug}/`; a.textContent = "看這台的完整規格與錄影模式 →"; note.append(a);
+    note.hidden = false;
+  };
+  const q = new URLSearchParams(location.search).get("camera");
+  if (q && cams.some((c) => c.slug === q)) sel.value = q;
+  sel.addEventListener("change", drawCam);
+  drawCam();
+</script>

@@ -26,6 +26,7 @@ export const PROBLEMS = [
   { q: "記憶卡要買多大、多快？", href: "/tools/recording-capacity/?mode=card" },
   { q: "這次拍攝要準備幾張卡、多大硬碟？", href: "/tools/shoot-storage/" },
   { q: "拍底片要準備多少預算？", href: "/tools/film-cost/" },
+  { q: "開拍前、收工後，該確認哪些事？", href: "/tools/camera-checklist/" },
 ];
 
 export const TOOLS = [
@@ -100,6 +101,10 @@ export const TOOLS = [
   {
     id: "film-cost", href: "/tools/film-cost/", name: "底片成本粗估",
     q: "拍 5 分鐘 16mm，底片沖洗掃描要準備多少？", keywords: ["底片", "film", "成本", "預算", "拍攝比", "沖洗", "掃描", "16mm", "35mm", "Super 8", "費用"],
+  },
+  {
+    id: "camera-checklist", href: "/tools/camera-checklist/", name: "攝影助理檢查清單",
+    q: "開拍前、收工後，該確認哪些事？", keywords: ["檢查清單", "checklist", "攝影助理", "開拍前", "收工", "備份", "器材清單", "攝影報告", "camera report", "電池", "記憶卡"],
   },
   {
     id: "card-time", href: "/tools/recording-capacity/?mode=card", name: "記憶卡可錄時間",

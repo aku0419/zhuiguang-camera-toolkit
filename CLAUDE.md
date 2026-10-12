@@ -90,6 +90,8 @@
 - 首頁不顯示上方選單（首頁卡片就是入口），進到其他頁才出現。
 - 網站左上 logo 跟初光一樣：英文粗體在前（ZHUIGUANG）、小的中文在後（逐光）。
 
+- 攝影助理檢查清單 `/tools/camera-checklist/`：開拍前一天、出發前、每個鏡位設定、收工後 4 段（共 30 項）＋攝影報告欄位建議；可勾選（只存在該瀏覽器的 localStorage）、列印（勾選狀態會印出來）、選相機會顯示那台的記憶卡／接環／Log／時間碼／HDMI／SDI（資料來自相機 JSON）；相機頁有「檢查清單」按鈕（`?camera=`）。清單是一般流程，不含機型規格；場記與器材清單等製片表單放初光。
+
 ## 底片（進行中）
 
 - 底片頁 `/film/`：片幅對照（Super 8 常規／延伸畫框、16mm、Super 16、35mm 2／3／4 孔、VistaVision、65mm 5 孔、IMAX 15 孔）：每格孔數、每呎格數、畫面大小、畫面比例、等效倍率、24fps 一卷可拍多久，可帶倍率去等效焦段工具（`?crop=`）。資料在 `src/data/film-formats.js`，只採 Kodak 官方資料（Film Format Choices 2024、Essential Reference Guide for Filmmakers），標來源與查證日期；Kodak 沒寫的（標準 16mm 的畫面大小）寫未知，不猜。
