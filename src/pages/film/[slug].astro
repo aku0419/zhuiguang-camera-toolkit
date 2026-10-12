@@ -1,0 +1,97 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { filmStocks, specText } from "../../lib/film.js";
+import { fmt } from "../../lib/calc.js";
+
+export function getStaticPaths() {
+  return filmStocks.map((f) => ({ params: { slug: f.slug }, props: { f } }));
+}
+const { f } = Astro.props;
+const eiText = f.ei.map((e) => `EI ${e.ei}（${e.label}・${e.filter}）`).join("；");
+const desc = `${f.brand} ${f.name}（${f.kind}）：${f.light_balance}，${f.ei.map((e) => `${e.label} EI ${e.ei}`).join("、")}，可買到的規格、濾鏡與感光度、沖洗方式。資料整理自 Kodak 官方技術資料。`;
+const facts: [string, string][] = [
+  ["類型", f.kind],
+  ["色溫平衡", f.light_balance],
+  ["感光度（EI）", eiText],
+  ["規格編號", specText(f)],
+  ["沖洗方式", f.process],
+  ["片基", f.base],
+  ["曝光時間補償（互易律）", f.reciprocity],
+  ["保存", f.storage],
+];
+---
+<BaseLayout title={`${f.brand} ${f.name} 底片規格`} description={desc} section="film">
+  <p class="crumb"><a href="/film/#stocks">底片型號</a> › {f.kind}</p>
+  <h1>{f.brand} {f.name}</h1>
+  <div class="cam-head">
+    <span class="pill hot">{f.kind}</span>
+    <span class="pill">{f.light_balance}</span>
+    <span class="pill">最後確認 {f.last_verified}</span>
+  </div>
+  <p class="lead">{f.summary}</p>
+
+  <div class="actions">
+    <a class="btn primary" href="/tools/film-length/">算底片長度</a>
+    <a class="btn" href="/tools/exposure-stops/">算曝光級數</a>
+    <a class="btn" href="/tools/color-temperature/">色溫換算</a>
+    <a class="btn" href="/film/#formats">片幅對照</a>
+  </div>
+
+  <h2>重點規格</h2>
+  <dl class="facts">
+    {facts.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
+  </dl>
+
+  <h2>可買到的規格</h2>
+  <div class="tbl-wrap">
+    <table class="modes stack">
+      <thead><tr><th>片幅</th><th>可買到的長度</th><th>備註</th></tr></thead>
+      <tbody>
+        {f.formats.map((x: any) => (
+          <tr>
+            <td class="first" data-th="片幅">{x.gauge}</td>
+            <td class="n" data-th="長度">{x.lengths_ft.map((n: number) => `${fmt(n, 0)} 呎`).join("、")}</td>
+            <td class={x.note ? "note" : "note empty"} data-th="備註">{x.note || "—"}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="cam-count">依 Kodak 價目表整理（美國版，2026 年 8 月 28 日生效）；不同地區、不同時間可買到的規格會不一樣，實際請向 Kodak 或代理商確認。價格常變動，這裡不列價格。</p>
+
+  {f.filters.length > 0 && (
+    <>
+      <h2>各種光源的濾鏡與感光度</h2>
+      <div class="tbl-wrap">
+        <table class="modes stack">
+          <thead><tr><th>光源</th><th>鏡頭前濾鏡</th><th>感光度（EI）</th></tr></thead>
+          <tbody>
+            {f.filters.map((x: any) => (
+              <tr>
+                <td class="first" data-th="光源">{x.source}</td>
+                <td data-th="濾鏡">{x.filter}</td>
+                <td class="n" data-th="EI">{x.ei}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
+  {f.filters_note && <p class="cam-count">{f.filters_note}</p>}
+
+  <h2>特色</h2>
+  <ul class="can">{f.features.map((t: string) => <li>{t}</li>)}</ul>
+  {f.notes.length > 0 && (
+    <>
+      <h2>補充說明</h2>
+      <ul class="notes">{f.notes.map((t: string) => <li>{t}</li>)}</ul>
+    </>
+  )}
+
+  <h2>資料來源</h2>
+  <div class="src">
+    <p>原廠資料：{f.sources.map((s: any, i: number) => <>{i > 0 && "、"}<a href={s.source_url} rel="noopener" target="_blank">{s.source_name}</a></>)}</p>
+    <p>最後確認日期：{f.last_verified}。「特色」「說明」是依 Kodak 的原文整理成中文，標明「原廠說法」的是 Kodak 的描述，不是我們的測試。實際使用前請以 Kodak 最新技術資料為準；沖洗與掃描的細節請詢問沖洗廠。</p>
+  </div>
+</BaseLayout>

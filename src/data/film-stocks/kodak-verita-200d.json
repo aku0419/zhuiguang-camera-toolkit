@@ -1,0 +1,69 @@
+{
+  "slug": "kodak-verita-200d",
+  "brand": "Kodak",
+  "name": "VERITA 200D",
+  "full_name": "KODAK VERITA 200D Color Negative Film 5206 / 7206",
+  "kind": "彩色負片",
+  "light_balance": "日光型（5500K）",
+  "spec_35": "5206",
+  "spec_16": "7206",
+  "ei": [
+    {
+      "label": "日光（5500K）",
+      "ei": 200,
+      "filter": "不加濾鏡"
+    }
+  ],
+  "filters": [],
+  "filters_note": "Kodak 建議 VERITA 200D 只當日光底片使用，技術資料沒有列鎢絲燈的感光度。",
+  "formats": [
+    {
+      "gauge": "65mm",
+      "lengths_ft": [
+        400,
+        500,
+        1000
+      ]
+    },
+    {
+      "gauge": "35mm",
+      "lengths_ft": [
+        400,
+        1000
+      ]
+    },
+    {
+      "gauge": "16mm",
+      "lengths_ft": [
+        100,
+        400
+      ]
+    }
+  ],
+  "process": "ECN-2（彩色負片沖洗，一般電影沖印廠都有）",
+  "base": "醋酸安全片基（acetate safety base）",
+  "reciprocity": "1/1000 秒到 1 秒不需要加濾鏡或補償曝光",
+  "storage": "未曝光底片存放在 13°C（55°F）以下；要長期保存請放在 −18°C（0°F）以下，並盡快沖洗曝光後的底片。",
+  "summary": "中速（EI 200）的日光型彩色負片。Kodak 說它的色彩大膽，高光與膚色平滑；動態範圍比 VISION3 短，呈現比較「經典電影」的效果，並邀請攝影師用自己的流程去實驗。它是為數位後製流程設計的。",
+  "features": [
+    "日光（5500K）平衡，EI 200",
+    "建議只在日光下使用",
+    "動態範圍比 VISION3 短（原廠說法）"
+  ],
+  "notes": [
+    "初次掃描時，高光會比較不中性、偏向洋紅，可以在調光時修正。Kodak 說這是這款底片在高密度區的特殊線性反應，也讓各種膚色有深度與暖度。",
+    "價目表上這款底片標「價格洽詢」，是 Kodak 較新的產品。"
+  ],
+  "sources": [
+    {
+      "source_name": "KODAK VERITA 200D 技術資料（H-1-5206，2026 年 4 月）",
+      "source_url": "https://www.kodak.com/content/pdfs/motion/KODAK-VERITA-200D-5206-7206-technical-information.pdf",
+      "date": "2026-04"
+    },
+    {
+      "source_name": "Kodak Motion Picture Products Price Catalog（美國版，2026 年 8 月 28 日生效）",
+      "source_url": "https://www.kodak.com/content/pdfs/motion/Kodak-Motion-Picture-Products-Price-Catalog-US.pdf"
+    }
+  ],
+  "last_verified": "2026-10-12"
+}

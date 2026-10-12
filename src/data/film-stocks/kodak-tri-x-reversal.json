@@ -1,0 +1,64 @@
+{
+  "slug": "kodak-tri-x-reversal",
+  "brand": "Kodak",
+  "name": "TRI-X 反轉片",
+  "full_name": "KODAK TRI-X Reversal Film 7266",
+  "kind": "黑白正片（反轉片）",
+  "light_balance": "黑白（日光與鎢絲燈都可以）",
+  "spec_35": "",
+  "spec_16": "7266",
+  "ei": [
+    {
+      "label": "日光",
+      "ei": 200,
+      "filter": "不加濾鏡"
+    },
+    {
+      "label": "鎢絲燈（3200K）",
+      "ei": 160,
+      "filter": "不加濾鏡"
+    }
+  ],
+  "filters": [],
+  "filters_note": "感光度是在「沖洗到 gamma 0.65」的條件下的數值。",
+  "formats": [
+    {
+      "gauge": "16mm",
+      "lengths_ft": [
+        100,
+        400
+      ]
+    },
+    {
+      "gauge": "Super 8",
+      "lengths_ft": [
+        50
+      ]
+    }
+  ],
+  "process": "黑白反轉沖洗（Kodak B&W Reversal 套件；第一顯影液 D-94A、漂白液 R-10）",
+  "base": "灰色醋酸安全片基，另有抗光暈底層與抗靜電背層",
+  "reciprocity": "1/10,000 秒到 1 秒不需要加濾鏡或補償曝光",
+  "storage": "未曝光底片存放在 13°C（55°F）以下；要長期保存請放在 −18°C（0°F）以下，並盡快沖洗曝光後的底片。",
+  "summary": "高速的全色黑白反轉片。Kodak 說它的色調層次好、粒子細、銳利度高，黑色深、對比佳；日光與室內人造光都適用，特別適合光線不足（陰天或傍晚）時以一般速度或慢動作拍運動畫面。有抗光暈底層與減少靜電的片基。",
+  "features": [
+    "黑白正片（反轉片）",
+    "日光 EI 200、鎢絲燈 EI 160，不加濾鏡",
+    "16mm 與 Super 8"
+  ],
+  "notes": [
+    "也可以當黑白負片沖洗，Kodak 說結果令人滿意，但感光度會下降、粒子會變粗，細節請詢問沖洗廠。",
+    "編號只有 7266：只做 16mm 與 Super 8，沒有 35mm。"
+  ],
+  "sources": [
+    {
+      "source_name": "KODAK TRI-X Reversal Film 7266 技術資料",
+      "source_url": "https://www.kodak.com/content/products-brochures/TRI-X-Reversal-Film-7266-datasheet.pdf"
+    },
+    {
+      "source_name": "Kodak Motion Picture Products Price Catalog（美國版，2026 年 8 月 28 日生效）",
+      "source_url": "https://www.kodak.com/content/pdfs/motion/Kodak-Motion-Picture-Products-Price-Catalog-US.pdf"
+    }
+  ],
+  "last_verified": "2026-10-12"
+}

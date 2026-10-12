@@ -1,0 +1,128 @@
+{
+  "slug": "kodak-vision3-500t",
+  "brand": "Kodak",
+  "name": "VISION3 500T",
+  "full_name": "KODAK VISION3 500T Color Negative Film 5219 / 7219",
+  "kind": "彩色負片",
+  "light_balance": "鎢絲燈型（3200K）",
+  "spec_35": "5219",
+  "spec_16": "7219",
+  "ei": [
+    {
+      "label": "鎢絲燈（3200K）",
+      "ei": 500,
+      "filter": "不加濾鏡"
+    },
+    {
+      "label": "日光（5500K）",
+      "ei": 320,
+      "filter": "加 WRATTEN 85 濾鏡"
+    }
+  ],
+  "filters": [
+    {
+      "source": "鎢絲燈（3000K）",
+      "filter": "不加",
+      "ei": 500
+    },
+    {
+      "source": "鎢絲燈（3200K）",
+      "filter": "不加",
+      "ei": 500
+    },
+    {
+      "source": "KINO FLO 29／32",
+      "filter": "不加",
+      "ei": 500
+    },
+    {
+      "source": "日光（5500K）",
+      "filter": "WRATTEN 85",
+      "ei": 320
+    },
+    {
+      "source": "金屬鹵素燈",
+      "filter": "WRATTEN 85",
+      "ei": 320
+    },
+    {
+      "source": "HMI",
+      "filter": "WRATTEN 85",
+      "ei": 320
+    },
+    {
+      "source": "KINO FLO 55",
+      "filter": "WRATTEN 85",
+      "ei": 320
+    },
+    {
+      "source": "日光燈（暖白）†",
+      "filter": "CC30R + CC05M",
+      "ei": 320
+    },
+    {
+      "source": "日光燈（冷白）†",
+      "filter": "CC40R",
+      "ei": 160
+    }
+  ],
+  "filters_note": "濾鏡與感光度是 Kodak 標示的約略修正，最後的色彩修正請在調光（沖印）時完成。標 † 的是 Kodak 建議的試拍起點。 不知道是哪種燈時，Kodak 建議用 CC30R + CC20Y，EI 250。",
+  "formats": [
+    {
+      "gauge": "65mm",
+      "lengths_ft": [
+        400,
+        500,
+        1000
+      ]
+    },
+    {
+      "gauge": "35mm",
+      "lengths_ft": [
+        200,
+        400,
+        1000
+      ]
+    },
+    {
+      "gauge": "16mm",
+      "lengths_ft": [
+        100,
+        400
+      ],
+      "note": "也有 400 呎雙邊有孔的規格"
+    },
+    {
+      "gauge": "Super 8",
+      "lengths_ft": [
+        50
+      ]
+    }
+  ],
+  "process": "ECN-2（彩色負片沖洗，一般電影沖印廠都有）",
+  "base": "醋酸安全片基（acetate safety base）",
+  "reciprocity": "1/1000 秒到 1 秒不需要加濾鏡或補償曝光",
+  "storage": "未曝光底片存放在 13°C（55°F）以下；要長期保存請放在 −18°C（0°F）以下，並盡快沖洗曝光後的底片。",
+  "summary": "高速（EI 500）的鎢絲燈型彩色負片。Kodak 說它的膚色與色彩表現出色，採用新的染料分層技術（DLT），陰影的粒子比較少，可以拉出很多陰影細節；次微米技術（Sub-Micron）讓高光寬容度多出 2 級，同一個鏡頭裡走進很亮的地方也不容易死白。設計上也考量了數位中間片（DI）流程：更好的粒子讓調光師在陰影有更多細節，更寬的高光寬容度讓數位「加深加亮」更有餘裕。",
+  "features": [
+    "鎢絲燈（3200K）平衡，EI 500",
+    "日光下加 85 濾鏡，EI 320",
+    "高光寬容度多 2 級",
+    "陰影粒子較少"
+  ],
+  "notes": [
+    "鎢絲燈（3200K）上下約 200K 的燈，不用加校正濾鏡，也可以在後製調整。"
+  ],
+  "sources": [
+    {
+      "source_name": "KODAK VISION3 500T 技術資料（H-1-5219，2026 年 3 月）",
+      "source_url": "https://www.kodak.com/content/pdfs/motion/KODAK-VISION3-500T-5219-7219-technical-information.pdf",
+      "date": "2026-03"
+    },
+    {
+      "source_name": "Kodak Motion Picture Products Price Catalog（美國版，2026 年 8 月 28 日生效）",
+      "source_url": "https://www.kodak.com/content/pdfs/motion/Kodak-Motion-Picture-Products-Price-Catalog-US.pdf"
+    }
+  ],
+  "last_verified": "2026-10-12"
+}

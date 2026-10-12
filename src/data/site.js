@@ -7,7 +7,7 @@ export const SECTIONS = [
   { id: "cameras", en: "Cameras", zh: "攝影機", href: "/cameras/", desc: "規格、錄影格式、記憶卡", ready: false },
   { id: "lenses", en: "Lenses", zh: "鏡頭", href: "/lenses/", desc: "接環、片幅涵蓋、焦段", ready: true },
   { id: "media", en: "Media", zh: "記憶卡", href: "/media/", desc: "SD、CFexpress 等格式與速度", ready: true },
-  { id: "film", en: "Film", zh: "底片", href: "/film/", desc: "片幅對照、底片長度", ready: true },
+  { id: "film", en: "Film", zh: "底片", href: "/film/", desc: "Kodak 底片型號、片幅、底片長度", ready: true },
   { id: "tools", en: "Tools", zh: "工具", href: "/tools/", desc: "快門、焦段、景深、ND、容量", ready: true },
 ];
 

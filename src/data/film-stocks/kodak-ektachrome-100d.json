@@ -1,0 +1,125 @@
+{
+  "slug": "kodak-ektachrome-100d",
+  "brand": "Kodak",
+  "name": "EKTACHROME 100D",
+  "full_name": "KODAK EKTACHROME 100D Color Reversal Film 5294 / 7294",
+  "kind": "彩色正片（反轉片）",
+  "light_balance": "日光型（5500K）",
+  "spec_35": "5294",
+  "spec_16": "7294",
+  "ei": [
+    {
+      "label": "日光（5500K）",
+      "ei": 100,
+      "filter": "不加濾鏡"
+    },
+    {
+      "label": "鎢絲燈（3200K）",
+      "ei": 25,
+      "filter": "加 WRATTEN 80A 濾鏡"
+    }
+  ],
+  "filters": [
+    {
+      "source": "日光（5500K）",
+      "filter": "不加",
+      "ei": 100
+    },
+    {
+      "source": "金屬鹵素燈",
+      "filter": "不加",
+      "ei": 100
+    },
+    {
+      "source": "HMI",
+      "filter": "不加",
+      "ei": 100
+    },
+    {
+      "source": "KINO FLO KF55",
+      "filter": "不加",
+      "ei": 100
+    },
+    {
+      "source": "鎢絲燈（3000K）",
+      "filter": "WRATTEN 80A",
+      "ei": 25
+    },
+    {
+      "source": "鎢絲燈（3200K）",
+      "filter": "WRATTEN 80A",
+      "ei": 25
+    },
+    {
+      "source": "KINO FLO KF29／KF32",
+      "filter": "WRATTEN 80A",
+      "ei": 25
+    },
+    {
+      "source": "日光燈（暖白）",
+      "filter": "CC40B + CC05C",
+      "ei": 40
+    },
+    {
+      "source": "日光燈（冷白）",
+      "filter": "CC20M",
+      "ei": 80
+    }
+  ],
+  "filters_note": "濾鏡與感光度是 Kodak 標示的約略修正。",
+  "formats": [
+    {
+      "gauge": "65mm",
+      "lengths_ft": [
+        400,
+        1000
+      ]
+    },
+    {
+      "gauge": "35mm",
+      "lengths_ft": [
+        400,
+        1000
+      ]
+    },
+    {
+      "gauge": "16mm",
+      "lengths_ft": [
+        100,
+        400
+      ],
+      "note": "也有 400 呎雙邊有孔的規格"
+    },
+    {
+      "gauge": "Super 8",
+      "lengths_ft": [
+        50
+      ]
+    }
+  ],
+  "process": "E-6 化學藥劑，只限電影用沖洗機（cine machine）",
+  "base": "醋酸安全片基（acetate safety base）",
+  "reciprocity": "1/10,000 秒到 1 秒不需要加濾鏡或補償曝光",
+  "storage": "未曝光底片存放在 13°C（55°F）以下；要長期保存請放在 −18°C（0°F）以下，並盡快沖洗曝光後的底片。",
+  "summary": "100 速的日光型彩色正片（反轉片）。Kodak 說它的色彩飽和度適度增強、灰階中性、膚色準確，銳利度極高（Kodak 稱在 100 速反轉片中沒有比它更銳利的），粒子表現也很好，且感光特性穩定、保存性佳。適合想要中等飽和度的室外與攝影棚拍攝，用在廣告、自然、紀錄片、MV，特別適合轉成電視訊號（telecine）；也可以直接放映。",
+  "features": [
+    "日光（5500K）平衡，EI 100",
+    "鎢絲燈下加 80A 濾鏡，EI 25",
+    "彩色正片（反轉片），可以直接放映"
+  ],
+  "notes": [
+    "Kodak 在複製拷貝時，建議掃描底片後輸出到 KODAK VISION Color Print Film 2383。"
+  ],
+  "sources": [
+    {
+      "source_name": "KODAK EKTACHROME 100D 技術資料（H-1-5294，2026 年 3 月）",
+      "source_url": "https://www.kodak.com/content/products-brochures/motion-picture/KODAK-EKTACHROME-100D-5294-7294-technical-information.pdf",
+      "date": "2026-03"
+    },
+    {
+      "source_name": "Kodak Motion Picture Products Price Catalog（美國版，2026 年 8 月 28 日生效）",
+      "source_url": "https://www.kodak.com/content/pdfs/motion/Kodak-Motion-Picture-Products-Price-Catalog-US.pdf"
+    }
+  ],
+  "last_verified": "2026-10-12"
+}

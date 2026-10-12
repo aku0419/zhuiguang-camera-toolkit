@@ -1,0 +1,123 @@
+{
+  "slug": "kodak-vision3-50d",
+  "brand": "Kodak",
+  "name": "VISION3 50D",
+  "full_name": "KODAK VISION3 50D Color Negative Film 5203 / 7203",
+  "kind": "彩色負片",
+  "light_balance": "日光型（5500K）",
+  "spec_35": "5203",
+  "spec_16": "7203",
+  "ei": [
+    {
+      "label": "日光（5500K）",
+      "ei": 50,
+      "filter": "不加濾鏡"
+    },
+    {
+      "label": "鎢絲燈（3200K）",
+      "ei": 12,
+      "filter": "加 WRATTEN 80A 濾鏡"
+    }
+  ],
+  "filters": [
+    {
+      "source": "日光（5500K）",
+      "filter": "不加",
+      "ei": 50
+    },
+    {
+      "source": "金屬鹵素燈",
+      "filter": "不加",
+      "ei": 50
+    },
+    {
+      "source": "HMI",
+      "filter": "不加",
+      "ei": 50
+    },
+    {
+      "source": "KINO FLO 55",
+      "filter": "不加",
+      "ei": 50
+    },
+    {
+      "source": "鎢絲燈（3000K）",
+      "filter": "WRATTEN 80A",
+      "ei": 12
+    },
+    {
+      "source": "鎢絲燈（3200K）",
+      "filter": "WRATTEN 80A",
+      "ei": 12
+    },
+    {
+      "source": "KINO FLO 29／32",
+      "filter": "WRATTEN 80A",
+      "ei": 12
+    },
+    {
+      "source": "日光燈（暖白）†",
+      "filter": "CC20M + CC05R",
+      "ei": 25
+    },
+    {
+      "source": "日光燈（冷白）†",
+      "filter": "CC40B",
+      "ei": 20
+    }
+  ],
+  "filters_note": "濾鏡與感光度是 Kodak 標示的約略修正，最後的色彩修正請在調光（沖印）時完成。標 † 的是 Kodak 建議的試拍起點。 不知道是哪種燈時，Kodak 建議用 CC20M + CC10B，EI 25。",
+  "formats": [
+    {
+      "gauge": "65mm",
+      "lengths_ft": [
+        400,
+        500,
+        1000
+      ]
+    },
+    {
+      "gauge": "35mm",
+      "lengths_ft": [
+        400,
+        1000
+      ]
+    },
+    {
+      "gauge": "16mm",
+      "lengths_ft": [
+        100,
+        400
+      ]
+    },
+    {
+      "gauge": "Super 8",
+      "lengths_ft": [
+        50
+      ]
+    }
+  ],
+  "process": "ECN-2（彩色負片沖洗，一般電影沖印廠都有）",
+  "base": "醋酸安全片基（acetate safety base）",
+  "reciprocity": "1/1000 秒到 1 秒不需要加濾鏡或補償曝光",
+  "storage": "未曝光底片存放在 13°C（55°F）以下；要長期保存請放在 −18°C（0°F）以下，並盡快沖洗曝光後的底片。",
+  "summary": "低速（EI 50）的日光型彩色負片，Kodak 稱它是自家粒子最細的電影底片，畫面乾淨、色彩與細節豐富。更寬的動態範圍，讓高反差的日光外景有更多創作空間；粒子、銳利度與寬容度的進步，也讓它很適合輸出回底片（recorder output）。",
+  "features": [
+    "日光（5500K）平衡，EI 50",
+    "鎢絲燈下加 80A 濾鏡，EI 12",
+    "Kodak 粒子最細的電影底片（原廠說法）"
+  ],
+  "notes": [],
+  "sources": [
+    {
+      "source_name": "KODAK VISION3 50D 技術資料（H-1-5203，2026 年 3 月）",
+      "source_url": "https://www.kodak.com/content/pdfs/motion/KODAK-VISION3-50D-5203-7203-technical-information.pdf",
+      "date": "2026-03"
+    },
+    {
+      "source_name": "Kodak Motion Picture Products Price Catalog（美國版，2026 年 8 月 28 日生效）",
+      "source_url": "https://www.kodak.com/content/pdfs/motion/Kodak-Motion-Picture-Products-Price-Catalog-US.pdf"
+    }
+  ],
+  "last_verified": "2026-10-12"
+}

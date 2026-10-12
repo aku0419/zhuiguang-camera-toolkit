@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { FILM_FORMATS, FILM_SOURCES, FILM_LAST_VERIFIED } from "../../data/film-formats.js";
+import { filmStocks, KIND_ORDER } from "../../lib/film.js";
 import { FULL_FRAME_DIAGONAL, filmRuntime, fmtMinSec, fmt } from "../../lib/calc.js";
 
 const rows = FILM_FORMATS.map((f) => {
@@ -23,13 +24,31 @@ const fpf = (v: number) => (Number.isInteger(v) ? String(v) : fmt(v, 2));
       <h3>底片長度計算</h3>
       <p>400 呎的底片 24fps 可以拍多久？拍 3 分鐘要幾呎？</p>
     </a>
-    <a class="card soon" href="#" onclick="return false" aria-disabled="true">
-      <h3>底片型號資料（預計增加）</h3>
-      <p>Kodak VISION3 等底片的感光度、色溫、適合情境。</p>
+    <a class="card" href="#stocks">
+      <h3>底片型號</h3>
+      <p>目前還買得到的 Kodak 拍攝用電影底片，共 {filmStocks.length} 種。</p>
     </a>
   </div>
 
-  <h2>片幅對照</h2>
+  <h2 id="stocks">底片型號</h2>
+  <p class="cam-count">目前還買得到的 Kodak 拍攝用電影底片，資料整理自 Kodak 官方技術資料與價目表。Fujifilm 已在 2013 年停止生產電影底片。</p>
+  {KIND_ORDER.filter((k) => filmStocks.some((f) => f.kind === k)).map((k) => (
+    <section class="brand-sec">
+      <h3>{k}</h3>
+      <div class="grid cam-grid">
+        {filmStocks.filter((f) => f.kind === k).map((f) => (
+          <a class="card cam-card" href={`/film/${f.slug}/`}>
+            <span class="k">{f.brand}</span>
+            <h3>{f.name}</h3>
+            <p>{f.light_balance}・{f.ei.map((e) => `EI ${e.ei}`).join(" ／ ")}</p>
+            <p>{f.formats.map((x) => x.gauge).join("、")}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  ))}
+
+  <h2 id="formats">片幅對照</h2>
   <p class="cam-count">畫面大小是 Kodak 標示的拍攝畫面（capture area）。「等效倍率」是把畫面對角線跟全片幅（36 × 24 mm）比，數字越大代表畫面越小、同一支鏡頭看起來越長。</p>
   <div class="tbl-wrap">
     <table class="modes stack">

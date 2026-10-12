@@ -1,0 +1,123 @@
+{
+  "slug": "kodak-vision3-200t",
+  "brand": "Kodak",
+  "name": "VISION3 200T",
+  "full_name": "KODAK VISION3 200T Color Negative Film 5213 / 7213",
+  "kind": "彩色負片",
+  "light_balance": "鎢絲燈型（3200K）",
+  "spec_35": "5213",
+  "spec_16": "7213",
+  "ei": [
+    {
+      "label": "鎢絲燈（3200K）",
+      "ei": 200,
+      "filter": "不加濾鏡"
+    },
+    {
+      "label": "日光（5500K）",
+      "ei": 125,
+      "filter": "加 WRATTEN 85 濾鏡"
+    }
+  ],
+  "filters": [
+    {
+      "source": "鎢絲燈（3000K）",
+      "filter": "不加",
+      "ei": 200
+    },
+    {
+      "source": "鎢絲燈（3200K）",
+      "filter": "不加",
+      "ei": 200
+    },
+    {
+      "source": "KINO FLO 29／32",
+      "filter": "不加",
+      "ei": 200
+    },
+    {
+      "source": "日光（5500K）",
+      "filter": "WRATTEN 85",
+      "ei": 125
+    },
+    {
+      "source": "金屬鹵素燈",
+      "filter": "WRATTEN 85",
+      "ei": 125
+    },
+    {
+      "source": "HMI",
+      "filter": "WRATTEN 85",
+      "ei": 125
+    },
+    {
+      "source": "KINO FLO 55",
+      "filter": "WRATTEN 85",
+      "ei": 125
+    },
+    {
+      "source": "日光燈（暖白）†",
+      "filter": "CC30R + CC05M",
+      "ei": 125
+    },
+    {
+      "source": "日光燈（冷白）†",
+      "filter": "CC40R",
+      "ei": 64
+    }
+  ],
+  "filters_note": "濾鏡與感光度是 Kodak 標示的約略修正，最後的色彩修正請在調光（沖印）時完成。標 † 的是 Kodak 建議的試拍起點。",
+  "formats": [
+    {
+      "gauge": "65mm",
+      "lengths_ft": [
+        400,
+        500,
+        1000
+      ]
+    },
+    {
+      "gauge": "35mm",
+      "lengths_ft": [
+        400,
+        1000
+      ]
+    },
+    {
+      "gauge": "16mm",
+      "lengths_ft": [
+        100,
+        400
+      ]
+    },
+    {
+      "gauge": "Super 8",
+      "lengths_ft": [
+        50
+      ]
+    }
+  ],
+  "process": "ECN-2（彩色負片沖洗，一般電影沖印廠都有）",
+  "base": "醋酸安全片基（acetate safety base）",
+  "reciprocity": "1/1000 秒到 1 秒不需要加濾鏡或補償曝光",
+  "storage": "未曝光底片存放在 13°C（55°F）以下；要長期保存請放在 −18°C（0°F）以下，並盡快沖洗曝光後的底片。",
+  "summary": "200 速的鎢絲燈型彩色負片。Kodak 說它有 100 速底片的影像結構、又有 200 速底片的彈性，等於兩種底片合一；高光寬容度極寬、陰影粒子少，在受控的室內與高反差的室外都表現很好。",
+  "features": [
+    "鎢絲燈（3200K）平衡，EI 200",
+    "日光下加 85 濾鏡，EI 125",
+    "兼具 100 速的影像結構與 200 速的彈性（原廠說法）"
+  ],
+  "notes": [],
+  "sources": [
+    {
+      "source_name": "KODAK VISION3 200T 技術資料（H-1-5213，2026 年 3 月）",
+      "source_url": "https://www.kodak.com/content/pdfs/motion/KODAK-VISION3-200T-5213-7213-technical-information.pdf",
+      "date": "2026-03"
+    },
+    {
+      "source_name": "Kodak Motion Picture Products Price Catalog（美國版，2026 年 8 月 28 日生效）",
+      "source_url": "https://www.kodak.com/content/pdfs/motion/Kodak-Motion-Picture-Products-Price-Catalog-US.pdf"
+    }
+  ],
+  "last_verified": "2026-10-12"
+}

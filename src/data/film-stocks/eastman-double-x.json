@@ -1,0 +1,65 @@
+{
+  "slug": "eastman-double-x",
+  "brand": "Kodak",
+  "name": "DOUBLE-X",
+  "full_name": "EASTMAN DOUBLE-X Negative Film 5222 / 7222",
+  "kind": "黑白負片",
+  "light_balance": "黑白（日光與鎢絲燈都可以）",
+  "spec_35": "5222",
+  "spec_16": "7222",
+  "ei": [
+    {
+      "label": "日光",
+      "ei": 250,
+      "filter": "不加濾鏡"
+    },
+    {
+      "label": "鎢絲燈（3200K）",
+      "ei": 200,
+      "filter": "不加濾鏡"
+    }
+  ],
+  "filters": [],
+  "filters_note": "感光度是在「沖洗到 gamma 0.65」的條件下的數值。",
+  "formats": [
+    {
+      "gauge": "35mm",
+      "lengths_ft": [
+        400,
+        1000
+      ]
+    },
+    {
+      "gauge": "16mm",
+      "lengths_ft": [
+        100,
+        400
+      ]
+    }
+  ],
+  "process": "黑白負片沖洗（Kodak 以 D-96 顯影液為標準）",
+  "base": "灰色醋酸安全片基（grey acetate safety base）",
+  "reciprocity": "1/10,000 秒到 1 秒不需要加濾鏡或補償曝光",
+  "storage": "未曝光底片存放在 13°C（55°F）以下；要長期保存請放在 −18°C（0°F）以下，並盡快沖洗曝光後的底片。",
+  "summary": "高速的全色黑白負片，設計給一般拍攝使用，室內外都適用。光線暗、或想要更大景深但不想加光時也可以用。Kodak 說它的影像結構好、銳利度極佳；有抗刮背層與耐沖洗的表層，走片順、噪音低，底片保存穩定、也降低片面黏連（ferrotyping）的風險。",
+  "features": [
+    "黑白負片",
+    "日光 EI 250、鎢絲燈 EI 200，不加濾鏡",
+    "全色（panchromatic）感光"
+  ],
+  "notes": [
+    "Kodak 技術資料以 D-96 顯影液、21°C（70°F）沖洗到建議的 gamma 為標準；Kodak 的曝光表以 170° 快門、24fps 計算。"
+  ],
+  "sources": [
+    {
+      "source_name": "EASTMAN DOUBLE-X 技術資料（H-1-5222，2022 年 3 月）",
+      "source_url": "https://www.kodak.com/content/products-brochures/Film/DOUBLEX-Technical-Data-EN.pdf",
+      "date": "2022-03"
+    },
+    {
+      "source_name": "Kodak Motion Picture Products Price Catalog（美國版，2026 年 8 月 28 日生效）",
+      "source_url": "https://www.kodak.com/content/pdfs/motion/Kodak-Motion-Picture-Products-Price-Catalog-US.pdf"
+    }
+  ],
+  "last_verified": "2026-10-12"
+}
