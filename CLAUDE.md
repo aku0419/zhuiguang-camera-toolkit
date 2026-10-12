@@ -84,11 +84,18 @@
 - 名詞小辭典 `/glossary/`（資料 `src/data/glossary.js`，38 個名詞，只講觀念不放相機規格數字，搜尋框也找得到）。
 - 另加：視角、戶外曝光速查（Sunny 16 經驗法則，標示估算）、拍攝日素材量規劃；首頁「遇到什麼問題？」白話入口（`site.js` 的 `PROBLEMS`）；相機頁「這台能拍什麼」由錄影模式自動整理。
 - 片幅用詞：台灣的 Medium Format 叫「中片幅」，所以篩選寫「中片幅／大片幅（比全片幅大）」，鏡頭列表寫「中／大片幅」。
-- 對負責人與網站上，不要說「第幾階段」，只說「預計增加」。底片資料庫與底片長度計算還沒做，工具頁寫「預計增加」。
+- 對負責人與網站上，不要說「第幾階段」，只說「預計增加」。底片型號資料庫（Kodak VISION3 等）還沒做，寫「預計增加」。
 - 頁尾有自願斗內區塊（綠界連結 `https://p.ecpay.com.tw/0C16FE3`，新分頁開啟），首頁不放標語。
 - 全站搜尋清單不放在首頁 HTML 裡，第一次點搜尋框才下載 `/search-index.json`（來源 `src/lib/search-index.js`），資料變多時首頁也不會變慢。鏡頭列表卡片用 `content-visibility:auto`。
 - 首頁不顯示上方選單（首頁卡片就是入口），進到其他頁才出現。
 - 網站左上 logo 跟初光一樣：英文粗體在前（ZHUIGUANG）、小的中文在後（逐光）。
+
+## 底片（進行中）
+
+- 底片頁 `/film/`：片幅對照（Super 8 常規／延伸畫框、16mm、Super 16、35mm 2／3／4 孔、VistaVision、65mm 5 孔、IMAX 15 孔）：每格孔數、每呎格數、畫面大小、畫面比例、等效倍率、24fps 一卷可拍多久，可帶倍率去等效焦段工具（`?crop=`）。資料在 `src/data/film-formats.js`，只採 Kodak 官方資料（Film Format Choices 2024、Essential Reference Guide for Filmmakers），標來源與查證日期；Kodak 沒寫的（標準 16mm 的畫面大小）寫未知，不猜。
+- 每呎格數是用 Kodak 公布的運行時間換算（35mm 每呎 64 孔；4 孔 16 格、3 孔 64÷3、2 孔 32、8 孔 8；65mm 5 孔 12.8；16mm 40；Super 8 72），測試會逐一對照 Kodak 的運行時間。
+- 底片長度計算 `/tools/film-length/`：呎／公尺與時間互相換算，可選片幅與格率，算式 `filmRuntime`、`filmFeetFor`（`calc.js`）。
+- 還沒做：Kodak 底片型號資料庫（VISION3 50D／200T／250D／500T、EKTACHROME 100D 等）、底片曝光補償、底片成本粗估。
 
 ## 記憶卡資料庫（進行中）
 

@@ -1,0 +1,102 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+import Chips from "../../components/Chips.astro";
+import { FILM_FORMATS } from "../../data/film-formats.js";
+---
+<BaseLayout title="底片長度計算器" description="底片長度（呎）換算成可拍多久，或想拍多久要準備幾呎底片。支援 Super 8、16mm、Super 16、35mm 2／3／4 孔、VistaVision、65mm。例如 35mm 4 孔 400 呎、24fps 約 4 分 26 秒。" section="tools">
+  <ToolHead title="底片長度計算器" question="這卷底片可以拍多久？拍這麼久要準備幾呎？" />
+  <div class="tool">
+    <div class="seg" role="group" aria-label="計算方向">
+      <button type="button" data-mode="time" aria-pressed="true">底片可拍多久</button>
+      <button type="button" data-mode="feet" aria-pressed="false">需要多少底片</button>
+    </div>
+    <div class="field">
+      <label for="fmt">底片片幅</label>
+      <select id="fmt">
+        {FILM_FORMATS.map((f) => <option value={f.id} data-fpf={f.framesPerFoot} selected={f.id === "35-4perf"}>{f.name}</option>)}
+      </select>
+    </div>
+    <div class="field">
+      <label for="fps">拍攝格率</label>
+      <div class="inrow"><input id="fps" type="number" inputmode="decimal" min="1" step="any" value="24" /><span class="unit">fps</span></div>
+      <Chips label="常用格率" values={[18, 24, 25, 30, 48, 60]} />
+    </div>
+    <div class="field" data-for="time">
+      <label for="len">底片長度</label>
+      <div class="inrow">
+        <input id="len" type="number" inputmode="decimal" min="0" step="any" value="400" />
+        <select id="lunit" aria-label="長度單位" style="flex:none;width:auto"><option value="ft">呎</option><option value="m">公尺</option></select>
+      </div>
+      <Chips label="常見長度（呎）" values={[50, 100, 400, 1000]} suffix=" 呎" />
+    </div>
+    <div class="field" data-for="feet" hidden>
+      <span class="label">想拍的時間</span>
+      <div class="inrow">
+        <input id="mins" type="number" inputmode="decimal" min="0" step="any" value="3" aria-label="分鐘" /><span class="unit">分</span>
+        <input id="secs" type="number" inputmode="decimal" min="0" step="any" value="0" aria-label="秒" /><span class="unit">秒</span>
+      </div>
+    </div>
+    <div class="result" aria-live="polite">
+      <p class="lbl" id="lbl">可拍時間</p>
+      <p class="big" id="out">—</p>
+      <p class="sub" id="sub"></p>
+    </div>
+    <p class="formula" id="formula"></p>
+    <ul class="notes">
+      <li>數字是理論值。實際會因為片頭片尾、拍攝損耗、不同底片卷的實際長度，以及攝影機的格率誤差略有不同。</li>
+      <li>Kodak 公布的例子：35mm 4 孔 400 呎 × 24fps ＝ 4 分 26 秒；Super 16 400 呎 ＝ 11 分 06 秒；Super 8 一卷 50 呎 × 18fps ＝ 3 分 20 秒。</li>
+      <li>拍攝比（拍的長度 ÷ 最後用的長度）通常大於 1，準備底片時要預留餘裕。各片幅的畫面大小與說明見<a href="/film/">底片片幅對照</a>。</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<script>
+  import { filmRuntime, filmFeetFor, filmFeetPerMinute, fmtMinSec, fmt, FEET_TO_M } from "../../lib/calc.js";
+  import { bindChips, num, fromQuery } from "../../lib/ui.js";
+  const $ = (id: string) => document.getElementById(id) as HTMLInputElement;
+  const fmtSel = document.getElementById("fmt") as HTMLSelectElement;
+  const fps = $("fps"), len = $("len"), mins = $("mins"), secs = $("secs");
+  const lunit = document.getElementById("lunit") as HTMLSelectElement;
+  const out = document.getElementById("out")!, sub = document.getElementById("sub")!;
+  const lbl = document.getElementById("lbl")!, formula = document.getElementById("formula")!;
+  const modeBtns = [...document.querySelectorAll<HTMLButtonElement>("[data-mode]")];
+  let mode = "time";
+  const fpfOf = () => Number(fmtSel.selectedOptions[0].dataset.fpf);
+  const update = () => {
+    const f = fpfOf(), r = num(fps);
+    const per = filmFeetPerMinute(r, f);
+    const perTxt = per ? `這個片幅在 ${fmt(r, 0)}fps 每分鐘用 <b>${fmt(per, 1)}</b> 呎（約 ${fmt(per * FEET_TO_M, 1)} 公尺）` : "";
+    if (mode === "time") {
+      const raw = num(len);
+      const feet = lunit.value === "m" ? raw / FEET_TO_M : raw;
+      const t = filmRuntime(feet, r, f);
+      lbl.textContent = "可拍時間";
+      out.textContent = t == null ? "—" : `約 ${fmtMinSec(t)}`;
+      sub.innerHTML = t == null ? "請輸入底片長度和格率" : `共約 <b>${fmt(feet * f, 0)}</b> 格（${fmt(t, 1)} 秒）<br>${perTxt}`;
+      formula.textContent = "算法：可拍秒數 ＝ 呎數 × 每呎格數 ÷ 格率";
+    } else {
+      const total = (num(mins) || 0) * 60 + (num(secs) || 0);
+      const feet = filmFeetFor(total, r, f);
+      lbl.textContent = "需要底片";
+      out.textContent = feet == null ? "—" : `約 ${fmt(feet, 0)} 呎`;
+      sub.innerHTML = feet == null ? "請輸入想拍的時間和格率" : `約 ${fmt(feet * FEET_TO_M, 1)} 公尺，共 <b>${fmt(total * r, 0)}</b> 格<br>${perTxt}`;
+      formula.textContent = "算法：呎數 ＝ 秒數 × 格率 ÷ 每呎格數";
+    }
+  };
+  const setMode = (m: string) => {
+    mode = m === "feet" ? "feet" : "time";
+    for (const b of modeBtns) b.setAttribute("aria-pressed", String(b.dataset.mode === mode));
+    for (const el of document.querySelectorAll<HTMLElement>("[data-for]")) el.hidden = el.dataset.for !== mode;
+    update();
+  };
+  const q = new URLSearchParams(location.search);
+  if ([...fmtSel.options].some((o) => o.value === q.get("format"))) fmtSel.value = q.get("format")!;
+  fromQuery({ fps, len, mins, secs });
+  bindChips(document.querySelectorAll<HTMLElement>(".chips")[0], fps, update);
+  bindChips(document.querySelectorAll<HTMLElement>(".chips")[1], len, update);
+  for (const el of [mins, secs]) el.addEventListener("input", update);
+  fmtSel.addEventListener("change", update); lunit.addEventListener("change", update);
+  for (const b of modeBtns) b.addEventListener("click", () => setMode(b.dataset.mode!));
+  setMode(q.get("mode") || "time");
+</script>

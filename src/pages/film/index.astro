@@ -1,4 +1,66 @@
 ---
-import ComingSoon from "../../components/ComingSoon.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { FILM_FORMATS, FILM_SOURCES, FILM_LAST_VERIFIED } from "../../data/film-formats.js";
+import { FULL_FRAME_DIAGONAL, filmRuntime, fmtMinSec, fmt } from "../../lib/calc.js";
+
+const rows = FILM_FORMATS.map((f) => {
+  const known = f.w && f.h;
+  const diag = known ? Math.hypot(f.w, f.h) : null;
+  const crop = diag ? FULL_FRAME_DIAGONAL / diag : null;
+  const ratio = known ? `${fmt(f.w / f.h, 2)}:1` : f.aspectNote || "未知";
+  const t = filmRuntime(f.rollFeet, 24, f.framesPerFoot);
+  return { ...f, known, crop, ratio, diag, t };
+});
+const fpf = (v: number) => (Number.isInteger(v) ? String(v) : fmt(v, 2));
 ---
-<ComingSoon id="film" intro="Kodak VISION3 等電影底片的感光度、色溫、適合情境。" />
+<BaseLayout title="底片片幅" description="Super 8、16mm、Super 16、35mm（2 孔、3 孔、4 孔）、VistaVision、65mm 底片片幅對照：畫面大小、畫面比例、每呎幾格、對應全片幅的等效倍率，資料來自 Kodak 官方資料。" section="film">
+  <p class="eyebrow">Film</p>
+  <h1>底片</h1>
+  <p class="lead">底片片幅對照與長度計算。資料整理自 Kodak 官方資料。</p>
+
+  <div class="grid" style="margin-bottom:24px">
+    <a class="card" href="/tools/film-length/">
+      <h3>底片長度計算</h3>
+      <p>400 呎的底片 24fps 可以拍多久？拍 3 分鐘要幾呎？</p>
+    </a>
+    <a class="card soon" href="#" onclick="return false" aria-disabled="true">
+      <h3>底片型號資料（預計增加）</h3>
+      <p>Kodak VISION3 等底片的感光度、色溫、適合情境。</p>
+    </a>
+  </div>
+
+  <h2>片幅對照</h2>
+  <p class="cam-count">畫面大小是 Kodak 標示的拍攝畫面（capture area）。「等效倍率」是把畫面對角線跟全片幅（36 × 24 mm）比，數字越大代表畫面越小、同一支鏡頭看起來越長。</p>
+  <div class="tbl-wrap">
+    <table class="modes stack">
+      <thead><tr><th>片幅</th><th>每格孔數</th><th>每呎格數</th><th>畫面大小（mm）</th><th>畫面比例</th><th>等效倍率</th><th>24fps 一卷可拍</th><th></th></tr></thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr id={r.id}>
+            <td class="first" data-th="片幅">{r.name}</td>
+            <td data-th="每格孔數">{r.perfs}</td>
+            <td class="n" data-th="每呎格數">{fpf(r.framesPerFoot)}</td>
+            <td class={r.known ? "n" : "n unknown"} data-th="畫面大小">{r.known ? `${r.w} × ${r.h}` : "未知"}</td>
+            <td class="n" data-th="畫面比例">{r.ratio}</td>
+            <td class="n" data-th="等效倍率">{r.crop ? `${fmt(r.crop, 2)}×` : "未知"}</td>
+            <td class="n" data-th="24fps 一卷可拍">{fmt(r.rollFeet, 0)} 呎・{fmtMinSec(r.t)}</td>
+            <td data-th="">{r.crop ? <a href={`/tools/focal-length/?crop=${fmt(r.crop, 2)}`}>算等效焦段</a> : <span class="unknown">—</span>}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>各片幅的說明</h2>
+  <ul class="notes">
+    {rows.map((r) => (
+      <li><b>{r.name}</b>：{r.note}{r.kodak && <>　<span class="cam-count">Kodak 範例：{r.kodak.text}。</span></>}</li>
+    ))}
+  </ul>
+
+  <h2>資料來源</h2>
+  <div class="src">
+    <p>{FILM_SOURCES.map((s, i) => <>{i > 0 && "、"}<a href={s.url} rel="noopener" target="_blank">{s.name}</a></>)}</p>
+    <p>最後確認日期：{FILM_LAST_VERIFIED}。「每呎格數」是用 Kodak 公布的運行時間換算（35mm 每呎 16 格是 Kodak 指南直接寫的）。「等效倍率」是用畫面對角線算的約略值，鏡頭實際看到的範圍還會受放映或掃描時的裁切影響。標示「未知」表示 Kodak 資料沒有寫，不是沒有。</p>
+  </div>
+</BaseLayout>

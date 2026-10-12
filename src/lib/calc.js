@@ -300,3 +300,28 @@ export function framesToTc(frames, rate) {
   const p = (x) => String(x).padStart(2, "0");
   return `${p(h)}:${p(mi)}:${p(s)}${rate.drop ? ";" : ":"}${p(f)}`;
 }
+
+// ---- 底片長度 ----
+export const FEET_TO_M = 0.3048;
+
+// 底片長度（呎）→ 時間（秒）
+export function filmRuntime(feet, fps, framesPerFoot) {
+  if (!(feet > 0) || !(fps > 0) || !(framesPerFoot > 0)) return null;
+  return (feet * framesPerFoot) / fps;
+}
+// 想拍的時間（秒）→ 需要的底片長度（呎）
+export function filmFeetFor(seconds, fps, framesPerFoot) {
+  if (!(seconds > 0) || !(fps > 0) || !(framesPerFoot > 0)) return null;
+  return (seconds * fps) / framesPerFoot;
+}
+// 每分鐘用掉多少呎
+export function filmFeetPerMinute(fps, framesPerFoot) {
+  return fps > 0 && framesPerFoot > 0 ? (fps * 60) / framesPerFoot : null;
+}
+// 秒數轉「X 分 Y 秒」（秒數無條件捨去，跟 Kodak 的標示方式一樣）
+export function fmtMinSec(seconds) {
+  if (seconds == null || !isFinite(seconds)) return "—";
+  const s = Math.floor(seconds + 1e-9);
+  const m = Math.floor(s / 60);
+  return m > 0 ? `${m} 分 ${String(s % 60).padStart(2, "0")} 秒` : `${s} 秒`;
+}

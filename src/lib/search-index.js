@@ -2,6 +2,7 @@ import { TOOLS, sections } from "../data/site.js";
 import { cameras } from "./cameras.js";
 import { lenses } from "./lenses.js";
 import { GLOSSARY } from "../data/glossary.js";
+import { FILM_FORMATS } from "../data/film-formats.js";
 
 // 搜尋清單：建置時整理好，搜尋在瀏覽器裡比對。之後加入相機、鏡頭等資料。
 export const searchItems = [
@@ -12,6 +13,10 @@ export const searchItems = [
   ...lenses.map((l) => ({
     title: `${l.brand} ${l.model}`, type: "鏡頭", href: `/lenses/${l.slug}/`,
     text: [l.brand, l.series, l.model, l.model_code, l.mount, l.coverage].filter(Boolean).join(" "),
+  })),
+  ...FILM_FORMATS.map((f) => ({
+    title: `${f.name}（底片片幅）`, type: "底片", href: `/film/#${f.id}`,
+    text: [f.name, f.gauge, f.perfs, "底片 片幅 film format"].join(" "),
   })),
   ...GLOSSARY.map((g) => ({
     title: `${g.term}（名詞）`, type: "名詞", href: `/glossary/#${g.id}`,

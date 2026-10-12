@@ -7,7 +7,7 @@ export const SECTIONS = [
   { id: "cameras", en: "Cameras", zh: "攝影機", href: "/cameras/", desc: "規格、錄影格式、記憶卡", ready: false },
   { id: "lenses", en: "Lenses", zh: "鏡頭", href: "/lenses/", desc: "接環、片幅涵蓋、焦段", ready: true },
   { id: "media", en: "Media", zh: "記憶卡", href: "/media/", desc: "SD、CFexpress 等格式與速度", ready: true },
-  { id: "film", en: "Film", zh: "底片", href: "/film/", desc: "Kodak 電影底片資料", ready: false },
+  { id: "film", en: "Film", zh: "底片", href: "/film/", desc: "片幅對照、底片長度", ready: true },
   { id: "tools", en: "Tools", zh: "工具", href: "/tools/", desc: "快門、焦段、景深、ND、容量", ready: true },
 ];
 
@@ -87,6 +87,10 @@ export const TOOLS = [
   {
     id: "depth-of-field-table", href: "/tools/depth-of-field-table/", name: "景深對照表（可列印）",
     q: "一張表看光圈與距離的清楚範圍", keywords: ["景深", "對照表", "列印", "DoF", "對焦", "焦點", "攝影助理"],
+  },
+  {
+    id: "film-length", href: "/tools/film-length/", name: "底片長度",
+    q: "400 呎底片 24fps 可以拍多久？", keywords: ["film", "底片", "呎", "feet", "35mm", "16mm", "Super 8", "Super 16", "底片長度", "運行時間"],
   },
   {
     id: "card-time", href: "/tools/recording-capacity/?mode=card", name: "記憶卡可錄時間",

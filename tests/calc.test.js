@@ -7,7 +7,9 @@ import {
   ndInfo, parseShutter, fmtShutter, aspectOf, cropToRatio, depthOfField, stopsBetween,
   fieldOfView, sunnyAperture, ndStopsNeeded, shootStorage,
   frameSizeAt, desqueezedRatio, mired, miredShift, luxToEV, luxToFc, TC_RATES, tcToFrames, framesToTc,
+  filmRuntime, filmFeetFor, filmFeetPerMinute, fmtMinSec,
 } from "../src/lib/calc.js";
+import { FILM_FORMATS } from "../src/data/film-formats.js";
 import { summarize, pageLabel } from "../src/lib/online-summary.js";
 
 test("24fps + 180° → 1/48 秒，最接近 1/50", () => {
@@ -164,4 +166,26 @@ test("線上人數：整理成總人數與各頁人數，頁面名稱對應", ()
   assert.equal(pageLabel("/lenses/sony-fe-24-70mm-f2-8-gm-ii/"), "鏡頭");
   assert.equal(pageLabel("/tools/timecode/"), "工具");
   assert.equal(pageLabel("/xyz/"), "其他");
+});
+
+test("底片長度：每一種片幅都要跟 Kodak 公布的運行時間一致", () => {
+  const want = {
+    "35-4perf": "4 分 26 秒", "35-3perf": "5 分 55 秒", "35-2perf": "8 分 53 秒", "s16": "11 分 06 秒",
+    "35-8perf": "2 分 13 秒", "65-5perf": "8 分 53 秒", "65-15perf": "2 分 57 秒",
+  };
+  for (const f of FILM_FORMATS) {
+    if (!f.kodak) continue;
+    const t = filmRuntime(f.kodak.feet, f.kodak.fps, f.framesPerFoot);
+    if (f.id.startsWith("s8")) continue;
+    assert.equal(fmtMinSec(t), want[f.id], f.id);
+  }
+  const s8 = FILM_FORMATS.find((f) => f.id === "s8-regular");
+  assert.equal(fmtMinSec(filmRuntime(50, 18, s8.framesPerFoot)), "3 分 20 秒");
+  assert.equal(fmtMinSec(filmRuntime(50, 24, s8.framesPerFoot)), "2 分 30 秒");
+});
+
+test("底片長度：反推需要的呎數與每分鐘用量", () => {
+  assert.ok(Math.abs(filmFeetFor(60, 24, 16) - 90) < 1e-9);       // 35mm 4 孔 1 分鐘 = 90 呎
+  assert.ok(Math.abs(filmFeetPerMinute(24, 40) - 36) < 1e-9);     // 16mm 1 分鐘 = 36 呎
+  assert.equal(filmRuntime(0, 24, 16), null);
 });
