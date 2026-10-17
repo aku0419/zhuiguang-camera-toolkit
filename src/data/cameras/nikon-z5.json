@@ -1,0 +1,102 @@
+{
+  "slug": "nikon-z5",
+  "brand": "Nikon",
+  "model": "Z5",
+  "aliases": [
+    "Z 5",
+    "Z5"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.9,
+    "height_mm": 23.9,
+    "resolution_mp": 24.3
+  },
+  "base_iso": "Unknown",
+  "log": [],
+  "raw": "無內錄 RAW 影片；說明書未列 RAW 外接錄影",
+  "open_gate": false,
+  "lens_mount": "Nikon Z",
+  "media": [
+    "SD／SDHC／SDXC（UHS-II）插槽 1",
+    "SD／SDHC／SDXC（UHS-II）插槽 2"
+  ],
+  "timecode": "有（僅 MOV 檔；可選 Record run／Free run、遺漏格式；可隨 HDMI 輸出到 Atomos 錄影機）；機身無時間碼端子",
+  "sdi": "無",
+  "hdmi": "Type C（Mini）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264",
+      "bitrate_mbps": 144,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.7,
+      "notes": "4K 固定裁切（說明書寫 1.7×，錄製範圍約 22.4×12.6 mm）；畫質固定 High quality；單段最長 29 分 59 秒"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264",
+      "bitrate_mbps": 144,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.7,
+      "notes": "4K 固定裁切（說明書寫 1.7×，錄製範圍約 22.4×12.6 mm）；畫質固定 High quality；單段最長 29 分 59 秒"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264",
+      "bitrate_mbps": 56,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "High quality 56 Mbps；Normal 28 Mbps；影像範圍可選 FX 或 DX（DX 約 23.5×13.2 mm）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264",
+      "bitrate_mbps": 28,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "High quality 28 Mbps；Normal 14 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264",
+      "bitrate_mbps": 28,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "High quality 28 Mbps；Normal 14 Mbps"
+    }
+  ],
+  "source_name": "Nikon Z5 線上說明書：i 選單（影片尺寸、格率與畫質）",
+  "source_url": "https://onlinemanual.nikonimglib.com/z5/en/07_the_i_menu_03.html",
+  "extra_sources": [
+    {
+      "source_name": "Nikon Z5 線上說明書：規格",
+      "source_url": "https://onlinemanual.nikonimglib.com/z5/en/15_technical_notes_08.html"
+    },
+    {
+      "source_name": "Nikon Z5 線上說明書：連接 HDMI 裝置",
+      "source_url": "https://onlinemanual.nikonimglib.com/z5/en/11_connecting_to_computers_and_hdmi_devices_02.html"
+    },
+    {
+      "source_name": "Nikon Z5 線上說明書：時間碼",
+      "source_url": "https://onlinemanual.nikonimglib.com/z5/en/09_menu_guide_04_28.html"
+    }
+  ],
+  "last_verified": "2026-10-17",
+  "editor_notes": "位元率為「最大位元率」。4K 裁切倍率：說明書文字寫「固定 1.7×」，但同頁錄製範圍 22.4 mm 換算約 1.6 倍，兩者不一致，請核對；目前依文字寫 1.7。說明書只寫 H.264/AVC，沒寫位元深度與色彩取樣，標 Unknown。說明書沒有 N-Log／HLG 或 RAW 影片，log 留空。發表日、Base ISO、動態範圍說明書沒寫，標 Unknown。open_gate：說明書影片尺寸全是 16:9，故寫 false，請核對。"
+}

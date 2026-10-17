@@ -1,0 +1,183 @@
+{
+  "slug": "nikon-z7ii",
+  "brand": "Nikon",
+  "model": "Z7II",
+  "aliases": [
+    "Z 7II",
+    "Z7 II",
+    "Z7 2",
+    "Z72"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.9,
+    "height_mm": 23.9,
+    "resolution_mp": 45.7
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "N-Log（僅 HDMI 外接錄影機，不能錄進記憶卡）",
+    "HLG（僅 HDMI 外接錄影機）"
+  ],
+  "raw": "Unknown（線上說明書未記載影片 RAW 錄製或輸出；靜態照片為 NEF RAW）",
+  "open_gate": false,
+  "lens_mount": "Nikon Z",
+  "media": [
+    "CFexpress Type B／XQD",
+    "SD（UHS-II）"
+  ],
+  "timecode": "有（僅 MOV 格式可錄入；可選 Record run／Free run、Drop frame；可選擇將時間碼隨 HDMI 輸出給 Atomos 外接錄影機）",
+  "sdi": "無",
+  "hdmi": "Type C（Mini）；4K 60p／50p 的 HDMI 輸出會降為 30p／25p",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264（一般畫質）",
+      "bitrate_mbps": 360,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.08,
+      "notes": "影像範圍固定 FX，實際裁切約為 FX 的 93%（約 33.4 × 18.8 mm）；畫質固定為一般；50p 同位元率；HDMI 輸出會降為 30p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264（高畫質）",
+      "bitrate_mbps": 144,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "FX 範圍（約 35.9 × 20.2 mm）；畫質固定為高；25p 同位元率；HDMI 外錄可輸出 10-bit"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264（高畫質）",
+      "bitrate_mbps": 144,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "FX 範圍（約 35.9 × 20.2 mm）；畫質固定為高；25p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.264（高畫質）",
+      "bitrate_mbps": 144,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍（約 23.5 × 13.2 mm）；畫質固定為高；100p 同位元率；無 HDMI 輸出"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264（高畫質）",
+      "bitrate_mbps": 56,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "FX 範圍（約 35.8 × 20.1 mm）；50p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264（一般畫質）",
+      "bitrate_mbps": 28,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "FX 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264（高畫質）",
+      "bitrate_mbps": 28,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "FX 範圍（約 35.8 × 20.1 mm）；25p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264（一般畫質）",
+      "bitrate_mbps": 14,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "FX 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264（高畫質）",
+      "bitrate_mbps": 28,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "FX 範圍（約 35.8 × 20.1 mm）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264（一般畫質）",
+      "bitrate_mbps": 14,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "FX 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.264（高畫質）",
+      "bitrate_mbps": 36,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "慢動作 30p ×4（以 120p 讀出、30p 播放，不錄聲音，最長約 3 分鐘）；DX 範圍（約 23.5 × 13.2 mm）；25p ×4 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.264（高畫質）",
+      "bitrate_mbps": 29,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "慢動作 24p ×5（以 120p 讀出、24p 播放，不錄聲音，最長約 3 分鐘）；DX 範圍（約 23.5 × 13.2 mm）"
+    }
+  ],
+  "source_name": "Nikon Z 7II/Z 6II 線上使用說明書",
+  "source_url": "https://onlinemanual.nikonimglib.com/z7II_z6II/en/",
+  "last_verified": "2026-10-17",
+  "editor_notes": "1) 發表日、Base ISO、動態範圍宣稱值：線上說明書沒有，寫 Unknown。2) 說明書只寫影片壓縮為 H.264／MPEG-4 AVC，沒寫內錄的位元深度與色彩取樣，故寫 Unknown；HDMI 外錄可選 8-bit／10-bit。3) 說明書的位元率表中 1080 120p／100p 與 4K 30p／25p／24p 共用 144 Mbps（表格合併儲存格推定），請負責人核對。4) 4K 60p 的裁切：說明書寫實際裁切約為 FX 的 93%（錄製範圍約 33.4 × 18.8 mm），crop_factor 1.08 為 35.9÷33.4 的估算值。5) 1080 120p／100p 與慢動作為 DX 範圍（約 23.5 × 13.2 mm）。6) 25p／50p／100p 與 24p／30p／60p 位元率相同，只列一套。7) 線上說明書沒有 RAW 影片資料（Nikon 另有 RAW 影片專用文件），raw 欄位寫 Unknown，若要補請負責人指定來源。8) N-Log／HLG 只在 HDMI 外接輸出（10-bit）可用。",
+  "extra_sources": [
+    {
+      "source_name": "Nikon Z 7II/Z 6II 線上說明書：i 選單「Movies」（畫面尺寸、位元率、影像範圍）",
+      "source_url": "https://onlinemanual.nikonimglib.com/z7II_z6II/en/07_the_i_menu_03.html"
+    },
+    {
+      "source_name": "Nikon Z 7II/Z 6II 線上說明書：Specifications",
+      "source_url": "https://onlinemanual.nikonimglib.com/z7II_z6II/en/15_technical_notes_08.html"
+    },
+    {
+      "source_name": "Nikon Z 7II/Z 6II 線上說明書：Timecode",
+      "source_url": "https://onlinemanual.nikonimglib.com/z7II_z6II/en/09_menu_guide_04_28.html"
+    },
+    {
+      "source_name": "Nikon Z 7II/Z 6II 線上說明書：Connecting to HDMI Devices",
+      "source_url": "https://onlinemanual.nikonimglib.com/z7II_z6II/en/11_connecting_to_computers_and_hdmi_devices_02.html"
+    }
+  ]
+}

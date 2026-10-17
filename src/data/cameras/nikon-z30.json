@@ -1,0 +1,160 @@
+{
+  "slug": "nikon-z30",
+  "brand": "Nikon",
+  "model": "Z30",
+  "aliases": [
+    "Z 30",
+    "Z30",
+    "Z-30"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "APS-C",
+    "width_mm": 23.5,
+    "height_mm": 15.7,
+    "resolution_mp": 20.9
+  },
+  "base_iso": "Unknown",
+  "log": [],
+  "raw": "不能內錄 RAW 影片；可經 HDMI 輸出到外接錄影機（規格表未寫輸出位元深度）",
+  "open_gate": false,
+  "lens_mount": "Nikon Z",
+  "media": [
+    "SD（UHS-I）"
+  ],
+  "timecode": "可錄時間碼（僅 MOV；選單可設 Record run／Free run、遺漏格式）；HDMI 輸出可附時間碼（Atomos SHOGUN、NINJA、SUMO 系列）；規格表未列時間碼端子",
+  "sdi": "無",
+  "hdmi": "Type D（Micro）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264（高畫質）",
+      "bitrate_mbps": 144,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "MOV／MP4；位元率為原廠標示最大值；4K 畫質固定高畫質"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264（高畫質）",
+      "bitrate_mbps": 144,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "MOV／MP4；位元率為原廠標示最大值；4K 畫質固定高畫質"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.264（高畫質）",
+      "bitrate_mbps": 144,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "MOV／MP4；位元率為原廠標示最大值；畫質固定高畫質；電子防手震與 HDMI 輸出不可用"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264（高畫質）",
+      "bitrate_mbps": 56,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "MOV／MP4；位元率為原廠標示最大值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264（一般畫質）",
+      "bitrate_mbps": 28,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "MOV／MP4；位元率為原廠標示最大值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264（高畫質）",
+      "bitrate_mbps": 28,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "MOV／MP4；位元率為原廠標示最大值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264（一般畫質）",
+      "bitrate_mbps": 14,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "MOV／MP4；位元率為原廠標示最大值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264（高畫質）",
+      "bitrate_mbps": 28,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "MOV／MP4；位元率為原廠標示最大值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264（一般畫質）",
+      "bitrate_mbps": 14,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "MOV／MP4；位元率為原廠標示最大值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264（高畫質）",
+      "bitrate_mbps": 36,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "MOV／MP4；位元率為原廠標示最大值；慢動作（30p×4 以 120p 讀出、30p 播放；不錄音）；最長約 3 分鐘"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264（高畫質）",
+      "bitrate_mbps": 29,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "MOV／MP4；位元率為原廠標示最大值；慢動作（24p×5 以 120p 讀出、24p 播放；不錄音）；最長約 3 分鐘"
+    }
+  ],
+  "source_name": "Nikon Z30 線上說明書：影片尺寸、格率與最大位元率",
+  "source_url": "https://onlinemanual.nikonimglib.com/z30/en/07-03.html",
+  "last_verified": "2026-10-17",
+  "editor_notes": "Z30 沒有電子觀景窗。4K 連續錄影時間說明書寫最長 125 分鐘（受電量與機身溫度影響），Zfc 與 Z50 寫 29 分 59 秒，數字不同，請負責人視需要核對。發表日期說明書沒寫，標 Unknown。Base ISO、動態範圍說明書沒寫，標 Unknown。說明書只寫『H.264／MPEG-4 AVC』，沒寫位元深度與色彩取樣，所以標 Unknown（不猜）。位元率是原廠表格的『最大位元率』，分高畫質與一般畫質；25／50／100 與 NTSC 同位元率，沒另列。4K 說明書註明為 4K UHD，沒寫裁切，標 none。慢動作的 max_fps 填播放格率（30、24）。沒有 N-Log、HLG，也沒有 RAW 影片。1080 120p／100p／慢動作不能經 HDMI 輸出。",
+  "extra_sources": [
+    {
+      "source_name": "Nikon Z30 線上說明書：規格",
+      "source_url": "https://onlinemanual.nikonimglib.com/z30/en/15-08.html"
+    },
+    {
+      "source_name": "Nikon Z30 線上說明書：時間碼",
+      "source_url": "https://onlinemanual.nikonimglib.com/z30/en/09-04-28.html"
+    },
+    {
+      "source_name": "Nikon Z30 線上說明書：HDMI 裝置",
+      "source_url": "https://onlinemanual.nikonimglib.com/z30/en/11-02.html"
+    }
+  ]
+}

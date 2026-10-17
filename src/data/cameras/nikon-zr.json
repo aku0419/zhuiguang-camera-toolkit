@@ -22,156 +22,1029 @@
     "N-Log",
     "Log3G10（R3D）"
   ],
-  "raw": "可內錄 R3D NE、N-RAW（12-bit）與 ProRes RAW HQ（12-bit）",
+  "raw": "可內錄 N-RAW（12-bit）、R3D NE（12-bit，RED IPP2 流程、Log3G10）與 ProRes RAW HQ（12-bit）；錄 RAW 時同時錄 1080 H.264 MP4 代理檔；RAW 影片經 HDMI 輸出時最高 1920x1080",
   "open_gate": false,
   "lens_mount": "Nikon Z",
   "media": [
     "CFexpress Type B／XQD",
-    "microSD（UHS-I）"
+    "microSD（UHS-I，microSDHC／microSDXC）"
   ],
-  "timecode": "有時間碼功能；規格表未列時間碼端子",
+  "timecode": "可寫入時間碼（錄製或 HDMI 輸出時含時間碼可選；Record run／Free run；可選遺漏格式 Drop frame；MP4 不含時間碼）；可經外接麥克風／線路輸入端子輸入 LTC 時間碼（原廠測試過 Tentacle Sync SYNC E）",
   "sdi": "無",
   "hdmi": "Type D（Micro HDMI）",
   "dynamic_range_claimed": "15+ stops",
   "recording_modes": [
     {
       "resolution": "6048x3402",
-      "max_fps": 59.94,
-      "codec": "R3D NE",
+      "max_fps": 60,
+      "codec": "N-RAW 12-bit（高畫質）",
       "bitrate_mbps": 3730,
       "bit_depth": 12,
       "chroma": "RAW",
       "crop": "none",
-      "notes": "FX 範圍"
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
     },
     {
       "resolution": "6048x3402",
-      "max_fps": 23.976,
-      "codec": "R3D NE",
+      "max_fps": 50,
+      "codec": "N-RAW 12-bit（高畫質）",
+      "bitrate_mbps": 3110,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "6048x3402",
+      "max_fps": 30,
+      "codec": "N-RAW 12-bit（高畫質）",
+      "bitrate_mbps": 1870,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "6048x3402",
+      "max_fps": 25,
+      "codec": "N-RAW 12-bit（高畫質）",
+      "bitrate_mbps": 1560,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "6048x3402",
+      "max_fps": 24,
+      "codec": "N-RAW 12-bit（高畫質）",
       "bitrate_mbps": 1490,
       "bit_depth": 12,
       "chroma": "RAW",
       "crop": "none",
-      "notes": "FX 範圍"
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 60,
+      "codec": "N-RAW 12-bit（高畫質）",
+      "bitrate_mbps": 1660,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 50,
+      "codec": "N-RAW 12-bit（高畫質）",
+      "bitrate_mbps": 1390,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 30,
+      "codec": "N-RAW 12-bit（高畫質）",
+      "bitrate_mbps": 830,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 25,
+      "codec": "N-RAW 12-bit（高畫質）",
+      "bitrate_mbps": 700,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 24,
+      "codec": "N-RAW 12-bit（高畫質）",
+      "bitrate_mbps": 670,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
     },
     {
       "resolution": "3984x2240",
-      "max_fps": 119.88,
-      "codec": "R3D NE",
+      "max_fps": 120,
+      "codec": "N-RAW 12-bit（高畫質）",
       "bitrate_mbps": 3240,
       "bit_depth": 12,
       "chroma": "RAW",
       "crop": "crop",
       "crop_factor": 1.5,
-      "notes": "DX 範圍"
+      "notes": "DX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
     },
     {
-      "resolution": "6048x3402",
-      "max_fps": 59.94,
-      "codec": "N-RAW（高畫質）",
-      "bitrate_mbps": 3730,
+      "resolution": "3984x2240",
+      "max_fps": 100,
+      "codec": "N-RAW 12-bit（高畫質）",
+      "bitrate_mbps": 2700,
       "bit_depth": 12,
       "chroma": "RAW",
-      "crop": "none",
-      "notes": "FX 範圍"
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 60,
+      "codec": "N-RAW 12-bit（高畫質）",
+      "bitrate_mbps": 1620,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 50,
+      "codec": "N-RAW 12-bit（高畫質）",
+      "bitrate_mbps": 1350,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 30,
+      "codec": "N-RAW 12-bit（高畫質）",
+      "bitrate_mbps": 810,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 25,
+      "codec": "N-RAW 12-bit（高畫質）",
+      "bitrate_mbps": 680,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 24,
+      "codec": "N-RAW 12-bit（高畫質）",
+      "bitrate_mbps": 650,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
     },
     {
       "resolution": "6048x3402",
-      "max_fps": 59.94,
-      "codec": "N-RAW（一般畫質）",
+      "max_fps": 60,
+      "codec": "N-RAW 12-bit（一般畫質）",
       "bitrate_mbps": 1870,
       "bit_depth": 12,
       "chroma": "RAW",
       "crop": "none",
-      "notes": "FX 範圍"
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "6048x3402",
+      "max_fps": 50,
+      "codec": "N-RAW 12-bit（一般畫質）",
+      "bitrate_mbps": 1560,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "6048x3402",
+      "max_fps": 30,
+      "codec": "N-RAW 12-bit（一般畫質）",
+      "bitrate_mbps": 940,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "6048x3402",
+      "max_fps": 25,
+      "codec": "N-RAW 12-bit（一般畫質）",
+      "bitrate_mbps": 780,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "6048x3402",
+      "max_fps": 24,
+      "codec": "N-RAW 12-bit（一般畫質）",
+      "bitrate_mbps": 750,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 60,
+      "codec": "N-RAW 12-bit（一般畫質）",
+      "bitrate_mbps": 830,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 50,
+      "codec": "N-RAW 12-bit（一般畫質）",
+      "bitrate_mbps": 700,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 30,
+      "codec": "N-RAW 12-bit（一般畫質）",
+      "bitrate_mbps": 420,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 25,
+      "codec": "N-RAW 12-bit（一般畫質）",
+      "bitrate_mbps": 350,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 24,
+      "codec": "N-RAW 12-bit（一般畫質）",
+      "bitrate_mbps": 340,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 120,
+      "codec": "N-RAW 12-bit（一般畫質）",
+      "bitrate_mbps": 1630,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 100,
+      "codec": "N-RAW 12-bit（一般畫質）",
+      "bitrate_mbps": 1360,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 60,
+      "codec": "N-RAW 12-bit（一般畫質）",
+      "bitrate_mbps": 820,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 50,
+      "codec": "N-RAW 12-bit（一般畫質）",
+      "bitrate_mbps": 680,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 30,
+      "codec": "N-RAW 12-bit（一般畫質）",
+      "bitrate_mbps": 410,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 25,
+      "codec": "N-RAW 12-bit（一般畫質）",
+      "bitrate_mbps": 340,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 24,
+      "codec": "N-RAW 12-bit（一般畫質）",
+      "bitrate_mbps": 330,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；NEV；SDR／N-Log；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "6048x3402",
+      "max_fps": 60,
+      "codec": "R3D NE 12-bit",
+      "bitrate_mbps": 3730,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；Log3G10 固定；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "6048x3402",
+      "max_fps": 50,
+      "codec": "R3D NE 12-bit",
+      "bitrate_mbps": 3110,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；Log3G10 固定；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "6048x3402",
+      "max_fps": 30,
+      "codec": "R3D NE 12-bit",
+      "bitrate_mbps": 1870,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；Log3G10 固定；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "6048x3402",
+      "max_fps": 25,
+      "codec": "R3D NE 12-bit",
+      "bitrate_mbps": 1560,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；Log3G10 固定；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "6048x3402",
+      "max_fps": 24,
+      "codec": "R3D NE 12-bit",
+      "bitrate_mbps": 1490,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；Log3G10 固定；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 60,
+      "codec": "R3D NE 12-bit",
+      "bitrate_mbps": 1660,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；Log3G10 固定；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 50,
+      "codec": "R3D NE 12-bit",
+      "bitrate_mbps": 1390,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；Log3G10 固定；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 30,
+      "codec": "R3D NE 12-bit",
+      "bitrate_mbps": 830,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；Log3G10 固定；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 25,
+      "codec": "R3D NE 12-bit",
+      "bitrate_mbps": 700,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；Log3G10 固定；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 24,
+      "codec": "R3D NE 12-bit",
+      "bitrate_mbps": 670,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；Log3G10 固定；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 120,
+      "codec": "R3D NE 12-bit",
+      "bitrate_mbps": 3240,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；Log3G10 固定；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 100,
+      "codec": "R3D NE 12-bit",
+      "bitrate_mbps": 2700,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；Log3G10 固定；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 60,
+      "codec": "R3D NE 12-bit",
+      "bitrate_mbps": 1620,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；Log3G10 固定；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 50,
+      "codec": "R3D NE 12-bit",
+      "bitrate_mbps": 1350,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；Log3G10 固定；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 30,
+      "codec": "R3D NE 12-bit",
+      "bitrate_mbps": 810,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；Log3G10 固定；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 25,
+      "codec": "R3D NE 12-bit",
+      "bitrate_mbps": 680,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；Log3G10 固定；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 24,
+      "codec": "R3D NE 12-bit",
+      "bitrate_mbps": 650,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；Log3G10 固定；同時錄 1080 H.264 MP4 代理檔"
+    },
+    {
+      "resolution": "6048x3402",
+      "max_fps": 30,
+      "codec": "ProRes RAW HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；MOV；SDR／N-Log；Nikon 說明書未列位元率（指向 Apple 網站）"
+    },
+    {
+      "resolution": "6048x3402",
+      "max_fps": 24,
+      "codec": "ProRes RAW HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；MOV；SDR／N-Log；Nikon 說明書未列位元率（指向 Apple 網站）"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 60,
+      "codec": "ProRes RAW HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；MOV；SDR／N-Log；Nikon 說明書未列位元率（指向 Apple 網站）"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 30,
+      "codec": "ProRes RAW HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；MOV；SDR／N-Log；Nikon 說明書未列位元率（指向 Apple 網站）"
+    },
+    {
+      "resolution": "4032x2268",
+      "max_fps": 24,
+      "codec": "ProRes RAW HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "FX 範圍；MOV；SDR／N-Log；Nikon 說明書未列位元率（指向 Apple 網站）"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 60,
+      "codec": "ProRes RAW HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；MOV；SDR／N-Log；Nikon 說明書未列位元率（指向 Apple 網站）"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 30,
+      "codec": "ProRes RAW HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；MOV；SDR／N-Log；Nikon 說明書未列位元率（指向 Apple 網站）"
+    },
+    {
+      "resolution": "3984x2240",
+      "max_fps": 24,
+      "codec": "ProRes RAW HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "DX 範圍；MOV；SDR／N-Log；Nikon 說明書未列位元率（指向 Apple 網站）"
     },
     {
       "resolution": "5376x3024",
-      "max_fps": 59.94,
-      "codec": "H.265 10-bit",
-      "bitrate_mbps": 400,
-      "bit_depth": 10,
-      "chroma": "Unknown",
-      "crop": "none",
-      "notes": "5.4K，FX 範圍"
-    },
-    {
-      "resolution": "3840x2160",
-      "max_fps": 119.88,
-      "codec": "H.265 10-bit",
-      "bitrate_mbps": 400,
-      "bit_depth": 10,
-      "chroma": "Unknown",
-      "crop": "crop",
-      "crop_factor": 1.5,
-      "notes": "4K 120p 固定為 DX 範圍"
-    },
-    {
-      "resolution": "3840x2160",
-      "max_fps": 59.94,
-      "codec": "H.265 10-bit",
-      "bitrate_mbps": 340,
-      "bit_depth": 10,
-      "chroma": "Unknown",
-      "crop": "none"
-    },
-    {
-      "resolution": "3840x2160",
-      "max_fps": 29.97,
-      "codec": "H.265 10-bit",
-      "bitrate_mbps": 190,
-      "bit_depth": 10,
-      "chroma": "Unknown",
-      "crop": "none",
-      "notes": "25p、23.976p 相同"
-    },
-    {
-      "resolution": "3840x2160",
-      "max_fps": 59.94,
+      "max_fps": 30,
       "codec": "ProRes 422 HQ",
       "bitrate_mbps": "Unknown",
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "Nikon 說明書未列 ProRes 位元率"
+      "notes": "MOV，All-I；SDR／N-Log；Nikon 說明書未列位元率；5.4K，FX 範圍；裝 DX 鏡頭時改為 3840x2160"
+    },
+    {
+      "resolution": "5376x3024",
+      "max_fps": 24,
+      "codec": "ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "MOV，All-I；SDR／N-Log；Nikon 說明書未列位元率；5.4K，FX 範圍；裝 DX 鏡頭時改為 3840x2160"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "MOV，All-I；SDR／N-Log；Nikon 說明書未列位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "MOV，All-I；SDR／N-Log；Nikon 說明書未列位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "MOV，All-I；SDR／N-Log；Nikon 說明書未列位元率"
     },
     {
       "resolution": "1920x1080",
-      "max_fps": 239.76,
+      "max_fps": 120,
+      "codec": "ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "MOV，All-I；SDR／N-Log；Nikon 說明書未列位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "MOV，All-I；SDR／N-Log；Nikon 說明書未列位元率"
+    },
+    {
+      "resolution": "5376x3024",
+      "max_fps": 60,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；SDR／HLG／N-Log；5.4K，FX 範圍；裝 DX 鏡頭時改為 3840x2160"
+    },
+    {
+      "resolution": "5376x3024",
+      "max_fps": 30,
       "codec": "H.265 10-bit",
       "bitrate_mbps": 340,
       "bit_depth": 10,
-      "chroma": "Unknown",
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；SDR／HLG／N-Log；5.4K，FX 範圍；裝 DX 鏡頭時改為 3840x2160"
+    },
+    {
+      "resolution": "5376x3024",
+      "max_fps": 24,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 340,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；SDR／HLG／N-Log；5.4K，FX 範圍；裝 DX 鏡頭時改為 3840x2160"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
       "crop": "crop",
-      "crop_factor": 1.05,
-      "notes": "240p 視角約為 FX 的 95%"
+      "crop_factor": 1.5,
+      "notes": "MOV；SDR／HLG／N-Log；此模式固定為 DX 範圍（約 23.7×13.3 mm）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 340,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；SDR／HLG／N-Log"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 190,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；SDR／HLG／N-Log"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 190,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；SDR／HLG／N-Log"
     },
     {
       "resolution": "1920x1080",
-      "max_fps": 59.94,
+      "max_fps": 240,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 340,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.05,
+      "notes": "MOV；SDR／HLG／N-Log；視角約為 FX 的 95%（裝 DX 鏡頭時降為 120p／100p），裁切倍率 1.05 為由原廠「約 95%」換算，待核對"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 190,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；SDR／HLG／N-Log"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
       "codec": "H.265 10-bit",
       "bitrate_mbps": 100,
       "bit_depth": 10,
-      "chroma": "Unknown",
-      "crop": "none"
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；SDR／HLG／N-Log"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；SDR／HLG／N-Log"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.265 10-bit",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；SDR／HLG／N-Log"
+    },
+    {
+      "resolution": "5376x3024",
+      "max_fps": 60,
+      "codec": "H.265 8-bit",
+      "bitrate_mbps": 370,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；僅 SDR；5.4K，FX 範圍；裝 DX 鏡頭時改為 3840x2160"
+    },
+    {
+      "resolution": "5376x3024",
+      "max_fps": 30,
+      "codec": "H.265 8-bit",
+      "bitrate_mbps": 300,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；僅 SDR；5.4K，FX 範圍；裝 DX 鏡頭時改為 3840x2160"
+    },
+    {
+      "resolution": "5376x3024",
+      "max_fps": 24,
+      "codec": "H.265 8-bit",
+      "bitrate_mbps": 300,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；僅 SDR；5.4K，FX 範圍；裝 DX 鏡頭時改為 3840x2160"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "H.265 8-bit",
+      "bitrate_mbps": 370,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "MOV；僅 SDR；此模式固定為 DX 範圍（約 23.7×13.3 mm）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265 8-bit",
+      "bitrate_mbps": 300,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；僅 SDR"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265 8-bit",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；僅 SDR"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.265 8-bit",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；僅 SDR"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "H.265 8-bit",
+      "bitrate_mbps": 300,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.05,
+      "notes": "MOV；僅 SDR；視角約為 FX 的 95%（裝 DX 鏡頭時降為 120p／100p），裁切倍率 1.05 為由原廠「約 95%」換算，待核對"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.265 8-bit",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；僅 SDR"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265 8-bit",
+      "bitrate_mbps": 80,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；僅 SDR"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.265 8-bit",
+      "bitrate_mbps": 40,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；僅 SDR"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.265 8-bit",
+      "bitrate_mbps": 40,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；僅 SDR"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 8-bit",
+      "bitrate_mbps": 50,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4；僅 SDR；無時間碼"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 8-bit",
+      "bitrate_mbps": 30,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4；僅 SDR；無時間碼"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 8-bit",
+      "bitrate_mbps": 30,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "慢動作 ×4（以 120p 讀出、30p 播放），不錄聲音，單次最長約 3 分鐘；MP4，僅 SDR"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 8-bit",
+      "bitrate_mbps": 30,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4；僅 SDR；無時間碼"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 8-bit",
+      "bitrate_mbps": 30,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "慢動作 ×5（以 120p 讀出、24p 播放），不錄聲音，單次最長約 3 分鐘；MP4，僅 SDR"
     }
   ],
   "source_name": "Nikon ZR 線上說明書：影片尺寸與格率",
   "source_url": "https://onlinemanual.nikonimglib.com/zr/en/19-02.html",
+  "last_verified": "2026-10-17",
+  "editor_notes": "位元率為原廠表格數值（Approx.）；N-RAW 為 NEV 檔位元率（高畫質／一般畫質），R3D NE 位元率與 N-RAW 高畫質相同（說明書各列數字相同）。色彩取樣取自「影片檔案類型」表：ProRes 422 HQ 4:2:2，H.265／H.264 4:2:0，RAW Bayer（舊檔寫 Unknown，已補）。N-Log、HLG 與 SDR 的位元深度、色彩取樣相同；R3D NE 固定 Log3G10。ProRes 位元率說明書未列，標 Unknown。base_iso 800／6400 是錄 R3D NE 時可選的 Base ISO（說明書 RAW 影片頁）。dynamic_range 15+ stops 來自 Nikon 新聞稿（本次未重新核對）。時間碼：舊檔寫「規格表未列端子」，說明書時間碼頁其實有 LTC 輸入（經外接麥克風／線路輸入端子），已更正。說明書另有 32-bit float 音訊錄製。ZR 的 5.4K H.265 8-bit／H.264 等請以原廠說明書為準。1080 240p／200p 裁切倍率 1.05 為由原廠「約 95%」換算，請核對。",
   "extra_sources": [
     {
       "source_name": "Nikon ZR 線上說明書：規格",
       "source_url": "https://onlinemanual.nikonimglib.com/zr/en/15-08.html"
     },
     {
+      "source_name": "Nikon ZR 線上說明書：影片檔案類型",
+      "source_url": "https://onlinemanual.nikonimglib.com/zr/en/19-01.html"
+    },
+    {
       "source_name": "Nikon ZR 線上說明書：影片影像範圍",
       "source_url": "https://onlinemanual.nikonimglib.com/zr/en/19-11.html"
+    },
+    {
+      "source_name": "Nikon ZR 線上說明書：RAW 影片（R3D、Base ISO）",
+      "source_url": "https://onlinemanual.nikonimglib.com/zr/en/19-12.html"
+    },
+    {
+      "source_name": "Nikon ZR 線上說明書：時間碼",
+      "source_url": "https://onlinemanual.nikonimglib.com/zr/en/09-04-28.html"
+    },
+    {
+      "source_name": "Nikon ZR 線上說明書：核准的記憶卡",
+      "source_url": "https://onlinemanual.nikonimglib.com/zr/en/15-09.html"
     },
     {
       "source_name": "Nikon 新聞稿：ZR 發表（2025-09-10）",
       "source_url": "https://www.nikon.com/company/news/2025/0910_imaging_01/"
     }
-  ],
-  "last_verified": "2026-10-06",
-  "editor_notes": "Base ISO 800／6400 在規格頁註明為 R3D NE 時可選；新聞稿也寫兩個 base ISO 與 15+ stops。位元率為原廠表格數值。H.265 色彩取樣與 ProRes 位元率說明書未寫。"
+  ]
 }

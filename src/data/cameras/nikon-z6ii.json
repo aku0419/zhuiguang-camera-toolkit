@@ -1,0 +1,148 @@
+{
+  "slug": "nikon-z6ii",
+  "brand": "Nikon",
+  "model": "Z6II",
+  "aliases": [
+    "Z 6II",
+    "Z6 II",
+    "Z6II",
+    "Z 6 II",
+    "Z62",
+    "Z6 2"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.9,
+    "height_mm": 23.9,
+    "resolution_mp": 24.5
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "N-Log（僅 HDMI 外接錄影機，10-bit）",
+    "HLG（僅 HDMI 外接錄影機，10-bit）"
+  ],
+  "raw": "無內錄 RAW 影片；說明書未列 RAW 外接錄影",
+  "open_gate": false,
+  "lens_mount": "Nikon Z",
+  "media": [
+    "CFexpress Type B／XQD",
+    "SD（UHS-II）"
+  ],
+  "timecode": "有（僅 MOV 檔；可選 Record run／Free run、遺漏格式；可隨 HDMI 輸出）；機身無時間碼端子",
+  "sdi": "無",
+  "hdmi": "Type C（Mini）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264",
+      "bitrate_mbps": 360,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "4K 60p／50p 固定 DX 範圍；畫質固定 Normal，最大位元率；單段最長 29 分 59 秒；HDMI 輸出時降為 30p／25p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264",
+      "bitrate_mbps": 144,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "畫質固定 High quality；單段最長 29 分 59 秒；影像範圍可選 FX 或 DX（DX 約 1.5 倍裁切）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264",
+      "bitrate_mbps": 144,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "畫質固定 High quality；單段最長 29 分 59 秒"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.264",
+      "bitrate_mbps": 144,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "畫質固定 High quality；影像範圍固定 FX；無 HDMI 輸出；裝 DX 鏡頭不可用"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264",
+      "bitrate_mbps": 56,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "High quality 56 Mbps；Normal 28 Mbps；影像範圍可選 FX 或 DX"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264",
+      "bitrate_mbps": 28,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "High quality 28 Mbps；Normal 14 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264",
+      "bitrate_mbps": 28,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "High quality 28 Mbps；Normal 14 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264",
+      "bitrate_mbps": 36,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "慢動作 30p ×4（以 120p 讀出），無聲音，影像範圍固定 FX，單段最長 3 分鐘，無 HDMI 輸出"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264",
+      "bitrate_mbps": 29,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "慢動作 24p ×5（以 120p 讀出），無聲音，影像範圍固定 FX，單段最長 3 分鐘，無 HDMI 輸出"
+    }
+  ],
+  "source_name": "Nikon Z7II／Z6II 線上說明書：i 選單（影片尺寸、格率與畫質）",
+  "source_url": "https://onlinemanual.nikonimglib.com/z7II_z6II/en/07_the_i_menu_03.html",
+  "extra_sources": [
+    {
+      "source_name": "Nikon Z7II／Z6II 線上說明書：規格",
+      "source_url": "https://onlinemanual.nikonimglib.com/z7II_z6II/en/15_technical_notes_08.html"
+    },
+    {
+      "source_name": "Nikon Z7II／Z6II 線上說明書：連接 HDMI 裝置",
+      "source_url": "https://onlinemanual.nikonimglib.com/z7II_z6II/en/11_connecting_to_computers_and_hdmi_devices_02.html"
+    },
+    {
+      "source_name": "Nikon Z7II／Z6II 線上說明書：時間碼",
+      "source_url": "https://onlinemanual.nikonimglib.com/z7II_z6II/en/09_menu_guide_04_28.html"
+    }
+  ],
+  "last_verified": "2026-10-17",
+  "editor_notes": "說明書與 Z7II 共用，表格的格式註腳是編號，對照後的判讀請核對：4K 60p／50p 的位元率 360 Mbps 落在 Normal 欄（畫質固定 Normal）；1080 120p／100p 與 4K 同組 144 Mbps（表格儲存格合併）。位元率為「最大位元率」。說明書只寫 H.264/AVC，沒寫內錄位元深度與色彩取樣，標 Unknown。N-Log／HLG 只能經 HDMI 以 10-bit 輸出到外接錄影機，不能存到機身記憶卡。4K 60p 須韌體為較新版本才有。發表日、Base ISO、動態範圍說明書沒寫，標 Unknown。open_gate：說明書影片尺寸全是 16:9，故寫 false，請核對。卡槽：說明書寫「一張 CFexpress／XQD 與一張 SD」，請核對槽位對應。"
+}

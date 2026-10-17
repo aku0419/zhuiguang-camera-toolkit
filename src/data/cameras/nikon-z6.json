@@ -1,0 +1,131 @@
+{
+  "slug": "nikon-z6",
+  "brand": "Nikon",
+  "model": "Z6",
+  "aliases": [
+    "Z 6",
+    "Z6"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.9,
+    "height_mm": 23.9,
+    "resolution_mp": 24.5
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "N-Log（僅 HDMI 外接錄影機，10-bit）"
+  ],
+  "raw": "無內錄 RAW 影片；說明書未列 RAW 外接錄影",
+  "open_gate": false,
+  "lens_mount": "Nikon Z",
+  "media": [
+    "XQD／CFexpress Type B（單卡槽）"
+  ],
+  "timecode": "有（僅 MOV 檔；可選 Record run／Free run、遺漏格式；可隨 HDMI 輸出到 Atomos 錄影機）；機身無時間碼端子",
+  "sdi": "無",
+  "hdmi": "Type C（Mini）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264",
+      "bitrate_mbps": 144,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "畫質固定 High quality；單段最長 29 分 59 秒；影像範圍可選 FX 或 DX（DX 約 1.5 倍裁切）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264",
+      "bitrate_mbps": 144,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "畫質固定 High quality；單段最長 29 分 59 秒"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.264",
+      "bitrate_mbps": 144,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "畫質固定 High quality；影像範圍固定 FX"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264",
+      "bitrate_mbps": 56,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "High quality 56 Mbps；Normal 28 Mbps；影像範圍可選 FX 或 DX"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264",
+      "bitrate_mbps": 28,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "High quality 28 Mbps；Normal 14 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264",
+      "bitrate_mbps": 28,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "High quality 28 Mbps；Normal 14 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264",
+      "bitrate_mbps": 36,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "慢動作 30p ×4（以 120p 讀出），無聲音，單段最長 3 分鐘"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264",
+      "bitrate_mbps": 29,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "慢動作 24p ×5（以 120p 讀出），無聲音，單段最長 3 分鐘"
+    }
+  ],
+  "source_name": "Nikon Z7／Z6 線上說明書：i 按鈕（影片尺寸、格率與畫質）",
+  "source_url": "https://onlinemanual.nikonimglib.com/z7_z6/en/07_the_i_button_03.html",
+  "extra_sources": [
+    {
+      "source_name": "Nikon Z7／Z6 線上說明書：規格",
+      "source_url": "https://onlinemanual.nikonimglib.com/z7_z6/en/14_technical_notes_06.html"
+    },
+    {
+      "source_name": "Nikon Z7／Z6 線上說明書：連接 HDMI 裝置",
+      "source_url": "https://onlinemanual.nikonimglib.com/z7_z6/en/10_connections_04.html"
+    },
+    {
+      "source_name": "Nikon Z7／Z6 線上說明書：時間碼",
+      "source_url": "https://onlinemanual.nikonimglib.com/z7_z6/en/09_menu_guide_04_28.html"
+    }
+  ],
+  "last_verified": "2026-10-17",
+  "editor_notes": "說明書與 Z7 共用，位元率為「最大位元率」，1080 120p／100p 的位元率依表格儲存格合併判讀為 144 Mbps，請核對。說明書只寫 H.264/AVC，沒寫位元深度與色彩取樣，標 Unknown。N-Log 只能經 HDMI 以 10-bit 輸出到外接錄影機，不能存到機身記憶卡。說明書沒有 4K 60p。發表日、Base ISO、動態範圍說明書沒寫，標 Unknown。open_gate：說明書影片尺寸全是 16:9，故寫 false，請核對。"
+}
