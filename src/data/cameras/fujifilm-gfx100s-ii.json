@@ -1,0 +1,332 @@
+{
+  "slug": "fujifilm-gfx100s-ii",
+  "brand": "Fujifilm",
+  "model": "GFX100S II",
+  "aliases": [
+    "GFX100SII",
+    "GFX100S Mark II",
+    "GFX 100S II"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "max_resolution": "4096×2160（DCI 4K 17:9）",
+  "sensor": {
+    "format": "GFX 大片幅（Large Format）",
+    "width_mm": 43.8,
+    "height_mm": 32.9,
+    "resolution_mp": 102
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "F-Log",
+    "F-Log2",
+    "HLG"
+  ],
+  "raw": "不能內錄 RAW 影片；可經 HDMI 輸出 4K 12-bit RAW 到 Atomos／Blackmagic Design 外接錄影機。可內錄 Apple ProRes 422 HQ／422／LT（僅限 USB 外接 SSD）",
+  "open_gate": "Unknown",
+  "lens_mount": "Fujifilm G",
+  "media": [
+    "SD（UHS-II）×2",
+    "USB 外接 SSD"
+  ],
+  "timecode": "有時間碼設定（顯示、起始時間、遺漏格式、HDMI 時間碼輸出、時間碼同步）；規格表未列時間碼端子",
+  "sdi": "無",
+  "hdmi": "Micro（Type D）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1877,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "DCI 4K 17:9。位元率不能選，為原廠標示 59.94p 的值。ProRes 只能錄到 SSD。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。原廠表把 ProRes 位元率標在 59.94p，但此機 4K 格率為 24／25／30p，請核對。"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1254,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "DCI 4K 17:9。位元率不能選，為原廠標示 59.94p 的值。ProRes 只能錄到 SSD。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。原廠表把 ProRes 位元率標在 59.94p，但此機 4K 格率為 24／25／30p，請核對。"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": 870,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "DCI 4K 17:9。位元率不能選，為原廠標示 59.94p 的值。ProRes 只能錄到 SSD。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。原廠表把 ProRes 位元率標在 59.94p，但此機 4K 格率為 24／25／30p，請核對。"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "DCI 4K 17:9。可選 720／360 Mbps（4:2:2 與 4:2:0 皆有）。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "DCI 4K 17:9。可選 720／360／200／100／50 Mbps（4:2:2 與 4:2:0 皆有）。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "DCI 4K 17:9。只有 360 Mbps。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "DCI 4K 17:9。可選 360／200／100／50 Mbps（MOV 或 MP4）。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1877,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 16:9。位元率不能選，為原廠標示 59.94p 的值。ProRes 只能錄到 SSD。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。原廠表把 ProRes 位元率標在 59.94p，但此機 4K 格率為 24／25／30p，請核對。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1254,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 16:9。位元率不能選，為原廠標示 59.94p 的值。ProRes 只能錄到 SSD。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。原廠表把 ProRes 位元率標在 59.94p，但此機 4K 格率為 24／25／30p，請核對。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": 870,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 16:9。位元率不能選，為原廠標示 59.94p 的值。ProRes 只能錄到 SSD。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。原廠表把 ProRes 位元率標在 59.94p，但此機 4K 格率為 24／25／30p，請核對。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "4K 16:9。可選 720／360 Mbps（4:2:2 與 4:2:0 皆有）。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "4K 16:9。可選 720／360／200／100／50 Mbps（4:2:2 與 4:2:0 皆有）。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 16:9。只有 360 Mbps。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 16:9。可選 360／200／100／50 Mbps（MOV 或 MP4）。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 469,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Full HD 17:9。位元率不能選，為原廠標示 FHD 16:9 59.94p 的值。ProRes 只能錄到 SSD。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 314,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Full HD 17:9。位元率不能選，為原廠標示 FHD 16:9 59.94p 的值。ProRes 只能錄到 SSD。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": 218,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Full HD 17:9。位元率不能選，為原廠標示 FHD 16:9 59.94p 的值。ProRes 只能錄到 SSD。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "Full HD 17:9。可選 720／360 Mbps（4:2:2 與 4:2:0 皆有）。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "Full HD 17:9。可選 720／360／200／100／50 Mbps（4:2:2 與 4:2:0 皆有）。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Full HD 17:9。只有 360 Mbps。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Full HD 17:9。可選 360／200／100／50 Mbps（MOV 或 MP4）。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 469,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Full HD 16:9。位元率不能選，為原廠標示 FHD 16:9 59.94p 的值。ProRes 只能錄到 SSD。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 314,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Full HD 16:9。位元率不能選，為原廠標示 FHD 16:9 59.94p 的值。ProRes 只能錄到 SSD。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": 218,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Full HD 16:9。位元率不能選，為原廠標示 FHD 16:9 59.94p 的值。ProRes 只能錄到 SSD。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "Full HD 16:9。可選 720／360 Mbps（4:2:2 與 4:2:0 皆有）。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "Full HD 16:9。可選 720／360／200／100／50 Mbps（4:2:2 與 4:2:0 皆有）。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Full HD 16:9。只有 360 Mbps。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Full HD 16:9。可選 360／200／100／50 Mbps（MOV 或 MP4）。原廠裁切倍率：DIS 關閉 1.0x；開啟數位防手震（DIS）時 H.265／H.264 為 1.1x。"
+    }
+  ],
+  "source_name": "Fujifilm 官網：GFX100S II 規格",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/cameras/gfx100s-ii/specifications/",
+  "extra_sources": [
+    {
+      "source_name": "Fujifilm GFX100S II 使用說明書：規格",
+      "source_url": "https://fujifilm-dsc.com/en/manual/gfx100s-ii/technical_notes/spec/"
+    },
+    {
+      "source_name": "Fujifilm GFX100S II 使用說明書（PDF）",
+      "source_url": "https://fujifilm-dsc.com/en/manual/gfx100s-ii/gfx100s-ii_manual_en_s_f.pdf"
+    }
+  ],
+  "last_verified": "2026-10-17",
+  "editor_notes": "錄影模式表來自官網 Movie Specification。4K 格率（24／25／30p）與 Full HD（最高 60p）取自官網 Movie Compression 表；ProRes 位元率原廠標在 59.94p / FHD 59.94p，不能選；4K 列的 ProRes 數字與此機 4K 最高 30p 不一致，請核對。此機官網未列高速錄影。官網寫 ProRes 只能錄到 SSD，記憶卡為兩個 SD 卡槽。Open Gate、發表日、Base ISO（影片標準感度 ISO 100–12800）、動態範圍宣稱值原廠未寫，記 Unknown。"
+}

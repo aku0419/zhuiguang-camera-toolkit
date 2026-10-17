@@ -1,0 +1,170 @@
+{
+  "slug": "fujifilm-x-t30-ii",
+  "brand": "Fujifilm",
+  "model": "X-T30 II",
+  "aliases": [
+    "XT30II",
+    "X-T30 II",
+    "X-T30II",
+    "XT30 II"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "max_resolution": "6240×4160（26.1MP 照片）；影片最高 DCI 4K 4096×2160",
+  "sensor": {
+    "format": "APS-C",
+    "width_mm": 23.5,
+    "height_mm": 15.6,
+    "resolution_mp": 26.1
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "F-Log"
+  ],
+  "raw": "不能內錄 RAW 影片；可經 HDMI 輸出 4:2:2 10-bit 影像到外接錄影機（說明書未列 RAW 影片輸出）",
+  "open_gate": false,
+  "lens_mount": "Fujifilm X",
+  "media": [
+    "SD（UHS-I）"
+  ],
+  "timecode": "有時間碼設定（含 HDMI 時間碼輸出）；無時間碼端子",
+  "sdi": "無",
+  "hdmi": "Micro（Type D）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100 Mbps；MOV 或 MP4；HDMI 輸出 4:2:2 10-bit；4K 最高 29.97p"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100 Mbps；MOV 或 MP4；HDMI 輸出 4:2:2 10-bit；4K 最高 29.97p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100 Mbps；MOV 或 MP4；HDMI 輸出 4:2:2 10-bit；4K 最高 29.97p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100 Mbps；MOV 或 MP4；HDMI 輸出 4:2:2 10-bit；4K 最高 29.97p"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100 Mbps；MOV 或 MP4；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100 Mbps；MOV 或 MP4；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100 Mbps；MOV 或 MP4；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100 Mbps；MOV 或 MP4；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100 Mbps；MOV 或 MP4；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100 Mbps；MOV 或 MP4；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.264 Long GOP（高速錄影）",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 高速錄影（無聲音）；240p／200p 約 3 分鐘、120p／100p 約 6 分鐘；200 Mbps 為錄影當下"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "H.264 Long GOP（高速錄影）",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 高速錄影（無聲音）；240p／200p 約 3 分鐘、120p／100p 約 6 分鐘；200 Mbps 為錄影當下"
+    }
+  ],
+  "source_name": "Fujifilm 官網：X-T30 II 產品與規格",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/cameras/x-t30-ii/",
+  "extra_sources": [
+    {
+      "source_name": "Fujifilm X-T30 II 使用說明書（PDF）",
+      "source_url": "https://fujifilm-dsc.com/en/manual/x-t30-2/x-t30-2_manual_en_s_f.pdf"
+    },
+    {
+      "source_name": "Fujifilm X-T30 II 使用說明書",
+      "source_url": "https://fujifilm-dsc.com/en/manual/x-t30-2/"
+    }
+  ],
+  "last_verified": "2026-10-17",
+  "editor_notes": "說明書網址代號為 x-t30-2（不是 x-t30-ii）。X-T30 II 的 fujifilm-x.com 規格頁會轉址到產品頁（標題為 X-T30 II，內容一致）。官網只列 Long GOP，內錄 4:2:0 8-bit（說明書：SD 卡 4:2:0 8-bit，HDMI 輸出 4:2:2 10-bit）。官網寫 DCI 4K／4K 最高 29.97p，Full HD 最高 59.94p，高速 240／200／120／100p。各格率是否裁切（4K 一般會有裁切）原廠資料沒寫，crop 一律 Unknown，請核對。說明書另有「固定電影裁切 1.29×」選項。發表日 2021 為負責人提供資訊，原廠頁未列（請核對）；Base ISO、動態範圍宣稱值未列，寫 Unknown。F-Log ISO 640–12800（說明書）。"
+}

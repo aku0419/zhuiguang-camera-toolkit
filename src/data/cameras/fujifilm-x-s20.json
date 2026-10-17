@@ -1,0 +1,898 @@
+{
+  "slug": "fujifilm-x-s20",
+  "brand": "Fujifilm",
+  "model": "X-S20",
+  "aliases": [
+    "XS20",
+    "X-S20"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "max_resolution": "6240×4160（26.1MP 照片）；影片最高 6240×4160（6.2K 3:2）",
+  "sensor": {
+    "format": "APS-C",
+    "width_mm": 23.5,
+    "height_mm": 15.6,
+    "resolution_mp": 26.1
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "F-Log",
+    "F-Log2",
+    "HLG"
+  ],
+  "raw": "不能內錄 RAW 影片；可經 HDMI 輸出 6.2K（3:2，29.97p 以下）與 5.2K（16:9，最高 59.94p）RAW 到 Atomos／Blackmagic Design 外接錄影機",
+  "open_gate": true,
+  "lens_mount": "Fujifilm X",
+  "media": [
+    "SD（UHS-II，Video Speed Class V90）"
+  ],
+  "timecode": "有時間碼設定（含 HDMI 時間碼輸出）；無時間碼端子",
+  "sdi": "無",
+  "hdmi": "Micro（Type D）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "6240x4160",
+      "max_fps": 24,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "4:2:2 與 4:2:0 皆可選；6.2K 3:2（取全感光元件寬度）；開啟數位防手震（DIS）時無法使用"
+    },
+    {
+      "resolution": "6240x4160",
+      "max_fps": 24,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "可選 360／200／100／50 Mbps；4:2:2 與 4:2:0 皆可選；6.2K 3:2（取全感光元件寬度）；開啟數位防手震（DIS）時無法使用"
+    },
+    {
+      "resolution": "6240x4160",
+      "max_fps": 24,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "6.2K 3:2（取全感光元件寬度）；開啟數位防手震（DIS）時無法使用；6.2K 3:2（取全感光元件寬度）；開啟數位防手震（DIS）時無法使用"
+    },
+    {
+      "resolution": "6240x4160",
+      "max_fps": 24,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV 或 MP4；可選 360／200／100／50 Mbps；6.2K 3:2（取全感光元件寬度）；開啟數位防手震（DIS）時無法使用"
+    },
+    {
+      "resolution": "6240x4160",
+      "max_fps": 30,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "4:2:2 與 4:2:0 皆可選；6.2K 3:2（取全感光元件寬度）；開啟數位防手震（DIS）時無法使用"
+    },
+    {
+      "resolution": "6240x4160",
+      "max_fps": 30,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "可選 360／200／100／50 Mbps；4:2:2 與 4:2:0 皆可選；6.2K 3:2（取全感光元件寬度）；開啟數位防手震（DIS）時無法使用"
+    },
+    {
+      "resolution": "6240x4160",
+      "max_fps": 30,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "6.2K 3:2（取全感光元件寬度）；開啟數位防手震（DIS）時無法使用；6.2K 3:2（取全感光元件寬度）；開啟數位防手震（DIS）時無法使用"
+    },
+    {
+      "resolution": "6240x4160",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV 或 MP4；可選 360／200／100／50 Mbps；6.2K 3:2（取全感光元件寬度）；開啟數位防手震（DIS）時無法使用"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "4:2:2 與 4:2:0 皆可選；關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "可選 360／200／100／50 Mbps；4:2:2 與 4:2:0 皆可選；關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×；關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "MOV 或 MP4；可選 360／200／100／50 Mbps；關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "4:2:2 與 4:2:0 皆可選；關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "可選 360／200／100／50 Mbps；4:2:2 與 4:2:0 皆可選；關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×；關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "MOV 或 MP4；可選 360／200／100／50 Mbps；關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "4:2:2 與 4:2:0 皆可選；關閉 DIS 時裁切 1.18×；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "可選 360／200／100／50 Mbps；4:2:2 與 4:2:0 皆可選；關閉 DIS 時裁切 1.18×；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "關閉 DIS 時裁切 1.18×；開啟 DIS 時 1.1×；關閉 DIS 時裁切 1.18×；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "MOV 或 MP4；可選 360／200／100／50 Mbps；關閉 DIS 時裁切 1.18×；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "4:2:2 與 4:2:0 皆可選；關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "可選 360／200／100／50 Mbps；4:2:2 與 4:2:0 皆可選；關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×；關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "MOV 或 MP4；可選 360／200／100／50 Mbps；關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "4:2:2 與 4:2:0 皆可選；關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "可選 360／200／100／50 Mbps；4:2:2 與 4:2:0 皆可選；關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×；關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "MOV 或 MP4；可選 360／200／100／50 Mbps；關閉 DIS 時裁切 1.18×（原廠表格 H.265 與 H.264 All-Intra 列未分格率，請核對）；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "4:2:2 與 4:2:0 皆可選；關閉 DIS 時裁切 1.18×；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "可選 360／200／100／50 Mbps；4:2:2 與 4:2:0 皆可選；關閉 DIS 時裁切 1.18×；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "關閉 DIS 時裁切 1.18×；開啟 DIS 時 1.1×；關閉 DIS 時裁切 1.18×；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.18,
+      "notes": "MOV 或 MP4；可選 360／200／100／50 Mbps；關閉 DIS 時裁切 1.18×；開啟 DIS 時 1.1×"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "4:2:2 與 4:2:0 皆可選；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "可選 360／200／100／50 Mbps；4:2:2 與 4:2:0 皆可選；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "開啟數位防手震（DIS）時裁切 1.1×；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV 或 MP4；可選 360／200／100／50 Mbps；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "4:2:2 與 4:2:0 皆可選；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "可選 360／200／100／50 Mbps；4:2:2 與 4:2:0 皆可選；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "開啟數位防手震（DIS）時裁切 1.1×；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV 或 MP4；可選 360／200／100／50 Mbps；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "4:2:2 與 4:2:0 皆可選；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "可選 360／200／100／50 Mbps；4:2:2 與 4:2:0 皆可選；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "開啟數位防手震（DIS）時裁切 1.1×；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV 或 MP4；可選 360／200／100／50 Mbps；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "長時間錄影（Long play）模式；裁切 1.29×；DIS 無法使用"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "長時間錄影（Long play）模式；裁切 1.29×；可選 360／200／100／50 Mbps"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "長時間錄影（Long play）模式；裁切 1.29×；DIS 無法使用"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "長時間錄影（Long play）模式；裁切 1.29×；可選 360／200／100／50 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "4:2:2 與 4:2:0 皆可選；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "可選 360／200／100／50 Mbps；4:2:2 與 4:2:0 皆可選；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "開啟數位防手震（DIS）時裁切 1.1×；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV 或 MP4；可選 360／200／100／50 Mbps；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "4:2:2 與 4:2:0 皆可選；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "可選 360／200／100／50 Mbps；4:2:2 與 4:2:0 皆可選；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "開啟數位防手震（DIS）時裁切 1.1×；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV 或 MP4；可選 360／200／100／50 Mbps；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "4:2:2 與 4:2:0 皆可選；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "none",
+      "notes": "可選 360／200／100／50 Mbps；4:2:2 與 4:2:0 皆可選；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "開啟數位防手震（DIS）時裁切 1.1×；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV 或 MP4；可選 360／200／100／50 Mbps；開啟數位防手震（DIS）時裁切 1.1×"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "長時間錄影（Long play）模式；裁切 1.29×；DIS 無法使用"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "長時間錄影（Long play）模式；裁切 1.29×；可選 360／200／100／50 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "長時間錄影（Long play）模式；裁切 1.29×；DIS 無法使用"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "長時間錄影（Long play）模式；裁切 1.29×；可選 360／200／100／50 Mbps"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 120,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "高速錄影（無聲音）；原廠標示裁切 1.29×；位元率為錄影當下；100p／200p 為 PAL 對應格率"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 120,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "高速錄影（無聲音）；原廠標示裁切 1.29×；位元率為錄影當下；100p／200p 為 PAL 對應格率；可選 360 或 200 Mbps"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 120,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "高速錄影（無聲音）；原廠標示裁切 1.29×；位元率為錄影當下；100p／200p 為 PAL 對應格率"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 120,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "高速錄影（無聲音）；原廠標示裁切 1.29×；位元率為錄影當下；100p／200p 為 PAL 對應格率；可選 360 或 200 Mbps"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 240,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "高速錄影（無聲音）；原廠標示裁切 1.29×；位元率為錄影當下；100p／200p 為 PAL 對應格率"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 240,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "高速錄影（無聲音）；原廠標示裁切 1.29×；位元率為錄影當下；100p／200p 為 PAL 對應格率；可選 360 或 200 Mbps"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 240,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "高速錄影（無聲音）；原廠標示裁切 1.29×；位元率為錄影當下；100p／200p 為 PAL 對應格率"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 240,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "高速錄影（無聲音）；原廠標示裁切 1.29×；位元率為錄影當下；100p／200p 為 PAL 對應格率；可選 360 或 200 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "高速錄影（無聲音）；原廠標示裁切 1.29×；位元率為錄影當下；100p／200p 為 PAL 對應格率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "高速錄影（無聲音）；原廠標示裁切 1.29×；位元率為錄影當下；100p／200p 為 PAL 對應格率；可選 360 或 200 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "高速錄影（無聲音）；原廠標示裁切 1.29×；位元率為錄影當下；100p／200p 為 PAL 對應格率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "高速錄影（無聲音）；原廠標示裁切 1.29×；位元率為錄影當下；100p／200p 為 PAL 對應格率；可選 360 或 200 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "高速錄影（無聲音）；原廠標示裁切 1.29×；位元率為錄影當下；100p／200p 為 PAL 對應格率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2／4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "高速錄影（無聲音）；原廠標示裁切 1.29×；位元率為錄影當下；100p／200p 為 PAL 對應格率；可選 360 或 200 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "高速錄影（無聲音）；原廠標示裁切 1.29×；位元率為錄影當下；100p／200p 為 PAL 對應格率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.29,
+      "notes": "高速錄影（無聲音）；原廠標示裁切 1.29×；位元率為錄影當下；100p／200p 為 PAL 對應格率；可選 360 或 200 Mbps"
+    }
+  ],
+  "source_name": "Fujifilm 官網：X-S20 規格",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/cameras/x-s20/specifications/",
+  "extra_sources": [
+    {
+      "source_name": "Fujifilm X-S20 使用說明書：規格",
+      "source_url": "https://fujifilm-dsc.com/en/manual/x-s20/technical_notes/spec/"
+    },
+    {
+      "source_name": "Fujifilm X-S20 使用說明書（PDF）",
+      "source_url": "https://fujifilm-dsc.com/en/manual/x-s20/x-s20_manual_en_s_f.pdf"
+    }
+  ],
+  "last_verified": "2026-10-17",
+  "editor_notes": "位元率、位元深度、色彩取樣與裁切倍率來自 Fujifilm 官網 Movie Specification 表。H.265 的 4:2:2／4:2:0 與 Long GOP 的 360／200／100／50 Mbps 為選項，本檔以最高值記錄，實際位元率隨被攝物變動。裁切倍率取「關閉 DIS」欄（欄位順序為 DIS 開／DIS 關，請核對）。4K／DCI 4K 的 H.265 與 H.264 All-Intra 列原廠只寫 1.18×（未分格率），但 H.264 Long GOP 列寫 60p／50p 為 1.18×、30p 以下為 1.0×，兩者互相矛盾，24／30p 是否裁切請負責人核對。6.2K 3:2 為 6240×4160，與感光元件像素相同，故 open_gate 寫 true、無裁切。發表日、Base ISO、動態範圍宣稱值原廠資料未列，寫 Unknown。F-Log ISO 640 起、F-Log2 ISO 1250 起、HLG ISO 1000 起（說明書）。360 Mbps 需 V60 以上 SD 卡。"
+}

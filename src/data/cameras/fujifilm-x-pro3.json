@@ -1,0 +1,93 @@
+{
+  "brand": "Fujifilm",
+  "type": "無反光鏡相機",
+  "last_verified": "2026-10-17",
+  "open_gate": false,
+  "lens_mount": "Fujifilm X",
+  "slug": "fujifilm-x-pro3",
+  "model": "X-Pro3",
+  "aliases": [
+    "XPro3",
+    "X-Pro3"
+  ],
+  "announced": "Unknown",
+  "sensor": {
+    "format": "APS-C",
+    "width_mm": 23.5,
+    "height_mm": 15.6,
+    "resolution_mp": 26.1
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "F-Log"
+  ],
+  "raw": "機內不能錄 RAW 影片；無 HDMI 輸出",
+  "media": [
+    "SD 雙卡槽（皆 UHS-II）"
+  ],
+  "timecode": "有時間碼設定（說明書目錄列有「時間碼設定」）；無時間碼端子",
+  "sdi": "無",
+  "hdmi": "規格表未列 HDMI 端子（數位端子僅 USB Type-C）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": "Unknown",
+      "codec": "H.264（MOV／MP4）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "4K 16:9；可選 200／100／50 Mbps（各畫質可選的位元率與格率不同，說明書未列對照）。說明書只列出可選格率 24／25／30／50／60p（含 23.98／29.97／59.94），沒有列出各畫質可用的格率。說明書只寫「4K」，像素數為依慣例填入，原廠未明列"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": "Unknown",
+      "codec": "H.264（MOV／MP4）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9；可選 200／100／50 Mbps（各畫質可選的位元率與格率不同，說明書未列對照）。說明書只列出可選格率 24／25／30／50／60p（含 23.98／29.97／59.94），沒有列出各畫質可用的格率。說明書只寫「4K」，像素數為依慣例填入，原廠未明列"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": "Unknown",
+      "codec": "H.264（MOV／MP4）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 16:9；可選 200／100／50 Mbps（各畫質可選的位元率與格率不同，說明書未列對照）。說明書只列出可選格率 24／25／30／50／60p（含 23.98／29.97／59.94），沒有列出各畫質可用的格率。解析度為依慣例填入，原廠未明列"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": "Unknown",
+      "codec": "H.264（MOV／MP4）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 17:9；可選 200／100／50 Mbps（各畫質可選的位元率與格率不同，說明書未列對照）。說明書只列出可選格率 24／25／30／50／60p（含 23.98／29.97／59.94），沒有列出各畫質可用的格率。解析度為依慣例填入，原廠未明列"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.264 高速錄影（無聲音）",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 高速錄影（HIGH SPEED REC），可選 120／100p，播放速率另選；原廠註明以約 200 Mbps 為目標壓縮；最長約 6 分鐘"
+    }
+  ],
+  "editor_notes": "1) 說明書的錄影模式沒有「畫質×格率×位元率」對照表，只列選項：格率 24／25／30／50／60p、位元率 200／100／50 Mbps，所以各列最高格率與位元率寫 Unknown，請對照原廠官網或實機確認。2) 像素數為依慣例填入。3) 說明書的規格頁寫機內 8-bit 4:2:0，且沒有列 HDMI 端子，hdmi 欄寫「規格表未列」，請核對機身。4) 高速錄影 Full HD 最高 120p（規格表：120P、100P）。5) 固定錄影裁切倍率說明書：Pro3 規格段落未查到數字，裁切寫 Unknown。6) 時間碼細節（時間碼設定在 p.163）未逐項讀取。",
+  "source_name": "Fujifilm X-Pro3 使用說明書：規格",
+  "source_url": "https://fujifilm-dsc.com/en/manual/x-pro3/technical_notes/spec/index.html",
+  "extra_sources": [
+    {
+      "source_name": "Fujifilm X-Pro3 使用說明書（PDF）",
+      "source_url": "https://fujifilm-dsc.com/en/manual/x-pro3/x-pro3_omw_en_s_f.pdf"
+    }
+  ]
+}

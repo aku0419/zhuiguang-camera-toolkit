@@ -1,0 +1,754 @@
+{
+  "slug": "fujifilm-x-h2",
+  "brand": "Fujifilm",
+  "model": "X-H2",
+  "aliases": [
+    "FUJIFILM X-H2",
+    "XH2",
+    "FF210003"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "APS-C",
+    "width_mm": 23.5,
+    "height_mm": 15.7,
+    "resolution_mp": 40.2
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "F-Log",
+    "F-Log2",
+    "F-Log2 C",
+    "HLG"
+  ],
+  "raw": "機內不能錄 RAW 影片；可經 HDMI 輸出 8K（7680×4320）30p 以下 RAW 到 Atomos／Blackmagic Design 外接錄影機（RAW 不會存到機身記憶卡）。機內可錄 Apple ProRes 422 HQ／422／LT（只能存 CFexpress Type B 卡）",
+  "open_gate": false,
+  "lens_mount": "Fujifilm X",
+  "media": [
+    "CFexpress Type B（記憶卡槽）",
+    "SD（UHS-II）"
+  ],
+  "timecode": "沒有時間碼端子；機內有時間碼設定（顯示、起始時間、REC RUN／FREE RUN、遺漏格式），可由 HDMI 輸出時間碼",
+  "sdi": "無",
+  "hdmi": "Type A（標準尺寸）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "7680x4320",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 3520,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "8K 16:9；24／25／30p；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 2352,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "8K 16:9；24／25／30p；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": 1632,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "8K 16:9；24／25／30p；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 30,
+      "codec": "H.265（HEVC）All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "H.265 10-bit；4:2:2 或 4:2:0 可選（說明書以 4:2:2 MOV 為準）；可選 720／360 Mbps；8K 16:9；24／25／30p；沒有 H.264"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 30,
+      "codec": "H.265（HEVC）Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 720／360／200／100／50 Mbps；8K 16:9；24／25／30p；沒有 H.264"
+    },
+    {
+      "resolution": "6240x3510",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 2324,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "6.2K 16:9；24／25／30p；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "6240x3510",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1553,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "6.2K 16:9；24／25／30p；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "6240x3510",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": 1077,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "6.2K 16:9；24／25／30p；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "6240x3510",
+      "max_fps": 30,
+      "codec": "H.265（HEVC）All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "H.265 10-bit；4:2:2 或 4:2:0 可選（說明書以 4:2:2 MOV 為準）；可選 720／360 Mbps；6.2K 16:9；24／25／30p；沒有 H.264"
+    },
+    {
+      "resolution": "6240x3510",
+      "max_fps": 30,
+      "codec": "H.265（HEVC）Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 720／360／200／100／50 Mbps；6.2K 16:9；24／25／30p；沒有 H.264"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 939,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "DCI 4K HQ 17:9；24／25／30p；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 627,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "DCI 4K HQ 17:9；24／25／30p；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": 435,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "DCI 4K HQ 17:9；24／25／30p；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.265（HEVC）All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "H.265 10-bit；4:2:2 或 4:2:0 可選（說明書以 4:2:2 MOV 為準）；可選 720／360 Mbps；DCI 4K HQ 17:9；24／25／30p"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.265（HEVC）Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 720／360／200／100／50 Mbps；DCI 4K HQ 17:9；24／25／30p"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "只有 360 Mbps；DCI 4K HQ 17:9；24／25／30p"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "可選 360／200／100／50 Mbps；MOV 或 MP4；DCI 4K HQ 17:9；24／25／30p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K HQ 16:9；ProRes 位元率原廠只標 DCI 4K 的數值（939／627／435 Mbps），UHD 未標；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K HQ 16:9；ProRes 位元率原廠只標 DCI 4K 的數值（939／627／435 Mbps），UHD 未標；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K HQ 16:9；ProRes 位元率原廠只標 DCI 4K 的數值（939／627／435 Mbps），UHD 未標；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265（HEVC）All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "H.265 10-bit；4:2:2 或 4:2:0 可選（說明書以 4:2:2 MOV 為準）；可選 720／360 Mbps；4K HQ 16:9；24／25／30p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265（HEVC）Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 720／360／200／100／50 Mbps；4K HQ 16:9；24／25／30p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "只有 360 Mbps；4K HQ 16:9；24／25／30p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "可選 360／200／100／50 Mbps；MOV 或 MP4；4K HQ 16:9；24／25／30p"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1877,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "DCI 4K 17:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1254,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "DCI 4K 17:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": 870,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "DCI 4K 17:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.265（HEVC）All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "H.265 10-bit；4:2:2 或 4:2:0 可選（說明書以 4:2:2 MOV 為準）；可選 720／360 Mbps；DCI 4K 17:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.265（HEVC）Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "可選 720／360／200／100／50 Mbps；DCI 4K 17:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "只有 360 Mbps；DCI 4K 17:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "可選 360／200／100／50 Mbps；MOV 或 MP4；DCI 4K 17:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "4K 16:9；50／60p 裁切 1.14×；ProRes 位元率原廠只標 DCI 4K 的數值（1877／1254／870 Mbps），UHD 未標；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "4K 16:9；50／60p 裁切 1.14×；ProRes 位元率原廠只標 DCI 4K 的數值（1877／1254／870 Mbps），UHD 未標；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "4K 16:9；50／60p 裁切 1.14×；ProRes 位元率原廠只標 DCI 4K 的數值（1877／1254／870 Mbps），UHD 未標；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265（HEVC）All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "H.265 10-bit；4:2:2 或 4:2:0 可選（說明書以 4:2:2 MOV 為準）；可選 720／360 Mbps；4K 16:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265（HEVC）Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "可選 720／360／200／100／50 Mbps；4K 16:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "只有 360 Mbps；4K 16:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "可選 360／200／100／50 Mbps；MOV 或 MP4；4K 16:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 440,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "Full HD 16:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 294,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "Full HD 16:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": 204,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "Full HD 16:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265（HEVC）All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "H.265 10-bit；4:2:2 或 4:2:0 可選（說明書以 4:2:2 MOV 為準）；可選 720／360 Mbps；Full HD 16:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265（HEVC）Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "可選 720／360／200／100／50 Mbps；Full HD 16:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "只有 360 Mbps；Full HD 16:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "可選 360／200／100／50 Mbps；MOV 或 MP4；Full HD 16:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "Full HD 17:9；ProRes 位元率原廠只標 FHD 16:9 的數值（440／294／204 Mbps），17:9 未標；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "Full HD 17:9；ProRes 位元率原廠只標 FHD 16:9 的數值（440／294／204 Mbps），17:9 未標；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "Full HD 17:9；ProRes 位元率原廠只標 FHD 16:9 的數值（440／294／204 Mbps），17:9 未標；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.265（HEVC）All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "H.265 10-bit；4:2:2 或 4:2:0 可選（說明書以 4:2:2 MOV 為準）；可選 720／360 Mbps；Full HD 17:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.265（HEVC）Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "可選 720／360／200／100／50 Mbps；Full HD 17:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "只有 360 Mbps；Full HD 17:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "可選 360／200／100／50 Mbps；MOV 或 MP4；Full HD 17:9；24～60p；50／60p 裁切 1.14×，30p 以下不裁切；開啟 DIS 再裁切 1.1×"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1760,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.23,
+      "notes": "Full HD 16:9 高速錄影（無聲音）；240／200／120／100p；裁切 1.23×；不能開 DIS；原廠標示值為 240p；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1176,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.23,
+      "notes": "Full HD 16:9 高速錄影（無聲音）；240／200／120／100p；裁切 1.23×；不能開 DIS；原廠標示值為 240p；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": 816,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.23,
+      "notes": "Full HD 16:9 高速錄影（無聲音）；240／200／120／100p；裁切 1.23×；不能開 DIS；原廠標示值為 240p；ProRes 位元率固定、不能選；只能錄到 CFexpress Type B 卡；原廠標示值為 29.97p 時的位元率，24／25p 較低"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "H.265（HEVC）All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.23,
+      "notes": "Full HD 16:9 高速錄影（無聲音）；240／200／120／100p；裁切 1.23×；不能開 DIS；可選 720／360 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "H.265（HEVC）Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.23,
+      "notes": "Full HD 16:9 高速錄影（無聲音）；240／200／120／100p；裁切 1.23×；不能開 DIS；可選 720／360／200 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.23,
+      "notes": "Full HD 16:9 高速錄影（無聲音）；240／200／120／100p；裁切 1.23×；不能開 DIS；只有 360 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.23,
+      "notes": "Full HD 16:9 高速錄影（無聲音）；240／200／120／100p；裁切 1.23×；不能開 DIS；可選 360／200 Mbps"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 240,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.23,
+      "notes": "Full HD 17:9 高速錄影（無聲音）；240／200／120／100p；裁切 1.23×；不能開 DIS；ProRes 位元率原廠只標 16:9（1760／1176／816 Mbps），17:9 未標"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 240,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.23,
+      "notes": "Full HD 17:9 高速錄影（無聲音）；240／200／120／100p；裁切 1.23×；不能開 DIS；ProRes 位元率原廠只標 16:9（1760／1176／816 Mbps），17:9 未標"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 240,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.23,
+      "notes": "Full HD 17:9 高速錄影（無聲音）；240／200／120／100p；裁切 1.23×；不能開 DIS；ProRes 位元率原廠只標 16:9（1760／1176／816 Mbps），17:9 未標"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 240,
+      "codec": "H.265（HEVC）All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.23,
+      "notes": "Full HD 17:9 高速錄影（無聲音）；240／200／120／100p；裁切 1.23×；不能開 DIS；可選 720／360 Mbps"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 240,
+      "codec": "H.265（HEVC）Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.23,
+      "notes": "Full HD 17:9 高速錄影（無聲音）；240／200／120／100p；裁切 1.23×；不能開 DIS；可選 720／360／200 Mbps"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 240,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.23,
+      "notes": "Full HD 17:9 高速錄影（無聲音）；240／200／120／100p；裁切 1.23×；不能開 DIS；只有 360 Mbps"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 240,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.23,
+      "notes": "Full HD 17:9 高速錄影（無聲音）；240／200／120／100p；裁切 1.23×；不能開 DIS；可選 360／200 Mbps"
+    }
+  ],
+  "source_name": "Fujifilm 官網：X-H2 規格",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/cameras/x-h2/specifications/",
+  "extra_sources": [
+    {
+      "source_name": "Fujifilm X-H2 使用說明書：規格",
+      "source_url": "https://fujifilm-dsc.com/en/manual/x-h2/technical_notes/spec/"
+    },
+    {
+      "source_name": "Fujifilm X-H2 使用說明書（PDF）",
+      "source_url": "https://fujifilm-dsc.com/en/manual/x-h2/x-h2_manual_en_s_f.pdf"
+    }
+  ],
+  "last_verified": "2026-10-17",
+  "editor_notes": "1. 位元率、位元深度、裁切倍率來自 Fujifilm 官網 Movie Specification 表（Media Rec 與 HDMI Output 兩張表）；檔案格式與色彩取樣來自線上說明書「MEDIA REC SETTING」與規格頁。\n2. 感光元件尺寸：說明書規格頁寫 23.5 × 15.7 mm，Fujifilm 官網規格頁寫 23.5 × 15.6 mm；此檔採說明書的 15.7，請核對。\n3. 裁切倍率取「DIS 關閉」欄；表上 DIS 開啟欄在 4K／FHD 50／60p 以下寫 1.1×，8K、6.2K、高速錄影寫「不可」。原廠表沒有明說 1.1× 是否與 1.14× 相乘，這裡只寫在 notes。\n4. ProRes 位元率原廠只標一個數值（8K=7680×4320 29.97p、6.2K、DCI 4K 29.97p、DCI 4K 59.94p、FHD 16:9 59.94p、FHD 16:9 240p）；UHD 3840×2160、FHD 17:9 沒標，寫 Unknown。\n5. H.265 的 4:2:2／4:2:0 可由檔案類型選擇，兩者位元率選項相同；表格上 H.265 一律標 10-bit，H.264 一律標 8-bit，此檔 H.265 列記 4:2:2、H.264 列記 4:2:0。\n6. 高速錄影表上列 240／200／120／100p 共用一個裁切倍率 1.23×，此檔以 240p 為最高格率合併成一列。\n7. 開放式 3:2 全畫面（Open Gate）錄影：模式表只有 16:9／17:9，沒有 3:2，所以 open_gate 寫 false。\n8. 原廠沒有公布發表日、Base ISO、動態範圍數值，皆 Unknown。說明書寫的靈敏度：影片標準 ISO 125–12800；F-Log 限 ISO 500–12800、F-Log2／F-Log2 C 限 ISO 1000–12800、HLG 限 ISO 800–12800。\n9. 不放入 recording_modes 的 8K 規格：說明書另寫 8K 30p 以下 RAW 外接輸出。"
+}

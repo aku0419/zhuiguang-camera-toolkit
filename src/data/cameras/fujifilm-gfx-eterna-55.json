@@ -20,15 +20,16 @@
   "log": [
     "F-Log",
     "F-Log2",
-    "F-Log2 C"
+    "F-Log2 C",
+    "HLG"
   ],
-  "raw": "不能內錄 RAW；可經 HDMI／SDI 輸出 RAW 到 Atomos／Blackmagic Design 外接錄影機",
-  "open_gate": true,
+  "raw": "不能內錄 RAW；可經 HDMI／SDI 輸出 RAW 到 Atomos／Blackmagic Design 外接錄影機（設定可選 ATOMOS RAW／Blackmagic RAW）。可內錄 Apple ProRes 422 HQ／422／LT（僅 CFexpress Type B 卡）",
+  "open_gate": "Unknown",
   "lens_mount": "Fujifilm G（另有 PL 轉接環）",
   "media": [
-    "CFexpress Type B",
-    "SD（UHS-I／UHS-II，V90）",
-    "SSD"
+    "CFexpress Type B（最大 2TB）",
+    "SD（UHS-I／UHS-II）",
+    "SSD（最大 2TB）"
   ],
   "timecode": "TC IN／TC OUT（BNC）；另有 Genlock 端子",
   "sdi": "12G-SDI OUT（最高 4K 59.94p）",
@@ -38,82 +39,782 @@
     {
       "resolution": "8192x4320",
       "max_fps": 24,
-      "codec": "H.265 10-bit 4:2:2（All Intra）",
+      "codec": "H.265（HEVC） All-Intra",
       "bitrate_mbps": 720,
       "bit_depth": 10,
       "chroma": "4:2:2",
-      "crop": "none",
-      "notes": "8K 17:9，最高 24p。H.265 可選 720／360／200／100／50 Mbps（All Intra 只有 720／360）"
+      "crop": "Unknown",
+      "notes": "8K 17:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "8K 17:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
     },
     {
       "resolution": "7680x4320",
-      "max_fps": 29.97,
-      "codec": "H.265 10-bit 4:2:2（Long GOP）",
-      "bitrate_mbps": 360,
+      "max_fps": 24,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
       "bit_depth": 10,
       "chroma": "4:2:2",
-      "crop": "none",
-      "notes": "8K 16:9。H.265 可選 720／360／200／100／50 Mbps（All Intra 只有 720／360）"
+      "crop": "Unknown",
+      "notes": "8K 16:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "8K 16:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "8K 16:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "8K 16:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
     },
     {
       "resolution": "8192x2968",
       "max_fps": 24,
-      "codec": "H.265 10-bit 4:2:2",
-      "bitrate_mbps": 360,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
       "bit_depth": 10,
       "chroma": "4:2:2",
-      "crop": "none",
-      "notes": "8K 2.76:1。H.265 可選 720／360／200／100／50 Mbps（All Intra 只有 720／360）"
+      "crop": "Unknown",
+      "notes": "8K 2.76:1。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "8192x2968",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "8K 2.76:1。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "6382x3590",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "6.3K 16:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "6382x3590",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "6.3K 16:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "6382x3590",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "6.3K 16:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "6382x3590",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "6.3K 16:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "5824x2436",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "5.8K 2.39:1。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "5824x2436",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "5.8K 2.39:1。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "5824x2436",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "5.8K 2.39:1。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "5824x2436",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "5.8K 2.39:1。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "5440x2868",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "5.4K 17:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "5440x2868",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "5.4K 17:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "5440x2868",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "5.4K 17:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "5440x2868",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "5.4K 17:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "4776x3184",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4.8K 3:2。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "4776x3184",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4.8K 3:2。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "4776x2688",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4.8K 16:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "4776x2688",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4.8K 16:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "4776x2688",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4.8K 16:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "4776x2688",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4.8K 16:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
     },
     {
       "resolution": "4664x3380",
       "max_fps": 24,
-      "codec": "H.265 10-bit 4:2:2",
-      "bitrate_mbps": 360,
-      "bit_depth": 10,
-      "chroma": "4:2:2",
-      "crop": "none",
-      "notes": "4.6K 1.38:1（適合變形鏡頭）。H.265 可選 720／360／200／100／50 Mbps（All Intra 只有 720／360）"
-    },
-    {
-      "resolution": "4096x2160",
-      "max_fps": 59.94,
-      "codec": "H.265 10-bit 4:2:2（All Intra）",
+      "codec": "H.265（HEVC） All-Intra",
       "bitrate_mbps": 720,
       "bit_depth": 10,
       "chroma": "4:2:2",
-      "crop": "none",
-      "notes": "DCI 4K。H.265 可選 720／360／200／100／50 Mbps（All Intra 只有 720／360）"
+      "crop": "Unknown",
+      "notes": "4.6K 1.38:1。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "4664x3380",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4.6K 1.38:1。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "4040x3380",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4K 1.195:1。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "4040x3380",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4K 1.195:1。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
     },
     {
       "resolution": "3840x2160",
-      "max_fps": 59.94,
-      "codec": "H.265 10-bit 4:2:2（Long GOP）",
-      "bitrate_mbps": 200,
+      "max_fps": 24,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
       "bit_depth": 10,
       "chroma": "4:2:2",
-      "crop": "none",
-      "notes": "4K 16:9。H.265 可選 720／360／200／100／50 Mbps（All Intra 只有 720／360）"
+      "crop": "Unknown",
+      "notes": "4K 16:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
     },
     {
       "resolution": "3840x2160",
-      "max_fps": 59.94,
-      "codec": "ProRes 422 HQ",
-      "bitrate_mbps": "Unknown",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
       "bit_depth": 10,
       "chroma": "4:2:2",
-      "crop": "none",
-      "notes": "原廠規格未列 ProRes 位元率"
+      "crop": "Unknown",
+      "notes": "4K 16:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4K 16:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4K 16:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4K 16:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4K 16:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4K 16:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4K 16:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "3840x2880",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4K 4:3。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "3840x2880",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4K 4:3。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "3840x2880",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4K 4:3。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "3840x2880",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4K 4:3。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "3840x2880",
+      "max_fps": 48,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4K 4:3。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "3840x2880",
+      "max_fps": 48,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4K 4:3。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 17:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 17:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 17:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 17:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 48,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 17:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 48,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 17:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 17:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 17:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 120,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 17:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 120,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 17:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
     },
     {
       "resolution": "1920x1080",
-      "max_fps": 119.88,
-      "codec": "H.265 10-bit 4:2:2",
-      "bitrate_mbps": 200,
+      "max_fps": 24,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
       "bit_depth": 10,
       "chroma": "4:2:2",
-      "crop": "none",
-      "notes": "Full HD 最高 119.8p。H.265 可選 720／360／200／100／50 Mbps（All Intra 只有 720／360）"
+      "crop": "Unknown",
+      "notes": "FHD 16:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 16:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 16:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 16:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 48,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 16:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 48,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 16:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 16:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 16:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.265（HEVC） All-Intra",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 16:9。可選 720／360 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.265（HEVC） Long GOP",
+      "bitrate_mbps": 720,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "FHD 16:9。可選 720／360／200／100／50 Mbps，此列取最高值。裁切倍率原廠未列。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "位元率由格式與格率自動決定、不可選，原廠未列數字（指向 Apple 網站）；僅能錄到 CFexpress Type B 卡。其他解析度的 ProRes 支援範圍原廠未逐一列出。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "位元率由格式與格率自動決定、不可選，原廠未列數字（指向 Apple 網站）；僅能錄到 CFexpress Type B 卡。其他解析度的 ProRes 支援範圍原廠未逐一列出。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "位元率由格式與格率自動決定、不可選，原廠未列數字（指向 Apple 網站）；僅能錄到 CFexpress Type B 卡。其他解析度的 ProRes 支援範圍原廠未逐一列出。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "位元率由格式與格率自動決定、不可選，原廠未列數字（指向 Apple 網站）；僅能錄到 CFexpress Type B 卡。其他解析度的 ProRes 支援範圍原廠未逐一列出。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "位元率由格式與格率自動決定、不可選，原廠未列數字（指向 Apple 網站）；僅能錄到 CFexpress Type B 卡。其他解析度的 ProRes 支援範圍原廠未逐一列出。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "位元率由格式與格率自動決定、不可選，原廠未列數字（指向 Apple 網站）；僅能錄到 CFexpress Type B 卡。其他解析度的 ProRes 支援範圍原廠未逐一列出。"
     }
   ],
   "source_name": "Fujifilm 官網：GFX ETERNA 55 規格",
@@ -128,6 +829,6 @@
       "source_url": "https://fujifilm-dsc.com/en/manual/gfx-eterna-55/gfx-eterna-55_manual_en_s_f.pdf"
     }
   ],
-  "last_verified": "2026-10-06",
-  "editor_notes": "官網規格：每種解析度的 H.265 位元率選項都是 720／360／200／100／50 Mbps（All Intra 只有 720／360），表中位元率為範例值。ISO 400–12800。內建電子可變 ND 0.6–2.1。ProRes 位元率與原生 ISO 官網未寫。"
+  "last_verified": "2026-10-17",
+  "editor_notes": "錄影模式來自 Fujifilm 官網規格與使用說明書：每個解析度列出可選格率，H.265 位元深度 10-bit、4:2:2；位元率可選 720／360／200／100／50 Mbps（All-Intra 只有 720／360），每列取最高值。格率以名義值記錄；原廠另列 22p、47.95／23.98／119.8 等，未重複列出，也未列 PAL 格率。原廠錄影格率表列出 FHD 最高 119.8p，其餘解析度最高 59.94p。各解析度的裁切倍率與是否為感光元件全幅，原廠未列，crop 與 open_gate 寫 Unknown，請負責人核對。8K 2.39:1 在說明書解像度選單有列，但官網格率表沒有，未收。ProRes 位元率原廠未列（指向 Apple 網站），只列 4K 16:9 的 24p／60p 代表；其他解析度的 ProRes 支援範圍原廠未逐一列出。ISO 400–12800（標準），100–320 與 25600 為延伸；原廠未標原生／Base ISO，故為 Unknown。內建電子可變 ND 0.6–2.1。發表日原廠資料未列，故為 Unknown。動態範圍 14+ stops 為官網規格頁寫法（F-Log2／F-Log2 C）。"
 }

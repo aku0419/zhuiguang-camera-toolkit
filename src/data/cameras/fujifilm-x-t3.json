@@ -1,0 +1,489 @@
+{
+  "slug": "fujifilm-x-t3",
+  "brand": "Fujifilm",
+  "model": "X-T3",
+  "aliases": [
+    "XT3",
+    "X-T3"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "max_resolution": "6240×4160（26.1MP 照片）；影片最高 DCI 4K 4096×2160",
+  "sensor": {
+    "format": "APS-C",
+    "width_mm": 23.5,
+    "height_mm": 15.6,
+    "resolution_mp": 26.1
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "F-Log"
+  ],
+  "raw": "不能內錄 RAW 影片；可經 HDMI 輸出 4:2:2 10-bit 影像到外接錄影機（說明書未列 RAW 影片輸出）",
+  "open_gate": false,
+  "lens_mount": "Fujifilm X",
+  "media": [
+    "SD（UHS-II）",
+    "SD（UHS-II）"
+  ],
+  "timecode": "有時間碼設定（含 HDMI 時間碼輸出）；無時間碼端子",
+  "sdi": "無",
+  "hdmi": "Micro（Type D）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit；400 Mbps 只限 29.97p 以下，需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 400／200／100 Mbps；400 Mbps 只限 29.97p 以下，需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 400,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit；400 Mbps 只限 29.97p 以下，需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 400,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 400／200／100 Mbps；400 Mbps 只限 29.97p 以下，需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit；400 Mbps 只限 29.97p 以下，需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 400／200／100 Mbps；400 Mbps 只限 29.97p 以下，需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 400,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit；400 Mbps 只限 29.97p 以下，需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 400,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 400／200／100 Mbps；400 Mbps 只限 29.97p 以下，需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100 Mbps；4K 60p 不支援 All-Intra"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit；400 Mbps 只限 29.97p 以下，需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 400／200／100 Mbps；400 Mbps 只限 29.97p 以下，需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 400,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit；400 Mbps 只限 29.97p 以下，需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 400,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 400／200／100 Mbps；400 Mbps 只限 29.97p 以下，需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit；400 Mbps 只限 29.97p 以下，需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 400／200／100 Mbps；400 Mbps 只限 29.97p 以下，需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 400,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit；400 Mbps 只限 29.97p 以下，需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 400,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 400／200／100 Mbps；400 Mbps 只限 29.97p 以下，需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100 Mbps；4K 60p 不支援 All-Intra"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100 Mbps；4K 60p 不支援 All-Intra"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100／50 Mbps"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100／50 Mbps"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100／50 Mbps"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100／50 Mbps"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100／50 Mbps"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100／50 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100／50 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100／50 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100／50 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100／50 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265 All-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100／50 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "內錄 4:2:0；HDMI 輸出 4:2:2 10-bit"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "可選 200／100／50 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.265／H.264 Long GOP（高速錄影）",
+      "bitrate_mbps": 200,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "Unknown",
+      "notes": "Full HD 高速錄影（無聲音），最長約 6 分鐘；另有 100p（PAL 對應）；原廠以 200 Mbps 為壓縮目標"
+    }
+  ],
+  "source_name": "Fujifilm 官網：X-T3 產品與規格",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/cameras/x-t3/",
+  "extra_sources": [
+    {
+      "source_name": "Fujifilm X-T3 使用說明書：規格",
+      "source_url": "https://fujifilm-dsc.com/en/manual/x-t3/technical_notes/spec/index.html"
+    },
+    {
+      "source_name": "Fujifilm X-T3 使用說明書（PDF）",
+      "source_url": "https://fujifilm-dsc.com/en/manual/x-t3/x-t3_omw_en_s_f.pdf"
+    }
+  ],
+  "last_verified": "2026-10-17",
+  "editor_notes": "X-T3 的 fujifilm-x.com 規格頁會轉址到產品頁（頁面標題為 X-T3，內容一致），故 source_url 用產品頁。位元率、格率來自官網規格與說明書規格表。官網只寫「H.265／H.264、All-Intra／Long GOP」，未逐一列出各組合的可用位元率；本檔 All-Intra 只在官網註明的條件（4K 29.97p 以下 400 Mbps、Full HD 200 Mbps）列出，Long GOP 取各解析度最高位元率，H.265 與 H.264 是否都能選全部位元率請核對。H.265 內錄 4:2:0 10-bit、H.264 內錄 4:2:0 8-bit，HDMI 輸出 4:2:2 10-bit（說明書）。4K 60p／50p 的裁切倍率及其他格率是否裁切，官網與說明書沒寫，crop 一律 Unknown，請核對。高速錄影在說明書的格式（H.264／H.265）、位元深度未寫，寫 Unknown。發表日 2018 為負責人提供資訊，原廠頁未列（請核對）；Base ISO、動態範圍宣稱值原廠資料未列，寫 Unknown。F-Log ISO 640–12800（說明書）。機身有兩個 SD 卡槽（UHS-II）。"
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "fujifilm-gfx50s-ii",
+  "brand": "Fujifilm",
+  "model": "GFX50S II",
+  "aliases": [
+    "GFX 50S II",
+    "GFX50SII"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "max_resolution": "1920×1080（Full HD）",
+  "sensor": {
+    "format": "GFX 大片幅（Large Format）",
+    "width_mm": 43.8,
+    "height_mm": 32.9,
+    "resolution_mp": 51.4
+  },
+  "base_iso": "Unknown",
+  "log": [],
+  "raw": "不能內錄 RAW 影片；HDMI 可輸出 4:2:2 10-bit Full HD",
+  "open_gate": "Unknown",
+  "lens_mount": "Fujifilm G",
+  "media": [
+    "SD（UHS-II）×2"
+  ],
+  "timecode": "有時間碼設定（顯示、起始時間、遞增方式、遺漏格式、HDMI 時間碼輸出）；規格表未列時間碼端子",
+  "sdi": "無",
+  "hdmi": "Micro（Type D）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "說明書只列 i1080 的 29.97／25／24／23.98P 四種格率；位元率說明書未寫；裁切說明書未寫（另有固定 1.1 倍裁切選項）。用 UHS 速度等級 1 以上的卡。"
+    }
+  ],
+  "source_name": "Fujifilm GFX50S II 使用說明書：規格",
+  "source_url": "https://fujifilm-dsc.com/en/manual/gfx50s-ii/technical_notes/spec/",
+  "extra_sources": [
+    {
+      "source_name": "Fujifilm GFX50S II 使用說明書（PDF）",
+      "source_url": "https://fujifilm-dsc.com/en/manual/gfx50s-ii/gfx50s2_manual_en_s_f.pdf"
+    }
+  ],
+  "last_verified": "2026-10-17",
+  "editor_notes": "此機官網已無規格頁，只用說明書。影片只有 Full HD H.264（SD 卡 4:2:0 8-bit；HDMI 輸出 4:2:2 10-bit），說明書未列 F-Log／HLG，log 欄留空。位元率、裁切、Open Gate、發表日、Base ISO、動態範圍宣稱值原廠未寫，記 Unknown。感光元件 43.8×32.9 mm、約 5140 萬像素。"
+}

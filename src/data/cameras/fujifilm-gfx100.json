@@ -1,0 +1,124 @@
+{
+  "slug": "fujifilm-gfx100",
+  "brand": "Fujifilm",
+  "model": "GFX100",
+  "aliases": [
+    "GFX 100"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "max_resolution": "4096×2160（DCI 4K 17:9）",
+  "sensor": {
+    "format": "GFX 大片幅（Large Format）",
+    "width_mm": 43.8,
+    "height_mm": 32.9,
+    "resolution_mp": 102
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "F-Log",
+    "HLG"
+  ],
+  "raw": "不能內錄 RAW 影片；可經 HDMI 輸出到外接錄影機（F-Log／HLG 錄影設定）",
+  "open_gate": "Unknown",
+  "lens_mount": "Fujifilm G",
+  "media": [
+    "SD（UHS-II）×2"
+  ],
+  "timecode": "有時間碼設定（TIME CODE SETTING）；規格表未列時間碼端子",
+  "sdi": "無",
+  "hdmi": "Micro（Type D）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": "Unknown",
+      "codec": "H.265（HEVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "4K 16:9（V）。說明書未列每種模式可用的格率與位元率組合，只寫整體：格率 24／25／30／50／60p、位元率 400／200／100／50 Mbps。機身另有固定 1.1 倍裁切選項，實際各模式裁切說明書未寫。"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": "Unknown",
+      "codec": "H.264",
+      "bitrate_mbps": 400,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "4K 16:9（V）。說明書未列每種模式可用的格率與位元率組合，只寫整體：格率 24／25／30／50／60p、位元率 400／200／100／50 Mbps。機身另有固定 1.1 倍裁切選項，實際各模式裁切說明書未寫。"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": "Unknown",
+      "codec": "H.265（HEVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9（d）。說明書未列每種模式可用的格率與位元率組合，只寫整體：格率 24／25／30／50／60p、位元率 400／200／100／50 Mbps。機身另有固定 1.1 倍裁切選項，實際各模式裁切說明書未寫。"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": "Unknown",
+      "codec": "H.264",
+      "bitrate_mbps": 400,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9（d）。說明書未列每種模式可用的格率與位元率組合，只寫整體：格率 24／25／30／50／60p、位元率 400／200／100／50 Mbps。機身另有固定 1.1 倍裁切選項，實際各模式裁切說明書未寫。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": "Unknown",
+      "codec": "H.265（HEVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 16:9（W）。說明書未列每種模式可用的格率與位元率組合，只寫整體：格率 24／25／30／50／60p、位元率 400／200／100／50 Mbps。機身另有固定 1.1 倍裁切選項，實際各模式裁切說明書未寫。"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": "Unknown",
+      "codec": "H.264",
+      "bitrate_mbps": 400,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 16:9（W）。說明書未列每種模式可用的格率與位元率組合，只寫整體：格率 24／25／30／50／60p、位元率 400／200／100／50 Mbps。機身另有固定 1.1 倍裁切選項，實際各模式裁切說明書未寫。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": "Unknown",
+      "codec": "H.265（HEVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 17:9（W）。說明書未列每種模式可用的格率與位元率組合，只寫整體：格率 24／25／30／50／60p、位元率 400／200／100／50 Mbps。機身另有固定 1.1 倍裁切選項，實際各模式裁切說明書未寫。"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": "Unknown",
+      "codec": "H.264",
+      "bitrate_mbps": 400,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 17:9（W）。說明書未列每種模式可用的格率與位元率組合，只寫整體：格率 24／25／30／50／60p、位元率 400／200／100／50 Mbps。機身另有固定 1.1 倍裁切選項，實際各模式裁切說明書未寫。"
+    }
+  ],
+  "source_name": "Fujifilm GFX100 使用說明書：規格",
+  "source_url": "https://fujifilm-dsc.com/en/manual/gfx100/technical_notes/spec/",
+  "extra_sources": [
+    {
+      "source_name": "Fujifilm GFX100 使用說明書（PDF）",
+      "source_url": "https://fujifilm-dsc.com/en/manual/gfx100/gfx100_omw_en_s_f.pdf"
+    }
+  ],
+  "last_verified": "2026-10-17",
+  "editor_notes": "此機官網已無規格頁，只用說明書（韌體 v4.0 另有說明書 gfx100_v40，內容未逐項比對，請核對韌體差異）。說明書寫：影片尺寸 4K 16:9／17:9 與 Full HD；格率 59.94／50／29.97／25／24／23.98P；位元率 400／200／100／50 Mbps；H.265 為 10-bit 4:2:0、H.264 為 8-bit 4:2:0（SD 卡），HDMI 4:2:2 10-bit。沒有各模式像素尺寸、格率與位元率對照、裁切倍率；像素尺寸依同系列 GFX100S II 官網命名對應，請核對。最大格率記 Unknown。F-Log 感度限 ISO 800–12800，HLG 限 ISO 1250–12800。電池為 NP-T125 ×2（機身內建直拍握把）。Open Gate、發表日、Base ISO、動態範圍宣稱值未寫，記 Unknown。"
+}

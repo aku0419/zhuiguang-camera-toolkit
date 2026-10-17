@@ -1,0 +1,93 @@
+{
+  "brand": "Fujifilm",
+  "type": "無反光鏡相機",
+  "last_verified": "2026-10-17",
+  "open_gate": false,
+  "lens_mount": "Fujifilm X",
+  "slug": "fujifilm-x-s10",
+  "model": "X-S10",
+  "aliases": [
+    "XS10",
+    "X-S10"
+  ],
+  "announced": "Unknown",
+  "sensor": {
+    "format": "APS-C",
+    "width_mm": 23.5,
+    "height_mm": 15.6,
+    "resolution_mp": 26.1
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "F-Log"
+  ],
+  "raw": "機內不能錄 RAW 影片；HDMI 輸出為 10-bit 4:2:2，機內記錄為 8-bit 4:2:0",
+  "media": [
+    "SD（UHS-I）"
+  ],
+  "timecode": "有時間碼設定（顯示、起始時間、REC RUN／FREE RUN、遺漏格式、HDMI 時間碼輸出）；無時間碼端子",
+  "sdi": "無",
+  "hdmi": "HDMI Micro（Type D）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": "Unknown",
+      "codec": "H.264（MOV／MP4）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "4K 16:9；可選 200／100／50 Mbps（各畫質可選的位元率與格率不同，說明書未列對照）。說明書只列出可選格率 24／25／30／50／60p（含 23.98／29.97／59.94），沒有列出各畫質可用的格率。說明書只寫「4K」，像素數為依慣例填入，原廠未明列"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": "Unknown",
+      "codec": "H.264（MOV／MP4）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9；可選 200／100／50 Mbps（各畫質可選的位元率與格率不同，說明書未列對照）。說明書只列出可選格率 24／25／30／50／60p（含 23.98／29.97／59.94），沒有列出各畫質可用的格率。說明書只寫「4K」，像素數為依慣例填入，原廠未明列"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": "Unknown",
+      "codec": "H.264（MOV／MP4）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 16:9；可選 200／100／50 Mbps（各畫質可選的位元率與格率不同，說明書未列對照）。說明書只列出可選格率 24／25／30／50／60p（含 23.98／29.97／59.94），沒有列出各畫質可用的格率。解析度為依慣例填入，原廠未明列"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": "Unknown",
+      "codec": "H.264（MOV／MP4）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 17:9；可選 200／100／50 Mbps（各畫質可選的位元率與格率不同，說明書未列對照）。說明書只列出可選格率 24／25／30／50／60p（含 23.98／29.97／59.94），沒有列出各畫質可用的格率。解析度為依慣例填入，原廠未明列"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "H.264 高速錄影（無聲音）",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 高速錄影（HIGH SPEED REC），可選 240／200／120／100p，播放速率另選；原廠註明以約 200 Mbps 為目標壓縮；最長約 6 分鐘"
+    }
+  ],
+  "editor_notes": "1) 說明書的錄影模式沒有「畫質×格率×位元率」對照表，只列選項：格率 24／25／30／50／60p、位元率 200／100／50 Mbps，「各選項依錄影模式而異」，所以各列的最高格率與位元率寫 Unknown，請負責人對照原廠官網 Movie 規格或實機確認。2) 4K／Full HD 的像素數說明書只寫畫面大小與比例，3840x2160、4096x2160、1920x1080、2048x1080 為依慣例填入。3) 每個錄影模式是否裁切說明書未寫；有『固定錄影裁切倍率』選項，倍率 1.29:1；數位防手震（DIS）會依模式裁切。4) F-Log 錄影時 ISO 限 640–12800。5) 機內 8-bit 4:2:0，HDMI 輸出 10-bit 4:2:2。",
+  "source_name": "Fujifilm X-S10 使用說明書：規格",
+  "source_url": "https://fujifilm-dsc.com/en/manual/x-s10/technical_notes/spec/",
+  "extra_sources": [
+    {
+      "source_name": "Fujifilm X-S10 使用說明書（PDF）",
+      "source_url": "https://fujifilm-dsc.com/en/manual/x-s10/x-s10_omw_en_s_f.pdf"
+    }
+  ]
+}

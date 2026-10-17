@@ -1,0 +1,260 @@
+{
+  "slug": "fujifilm-x-t4",
+  "brand": "Fujifilm",
+  "model": "X-T4",
+  "aliases": [
+    "FUJIFILM X-T4",
+    "XT4",
+    "FF190005"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "APS-C",
+    "width_mm": 23.5,
+    "height_mm": 15.6,
+    "resolution_mp": 26.1
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "F-Log",
+    "HLG"
+  ],
+  "raw": "說明書未列 RAW 影片輸出",
+  "open_gate": false,
+  "lens_mount": "Fujifilm X",
+  "media": [
+    "SD（UHS-II）卡槽 1",
+    "SD（UHS-II）卡槽 2"
+  ],
+  "timecode": "沒有時間碼端子；機內有時間碼設定（顯示、起始時間、REC RUN／FREE RUN、遺漏格式），可由 HDMI 輸出時間碼",
+  "sdi": "無",
+  "hdmi": "Type D（Micro）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.265（HEVC）All-Intra",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9；24／25／30p；All-Intra 只有 400 Mbps；錄影時間上限約 30 分鐘（30p 以下）；400 Mbps 需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.265（HEVC）Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9；24／25／30p；規格表列 400／200／100 Mbps，此列取 200 Mbps（Long GOP 能否選 400 說明書未明確寫）；錄影時間上限約 30 分鐘（30p 以下）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 400,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9；24／25／30p；All-Intra 只有 400 Mbps；錄影時間上限約 30 分鐘（30p 以下）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9；24／25／30p；規格表列 400／200／100 Mbps，此列取 200 Mbps；MOV 或 MP4；錄影時間上限約 30 分鐘（30p 以下）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265（HEVC）All-Intra",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "4K 16:9；24／25／30p；All-Intra 只有 400 Mbps；錄影時間上限約 30 分鐘（30p 以下）；400 Mbps 需 V60 以上 SD 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265（HEVC）Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "4K 16:9；24／25／30p；規格表列 400／200／100 Mbps，此列取 200 Mbps（Long GOP 能否選 400 說明書未明確寫）；錄影時間上限約 30 分鐘（30p 以下）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 400,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "4K 16:9；24／25／30p；All-Intra 只有 400 Mbps；錄影時間上限約 30 分鐘（30p 以下）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "4K 16:9；24／25／30p；規格表列 400／200／100 Mbps，此列取 200 Mbps；MOV 或 MP4；錄影時間上限約 30 分鐘（30p 以下）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.265（HEVC）Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9；50／60p；此模式不能選 H.264；400 Mbps 不能用於 50／60p；錄影時間上限約 20 分鐘（50／60p）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265（HEVC）Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "4K 16:9；50／60p；400 Mbps 不能用於 50／60p；錄影時間上限約 20 分鐘（50／60p）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "4K 16:9；50／60p；只有 MOV／H.264 可用，MP4 不能選 50／60p；錄影時間上限約 20 分鐘（50／60p）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.265（HEVC）All-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 17:9；24～60p；All-Intra 200 Mbps；錄影時間上限約 30 分鐘"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.265（HEVC）Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 17:9；24～60p；可選 200／100／50 Mbps；錄影時間上限約 30 分鐘"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 17:9；24～60p；All-Intra 200 Mbps；錄影時間上限約 30 分鐘"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 17:9；24～60p；可選 200／100／50 Mbps；MOV 或 MP4；錄影時間上限約 30 分鐘"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265（HEVC）All-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 16:9；24～60p；All-Intra 200 Mbps；錄影時間上限約 30 分鐘"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265（HEVC）Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 16:9；24～60p；可選 200／100／50 Mbps；錄影時間上限約 30 分鐘"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 All-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 16:9；24～60p；All-Intra 200 Mbps；錄影時間上限約 30 分鐘"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 Long GOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 16:9；24～60p；可選 200／100／50 Mbps；MOV 或 MP4；錄影時間上限約 30 分鐘"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "H.265（HEVC）／H.264（依檔案格式設定）",
+      "bitrate_mbps": 200,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "Unknown",
+      "notes": "Full HD 16:9 高速錄影（無聲音）；原廠寫錄到卡上的資料量以 200 Mbps 為目標；檔案格式與位元深度、色彩取樣說明書未寫；240／200p；錄影時間上限約 3 分鐘"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.265（HEVC）／H.264（依檔案格式設定）",
+      "bitrate_mbps": 200,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "Unknown",
+      "notes": "Full HD 16:9 高速錄影（無聲音）；原廠寫錄到卡上的資料量以 200 Mbps 為目標；檔案格式與位元深度、色彩取樣說明書未寫；120／100p；錄影時間上限約 6 分鐘"
+    }
+  ],
+  "source_name": "Fujifilm 官網：X-T4 規格",
+  "source_url": "https://www.fujifilm-x.com/en-us/products/cameras/x-t4/specifications/",
+  "extra_sources": [
+    {
+      "source_name": "Fujifilm X-T4 使用說明書：規格",
+      "source_url": "https://fujifilm-dsc.com/en/manual/x-t4/technical_notes/spec/"
+    },
+    {
+      "source_name": "Fujifilm X-T4 使用說明書（PDF）",
+      "source_url": "https://fujifilm-dsc.com/en/manual/x-t4/x-t4_omw_en_s_f.pdf"
+    }
+  ],
+  "last_verified": "2026-10-17",
+  "editor_notes": "1. X-T4 為舊機型，Fujifilm 官網標示 Discontinued（已停產）。\n2. 錄影模式來自規格頁「Movie recording」與說明書「MOVIE MODE／FILE FORMAT」：H.265 以 10-bit 4:2:0 存入記憶卡（HDMI 輸出 10-bit 4:2:2），H.264 以 8-bit 4:2:0 存入卡。\n3. 規格頁只寫 All-Intra 可用於 4K 30p 以下 400 Mbps、FHD 全格率 200 Mbps；Long GOP 的位元率選項（4K 列 400／200／100、FHD 列 200／100／50）沒有逐項對應，此檔 Long GOP 列取 200 Mbps，4K 30p 以下是否可選 400 請核對。\n4. 裁切倍率：規格頁與說明書沒有逐模式列出（只有「FIX MOVIE CROP MAGNIFICATION」固定 1.29× 選項，以及 DIS 會調整裁切），所以全部寫 Unknown，請核對（Fujifilm 另有 Movie 規格表時才有）。\n5. 高速錄影的檔案格式、位元深度、色彩取樣說明書沒寫，寫 Unknown。\n6. F-Log 靈敏度限 ISO 640–12800，HLG 限 ISO 1000–12800（HLG 只有 MOV／H.265 可用）。\n7. 開放式 3:2 錄影：模式表只有 16:9／17:9，沒有 3:2，所以 open_gate 寫 false。\n8. 原廠沒有公布發表日、Base ISO、動態範圍數值，皆 Unknown。"
+}

@@ -1,0 +1,235 @@
+{
+  "brand": "Fujifilm",
+  "type": "無反光鏡相機",
+  "last_verified": "2026-10-17",
+  "open_gate": false,
+  "lens_mount": "Fujifilm X",
+  "slug": "fujifilm-x-m5",
+  "model": "X-M5",
+  "aliases": [
+    "XM5",
+    "X-M5"
+  ],
+  "announced": "Unknown",
+  "sensor": {
+    "format": "APS-C",
+    "width_mm": 23.5,
+    "height_mm": 15.6,
+    "resolution_mp": 26.1
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "F-Log",
+    "F-Log2",
+    "HLG"
+  ],
+  "raw": "機內不能錄 RAW 影片；可經 HDMI 輸出 RAW 到 Atomos／Blackmagic Design 外接錄影機",
+  "media": [
+    "SD（UHS-I）"
+  ],
+  "timecode": "有時間碼設定；無時間碼端子",
+  "sdi": "無",
+  "hdmi": "HDMI Micro（Type D）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "6240x4160",
+      "max_fps": "Unknown",
+      "codec": "H.265（HEVC）MOV Long GOP 4:2:2",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "6.2K 3:2；位元率可選 200／100／50／25／8 Mbps（依設定而異）。說明書只列出可選格率 24／25／30／50／60p（含 23.98／29.97／59.94），沒有列出各畫質可用的格率。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "6240x4160",
+      "max_fps": "Unknown",
+      "codec": "H.265（HEVC）MOV Long GOP 4:2:0",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "6.2K 3:2；位元率可選 200／100／50／25／8 Mbps。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "6240x4160",
+      "max_fps": "Unknown",
+      "codec": "H.264 MOV／MP4 Long GOP 4:2:0",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "6.2K 3:2；位元率可選 200／100／50／25／8 Mbps。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": "Unknown",
+      "codec": "H.265（HEVC）MOV Long GOP 4:2:2",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "4K 16:9（含可長時間連續錄影的 4K 模式）；位元率可選 200／100／50／25／8 Mbps（依設定而異）。說明書只列出可選格率 24／25／30／50／60p（含 23.98／29.97／59.94），沒有列出各畫質可用的格率。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": "Unknown",
+      "codec": "H.265（HEVC）MOV Long GOP 4:2:0",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "4K 16:9（含可長時間連續錄影的 4K 模式）；位元率可選 200／100／50／25／8 Mbps。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": "Unknown",
+      "codec": "H.264 MOV／MP4 Long GOP 4:2:0",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "4K 16:9（含可長時間連續錄影的 4K 模式）；位元率可選 200／100／50／25／8 Mbps。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": "Unknown",
+      "codec": "H.265（HEVC）MOV Long GOP 4:2:2",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9；位元率可選 200／100／50／25／8 Mbps（依設定而異）。說明書只列出可選格率 24／25／30／50／60p（含 23.98／29.97／59.94），沒有列出各畫質可用的格率。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": "Unknown",
+      "codec": "H.265（HEVC）MOV Long GOP 4:2:0",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9；位元率可選 200／100／50／25／8 Mbps。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": "Unknown",
+      "codec": "H.264 MOV／MP4 Long GOP 4:2:0",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "DCI 4K 17:9；位元率可選 200／100／50／25／8 Mbps。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": "Unknown",
+      "codec": "H.265（HEVC）MOV Long GOP 4:2:2",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "Full HD 16:9（含可較長時間錄影的模式）；位元率可選 200／100／50／25／8 Mbps（依設定而異）。說明書只列出可選格率 24／25／30／50／60p（含 23.98／29.97／59.94），沒有列出各畫質可用的格率。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": "Unknown",
+      "codec": "H.265（HEVC）MOV Long GOP 4:2:0",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 16:9（含可較長時間錄影的模式）；位元率可選 200／100／50／25／8 Mbps。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": "Unknown",
+      "codec": "H.264 MOV／MP4 Long GOP 4:2:0",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 16:9（含可較長時間錄影的模式）；位元率可選 200／100／50／25／8 Mbps。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": "Unknown",
+      "codec": "H.265（HEVC）MOV Long GOP 4:2:2",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "Full HD 17:9；位元率可選 200／100／50／25／8 Mbps（依設定而異）。說明書只列出可選格率 24／25／30／50／60p（含 23.98／29.97／59.94），沒有列出各畫質可用的格率。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": "Unknown",
+      "codec": "H.265（HEVC）MOV Long GOP 4:2:0",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 17:9；位元率可選 200／100／50／25／8 Mbps。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": "Unknown",
+      "codec": "H.264 MOV／MP4 Long GOP 4:2:0",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 17:9；位元率可選 200／100／50／25／8 Mbps。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "1080x1920",
+      "max_fps": "Unknown",
+      "codec": "H.265（HEVC）MOV Long GOP 4:2:2",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "Full HD 9:16（直式）；位元率可選 200／100／50／25／8 Mbps（依設定而異）。說明書只列出可選格率 24／25／30／50／60p（含 23.98／29.97／59.94），沒有列出各畫質可用的格率。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "1080x1920",
+      "max_fps": "Unknown",
+      "codec": "H.265（HEVC）MOV Long GOP 4:2:0",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 9:16（直式）；位元率可選 200／100／50／25／8 Mbps。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "1080x1920",
+      "max_fps": "Unknown",
+      "codec": "H.264 MOV／MP4 Long GOP 4:2:0",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "Full HD 9:16（直式）；位元率可選 200／100／50／25／8 Mbps。像素數依慣例填入，說明書只寫畫面大小名稱"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "高速錄影（HIGH SPEED REC）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "Unknown",
+      "notes": "Full HD 高速錄影，可選 240／200／120／100p；無聲音；播放速率另選；可選編碼與位元率依設定而異"
+    }
+  ],
+  "editor_notes": "1) 說明書沒有「畫質×格率×位元率」對照表，只列選項：格率 24／25／30／50／60p、位元率 8／25／50／100／200 Mbps，並寫依錄影模式而異，所以各列最高格率與位元率寫 Unknown，請對照原廠官網或實機確認。2) 像素數為依慣例填入。3) 固定錄影裁切倍率 1.25:1；各模式是否裁切說明書未寫，裁切寫 Unknown。4) F-Log 時 ISO 限 640–12800，F-Log2 限 1250–12800。5) 說明書有 4K 長時間錄影與 Full HD 長時間錄影的模式，細節未列。",
+  "source_name": "Fujifilm X-M5 使用說明書：規格",
+  "source_url": "https://fujifilm-dsc.com/en/manual/x-m5/technical_notes/spec/",
+  "extra_sources": [
+    {
+      "source_name": "Fujifilm X-M5 使用說明書（PDF）",
+      "source_url": "https://fujifilm-dsc.com/en/manual/x-m5/x-m5_manual_en_s_f.pdf"
+    }
+  ]
+}
