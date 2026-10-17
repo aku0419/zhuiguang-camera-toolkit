@@ -1,0 +1,105 @@
+{
+  "slug": "canon-eos-rp",
+  "brand": "Canon",
+  "model": "EOS RP",
+  "aliases": [
+    "RP",
+    "EOS RP"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "2019-03（上市）",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.9,
+    "height_mm": 24.0,
+    "resolution_mp": 26.2
+  },
+  "base_iso": "Unknown",
+  "log": [],
+  "raw": "影片不能錄 RAW；原廠規格表沒有 Canon Log 與 HDMI RAW",
+  "open_gate": false,
+  "lens_mount": "Canon RF",
+  "media": [
+    "SD／SDHC／SDXC（單卡槽，支援 UHS-I 與 UHS-II）"
+  ],
+  "timecode": "原廠說明書未列時間碼功能",
+  "sdi": "無",
+  "hdmi": "Mini HDMI（Type C），可選 Auto／1080p；4K 可輸出",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "IPB（Standard），MP4",
+      "bitrate_mbps": 120,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "4K 影片一律裁切中央（說明書：「4K 影片總是裁切螢幕中央」），倍率說明書未寫；僅 23.98／25 fps；對焦為對比式 AF"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "IPB（Standard），MP4",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "59.94／50 fps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "IPB（Standard），MP4",
+      "bitrate_mbps": 30,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "23.98／25／29.97 fps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "IPB（Light），MP4",
+      "bitrate_mbps": 12,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "HDR 影片（29.97／25 fps）使用 IPB Light；HDR 影片需 RF／EF 鏡頭且不能開影片裁切"
+    },
+    {
+      "resolution": "1280x720",
+      "max_fps": 60,
+      "codec": "IPB（Standard），MP4",
+      "bitrate_mbps": 26,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "59.94／50 fps"
+    },
+    {
+      "resolution": "1280x720",
+      "max_fps": 30,
+      "codec": "IPB（Standard），MP4",
+      "bitrate_mbps": 13,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "29.97／25 fps"
+    }
+  ],
+  "source_name": "Canon EOS RP Specifications（Canon Camera Museum 官方規格 PDF，Supplemental Information）",
+  "source_url": "https://global.canon/ja/c-museum/wp-content/uploads/2020/03/dslr880_en.pdf",
+  "last_verified": "2026-10-17",
+  "extra_sources": [
+    {
+      "source_name": "Canon EOS RP 進階使用說明書（西班牙文官方 PDF，錄影容量與卡片速度表、4K 裁切說明）",
+      "source_url": "https://gdlp01.c-wss.com/gds/4/0300033694/06/eosrp-ug6-es.pdf"
+    },
+    {
+      "source_name": "Canon Camera Museum：EOS RP",
+      "source_url": "https://global.canon/en/c-museum/product/dslr880.html"
+    }
+  ],
+  "editor_notes": "1) cam.start.canon 沒有 EOS RP；規格取自 Canon Camera Museum 的官方英文規格 PDF，錄影容量表與 4K 裁切說明取自 Canon 官方西班牙文進階說明書（gdlp01.c-wss.com），數字不受語言影響。2) 位元率為官方規格 PDF「Bit rate/Card performance requirements」的約值（4K 120、Full HD 60／30／12、HD 26／13 Mbps）。3) 4K 只有 23.98／25 fps，且一律裁切中央；說明書沒寫裁切倍率，crop_factor 未填，請負責人核對。4) 說明書寫明 4K／Full HD／HD 皆為 YCbCr 4:2:0 8-bit、Rec.709；沒有 Canon Log。5) 規格表與說明書都沒有時間碼；ISO 基準值、動態範圍原廠宣稱值皆查無，填 Unknown。6) 影片裁切（Movie cropping）不能錄 Full HD；電子防手震會再裁切。7) 另有 4K／Full HD 縮時動態（ALL-I），原廠未列位元率，未收錄。8) 上市時間取自 Canon Camera Museum（2019 年 3 月）；官方未見發表日。9) 單段錄影上限 29 分 59 秒。"
+}

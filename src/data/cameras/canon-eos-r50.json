@@ -1,0 +1,302 @@
+{
+  "slug": "canon-eos-r50",
+  "brand": "Canon",
+  "model": "EOS R50",
+  "aliases": [
+    "R50",
+    "EOS R50",
+    "Canon R50"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "APS-C",
+    "width_mm": 22.3,
+    "height_mm": 14.9,
+    "resolution_mp": 24.2
+  },
+  "base_iso": "Unknown",
+  "log": [],
+  "raw": "不能內錄 RAW 影片；說明書未列 HDMI RAW 輸出",
+  "open_gate": false,
+  "lens_mount": "Canon RF",
+  "media": [
+    "SD／SDHC／SDXC（單卡槽，UHS-I）"
+  ],
+  "timecode": "機身內建時間碼，錄影時寫入檔案（可選 Rec run／Free run）；HDMI 輸出可附時間碼；沒有時間碼端子",
+  "sdi": "無",
+  "hdmi": "Micro HDMI（Type D）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "IPB（Standard），MP4（一般色調）",
+      "bitrate_mbps": 120,
+      "bit_depth": 8,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "4K UHD"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "IPB（Standard），MP4（HDR PQ）",
+      "bitrate_mbps": 170,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "4K UHD；HDR PQ 的色彩取樣說明書未寫"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "IPB（Light），MP4（一般色調）",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "4K UHD"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "IPB（Light），MP4（HDR PQ）",
+      "bitrate_mbps": 85,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "4K UHD；HDR PQ 的色彩取樣說明書未寫"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "IPB（Standard），MP4（一般色調）",
+      "bitrate_mbps": 120,
+      "bit_depth": 8,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "4K UHD；與 30p 同位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "IPB（Standard），MP4（HDR PQ）",
+      "bitrate_mbps": 170,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "4K UHD；與 30p 同位元率；HDR PQ 的色彩取樣說明書未寫"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "IPB（Light），MP4（一般色調）",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "4K UHD；與 30p 同位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "IPB（Light），MP4（HDR PQ）",
+      "bitrate_mbps": 85,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "4K UHD；與 30p 同位元率；HDR PQ 的色彩取樣說明書未寫"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "IPB（Standard），MP4（一般色調）",
+      "bitrate_mbps": 120,
+      "bit_depth": 8,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "Full HD 高格率（High Frame Rate）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "IPB（Standard），MP4（HDR PQ）",
+      "bitrate_mbps": 180,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "Full HD 高格率（High Frame Rate）；HDR PQ 的色彩取樣說明書未寫"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "IPB（Light），MP4（一般色調）",
+      "bitrate_mbps": 70,
+      "bit_depth": 8,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "Full HD 高格率（High Frame Rate）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "IPB（Light），MP4（HDR PQ）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "Full HD 高格率（High Frame Rate）；HDR PQ 的色彩取樣說明書未寫"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "IPB（Standard），MP4（一般色調）",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "IPB（Standard），MP4（HDR PQ）",
+      "bitrate_mbps": 90,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "HDR PQ 的色彩取樣說明書未寫"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "IPB（Light），MP4（一般色調）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "IPB（Light），MP4（HDR PQ）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "HDR PQ 的色彩取樣說明書未寫"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "IPB（Standard），MP4（一般色調）",
+      "bitrate_mbps": 30,
+      "bit_depth": 8,
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "IPB（Standard），MP4（HDR PQ）",
+      "bitrate_mbps": 45,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "HDR PQ 的色彩取樣說明書未寫"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "IPB（Light），MP4（一般色調）",
+      "bitrate_mbps": 12,
+      "bit_depth": 8,
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "IPB（Light），MP4（HDR PQ）",
+      "bitrate_mbps": 28,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "HDR PQ 的色彩取樣說明書未寫"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "IPB（Standard），MP4（一般色調）",
+      "bitrate_mbps": 30,
+      "bit_depth": 8,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "與 30p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "IPB（Standard），MP4（HDR PQ）",
+      "bitrate_mbps": 45,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "與 30p 同位元率；HDR PQ 的色彩取樣說明書未寫"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "IPB（Light），MP4（一般色調）",
+      "bitrate_mbps": 12,
+      "bit_depth": 8,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "與 30p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "IPB（Light），MP4（HDR PQ）",
+      "bitrate_mbps": 28,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "與 30p 同位元率；HDR PQ 的色彩取樣說明書未寫"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "ALL-I，MP4（一般色調）",
+      "bitrate_mbps": 90,
+      "bit_depth": 8,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "縮時動畫專用"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "ALL-I，MP4（HDR PQ）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "縮時動畫專用；HDR PQ 的色彩取樣說明書未寫"
+    }
+  ],
+  "source_name": "Canon EOS R50 Advanced User Guide（線上說明書）：Specifications",
+  "source_url": "https://cam.start.canon/en/C011/manual/html/UG-11_Reference_0090.html",
+  "last_verified": "2026-10-17",
+  "editor_notes": "位元率來自 Specifications 的 Movie recording 表。4K 只有 30／25／24p（沒有 4K 60p，也沒有 4K Crop）。格率以 NTSC 名義值記錄，24p 與 30p 位元率相同，各列一行。\n待核對：(1) 沒有 Canon Log，只有 HDR PQ（10-bit）；HDR PQ 與一般色調的色彩取樣說明書沒寫，記 Unknown。(2) Movie digital IS 會再裁切，未計入。(3) 動態範圍、基本 ISO、發表日期說明書沒寫，記 Unknown。(4) 縮時動畫只有 Full HD（說明書沒列 4K 縮時）。",
+  "extra_sources": [
+    {
+      "source_name": "Canon EOS R50 說明書：Movie Recording Size（影像範圍、格率）",
+      "source_url": "https://cam.start.canon/en/C011/manual/html/UG-05_Shooting-2_0040.html"
+    },
+    {
+      "source_name": "Canon EOS R50 說明書：Time Code",
+      "source_url": "https://cam.start.canon/en/C011/manual/html/UG-05_Shooting-2_0150.html"
+    }
+  ]
+}

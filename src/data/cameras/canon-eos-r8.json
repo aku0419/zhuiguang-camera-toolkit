@@ -1,0 +1,407 @@
+{
+  "slug": "canon-eos-r8",
+  "brand": "Canon",
+  "model": "EOS R8",
+  "aliases": [
+    "R8",
+    "EOS R8"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 36.0,
+    "height_mm": 24.0,
+    "resolution_mp": 24.2
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "Canon Log 3"
+  ],
+  "raw": "說明書未列 RAW 影片內錄或 HDMI RAW 輸出（RAW 僅限靜態照片）",
+  "open_gate": false,
+  "lens_mount": "Canon RF",
+  "media": [
+    "SD／SDHC／SDXC 單卡槽（支援 UHS-II／UHS-I）"
+  ],
+  "timecode": "內建時間碼（Rec run／Free run、Drop frame），可經 HDMI 輸出時間碼；機身無時間碼端子；縮時錄影與（Free run 時）高格率錄影不記錄時間碼",
+  "sdi": "無",
+  "hdmi": "Type D（Micro HDMI），不支援 HDMI CEC",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "IPB Standard（一般色調）",
+      "bitrate_mbps": 230,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "單支最長 2 小時；PAL 50p 同位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "IPB Standard（Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 340,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "單支最長 2 小時；PAL 50p 同位元率；HDR PQ 的色彩取樣說明書未寫，4:2:2 依 Canon Log 的說明"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "IPB Light（一般色調）",
+      "bitrate_mbps": 120,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "單支最長 2 小時；PAL 50p 同位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "IPB Light（Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 170,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "單支最長 2 小時；PAL 50p 同位元率；HDR PQ 的色彩取樣說明書未寫，4:2:2 依 Canon Log 的說明"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "IPB Standard（一般色調）",
+      "bitrate_mbps": 120,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "單支最長 2 小時；PAL 25p 同位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "IPB Standard（Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 170,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "單支最長 2 小時；PAL 25p 同位元率；HDR PQ 的色彩取樣說明書未寫，4:2:2 依 Canon Log 的說明"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "IPB Light（一般色調）",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "單支最長 2 小時；PAL 25p 同位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "IPB Light（Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 85,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "單支最長 2 小時；PAL 25p 同位元率；HDR PQ 的色彩取樣說明書未寫，4:2:2 依 Canon Log 的說明"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "IPB Standard（一般色調）",
+      "bitrate_mbps": 120,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "單支最長 2 小時；23.98p 同位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "IPB Standard（Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 170,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "單支最長 2 小時；23.98p 同位元率；HDR PQ 的色彩取樣說明書未寫，4:2:2 依 Canon Log 的說明"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "IPB Light（一般色調）",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "單支最長 2 小時；23.98p 同位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "IPB Light（Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 85,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "單支最長 2 小時；23.98p 同位元率；HDR PQ 的色彩取樣說明書未寫，4:2:2 依 Canon Log 的說明"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 180,
+      "codec": "IPB Standard（一般色調）",
+      "bitrate_mbps": 180,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：不錄聲音；不可搭配影片裁切或 RF-S 鏡頭；需 exFAT 卡；單支最長 20 分鐘；HDMI 輸出為 59.94p；說明書『High Frame Rate』頁寫固定 IPB（Standard），但規格表也列了 Light，待核對；PAL 150p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 180,
+      "codec": "IPB Standard（Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 270,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：不錄聲音；不可搭配影片裁切或 RF-S 鏡頭；需 exFAT 卡；單支最長 20 分鐘；HDMI 輸出為 59.94p；說明書『High Frame Rate』頁寫固定 IPB（Standard），但規格表也列了 Light，待核對；PAL 150p 同位元率；HDR PQ 的色彩取樣說明書未寫，4:2:2 依 Canon Log 的說明"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 180,
+      "codec": "IPB Light（一般色調）",
+      "bitrate_mbps": 105,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：不錄聲音；不可搭配影片裁切或 RF-S 鏡頭；需 exFAT 卡；單支最長 20 分鐘；HDMI 輸出為 59.94p；說明書『High Frame Rate』頁寫固定 IPB（Standard），但規格表也列了 Light，待核對；PAL 150p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 180,
+      "codec": "IPB Light（Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：不錄聲音；不可搭配影片裁切或 RF-S 鏡頭；需 exFAT 卡；單支最長 20 分鐘；HDMI 輸出為 59.94p；說明書『High Frame Rate』頁寫固定 IPB（Standard），但規格表也列了 Light，待核對；PAL 150p 同位元率；HDR PQ 的色彩取樣說明書未寫，4:2:2 依 Canon Log 的說明"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "IPB Standard（一般色調）",
+      "bitrate_mbps": 120,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：不錄聲音；不可搭配影片裁切或 RF-S 鏡頭；單支最長 30 分鐘；HDMI 輸出為 59.94p；說明書『High Frame Rate』頁寫固定 IPB（Standard），但規格表也列了 Light，待核對；PAL 100p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "IPB Standard（Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 180,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：不錄聲音；不可搭配影片裁切或 RF-S 鏡頭；單支最長 30 分鐘；HDMI 輸出為 59.94p；說明書『High Frame Rate』頁寫固定 IPB（Standard），但規格表也列了 Light，待核對；PAL 100p 同位元率；HDR PQ 的色彩取樣說明書未寫，4:2:2 依 Canon Log 的說明"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "IPB Light（一般色調）",
+      "bitrate_mbps": 70,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：不錄聲音；不可搭配影片裁切或 RF-S 鏡頭；單支最長 30 分鐘；HDMI 輸出為 59.94p；說明書『High Frame Rate』頁寫固定 IPB（Standard），但規格表也列了 Light，待核對；PAL 100p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "IPB Light（Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：不錄聲音；不可搭配影片裁切或 RF-S 鏡頭；單支最長 30 分鐘；HDMI 輸出為 59.94p；說明書『High Frame Rate』頁寫固定 IPB（Standard），但規格表也列了 Light，待核對；PAL 100p 同位元率；HDR PQ 的色彩取樣說明書未寫，4:2:2 依 Canon Log 的說明"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "IPB Standard（一般色調）",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "單支最長 2 小時；PAL 50p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "IPB Standard（Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 90,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "單支最長 2 小時；PAL 50p 同位元率；HDR PQ 的色彩取樣說明書未寫，4:2:2 依 Canon Log 的說明"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "IPB Light（一般色調）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "單支最長 2 小時；PAL 50p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "IPB Light（Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "單支最長 2 小時；PAL 50p 同位元率；HDR PQ 的色彩取樣說明書未寫，4:2:2 依 Canon Log 的說明"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "IPB Standard（一般色調）",
+      "bitrate_mbps": 30,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "單支最長 2 小時；PAL 25p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "IPB Standard（Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 45,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "單支最長 2 小時；PAL 25p 同位元率；HDR PQ 的色彩取樣說明書未寫，4:2:2 依 Canon Log 的說明"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "IPB Light（一般色調）",
+      "bitrate_mbps": 12,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "單支最長 2 小時；PAL 25p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "IPB Light（Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 28,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "單支最長 2 小時；PAL 25p 同位元率；HDR PQ 的色彩取樣說明書未寫，4:2:2 依 Canon Log 的說明"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "IPB Standard（一般色調）",
+      "bitrate_mbps": 30,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "單支最長 2 小時；23.98p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "IPB Standard（Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 45,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "單支最長 2 小時；23.98p 同位元率；HDR PQ 的色彩取樣說明書未寫，4:2:2 依 Canon Log 的說明"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "IPB Light（一般色調）",
+      "bitrate_mbps": 12,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "單支最長 2 小時；23.98p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "IPB Light（Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 28,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "單支最長 2 小時；23.98p 同位元率；HDR PQ 的色彩取樣說明書未寫，4:2:2 依 Canon Log 的說明"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "ALL-I（縮時錄影，一般色調）",
+      "bitrate_mbps": 470,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "縮時錄影（Time-lapse）專用；PAL 25p 同位元率；不錄時間碼"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "ALL-I（縮時錄影，Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 470,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "縮時錄影（Time-lapse）專用；PAL 25p 同位元率；不錄時間碼"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "ALL-I（縮時錄影，一般色調）",
+      "bitrate_mbps": 90,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "縮時錄影（Time-lapse）專用；PAL 25p 同位元率；不錄時間碼"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "ALL-I（縮時錄影，Canon Log 3／HDR PQ）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "縮時錄影（Time-lapse）專用；PAL 25p 同位元率；不錄時間碼"
+    }
+  ],
+  "source_name": "Canon EOS R8 進階使用說明書（Specifications）",
+  "source_url": "https://cam.start.canon/en/C013/manual/html/UG-10_Reference_0100.html",
+  "last_verified": "2026-10-17",
+  "editor_notes": "（1）公開日期、原廠宣稱動態範圍、原生／基礎 ISO 說明書都沒寫，皆為 Unknown；開啟 Canon Log 3 時自動 ISO 最低為 ISO 800（低於為擴充 ISO），但原廠未稱為基礎 ISO。（2）說明書把位元率分成兩張表：Canon Log 關／HDR PQ 關（8-bit，YCbCr 4:2:0，BT.709）與 Canon Log 開或 HDR PQ 開（10-bit）；Canon Log 錄影說明書寫明 YCbCr 4:2:2 10-bit，HDR PQ 的色彩取樣與 10-bit 編碼（是否 HEVC）說明書沒寫，這裡比照 Canon Log 填 4:2:2。HDR PQ 的敘述只在靜態照片頁面，影片是否支援請以原廠為準。（3）資料以 NTSC 名義值列出，PAL 25／50／100／150p 位元率相同不另列。（4）4K 與 Full HD 預設不裁切（說明書圖示為整個感光元件寬度）；開啟「影片裁切」或使用 RF-S 鏡頭會裁切（1.6 倍），高格率（Full HD 100／120／150／180p）不能搭配影片裁切。Full HD 高格率的視角說明書圖示未特別標示，這裡視為不裁切，請核對。（5）說明書『High Frame Rate』頁寫高格率為 IPB（Standard），但規格表同時列 Standard 與 Light，兩者矛盾，已在 notes 標示。（6）4K 與 Full HD 縮時錄影（ALL-I）另列一行。",
+  "extra_sources": [
+    {
+      "source_name": "Canon EOS R8 說明書：Movie Recording Size（影像範圍、格率、錄影時間限制）",
+      "source_url": "https://cam.start.canon/en/C013/manual/html/UG-04_Shooting-2_0040.html"
+    },
+    {
+      "source_name": "Canon EOS R8 說明書：Canon Log Settings",
+      "source_url": "https://cam.start.canon/en/C013/manual/html/UG-04_Shooting-2_0090.html"
+    }
+  ]
+}

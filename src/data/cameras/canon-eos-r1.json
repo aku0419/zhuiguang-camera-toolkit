@@ -1,0 +1,1337 @@
+{
+  "slug": "canon-eos-r1",
+  "brand": "Canon",
+  "model": "EOS R1",
+  "aliases": [
+    "R1",
+    "Canon R1",
+    "EOS-R1"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 36.0,
+    "height_mm": 24.0,
+    "resolution_mp": 24.2
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "Canon Log 2",
+    "Canon Log 3"
+  ],
+  "raw": "可內錄 RAW 影片（.CRM，6000×3164，Standard RAW／Light RAW，最高 59.94p）；HDMI 可輸出 RAW（6000×3164，59.94／29.97／24p，Standard RAW）。RAW 的位元深度說明書未標示",
+  "open_gate": false,
+  "lens_mount": "Canon RF",
+  "media": [
+    "CFexpress Type B（卡槽 1，支援 CFexpress 2.0、VPG400）",
+    "CFexpress Type B（卡槽 2，支援 CFexpress 2.0、VPG400）"
+  ],
+  "timecode": "機身內建時間碼（Rec run／Free run，可設起始值與 Drop Frame）；可經 HDMI 輸出時間碼（可同步開始／停止錄影指令）；說明書未列時間碼輸入／輸出端子",
+  "sdi": "無",
+  "hdmi": "Type A（標準尺寸）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "6000x3164",
+      "max_fps": 60,
+      "codec": "RAW（Standard RAW）",
+      "bitrate_mbps": 2600,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "6000x3164",
+      "max_fps": 30,
+      "codec": "RAW（Standard RAW）",
+      "bitrate_mbps": 2000,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "6000x3164",
+      "max_fps": 25,
+      "codec": "RAW（Standard RAW）",
+      "bitrate_mbps": 1670,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "6000x3164",
+      "max_fps": 24,
+      "codec": "RAW（Standard RAW）",
+      "bitrate_mbps": 1600,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "6000x3164",
+      "max_fps": 60,
+      "codec": "RAW（Light RAW）",
+      "bitrate_mbps": 1800,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "6000x3164",
+      "max_fps": 50,
+      "codec": "RAW（Light RAW）",
+      "bitrate_mbps": 1500,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "6000x3164",
+      "max_fps": 30,
+      "codec": "RAW（Light RAW）",
+      "bitrate_mbps": 900,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "6000x3164",
+      "max_fps": 25,
+      "codec": "RAW（Light RAW）",
+      "bitrate_mbps": 750,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "6000x3164",
+      "max_fps": 24,
+      "codec": "RAW（Light RAW）",
+      "bitrate_mbps": 720,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 450,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 225,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC S（Standard LGOP，YCC420 8bit）",
+      "bitrate_mbps": 300,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Standard LGOP，YCC420 8bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Standard LGOP，YCC420 8bit）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Standard LGOP，YCC420 8bit）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（High Quality Intra，YCC422 10bit）",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC S（High Quality Intra，YCC422 10bit）",
+      "bitrate_mbps": 1000,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（High Quality Intra，YCC422 10bit）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC S（High Quality Intra，YCC422 10bit）",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（High Quality Intra，YCC422 10bit）",
+      "bitrate_mbps": 480,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 1800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 100,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 1500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 900,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 750,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 450,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 375,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC S（Light Intra，YCC422 10bit）",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 100,
+      "codec": "XF-AVC S（Light Intra，YCC422 10bit）",
+      "bitrate_mbps": 1000,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Light Intra，YCC422 10bit）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Light Intra，YCC422 10bit）",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Light Intra，YCC422 10bit）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Light Intra，YCC422 10bit）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Light Intra，YCC422 10bit）",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 450,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 225,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC S（Standard LGOP，YCC420 8bit）",
+      "bitrate_mbps": 300,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Standard LGOP，YCC420 8bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Standard LGOP，YCC420 8bit）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Standard LGOP，YCC420 8bit）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（High Quality Intra，YCC422 10bit）",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC S（High Quality Intra，YCC422 10bit）",
+      "bitrate_mbps": 1000,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（High Quality Intra，YCC422 10bit）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC S（High Quality Intra，YCC422 10bit）",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（High Quality Intra，YCC422 10bit）",
+      "bitrate_mbps": 480,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 1800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 100,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 1500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 900,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 750,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 450,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 375,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC S（Light Intra，YCC422 10bit）",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 100,
+      "codec": "XF-AVC S（Light Intra，YCC422 10bit）",
+      "bitrate_mbps": 1000,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Light Intra，YCC422 10bit）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Light Intra，YCC422 10bit）",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Light Intra，YCC422 10bit）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Light Intra，YCC422 10bit）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Light Intra，YCC422 10bit）",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 240,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 120,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Standard LGOP，YCC420 8bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Standard LGOP，YCC420 8bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Standard LGOP，YCC420 8bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 240,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 200,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 1000,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 120,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 100,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 125,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 120,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 240,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 120,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 240,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 140,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 120,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 70,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Standard LGOP，YCC420 8bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Standard LGOP，YCC420 8bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Standard LGOP，YCC420 8bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 200,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 1000,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 100,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 125,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Standard Intra，YCC422 10bit）",
+      "bitrate_mbps": 120,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 Normal 畫質；高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Standard LGOP，YCC422 10bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 140,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 70,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：開啟時不收音，以慢動作播放"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Standard LGOP，YCC420 10bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    }
+  ],
+  "source_name": "Canon EOS R1 Advanced User Guide（Canon 官方線上說明書）",
+  "source_url": "https://cam.start.canon/en/C018/",
+  "last_verified": "2026-10-17",
+  "editor_notes": "本檔資料全部取自 Canon 官方線上說明書（EOS R1 Advanced User Guide，適用韌體 1.3.0 以後）。\n說明書沒有寫發表日期、基礎 ISO（原生 ISO）、動態範圍宣稱值，這三項寫 Unknown，請負責人視需要到 Canon 官網核對。Canon Log 2／Canon Log 3 手動 ISO 最低 800（低於 800 為擴充 ISO）。\n4K Fine 與 Normal 兩種畫質，原廠表列的位元率完全相同（例如 XF-HEVC S 422 10bit 60p 都是 225 Mbps），所以每個模式只列一行；Fine 不可用於高格率、Movie cropping 開啟或 RF-S 鏡頭。請核對原廠表是否真的相同。\n4K UHD（3840）與 DCI（4096）原廠圖示取像高度相同、UHD 左右略窄，視為無裁切（crop: none）。Movie cropping 開啟或使用 RF-S 鏡頭時視角約為 1.6 倍（說明書：RF-S 鏡頭焦距約 1.6 倍），本檔 recording_modes 一律以全片幅不裁切列出。\n高格率（High Frame Rate）開啟時不收音、以 29.97／25p 檔案慢動作播放；說明書沒有列高格率是否裁切，故標 none。\nbit_depth 與 chroma 依編碼名稱（YCC422 10bit、YCC420 10bit、YCC420 8bit）；RAW 位元深度說明書未標示，寫 Unknown。Canon Log／HDR PQ 沒有另外的位元率表；XF-AVC S 8bit 不可用 HDR PQ。\nMovie digital IS 開啟時會再裁切畫面（說明書未給倍率）。",
+  "extra_sources": [
+    {
+      "source_name": "Specifications（規格表）",
+      "source_url": "https://cam.start.canon/en/C018/manual/html/UG-10_Reference_0090.html"
+    },
+    {
+      "source_name": "Time Code（時間碼）",
+      "source_url": "https://cam.start.canon/en/C018/manual/html/UG-03_Shooting-2_0260.html"
+    }
+  ]
+}

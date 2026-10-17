@@ -1,0 +1,337 @@
+{
+  "slug": "canon-eos-r50-v",
+  "brand": "Canon",
+  "model": "EOS R50 V",
+  "aliases": [
+    "R50 V",
+    "EOS R50 V",
+    "Canon R50 V",
+    "R50V"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "APS-C",
+    "width_mm": 22.3,
+    "height_mm": 14.9,
+    "resolution_mp": 24.2
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "Canon Log 3"
+  ],
+  "raw": "不能內錄 RAW 影片；說明書未列 HDMI RAW 輸出",
+  "open_gate": false,
+  "lens_mount": "Canon RF",
+  "media": [
+    "SD／SDHC／SDXC（單卡槽，UHS-II）"
+  ],
+  "timecode": "機身內建時間碼，錄影時寫入檔案（可選 Rec run／Free run，可設遺漏格式 DF／NDF）；HDMI 輸出可附時間碼與 Rec Command；沒有時間碼端子",
+  "sdi": "無",
+  "hdmi": "Micro HDMI（Type D）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-HEVC S YCC422 10bit，Standard LGOP",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K，影像範圍 100%"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-HEVC S YCC422 10bit，Standard LGOP",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K，影像範圍 100%；與 30p 同位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-HEVC S YCC420 10bit，Standard LGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K，影像範圍 100%"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-HEVC S YCC420 10bit，Standard LGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K，影像範圍 100%；與 30p 同位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S YCC422 10bit，Standard LGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K，影像範圍 100%"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S YCC422 10bit，Standard LGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K，影像範圍 100%；與 30p 同位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S YCC420 8bit，Standard LGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K，影像範圍 100%"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S YCC420 8bit，Standard LGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K，影像範圍 100%；與 30p 同位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-HEVC S YCC422 10bit，Standard LGOP",
+      "bitrate_mbps": 225,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.56,
+      "notes": "4K Crop，水平視角約為 4K 的 64%（原廠值），1.56 倍為依此換算"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-HEVC S YCC420 10bit，Standard LGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.56,
+      "notes": "4K Crop，水平視角約為 4K 的 64%（原廠值），1.56 倍為依此換算"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S YCC422 10bit，Standard LGOP",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.56,
+      "notes": "4K Crop，水平視角約為 4K 的 64%（原廠值），1.56 倍為依此換算"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S YCC420 8bit，Standard LGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.56,
+      "notes": "4K Crop，水平視角約為 4K 的 64%（原廠值），1.56 倍為依此換算"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XF-HEVC S YCC422 10bit，Standard LGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate），一般錄影最長 1 小時"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-HEVC S YCC422 10bit，Standard LGOP",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-HEVC S YCC422 10bit，Standard LGOP",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "與 60p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-HEVC S YCC422 10bit，Standard LGOP",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "與 60p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XF-HEVC S YCC420 10bit，Standard LGOP",
+      "bitrate_mbps": 70,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate），一般錄影最長 1 小時"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-HEVC S YCC420 10bit，Standard LGOP",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-HEVC S YCC420 10bit，Standard LGOP",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "與 60p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-HEVC S YCC420 10bit，Standard LGOP",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "與 60p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XF-AVC S YCC422 10bit，Standard LGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate），一般錄影最長 1 小時"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC S YCC422 10bit，Standard LGOP",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC S YCC422 10bit，Standard LGOP",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "與 60p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC S YCC422 10bit，Standard LGOP",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "與 60p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XF-AVC S YCC420 8bit，Standard LGOP",
+      "bitrate_mbps": 70,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate），一般錄影最長 1 小時"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC S YCC420 8bit，Standard LGOP",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC S YCC420 8bit，Standard LGOP",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "與 60p 同位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC S YCC420 8bit，Standard LGOP",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "與 60p 同位元率"
+    }
+  ],
+  "source_name": "Canon EOS R50 V Advanced User Guide（線上說明書）：Specifications",
+  "source_url": "https://cam.start.canon/en/C021/manual/html/UG-11_Reference_0080.html",
+  "last_verified": "2026-10-17",
+  "editor_notes": "位元率、格式、裁切與視角來自 Specifications 的 Estimated recording time, video bit rate… 表與 Movie recording angle of view 表。格率以 NTSC 名義值記錄（24／30／60／120），PAL 位元率相同。4K 只有 30／25／24p，4K Crop 才有 60／50p。\n待核對：(1) 4K Crop 的 crop_factor 1.56 是由原廠「水平視角 64.0%」換算（1÷0.64），不是原廠直接標示的倍率。(2) Canon Log 3 是從 ISO 表與 Custom Picture 設定得知（Canon 709／PQ／HLG／Canon Log 3），說明書沒有像 R7 的「約 1600%」動態範圍宣稱，所以動態範圍記 Unknown。(3) 錄影格式已在表中分列四種（HEVC/AVC × 4:2:2/4:2:0），Canon Log 3 與 HDR 是否限定某些格式說明書未逐項列出（只註明 XF-AVC S YCC420 8bit 不能搭配 HDR PQ）。(4) 一般錄影上限：59.94 fps 以下 2 小時、100 fps 以上 1 小時。(5) 基本 ISO、發表日期說明書沒寫，記 Unknown。(6) HDMI 為 Type D（說明書用詞 HDMI micro OUT terminal）。",
+  "extra_sources": [
+    {
+      "source_name": "Canon EOS R50 V 說明書：Movie Recording Size",
+      "source_url": "https://cam.start.canon/en/C021/manual/html/UG-04_Shooting_0040.html"
+    },
+    {
+      "source_name": "Canon EOS R50 V 說明書：Movie Recording Format",
+      "source_url": "https://cam.start.canon/en/C021/manual/html/UG-04_Shooting_0050.html"
+    },
+    {
+      "source_name": "Canon EOS R50 V 說明書：Time Code",
+      "source_url": "https://cam.start.canon/en/C021/manual/html/UG-04_Shooting_0440.html"
+    },
+    {
+      "source_name": "Canon EOS R50 V 說明書：HDR/C. Log View Assist",
+      "source_url": "https://cam.start.canon/en/C021/manual/html/UG-04_Shooting_0480.html"
+    }
+  ]
+}

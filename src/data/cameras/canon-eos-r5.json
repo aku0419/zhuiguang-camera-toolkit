@@ -1,0 +1,904 @@
+{
+  "slug": "canon-eos-r5",
+  "brand": "Canon",
+  "model": "EOS R5",
+  "aliases": [
+    "R5",
+    "Canon R5",
+    "EOS-R5"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 36.0,
+    "height_mm": 24.0,
+    "resolution_mp": 45.0
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "Canon Log",
+    "Canon Log 3"
+  ],
+  "raw": "可內錄 RAW 影片（.CRM，8K RAW 8192×4320，Standard 最高 29.97p、Light 最高 29.97p；僅 CFexpress 卡）；HDMI RAW 輸出：8192×4320（29.97／24／23.98p），開啟 Movie cropping 時 5088×2680（最高 59.94p），同時錄 4096×2160 MP4 到記憶卡。RAW 位元深度說明書未標示",
+  "open_gate": false,
+  "lens_mount": "Canon RF",
+  "media": [
+    "CFexpress Type B",
+    "SD／SDHC／SDXC（支援 UHS-II）"
+  ],
+  "timecode": "機身內建時間碼（Rec run／Free run，可設起始值與 Drop Frame）；可經 HDMI 輸出時間碼（可同步開始／停止錄影指令）；說明書未列時間碼輸入／輸出端子",
+  "sdi": "無",
+  "hdmi": "Type D（Micro HDMI）；8K 影片不能由 HDMI 輸出（8K 影片經 HDMI 輸出為 4K）",
+  "dynamic_range_claimed": "Canon Log：約 800%（ISO 400 以上）；Canon Log 3：約 1600%（ISO 800 以上）",
+  "recording_modes": [
+    {
+      "resolution": "8192x4320",
+      "max_fps": 30,
+      "codec": "RAW（Standard）",
+      "bitrate_mbps": 2600,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄；25p 同為 2600，24p 同為 2600；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "RAW（Standard）",
+      "bitrate_mbps": 2600,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 30,
+      "codec": "RAW（Light）",
+      "bitrate_mbps": 1700,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄；25p 同為 1700；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "RAW（Light）",
+      "bitrate_mbps": 1350,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 30,
+      "codec": "ALL-I，MP4（8-bit）",
+      "bitrate_mbps": 1300,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "ALL-I 僅 CFexpress 卡可錄；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 30,
+      "codec": "ALL-I，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 1300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ALL-I 僅 CFexpress 卡可錄；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "ALL-I，MP4（8-bit）",
+      "bitrate_mbps": 1300,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "ALL-I 僅 CFexpress 卡可錄；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "ALL-I，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 1300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ALL-I 僅 CFexpress 卡可錄；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 30,
+      "codec": "IPB Standard，MP4（8-bit）",
+      "bitrate_mbps": 470,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 30,
+      "codec": "IPB Standard，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 680,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "IPB Standard，MP4（8-bit）",
+      "bitrate_mbps": 470,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "IPB Standard，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 680,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 30,
+      "codec": "IPB Light，MP4（8-bit）",
+      "bitrate_mbps": 230,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 30,
+      "codec": "IPB Light，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 340,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "IPB Light，MP4（8-bit）",
+      "bitrate_mbps": 230,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "IPB Light，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 340,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 30,
+      "codec": "ALL-I，MP4（8-bit）",
+      "bitrate_mbps": 1300,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "ALL-I 僅 CFexpress 卡可錄；24p 僅 23.98 可選；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 30,
+      "codec": "ALL-I，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 1300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ALL-I 僅 CFexpress 卡可錄；24p 僅 23.98 可選；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 24,
+      "codec": "ALL-I，MP4（8-bit）",
+      "bitrate_mbps": 1300,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "ALL-I 僅 CFexpress 卡可錄；24p 僅 23.98 可選；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 24,
+      "codec": "ALL-I，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 1300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ALL-I 僅 CFexpress 卡可錄；24p 僅 23.98 可選；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 30,
+      "codec": "IPB Standard，MP4（8-bit）",
+      "bitrate_mbps": 470,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "24p 僅 23.98 可選；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 30,
+      "codec": "IPB Standard，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 680,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "24p 僅 23.98 可選；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 24,
+      "codec": "IPB Standard，MP4（8-bit）",
+      "bitrate_mbps": 470,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "24p 僅 23.98 可選；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 24,
+      "codec": "IPB Standard，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 680,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "24p 僅 23.98 可選；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 30,
+      "codec": "IPB Light，MP4（8-bit）",
+      "bitrate_mbps": 230,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "24p 僅 23.98 可選；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 30,
+      "codec": "IPB Light，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 340,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "24p 僅 23.98 可選；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 24,
+      "codec": "IPB Light，MP4（8-bit）",
+      "bitrate_mbps": 230,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "24p 僅 23.98 可選；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 24,
+      "codec": "IPB Light，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 340,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "24p 僅 23.98 可選；8K 連續錄影受溫度限制，室溫下約 20 分鐘（原廠說明書）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "ALL-I，MP4（8-bit）",
+      "bitrate_mbps": 1880,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：不收音，以 1/4 慢動作播放；單段最長 7 分 29 秒；不可錄到 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "ALL-I，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 1880,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：不收音，以 1/4 慢動作播放；單段最長 7 分 29 秒；不可錄到 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "ALL-I，MP4（8-bit）",
+      "bitrate_mbps": 940,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "ALL-I 4K 60p 不可錄到 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "ALL-I，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 1000,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ALL-I 4K 60p 不可錄到 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "IPB Standard，MP4（8-bit）",
+      "bitrate_mbps": 230,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 60p 不可錄到 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "IPB Standard，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 340,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 60p 不可錄到 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "IPB Light，MP4（8-bit）",
+      "bitrate_mbps": 120,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 60p 不可錄到 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "IPB Light，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 170,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 60p 不可錄到 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "ALL-I，MP4（8-bit）",
+      "bitrate_mbps": 470,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "ALL-I，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 470,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "ALL-I，MP4（8-bit）",
+      "bitrate_mbps": 470,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "ALL-I，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 470,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "IPB Standard，MP4（8-bit）",
+      "bitrate_mbps": 120,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "IPB Standard，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 170,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "IPB Standard，MP4（8-bit）",
+      "bitrate_mbps": 120,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "IPB Standard，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 170,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "IPB Light，MP4（8-bit）",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "IPB Light，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 85,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "IPB Light，MP4（8-bit）",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "IPB Light，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 85,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "ALL-I，MP4（8-bit）",
+      "bitrate_mbps": 1880,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：不收音，以 1/4 慢動作播放；單段最長 7 分 29 秒；不可錄到 SD 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "ALL-I，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 1880,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：不收音，以 1/4 慢動作播放；單段最長 7 分 29 秒；不可錄到 SD 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "ALL-I，MP4（8-bit）",
+      "bitrate_mbps": 940,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "ALL-I 4K 60p 不可錄到 SD 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "ALL-I，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 1000,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ALL-I 4K 60p 不可錄到 SD 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "IPB Standard，MP4（8-bit）",
+      "bitrate_mbps": 230,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 60p 不可錄到 SD 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "IPB Standard，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 340,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 60p 不可錄到 SD 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "IPB Light，MP4（8-bit）",
+      "bitrate_mbps": 120,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 60p 不可錄到 SD 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "IPB Light，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 170,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 60p 不可錄到 SD 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "ALL-I，MP4（8-bit）",
+      "bitrate_mbps": 470,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同；24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "ALL-I，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 470,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同；24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "ALL-I，MP4（8-bit）",
+      "bitrate_mbps": 470,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同；24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "ALL-I，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 470,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同；24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "IPB Standard，MP4（8-bit）",
+      "bitrate_mbps": 120,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同；24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "IPB Standard，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 170,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同；24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "IPB Standard，MP4（8-bit）",
+      "bitrate_mbps": 120,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同；24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "IPB Standard，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 170,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同；24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "IPB Light，MP4（8-bit）",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同；24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "IPB Light，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 85,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同；24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "IPB Light，MP4（8-bit）",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同；24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "IPB Light，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 85,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 30p 以下可選 4K HQ（Fine）高畫質模式，位元率與表列相同；24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "ALL-I，MP4（8-bit）",
+      "bitrate_mbps": 360,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：不收音，以 1/4 慢動作播放；單段最長 7 分 29 秒；不可錄到 SD 卡"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "ALL-I，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 470,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "高格率（High Frame Rate）：不收音，以 1/4 慢動作播放；單段最長 7 分 29 秒；不可錄到 SD 卡"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "ALL-I，MP4（8-bit）",
+      "bitrate_mbps": 180,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "ALL-I，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 230,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "IPB Standard，MP4（8-bit）",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "IPB Standard，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 90,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "IPB Light，MP4（8-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "IPB Light，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "ALL-I，MP4（8-bit）",
+      "bitrate_mbps": 90,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "ALL-I，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "ALL-I，MP4（8-bit）",
+      "bitrate_mbps": 90,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "ALL-I，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "IPB Standard，MP4（8-bit）",
+      "bitrate_mbps": 30,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "IPB Standard，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 45,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "IPB Standard，MP4（8-bit）",
+      "bitrate_mbps": 30,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "IPB Standard，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 45,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "24p 僅 23.98 可選"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "IPB Light，MP4（8-bit）",
+      "bitrate_mbps": 12,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "說明書僅列 29.97／25.00p，未列 24p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "IPB Light，MP4（Canon Log／HDR PQ，10-bit）",
+      "bitrate_mbps": 28,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "說明書僅列 29.97／25.00p，未列 24p"
+    }
+  ],
+  "source_name": "Canon EOS R5 Advanced User Guide（Canon 官方線上說明書）",
+  "source_url": "https://cam.start.canon/en/C003/",
+  "last_verified": "2026-10-17",
+  "editor_notes": "本檔資料全部取自 Canon 官方線上說明書（EOS R5 Advanced User Guide，頁尾版權 2025）。\n說明書沒有寫發表日期與基礎 ISO（原生 ISO），寫 Unknown。動態範圍「約 800%／1600%」是 Canon 說明書「Canon Log Settings」頁的寫法（百分比），不是 stops；請負責人確認要不要換算或維持。\n影片編碼：說明書只寫 ALL-I、IPB（Standard）、IPB（Light）、RAW，沒寫 H.264／H.265，所以 codec 用 Canon 原廠名稱。位元深度依說明書：一般錄影為 YCbCr 4:2:0 8-bit；Canon Log 錄影為 YCbCr 4:2:2 10-bit。\nHDR PQ 開啟時的位元率與 Canon Log 相同（說明書把「Canon Log 開」與「HDR PQ 開」併成同一張表），但說明書沒有另外寫 HDR PQ 的位元深度與色彩取樣，這裡跟 Canon Log 一起列為 10-bit 4:2:2，請核對。\n4K HQ（Fine）模式只在 30p 以下，位元率與一般 4K 相同，沒有另列一行。\n說明書內容有互相矛盾：影像範圍段落寫「8K／4K 在 Movie cropping 開啟或 RF-S 鏡頭時不支援」，卻又列出 4096×2160／3840×2160 的裁切範圍；溫度限制段又提到「4K 60p cropped recording 約 25 分鐘」。本檔 4K 60p 以下一律標 crop: none，請核對。\n高格率（4K／FHD 119.9／100 fps）單段最長 7 分 29 秒，不收音，以 1/4 慢動作播放；8K 連續錄影受溫度限制，室溫下約 20 分鐘。\nSD 卡不能錄：RAW、8K ALL-I、4K 119.9／100 fps、4K 59.94／50 fps。",
+  "extra_sources": [
+    {
+      "source_name": "Specifications（規格表）",
+      "source_url": "https://cam.start.canon/en/C003/manual/html/UG-09_Reference_0100.html"
+    },
+    {
+      "source_name": "Time Code（時間碼）",
+      "source_url": "https://cam.start.canon/en/C003/manual/html/UG-03_Shooting-2_0060.html"
+    }
+  ]
+}

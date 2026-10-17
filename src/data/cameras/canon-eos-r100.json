@@ -1,0 +1,114 @@
+{
+  "slug": "canon-eos-r100",
+  "brand": "Canon",
+  "model": "EOS R100",
+  "aliases": [
+    "R100",
+    "EOS R100"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "APS-C",
+    "width_mm": 22.3,
+    "height_mm": 14.9,
+    "resolution_mp": 24.1
+  },
+  "base_iso": "Unknown",
+  "log": [],
+  "raw": "影片不能錄 RAW；也沒有 HDMI RAW 輸出（原廠說明書未列）",
+  "open_gate": false,
+  "lens_mount": "Canon RF",
+  "media": [
+    "SD／SDHC／SDXC（單卡槽，UHS-I）"
+  ],
+  "timecode": "原廠說明書未列時間碼功能",
+  "sdi": "無",
+  "hdmi": "Type D（Micro HDMI），可選 Auto／1080p 輸出",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "IPB（Standard），MP4",
+      "bitrate_mbps": 120,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "4K 只有 23.98／25 fps；原廠表只列 4K IPB(Standard)；4K 是否裁切說明書未寫。4K 對焦為對比式 AF"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "IPB（Standard），MP4",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "IPB（Standard），MP4",
+      "bitrate_mbps": 30,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "23.98／25／29.97 fps 位元率相同"
+    },
+    {
+      "resolution": "1280x720",
+      "max_fps": 60,
+      "codec": "IPB（Standard），MP4",
+      "bitrate_mbps": 26,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "59.94／50 fps"
+    },
+    {
+      "resolution": "1280x720",
+      "max_fps": 120,
+      "codec": "IPB（Standard），MP4",
+      "bitrate_mbps": 52,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "High Frame Rate 慢動作（119.88／100 fps），不收音，單段最長 7 分 29 秒，以 29.97／25 fps 檔案播放（慢 1/4）；AF 與數位防手震停用"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "ALL-I，MP4",
+      "bitrate_mbps": 300,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅縮時動態（4K 縮時）；29.97／25 fps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "ALL-I，MP4",
+      "bitrate_mbps": 90,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅縮時動態（Full HD 縮時）；29.97／25 fps"
+    }
+  ],
+  "source_name": "Canon EOS R100 Advanced User Guide（線上說明書，Specifications 與 Movie Recording Quality）",
+  "source_url": "https://cam.start.canon/en/C015/manual/html/UG-11_Reference_0080.html",
+  "last_verified": "2026-10-17",
+  "extra_sources": [
+    {
+      "source_name": "Canon EOS R100 線上說明書：Movie Recording Quality",
+      "source_url": "https://cam.start.canon/en/C015/manual/html/UG-06_Shooting-2_0040.html"
+    },
+    {
+      "source_name": "Canon EOS R100 線上說明書：Movie Digital IS",
+      "source_url": "https://cam.start.canon/en/C015/manual/html/UG-06_Shooting-2_0110.html"
+    }
+  ],
+  "editor_notes": "1) 感光元件尺寸 22.3×14.9 mm、有效像素約 24.1 MP 來自說明書 Specifications。2) 位元率為說明書表格的「約」值。3) 4K 是否裁切、4K 視角倍率，說明書沒寫，crop 填 Unknown，請負責人核對。4) 說明書寫明所有影片為 YCbCr 4:2:0 8-bit、BT.709，沒有 Canon Log。5) 說明書未列時間碼、ISO 基準值（base ISO），都填 Unknown／未列。6) 電子防手震（Movie digital IS）開啟會讓畫面略放大，表中未另列。7) 說明書沒寫上市／發表日，announced 為 Unknown。8) 單段錄影上限 29 分 59 秒（高格率 7 分 29 秒）。"
+}

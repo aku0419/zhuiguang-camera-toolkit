@@ -1,0 +1,157 @@
+{
+  "slug": "canon-eos-r",
+  "brand": "Canon",
+  "model": "EOS R",
+  "aliases": [
+    "R",
+    "EOS R"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "2018-10（上市）",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 36.0,
+    "height_mm": 24.0,
+    "resolution_mp": 30.3
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "Canon Log"
+  ],
+  "raw": "影片不能內錄 RAW；官方說明書未列 HDMI RAW 輸出",
+  "open_gate": false,
+  "lens_mount": "Canon RF",
+  "media": [
+    "SD／SDHC／SDXC（單卡槽，支援 UHS-II 與 UHS-I）"
+  ],
+  "timecode": "可在影片中加入時間碼（Time code 設定，可選 Rec Run／Free Run、遺漏格式；HDMI 輸出可選是否附加）",
+  "sdi": "無",
+  "hdmi": "Mini HDMI（Type C），可選 Auto／1080p；4K 可輸出，Canon Log 可 10-bit 輸出到外接錄影機",
+  "dynamic_range_claimed": "Canon Log：約 800%（ISO 400 以上）",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "ALL-I，MP4",
+      "bitrate_mbps": 480,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "4K 影片一律裁切中央（說明書：「4K 影片總是裁切螢幕中央」），倍率說明書未寫；29.97／25／24／23.98 fps 位元率相同；需 UHS-II、Video Speed Class 60 以上；可錄 Canon Log（8-bit 4:2:0 到卡）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "IPB（Standard），MP4",
+      "bitrate_mbps": 120,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "4K 影片一律裁切中央（說明書：「4K 影片總是裁切螢幕中央」），倍率說明書未寫；29.97／25／24／23.98 fps 位元率相同；可錄 Canon Log（8-bit 4:2:0 到卡）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "ALL-I，MP4",
+      "bitrate_mbps": 180,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "59.94／50 fps；Canon Log 可錄（8-bit）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "IPB（Standard），MP4",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "59.94／50 fps；Canon Log 可錄（8-bit）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "ALL-I，MP4",
+      "bitrate_mbps": 90,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "29.97／25／24／23.98 fps；Canon Log 可錄（8-bit）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "IPB（Standard），MP4",
+      "bitrate_mbps": 30,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "29.97／25／24／23.98 fps；Canon Log 可錄（8-bit）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "IPB（Light），MP4",
+      "bitrate_mbps": 12,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "29.97／25 fps；HDR 影片使用"
+    },
+    {
+      "resolution": "1280x720",
+      "max_fps": 120,
+      "codec": "ALL-I，MP4",
+      "bitrate_mbps": 160,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "High Frame Rate（119.88／100 fps）；不收音"
+    },
+    {
+      "resolution": "1280x720",
+      "max_fps": 60,
+      "codec": "ALL-I，MP4",
+      "bitrate_mbps": 80,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "59.94／50 fps；Canon Log 可錄（8-bit）"
+    },
+    {
+      "resolution": "1280x720",
+      "max_fps": 60,
+      "codec": "IPB（Standard），MP4",
+      "bitrate_mbps": 26,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "59.94／50 fps；Canon Log 可錄（8-bit）"
+    },
+    {
+      "resolution": "1280x720",
+      "max_fps": 30,
+      "codec": "IPB（Standard），MP4",
+      "bitrate_mbps": 13,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "29.97／25 fps；Canon Log 可錄（8-bit）"
+    }
+  ],
+  "source_name": "Canon EOS R Specifications（Canon Camera Museum 官方規格 PDF，Supplemental Information）",
+  "source_url": "https://global.canon/ja/c-museum/wp-content/uploads/2019/09/dslr877_en.pdf",
+  "last_verified": "2026-10-17",
+  "extra_sources": [
+    {
+      "source_name": "Canon EOS R 進階使用說明書（葡萄牙文官方 PDF，錄影容量與卡片速度表、Canon Log、4K 裁切說明）",
+      "source_url": "https://gdlp01.c-wss.com/gds/0/0300032290/09/EOS_R_Advanced_User_Guide_PT.pdf"
+    },
+    {
+      "source_name": "Canon Camera Museum：EOS R",
+      "source_url": "https://global.canon/en/c-museum/product/dslr877.html"
+    }
+  ],
+  "editor_notes": "1) cam.start.canon 沒有 EOS R；規格取自 Canon Camera Museum 官方英文規格 PDF（機身韌體 1.6.0 版說明書），錄影容量表、Canon Log 與 4K 裁切說明取自 Canon 官方葡萄牙文進階說明書（gdlp01.c-wss.com），數字不受語言影響。2) 位元率為官方規格 PDF 的約值。3) 4K 一律裁切中央，說明書沒寫倍率，crop_factor 未填，請負責人核對。4) 說明書：卡內錄影（含 Canon Log）皆為 YCbCr 4:2:0 8-bit、Rec.709；Canon Log 另可經 HDMI 以 10-bit 輸出 4K 到外接錄影機（此時不能錄卡），HDMI 10-bit 的色彩取樣說明書未寫，故未列入 recording_modes。5) Canon Log 動態範圍「約 800%（ISO 400 以上）」為說明書文字；不支援 Canon Log 2／3。6) HDR 影片不能搭配 Canon Log；Canon Log 會關閉周邊光量校正。7) ISO 基準值查無，填 Unknown；HDR 影片 Full HD 的位元率與一般 IPB(Standard) 30 Mbps 相同（容量表 216 MB/min）。8) 上市時間取自 Canon Camera Museum（2018 年 10 月）；官方未見發表日。9) 4K 縮時動態（ALL-I）未另列。"
+}

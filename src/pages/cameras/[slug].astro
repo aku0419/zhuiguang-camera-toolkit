@@ -106,6 +106,7 @@ const desc = `${c.name} 規格：${c.sensor.format} 感光元件、${c.lens_moun
 
   <h2>錄影模式</h2>
   <p class="cam-count">列出常用的錄影模式，不是全部組合。位元率單位 Mbps。</p>
+  <div id="modes" data-count={c.recording_modes.length}>
   <ul class="modes-m">
     {c.recording_modes.map((m: any) => (
       <li>
@@ -135,6 +136,7 @@ const desc = `${c.name} 規格：${c.sensor.format} 感光元件、${c.lens_moun
       </tbody>
     </table>
   </div>
+  </div>
 
   <p class="cam-count">「需要的寫入速度」是用位元率換算（Mbps ÷ 8 = MB/s）的估算值，實際要求可能更高，請以原廠說明書建議的記憶卡為準。等級說明見<a href="/media/video-speed-class/">影片速度等級 V30／V60／V90</a>。</p>
 
@@ -150,4 +152,28 @@ const desc = `${c.name} 規格：${c.sensor.format} 感光元件、${c.lens_moun
     </p>
     <p>最後確認日期：{c.last_verified}。規格可能因韌體更新而改變，重要拍攝前請以原廠最新文件為準。標示「未知」表示原廠資料查不到，不代表不支援。</p>
   </div>
+  <script>
+    // 錄影模式太多時（例如 100 多列），先只顯示前 12 筆，按鈕展開全部。沒有 JavaScript 時會直接顯示全部。
+    const box = document.getElementById("modes");
+    const total = Number(box?.dataset.count || 0);
+    const LIMIT = 12;
+    if (box && total > LIMIT) {
+      box.classList.add("collapsed");
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "modes-more";
+      const sync = () => {
+        const closed = box.classList.contains("collapsed");
+        btn.textContent = closed ? `顯示全部 ${total} 筆錄影模式` : "收合";
+        btn.setAttribute("aria-expanded", closed ? "false" : "true");
+      };
+      btn.addEventListener("click", () => {
+        box.classList.toggle("collapsed");
+        sync();
+        if (box.classList.contains("collapsed")) box.scrollIntoView({ block: "start" });
+      });
+      sync();
+      box.after(btn);
+    }
+  </script>
 </BaseLayout>
