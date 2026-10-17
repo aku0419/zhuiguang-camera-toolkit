@@ -1,0 +1,685 @@
+{
+  "slug": "sony-burano",
+  "brand": "Sony",
+  "model": "BURANO",
+  "aliases": [
+    "MPC-2610"
+  ],
+  "type": "電影機（Cinema Line）",
+  "announced": "2023-09",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.9,
+    "height_mm": 24.0,
+    "resolution_mp": 41.9
+  },
+  "base_iso": [
+    800,
+    3200
+  ],
+  "log": [
+    "S-Log3"
+  ],
+  "raw": "機身內錄 X-OCN LT（Sony 壓縮 RAW，16-bit scene-linear，僅 Cine EI 模式）；原廠韌體路線圖預計 Ver.4.0（2027 年 5 月以後）新增 X-OCN ST",
+  "open_gate": false,
+  "lens_mount": "PL／Sony E（可換）",
+  "media": [
+    "CFexpress Type B ×2（SLOT A／SLOT B，需 VPG 認證卡）",
+    "Utility SD 卡槽（與 SLOT B 並列，用於設定資料／Proxy）"
+  ],
+  "timecode": "TC IN／OUT 端子（BNC，可切換輸入／輸出）；另有 Genlock IN／REF OUT 端子（BNC）",
+  "sdi": "SDI OUT1：BNC，12G-SDI／6G-SDI／3G-SDI（Level A/B）／HD-SDI；SDI OUT2：BNC，3G-SDI（Level A/B）／HD-SDI",
+  "hdmi": "Type A（標準尺寸）",
+  "dynamic_range_claimed": "16 stops",
+  "recording_modes": [
+    {
+      "resolution": "8632x4856",
+      "max_fps": 24,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 FF 8.6K 16:9；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "8632x4856",
+      "max_fps": 30,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 FF 8.6K 16:9；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "8632x4552",
+      "max_fps": 24,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 FF 8.6K 17:9；位元率原廠頁面未列；8.6K 17:9 才有 24p，16:9 僅 23.98／25／29.97p"
+    },
+    {
+      "resolution": "8632x4552",
+      "max_fps": 30,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 FF 8.6K 17:9；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "6052x3404",
+      "max_fps": 24,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 FF crop 6K 16:9；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "6052x3404",
+      "max_fps": 30,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 FF crop 6K 16:9；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "6052x3404",
+      "max_fps": 60,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 FF crop 6K 16:9；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "6052x3192",
+      "max_fps": 24,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 FF crop 6K 17:9；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "6052x3192",
+      "max_fps": 30,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 FF crop 6K 17:9；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "6052x3192",
+      "max_fps": 60,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 FF crop 6K 17:9；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "5760x3240",
+      "max_fps": 24,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 S35 5.8K 16:9；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "5760x3240",
+      "max_fps": 30,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 S35 5.8K 16:9；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "5760x3240",
+      "max_fps": 60,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 S35 5.8K 16:9；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "5760x3036",
+      "max_fps": 24,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 S35 5.8K 17:9；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "5760x3036",
+      "max_fps": 30,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 S35 5.8K 17:9；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "5760x3036",
+      "max_fps": 60,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 S35 5.8K 17:9；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.11,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 S35 crop 4K 17:9（HFR）；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.11,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 S35 crop 4K 17:9（HFR）；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.11,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 S35 crop 4K 17:9（HFR）；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.11,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 S35 crop 4K 17:9（HFR）；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 FF crop 3.8K 16:9（韌體 Ver.2.0 起）；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 FF crop 3.8K 16:9（韌體 Ver.2.0 起）；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 FF crop 3.8K 16:9（韌體 Ver.2.0 起）；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 FF crop 3.8K 16:9（韌體 Ver.2.0 起）；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "4256x3192",
+      "max_fps": 24,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.52,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 S35 4.3K 4:3（韌體 Ver.2.0 起，變形鏡頭用）；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "4256x3192",
+      "max_fps": 30,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.52,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 S35 4.3K 4:3（韌體 Ver.2.0 起，變形鏡頭用）；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "4256x3192",
+      "max_fps": 60,
+      "codec": "X-OCN LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 16,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.52,
+      "notes": "Sony 壓縮 RAW（scene-linear）；掃描模式 S35 4.3K 4:3（韌體 Ver.2.0 起，變形鏡頭用）；位元率原廠頁面未列"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 24,
+      "codec": "XAVC H-I HQ",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠對 8K 30p 的標示；掃描模式 FF 8.6K 16:9（Ultra HD 8K）"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 24,
+      "codec": "XAVC H-I SQ",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠對 8K 30p 的標示；掃描模式 FF 8.6K 16:9（Ultra HD 8K）"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 24,
+      "codec": "XAVC H-L",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率原廠頁面未列；掃描模式 FF 8.6K 16:9（Ultra HD 8K）"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 30,
+      "codec": "XAVC H-I HQ",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠對 8K 30p 的標示；掃描模式 FF 8.6K 16:9（Ultra HD 8K）"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 30,
+      "codec": "XAVC H-I SQ",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠對 8K 30p 的標示；掃描模式 FF 8.6K 16:9（Ultra HD 8K）"
+    },
+    {
+      "resolution": "7680x4320",
+      "max_fps": 30,
+      "codec": "XAVC H-L",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率原廠頁面未列；掃描模式 FF 8.6K 16:9（Ultra HD 8K）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "XAVC H-I HQ",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠對 8K 30p 的標示；掃描模式 FF 8.6K 17:9（DCI 8K）；XAVC H-L 沒有 DCI 8K"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "XAVC H-I SQ",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠對 8K 30p 的標示；掃描模式 FF 8.6K 17:9（DCI 8K）；XAVC H-L 沒有 DCI 8K"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 30,
+      "codec": "XAVC H-I HQ",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠對 8K 30p 的標示；掃描模式 FF 8.6K 17:9（DCI 8K）；XAVC H-L 沒有 DCI 8K"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 30,
+      "codec": "XAVC H-I SQ",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠對 8K 30p 的標示；掃描模式 FF 8.6K 17:9（DCI 8K）；XAVC H-L 沒有 DCI 8K"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC-I class300 4K",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "掃描模式：FF crop 6K 16:9 或 S35 5.8K 16:9；FF crop 6K 約 1.07 倍（由 35.9÷33.6 換算）、S35 5.8K 約 1.5 倍；位元率原廠頁面未列（class 為 Sony 命名）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC-I class300 4K",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "掃描模式：FF crop 6K 16:9 或 S35 5.8K 16:9；FF crop 6K 約 1.07 倍（由 35.9÷33.6 換算）、S35 5.8K 約 1.5 倍；位元率原廠頁面未列（class 為 Sony 命名）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC-I class300 4K",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "掃描模式：FF crop 6K 16:9 或 S35 5.8K 16:9；FF crop 6K 約 1.07 倍（由 35.9÷33.6 換算）、S35 5.8K 約 1.5 倍；位元率原廠頁面未列（class 為 Sony 命名）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC-L 4K（Long420）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "掃描模式：FF crop 6K 16:9 或 S35 5.8K 16:9；FF crop 6K 約 1.07 倍（由 35.9÷33.6 換算）、S35 5.8K 約 1.5 倍；位元率原廠頁面未列（class 為 Sony 命名）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC-L 4K（Long420）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "掃描模式：FF crop 6K 16:9 或 S35 5.8K 16:9；FF crop 6K 約 1.07 倍（由 35.9÷33.6 換算）、S35 5.8K 約 1.5 倍；位元率原廠頁面未列（class 為 Sony 命名）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC-L 4K（Long420）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "掃描模式：FF crop 6K 16:9 或 S35 5.8K 16:9；FF crop 6K 約 1.07 倍（由 35.9÷33.6 換算）、S35 5.8K 約 1.5 倍；位元率原廠頁面未列（class 為 Sony 命名）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XAVC-I class300 DCI 4K",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "掃描模式：FF crop 6K 17:9 或 S35 5.8K 17:9；FF crop 6K 約 1.07 倍（由 35.9÷33.6 換算）、S35 5.8K 約 1.5 倍；位元率原廠頁面未列（class 為 Sony 命名）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XAVC-I class300 DCI 4K",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "掃描模式：FF crop 6K 17:9 或 S35 5.8K 17:9；FF crop 6K 約 1.07 倍（由 35.9÷33.6 換算）、S35 5.8K 約 1.5 倍；位元率原廠頁面未列（class 為 Sony 命名）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XAVC-I class300 DCI 4K",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "掃描模式：FF crop 6K 17:9 或 S35 5.8K 17:9；FF crop 6K 約 1.07 倍（由 35.9÷33.6 換算）、S35 5.8K 約 1.5 倍；位元率原廠頁面未列（class 為 Sony 命名）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC-I class100 HD",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "掃描模式：FF crop 6K 16:9 或 S35 5.8K 16:9（8K 過取樣）；FF crop 6K 約 1.07 倍（由 35.9÷33.6 換算）、S35 5.8K 約 1.5 倍；位元率原廠頁面未列（class 為 Sony 命名）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC-I class100 HD",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "掃描模式：FF crop 6K 16:9 或 S35 5.8K 16:9（8K 過取樣）；FF crop 6K 約 1.07 倍（由 35.9÷33.6 換算）、S35 5.8K 約 1.5 倍；位元率原廠頁面未列（class 為 Sony 命名）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC-I class100 HD",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "掃描模式：FF crop 6K 16:9 或 S35 5.8K 16:9（8K 過取樣）；FF crop 6K 約 1.07 倍（由 35.9÷33.6 換算）、S35 5.8K 約 1.5 倍；位元率原廠頁面未列（class 為 Sony 命名）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC-L HD50",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "掃描模式：FF crop 6K 16:9 或 S35 5.8K 16:9（8K 過取樣）；FF crop 6K 約 1.07 倍、S35 5.8K 約 1.5 倍；HD50＝50Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC-L HD50",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "掃描模式：FF crop 6K 16:9 或 S35 5.8K 16:9（8K 過取樣）；FF crop 6K 約 1.07 倍、S35 5.8K 約 1.5 倍；HD50＝50Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC-L HD50",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.07,
+      "notes": "掃描模式：FF crop 6K 16:9 或 S35 5.8K 16:9（8K 過取樣）；FF crop 6K 約 1.07 倍、S35 5.8K 約 1.5 倍；HD50＝50Mbps"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XAVC-I class300 DCI 4K",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 2.11,
+      "notes": "高格率（S&Q）：掃描模式 S35 crop 4K 17:9（17.0×9.0mm）；倍率由感光元件寬度換算（35.9÷寬度），非原廠直接標示"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "XAVC-I class300 4K",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "高格率（S&Q）：掃描模式 FF crop 3.8K 16:9（31.95×17.97mm，韌體 Ver.2.0 起）；倍率由感光元件寬度換算（35.9÷寬度），非原廠直接標示"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "XAVC-L 4K（Long420）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "高格率（S&Q）：掃描模式 FF crop 3.8K 16:9（韌體 Ver.2.0 起）；倍率由感光元件寬度換算（35.9÷寬度），非原廠直接標示"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XAVC-I class100 HD",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "高格率（S&Q）：掃描模式 FF crop 3.8K 16:9；倍率由感光元件寬度換算（35.9÷寬度），非原廠直接標示"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XAVC-L HD50",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "高格率（S&Q）：掃描模式 FF crop 3.8K 16:9；倍率由感光元件寬度換算（35.9÷寬度），非原廠直接標示"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "XAVC-I class100 HD",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "高格率（S&Q）：掃描模式 S35 1.9K 16:9（23.96×13.48mm，韌體 Ver.2.0 起；高格率最高 240fps）；倍率由感光元件寬度換算（35.9÷寬度），非原廠直接標示"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "XAVC-L HD50",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "高格率（S&Q）：掃描模式 S35 1.9K 16:9（韌體 Ver.2.0 起）；倍率由感光元件寬度換算（35.9÷寬度），非原廠直接標示"
+    }
+  ],
+  "source_name": "Sony Japan BURANO（MPC-2610）仕様書（PDF）與 BURANO 商品頁（記錄コーデック別 イメージスキャンモード表）",
+  "source_url": "https://www.sony.jp/products/catalog/SPC_BURANO(MPC-2610).pdf",
+  "extra_sources": [
+    {
+      "source_name": "Sony Japan BURANO 商品頁（含各記錄格式的掃描模式表與韌體 Ver.2.0／3.0 新增模式）",
+      "source_url": "https://www.sony.jp/ls-camera/spl/BURANO/index.html"
+    },
+    {
+      "source_name": "Sony Japan BURANO 主な仕様",
+      "source_url": "https://www.sony.jp/ls-camera/products/BURANO/spec.html"
+    }
+  ],
+  "last_verified": "2026-10-17",
+  "editor_notes": "【請負責人核對】1) 找不到 BURANO 的英文 Help Guide／操作說明書（helpguide.sony.net 沒有，pro.sony 與 Sony 各國官網在此環境被擋），改用 Sony Japan 官方規格書（PDF）與商品頁整理；解析度、格率、感光元件尺寸（W×H mm）、掃描模式取自商品頁「記錄コーデック別 イメージスキャンモード」那張表（是圖片，已人工讀圖，請核對）。2) 原廠頁面只寫兩個位元率：XAVC H-I HQ 1200Mbps、H-I SQ 800Mbps（8K 30p）；X-OCN LT、XAVC H-L、XAVC-I class300／class100、XAVC-L 都沒有 Mbps 數字，所以寫 Unknown（這些模式在錄影容量工具裡不能拿來算，請看原廠操作說明書補上）。3) 位元深度：X-OCN 為 16-bit、XAVC H-I 為 10-bit（商品頁有寫）；XAVC-I／L 的位元深度與色彩取樣原廠頁面沒寫，Unknown（XAVC「Long420」表示 4:2:0，已填）。X-OCN 是 RAW，色彩取樣填 RAW。4) 接環：原廠規格寫「PL 接環／E 接環」，出廠為 PL 接環（附 PL 接環轉接座），取下轉接座後為 E 接環（原廠寫「付属PLマウントアダプターを外して使用」）。lens_mount 已寫成「PL／Sony E（可換）」，鏡頭頁會同時比對 PL 與 Sony E 接環的鏡頭。5) 有效像素約 4190 萬（原廠註記會隨鏡頭與模式改變）；總畫素約 5700 萬。6) 裁切倍率（crop_factor）是用 35.9 ÷ 該模式感光元件寬度換算，不是原廠直接標示。X-OCN 與 XAVC 在不同掃描模式裁切不同，這裡每個解析度只選一種主要模式（見 notes）。7) 8K 的 XAVC H-L 沒有 DCI 8K。8) 韌體：Ver.2.0（2025-06）新增 FF crop 3.8K、S35 4.3K 4:3、S35 1.9K（240fps）；Ver.3.0（2026-05）新增 FF 5.8K 6:5（最多 30fps）、S35 crop 3.8K 16:9（最多 120fps）及 S35 1.9K 可錄 X-OCN；後兩者的解析度原廠頁面沒寫，未列入。9) open_gate 填 false 是依掃描模式表判斷（沒有整個感光元件的模式），原廠未直接寫。10) 發表日取自商品頁註記「2023年9月発表時点」。11) 動態範圍：規格書寫 16 stop。12) 只列整數名義格率 24／30／60／120／240，25／50 為 PAL 系統，格率上限相同。"
+}

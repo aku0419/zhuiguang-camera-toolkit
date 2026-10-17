@@ -1,0 +1,315 @@
+{
+  "slug": "sony-fx9",
+  "brand": "Sony",
+  "model": "FX9",
+  "aliases": [
+    "PXW-FX9",
+    "PXW-FX9K"
+  ],
+  "type": "電影機（Cinema Line）",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": "Unknown",
+    "height_mm": "Unknown",
+    "resolution_mp": "Unknown"
+  },
+  "base_iso": [
+    800,
+    4000
+  ],
+  "log": [
+    "S-Log3"
+  ],
+  "raw": "機身內不能錄 RAW；加裝選購的 XDCA-FX9 擴充單元後，可經 BNC 輸出 16-bit RAW 到對應的外接錄影機（原廠註明 4K 120p RAW 輸出限制為 10-bit，屬「將來支援」）",
+  "open_gate": false,
+  "lens_mount": "Sony E",
+  "media": [
+    "XQD 記憶卡 ×2",
+    "SD／MS 卡槽（僅用於設定資料與 Proxy 影片）"
+  ],
+  "timecode": "TC 端子（BNC，可切換輸入／輸出）；另有 GENLOCK IN／REF OUT 端子（BNC）",
+  "sdi": "SDI OUT1：BNC，12G-SDI／3G-SDI（Level A/B）／HD-SDI；SDI OUT2：BNC，3G-SDI（Level A/B）／HD-SDI。原廠註記：4K 輸出僅 59.94p（23.98p／29.97p 原廠當時列為將來韌體支援）",
+  "hdmi": "Type A（標準尺寸）",
+  "dynamic_range_claimed": "15+ stops",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC-I QFHD",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "位元率為原廠標示最高值（VBR）；6K 全片幅掃描（無裁切）僅能到 30p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XAVC-I QFHD",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "位元率為原廠標示最高值（VBR）；6K 全片幅掃描（無裁切）僅能到 30p。25p 為 PAL 系統"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC-I QFHD",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "位元率為原廠標示最高值（VBR）；6K 全片幅掃描（無裁切）僅能到 30p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XAVC-I QFHD",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "位元率為原廠標示最高值（VBR）；需用「全片幅裁切 5K」（視角為全片幅的 83%，約 1.2 倍）或 Super 35 4K 掃描；6K 全片幅掃描只到 30p。50p 為 PAL 系統"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC-I QFHD",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "位元率為原廠標示最高值（VBR）；需用「全片幅裁切 5K」（視角為全片幅的 83%，約 1.2 倍）或 Super 35 4K 掃描；6K 全片幅掃描只到 30p"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XAVC-I DCI 4K",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "規格書只寫可用 4096x2160 記錄（XAVC-I／L），沒有列出位元率"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XAVC-I DCI 4K",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "規格書只寫可用 4096x2160 記錄（XAVC-I／L），沒有列出位元率"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XAVC-I DCI 4K",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "規格書只寫可用 4096x2160 記錄（XAVC-I／L），沒有列出位元率；需用「全片幅裁切 5K」（視角為全片幅的 83%，約 1.2 倍）或 Super 35 4K 掃描；6K 全片幅掃描只到 30p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC-I HD",
+      "bitrate_mbps": 89,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠標示最高值（CBG）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 25,
+      "codec": "XAVC-I HD",
+      "bitrate_mbps": 112,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠標示最高值（CBG）；25p 為 PAL 系統"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC-I HD",
+      "bitrate_mbps": 111,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠標示最高值（CBG）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 50,
+      "codec": "XAVC-I HD",
+      "bitrate_mbps": 223,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠標示最高值（CBG）；50p 為 PAL 系統"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC-I HD",
+      "bitrate_mbps": 222,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠標示最高值（CBG）；規格書此列寫「222Mbp」（缺 s），應為 222Mbps，請核對"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XAVC-I HD",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "慢動作（S&Q）；規格書寫最高可拍 120fps，記錄檔最高 59.94p；未列位元率。全片幅 2K 掃描可到 180fps，Super 35 2K 掃描（約 1.5 倍裁切）到 120fps；原廠註明 2K 掃描為優先格率、畫質可能下降"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 180,
+      "codec": "XAVC-I HD",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "慢動作（S&Q）；規格書寫最高可拍 180fps，記錄檔最高 59.94p；未列位元率。全片幅 2K 掃描可到 180fps，Super 35 2K 掃描（約 1.5 倍裁切）到 120fps；原廠註明 2K 掃描為優先格率、畫質可能下降"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC-L QFHD",
+      "bitrate_mbps": 100,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠標示最高值（VBR）；25p 同 24／30p，50p 同 60p；6K 全片幅掃描（無裁切）僅能到 30p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC-L QFHD",
+      "bitrate_mbps": 100,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠標示最高值（VBR）；25p 同 24／30p，50p 同 60p；6K 全片幅掃描（無裁切）僅能到 30p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC-L QFHD",
+      "bitrate_mbps": 150,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "位元率為原廠標示最高值（VBR）；25p 同 24／30p，50p 同 60p；需用「全片幅裁切 5K」（視角為全片幅的 83%，約 1.2 倍）或 Super 35 4K 掃描；6K 全片幅掃描只到 30p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC-L HD 50",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠標示最高值（VBR）；25p／50p 同。另有 59.94i／50i 交錯式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC-L HD 50",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠標示最高值（VBR）；25p／50p 同。另有 59.94i／50i 交錯式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC-L HD 50",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠標示最高值（VBR）；25p／50p 同。另有 59.94i／50i 交錯式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC-L HD 35",
+      "bitrate_mbps": 35,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠標示最高值（VBR）；25p／50p 同。另有 59.94i／50i 交錯式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC-L HD 35",
+      "bitrate_mbps": 35,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠標示最高值（VBR）；25p／50p 同。另有 59.94i／50i 交錯式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC-L HD 35",
+      "bitrate_mbps": 35,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "位元率為原廠標示最高值（VBR）；25p／50p 同。另有 59.94i／50i 交錯式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "MPEG HD422",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "CBR；規格書另列 59.94i／50i 交錯式，沒有 60p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MPEG HD422",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "CBR；規格書另列 59.94i／50i 交錯式，沒有 60p"
+    }
+  ],
+  "source_name": "Sony Japan PXW-FX9／PXW-FX9K 仕様書（PDF）",
+  "source_url": "https://www.sony.jp/products/catalog/SPC_PXW-FX9.pdf",
+  "extra_sources": [
+    {
+      "source_name": "Sony Japan FX9 カタログ（2104，PDF）",
+      "source_url": "https://www.sony.jp/products/catalog/FX9_2104.pdf"
+    },
+    {
+      "source_name": "Sony Japan FX9 主な仕様",
+      "source_url": "https://www.sony.jp/ls-camera/products/PXW-FX9/spec.html"
+    }
+  ],
+  "last_verified": "2026-10-17",
+  "editor_notes": "【請負責人核對】1) 找不到 FX9 的英文 Help Guide／操作說明書（helpguide.sony.net 沒有，pro.sony 與 Sony 各國官網在此環境被擋），因此改用 Sony Japan 的官方規格書與型錄（日文）整理。2) 規格書沒寫感光元件實際尺寸（mm）與有效像素，只寫「35mm 全片幅相當、總畫素約 2050 萬」，所以寬、高、百萬畫素寫 Unknown；請對照原廠英文規格或說明書補上。3) 規格書位元率只列 QFHD／HD 的最高位元率，沒寫位元深度與色彩取樣；只有型錄寫「內部記錄 4K 4:2:2 10-bit」，所以 XAVC-I QFHD 填 10-bit 4:2:2，其他編碼寫 Unknown（第三方資料說 XAVC-L 4K 是 8-bit 4:2:0，但不能當原廠依據，請查原廠說明書）。4) XAVC-I HD 59.94p 規格書寫成「222Mbp」，應是 222Mbps 的筆誤，請核對。5) 4096x2160（DCI）規格書只在掃描模式表列為可記錄，沒有位元率。6) 50p／25p 為 PAL 系統，位元率與 60p／24p 略有差異，已分列。7) 掃描模式：6K 全片幅 ≤30p；全片幅裁切 5K（83% 視角）與 Super 35 4K ≤60p；全片幅 2K ≤180fps；Super 35 2K ≤120fps（Super 35 約 1.5 倍裁切，原廠沒寫倍率）。裁切倍率 1.2 是由原廠「全片幅的 83%」換算（1÷0.83），不是原廠直接標示。8) open_gate 填 false 是依掃描模式表（皆為 17:9／16:9 讀出，沒有整個感光元件的模式）判斷，原廠未直接寫。9) announced 查不到官方發表日（型錄註記「2019年9月時点」），寫 Unknown。10) 另有 Proxy（XAVC Proxy，最高 1920x1080 9Mbps）與交錯式（59.94i／50i）、XAVC-L HD25，未列入錄影模式。"
+}

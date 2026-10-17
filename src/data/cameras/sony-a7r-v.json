@@ -1,0 +1,197 @@
+{
+  "brand": "Sony",
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "base_iso": "Unknown",
+  "open_gate": false,
+  "lens_mount": "Sony E",
+  "sdi": "無",
+  "timecode": "沒有時間碼輸入端子；HDMI 可輸出時間碼（Time Code Output）",
+  "dynamic_range_claimed": "Unknown",
+  "last_verified": "2026-10-17",
+  "slug": "sony-a7r-v",
+  "model": "α7R V",
+  "aliases": [
+    "A7R V",
+    "A7RV",
+    "A7R5",
+    "A7RM5",
+    "ILCE-7RM5"
+  ],
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.7,
+    "height_mm": 23.8,
+    "resolution_mp": 61
+  },
+  "log": [
+    "S-Log2",
+    "S-Log3"
+  ],
+  "raw": "機身不能錄 RAW 影片；可經 HDMI 輸出 RAW 影片到外接 RAW 錄影機（3848×2168，24／25／30／50／60p）",
+  "media": [
+    "卡槽 1：CFexpress Type A／SD（UHS-I／UHS-II）",
+    "卡槽 2：CFexpress Type A／SD（UHS-I／UHS-II）"
+  ],
+  "hdmi": "Type A（標準尺寸）",
+  "recording_modes": [
+    {
+      "resolution": "7680x4320",
+      "max_fps": 24,
+      "codec": "XAVC HS 8K",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "手冊：4K 60p/50p 與 8K 24p/25p 錄影時視角約為鏡頭焦段的 1.2 倍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "手冊：4K 60p/50p 與 8K 24p/25p 錄影時視角約為鏡頭焦段的 1.2 倍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "手冊：4K 60p/50p 與 8K 24p/25p 錄影時視角約為鏡頭焦段的 1.2 倍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 140,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "手冊：4K 60p/50p 錄影時視角約為鏡頭焦段的 1.2 倍；50p 為 500 Mbps"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "25p 為 250 Mbps"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 222,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "50p 為 185 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 111,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "25p 為 93 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 89,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    }
+  ],
+  "source_name": "Sony ILCE-7RM5 Help Guide（PDF）",
+  "source_url": "https://helpguide.sony.net/ilc/2230/v1/en/print.pdf",
+  "editor_notes": "每種編碼、解析度、格率只列最高位元率的一種（手冊另有較低位元率與 4:2:0 選項）；位元率以 NTSC 格率為主。手冊：4K 60p/50p 與 8K 24p/25p 視角約為鏡頭焦段 1.2 倍（即有裁切），此時『APS-C/Super 35mm』鎖定為關；HDMI 輸出 RAW 時也是同樣視角。8K 只有 24p/25p，4K 沒有 120p。手冊沒有 Base ISO 項目、沒有動態範圍宣稱值、沒有發表日期，皆標 Unknown。"
+}

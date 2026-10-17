@@ -1,0 +1,413 @@
+{
+  "slug": "sony-fx2",
+  "brand": "Sony",
+  "model": "FX2",
+  "aliases": [
+    "ILME-FX2",
+    "ILME-FX2B"
+  ],
+  "type": "電影機（Cinema Line）",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.9,
+    "height_mm": 23.9,
+    "resolution_mp": 33
+  },
+  "base_iso": [
+    800,
+    4000
+  ],
+  "log": [
+    "S-Log3",
+    "S-Cinetone",
+    "HLG"
+  ],
+  "raw": "不能內錄 RAW 影片（原廠明寫 RAW 影片無法錄到記憶卡）；可經 HDMI 輸出 RAW 到外接錄影機（最高 59.94p，輸出時視角為 APS-C／Super 35）；靜態照片可存 RAW（ARW）",
+  "open_gate": false,
+  "lens_mount": "Sony E",
+  "media": [
+    "SLOT 1：CFexpress Type A／SD（UHS-I／UHS-II）",
+    "SLOT 2：SD（UHS-I／UHS-II）"
+  ],
+  "timecode": "可經 Multi/Micro USB 端子輸入（需 VMC-BNCM1 轉接線）；HDMI 可輸出時間碼",
+  "sdi": "無",
+  "hdmi": "Type A（標準尺寸）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "4K 59.94p／50p 時視角固定為 APS-C／Super 35 約 1.5 倍（原廠：鎖定開啟）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "4K 59.94p／50p 時視角固定為 APS-C／Super 35 約 1.5 倍（原廠：鎖定開啟）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "4K 59.94p／50p 時視角固定為 APS-C／Super 35 約 1.5 倍（原廠：鎖定開啟）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 75,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "4K 59.94p／50p 時視角固定為 APS-C／Super 35 約 1.5 倍（原廠：鎖定開啟）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 45,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "4K 59.94p／50p 時視角固定為 APS-C／Super 35 約 1.5 倍（原廠：鎖定開啟）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 NTSC 模式可選 23.98p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅 NTSC 模式可選 23.98p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 NTSC 模式可選 23.98p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅 NTSC 模式可選 23.98p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 30,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅 NTSC 模式可選 23.98p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "4K 59.94p／50p 時視角固定為 APS-C／Super 35 約 1.5 倍（原廠：鎖定開啟）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "4K 59.94p／50p 時視角固定為 APS-C／Super 35 約 1.5 倍（原廠：鎖定開啟）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 140,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 NTSC 模式可選 23.98p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅 NTSC 模式可選 23.98p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅 NTSC 模式可選 23.98p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 25,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 16,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 NTSC 模式可選 23.98p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅 NTSC 模式可選 23.98p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "119.88p／100p；Help Guide 未說明此模式視角是否變窄"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "119.88p／100p；Help Guide 未說明此模式視角是否變窄"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "4K 59.94p／50p 時視角固定為 APS-C／Super 35 約 1.5 倍（原廠：鎖定開啟）；NTSC 600M、PAL 500M"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "NTSC 300M、PAL 250M"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 NTSC 模式可選 23.98p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 222,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "NTSC 222M、PAL 185M"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 111,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "NTSC 111M、PAL 93M"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 89,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 NTSC 模式可選 23.98p"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XAVC S-I DCI 4K",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "NTSC 600M、PAL 500M；原廠只寫「4K 59.94p／50p 為 Super 35 視角」，DCI 是否同樣裁切請核對"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XAVC S-I DCI 4K",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "NTSC 300M、PAL 250M"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XAVC S-I DCI 4K",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "23.98p 與 24.00p 同為 240M"
+    }
+  ],
+  "source_name": "Sony ILME-FX2／FX2B Help Guide（PDF）",
+  "source_url": "https://helpguide.sony.net/ilc/2530/v1/en/print.pdf",
+  "last_verified": "2026-10-17",
+  "editor_notes": "1) 錄影模式的格率用名義值（24=23.98、30=29.97、60=59.94、120=119.88）；PAL 的 25／50／100 位元率相同，只有 XAVC S-I 的 NTSC／PAL 位元率不同（已寫在 notes）。23.98p 只有 NTSC 模式可選，DCI 4K 另有 24.00p。 2) 4K 59.94p／50p 錄影時，原廠寫視角固定為 APS-C／Super 35（約為鏡頭標示焦段的 1.5 倍），所以 4K 60p 各列標 crop 1.5；XAVC S-I DCI 4K 60p 原廠沒有特別寫，我依同一規則標 crop，請核對。其他 4K 為全片幅全寬。 3) 4K 120p 不存在：原廠寫 120fps／100fps 只能用在 HD 格式，4K 最高 59.94p。 4) HD 120p／100p 是否裁切原廠沒說，標 none，請核對。 5) 動態範圍（原廠宣稱）、發表日期在 Help Guide 查不到，寫 Unknown。 6) 基礎感光度 800／4000 來自 Cine EI 模式的 Base ISO 設定；S-Cinetone、HLG 為 Picture Profile 項目。 7) 感光元件有效像素：靜態約 33MP、錄影約 27.6MP，resolution_mp 填 33（靜態）。 8) 錄影模式表只有 16:9 的 UHD、DCI 4096x2160 與 FHD，沒有開放畫面（open gate）模式，標 false，請核對。 9) 機身有 SDI 端子的說明沒有，標「無」。"
+}

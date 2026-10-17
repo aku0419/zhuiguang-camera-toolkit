@@ -128,6 +128,14 @@
 - Zeiss：用 ZEISS Cinematography 官網（`www.zeiss.com/photonics-and-optics/en/cinematography/lenses/<系列>.html`）頁面最下方的 Technical Data 整理（英文）。已收 48 支：CP.3、Supreme Prime、Supreme Prime Radiance、Nano Prime、Cinema Zoom、Supreme Zoom Radiance、Lightweight Zoom LWZ.3。Horizon Anamorphic、Aatma、Panoptes 65 的表格格式不同先不收。Zeiss 的攝影鏡頭（Otus、Batis、Loxia 等）還沒收。
 - 電影鏡頭用 T 值：`aperture_type: "T"`；可填 `front_diameter_mm`、`image_circle_mm`、`size_text`。一支鏡頭可裝的接環不只一個時（例如 EF／PL 可換），用 `mount_match` 列出要比對的相機接環文字。
 
+## 攝影機資料庫擴充（進行中）
+
+- 負責人決定（2026-10）：相機一個品牌一個品牌補，順序 Sony → Canon → Nikon，再依現有品牌（Panasonic、Fujifilm、RED、ARRI、Blackmagic）依序補；一個品牌補完再換下一個，以「完整」為主。每個品牌一批，先請負責人確認再合併。
+- Sony：用 Sony Help Guide PDF（`https://helpguide.sony.net/ilc/<代碼>/v1/en/print.pdf`，代碼不是日期，要逐一試探；用 `pdftotext -layout` 轉文字）整理錄影格式、位元率、裁切、Log、時間碼。感光元件尺寸與卡槽在 Help Guide 沒有時，用 Sony Japan 規格頁（`sony.jp/ichigan/products/<型號>/spec.html`）。FX9、BURANO 沒有 Help Guide，用 Sony Japan 規格書 PDF 與商品頁（日文，BURANO 的掃描模式表是圖片，要負責人核對）。已加 21 台：α1、α1 II、α9 II、α9 III、α7R III／IV／V／VI、α7 III、α7C、α7C II、α7CR、α6100／6400／6600／6700、ZV-E10、ZV-E10 II、FX2、FX9、BURANO；加上原有共 8 台，Sony 現有 29 台。ZV-1 系列（固定鏡頭）還沒收。
+- Help Guide 沒寫的欄位（發表日、Base ISO、動態範圍宣稱值、舊機型的位元深度與色彩取樣）一律 `Unknown`；要核對的地方寫在該檔 `editor_notes`（網頁不顯示）。ZV-E10 II 的 4K 120p 需付費升級授權，列在 notes。
+- 相機 JSON 的 `extra_sources` 欄位名稱是 `source_name`、`source_url`（不是 name／url），格式錯建置會失敗。
+- BURANO 的 `lens_mount` 寫「PL／Sony E（可換）」，鏡頭頁會同時比對 PL 與 Sony E 的鏡頭。
+
 ## 開發指令
 
 - `npm install`：安裝

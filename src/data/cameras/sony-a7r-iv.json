@@ -1,0 +1,107 @@
+{
+  "brand": "Sony",
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "base_iso": "Unknown",
+  "open_gate": false,
+  "lens_mount": "Sony E",
+  "sdi": "無",
+  "timecode": "沒有時間碼輸入端子；HDMI 可輸出時間碼（Time Code Output）",
+  "dynamic_range_claimed": "Unknown",
+  "last_verified": "2026-10-17",
+  "slug": "sony-a7r-iv",
+  "model": "α7R IV",
+  "aliases": [
+    "A7R IV",
+    "A7RIV",
+    "A7R4",
+    "A7RM4",
+    "ILCE-7RM4",
+    "ILCE-7RM4A"
+  ],
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.7,
+    "height_mm": 23.8,
+    "resolution_mp": 61
+  },
+  "log": [
+    "S-Log2",
+    "S-Log3"
+  ],
+  "raw": "不支援錄影 RAW（手冊未列 RAW 影片輸出）",
+  "media": [
+    "卡槽 1：SD（UHS-I／UHS-II）",
+    "卡槽 2：SD（UHS-I／UHS-II）"
+  ],
+  "hdmi": "Micro（Type D）",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 100,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "AVCHD",
+      "bitrate_mbps": 24,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "60i/50i interlaced，最高 24 Mbps（FX）"
+    }
+  ],
+  "source_name": "Sony ILCE-7RM4A Help Guide（PDF，涵蓋 ILCE-7RM4／7RM4A）",
+  "source_url": "https://helpguide.sony.net/ilc/2060/v1/en/print.pdf",
+  "editor_notes": "手冊的 Record Setting 表只列格率與位元率（例如 30p 100M），沒有寫位元深度與色彩取樣，所以標 Unknown。每種組合只列最高位元率（手冊另有 30p/25p 60M、24p 60M、HD 較低位元率）。手冊只說明『APS-C/Super 35mm』開啟時 4K 視角約為 1.6 倍（24p/25p）或 1.8 倍（30p），全片幅 4K 沒有提到裁切，故標 none，請負責人核對。AVCHD 另有 60i 17M(FH) 平均約 17 Mbps，未另列。手冊沒有 Base ISO、動態範圍宣稱值、發表日期，皆標 Unknown。"
+}

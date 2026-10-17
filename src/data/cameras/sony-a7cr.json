@@ -1,0 +1,347 @@
+{
+  "slug": "sony-a7cr",
+  "brand": "Sony",
+  "model": "α7CR",
+  "aliases": [
+    "A7CR",
+    "A7C R",
+    "ILCE-7CR"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.7,
+    "height_mm": 23.8,
+    "resolution_mp": 61
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "S-Log3"
+  ],
+  "raw": "機身不能錄 RAW 影片；可經 HDMI 輸出 RAW 影片到支援的外接錄影裝置（最高 60p，手冊「RAW Output」；需開啟 Log 拍攝 On (Flexible ISO)）",
+  "open_gate": false,
+  "lens_mount": "Sony E",
+  "media": [
+    "單一卡槽：SD（UHS-I／UHS-II）"
+  ],
+  "timecode": "沒有時間碼輸入端子；可在機身記錄時間碼（TC/UB 設定），HDMI 可輸出時間碼",
+  "sdi": "無",
+  "hdmi": "Type D（micro）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "4K 60p/50p 時視角約為鏡頭標示焦段的 1.2 倍（約 1.2 倍裁切），APS-C S35 拍攝鎖定為「關」；另有 500M 設定（手冊 60p/50p 列為 600M／500M，推測 NTSC／PAL 各一，需核對）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "另有 250M 設定"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S-I 4K",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "24p 僅 NTSC 模式"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "4K 60p/50p 時視角約為鏡頭標示焦段的 1.2 倍（約 1.2 倍裁切），APS-C S35 拍攝鎖定為「關」"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "4K 60p/50p 時視角約為鏡頭標示焦段的 1.2 倍（約 1.2 倍裁切），APS-C S35 拍攝鎖定為「關」"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "4K 60p/50p 時視角約為鏡頭標示焦段的 1.2 倍（約 1.2 倍裁切），APS-C S35 拍攝鎖定為「關」"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 75,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "4K 60p/50p 時視角約為鏡頭標示焦段的 1.2 倍（約 1.2 倍裁切），APS-C S35 拍攝鎖定為「關」"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 45,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "4K 60p/50p 時視角約為鏡頭標示焦段的 1.2 倍（約 1.2 倍裁切），APS-C S35 拍攝鎖定為「關」"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "24p 僅 NTSC 模式；另有 100M 4:2:0"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC HS 4K",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "24p 僅 NTSC 模式；另有 50M 4:2:0、30M 4:2:0"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "4K 60p/50p 時視角約為鏡頭標示焦段的 1.2 倍（約 1.2 倍裁切），APS-C S35 拍攝鎖定為「關」"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "4K 60p/50p 時視角約為鏡頭標示焦段的 1.2 倍（約 1.2 倍裁切），APS-C S35 拍攝鎖定為「關」"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 140,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "24p 僅 NTSC 模式"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "24p 僅 NTSC 模式"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "24p 僅 NTSC 模式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 222,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "另有 185M 設定"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 111,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "另有 93M 設定"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S-I HD",
+      "bitrate_mbps": 89,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "24p 僅 NTSC 模式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "120p/100p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 60,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "120p/100p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 25,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 16,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "24p 僅 NTSC 模式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "24p 僅 NTSC 模式"
+    }
+  ],
+  "source_name": "Sony ILCE-7CR Help Guide（PDF）",
+  "source_url": "https://helpguide.sony.net/ilc/2370/v1/en/print.pdf",
+  "last_verified": "2026-10-17",
+  "editor_notes": "手冊：4K 60p/50p 時（及 HDMI 輸出 RAW 時）視角約為鏡頭標示焦段的 1.2 倍，APS-C S35 拍攝鎖定為「關」。手冊沒有 Base ISO 項目、也沒寫原廠動態範圍宣稱值，先標 Unknown。手冊的錄影格式表與 α7C II 完全相同（含 600M／500M 雙位元率，推測是 NTSC／PAL 各一，請核對）。RAW 輸出的位元深度、外接錄影機相容清單手冊沒寫，請核對。24p 只在 NTSC 模式可選。S&Q 慢動作模式未收錄。"
+}

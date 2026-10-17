@@ -1,0 +1,167 @@
+{
+  "slug": "sony-a9-ii",
+  "brand": "Sony",
+  "model": "α9 II",
+  "aliases": [
+    "A9 II",
+    "A9II",
+    "A9M2",
+    "ILCE-9M2"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.6,
+    "height_mm": 23.8,
+    "resolution_mp": 24.2
+  },
+  "base_iso": "Unknown",
+  "log": "Unknown",
+  "raw": "不支援錄影 RAW（手冊未列 RAW 影片輸出）",
+  "open_gate": false,
+  "lens_mount": "Sony E",
+  "media": [
+    "卡槽 1：SD（UHS-I／UHS-II）",
+    "卡槽 2：SD（UHS-I／UHS-II）"
+  ],
+  "timecode": "沒有時間碼輸入端子；可設定時間碼（TC/UB 設定），HDMI 可輸出時間碼",
+  "sdi": "無",
+  "hdmi": "Type D（Micro HDMI）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "全片幅錄影 4K 30p 時視角約為鏡頭標示焦段的 1.2 倍（輕微裁切）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 60,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "全片幅錄影 4K 30p 時視角約為鏡頭標示焦段的 1.2 倍（輕微裁切）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 100,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XAVC S 4K",
+      "bitrate_mbps": 60,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 100,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 60,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 25,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 16,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XAVC S HD",
+      "bitrate_mbps": 50,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "AVCHD",
+      "bitrate_mbps": 24,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "60i（interlaced），24M(FX) 為最高位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "AVCHD",
+      "bitrate_mbps": 17,
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "60i（interlaced），17M(FH) 為平均位元率"
+    }
+  ],
+  "source_name": "Sony ILCE-9M2 Help Guide（PDF）",
+  "source_url": "https://helpguide.sony.net/ilc/1960/v1/en/print.pdf",
+  "last_verified": "2026-10-17",
+  "editor_notes": "Help Guide 的錄影設定表只列位元率，沒有位元深度與色彩取樣，因此這兩欄填 Unknown（常見為 4K 4:2:0 8bit，但手冊未載明，不猜）。沒有 Picture Profile／S-Log，log 填 Unknown（手冊與規格頁均顯示「ピクチャープロファイル：-」）。感光元件尺寸與約 2420 萬像素取自 Sony Japan 規格頁。卡槽類型取自規格頁「記錄媒體」（SD 系列 UHS-I／II），規格頁沒有逐一說明兩個槽，請負責人核對。HDMI 為 Micro（Type D），規格頁寫 4K 30p／24p 輸出 4:2:2 8bit。上市日期、動態範圍、Base ISO 手冊未載明，標 Unknown。AVCHD 60i 的位元率為 24M（最高）與 17M（平均）。",
+  "extra_sources": [
+    {
+      "source_name": "Sony Japan 產品規格頁（ILCE-9M2）",
+      "source_url": "https://www.sony.jp/ichigan/products/ILCE-9M2/spec.html"
+    }
+  ]
+}
