@@ -1,0 +1,397 @@
+{
+  "slug": "panasonic-lumix-gh5s",
+  "brand": "Panasonic",
+  "model": "LUMIX GH5S",
+  "aliases": [
+    "GH5S",
+    "DC-GH5S"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "M43",
+    "width_mm": "Unknown",
+    "height_mm": "Unknown",
+    "resolution_mp": 10.3
+  },
+  "base_iso": [
+    400,
+    2500
+  ],
+  "log": [
+    "V-Log L",
+    "HLG（Hybrid Log Gamma）"
+  ],
+  "raw": "不能錄 RAW 影片（說明書只有 RAW 靜態照片）",
+  "open_gate": "Unknown",
+  "lens_mount": "Micro Four Thirds",
+  "media": [
+    "卡槽 1：SD／SDHC／SDXC（UHS-I／UHS-II，UHS 速度等級 3 以上，UHS-II 影片速度等級 V60 以上）",
+    "卡槽 2：SD／SDHC／SDXC（同上）"
+  ],
+  "timecode": "可輸入／輸出（TC IN/OUT，使用附贈的 BNC 轉接線接在閃光燈同步端子）",
+  "sdi": "無",
+  "hdmi": "Type A（標準尺寸）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "AVCHD H.264／AVC LongGOP",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "AVCHD Progressive"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "AVCHD H.264／AVC LongGOP",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MP4 H.264／AVC LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MP4 H.264／AVC LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MP4 H.264／AVC LongGOP",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MP4 H.264／AVC LongGOP",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "MP4 H.264／AVC LongGOP",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MP4 HEVC（HLG）",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4 HEVC 固定 Hybrid Log Gamma"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MP4 HEVC（HLG）",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4 HEVC 固定 Hybrid Log Gamma"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "MOV H.264／AVC ALL-Intra",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "需影片速度等級 V60 以上"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MOV H.264／AVC ALL-Intra",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "需影片速度等級 V60 以上"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MOV H.264／AVC ALL-Intra",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "需影片速度等級 V60 以上"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MOV H.264／AVC ALL-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MOV H.264／AVC ALL-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "MOV H.264／AVC ALL-Intra",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 60,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 異形（4:3）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "MOV H.264／AVC ALL-Intra",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 異形（4:3）；需影片速度等級 V60 以上"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 異形（4:3）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 異形（4:3）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "MOV H.264／AVC ALL-Intra",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 異形（4:3）；需影片速度等級 V60 以上"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4K 異形（4:3）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "MOV H.264／AVC LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "4K 異形（4:3）"
+    }
+  ],
+  "source_name": "Panasonic LUMIX DC-GH5S 使用說明書 進階功能（PDF，DVQP1438）與基本說明書（DVQX1354）",
+  "source_url": "https://help.na.panasonic.com/wp-content/uploads/2023/02/DCGH5S_DVQP1438ZA_ENG.pdf",
+  "last_verified": "2026-10-17",
+  "editor_notes": "感光元件只寫 4/3 吋 Live MOS（有效 1,028 萬像素），沒有毫米尺寸；發表日、動態範圍宣稱值說明書沒寫。基礎感光度 ISO400／ISO2500 來自基本說明書的 Dual Native ISO 欄；V-Log L 時 ISO 下限固定 320、上限 25600。規格（感光元件、卡槽、TC、HDMI）取自基本說明書 DVQX1354（https://help.na.panasonic.com/wp-content/uploads/2023/02/DCGH5S_DVQX1354ZA_ENG.pdf），錄影模式取自進階說明書。V-Log L 不需另購升級金鑰（說明書寫 GH5S 使用者不必購買 DMW-SFU1）。說明書沒有逐模式的視角／裁切說明，只有 [Ex. Tele Conv.] 與 [4K Live Cropping]，所以 crop 寫 none；FHD 可變格率 200 fps 以上視角會變窄。GH5S 感光元件為多重長寬比設計，4K 異形（3328x2496）與 C4K／4K 實際使用的感光元件範圍說明書沒寫，請核對。PAL（25／50p）與 24.00Hz 位元率相同不重複列。可變格率最高 240 fps（C4K／4K／AVCHD 最高 60 fps），位元率沿用該模式，未另列。AVCHD 的 59.94i／50i 與 30p（以 59.94i 錄製）未列。高速 SD 卡需求：ALL-Intra 400M 需 V60 以上，其他 UHS 速度等級 3。"
+}

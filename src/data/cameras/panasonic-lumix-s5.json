@@ -1,0 +1,305 @@
+{
+  "brand": "Panasonic",
+  "model": "LUMIX S5",
+  "aliases": [
+    "S5",
+    "DC-S5"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.6,
+    "height_mm": 23.8,
+    "resolution_mp": 24.2
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "V-Log",
+    "HLG（2100 Like）"
+  ],
+  "raw": "原廠規格頁沒有列出 RAW 影片（內錄或 HDMI 輸出）功能",
+  "open_gate": false,
+  "lens_mount": "L-Mount",
+  "media": [
+    "卡槽 1：SD／SDHC／SDXC（UHS-I／UHS-II，UHS-II 可達 Video Speed Class 90）",
+    "卡槽 2：SD／SDHC／SDXC（UHS-I，UHS Speed Class 3）"
+  ],
+  "timecode": "Unknown",
+  "sdi": "無",
+  "hdmi": "Type D（Micro HDMI）",
+  "dynamic_range_claimed": "14+ stops（V-Log）",
+  "source_name": "Panasonic 日本官網 DC-S5 規格頁；Panasonic 北美官網 DC-S5 Features and Specifications",
+  "source_url": "https://panasonic.jp/dc/p-db/DC-S5_spec.html",
+  "last_verified": "2026-10-17",
+  "extra_sources": [
+    {
+      "source_name": "Panasonic 北美官網 DC-S5 Features and Specifications",
+      "source_url": "https://help.na.panasonic.com/answers/features-and-specifications-lumix-s-series-dc-s5"
+    }
+  ],
+  "editor_notes": "DC-S5 的完整英文說明書 PDF（eww.pavc.panasonic.co.jp）本次環境連不到，錄影模式改用 Panasonic 日本官網規格頁（日文）的錄影格式表整理，所以沒有「創意影片模式限定」等說明書細節。規格頁沒寫 H.264／H.265，codec 只寫 LongGOP；規格頁也沒寫 PAL 與 NTSC 以外的細節，PAL（25／50）位元率與 NTSC 相同不重複列，唯獨 Anamorphic 3328×2496 的 NTSC 只列 30／24p、PAL 列 50／25p，原廠頁面如此，已照列並註明（可能是原廠頁面漏列 60p，請負責人核對）。發表日、base ISO（規格頁只寫支援 Dual Native ISO，沒寫數值）、時間碼、RAW 都沒有查到原廠說明，維持 Unknown／未列出。open_gate 規格頁沒有 6K 3:2 全感光元件錄影，標 false，請負責人核對。HDMI 北美規格頁寫 Micro HDMI Type D。",
+  "slug": "panasonic-lumix-s5",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "LongGOP（MOV 422/10）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "MOV；可選 FULL 或 APS-C／PIXEL BY PIXEL 範圍；可錄 HLG"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "LongGOP（MOV 420/8）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；可選 FULL 或 APS-C／PIXEL BY PIXEL 範圍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "LongGOP（MOV 422/10）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "MOV；可選 FULL 或 APS-C／PIXEL BY PIXEL 範圍；可錄 HLG"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "LongGOP（MOV 420/8）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV；可選 FULL 或 APS-C／PIXEL BY PIXEL 範圍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "LongGOP（MOV 420/10）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "MOV；只能用 APS-C／PIXEL BY PIXEL 範圍；可錄 HLG"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "LongGOP（MOV 420/8）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "MOV；只能用 APS-C／PIXEL BY PIXEL 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "LongGOP（MOV 422/10）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "MOV；可錄 HLG"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "LongGOP（MOV 420/8）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "LongGOP（MOV 422/10）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "MOV；可錄 HLG"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "LongGOP（MOV 420/8）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "LongGOP（MOV 422/10）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "MOV；可錄 HLG"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "LongGOP（MOV 420/8）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MOV"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "LongGOP（MOV 422/10）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "MOV；Anamorphic（4:3）模式，APS-C 範圍；可錄 HLG"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "LongGOP（MOV 420/8）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "MOV；Anamorphic（4:3）模式，APS-C 範圍"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "LongGOP（MOV 422/10）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "MOV；Anamorphic（4:3）模式，APS-C 範圍；可錄 HLG"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "LongGOP（MOV 420/8）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "MOV；Anamorphic（4:3）模式，APS-C 範圍"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 50,
+      "codec": "LongGOP（MOV 420/10）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "MOV；Anamorphic（4:3）模式，APS-C 範圍；只在 PAL（50Hz）列出；可錄 HLG"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 50,
+      "codec": "LongGOP（MOV 420/8）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "MOV；Anamorphic（4:3）模式，APS-C 範圍；只在 PAL（50Hz）列出"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "LongGOP（MP4 420/10）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "MP4；只能用 APS-C／PIXEL BY PIXEL 範圍；可錄 HLG"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "LongGOP（MP4 420/10）",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4；可選 FULL 或 APS-C 範圍；可錄 HLG"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "LongGOP（MP4 420/8）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4；可選 FULL 或 APS-C 範圍；可 S&Q"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "LongGOP（MP4 420/10）",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4；可選 FULL 或 APS-C 範圍；可錄 HLG"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "LongGOP（MP4 420/8）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4；可選 FULL 或 APS-C 範圍；可 S&Q"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "LongGOP（MP4 420/8）",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4；可 S&Q（FHD 最高 180 fps）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "LongGOP（MP4 420/8）",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4；可 S&Q（FHD 最高 180 fps）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "LongGOP（MP4 420/8）",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4；可 S&Q（FHD 最高 180 fps）"
+    }
+  ]
+}

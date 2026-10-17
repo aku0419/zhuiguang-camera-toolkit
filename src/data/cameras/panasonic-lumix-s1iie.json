@@ -1,0 +1,1711 @@
+{
+  "slug": "panasonic-lumix-s1iie",
+  "brand": "Panasonic",
+  "model": "LUMIX S1IIE",
+  "aliases": [
+    "S1IIE",
+    "S1II E",
+    "DC-S1M2E",
+    "DC-S1M2ES"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.6,
+    "height_mm": 23.8,
+    "resolution_mp": 24.2
+  },
+  "base_iso": [
+    640,
+    4000
+  ],
+  "log": [
+    "V-Log",
+    "ARRI LogC3（需另購 Upgrade Software Key DMW-SFU3A）",
+    "HLG"
+  ],
+  "raw": "可內錄 Apple ProRes RAW／ProRes RAW HQ（CFexpress 卡）；也可經 HDMI 輸出 RAW（最高 6K 3:2 29.97p）",
+  "open_gate": true,
+  "lens_mount": "L-Mount",
+  "media": [
+    "卡槽 1：CFexpress Type B",
+    "卡槽 2：SD／SDHC／SDXC（UHS-I／UHS-II）"
+  ],
+  "timecode": "無 TC IN/OUT 端子；可經 HDMI 輸出時間碼；可用 Bluetooth 與 UltraSync BLUE 同步時間碼",
+  "sdi": "無",
+  "hdmi": "HDMI Type A（標準尺寸）；可輸出 RAW",
+  "dynamic_range_claimed": "14+ stops（V-Log）",
+  "recording_modes": [
+    {
+      "resolution": "5952x3968",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "畫面比例 3:2"
+    },
+    {
+      "resolution": "5952x3968",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "畫面比例 3:2"
+    },
+    {
+      "resolution": "5952x3136",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "畫面比例 17:9；裁切資料說明書未列此模式"
+    },
+    {
+      "resolution": "5952x3136",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "畫面比例 17:9；裁切資料說明書未列此模式"
+    },
+    {
+      "resolution": "5952x2512",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "5952x2512",
+      "max_fps": 48,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "5952x2512",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "5952x2512",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "5888x3312",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "5888x3312",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 48,
+      "codec": "MOV ALL-Intra(H)（H.264／AVC）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；800 Mbps 以上只能錄到 CFexpress 卡；只能選 APS-C 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 48,
+      "codec": "MOV ALL-Intra(L)（H.264／AVC）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 APS-C 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 48,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 APS-C 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 48,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 APS-C 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 APS-C 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 APS-C 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 APS-C 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 APS-C 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 APS-C 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 APS-C 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "MOV ALL-Intra(H)（H.264／AVC）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "800 Mbps 以上只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "MOV ALL-Intra(L)（H.264／AVC）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "MOV ALL-Intra(H)（H.264／AVC）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "800 Mbps 以上只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "MOV ALL-Intra(L)（H.264／AVC）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 60,
+      "codec": "MOV ALL-Intra(H)（H.264／AVC）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1；800 Mbps 以上只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 60,
+      "codec": "MOV ALL-Intra(L)（H.264／AVC）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 48,
+      "codec": "MOV ALL-Intra(H)（H.264／AVC）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1；800 Mbps 以上只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 48,
+      "codec": "MOV ALL-Intra(L)（H.264／AVC）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 48,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 48,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 30,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 24,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MOV ALL-Intra(H)（H.264／AVC）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "800 Mbps 以上只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MOV ALL-Intra(L)（H.264／AVC）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "MOV ALL-Intra(H)（H.264／AVC）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "800 Mbps 以上只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "MOV ALL-Intra(L)（H.264／AVC）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 50,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 48,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 48,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 48,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 25,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 25,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2560",
+      "max_fps": 30,
+      "codec": "MP4 Lite H.265／HEVC",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "Unknown",
+      "notes": "畫面比例 3:2；裁切資料說明書未列此模式"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MP4 H.265／HEVC",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MP4 H.265／HEVC",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MP4 H.264／AVC",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MP4 H.265／HEVC",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MP4 H.264／AVC",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MP4 H.264／AVC",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MP4 H.264／AVC",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "MP4 H.264／AVC",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "5776x3056",
+      "max_fps": 30,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 4232,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "只能錄到 CFexpress 卡；只能選 PIXEL/PIXEL 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "5776x3056",
+      "max_fps": 30,
+      "codec": "Apple ProRes RAW",
+      "bitrate_mbps": 2821,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "只能錄到 CFexpress 卡；只能選 PIXEL/PIXEL 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "5776x3056",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1939,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "5776x3056",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1293,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "5776x3056",
+      "max_fps": 24,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 3386,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "只能錄到 CFexpress 卡；只能選 PIXEL/PIXEL 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "5776x3056",
+      "max_fps": 24,
+      "codec": "Apple ProRes RAW",
+      "bitrate_mbps": 2257,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "只能錄到 CFexpress 卡；只能選 PIXEL/PIXEL 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "5776x3056",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1551,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "5776x3056",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1034,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 913,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能錄到 CFexpress 卡；只能選 APS-C 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 609,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能錄到 CFexpress 卡；只能選 APS-C 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 730,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能錄到 CFexpress 卡；只能選 APS-C 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 487,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能錄到 CFexpress 卡；只能選 APS-C 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 4242,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "只能錄到 CFexpress 卡；只能選 PIXEL/PIXEL 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes RAW",
+      "bitrate_mbps": 2828,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "只能錄到 CFexpress 卡；只能選 PIXEL/PIXEL 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1944,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1296,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 2121,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "只能錄到 CFexpress 卡；只能選 PIXEL/PIXEL 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes RAW",
+      "bitrate_mbps": 1414,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "只能錄到 CFexpress 卡；只能選 PIXEL/PIXEL 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 972,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 648,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 1697,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "只能錄到 CFexpress 卡；只能選 PIXEL/PIXEL 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes RAW",
+      "bitrate_mbps": 1131,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "只能錄到 CFexpress 卡；只能選 PIXEL/PIXEL 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 778,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 519,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1556,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1；只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1037,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1；只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 778,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1；只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 519,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1；只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 622,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1；只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 415,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1；只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1822,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1215,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 911,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 608,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 729,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 486,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 454,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 302,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 227,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 151,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 181,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 121,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 50,
+      "codec": "MOV ALL-Intra(H)（H.264／AVC）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；800 Mbps 以上只能錄到 CFexpress 卡；只能選 APS-C 影像範圍（比 FULL 窄）；PAL 系統的格率（50p）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 50,
+      "codec": "MOV ALL-Intra(L)（H.264／AVC）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 APS-C 影像範圍（比 FULL 窄）；PAL 系統的格率（50p）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 50,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 APS-C 影像範圍（比 FULL 窄）；PAL 系統的格率（50p）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 50,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 APS-C 影像範圍（比 FULL 窄）；PAL 系統的格率（50p）"
+    },
+    {
+      "resolution": "5776x3056",
+      "max_fps": 25,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 3530,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "只能錄到 CFexpress 卡；只能選 PIXEL/PIXEL 影像範圍（比 FULL 窄）；PAL 系統的格率（25p）"
+    },
+    {
+      "resolution": "5776x3056",
+      "max_fps": 25,
+      "codec": "Apple ProRes RAW",
+      "bitrate_mbps": 2354,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "只能錄到 CFexpress 卡；只能選 PIXEL/PIXEL 影像範圍（比 FULL 窄）；PAL 系統的格率（25p）"
+    },
+    {
+      "resolution": "5776x3056",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1618,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡；PAL 系統的格率（25p）"
+    },
+    {
+      "resolution": "5776x3056",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1078,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡；PAL 系統的格率（25p）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 50,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1523,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能錄到 CFexpress 卡；只能選 APS-C 影像範圍（比 FULL 窄）；PAL 系統的格率（50p）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 50,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1015,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能錄到 CFexpress 卡；只能選 APS-C 影像範圍（比 FULL 窄）；PAL 系統的格率（50p）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 761,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能錄到 CFexpress 卡；只能選 APS-C 影像範圍（比 FULL 窄）；PAL 系統的格率（25p）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 508,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能錄到 CFexpress 卡；只能選 APS-C 影像範圍（比 FULL 窄）；PAL 系統的格率（25p）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 3539,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "只能錄到 CFexpress 卡；只能選 PIXEL/PIXEL 影像範圍（比 FULL 窄）；PAL 系統的格率（50p）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "Apple ProRes RAW",
+      "bitrate_mbps": 2359,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "只能錄到 CFexpress 卡；只能選 PIXEL/PIXEL 影像範圍（比 FULL 窄）；PAL 系統的格率（50p）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1622,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡；PAL 系統的格率（50p）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1081,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡；PAL 系統的格率（50p）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 1769,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "只能錄到 CFexpress 卡；只能選 PIXEL/PIXEL 影像範圍（比 FULL 窄）；PAL 系統的格率（25p）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "Apple ProRes RAW",
+      "bitrate_mbps": 1180,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "只能錄到 CFexpress 卡；只能選 PIXEL/PIXEL 影像範圍（比 FULL 窄）；PAL 系統的格率（25p）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 811,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡；PAL 系統的格率（25p）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 541,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡；PAL 系統的格率（25p）"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 50,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1298,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1；只能錄到 CFexpress 卡；PAL 系統的格率（50p）"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 50,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 865,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1；只能錄到 CFexpress 卡；PAL 系統的格率（50p）"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 649,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1；只能錄到 CFexpress 卡；PAL 系統的格率（25p）"
+    },
+    {
+      "resolution": "4096x1728",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 433,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 2.4:1；只能錄到 CFexpress 卡；PAL 系統的格率（25p）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1520,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡；PAL 系統的格率（50p）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1014,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡；PAL 系統的格率（50p）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 760,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡；PAL 系統的格率（25p）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 507,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "只能錄到 CFexpress 卡；PAL 系統的格率（25p）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 50,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 378,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "PAL 系統的格率（50p）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 50,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 252,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "PAL 系統的格率（50p）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 189,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "PAL 系統的格率（25p）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 126,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "PAL 系統的格率（25p）"
+    }
+  ],
+  "source_name": "Panasonic 日本官網 DC-S1M2ES 規格頁與「DC-S1M2ES_DC-S1M2ESM 動畫記錄模式一覽」",
+  "source_url": "https://panasonic.jp/dc/p-db/DC-S1M2ES_spec.html",
+  "last_verified": "2026-10-17",
+  "editor_notes": "1) 機型 S1IIE：日本官網型號 DC-S1M2ES，美國 DC-S1M2ES，歐洲 DC-S1M2E。2) 錄影模式的解析度、位元率、位元深度、色彩取樣取自日本官網「動畫記錄模式一覽」PDF（S1IIE 沒有 120p／240p 高格率，只有 FHD 120p）；影像範圍（裁切）是用 S1II 的英文使用說明書 Rec Quality 表比對（美國官網 S1IIE 頁面放的就是同一份 PDF，但表格內容是 S1II 的，S1IIE 實際差異說明書沒有標示），請負責人用實機或原廠確認；對不到的（6K 17:9、MP4 Lite）crop 寫 Unknown。3) 感光元件有效畫素 24.2 百萬（日本官網 S1IIE 頁）；S1II 為 24.1 百萬，兩者規格不同。4) 發表日沒有原廠頁面可查，寫 Unknown。5) ProRes 的位元深度說明書沒寫，寫 Unknown。6) 5.8K ProRes 畫面大小為 5776x3056（日本表）。7) HDMI RAW 輸出另有模式表，沒有逐列收進 recording_modes。8) ARRI LogC3 需另購金鑰 DMW-SFU3A。",
+  "extra_sources": [
+    {
+      "source_name": "Panasonic 日本官網 DC-S1M2ES 動畫記錄模式一覽（PDF）",
+      "source_url": "https://panasonic.jp/content/dam/panasonic/jp/ja/pim-assets/support/specification/000/000/003/317/885/000000003317885/DC-S1M2ES_DC-S1M2ESM_%E5%8B%95%E7%94%BB%E8%A8%98%E9%8C%B2%E3%83%A2%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7.pdf"
+    },
+    {
+      "source_name": "Panasonic LUMIX S1IIE 使用說明書（Complete Guide，PDF；與 S1II 同一份）",
+      "source_url": "https://help.na.panasonic.com/wp-content/uploads/2025/05/dcs1m2es_operatinginstructions_eng.pdf"
+    }
+  ]
+}

@@ -16,65 +16,377 @@
     "resolution_mp": 25.2
   },
   "base_iso": [
-    500
+    500,
+    250
   ],
   "log": [
     "V-Log",
-    "ARRI LogC3"
+    "ARRI LogC3（需另購 DMW-SFU3A 升級軟體序號）",
+    "Hybrid Log Gamma（HLG）"
   ],
-  "raw": "可內錄 Apple ProRes RAW／RAW HQ（CFexpress 卡）；也可經 HDMI 輸出 RAW",
+  "raw": "可內錄 Apple ProRes RAW HQ／ProRes RAW（不能錄到 SD 卡）；也可經 HDMI 輸出 12-bit RAW（最高 5.8K 4:3）到 ATOMOS 或 Blackmagic 外接錄影機",
   "open_gate": true,
   "lens_mount": "Micro Four Thirds",
   "media": [
-    "卡槽 1：CFexpress Type B",
-    "卡槽 2：SD／SDHC／SDXC"
+    "卡槽 1：CFexpress Type B（CFexpress 2.0）",
+    "卡槽 2：SD／SDHC／SDXC（UHS-I／UHS-II，UHS 速度等級 3、UHS-II 影片速度等級 V90）",
+    "USB 端子可外接 SSD 錄影（原廠規格：Recording to an external SSD）"
   ],
-  "timecode": "可輸入／輸出（使用附贈的 BNC 轉接線）",
+  "timecode": "可輸入／輸出（BNC，使用附贈的 BNC 轉接線接在閃光燈同步端子）；HDMI 也可輸出時間碼；支援 REC RUN／FREE RUN、DF／NDF；MP4 不記錄時間碼",
   "sdi": "無",
-  "hdmi": "Type A（標準尺寸）",
+  "hdmi": "Type A（標準尺寸）；可輸出 12-bit RAW 影像",
   "dynamic_range_claimed": "13+ stops（V-Log，感光元件輸出 60fps 以下）；61fps 以上為 12+ stops",
   "recording_modes": [
     {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265／HEVC（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265／HEVC（MP4）",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.265／HEVC（MP4）",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264（MP4）",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264（MP4）",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264（MP4）",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
       "resolution": "5760x4320",
-      "max_fps": 29.97,
-      "codec": "H.265（420/10-L）",
+      "max_fps": 30,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
       "bitrate_mbps": 200,
       "bit_depth": 10,
       "chroma": "4:2:0",
       "crop": "none",
-      "notes": "5.8K 4:3（Open Gate）"
+      "notes": "說明書標示僅限 Creative Video 模式；5.8K 4:3（Open Gate）"
+    },
+    {
+      "resolution": "5760x4320",
+      "max_fps": 24,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "說明書標示僅限 Creative Video 模式；5.8K 4:3（Open Gate）"
     },
     {
       "resolution": "5728x3024",
-      "max_fps": 59.94,
-      "codec": "H.265（420/10-L）",
+      "max_fps": 60,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
       "bitrate_mbps": 300,
       "bit_depth": 10,
       "chroma": "4:2:0",
-      "crop": "none"
+      "crop": "none",
+      "notes": "說明書標示僅限 Creative Video 模式"
     },
     {
-      "resolution": "4096x2160",
-      "max_fps": 119.88,
-      "codec": "H.265（420/10-L）",
+      "resolution": "5728x3024",
+      "max_fps": 48,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
       "bitrate_mbps": 300,
       "bit_depth": 10,
       "chroma": "4:2:0",
-      "crop": "none"
+      "crop": "none",
+      "notes": "說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "5728x3024",
+      "max_fps": 30,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "5728x3024",
+      "max_fps": 24,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "4352x3264",
+      "max_fps": 60,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "說明書只列 PIXEL/PIXEL（1:1 像素）範圍，沒有 FULL，等於裁切；原廠沒寫倍率；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "4352x3264",
+      "max_fps": 48,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "說明書只列 PIXEL/PIXEL（1:1 像素）範圍，沒有 FULL，等於裁切；原廠沒寫倍率；說明書標示僅限 Creative Video 模式"
     },
     {
       "resolution": "4096x2160",
-      "max_fps": 59.94,
+      "max_fps": 120,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
       "codec": "H.264 ALL-Intra（422/10-I(H)）",
       "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "800 Mbps 以上不能錄到 SD 卡，要用 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.264 ALL-Intra（422/10-I(L)）",
+      "bitrate_mbps": 600,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none"
     },
     {
       "resolution": "4096x2160",
-      "max_fps": 59.94,
-      "codec": "H.264（422/10-L）",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（420/8-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "H.264 ALL-Intra（422/10-I(H)）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "800 Mbps 以上不能錄到 SD 卡，要用 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "H.264 ALL-Intra（422/10-I(L)）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 ALL-Intra（422/10-I）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（420/8-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.264 ALL-Intra（422/10-I）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（420/8-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264 ALL-Intra（422/10-I(H)）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "800 Mbps 以上不能錄到 SD 卡，要用 CFexpress 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264 ALL-Intra（422/10-I(L)）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（422/10-L）",
       "bitrate_mbps": 200,
       "bit_depth": 10,
       "chroma": "4:2:2",
@@ -82,7 +394,62 @@
     },
     {
       "resolution": "3840x2160",
-      "max_fps": 23.98,
+      "max_fps": 60,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（420/8-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "H.264 ALL-Intra（422/10-I(H)）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "800 Mbps 以上不能錄到 SD 卡，要用 CFexpress 卡"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "H.264 ALL-Intra（422/10-I(L)）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
       "codec": "H.264 ALL-Intra（422/10-I）",
       "bitrate_mbps": 400,
       "bit_depth": 10,
@@ -91,82 +458,720 @@
     },
     {
       "resolution": "3840x2160",
-      "max_fps": 23.98,
-      "codec": "H.265（420/10-L）",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
       "bitrate_mbps": 150,
       "bit_depth": 10,
       "chroma": "4:2:0",
       "crop": "none"
     },
     {
-      "resolution": "1920x1080",
-      "max_fps": 239.76,
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（420/8-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
       "codec": "H.264 ALL-Intra（422/10-I）",
-      "bitrate_mbps": 800,
+      "bitrate_mbps": 400,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none"
     },
     {
-      "resolution": "1920x1080",
-      "max_fps": 239.76,
-      "codec": "H.265（420/10-L）",
-      "bitrate_mbps": 200,
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 150,
       "bit_depth": 10,
       "chroma": "4:2:0",
       "crop": "none"
     },
     {
       "resolution": "3840x2160",
-      "max_fps": 59.94,
-      "codec": "MP4 H.265（10bit）",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（420/8-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "H.264 ALL-Intra（422/10-I）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "800 Mbps 以上不能錄到 SD 卡，要用 CFexpress 卡；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.264 ALL-Intra（422/10-I）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 ALL-Intra（422/10-I）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
       "bitrate_mbps": 100,
       "bit_depth": 10,
       "chroma": "4:2:0",
       "crop": "none"
     },
     {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（420/8-L）",
+      "bitrate_mbps": 50,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 ALL-Intra（422/10-I）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "隔行掃描（60i）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "隔行掃描（60i）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 48,
+      "codec": "H.264 ALL-Intra（422/10-I）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 48,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 48,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 ALL-Intra（422/10-I）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（420/8-L）",
+      "bitrate_mbps": 25,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 ALL-Intra（422/10-I）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（420/8-L）",
+      "bitrate_mbps": 25,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
       "resolution": "5728x3024",
-      "max_fps": 29.97,
+      "max_fps": 30,
       "codec": "Apple ProRes RAW HQ",
       "bitrate_mbps": 4200,
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "原廠標示 4.2 Gbps；ProRes 不能錄到 SD 卡（FHD 除外）"
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；說明書標示僅限 Creative Video 模式"
     },
     {
-      "resolution": "4096x2160",
-      "max_fps": 59.94,
-      "codec": "Apple ProRes RAW HQ",
-      "bitrate_mbps": 4200,
+      "resolution": "5728x3024",
+      "max_fps": 30,
+      "codec": "Apple ProRes RAW",
+      "bitrate_mbps": 2800,
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "原廠標示 4.2 Gbps"
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；說明書標示僅限 Creative Video 模式"
     },
     {
-      "resolution": "4096x2160",
-      "max_fps": 59.94,
+      "resolution": "5728x3024",
+      "max_fps": 30,
       "codec": "Apple ProRes 422 HQ",
       "bitrate_mbps": 1900,
       "bit_depth": "Unknown",
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "原廠標示 1.9 Gbps"
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "5728x3024",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1300,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "5728x3024",
+      "max_fps": 24,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 3300,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "5728x3024",
+      "max_fps": 24,
+      "codec": "Apple ProRes RAW",
+      "bitrate_mbps": 2200,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "5728x3024",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1500,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "5728x3024",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1000,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；說明書標示僅限 Creative Video 模式"
     },
     {
       "resolution": "4096x2160",
-      "max_fps": 23.98,
+      "max_fps": 60,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 4200,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；說明書只列 PIXEL/PIXEL（1:1 像素）範圍，沒有 FULL，等於裁切；原廠沒寫倍率；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes RAW",
+      "bitrate_mbps": 2800,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；說明書只列 PIXEL/PIXEL（1:1 像素）範圍，沒有 FULL，等於裁切；原廠沒寫倍率；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1900,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1300,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 2100,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；說明書只列 PIXEL/PIXEL（1:1 像素）範圍，沒有 FULL，等於裁切；原廠沒寫倍率；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes RAW",
+      "bitrate_mbps": 1400,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；說明書只列 PIXEL/PIXEL（1:1 像素）範圍，沒有 FULL，等於裁切；原廠沒寫倍率；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 972,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 648,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 1700,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；說明書只列 PIXEL/PIXEL（1:1 像素）範圍，沒有 FULL，等於裁切；原廠沒寫倍率；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes RAW",
+      "bitrate_mbps": 1100,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；說明書只列 PIXEL/PIXEL（1:1 像素）範圍，沒有 FULL，等於裁切；原廠沒寫倍率；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
       "codec": "Apple ProRes 422 HQ",
       "bitrate_mbps": 778,
       "bit_depth": "Unknown",
       "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；系統頻率 24.00Hz（CINEMA）時為 779 Mbps"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 519,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 454,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
       "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 302,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 227,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 151,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 181,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "系統頻率 24.00Hz（CINEMA）時為 182 Mbps"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 121,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "5728x3024",
+      "max_fps": 25,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 3500,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；PAL（50Hz）系統頻率的位元率；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "5728x3024",
+      "max_fps": 25,
+      "codec": "Apple ProRes RAW",
+      "bitrate_mbps": 2300,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；PAL（50Hz）系統頻率的位元率；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "5728x3024",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1600,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；PAL（50Hz）系統頻率的位元率；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "5728x3024",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1100,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；PAL（50Hz）系統頻率的位元率；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 3500,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；PAL（50Hz）系統頻率的位元率；說明書只列 PIXEL/PIXEL（1:1 像素）範圍，沒有 FULL，等於裁切；原廠沒寫倍率；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "Apple ProRes RAW",
+      "bitrate_mbps": 2400,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；PAL（50Hz）系統頻率的位元率；說明書只列 PIXEL/PIXEL（1:1 像素）範圍，沒有 FULL，等於裁切；原廠沒寫倍率；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1600,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；PAL（50Hz）系統頻率的位元率"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1100,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；PAL（50Hz）系統頻率的位元率"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "Apple ProRes RAW HQ",
+      "bitrate_mbps": 1800,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；PAL（50Hz）系統頻率的位元率；說明書只列 PIXEL/PIXEL（1:1 像素）範圍，沒有 FULL，等於裁切；原廠沒寫倍率；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "Apple ProRes RAW",
+      "bitrate_mbps": 1200,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；PAL（50Hz）系統頻率的位元率；說明書只列 PIXEL/PIXEL（1:1 像素）範圍，沒有 FULL，等於裁切；原廠沒寫倍率；說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 811,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；PAL（50Hz）系統頻率的位元率"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 541,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ProRes（FHD 以外）不能錄到 SD 卡；PAL（50Hz）系統頻率的位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 50,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 378,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "PAL（50Hz）系統頻率的位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 50,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 252,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "PAL（50Hz）系統頻率的位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 189,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "PAL（50Hz）系統頻率的位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 25,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 126,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "PAL（50Hz）系統頻率的位元率"
+    },
+    {
+      "resolution": "3840x2880",
+      "max_fps": 30,
+      "codec": "H.265／HEVC（MP4(Lite) 10bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "3.8K 4:3，MP4(Lite)（韌體 1.3 新增，適合手機剪接）"
     }
   ],
-  "source_name": "Panasonic LUMIX GH7 使用說明書（PDF）",
+  "source_name": "Panasonic LUMIX GH7 使用說明書（PDF，含韌體 1.3／1.5／1.7 增補）",
   "source_url": "https://help.na.panasonic.com/wp-content/uploads/2024/07/DCGH7_OperatingInstructions_ENG.pdf",
-  "last_verified": "2026-10-06",
-  "editor_notes": "說明書錄影品質表全部列在 FULL 影像範圍下，未見強制裁切。說明書的錄影 ISO 寫 V-Log 時 base sensitivity 為 ISO500（61fps 以上為 ISO250），沒有寫雙原生 ISO。感光元件只寫 4/3 吋，沒有寫毫米尺寸。ProRes 位元率原廠以 Gbps 標示，這裡換成 Mbps（1 Gbps = 1000 Mbps）。"
+  "last_verified": "2026-10-17",
+  "editor_notes": "【資料來源】以英文使用說明書「Recording Videos – [Rec Quality]」表（MP4、MOV、Apple ProRes 三種檔案格式）逐列整理，含韌體 1.3 新增的 MP4(Lite)；感光元件、卡槽、端子取自說明書 Specifications，並與 Panasonic Japan 規格頁對照。【列的取捨】NTSC（59.94Hz）全部列出；PAL（50Hz）的 H.264／H.265 位元率與 NTSC 相同，故不重複列（PAL 另有 100p／200p，位元率與 120p／240p 相同）；Apple ProRes 的 PAL 位元率不同（Gbps／Mbps 都不同），所以另列 25p 與 50p；24.00Hz（CINEMA）的 ProRes 422 HQ 位元率只差 1 Mbps（C4K 779、FHD 182），寫在該列 notes。FHD 60i 兩列的 max_fps 寫 60，notes 註明隔行掃描。ProRes 位元率原廠以 Gbps 標示，換成 Mbps（1 Gbps = 1000 Mbps）；位元率原廠說明是 VBR（會依畫面變動）。【裁切】說明書每列都有「FULL／PIXEL/PIXEL」勾選欄；有 FULL 的列記為 none；只有 PIXEL/PIXEL 的（4.4K 4:3 60p／48p，以及 ProRes RAW 的 C4K 各格率）記為 crop，原廠沒寫倍率，所以沒填 crop_factor。表中另有「僅限 Creative Video 模式」圖示，已寫在對應列的 notes。【Base ISO】說明書：V-Log 影片感光元件輸出 60fps 以下 base ISO 500、61fps 以上 base ISO 250（一般模式為 ISO 100、ARRI LogC3 為 320／160、HLG 為 250）；說明書沒有使用「雙原生 ISO」一詞，base_iso 先放 V-Log 的 500 與 250，請負責人決定網頁要不要顯示成雙原生。【感光元件】原廠說明書與 Japan 規格頁都只寫 4/3 型 BSI CMOS、總畫素約 2,650 萬、有效約 2,520 萬，沒有毫米尺寸，所以寬高維持 Unknown（要核對時請看 Panasonic 官網規格表）。【ProRes 位元深度】說明書沒寫 ProRes 422／422 HQ／RAW 的位元深度（HDMI RAW 輸出才寫 12-bit），維持 Unknown。【Open Gate】說明書本文沒有使用 Open Gate 一詞，但 5.8K 4:3（5760×4320）是感光元件全範圍；Panasonic 英國官網的 Open Gate 說明頁有列 GH7（本次無法直接開啟該頁，是透過搜尋結果摘要確認），建議負責人核對。【ARRI LogC3】需另購 Upgrade Software Key DMW-SFU3A 啟用。【發表日】說明書與規格頁都沒有，維持 Unknown。",
+  "extra_sources": [
+    {
+      "source_name": "Panasonic Japan LUMIX GH7 規格頁（日文）",
+      "source_url": "https://panasonic.jp/dc/products/DC-GH7/spec.html"
+    },
+    {
+      "source_name": "Panasonic UK：What is Open Gate video?（說明 LUMIX Open Gate 機型；本次未能直接開啟，經搜尋結果確認）",
+      "source_url": "https://www.panasonic.com/uk/consumer/cameras-camcorders/lumix-expert-advice-learn/lumix-expert-advice/what-is-open-gate-video-and-why-is-it-a-big-deal.html"
+    }
+  ]
 }

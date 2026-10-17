@@ -1,0 +1,343 @@
+{
+  "slug": "panasonic-lumix-s1",
+  "brand": "Panasonic",
+  "model": "LUMIX S1",
+  "aliases": [
+    "S1",
+    "DC-S1"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.6,
+    "height_mm": 23.8,
+    "resolution_mp": 24.2
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "V-Log（需另購 Upgrade Software Key DMW-SFU2 啟用）",
+    "HLG（Like2100(HLG)）",
+    "Cinelike D2／V2"
+  ],
+  "raw": "無內錄 RAW；韌體 2.x 起可經 HDMI 輸出 12-bit RAW（最高 5.9K 29.97p）到外接錄影機（原廠驗證過 Atomos Ninja V）",
+  "open_gate": false,
+  "lens_mount": "L-Mount",
+  "media": [
+    "卡槽 1：XQD（韌體更新後另支援 CFexpress Type B，AVCHD 不能錄到 CFexpress）",
+    "卡槽 2：SD／SDHC／SDXC（UHS-I／UHS-II）"
+  ],
+  "timecode": "錄 AVCHD／MOV 時自動記錄時間碼；可經 HDMI 輸出時間碼（韌體新增）；無 TC IN/OUT 端子",
+  "sdi": "無",
+  "hdmi": "HDMI Type A（標準尺寸）；4K 60p 可輸出 4:2:2 10-bit",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "AVCHD H.264／AVC",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "AVCHD Progressive"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "AVCHD H.264／AVC",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感光元件輸出 29.97 fps，以 60i 封裝"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "AVCHD H.264／AVC",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "音訊為 LPCM；影像範圍固定為 APS-C（比 FULL 窄）；連續錄影超過 29 分 59 秒會停止；說明書未列編碼"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "說明書未列編碼"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "說明書未列編碼"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "說明書未列編碼"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "說明書未列編碼"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MP4 HEVC LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MP4 HEVC LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "5952x3968",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "6K 3:2；需另購 Upgrade Software Key（DMW-SFU2）啟用；連續錄影超過 15 分鐘會停止"
+    },
+    {
+      "resolution": "5888x3312",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "5.9K；需另購 Upgrade Software Key（DMW-SFU2）啟用；連續錄影超過 15 分鐘會停止"
+    },
+    {
+      "resolution": "5888x3312",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "5.9K；需另購 Upgrade Software Key（DMW-SFU2）啟用；連續錄影超過 15 分鐘會停止"
+    },
+    {
+      "resolution": "5376x3584",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "5.4K 3:2；需另購 Upgrade Software Key（DMW-SFU2）啟用；連續錄影超過 15 分鐘會停止"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "4K-A 變形鏡頭 4:3 模式；只能選 APS-C 影像範圍（比 FULL 窄）；需另購 Upgrade Software Key（DMW-SFU2）啟用"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "4K-A 變形鏡頭 4:3 模式；只能選 APS-C 影像範圍（比 FULL 窄）；需另購 Upgrade Software Key（DMW-SFU2）啟用"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "C4K；只能選 APS-C 影像範圍（比 FULL 窄）；連續錄影超過 29 分 59 秒會停止；需另購 Upgrade Software Key（DMW-SFU2）啟用"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "C4K；只能選 APS-C 影像範圍（比 FULL 窄）；連續錄影超過 29 分 59 秒會停止；需另購 Upgrade Software Key（DMW-SFU2）啟用"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "C4K；可選 FULL 或 APS-C 影像範圍；需另購 Upgrade Software Key（DMW-SFU2）啟用"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "C4K；可選 FULL 或 APS-C 影像範圍；需另購 Upgrade Software Key（DMW-SFU2）啟用"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只能選 APS-C 影像範圍（比 FULL 窄）；連續錄影超過 29 分 59 秒會停止；需另購 Upgrade Software Key（DMW-SFU2）啟用"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MOV LongGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "音訊為 LPCM；影像範圍固定為 APS-C（比 FULL 窄）；連續錄影超過 29 分 59 秒會停止；說明書未列編碼；需另購 Upgrade Software Key（DMW-SFU2）啟用"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MOV LongGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "說明書未列編碼；需另購 Upgrade Software Key（DMW-SFU2）啟用"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MOV LongGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "說明書未列編碼；需另購 Upgrade Software Key（DMW-SFU2）啟用"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MOV LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "說明書未列編碼；需另購 Upgrade Software Key（DMW-SFU2）啟用"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MOV LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "說明書未列編碼；需另購 Upgrade Software Key（DMW-SFU2）啟用"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 180,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "高速錄影 [180/30p FHD]：以 180 fps 錄、儲存為 30p；不錄音；最長連續 15 分鐘；影像範圍比 FULL 窄；說明書未列編碼"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 150,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "高速錄影 [150/30p FHD]：以 150 fps 錄、儲存為 30p；不錄音；最長連續 15 分鐘；影像範圍比 FULL 窄；說明書未列編碼"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "高速錄影 [60/30p 4K]：以 60 fps 錄、儲存為 30p（約 1/2 倍慢動作）；影像範圍固定為 APS-C；不錄音；說明書未列編碼"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "高速錄影 [48/23.98p 4K]：以 48 fps 錄、儲存為 24p；影像範圍固定為 APS-C；不錄音；說明書未列編碼"
+    }
+  ],
+  "source_name": "Panasonic LUMIX S1 使用說明書（DVQP1869 V09.00，PDF）",
+  "source_url": "https://help.na.panasonic.com/wp-content/uploads/2024/02/DCS1_DVQP1869ZA_V09.00_ENG.pdf",
+  "last_verified": "2026-10-17",
+  "editor_notes": "1) 說明書 Rec Quality 表沒有寫編碼，只有 MP4 HEVC 標明是 H.265／HEVC；其餘 MP4／MOV 的編碼欄寫「LongGOP」（說明書寫「All videos will be recorded using Long GOP」）。C4K／4K-A 等模式的 FW 2.0 表有寫 HEVC／AVC，已照表填。2) 發表日、Base ISO、動態範圍宣稱值說明書沒有寫，寫 Unknown。3) MOV 格式與 V-Log 需付費金鑰 DMW-SFU2。4) 4K 以外的 FULL／APS-C 影像範圍倍率說明書沒寫數字，crop 只標有／無裁切，不寫倍率。5) PAL 的 25／50p 與 NTSC 位元率相同，沒有另列。6) 說明書中 FHD 60i 的交錯式模式沒有收。7) 高速錄影模式（180／150／60／48 fps）以錄影格率列出，實際儲存為 30p／24p。",
+  "extra_sources": [
+    {
+      "source_name": "Panasonic 日本官網 DC-S1 規格頁",
+      "source_url": "https://panasonic.jp/dc/p-db/DC-S1_spec.html"
+    }
+  ]
+}

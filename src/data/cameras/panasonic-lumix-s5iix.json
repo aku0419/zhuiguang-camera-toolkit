@@ -1,0 +1,924 @@
+{
+  "brand": "Panasonic",
+  "model": "LUMIX S5IIX",
+  "aliases": [
+    "S5IIX",
+    "S5 IIX",
+    "S5M2X",
+    "DC-S5M2X"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.6,
+    "height_mm": 23.8,
+    "resolution_mp": 24.2
+  },
+  "base_iso": [
+    640,
+    4000
+  ],
+  "log": [
+    "V-Log",
+    "HLG（Like2100）"
+  ],
+  "raw": "不能內錄 RAW；可經 HDMI 輸出 12-bit RAW 到外接錄影機（最高 5.9K 16:9 FULL；4.1K 17:9、3.5K 4:3 為 APS-C 範圍），原廠確認 ATOMOS Ninja V／V+、Blackmagic Video Assist 5q／7q 12G HDR；Apple ProRes 可內錄到外接 SSD",
+  "open_gate": true,
+  "lens_mount": "L-Mount",
+  "media": [
+    "卡槽 1／2：SD／SDHC／SDXC（雙卡槽，UHS-I／UHS-II，UHS-II 可達 Video Speed Class 90）",
+    "USB-C 外接 SSD（原廠說明書列有相容 SSD，ProRes 與 800 Mbps 以上需用）"
+  ],
+  "timecode": "MOV 與 Apple ProRes 格式自動錄入時間碼（可選 REC RUN／FREE RUN、DF／NDF）；MP4 不錄時間碼；可經 HDMI 輸出時間碼；說明書未列時間碼輸入端子",
+  "sdi": "無",
+  "hdmi": "Type A（標準尺寸）",
+  "dynamic_range_claimed": "14+ stops（V-Log）",
+  "source_name": "Panasonic LUMIX S5IIX 使用說明書 Complete Guide（PDF，DVQP2992ZA，含韌體 2.4 內容）",
+  "source_url": "https://help.na.panasonic.com/wp-content/uploads/2023/06/DCS5M2X_DVQP2992ZA_ENG.pdf",
+  "last_verified": "2026-10-17",
+  "editor_notes": "發表日說明書沒寫，維持 Unknown。Image Area 勾選是看 PDF 頁面圖片判讀：6K／5.9K／5.8K ProRes 與 FHD 120p 只有創意影片模式；3.3K 及 C4K／4K 60／48p（含 ProRes C4K 60p）只有 APS-C 範圍（標 crop）。「open_gate: true」依 6K 3:2（5952×3968）判斷，說明書沒有用 Open Gate 這個詞，請負責人確認。Apple ProRes 位元率原廠以 Gbps／Mbps 近似值標示，這裡換成 Mbps（1.9 Gbps＝1900）。ALL-Intra 的 I(H)=800 Mbps、I(L)=600 Mbps。PAL 與 24.00Hz（CINEMA）模式位元率相同，不重複列（PAL 另有 FHD 100p）。base_iso 填 V-Log 的 640／4000；一般 100／640。外接 SSD 的相容型號請查說明書「Compatible External SSDs」。APS-C 裁切倍率說明書沒有寫，不填 crop_factor。",
+  "slug": "panasonic-lumix-s5iix",
+  "recording_modes": [
+    {
+      "resolution": "5952x3968",
+      "max_fps": 30,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅限創意影片模式；原廠表只有 FULL 範圍；[Thermal Management] 設為 STANDARD 時連續錄影超過 30 分鐘會停止"
+    },
+    {
+      "resolution": "5952x3968",
+      "max_fps": 24,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅限創意影片模式；原廠表只有 FULL 範圍"
+    },
+    {
+      "resolution": "5952x3136",
+      "max_fps": 30,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅限創意影片模式；原廠表只有 FULL 範圍；[Thermal Management] 設為 STANDARD 時連續錄影超過 30 分鐘會停止"
+    },
+    {
+      "resolution": "5952x3136",
+      "max_fps": 24,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅限創意影片模式；原廠表只有 FULL 範圍"
+    },
+    {
+      "resolution": "5888x3312",
+      "max_fps": 30,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅限創意影片模式；原廠表只有 FULL 範圍；[Thermal Management] 設為 STANDARD 時連續錄影超過 30 分鐘會停止"
+    },
+    {
+      "resolution": "5888x3312",
+      "max_fps": 24,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅限創意影片模式；原廠表只有 FULL 範圍"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 48,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）；I(H)，無法錄到 SD 卡，需外接 SSD"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 48,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）；I(L)"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 48,
+      "codec": "H.264／AVC（422/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 48,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "H.264／AVC（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "H.264／AVC（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）；I(H)，無法錄到 SD 卡，需外接 SSD"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）；I(L)"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.264／AVC（422/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）；I(H)，無法錄到 SD 卡，需外接 SSD"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）；I(L)"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "H.264／AVC（422/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264／AVC（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.264／AVC（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）；I(H)，無法錄到 SD 卡，需外接 SSD"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）；I(L)"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264／AVC（422/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 800,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）；I(H)，無法錄到 SD 卡，需外接 SSD"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）；I(L)"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "H.264／AVC（422/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264／AVC（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264／AVC（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅限創意影片模式；可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.264／AVC（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅限創意影片模式；可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "僅限創意影片模式；可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264／AVC（422/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 48,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 48,
+      "codec": "H.264／AVC（422/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 48,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264／AVC（422/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "ALL-Intra（422/10-I）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264／AVC（422/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.265／HEVC（420/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "5776x3056",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1900,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅限創意影片模式；原廠表只有 FULL 範圍；Apple ProRes 非 FHD 解析度無法錄到 SD 卡，需外接 SSD；位元率為原廠表上的近似值；[Thermal Management] 設為 STANDARD 時連續錄影超過 30 分鐘會停止"
+    },
+    {
+      "resolution": "5776x3056",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅限創意影片模式；原廠表只有 FULL 範圍；Apple ProRes 非 FHD 解析度無法錄到 SD 卡，需外接 SSD；位元率為原廠表上的近似值；[Thermal Management] 設為 STANDARD 時連續錄影超過 30 分鐘會停止"
+    },
+    {
+      "resolution": "5776x3056",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅限創意影片模式；原廠表只有 FULL 範圍；Apple ProRes 非 FHD 解析度無法錄到 SD 卡，需外接 SSD；位元率為原廠表上的近似值"
+    },
+    {
+      "resolution": "5776x3056",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1000,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅限創意影片模式；原廠表只有 FULL 範圍；Apple ProRes 非 FHD 解析度無法錄到 SD 卡，需外接 SSD；位元率為原廠表上的近似值"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 913,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）；Apple ProRes 非 FHD 解析度無法錄到 SD 卡，需外接 SSD；位元率為原廠表上的近似值"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 609,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）；Apple ProRes 非 FHD 解析度無法錄到 SD 卡，需外接 SSD；位元率為原廠表上的近似值"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 730,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）；Apple ProRes 非 FHD 解析度無法錄到 SD 卡，需外接 SSD；位元率為原廠表上的近似值"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 487,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）；Apple ProRes 非 FHD 解析度無法錄到 SD 卡，需外接 SSD；位元率為原廠表上的近似值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 1900,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）；Apple ProRes 非 FHD 解析度無法錄到 SD 卡，需外接 SSD；位元率為原廠表上的近似值；[Thermal Management] 設為 STANDARD 時連續錄影超過 30 分鐘會停止"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 1300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）；Apple ProRes 非 FHD 解析度無法錄到 SD 卡，需外接 SSD；位元率為原廠表上的近似值；[Thermal Management] 設為 STANDARD 時連續錄影超過 30 分鐘會停止"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 972,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍；Apple ProRes 非 FHD 解析度無法錄到 SD 卡，需外接 SSD；位元率為原廠表上的近似值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 648,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍；Apple ProRes 非 FHD 解析度無法錄到 SD 卡，需外接 SSD；位元率為原廠表上的近似值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 778,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍；Apple ProRes 非 FHD 解析度無法錄到 SD 卡，需外接 SSD；位元率為原廠表上的近似值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 519,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍；Apple ProRes 非 FHD 解析度無法錄到 SD 卡，需外接 SSD；位元率為原廠表上的近似值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 454,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍；位元率為近似值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 302,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 227,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 151,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 181,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 121,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "3840x2560",
+      "max_fps": 30,
+      "codec": "H.265／HEVC（MP4 Lite 420/10）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4(Lite)（韌體 2.2 新增），可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265／HEVC（MP4 420/10）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "MP4；只能用 APS-C 範圍（原廠表只有 APS-C／PIXEL/PIXEL 可選）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265／HEVC（MP4 420/10）",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4；可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.265／HEVC（MP4 420/10）",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4；可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264／AVC（MP4 420/8）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4；可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264／AVC（MP4 420/8）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4；可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264／AVC（MP4 420/8）",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4；可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264／AVC（MP4 420/8）",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4；可選 FULL 或 APS-C 範圍"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264／AVC（MP4 420/8）",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "MP4；可選 FULL 或 APS-C 範圍"
+    }
+  ]
+}

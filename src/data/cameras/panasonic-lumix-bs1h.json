@@ -1,0 +1,562 @@
+{
+  "slug": "panasonic-lumix-bs1h",
+  "brand": "Panasonic",
+  "model": "LUMIX BS1H",
+  "aliases": [
+    "BS1H",
+    "DC-BS1H"
+  ],
+  "type": "電影用盒型相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.6,
+    "height_mm": 23.8,
+    "resolution_mp": 24.2
+  },
+  "base_iso": [
+    100,
+    640
+  ],
+  "log": [
+    "V-Log",
+    "Hybrid Log Gamma（HLG）"
+  ],
+  "raw": "無內錄 RAW；可經 HDMI 輸出 12-bit RAW（最高 5.9K）到外接錄影機",
+  "open_gate": true,
+  "lens_mount": "L-Mount",
+  "media": [
+    "卡槽 1：SD／SDHC／SDXC（UHS-I／UHS-II，UHS 速度等級 3，支援 UHS-II 影片速度等級 V90）",
+    "卡槽 2：SD／SDHC／SDXC（同卡槽 1，支援雙卡槽記錄）"
+  ],
+  "timecode": "TC IN／OUT（BNC）可輸入與輸出；僅 MOV 格式會記錄時間碼，MP4 不記錄",
+  "sdi": "SDI OUT × 1（BNC，3G-SDI Level-A／HD-SDI）",
+  "hdmi": "Type A（標準尺寸）",
+  "dynamic_range_claimed": "14+ stops（V-Log；原廠規格表標示為 Latitude）",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265／HEVC LongGOP（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "Rec Quality：4K/10bit/100M/60p；此模式只能用 S35mm 或 PIXEL/PIXEL 影像範圍，有裁切（倍率原廠未標）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/8bit/100M/30p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265／HEVC LongGOP（MP4）",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/10bit/72M/30p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/8bit/100M/24p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.265／HEVC LongGOP（MP4）",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/10bit/72M/24p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（MP4）",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/8bit/28M/60p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MP4）",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/8bit/20M/30p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MP4）",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/8bit/24M/24p"
+    },
+    {
+      "resolution": "5952x3968",
+      "max_fps": 24,
+      "codec": "H.265／HEVC LongGOP（MOV）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：6K/24p/420/10-L"
+    },
+    {
+      "resolution": "5888x3312",
+      "max_fps": 30,
+      "codec": "H.265／HEVC LongGOP（MOV）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：5.9K/30p/420/10-L"
+    },
+    {
+      "resolution": "5888x3312",
+      "max_fps": 24,
+      "codec": "H.265／HEVC LongGOP（MOV）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：5.9K/24p/420/10-L"
+    },
+    {
+      "resolution": "5376x3584",
+      "max_fps": 30,
+      "codec": "H.265／HEVC LongGOP（MOV）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：5.4K/30p/420/10-L"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 48,
+      "codec": "H.265／HEVC LongGOP（MOV）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "Rec Quality：4K-A/48p/420/10-L；此模式只能用 S35mm 或 PIXEL/PIXEL 影像範圍，有裁切（倍率原廠未標）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "Rec Quality：4K-A/30p/422/10-I；此模式只能用 S35mm 或 PIXEL/PIXEL 影像範圍，有裁切（倍率原廠未標）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "Rec Quality：4K-A/30p/422/10-L；此模式只能用 S35mm 或 PIXEL/PIXEL 影像範圍，有裁切（倍率原廠未標）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "Rec Quality：4K-A/30p/420/8-L；此模式只能用 S35mm 或 PIXEL/PIXEL 影像範圍，有裁切（倍率原廠未標）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "Rec Quality：4K-A/24p/422/10-I；此模式只能用 S35mm 或 PIXEL/PIXEL 影像範圍，有裁切（倍率原廠未標）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "Rec Quality：4K-A/24p/422/10-L；此模式只能用 S35mm 或 PIXEL/PIXEL 影像範圍，有裁切（倍率原廠未標）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "Rec Quality：4K-A/24p/420/8-L；此模式只能用 S35mm 或 PIXEL/PIXEL 影像範圍，有裁切（倍率原廠未標）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.265／HEVC LongGOP（MOV）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "Rec Quality：C4K/60p/420/10-L；此模式只能用 S35mm 或 PIXEL/PIXEL 影像範圍，有裁切（倍率原廠未標）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "Rec Quality：C4K/60p/420/8-L；此模式只能用 S35mm 或 PIXEL/PIXEL 影像範圍，有裁切（倍率原廠未標）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "H.265／HEVC LongGOP（MOV）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "Rec Quality：C4K/48p/420/10-L；此模式只能用 S35mm 或 PIXEL/PIXEL 影像範圍，有裁切（倍率原廠未標）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：C4K/30p/422/10-I"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：C4K/30p/422/10-L"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：C4K/30p/420/8-L"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：C4K/24p/422/10-I"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：C4K/24p/422/10-L"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：C4K/24p/420/8-L"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265／HEVC LongGOP（MOV）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "Rec Quality：4K/60p/420/10-L；此模式只能用 S35mm 或 PIXEL/PIXEL 影像範圍，有裁切（倍率原廠未標）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "Rec Quality：4K/60p/420/8-L；此模式只能用 S35mm 或 PIXEL/PIXEL 影像範圍，有裁切（倍率原廠未標）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "H.265／HEVC LongGOP（MOV）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "Rec Quality：4K/48p/420/10-L；此模式只能用 S35mm 或 PIXEL/PIXEL 影像範圍，有裁切（倍率原廠未標）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：4K/30p/422/10-I"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：4K/30p/422/10-L"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/30p/420/8-L"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：4K/24p/422/10-I"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：4K/24p/422/10-L"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/24p/420/8-L"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.265／HEVC LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/120p/420/10-L"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/60p/422/10-I"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/60p/422/10-L"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/60p/420/8-L"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/60i/422/10-I；隔行（59.94i）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/60i/422/10-L；隔行（59.94i）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 48,
+      "codec": "H.265／HEVC LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/48p/420/10-L"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/30p/422/10-I"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/30p/422/10-L"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/30p/420/8-L"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/24p/422/10-I"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/24p/422/10-L"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/24p/420/8-L"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 100,
+      "codec": "H.265／HEVC LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/100p/420/10-L（PAL 50.00Hz 系統；NTSC 系統為 119.88p）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 180,
+      "codec": "變格率錄影（VFR，MOV）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "Unknown",
+      "notes": "Variable Frame Rate 慢動作，FHD 最高 180 fps（影像範圍 PIXEL/PIXEL 時最高 60 fps；4K／C4K 最高 60 fps；4K-A 最高 50 fps）；存檔位元率依所選 Rec Quality，原廠未另列"
+    }
+  ],
+  "source_name": "Panasonic LUMIX BS1H 使用說明書（Operating Instructions／Owner’s Manual，Complete Guide，PDF）",
+  "source_url": "https://help.na.panasonic.com/wp-content/uploads/2023/02/DCBS1H_DVQP2566ZA_ENG.pdf",
+  "last_verified": "2026-10-17",
+  "editor_notes": "發表日期說明書沒寫，標 Unknown。感光元件 35.6 × 23.8 mm、有效 2,420 萬畫素，來自說明書規格表。Base ISO 為 Dual Native：一般模式 100／640、V-Log 為 640／4000（Cinelike D2／V2 為 200／1250，HLG 為 400／2500），這裡的 base_iso 只放一般模式。原廠規格表標示「Latitude 14+ stops（V-Log）」，這裡當成原廠宣稱的動態範圍。錄影品質表只列 NTSC（59.94Hz）一套，另補 PAL 才有的 FHD 100p；PAL（50.00Hz）與 24.00Hz（CINEMA）其餘位元率相同。影像範圍分 FULL／S35mm／PIXEL/PIXEL 三種：每個模式能不能選 FULL 是看說明書表格的勾選（NTSC 與 PAL 的 MP4、NTSC 的 MOV 我逐頁看過圖片；24.00Hz 與 PAL 的 MOV 表格未逐頁看圖，假設與 NTSC 相同）。不能選 FULL 的模式寫 crop，倍率原廠未標；能選 FULL 的寫 none，但若改選 S35mm／PIXEL/PIXEL 就會裁切。6K 5952x3968 是 3:2 影像範圍、使用接近整個感光元件，原廠沒有用「Open Gate」一詞，open_gate 寫 true 請負責人確認是否同意這樣歸類。FHD 180 fps 的 VFR 列位元率原廠未另列，標 Unknown；VFR 錄影沒有收音。FHD 60i 是隔行格式，max_fps 以 60 記錄。"
+}

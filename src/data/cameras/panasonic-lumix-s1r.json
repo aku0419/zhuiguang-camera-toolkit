@@ -1,0 +1,184 @@
+{
+  "slug": "panasonic-lumix-s1r",
+  "brand": "Panasonic",
+  "model": "LUMIX S1R",
+  "aliases": [
+    "S1R",
+    "DC-S1R"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 36.0,
+    "height_mm": 24.0,
+    "resolution_mp": 47.3
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "HLG（Like2100(HLG)，僅 10-bit MOV 5K 模式）",
+    "Cinelike D2／V2"
+  ],
+  "raw": "無內錄 RAW 影片；說明書未提及 HDMI RAW 輸出",
+  "open_gate": false,
+  "lens_mount": "L-Mount",
+  "media": [
+    "卡槽 1：XQD（韌體更新後另支援 CFexpress Type B，AVCHD 不能錄到 CFexpress）",
+    "卡槽 2：SD／SDHC／SDXC（UHS-I／UHS-II）"
+  ],
+  "timecode": "說明書未提及時間碼功能",
+  "sdi": "無",
+  "hdmi": "HDMI Type A（標準尺寸）；4K 60p 可輸出 4:2:2 10-bit",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "AVCHD H.264／AVC",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "AVCHD Progressive"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "AVCHD H.264／AVC",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感光元件輸出 29.97 fps，以 60i 封裝"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "AVCHD H.264／AVC",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "音訊為 LPCM；4K 影片的 FULL 影像範圍比一般窄（說明書未寫倍率）；連續錄影超過 15 分鐘會停止；說明書未列編碼"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "4K 影片的 FULL 影像範圍比一般窄（說明書未寫倍率）；說明書未列編碼"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "4K 影片的 FULL 影像範圍比一般窄（說明書未寫倍率）；連續錄影超過 15 分鐘會停止；說明書未列編碼"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "說明書未列編碼"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "說明書未列編碼"
+    },
+    {
+      "resolution": "4992x3744",
+      "max_fps": 30,
+      "codec": "MOV LongGOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "5K 4:3；影像範圍固定為 PIXEL/PIXEL（視角變窄）；連續錄影超過 15 分鐘會停止；韌體 1.6 新增；說明書未列編碼"
+    },
+    {
+      "resolution": "4992x3744",
+      "max_fps": 24,
+      "codec": "MOV LongGOP",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "5K 4:3；影像範圍固定為 PIXEL/PIXEL（視角變窄）；連續錄影超過 15 分鐘會停止；韌體 1.6 新增；說明書未列編碼"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 180,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "高速錄影 [180/30p FHD]：以 180 fps 錄、儲存為 30p；影像範圍固定為 APS-C；不錄音；最長連續 10 分鐘；說明書未列編碼"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "高速錄影 [120/30p FHD]：以 120 fps 錄、儲存為 30p；不錄音；最長連續 10 分鐘；FULL 影像範圍比一般窄；說明書未列編碼"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "高速錄影 [60/30p 4K]：以 60 fps 錄、儲存為 30p；不錄音；FULL 影像範圍比一般窄；說明書未列編碼"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "MP4 LongGOP",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "高速錄影 [48/23.98p 4K]：以 48 fps 錄、儲存為 24p；不錄音；FULL 影像範圍比一般窄；說明書未列編碼"
+    }
+  ],
+  "source_name": "Panasonic LUMIX S1R 使用說明書（DVQP1845 V09.00，PDF）",
+  "source_url": "https://help.na.panasonic.com/wp-content/uploads/2024/02/DCS1R_DVQP1845ZA_V09.00_ENG.pdf",
+  "last_verified": "2026-10-17",
+  "editor_notes": "1) 說明書錄影品質表沒有寫編碼，只標 AVC 的位置不明，編碼欄寫「LongGOP」或 AVCHD（H.264）。2) 發表日、Base ISO、動態範圍宣稱值、時間碼，說明書都沒寫，寫 Unknown 或「未提及」。3) 說明書寫 4K 影片的 FULL 影像範圍會變窄，但沒寫倍率，所以 crop 標 crop、不寫 crop_factor。5K 4:3 為韌體 1.6 新增、固定 PIXEL/PIXEL。4) 說明書沒有 V-Log（S1R 沒有 V-Log 升級的說明）。5) 交錯式 FHD 60i 沒有收。",
+  "extra_sources": [
+    {
+      "source_name": "Panasonic 日本官網 DC-S1R 規格頁",
+      "source_url": "https://panasonic.jp/dc/p-db/DC-S1R_spec.html"
+    }
+  ]
+}

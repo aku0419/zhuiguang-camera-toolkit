@@ -1,0 +1,551 @@
+{
+  "slug": "panasonic-lumix-s1h",
+  "brand": "Panasonic",
+  "model": "LUMIX S1H",
+  "aliases": [
+    "S1H",
+    "DC-S1H"
+  ],
+  "type": "電影用無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": 35.6,
+    "height_mm": 23.8,
+    "resolution_mp": 24.2
+  },
+  "base_iso": [
+    640,
+    4000
+  ],
+  "log": [
+    "V-Log（內建）",
+    "HLG（Like2100(HLG)）",
+    "Cinelike D2／V2"
+  ],
+  "raw": "無內錄 RAW；韌體 2.1 起可經 HDMI 輸出 12-bit RAW（最高 5.9K，到外接錄影機如 Atomos Ninja V；韌體 2.4 增加 Blackmagic Video Assist 12G）",
+  "open_gate": true,
+  "lens_mount": "L-Mount",
+  "media": [
+    "卡槽 1：SD／SDHC／SDXC（UHS-II，Video Speed Class 90）",
+    "卡槽 2：SD／SDHC／SDXC（UHS-II，Video Speed Class 90）"
+  ],
+  "timecode": "可輸入／輸出（用附贈 BNC 轉接線接在閃光燈同步端子；輸入 1.0–4.0 V p-p）",
+  "sdi": "無",
+  "hdmi": "HDMI Type A（標準尺寸）；可輸出 RAW 影像資料",
+  "dynamic_range_claimed": "14+ stops（V-Log）",
+  "recording_modes": [
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "AVCHD H.264／AVC",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "AVCHD H.264／AVC",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感光元件輸出 29.97 fps，以 60i 封裝"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "AVCHD H.264／AVC",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MP4 H.265／HEVC",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只能選 S35mm／PIXEL/PIXEL 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MP4 H.264／AVC",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MP4 H.265／HEVC",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MP4 H.264／AVC",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MP4 H.265／HEVC",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MP4 H.264／AVC",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "MP4 H.264／AVC",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MP4 H.264／AVC",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "5952x3968",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "畫面比例 3:2"
+    },
+    {
+      "resolution": "5888x3312",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "5888x3312",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "5376x3584",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "畫面比例 3:2"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 48,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 S35mm／PIXEL/PIXEL 影像範圍（比 FULL 窄）；Anamorphic（變形鏡頭）4:3 模式"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 S35mm／PIXEL/PIXEL 影像範圍（比 FULL 窄）；Anamorphic（變形鏡頭）4:3 模式"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 S35mm／PIXEL/PIXEL 影像範圍（比 FULL 窄）；Anamorphic（變形鏡頭）4:3 模式"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 S35mm／PIXEL/PIXEL 影像範圍（比 FULL 窄）；Anamorphic（變形鏡頭）4:3 模式"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 S35mm／PIXEL/PIXEL 影像範圍（比 FULL 窄）；Anamorphic（變形鏡頭）4:3 模式"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 S35mm／PIXEL/PIXEL 影像範圍（比 FULL 窄）；Anamorphic（變形鏡頭）4:3 模式"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 S35mm／PIXEL/PIXEL 影像範圍（比 FULL 窄）；Anamorphic（變形鏡頭）4:3 模式"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "畫面比例 17:9；只能選 S35mm／PIXEL/PIXEL 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "畫面比例 17:9；只能選 S35mm／PIXEL/PIXEL 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "畫面比例 17:9；只能選 S35mm／PIXEL/PIXEL 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 17:9"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 17:9"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "畫面比例 17:9"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 17:9"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "畫面比例 17:9"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "畫面比例 17:9"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只能選 S35mm／PIXEL/PIXEL 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只能選 S35mm／PIXEL/PIXEL 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只能選 S35mm／PIXEL/PIXEL 影像範圍（比 FULL 窄）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 48,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "MOV ALL-Intra（H.264／AVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 50,
+      "codec": "MOV LongGOP（H.265／HEVC）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 S35mm／PIXEL/PIXEL 影像範圍（比 FULL 窄）；PAL 系統的格率（50p）；Anamorphic（變形鏡頭）4:3 模式"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 50,
+      "codec": "MOV LongGOP（H.264／AVC）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "畫面比例 4:3；只能選 S35mm／PIXEL/PIXEL 影像範圍（比 FULL 窄）；PAL 系統的格率（50p）；Anamorphic（變形鏡頭）4:3 模式"
+    }
+  ],
+  "source_name": "Panasonic LUMIX S1H 使用說明書（DVQP2021，PDF）",
+  "source_url": "https://help.na.panasonic.com/wp-content/uploads/2023/02/DCS1H_DVQP2021ZA_ENG.pdf",
+  "last_verified": "2026-10-17",
+  "editor_notes": "1) 規格頁「Latitude」在 PDF 轉文字後變成「14i stops ([V-Log])」，「i」判斷是「+」（與同一份文件其他「±」字也被轉成英文字母一樣），請負責人對照原廠 PDF 或官網確認是否為「14+ stops」。2) 發表日說明書沒寫，寫 Unknown。3) base_iso 為 V-Log 的雙原生 ISO 640／4000（規格表）；一般模式是 100／640。4) 位元率取自錄影品質表（200／400 等為 VBR 數值）。5) 影像範圍 S35mm／PIXEL/PIXEL 的倍率說明書沒寫，crop 標 crop、不寫倍率；PAL 25／50p 與 NTSC 位元率相同的沒有另列，24.00Hz（CINEMA）系統的 C4K 48p 等已收。6) 交錯式 FHD 60i／50i 模式沒有收。7) 可變格率錄影（VFR）說明書另有列表，沒有逐列收。8) Open Gate：6K 3:2（5952x3968）說明書沒有用「Open Gate」一詞，依 3:2 全片幅範圍判斷標 true，請負責人確認。",
+  "extra_sources": [
+    {
+      "source_name": "Panasonic 日本官網 DC-S1H 規格頁",
+      "source_url": "https://panasonic.jp/dc/products/DC-S1H/spec.html"
+    }
+  ]
+}

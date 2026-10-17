@@ -1,0 +1,166 @@
+{
+  "slug": "panasonic-lumix-g9",
+  "brand": "Panasonic",
+  "model": "LUMIX G9",
+  "aliases": [
+    "G9",
+    "DC-G9"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "M43",
+    "width_mm": "Unknown",
+    "height_mm": "Unknown",
+    "resolution_mp": 20.33
+  },
+  "base_iso": "Unknown",
+  "log": [],
+  "raw": "無（RAW 僅限靜態照片，影片無 RAW 內錄或輸出）",
+  "open_gate": false,
+  "lens_mount": "Micro Four Thirds",
+  "media": [
+    "卡槽 1：SD／SDHC／SDXC（UHS-I／UHS-II，UHS 速度等級 3）",
+    "卡槽 2：SD／SDHC／SDXC（UHS-I／UHS-II，UHS 速度等級 3；支援雙卡槽記錄）"
+  ],
+  "timecode": "說明書未記載時間碼功能",
+  "sdi": "無",
+  "hdmi": "Type A（標準尺寸）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264／AVC LongGOP（MP4）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/150M/60p；單次錄影最長 10 分鐘；原廠註明供電腦剪接用"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264／AVC LongGOP（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/100M/30p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264／AVC LongGOP（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/100M/24p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264／AVC LongGOP（MP4）",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/28M/60p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264／AVC LongGOP（MP4）",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/20M/30p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264／AVCHD LongGOP",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "AVCHD Progressive，Rec Quality：FHD/28M/60p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264／AVCHD LongGOP",
+      "bitrate_mbps": 17,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "AVCHD，隔行（59.94i），Rec Quality：FHD/17M/60i"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264／AVCHD LongGOP",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "AVCHD，Rec Quality：FHD/24M/30p（感光元件輸出 30 fps，以 60i 記錄）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264／AVCHD LongGOP",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "AVCHD，Rec Quality：FHD/24M/24p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264／AVC LongGOP（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "高速動畫（High Speed Video）[60fps/4K]：以 60 fps 拍攝、以 4K/100M/30p 存檔（約 1/2 倍慢動作）；不對焦、無收音"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "H.264／AVC LongGOP（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "高速動畫（High Speed Video）[48fps/4K]：以 48 fps 拍攝、以 4K/100M/24p 存檔（約 1/2 倍慢動作）；不對焦、無收音"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 180,
+      "codec": "H.264／AVC LongGOP（MP4）",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "高速動畫（High Speed Video）[180fps/FHD]：以 180 fps 拍攝、以 FHD/20M/30p 存檔（約 1/6 倍慢動作）；不對焦、無收音"
+    }
+  ],
+  "source_name": "Panasonic LUMIX G9 使用說明書（Owner’s Manual <Basic>，PDF）",
+  "source_url": "https://help.na.panasonic.com/wp-content/uploads/2023/02/DCG9_DVQX1310ZA_ENG.pdf",
+  "last_verified": "2026-10-17",
+  "editor_notes": "發表日期說明書沒寫，標 Unknown（說明書封面印的 2017 年是印刷日期，不是發表日期）。感光元件規格只寫 4/3 吋、有效 2,033 萬畫素，沒寫毫米尺寸，寬高標 Unknown；Base ISO、動態範圍宣稱值說明書沒寫，標 Unknown。英文版只找到 <Basic> 手冊（含錄影品質表與規格表）；進階說明書找到的官方檔是法文版（DCG9_DVQP1403ZA_FRE.pdf），錄影品質表與英文版一致，另外兩份文件中都沒有時間碼（Time Code）、V-Log、4:2:2／10-bit 錄影的記載，所以 timecode 寫「說明書未記載」、log 留空、位元深度寫 8-bit、色彩取樣 4:2:0（說明書：所有影片都是 4:2:0／8-bit Long GOP）。請負責人確認 G9 是否真的沒有這些功能（韌體 2.x 以後的新增功能，若不在這兩份文件裡，這裡不會有）。Cinelike D／Cinelike V 是照片風格（Photo Style）的伽瑪曲線，不是 Log，所以不列在 log。說明書沒有寫 4K 錄影有裁切（只寫 4K 錄影時 [Ex. Tele Conv.] 為 1.4 倍），crop 寫 none；請負責人確認。AVCHD 的 FHD 60i 是隔行格式，max_fps 以 60 記錄。高速動畫列的 max_fps 是拍攝格率，位元率是存檔格式的位元率。錄影模式只列 NTSC（59.94Hz）一套。",
+  "extra_sources": [
+    {
+      "source_name": "Panasonic LUMIX G9 進階說明書（法文版 PDF）",
+      "source_url": "https://help.na.panasonic.com/wp-content/uploads/2023/03/DCG9_DVQP1403ZA_FRE.pdf"
+    },
+    {
+      "source_name": "Panasonic 日本官網 DC-G9 規格頁",
+      "source_url": "https://panasonic.jp/dc/p-db/DC-G9_spec.html"
+    }
+  ]
+}

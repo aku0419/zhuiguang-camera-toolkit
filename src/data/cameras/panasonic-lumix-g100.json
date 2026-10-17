@@ -1,0 +1,109 @@
+{
+  "slug": "panasonic-lumix-g100",
+  "brand": "Panasonic",
+  "model": "LUMIX G100",
+  "aliases": [
+    "G100",
+    "DC-G100",
+    "G100D",
+    "DC-G100D"
+  ],
+  "type": "無反光鏡相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "M43",
+    "width_mm": "Unknown",
+    "height_mm": "Unknown",
+    "resolution_mp": 20.3
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "V-Log L"
+  ],
+  "raw": "無（RAW 僅限靜態照片，影片無 RAW 內錄或輸出）",
+  "open_gate": false,
+  "lens_mount": "Micro Four Thirds",
+  "media": [
+    "SD／SDHC／SDXC（UHS-I，UHS 速度等級 3），單一卡槽"
+  ],
+  "timecode": "說明書未記載時間碼功能",
+  "sdi": "無",
+  "hdmi": "Micro HDMI Type D",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264／AVC（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "Rec Quality：4K/100M/30p；4K 錄影視角比其他尺寸窄（原廠未標倍率）；單次錄影最長 10 分鐘"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264／AVC（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "Rec Quality：4K/100M/24p；4K 錄影視角比其他尺寸窄（原廠未標倍率）；單次錄影最長 10 分鐘"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264／AVC（MP4）",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/28M/60p；單次錄影最長 20 分鐘"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264／AVC（MP4）",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/20M/30p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264／AVC（MP4）",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/24M/24p"
+    },
+    {
+      "resolution": "1280x720",
+      "max_fps": 30,
+      "codec": "H.264／AVC（MP4）",
+      "bitrate_mbps": 10,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：HD/10M/30p"
+    }
+  ],
+  "source_name": "Panasonic LUMIX G100D 使用說明書（Owner’s Manual，PDF）",
+  "source_url": "https://help.na.panasonic.com/wp-content/uploads/2025/04/DCG100D_OperatingInstructions_ENG.pdf",
+  "last_verified": "2026-10-17",
+  "editor_notes": "英文完整說明書只找到 G100D 版（日本稱 G100D 為套組型號，這裡以 G100 為主）；日本官網的 DC-G100 日文說明書（錄影品質表、V-Log L 記載）與它一致，但日本官網 DC-G100 規格頁已不存在（404），所以以 G100D 英文版為準。發表日期說明書沒寫，標 Unknown。感光元件規格只寫 4/3 吋、有效 2,030 萬畫素，沒寫毫米尺寸，寬高標 Unknown；Base ISO、動態範圍宣稱值說明書沒寫，標 Unknown（說明書寫 V-Log L 的 ISO 下限為 400）。所有影片為 4:2:0／8-bit（說明書 Log 錄影段落明寫）；說明書沒寫 Long GOP 字樣，所以編碼只寫 H.264／AVC。4K 錄影視角比其他尺寸窄（說明書明寫），但沒寫裁切倍率，crop 寫 crop 不寫倍率。時間碼、SDI 說明書未記載，標「說明書未記載」／「無」。HDMI 為 Micro Type D，4K 錄影時不能同時使用 HDMI 輸出（說明書：HDMI 輸出時無法設定 4K）。慢動作／快動作（S&Q）模式為 FHD、60p／30p，已包含在 FHD 列內，不另列。錄影模式只列一套（NTSC 名義值）。",
+  "extra_sources": [
+    {
+      "source_name": "Panasonic LUMIX G100 日文說明書（日本官網 PDF）",
+      "source_url": "https://panasonic.jp/p-db/contents/manualdl/1428425154575.pdf"
+    },
+    {
+      "source_name": "Panasonic 北美官網 DC-G100D 規格頁",
+      "source_url": "https://help.na.panasonic.com/answers/features-and-specifications-lumix-g-series-model-dc-g100d"
+    }
+  ]
+}

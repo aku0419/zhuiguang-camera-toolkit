@@ -21,121 +21,481 @@
     4000
   ],
   "log": [
-    "V-Log"
+    "V-Log",
+    "Hybrid Log Gamma（HLG）"
   ],
-  "raw": "不能內錄；可經 HDMI 輸出 12-bit RAW 到外接錄影機（最高 5.9K）",
+  "raw": "不能內錄；需另購升級軟體序號 DMW-SFU2 後，可經 HDMI 輸出 12-bit RAW 到 ATOMOS Ninja V／V+ 或 Blackmagic Video Assist 12G HDR（5.9K 16:9 最高 30p；4.1K 17:9 APS-C 最高 60p；3.5K 4:3 APS-C 最高 50p）",
   "open_gate": true,
   "lens_mount": "L-Mount",
   "media": [
-    "SD（雙卡槽，UHS-I／UHS-II，最高 V90）"
+    "卡槽 1：SD／SDHC／SDXC（UHS-I／UHS-II，UHS 速度等級 3、UHS-II 影片速度等級 V90）",
+    "卡槽 2：SD／SDHC／SDXC（規格同卡槽 1，可雙卡同時錄影）"
   ],
-  "timecode": "說明書未提到時間碼輸入端子",
+  "timecode": "MOV 會記錄時間碼（REC RUN／FREE RUN、DF／NDF），HDMI 可輸出時間碼；規格表介面沒有時間碼輸入／輸出端子；MP4 不記錄時間碼",
   "sdi": "無",
-  "hdmi": "Type A（標準尺寸）",
+  "hdmi": "Type A（標準尺寸）；裝升級軟體序號後可輸出 12-bit RAW 影像",
   "dynamic_range_claimed": "14+ stops（V-Log）",
   "recording_modes": [
     {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265／HEVC（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只有 APS-C 與 PIXEL/PIXEL 範圍（裁切，原廠沒寫倍率）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265／HEVC（MP4）",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.265／HEVC（MP4）",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264（MP4）",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264（MP4）",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264（MP4）",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
       "resolution": "5952x3968",
-      "max_fps": 29.97,
-      "codec": "H.265（420/10-L）",
+      "max_fps": 30,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
       "bitrate_mbps": 200,
       "bit_depth": 10,
       "chroma": "4:2:0",
       "crop": "none",
-      "notes": "6K 3:2（Open Gate），FULL 範圍"
+      "notes": "說明書標示僅限 Creative Video 模式；Thermal Management 設為 STANDARD 時，連續錄影超過 30 分鐘會停止；6K 3:2（Open Gate）"
+    },
+    {
+      "resolution": "5952x3968",
+      "max_fps": 24,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "說明書標示僅限 Creative Video 模式；6K 3:2（Open Gate）"
     },
     {
       "resolution": "5952x3136",
-      "max_fps": 29.97,
-      "codec": "H.265（420/10-L）",
+      "max_fps": 30,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
       "bitrate_mbps": 200,
       "bit_depth": 10,
       "chroma": "4:2:0",
       "crop": "none",
-      "notes": "6K 17:9，FULL 範圍"
+      "notes": "說明書標示僅限 Creative Video 模式；Thermal Management 設為 STANDARD 時，連續錄影超過 30 分鐘會停止"
+    },
+    {
+      "resolution": "5952x3136",
+      "max_fps": 24,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "說明書標示僅限 Creative Video 模式"
     },
     {
       "resolution": "5888x3312",
-      "max_fps": 29.97,
-      "codec": "H.265（420/10-L）",
+      "max_fps": 30,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
       "bitrate_mbps": 200,
       "bit_depth": 10,
       "chroma": "4:2:0",
       "crop": "none",
-      "notes": "5.9K 16:9，FULL 範圍"
+      "notes": "說明書標示僅限 Creative Video 模式；Thermal Management 設為 STANDARD 時，連續錄影超過 30 分鐘會停止"
     },
     {
-      "resolution": "4096x2160",
-      "max_fps": 59.94,
-      "codec": "H.264（422/10-L）",
-      "bitrate_mbps": 200,
-      "bit_depth": 10,
-      "chroma": "4:2:2",
-      "crop": "crop",
-      "notes": "C4K 60p 為 APS-C 範圍"
-    },
-    {
-      "resolution": "4096x2160",
-      "max_fps": 29.97,
-      "codec": "H.264（422/10-L）",
-      "bitrate_mbps": 150,
-      "bit_depth": 10,
-      "chroma": "4:2:2",
-      "crop": "none",
-      "notes": "C4K 30p 以下可用 FULL 範圍"
-    },
-    {
-      "resolution": "3840x2160",
-      "max_fps": 59.94,
-      "codec": "H.265（420/10-L）",
+      "resolution": "5888x3312",
+      "max_fps": 24,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
       "bitrate_mbps": 200,
       "bit_depth": 10,
       "chroma": "4:2:0",
-      "crop": "crop",
-      "notes": "4K 60p 為 APS-C 範圍"
-    },
-    {
-      "resolution": "3840x2160",
-      "max_fps": 23.98,
-      "codec": "H.264（422/10-L）",
-      "bitrate_mbps": 150,
-      "bit_depth": 10,
-      "chroma": "4:2:2",
       "crop": "none",
-      "notes": "4K 30p 以下可用 FULL 範圍"
+      "notes": "說明書標示僅限 Creative Video 模式"
     },
     {
       "resolution": "3328x2496",
-      "max_fps": 47.95,
-      "codec": "H.264（422/10-L）",
+      "max_fps": 48,
+      "codec": "H.264 LongGOP（422/10-L）",
       "bitrate_mbps": 200,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "crop",
-      "notes": "3.3K 4:3，APS-C 範圍"
+      "notes": "只有 APS-C 與 PIXEL/PIXEL 範圍（裁切，原廠沒寫倍率）"
     },
     {
-      "resolution": "1920x1080",
-      "max_fps": 119.88,
-      "codec": "H.264（422/10-L）",
+      "resolution": "3328x2496",
+      "max_fps": 48,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只有 APS-C 與 PIXEL/PIXEL 範圍（裁切，原廠沒寫倍率）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（422/10-L）",
       "bitrate_mbps": 150,
       "bit_depth": 10,
       "chroma": "4:2:2",
-      "crop": "Unknown",
-      "notes": "說明書沒有寫 FHD 120p 的影像範圍"
+      "crop": "crop",
+      "notes": "只有 APS-C 與 PIXEL/PIXEL 範圍（裁切，原廠沒寫倍率）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只有 APS-C 與 PIXEL/PIXEL 範圍（裁切，原廠沒寫倍率）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只有 APS-C 與 PIXEL/PIXEL 範圍（裁切，原廠沒寫倍率）"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只有 APS-C 與 PIXEL/PIXEL 範圍（裁切，原廠沒寫倍率）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只有 APS-C 與 PIXEL/PIXEL 範圍（裁切，原廠沒寫倍率）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只有 APS-C 與 PIXEL/PIXEL 範圍（裁切，原廠沒寫倍率）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只有 APS-C 與 PIXEL/PIXEL 範圍（裁切，原廠沒寫倍率）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 48,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只有 APS-C 與 PIXEL/PIXEL 範圍（裁切，原廠沒寫倍率）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只有 APS-C 與 PIXEL/PIXEL 範圍（裁切，原廠沒寫倍率）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只有 APS-C 與 PIXEL/PIXEL 範圍（裁切，原廠沒寫倍率）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "notes": "只有 APS-C 與 PIXEL/PIXEL 範圍（裁切，原廠沒寫倍率）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "notes": "只有 APS-C 與 PIXEL/PIXEL 範圍（裁切，原廠沒寫倍率）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
     },
     {
       "resolution": "1920x1080",
-      "max_fps": 59.94,
-      "codec": "H.264（422/10-L）",
+      "max_fps": 120,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "說明書標示僅限 Creative Video 模式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（422/10-L）",
       "bitrate_mbps": 100,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 48,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 48,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（422/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.265／HEVC LongGOP（420/10-L）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2560",
+      "max_fps": 30,
+      "codec": "H.265／HEVC（MP4(Lite) 10bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "3.8K 3:2，MP4(Lite)（韌體 3.2 新增，適合手機剪接）"
     }
   ],
-  "source_name": "Panasonic LUMIX S5II 使用說明書（PDF）",
+  "source_name": "Panasonic LUMIX S5II 使用說明書（PDF，含韌體 2.0～3.4 增補）",
   "source_url": "https://help.na.panasonic.com/wp-content/uploads/2023/02/DCS5M2_DVQP2839ZA_ENG.pdf",
-  "last_verified": "2026-10-06",
-  "editor_notes": "說明書的 V-Log 錄影 ISO：base sensitivity 640／4000。裁切範圍依說明書「影像範圍」範例：6K、5.9K、C4K／4K 30p 以下為 FULL；3.3K、C4K／4K 60p 為 APS-C。位元率為 NTSC 數值。"
+  "last_verified": "2026-10-17",
+  "editor_notes": "【資料來源】以英文使用說明書「Recording Videos – [Rec Quality]」表（MP4、MOV）逐列整理，含韌體 3.2 新增的 MP4(Lite)；感光元件、卡槽、端子、ISO 取自說明書 Specifications，感光元件尺寸 35.6×23.8 mm 並與 Panasonic Japan 規格頁對照一致。【列的取捨】NTSC（59.94Hz）全部列出；PAL（50Hz）與 24.00Hz（CINEMA）的位元率與 NTSC 相同，故不重複列（PAL 另有 50p 的 3.3K／C4K／4K 與 100p 的 FHD，位元率與 48p／60p／120p 相同）。位元率原廠說明是 VBR（會依畫面變動）。【裁切】說明書每列都有「FULL／APS-C／PIXEL/PIXEL」勾選欄：有 FULL 的列記為 none（這些列同時也可選 APS-C 範圍）；沒有 FULL 的列（3.3K 全部、C4K／4K 的 60p 與 48p、MP4 4K 10bit 100M 60p）記為 crop，原廠沒寫 APS-C 範圍的倍率，所以沒填 crop_factor。表中另有「僅限 Creative Video 模式」圖示（6K、5.9K、FHD 120p），已寫在對應列的 notes。6K／5.9K 30p 在 Thermal Management 設為 STANDARD 時連續錄影超過 30 分鐘會停止（說明書註記）。說明書規格頁的影片格式是 MP4／MOV（H.264、H.265），沒有 ALL-Intra、ProRes 錄影。【Base ISO】V-Log 的 Dual Native ISO：640／4000（說明書「Dual Native ISO setting」）；一般模式為 100／640、HLG 為 400／2500、Cinelike 為 200／1250。【RAW】HDMI RAW 輸出（12-bit）需另購 Upgrade Software Key DMW-SFU2，系統頻率 24.00Hz（CINEMA）時不能輸出。【Open Gate】說明書本文沒有使用 Open Gate 一詞，但 6K 3:2（5952×3968）是感光元件全範圍；Panasonic 英國官網的 Open Gate 說明頁有列 S5II（本次無法直接開啟該頁，是透過搜尋結果摘要確認），建議負責人核對。【發表日】說明書與規格頁都沒有，維持 Unknown。",
+  "extra_sources": [
+    {
+      "source_name": "Panasonic Japan LUMIX S5II 規格頁（日文）",
+      "source_url": "https://panasonic.jp/dc/p-db/DC-S5M2_spec.html"
+    },
+    {
+      "source_name": "Panasonic UK：What is Open Gate video?（說明 LUMIX Open Gate 機型；本次未能直接開啟，經搜尋結果確認）",
+      "source_url": "https://www.panasonic.com/uk/consumer/cameras-camcorders/lumix-expert-advice-learn/lumix-expert-advice/what-is-open-gate-video-and-why-is-it-a-big-deal.html"
+    }
+  ]
 }

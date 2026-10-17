@@ -1,0 +1,452 @@
+{
+  "slug": "panasonic-lumix-bgh1",
+  "brand": "Panasonic",
+  "model": "LUMIX BGH1",
+  "aliases": [
+    "BGH1",
+    "DC-BGH1"
+  ],
+  "type": "電影用盒型相機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "M43",
+    "width_mm": "Unknown",
+    "height_mm": "Unknown",
+    "resolution_mp": 10.28
+  },
+  "base_iso": [
+    160,
+    800
+  ],
+  "log": [
+    "V-Log L",
+    "Hybrid Log Gamma（HLG）"
+  ],
+  "raw": "無內錄 RAW；可經 HDMI 輸出 12-bit RAW（最高 5.9K）到外接錄影機",
+  "open_gate": false,
+  "lens_mount": "Micro Four Thirds",
+  "media": [
+    "卡槽 1：SD／SDHC／SDXC（UHS-I／UHS-II，UHS 速度等級 3，支援 UHS-II 影片速度等級 V90）",
+    "卡槽 2：SD／SDHC／SDXC（同卡槽 1，支援雙卡槽記錄）"
+  ],
+  "timecode": "TC IN／OUT（BNC）可輸入與輸出；僅 MOV 格式會記錄時間碼，MP4 不記錄",
+  "sdi": "SDI OUT × 1（BNC，3G-SDI）",
+  "hdmi": "Type A（標準尺寸）",
+  "dynamic_range_claimed": "13 stops（V-Log L；原廠規格表標示為 Latitude）",
+  "recording_modes": [
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265／HEVC LongGOP（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/10bit/100M/60p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/8bit/100M/30p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.265／HEVC LongGOP（MP4）",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/10bit/72M/30p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MP4）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/8bit/100M/24p"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.265／HEVC LongGOP（MP4）",
+      "bitrate_mbps": 72,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/10bit/72M/24p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（MP4）",
+      "bitrate_mbps": 28,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/8bit/28M/60p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MP4）",
+      "bitrate_mbps": 20,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/8bit/20M/30p"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MP4）",
+      "bitrate_mbps": 24,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/8bit/24M/24p"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K-A/60p/420/8-L"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：4K-A/30p/422/10-I"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：4K-A/30p/422/10-L"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K-A/30p/420/8-L"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：4K-A/24p/422/10-I"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：4K-A/24p/422/10-L"
+    },
+    {
+      "resolution": "3328x2496",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K-A/24p/420/8-L"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.265／HEVC LongGOP（MOV）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：C4K/60p/420/10-L"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：C4K/60p/420/8-L"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：C4K/30p/422/10-I"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：C4K/30p/422/10-L"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：C4K/30p/420/8-L"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：C4K/24p/422/10-I"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：C4K/24p/422/10-L"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：C4K/24p/420/8-L"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.265／HEVC LongGOP（MOV）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/60p/420/10-L"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/60p/420/8-L"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：4K/30p/422/10-I"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：4K/30p/422/10-L"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/30p/420/8-L"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 400,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：4K/24p/422/10-I"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：4K/24p/422/10-L"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：4K/24p/420/8-L"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/60p/422/10-I"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/60p/422/10-L"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/60p/420/8-L"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/30p/422/10-I"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/30p/422/10-L"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/30p/420/8-L"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 ALL-Intra（MOV）",
+      "bitrate_mbps": 200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/24p/422/10-I"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/24p/422/10-L"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "H.264 LongGOP（MOV）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Rec Quality：FHD/24p/420/8-L"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 240,
+      "codec": "變格率錄影（VFR，MOV）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "Variable Frame Rate 慢動作，FHD 最高 240 fps（影像範圍 PIXEL/PIXEL 時最高 150 fps；4K／C4K／4K-A 最高 60 fps）；存檔位元率依所選 Rec Quality，原廠未另列"
+    }
+  ],
+  "source_name": "Panasonic LUMIX BGH1 使用說明書（Owner’s Manual，PDF）",
+  "source_url": "https://help.na.panasonic.com/wp-content/uploads/2023/02/DCBGH1_DVQP2276ZA_ENG.pdf",
+  "last_verified": "2026-10-17",
+  "editor_notes": "發表日期說明書沒寫，標 Unknown。感光元件規格只寫 4/3 吋、有效 1,028 萬畫素，沒寫毫米尺寸，所以寬高標 Unknown。Base ISO 為 Dual Native：一般模式 160／800、V-Log L 為 400／2000、HLG 為 320／1600，這裡的 base_iso 只放一般模式；原廠表格標示「Latitude 13 stops（V-Log L）」，這裡當成原廠宣稱的動態範圍。錄影品質表只列 NTSC（59.94Hz）一套；PAL（50.00Hz）與 24.00Hz（CINEMA，僅 MOV）的位元率相同。4K／C4K／4K-A 錄影的影像範圍固定為 FULL（不裁切）；FHD 可改選 PIXEL/PIXEL（會裁切，倍率原廠未標）。4K-A（3328x2496，4:3）是變形鏡頭用的 4:3 錄影模式，不算 Open Gate，所以 open_gate 寫 false；請負責人確認是否同意這樣歸類。FHD 240 fps 的 VFR 列位元率原廠未另列，標 Unknown，在容量工具裡不會被選來算。VFR 錄影沒有收音。說明書寫 SDI 為「3G-SDI compatible」，沒有寫等級（Level-A／B）。"
+}
