@@ -3,12 +3,13 @@
   "brand": "Canon",
   "model": "EOS C70",
   "aliases": [
-    "C70"
+    "C70",
+    "EOS C70"
   ],
   "type": "電影機（Cinema EOS）",
   "announced": "Unknown",
   "sensor": {
-    "format": "Super35",
+    "format": "Super 35",
     "width_mm": "Unknown",
     "height_mm": "Unknown",
     "resolution_mp": 8.85
@@ -18,140 +19,1253 @@
     "Canon Log 2",
     "Canon Log 3"
   ],
-  "raw": "可內錄 Cinema RAW Light（RAW ST／LT／HQ，12-bit）",
+  "raw": "可內錄 Cinema RAW Light（12-bit，CRM 檔，只能錄到 SDXC 卡）：Super 35mm 4096x2160 有 RAW ST（最高 30p）與 RAW LT（最高 60p），Super 16mm（裁切）2048x1080 有 RAW HQ／ST／LT（最高 60p）。RAW 不支援慢動作／快動作。機身沒有 HDMI RAW 輸出。",
   "open_gate": false,
   "lens_mount": "Canon RF",
   "media": [
-    "SD（雙卡槽）"
+    "SD／SDHC／SDXC ×2（雙卡槽；RAW 只能用 SDXC，建議 V90；說明書推薦 V60／V90）"
   ],
-  "timecode": "TIME CODE 端子（BNC，可輸入／輸出）",
-  "sdi": "無",
-  "hdmi": "有（HDMI OUT，只能輸出）",
+  "timecode": "TIME CODE 端子（BNC，可輸入／輸出）；HDMI OUT 可輸出時間碼",
+  "sdi": "無（沒有 SDI 端子）",
+  "hdmi": "HDMI OUT 端子（說明書只寫 HDMI connector、僅輸出，沒寫尺寸類型）",
   "dynamic_range_claimed": "Unknown",
   "recording_modes": [
     {
       "resolution": "4096x2160",
-      "max_fps": 59.94,
-      "codec": "Cinema RAW Light LT",
-      "bitrate_mbps": 645,
-      "bit_depth": 12,
-      "chroma": "RAW",
-      "crop": "none",
-      "notes": "Super35 模式。原廠標示為可變位元率（VBR）的數值"
-    },
-    {
-      "resolution": "4096x2160",
-      "max_fps": 29.97,
-      "codec": "Cinema RAW Light ST",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light ST）",
       "bitrate_mbps": 497,
       "bit_depth": 12,
       "chroma": "RAW",
       "crop": "none",
-      "notes": "Super35 模式，最高 29.97P（59.94P 不可用）。原廠標示為可變位元率（VBR）的數值"
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡；說明書表格 59.94P／50.00P 不可用"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 414,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡；說明書表格 59.94P／50.00P 不可用；25／50p 的位元率與 30／60p 不同，另列"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 398,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡；說明書表格 59.94P／50.00P 不可用"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 645,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 538,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡；25／50p 的位元率與 30／60p 不同，另列"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 323,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 269,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡；25／50p 的位元率與 30／60p 不同，另列"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 259,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡"
     },
     {
       "resolution": "2048x1080",
-      "max_fps": 59.94,
-      "codec": "Cinema RAW Light HQ",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light HQ）",
       "bitrate_mbps": 511,
       "bit_depth": 12,
       "chroma": "RAW",
       "crop": "crop",
-      "notes": "Super16（裁切）模式。原廠標示為可變位元率（VBR）的數值"
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 426,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡；25／50p 的位元率與 30／60p 不同，另列"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 256,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 213,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡；25／50p 的位元率與 30／60p 不同，另列"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 205,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 252,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 210,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡；25／50p 的位元率與 30／60p 不同，另列"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 126,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 105,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡；25／50p 的位元率與 30／60p 不同，另列"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 101,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 164,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 137,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡；25／50p 的位元率與 30／60p 不同，另列"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 82,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 69,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡；25／50p 的位元率與 30／60p 不同，另列"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 66,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為原廠標示的可變位元率（VBR）數值；RAW 只能錄到 SDXC 卡"
     },
     {
       "resolution": "4096x2160",
-      "max_fps": 59.94,
-      "codec": "XF-AVC YCC422 10bit（Intra-frame）",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
       "bitrate_mbps": 600,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "原廠標示為可變位元率（VBR）的數值"
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值"
     },
     {
       "resolution": "4096x2160",
-      "max_fps": 29.97,
-      "codec": "XF-AVC YCC422 10bit（Intra-frame）",
+      "max_fps": 50,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；50p 位元率與 60p 不同，另列"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
       "bitrate_mbps": 410,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "可選 410 或 300 Mbps。原廠標示為可變位元率（VBR）的數值"
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；可改選 300 Mbps"
     },
     {
       "resolution": "4096x2160",
-      "max_fps": 23.98,
-      "codec": "XF-AVC YCC422 10bit（Intra-frame）",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；29.97P 的選項位元率"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
       "bitrate_mbps": 410,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "可選 410 或 240 Mbps。原廠標示為可變位元率（VBR）的數值"
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；可改選 250 Mbps"
     },
     {
       "resolution": "4096x2160",
-      "max_fps": 59.94,
-      "codec": "XF-AVC YCC422 10bit（Long GOP）",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；25.00P 的選項位元率"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 410,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；可改選 240 Mbps"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；24.00P／23.98P 的選項位元率"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC（Long GOP）",
       "bitrate_mbps": 260,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "原廠標示為可變位元率（VBR）的數值"
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；50p 同為 260"
     },
     {
       "resolution": "4096x2160",
-      "max_fps": 29.97,
-      "codec": "XF-AVC YCC422 10bit（Long GOP）",
+      "max_fps": 30,
+      "codec": "XF-AVC（Long GOP）",
       "bitrate_mbps": 160,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "原廠標示為可變位元率（VBR）的數值"
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；25p 同為 160"
     },
     {
-      "resolution": "3840x2160",
-      "max_fps": 119.88,
-      "codec": "XF-AVC Long GOP（慢動作）",
-      "bitrate_mbps": "Unknown",
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 160,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "慢動作錄影最高 120fps；說明書未列此模式位元率"
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值"
     },
     {
       "resolution": "3840x2160",
-      "max_fps": 59.94,
-      "codec": "MP4（HEVC）YCC422 10bit",
-      "bitrate_mbps": "Unknown",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 600,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "說明書未列 MP4 位元率"
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；UHD 3840 的視角比 4096 略窄（說明書換算倍率 1.534 對 1.460）"
     },
     {
-      "resolution": "2048x1080",
-      "max_fps": 179.82,
-      "codec": "XF-AVC Long GOP（慢動作）",
-      "bitrate_mbps": "Unknown",
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 500,
       "bit_depth": 10,
       "chroma": "4:2:2",
-      "crop": "crop",
-      "notes": "Super16（裁切）模式慢動作可到 180fps"
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；UHD 3840 的視角比 4096 略窄（說明書換算倍率 1.534 對 1.460）；50p 位元率與 60p 不同，另列"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 410,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；UHD 3840 的視角比 4096 略窄（說明書換算倍率 1.534 對 1.460）；可改選 300 Mbps"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；UHD 3840 的視角比 4096 略窄（說明書換算倍率 1.534 對 1.460）；29.97P 的選項位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 410,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；UHD 3840 的視角比 4096 略窄（說明書換算倍率 1.534 對 1.460）；可改選 250 Mbps"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；UHD 3840 的視角比 4096 略窄（說明書換算倍率 1.534 對 1.460）；25.00P 的選項位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 410,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；UHD 3840 的視角比 4096 略窄（說明書換算倍率 1.534 對 1.460）；可改選 240 Mbps"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；UHD 3840 的視角比 4096 略窄（說明書換算倍率 1.534 對 1.460）；24.00P／23.98P 的選項位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 260,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；UHD 3840 的視角比 4096 略窄（說明書換算倍率 1.534 對 1.460）；50p 同為 260"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；UHD 3840 的視角比 4096 略窄（說明書換算倍率 1.534 對 1.460）；25p 同為 160"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為原廠標示的可變位元率（VBR）數值；UHD 3840 的視角比 4096 略窄（說明書換算倍率 1.534 對 1.460）"
     },
     {
       "resolution": "2048x1080",
-      "max_fps": 59.94,
-      "codec": "XF-AVC YCC422 10bit（Intra-frame）",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
       "bitrate_mbps": 310,
       "bit_depth": 10,
       "chroma": "4:2:2",
       "crop": "none",
-      "notes": "原廠標示為可變位元率（VBR）的數值"
+      "notes": "Super 35mm 或 Super 16mm（裁切）感測器模式皆可（說明書合併欄位）；位元率為原廠標示的可變位元率（VBR）數值；50p 同為 310"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）感測器模式皆可（說明書合併欄位）；位元率為原廠標示的可變位元率（VBR）數值；25p 同為 160"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）感測器模式皆可（說明書合併欄位）；位元率為原廠標示的可變位元率（VBR）數值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）感測器模式皆可（說明書合併欄位）；位元率為原廠標示的可變位元率（VBR）數值；50p 同為 50"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）感測器模式皆可（說明書合併欄位）；位元率為原廠標示的可變位元率（VBR）數值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）感測器模式皆可（說明書合併欄位）；位元率為原廠標示的可變位元率（VBR）數值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 310,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）感測器模式皆可（說明書合併欄位）；位元率為原廠標示的可變位元率（VBR）數值；50p 同為 310"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）感測器模式皆可（說明書合併欄位）；位元率為原廠標示的可變位元率（VBR）數值；25p 同為 160"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）感測器模式皆可（說明書合併欄位）；位元率為原廠標示的可變位元率（VBR）數值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）感測器模式皆可（說明書合併欄位）；位元率為原廠標示的可變位元率（VBR）數值；50p 同為 50"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）感測器模式皆可（說明書合併欄位）；位元率為原廠標示的可變位元率（VBR）數值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）感測器模式皆可（說明書合併欄位）；位元率為原廠標示的可變位元率（VBR）數值"
+    },
+    {
+      "resolution": "1280x720",
+      "max_fps": 60,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 24,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）；僅 59.94P／50.00P；位元率為原廠標示的可變位元率（VBR）數值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 225,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；50p 同為 225"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；25p 同為 135"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 170,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；50p 同為 170"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；25p 同為 100"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；各格率皆為 150"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；各格率皆為 150"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；各格率皆為 150"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 225,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；50p 同為 225"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；25p 同為 135"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 170,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；50p 同為 170"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；25p 同為 100"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；各格率皆為 150"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；各格率皆為 150"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；各格率皆為 150"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）；說明書主錄影表只列 59.94／50p 的 35 Mbps，其他格率沿用（待核對）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）；說明書主錄影表只列 59.94／50p 的 35 Mbps，其他格率沿用（待核對）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）；說明書主錄影表只列 59.94／50p 的 35 Mbps，其他格率沿用（待核對）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）；說明書主錄影表只列 59.94／50p 的 35 Mbps，其他格率沿用（待核對）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）；說明書主錄影表只列 59.94／50p 的 35 Mbps，其他格率沿用（待核對）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）；說明書主錄影表只列 59.94／50p 的 35 Mbps，其他格率沿用（待核對）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）；說明書主錄影表只列 59.94／50p 的 35 Mbps，其他格率沿用（待核對）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）；說明書主錄影表只列 59.94／50p 的 35 Mbps，其他格率沿用（待核對）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）；說明書主錄影表只列 59.94／50p 的 35 Mbps，其他格率沿用（待核對）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）；說明書主錄影表只列 59.94／50p 的 35 Mbps，其他格率沿用（待核對）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）；說明書主錄影表只列 59.94／50p 的 35 Mbps，其他格率沿用（待核對）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm 或 Super 16mm（裁切）；說明書主錄影表只列 59.94／50p 的 35 Mbps，其他格率沿用（待核對）"
+    },
+    {
+      "resolution": "1280x720",
+      "max_fps": 60,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 12,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 16mm（裁切）；僅 59.94P／50.00P"
+    },
+    {
+      "resolution": "1280x720",
+      "max_fps": 60,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 9,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 16mm（裁切）；僅 59.94P／50.00P"
+    },
+    {
+      "resolution": "1280x720",
+      "max_fps": 60,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 8,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 16mm（裁切）；僅 59.94P／50.00P"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 260,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 225,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 170,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 260,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 225,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 170,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 120,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 模式最高 120p；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 180,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "Super 16mm（裁切）模式最高 180p（[Super16 Digital IS] 開啟時不可用）；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 120,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 模式最高 120p；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 180,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "Super 16mm（裁切）模式最高 180p（[Super16 Digital IS] 開啟時不可用）；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 120,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm 模式最高 120p；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 180,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "Super 16mm（裁切）模式最高 180p；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 120,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm 模式最高 120p；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 180,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "Super 16mm（裁切）模式最高 180p；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 模式最高 120p；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 180,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 3.069,
+      "notes": "Super 16mm（裁切）模式最高 180p（[Super16 Digital IS] 開啟時不可用）；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "Super 35mm 模式最高 120p；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 180,
+      "codec": "MP4（HEVC YCC422 10-bit）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 3.069,
+      "notes": "Super 16mm（裁切）模式最高 180p（[Super16 Digital IS] 開啟時不可用）；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm 模式最高 120p；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 180,
+      "codec": "MP4（HEVC YCC420 10-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 3.069,
+      "notes": "Super 16mm（裁切）模式最高 180p；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "Super 35mm 模式最高 120p；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 180,
+      "codec": "MP4（H.264 YCC420 8-bit）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "crop",
+      "crop_factor": 3.069,
+      "notes": "Super 16mm（裁切）模式最高 180p；慢動作／快動作（S&F）最高拍攝幀率；說明書未寫此時的實際資料量，位元率沿用 59.94P 播放的標示值"
     }
   ],
   "source_name": "Canon EOS C70 使用說明書（韌體 1.0.8.1，PDF）",
   "source_url": "https://gdlp01.c-wss.com/gds/4/0300040134/08/eosc70-im9-en.pdf",
-  "last_verified": "2026-10-06",
-  "editor_notes": "感光元件說明書只寫「相當於 Super 35mm」，沒有毫米尺寸；有效像素 885 萬（4096×2160）。慢動作在 Super35 模式 4K 最高 120fps，Super16（裁切）模式 2K 最高 180fps。動態範圍與原生 ISO 說明書未寫。 RAW 表格已對照說明書 PDF 第 57 頁圖片確認：Super35 4K 只有 RAW ST／LT，RAW HQ 只在 Super16（裁切）2K。"
+  "last_verified": "2026-10-17",
+  "editor_notes": "請負責人核對：(1) 感光元件毫米尺寸說明書只寫「相當於 Super 35mm」，沒有尺寸；搜尋結果摘要（Canon 英國官網規格頁）顯示 26.2×13.8 mm（4096×2160／2048×1080），但這個環境打不開原廠頁面，依規定寫 Unknown，待核對。(2) Base ISO：說明書沒有「雙原生 ISO」或 Base ISO 設定，只寫「建議動態範圍的最低感光度」Canon Log 2／3／PQ 為 ISO 800、HLG／BT.709 Wide DR／Canon 709 為 ISO 400、BT.709 Normal／Standard 為 ISO 160，所以 base_iso 寫 Unknown。(3) 動態範圍宣稱值說明書沒寫，Unknown。發表日期說明書沒寫，Unknown。(4) 格率以 NTSC 名義值記錄（23.98→24、29.97→30、59.94→60）；25／50p 位元率不同的才另列（RAW、XF-AVC Intra 4K）。(5) 感測器模式：Super 35mm 的 4096／2048 視角倍率 1.460、UHD／HD 3840／1920 為 1.534（對 35mm 全片幅等效焦段）；Super 16mm（裁切）2.920（2048）／3.069（1920）。表中 Super 35mm 模式標 none（原生區域），UHD／HD 略窄已寫在 notes。(6) XF-AVC 2K／HD 在說明書是「Super 35mm／Super 16mm（裁切）」合併欄位，兩種模式都可用，位元率相同，只列一次，crop 標 none（Super 35mm）。(7) 慢動作／快動作：說明書未寫 S&F 時的實際資料量；高格率列沿用 59.94P 位元率，只做參考。Super 35mm 4K XF-AVC Intra 的 S&F 最高 60p（410 Mbps 選項只能用較低範圍），Long GOP 與 MP4 最高 120p；Super 16mm（裁切）最高 180p。(8) MP4 主錄影位元率來自說明書「Main clip: MP4」副錄影對照表（4K／UHD HEVC 4:2:2 為 225／135、4:2:0 為 170／100、H.264 為 150；2K／HD HEVC 4:2:2 為 50）。HEVC 4:2:0 與 H.264 在 2K／HD 的 35 Mbps 只列於 59.94／50p，其他格率與 1280x720（12／9／8）是沿用，待核對。(9) 位元深度與色彩取樣依錄影格式固定，說明書沒有依 Canon Log／PQ／一般色調分開寫。代理檔、副錄影、1080i（59.94i／50.00i）未放進表格。"
 }
