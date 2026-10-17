@@ -1,36 +1,38 @@
 {
   "slug": "blackmagic-ursa-cine-12k-lf",
-  "brand": "Blackmagic Design",
   "model": "URSA Cine 12K LF",
   "aliases": [
     "URSA Cine 12K",
     "URSA Cine LF",
     "BMD URSA Cine"
   ],
+  "brand": "Blackmagic Design",
   "type": "電影機",
   "announced": "Unknown",
+  "base_iso": "Unknown",
+  "log": [
+    "Film 動態範圍（Blackmagic RAW）",
+    "Extended Video 動態範圍（Blackmagic RAW）",
+    "Video 動態範圍（Blackmagic RAW）"
+  ],
+  "open_gate": true,
+  "media": [
+    "Blackmagic Media Module 8TB（內建儲存，隨機附 1 個）",
+    "Blackmagic Media Module CFexpress（選購，含 CFexpress 卡槽，可用 CFexpress 卡）"
+  ],
+  "timecode": "BNC Reference／Timecode 輸入（Tri-Sync、Black Burst、Timecode），可鎖定外部時間碼；內建高精度時間碼時鐘（每 8 小時漂移不到 1 格）",
+  "sdi": "12G-SDI 輸出 2 路（SDI B 在特定設定下可當節目回送輸入）；速率 1.5G／3G／6G／12G",
+  "hdmi": "無（以 USB-C 接 URSA Cine EVF、PYXIS Monitor 或 DisplayPort 螢幕）",
+  "dynamic_range_claimed": "16 stops（8K／4K 解析度為 15.7 stops）",
   "max_resolution": "12,288×8040（12K 3:2 Open Gate）",
   "sensor": {
     "format": "Full Frame（原廠稱 Large Format）",
     "width_mm": 35.64,
     "height_mm": 23.32,
-    "resolution_mp": "Unknown"
+    "resolution_mp": 98.8
   },
-  "base_iso": "Unknown",
-  "log": [
-    "Film 動態範圍（Blackmagic RAW）"
-  ],
-  "raw": "內錄 Blackmagic RAW（固定位元率 3:1～18:1，或固定畫質 Q0～Q5）",
-  "open_gate": true,
-  "lens_mount": "PL（可換 EF）",
-  "media": [
-    "Blackmagic Media Module（8TB 內建儲存）",
-    "可換 CFexpress 媒體模組"
-  ],
-  "timecode": "Reference 輸入可接 Timecode；內建高精度時間碼時鐘",
-  "sdi": "12G-SDI（共 2 路視訊輸出）",
-  "hdmi": "無（以 USB-C 接螢幕／觀景窗）",
-  "dynamic_range_claimed": "16 stops",
+  "raw": "內錄 Blackmagic RAW：固定位元率（Constant Bitrate，依解析度提供 3:1／4:1／5:1／6:1／8:1／12:1／18:1）或固定畫質（Constant Quality Q0／Q1／Q3／Q5）；同時錄 H.264 1920x1080 8-bit 4:2:0 Proxy",
+  "lens_mount": "PL／EF（可換；另有選購 LPL 接環）",
   "recording_modes": [
     {
       "resolution": "12288x8040",
@@ -40,7 +42,7 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "12K 3:2 Open Gate，最高 80fps。原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）；格率越高資料量越大"
+      "notes": "12K 3:2，感光元件範圍約 35.64×23.32 mm；原廠最高感光元件格率 90fps；原廠以 24fps 計算的資料量（1194 MB/s × 8 換算成 Mbps）"
     },
     {
       "resolution": "12288x8040",
@@ -50,7 +52,17 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）；格率越高資料量越大"
+      "notes": "12K 3:2，感光元件範圍約 35.64×23.32 mm；原廠最高感光元件格率 90fps；原廠以 24fps 計算的資料量（448 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "12288x8040",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 12:1",
+      "bitrate_mbps": 2392,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 3:2，感光元件範圍約 35.64×23.32 mm；原廠最高感光元件格率 90fps；原廠以 24fps 計算的資料量（299 MB/s × 8 換算成 Mbps）"
     },
     {
       "resolution": "12288x8040",
@@ -60,17 +72,497 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）；格率越高資料量越大"
+      "notes": "12K 3:2，感光元件範圍約 35.64×23.32 mm；原廠最高感光元件格率 90fps；原廠以 24fps 計算的資料量（199 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "12288x8040",
+      "max_fps": 90,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 35820,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 3:2，最高格率 90fps；位元率是原廠 24fps 資料量（1194 MB/s）依格率比例換算（約略值，非原廠直接列出）"
+    },
+    {
+      "resolution": "12288x6912",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 8000,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 16:9，感光元件範圍約 35.64×20.04 mm；原廠最高感光元件格率 90fps；原廠以 24fps 計算的資料量（1000 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "12288x6912",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 8:1",
+      "bitrate_mbps": 3080,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 16:9，感光元件範圍約 35.64×20.04 mm；原廠最高感光元件格率 90fps；原廠以 24fps 計算的資料量（385 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "12288x6912",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 12:1",
+      "bitrate_mbps": 2056,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 16:9，感光元件範圍約 35.64×20.04 mm；原廠最高感光元件格率 90fps；原廠以 24fps 計算的資料量（257 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "12288x6912",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 18:1",
+      "bitrate_mbps": 1368,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 16:9，感光元件範圍約 35.64×20.04 mm；原廠最高感光元件格率 90fps；原廠以 24fps 計算的資料量（171 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "12288x6912",
+      "max_fps": 90,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 30000,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 16:9，最高格率 90fps；位元率是原廠 24fps 資料量（1000 MB/s）依格率比例換算（約略值，非原廠直接列出）"
     },
     {
       "resolution": "12288x6480",
       "max_fps": 24,
       "codec": "Blackmagic RAW 3:1",
-      "bitrate_mbps": "Unknown",
+      "bitrate_mbps": 7704,
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "12K 17:9，最高 100fps；原廠只列 12K 3:2 的資料量"
+      "notes": "12K 17:9，感光元件範圍約 35.64×18.79 mm；原廠最高感光元件格率 100fps；原廠以 24fps 計算的資料量（963 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "12288x6480",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 8:1",
+      "bitrate_mbps": 2888,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 17:9，感光元件範圍約 35.64×18.79 mm；原廠最高感光元件格率 100fps；原廠以 24fps 計算的資料量（361 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "12288x6480",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 12:1",
+      "bitrate_mbps": 1928,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 17:9，感光元件範圍約 35.64×18.79 mm；原廠最高感光元件格率 100fps；原廠以 24fps 計算的資料量（241 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "12288x6480",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 18:1",
+      "bitrate_mbps": 1288,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 17:9，感光元件範圍約 35.64×18.79 mm；原廠最高感光元件格率 100fps；原廠以 24fps 計算的資料量（161 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "12288x6480",
+      "max_fps": 100,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 32100,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 17:9，最高格率 100fps；位元率是原廠 24fps 資料量（963 MB/s）依格率比例換算（約略值，非原廠直接列出）"
+    },
+    {
+      "resolution": "12288x5112",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 6088,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 2.4:1，感光元件範圍約 35.64×14.82 mm；原廠最高感光元件格率 120fps；原廠以 24fps 計算的資料量（761 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "12288x5112",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 8:1",
+      "bitrate_mbps": 2280,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 2.4:1，感光元件範圍約 35.64×14.82 mm；原廠最高感光元件格率 120fps；原廠以 24fps 計算的資料量（285 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "12288x5112",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 12:1",
+      "bitrate_mbps": 1520,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 2.4:1，感光元件範圍約 35.64×14.82 mm；原廠最高感光元件格率 120fps；原廠以 24fps 計算的資料量（190 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "12288x5112",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 18:1",
+      "bitrate_mbps": 1016,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 2.4:1，感光元件範圍約 35.64×14.82 mm；原廠最高感光元件格率 120fps；原廠以 24fps 計算的資料量（127 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "12288x5112",
+      "max_fps": 120,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 30440,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "12K 2.4:1，最高格率 120fps；位元率是原廠 24fps 資料量（761 MB/s）依格率比例換算（約略值，非原廠直接列出）"
+    },
+    {
+      "resolution": "9648x8040",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 7512,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.19,
+      "notes": "12K 6:5，感光元件範圍約 27.98×23.32 mm；原廠最高感光元件格率 80fps；原廠以 24fps 計算的資料量（939 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "9648x8040",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 8:1",
+      "bitrate_mbps": 2816,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.19,
+      "notes": "12K 6:5，感光元件範圍約 27.98×23.32 mm；原廠最高感光元件格率 80fps；原廠以 24fps 計算的資料量（352 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "9648x8040",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 12:1",
+      "bitrate_mbps": 1880,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.19,
+      "notes": "12K 6:5，感光元件範圍約 27.98×23.32 mm；原廠最高感光元件格率 80fps；原廠以 24fps 計算的資料量（235 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "9648x8040",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 18:1",
+      "bitrate_mbps": 1256,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.19,
+      "notes": "12K 6:5，感光元件範圍約 27.98×23.32 mm；原廠最高感光元件格率 80fps；原廠以 24fps 計算的資料量（157 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "9648x8040",
+      "max_fps": 80,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 25040,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.19,
+      "notes": "12K 6:5，最高格率 80fps；位元率是原廠 24fps 資料量（939 MB/s）依格率比例換算（約略值，非原廠直接列出）"
+    },
+    {
+      "resolution": "9408x6264",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 5712,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.32,
+      "notes": "9K 3:2，感光元件範圍約 27.28×18.17 mm；原廠最高感光元件格率 100fps；原廠以 24fps 計算的資料量（714 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "9408x6264",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 8:1",
+      "bitrate_mbps": 2144,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.32,
+      "notes": "9K 3:2，感光元件範圍約 27.28×18.17 mm；原廠最高感光元件格率 100fps；原廠以 24fps 計算的資料量（268 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "9408x6264",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 12:1",
+      "bitrate_mbps": 1432,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.32,
+      "notes": "9K 3:2，感光元件範圍約 27.28×18.17 mm；原廠最高感光元件格率 100fps；原廠以 24fps 計算的資料量（179 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "9408x6264",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 18:1",
+      "bitrate_mbps": 952,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.32,
+      "notes": "9K 3:2，感光元件範圍約 27.28×18.17 mm；原廠最高感光元件格率 100fps；原廠以 24fps 計算的資料量（119 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "9408x6264",
+      "max_fps": 100,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 23800,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.32,
+      "notes": "9K 3:2，最高格率 100fps；位元率是原廠 24fps 資料量（714 MB/s）依格率比例換算（約略值，非原廠直接列出）"
+    },
+    {
+      "resolution": "8688x4896",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 4128,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "9K 16:9，感光元件範圍約 25.2×14.2 mm；原廠最高感光元件格率 130fps；原廠以 24fps 計算的資料量（516 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8688x4896",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 8:1",
+      "bitrate_mbps": 1552,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "9K 16:9，感光元件範圍約 25.2×14.2 mm；原廠最高感光元件格率 130fps；原廠以 24fps 計算的資料量（194 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8688x4896",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 12:1",
+      "bitrate_mbps": 1032,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "9K 16:9，感光元件範圍約 25.2×14.2 mm；原廠最高感光元件格率 130fps；原廠以 24fps 計算的資料量（129 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8688x4896",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 18:1",
+      "bitrate_mbps": 696,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "9K 16:9，感光元件範圍約 25.2×14.2 mm；原廠最高感光元件格率 130fps；原廠以 24fps 計算的資料量（87 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8688x4896",
+      "max_fps": 130,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 22360,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.5,
+      "notes": "9K 16:9，最高格率 130fps；位元率是原廠 24fps 資料量（516 MB/s）依格率比例換算（約略值，非原廠直接列出）"
+    },
+    {
+      "resolution": "9312x4896",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 4424,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.42,
+      "notes": "9K 17:9，感光元件範圍約 27.0×14.2 mm；原廠最高感光元件格率 130fps；原廠以 24fps 計算的資料量（553 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "9312x4896",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 8:1",
+      "bitrate_mbps": 1664,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.42,
+      "notes": "9K 17:9，感光元件範圍約 27.0×14.2 mm；原廠最高感光元件格率 130fps；原廠以 24fps 計算的資料量（208 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "9312x4896",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 12:1",
+      "bitrate_mbps": 1112,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.42,
+      "notes": "9K 17:9，感光元件範圍約 27.0×14.2 mm；原廠最高感光元件格率 130fps；原廠以 24fps 計算的資料量（139 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "9312x4896",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 18:1",
+      "bitrate_mbps": 740,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.42,
+      "notes": "9K 17:9，感光元件範圍約 27.0×14.2 mm；原廠最高感光元件格率 130fps；原廠以 24fps 計算的資料量（92.5 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "9312x4896",
+      "max_fps": 130,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 23963,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.42,
+      "notes": "9K 17:9，最高格率 130fps；位元率是原廠 24fps 資料量（553 MB/s）依格率比例換算（約略值，非原廠直接列出）"
+    },
+    {
+      "resolution": "9312x3864",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 3496,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.48,
+      "notes": "9K 2.4:1，感光元件範圍約 27.0×11.21 mm；原廠最高感光元件格率 160fps；原廠以 24fps 計算的資料量（437 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "9312x3864",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 8:1",
+      "bitrate_mbps": 1312,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.48,
+      "notes": "9K 2.4:1，感光元件範圍約 27.0×11.21 mm；原廠最高感光元件格率 160fps；原廠以 24fps 計算的資料量（164 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "9312x3864",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 12:1",
+      "bitrate_mbps": 880,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.48,
+      "notes": "9K 2.4:1，感光元件範圍約 27.0×11.21 mm；原廠最高感光元件格率 160fps；原廠以 24fps 計算的資料量（110 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "9312x3864",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 18:1",
+      "bitrate_mbps": 576,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.48,
+      "notes": "9K 2.4:1，感光元件範圍約 27.0×11.21 mm；原廠最高感光元件格率 160fps；原廠以 24fps 計算的資料量（72 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "9312x3864",
+      "max_fps": 160,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 23307,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.48,
+      "notes": "9K 2.4:1，最高格率 160fps；位元率是原廠 24fps 資料量（437 MB/s）依格率比例換算（約略值，非原廠直接列出）"
+    },
+    {
+      "resolution": "7680x6408",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 4776,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.49,
+      "notes": "9K 6:5，感光元件範圍約 22.27×18.58 mm；原廠最高感光元件格率 100fps；原廠以 24fps 計算的資料量（597 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "7680x6408",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 8:1",
+      "bitrate_mbps": 1792,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.49,
+      "notes": "9K 6:5，感光元件範圍約 22.27×18.58 mm；原廠最高感光元件格率 100fps；原廠以 24fps 計算的資料量（224 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "7680x6408",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 12:1",
+      "bitrate_mbps": 1192,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.49,
+      "notes": "9K 6:5，感光元件範圍約 22.27×18.58 mm；原廠最高感光元件格率 100fps；原廠以 24fps 計算的資料量（149 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "7680x6408",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 18:1",
+      "bitrate_mbps": 800,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.49,
+      "notes": "9K 6:5，感光元件範圍約 22.27×18.58 mm；原廠最高感光元件格率 100fps；原廠以 24fps 計算的資料量（100 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "7680x6408",
+      "max_fps": 100,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 19900,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.49,
+      "notes": "9K 6:5，最高格率 100fps；位元率是原廠 24fps 資料量（597 MB/s）依格率比例換算（約略值，非原廠直接列出）"
     },
     {
       "resolution": "8192x5360",
@@ -80,7 +572,17 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "8K 3:2 Open Gate（全寬縮放），最高 144fps。原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）；格率越高資料量越大"
+      "notes": "8K 3:2，感光元件範圍約 35.64×23.32 mm；原廠最高感光元件格率 144fps；原廠以 24fps 計算的資料量（533 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x5360",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 5:1",
+      "bitrate_mbps": 2560,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 3:2，感光元件範圍約 35.64×23.32 mm；原廠最高感光元件格率 144fps；原廠以 24fps 計算的資料量（320 MB/s × 8 換算成 Mbps）"
     },
     {
       "resolution": "8192x5360",
@@ -90,7 +592,232 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）；格率越高資料量越大"
+      "notes": "8K 3:2，感光元件範圍約 35.64×23.32 mm；原廠最高感光元件格率 144fps；原廠以 24fps 計算的資料量（200 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x5360",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 12:1",
+      "bitrate_mbps": 1064,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 3:2，感光元件範圍約 35.64×23.32 mm；原廠最高感光元件格率 144fps；原廠以 24fps 計算的資料量（133 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x5360",
+      "max_fps": 144,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 25584,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 3:2，最高格率 144fps；位元率是原廠 24fps 資料量（533 MB/s）依格率比例換算（約略值，非原廠直接列出）"
+    },
+    {
+      "resolution": "8192x4608",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 3664,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 16:9，感光元件範圍約 35.64×20.04 mm；原廠最高感光元件格率 168fps；原廠以 24fps 計算的資料量（458 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x4608",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 5:1",
+      "bitrate_mbps": 2200,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 16:9，感光元件範圍約 35.64×20.04 mm；原廠最高感光元件格率 168fps；原廠以 24fps 計算的資料量（275 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x4608",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 8:1",
+      "bitrate_mbps": 1376,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 16:9，感光元件範圍約 35.64×20.04 mm；原廠最高感光元件格率 168fps；原廠以 24fps 計算的資料量（172 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x4608",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 12:1",
+      "bitrate_mbps": 920,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 16:9，感光元件範圍約 35.64×20.04 mm；原廠最高感光元件格率 168fps；原廠以 24fps 計算的資料量（115 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x4608",
+      "max_fps": 168,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 25648,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 16:9，最高格率 168fps；位元率是原廠 24fps 資料量（458 MB/s）依格率比例換算（約略值，非原廠直接列出）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 3440,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 17:9，感光元件範圍約 35.64×18.79 mm；原廠最高感光元件格率 180fps；原廠以 24fps 計算的資料量（430 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 5:1",
+      "bitrate_mbps": 2064,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 17:9，感光元件範圍約 35.64×18.79 mm；原廠最高感光元件格率 180fps；原廠以 24fps 計算的資料量（258 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 8:1",
+      "bitrate_mbps": 1288,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 17:9，感光元件範圍約 35.64×18.79 mm；原廠最高感光元件格率 180fps；原廠以 24fps 計算的資料量（161 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 12:1",
+      "bitrate_mbps": 864,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 17:9，感光元件範圍約 35.64×18.79 mm；原廠最高感光元件格率 180fps；原廠以 24fps 計算的資料量（108 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 180,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 25800,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 17:9，最高格率 180fps；位元率是原廠 24fps 資料量（430 MB/s）依格率比例換算（約略值，非原廠直接列出）"
+    },
+    {
+      "resolution": "8192x3408",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 2720,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 2.4:1，感光元件範圍約 35.64×14.82 mm；原廠最高感光元件格率 224fps；原廠以 24fps 計算的資料量（340 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x3408",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 5:1",
+      "bitrate_mbps": 1632,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 2.4:1，感光元件範圍約 35.64×14.82 mm；原廠最高感光元件格率 224fps；原廠以 24fps 計算的資料量（204 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x3408",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 8:1",
+      "bitrate_mbps": 1024,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 2.4:1，感光元件範圍約 35.64×14.82 mm；原廠最高感光元件格率 224fps；原廠以 24fps 計算的資料量（128 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x3408",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 12:1",
+      "bitrate_mbps": 688,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 2.4:1，感光元件範圍約 35.64×14.82 mm；原廠最高感光元件格率 224fps；原廠以 24fps 計算的資料量（86 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8192x3408",
+      "max_fps": 224,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 25387,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 2.4:1，最高格率 224fps；位元率是原廠 24fps 資料量（340 MB/s）依格率比例換算（約略值，非原廠直接列出）"
+    },
+    {
+      "resolution": "6432x5360",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 3352,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.19,
+      "notes": "8K 6:5，感光元件範圍約 27.98×23.32 mm；原廠最高感光元件格率 144fps；原廠以 24fps 計算的資料量（419 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "6432x5360",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 5:1",
+      "bitrate_mbps": 2016,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.19,
+      "notes": "8K 6:5，感光元件範圍約 27.98×23.32 mm；原廠最高感光元件格率 144fps；原廠以 24fps 計算的資料量（252 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "6432x5360",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 8:1",
+      "bitrate_mbps": 1256,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.19,
+      "notes": "8K 6:5，感光元件範圍約 27.98×23.32 mm；原廠最高感光元件格率 144fps；原廠以 24fps 計算的資料量（157 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "6432x5360",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 12:1",
+      "bitrate_mbps": 840,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.19,
+      "notes": "8K 6:5，感光元件範圍約 27.98×23.32 mm；原廠最高感光元件格率 144fps；原廠以 24fps 計算的資料量（105 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "6432x5360",
+      "max_fps": 144,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 20112,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.19,
+      "notes": "8K 6:5，最高格率 144fps；位元率是原廠 24fps 資料量（419 MB/s）依格率比例換算（約略值，非原廠直接列出）"
     },
     {
       "resolution": "4096x2680",
@@ -100,7 +827,27 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "4K 3:2 Open Gate（全寬縮放），最高 144fps。原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）；格率越高資料量越大"
+      "notes": "4K 3:2，感光元件範圍約 35.64×23.32 mm；原廠最高感光元件格率 144fps；原廠以 24fps 計算的資料量（135 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "4096x2680",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 4:1",
+      "bitrate_mbps": 808,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 3:2，感光元件範圍約 35.64×23.32 mm；原廠最高感光元件格率 144fps；原廠以 24fps 計算的資料量（101 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "4096x2680",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 5:1",
+      "bitrate_mbps": 648,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 3:2，感光元件範圍約 35.64×23.32 mm；原廠最高感光元件格率 144fps；原廠以 24fps 計算的資料量（81 MB/s × 8 換算成 Mbps）"
     },
     {
       "resolution": "4096x2680",
@@ -110,11 +857,232 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）；格率越高資料量越大"
+      "notes": "4K 3:2，感光元件範圍約 35.64×23.32 mm；原廠最高感光元件格率 144fps；原廠以 24fps 計算的資料量（68 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "4096x2680",
+      "max_fps": 144,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 6480,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 3:2，最高格率 144fps；位元率是原廠 24fps 資料量（135 MB/s）依格率比例換算（約略值，非原廠直接列出）"
+    },
+    {
+      "resolution": "4096x2304",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 928,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 16:9，感光元件範圍約 35.64×20.04 mm；原廠最高感光元件格率 168fps；原廠以 24fps 計算的資料量（116 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "4096x2304",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 4:1",
+      "bitrate_mbps": 704,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 16:9，感光元件範圍約 35.64×20.04 mm；原廠最高感光元件格率 168fps；原廠以 24fps 計算的資料量（88 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "4096x2304",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 5:1",
+      "bitrate_mbps": 560,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 16:9，感光元件範圍約 35.64×20.04 mm；原廠最高感光元件格率 168fps；原廠以 24fps 計算的資料量（70 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "4096x2304",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 6:1",
+      "bitrate_mbps": 472,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 16:9，感光元件範圍約 35.64×20.04 mm；原廠最高感光元件格率 168fps；原廠以 24fps 計算的資料量（59 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "4096x2304",
+      "max_fps": 168,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 6496,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 16:9，最高格率 168fps；位元率是原廠 24fps 資料量（116 MB/s）依格率比例換算（約略值，非原廠直接列出）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 872,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 17:9，感光元件範圍約 35.64×18.79 mm；原廠最高感光元件格率 180fps；原廠以 24fps 計算的資料量（109 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 4:1",
+      "bitrate_mbps": 656,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 17:9，感光元件範圍約 35.64×18.79 mm；原廠最高感光元件格率 180fps；原廠以 24fps 計算的資料量（82 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 5:1",
+      "bitrate_mbps": 528,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 17:9，感光元件範圍約 35.64×18.79 mm；原廠最高感光元件格率 180fps；原廠以 24fps 計算的資料量（66 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 6:1",
+      "bitrate_mbps": 440,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 17:9，感光元件範圍約 35.64×18.79 mm；原廠最高感光元件格率 180fps；原廠以 24fps 計算的資料量（55 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 180,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 6540,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 17:9，最高格率 180fps；位元率是原廠 24fps 資料量（109 MB/s）依格率比例換算（約略值，非原廠直接列出）"
+    },
+    {
+      "resolution": "4096x1704",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 688,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 2.4:1，感光元件範圍約 35.64×14.82 mm；原廠最高感光元件格率 224fps；原廠以 24fps 計算的資料量（86 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "4096x1704",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 4:1",
+      "bitrate_mbps": 520,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 2.4:1，感光元件範圍約 35.64×14.82 mm；原廠最高感光元件格率 224fps；原廠以 24fps 計算的資料量（65 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "4096x1704",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 5:1",
+      "bitrate_mbps": 416,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 2.4:1，感光元件範圍約 35.64×14.82 mm；原廠最高感光元件格率 224fps；原廠以 24fps 計算的資料量（52 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "4096x1704",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 6:1",
+      "bitrate_mbps": 352,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 2.4:1，感光元件範圍約 35.64×14.82 mm；原廠最高感光元件格率 224fps；原廠以 24fps 計算的資料量（44 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "4096x1704",
+      "max_fps": 224,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 6421,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4K 2.4:1，最高格率 224fps；位元率是原廠 24fps 資料量（86 MB/s）依格率比例換算（約略值，非原廠直接列出）"
+    },
+    {
+      "resolution": "3216x2680",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 848,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.19,
+      "notes": "4K 6:5，感光元件範圍約 27.98×23.32 mm；原廠最高感光元件格率 144fps；原廠以 24fps 計算的資料量（106 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "3216x2680",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 4:1",
+      "bitrate_mbps": 640,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.19,
+      "notes": "4K 6:5，感光元件範圍約 27.98×23.32 mm；原廠最高感光元件格率 144fps；原廠以 24fps 計算的資料量（80 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "3216x2680",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 5:1",
+      "bitrate_mbps": 512,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.19,
+      "notes": "4K 6:5，感光元件範圍約 27.98×23.32 mm；原廠最高感光元件格率 144fps；原廠以 24fps 計算的資料量（64 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "3216x2680",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 6:1",
+      "bitrate_mbps": 432,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.19,
+      "notes": "4K 6:5，感光元件範圍約 27.98×23.32 mm；原廠最高感光元件格率 144fps；原廠以 24fps 計算的資料量（54 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "3216x2680",
+      "max_fps": 144,
+      "codec": "Blackmagic RAW 3:1",
+      "bitrate_mbps": 5088,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.19,
+      "notes": "4K 6:5，最高格率 144fps；位元率是原廠 24fps 資料量（106 MB/s）依格率比例換算（約略值，非原廠直接列出）"
     }
   ],
+  "editor_notes": "【核對】1) 位元率全部來自原廠使用說明書 Data Rate Tables 與 Tech Specs 的 Storage Rates（以 24fps 計，MB/s × 8 換算 Mbps）；說明書部分 3:1 欄位只給一位小數的 GB/s（例如 1.0 GB/s），已照原文 1 GB/s = 1,000 MB/s 換算，屬約略值。2) 每個解析度另列「最高格率」一列（只列 3:1），位元率是 24fps 資料量依格率比例換算，不是原廠直接列出。3) 最高感光元件格率取自 2026 年 9 月版說明書：12K 3:2 為 90fps，但 Tech Specs 網頁仍寫 80fps；說明書另寫電源低於 18V 時最高只能 80fps，請以實機核對。4) Tech Specs 網頁 12K LF 的 Storage Rates 有一列標題寫「9K - 17,520 x 8,040」，數值（714、268、179、119 MB/s）與說明書 9K Super 35（9,408x6,264）完全一致，判斷是標題誤植，已當作 9,408x6,264。5) 位元深度、色彩取樣原廠說明書與規格頁都沒寫，位元深度 Unknown；Blackmagic RAW 的 Q0～Q5 固定畫質只給範圍，沒有收進錄影模式表。6) base_iso 填 800：說明書寫 ISO 範圍 200～3200，「optimum ISO 是 800」（非 Base ISO 字樣），請確認是否要採用。7) 發表日、官網未寫，Unknown。感光元件百萬像素是 12,288×8,040 算出（98.8），非原廠直接寫。8) 另有 4K Live SMPTE-2110 直播模式（10G Ethernet 輸出 IP 視訊）未列入錄影模式。內建 ND：清除、2、4、6 檔。",
   "source_name": "Blackmagic Design 官網：URSA Cine 技術規格",
   "source_url": "https://www.blackmagicdesign.com/products/blackmagicursacine/techspecs",
-  "last_verified": "2026-10-06",
-  "editor_notes": "資料量以 24fps 計（原廠 Storage Rates）。最高格率：12K 3:2 80fps、12K 17:9 100fps、12K 2.4:1 120fps、8K／4K 3:2 144fps、8K／4K 2.4:1 224fps。原廠頁面把 9K 的資料量標成「17,520 x 8,040」疑似誤植，所以 9K 先不列。內建 ND：清除、2、4、6 檔。位元深度與原生 ISO 規格頁未寫。"
+  "last_verified": "2026-10-17",
+  "extra_sources": [
+    {
+      "source_name": "Blackmagic URSA Cine 12K／17K 65 使用說明書（原廠 PDF，2026 年 9 月版）",
+      "source_url": "https://documents.blackmagicdesign.com/UserManuals/BlackmagicURSACineManual.pdf"
+    }
+  ]
 }

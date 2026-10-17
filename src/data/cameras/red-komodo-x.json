@@ -1,0 +1,204 @@
+{
+  "slug": "red-komodo-x",
+  "brand": "RED",
+  "model": "KOMODO-X",
+  "aliases": [
+    "KOMODO X",
+    "Komodo-X"
+  ],
+  "type": "電影機",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Super35",
+    "width_mm": 27.03,
+    "height_mm": 14.26,
+    "resolution_mp": 19.9
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "Log3G10（IPP2）"
+  ],
+  "raw": "內錄 REDCODE RAW（R3D，HQ／MQ／LQ／ELQ）",
+  "open_gate": false,
+  "lens_mount": "Canon RF",
+  "media": [
+    "CFexpress Type B"
+  ],
+  "timecode": "LTC Timecode Input（經 9-pin EXT 端子）",
+  "sdi": "12G-SDI（可切 6G／3G／1.5G）",
+  "hdmi": "無",
+  "dynamic_range_claimed": "16.5+ stops",
+  "recording_modes": [
+    {
+      "resolution": "6144x3240",
+      "max_fps": 80,
+      "codec": "REDCODE RAW（HQ／MQ／LQ／ELQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "6K 17:9；原廠：HQ／MQ／LQ／ELQ 皆可到 80fps。原廠未列各畫質資料量；卡片上限約 560 MB/s"
+    },
+    {
+      "resolution": "6144x3072",
+      "max_fps": 84,
+      "codec": "REDCODE RAW（HQ／MQ／LQ／ELQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "6K 2:1；與 6K 17:9 同寬，不裁切。原廠未列各畫質資料量；卡片上限約 560 MB/s"
+    },
+    {
+      "resolution": "6144x2592",
+      "max_fps": 100,
+      "codec": "REDCODE RAW（HQ／MQ／LQ／ELQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "6K 2.4:1；與 6K 17:9 同寬，不裁切。原廠未列各畫質資料量；卡片上限約 560 MB/s"
+    },
+    {
+      "resolution": "5760x3240",
+      "max_fps": 80,
+      "codec": "REDCODE RAW（HQ／MQ／LQ／ELQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "6K 16:9；只使用感光元件的一部分（Sensor Window），不是從 6K 縮小；倍率為 27.03 ÷ 窗口寬度（換算）",
+      "crop_factor": 1.07
+    },
+    {
+      "resolution": "3240x3240",
+      "max_fps": 80,
+      "codec": "REDCODE RAW（HQ／MQ／LQ／ELQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "6K 1:1；只使用感光元件的一部分（Sensor Window），不是從 6K 縮小；倍率為 27.03 ÷ 窗口寬度（換算）",
+      "crop_factor": 1.9
+    },
+    {
+      "resolution": "5120x2700",
+      "max_fps": 96,
+      "codec": "REDCODE RAW（HQ／MQ／LQ／ELQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "5K 17:9；只使用感光元件的一部分（Sensor Window），不是從 6K 縮小；倍率為 27.03 ÷ 窗口寬度（換算）",
+      "crop_factor": 1.2
+    },
+    {
+      "resolution": "4800x2700",
+      "max_fps": 96,
+      "codec": "REDCODE RAW（HQ／MQ／LQ／ELQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "5K 16:9；只使用感光元件的一部分（Sensor Window），不是從 6K 縮小；倍率為 27.03 ÷ 窗口寬度（換算）",
+      "crop_factor": 1.28
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "REDCODE RAW（HQ／MQ／LQ／ELQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "4K 17:9；原廠：HQ／MQ／LQ／ELQ 皆可到 120fps；只使用感光元件的一部分（Sensor Window），不是從 6K 縮小；倍率為 27.03 ÷ 窗口寬度（換算）",
+      "crop_factor": 1.5
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 120,
+      "codec": "REDCODE RAW（HQ／MQ／LQ／ELQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "4K 16:9；只使用感光元件的一部分（Sensor Window），不是從 6K 縮小；倍率為 27.03 ÷ 窗口寬度（換算）",
+      "crop_factor": 1.6
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 240,
+      "codec": "REDCODE RAW（HQ／MQ／LQ／ELQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "notes": "2K 17:9；原廠：HQ／MQ／LQ／ELQ 皆可到 240fps；只使用感光元件的一部分（Sensor Window），不是從 6K 縮小；倍率為 27.03 ÷ 窗口寬度（換算）",
+      "crop_factor": 3.0
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 4444 XQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "4:4:4",
+      "crop": "Unknown",
+      "notes": "原廠規格頁：專用 ProRes 錄影；未寫位元率、位元深度與是否裁切"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 80,
+      "codec": "Apple ProRes 4444",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "4:4:4",
+      "crop": "Unknown",
+      "notes": "同上"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "同上"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "同上"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "同上"
+    }
+  ],
+  "source_name": "RED KOMODO-X 操作手冊 V1.0 Rev-A：技術規格",
+  "source_url": "https://docs.red.com/955-0219/955-0219_V1.0%20Rev-A%20RED%20PS,%20KOMODO-X%20Operation%20Guide/Content/A_TechSpecs/Specs_KOMODO-X.htm",
+  "extra_sources": [
+    {
+      "source_name": "RED KOMODO-X 操作手冊 V1.0 Rev-A：Format（感光元件窗口尺寸）",
+      "source_url": "https://docs.red.com/955-0219/955-0219_V1.0%20Rev-A%20RED%20PS,%20KOMODO-X%20Operation%20Guide/Content/4_Menus/02_ProjSet/Format/All_Formats.htm"
+    },
+    {
+      "source_name": "RED KOMODO-X 操作手冊 V1.0 Rev-A：Recording Frame Rate（各格式最高格率）",
+      "source_url": "https://docs.red.com/955-0219/955-0219_V1.0%20Rev-A%20RED%20PS,%20KOMODO-X%20Operation%20Guide/Content/4_Menus/02_ProjSet/RecFrameRate.htm"
+    }
+  ],
+  "last_verified": "2026-10-17",
+  "editor_notes": "全域快門感光元件。依 V1.0 Rev-A 操作手冊；搜尋結果顯示另有 V2.0 版（提到 Nikon Z 接環），但該頁在這個環境打不開，接環請負責人核對是否有 Nikon Z 版本。原廠規格頁寫 REDCODE 畫質有 HQ／MQ／LQ／ELQ，但 R3D Quality 頁打不開，各畫質位元率未取得，全部寫 Unknown；規格頁只寫卡片最大資料率約 560 MB/s（約 4480 Mbps，是卡片上限，不是單一模式的位元率）。各格式最高格率來自 Recording Frame Rate 頁（以 24fps 時基計）；crop_factor 為 27.03÷窗口寬度的換算。變形（Anamorphic）格式（2x、1.8x、1.6x、1.5x、1.3x、1.25x）原廠未列最高格率，未列入。ProRes 只寫 4K（4096×2160）及最高格率，未寫位元率、位元深度、是否裁切。規格頁未寫 HDMI 輸出；原生 ISO、發表日規格頁未寫。Log3G10 名稱出自 IPP2 色彩管理，規格頁只寫 IPP2。"
+}

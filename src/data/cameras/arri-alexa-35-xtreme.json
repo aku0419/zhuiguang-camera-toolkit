@@ -1,0 +1,600 @@
+{
+  "slug": "arri-alexa-35-xtreme",
+  "brand": "ARRI",
+  "model": "ALEXA 35 Xtreme",
+  "aliases": [
+    "Alexa 35 Xtreme",
+    "A35 Xtreme",
+    "ALEXA 35 Extreme"
+  ],
+  "type": "電影機",
+  "announced": "Unknown",
+  "max_resolution": "4608×3164（4.6K 3:2 Open Gate）",
+  "sensor": {
+    "format": "Super35",
+    "width_mm": 27.99,
+    "height_mm": 19.22,
+    "resolution_mp": 14.58
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "ARRI LogC4"
+  ],
+  "raw": "內錄 ARRIRAW（需 ARRIRAW 授權或 Premium 機型）；另有 ARRICORE（RGB 編碼，非 RAW，Base 與 Premium 機型皆內建）",
+  "open_gate": true,
+  "lens_mount": "ARRI LPL（附 PL 轉接環；另可換 PL、EF、Leitz M 接環）",
+  "media": [
+    "Codex Compact Drive 1TB（CA08-1024）",
+    "Codex Compact Drive 2TB（CB16-2048）",
+    "Codex Compact Drive Express 1TB（CP08-1024，只能錄 ProRes）"
+  ],
+  "timecode": "TC 端子（LEMO 5 pin）時間碼輸入／輸出；另有 SYNC IN（BNC）Genlock",
+  "sdi": "2 路獨立 12G-SDI（BNC）：422 1.5G HD、422 3G HD、444 3G HD、422 6G UHD、422 12G UHD、444 12G UHD；另有 RET IN（BNC，可切換在 SDI 2）",
+  "hdmi": "官網規格表影像輸出只列 SDI 與 MVF-2 觀景器介面，未列 HDMI",
+  "dynamic_range_claimed": "17 stops",
+  "recording_modes": [
+    {
+      "resolution": "4608x3164",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 4550,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4.6K 3:2 Open Gate。位元率依原廠每格檔案大小（23.7 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）"
+    },
+    {
+      "resolution": "4608x3164",
+      "max_fps": 80,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 15168,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4.6K 3:2 Open Gate，Compact Drive 2TB 最高格率。位元率依原廠每格檔案大小（23.7 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）"
+    },
+    {
+      "resolution": "4608x3164",
+      "max_fps": 24,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 2066,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "none",
+      "notes": "4.6K 3:2 Open Gate。位元率依原廠每格檔案大小（10.76 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）；ARRICORE 為 RGB 編碼、非 RAW"
+    },
+    {
+      "resolution": "4608x3164",
+      "max_fps": 120,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 10330,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "none",
+      "notes": "4.6K 3:2 Open Gate，Compact Drive 2TB 最高格率（未開 Sensor Overdrive）。位元率依每格檔案大小換算"
+    },
+    {
+      "resolution": "4608x3164",
+      "max_fps": 165,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 14203,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "none",
+      "notes": "4.6K 3:2 Open Gate，Sensor Overdrive 模式（動態範圍減少、EI 1600，需謹慎使用；原廠官網說明）。位元率依每格檔案大小換算"
+    },
+    {
+      "resolution": "4608x3164",
+      "max_fps": 120,
+      "codec": "Apple ProRes（4444 XQ／4444／422 HQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "4.6K 3:2 Open Gate，Compact Drive 2TB 最高格率；4444 XQ 最高 60 fps；原廠格式表未列 ProRes 位元率、位元深度與色彩取樣"
+    },
+    {
+      "resolution": "4608x2592",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 3725,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4.6K 16:9。位元率依原廠每格檔案大小（19.4 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）"
+    },
+    {
+      "resolution": "4608x2592",
+      "max_fps": 95,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 14744,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4.6K 16:9，Compact Drive 2TB 最高格率。位元率依原廠每格檔案大小（19.4 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）"
+    },
+    {
+      "resolution": "4608x2592",
+      "max_fps": 24,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 1697,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "none",
+      "notes": "4.6K 16:9。位元率依原廠每格檔案大小（8.84 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）；ARRICORE 為 RGB 編碼、非 RAW"
+    },
+    {
+      "resolution": "4608x2592",
+      "max_fps": 150,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 10608,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "none",
+      "notes": "4.6K 16:9，Compact Drive 2TB 最高格率（未開 Sensor Overdrive）。位元率依每格檔案大小換算"
+    },
+    {
+      "resolution": "4608x2592",
+      "max_fps": 200,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 14144,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "none",
+      "notes": "4.6K 16:9，Sensor Overdrive 模式（動態範圍減少、EI 1600，需謹慎使用；原廠官網說明）。位元率依每格檔案大小換算"
+    },
+    {
+      "resolution": "4608x2592",
+      "max_fps": 150,
+      "codec": "Apple ProRes（4444 XQ／4444／422 HQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "none",
+      "notes": "4.6K 16:9，Compact Drive 2TB 最高格率；4444 XQ 最高 70 fps；原廠格式表未列 ProRes 位元率、位元深度與色彩取樣"
+    },
+    {
+      "resolution": "4096x2304",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 2957,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "4K 16:9。位元率依原廠每格檔案大小（15.4 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）"
+    },
+    {
+      "resolution": "4096x2304",
+      "max_fps": 125,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 15400,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "4K 16:9，Compact Drive 2TB 最高格率。位元率依原廠每格檔案大小（15.4 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）"
+    },
+    {
+      "resolution": "4096x2304",
+      "max_fps": 24,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 1388,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "4K 16:9。位元率依原廠每格檔案大小（7.23 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）；ARRICORE 為 RGB 編碼、非 RAW"
+    },
+    {
+      "resolution": "4096x2304",
+      "max_fps": 150,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 8676,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "4K 16:9，Compact Drive 2TB 最高格率（未開 Sensor Overdrive）。位元率依每格檔案大小換算"
+    },
+    {
+      "resolution": "4096x2304",
+      "max_fps": 210,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 12146,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "4K 16:9，Sensor Overdrive 模式（動態範圍減少、EI 1600，需謹慎使用；原廠官網說明）。位元率依每格檔案大小換算"
+    },
+    {
+      "resolution": "4096x2304",
+      "max_fps": 150,
+      "codec": "Apple ProRes（4444 XQ／4444／422 HQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "4K 16:9（4K），Compact Drive 2TB 最高格率；4444 XQ 最高 90 fps；原廠格式表未列 ProRes 位元率、位元深度與色彩取樣"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 150,
+      "codec": "Apple ProRes（4444 XQ／4444／422 HQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "4K 16:9 區域輸出 UHD，Compact Drive 2TB 最高格率；4444 XQ 最高 105 fps；原廠格式表未列 ProRes 位元率、位元深度與色彩取樣"
+    },
+    {
+      "resolution": "2048x1152",
+      "max_fps": 150,
+      "codec": "Apple ProRes（4444 XQ／4444／422 HQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "4K 16:9 區域輸出 2K，Compact Drive 2TB 最高格率；原廠格式表未列 ProRes 位元率、位元深度與色彩取樣"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 150,
+      "codec": "Apple ProRes（4444 XQ／4444／422 HQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "4K 16:9 區域輸出 HD，Compact Drive 2TB 最高格率；原廠格式表未列 ProRes 位元率、位元深度與色彩取樣"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 2592,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "3.8K 16:9（UHD）。位元率依原廠每格檔案大小（13.5 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 140,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 15120,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "3.8K 16:9（UHD），Compact Drive 2TB 最高格率。位元率依原廠每格檔案大小（13.5 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 1188,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "3.8K 16:9（UHD）。位元率依原廠每格檔案大小（6.19 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）；ARRICORE 為 RGB 編碼、非 RAW"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 150,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 7428,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "3.8K 16:9（UHD），Compact Drive 2TB 最高格率（未開 Sensor Overdrive）。位元率依每格檔案大小換算"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 240,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 11885,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "3.8K 16:9（UHD），Sensor Overdrive 模式（動態範圍減少、EI 1600，需謹慎使用；原廠官網說明）。位元率依每格檔案大小換算"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 150,
+      "codec": "Apple ProRes（4444 XQ／4444／422 HQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "3.8K 16:9（UHD），Compact Drive 2TB 最高格率；4444 XQ 最高 105 fps；原廠格式表未列 ProRes 位元率、位元深度與色彩取樣"
+    },
+    {
+      "resolution": "3840x1608",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 1960,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "3.8K 2.39:1。位元率依原廠每格檔案大小（10.21 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）"
+    },
+    {
+      "resolution": "3840x1608",
+      "max_fps": 190,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 15519,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "3.8K 2.39:1，Compact Drive 2TB 最高格率。位元率依原廠每格檔案大小（10.21 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）"
+    },
+    {
+      "resolution": "3840x1608",
+      "max_fps": 24,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 893,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "3.8K 2.39:1。位元率依原廠每格檔案大小（4.65 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）；ARRICORE 為 RGB 編碼、非 RAW"
+    },
+    {
+      "resolution": "3840x1608",
+      "max_fps": 240,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 8928,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "3.8K 2.39:1，Compact Drive 2TB 最高格率（未開 Sensor Overdrive）。位元率依每格檔案大小換算"
+    },
+    {
+      "resolution": "3840x1608",
+      "max_fps": 240,
+      "codec": "Apple ProRes（4444 XQ／4444／422 HQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.2,
+      "notes": "3.8K 2.39:1，Compact Drive 2TB 最高格率；4444 XQ 最高 140 fps；原廠格式表未列 ProRes 位元率、位元深度與色彩取樣"
+    },
+    {
+      "resolution": "3328x2790",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 2899,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.38,
+      "notes": "3.3K 6:5。位元率依原廠每格檔案大小（15.1 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）"
+    },
+    {
+      "resolution": "3328x2790",
+      "max_fps": 120,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 14496,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.38,
+      "notes": "3.3K 6:5，Compact Drive 2TB 最高格率。位元率依原廠每格檔案大小（15.1 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）"
+    },
+    {
+      "resolution": "3328x2790",
+      "max_fps": 24,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 1377,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "crop",
+      "crop_factor": 1.38,
+      "notes": "3.3K 6:5。位元率依原廠每格檔案大小（7.17 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）；ARRICORE 為 RGB 編碼、非 RAW"
+    },
+    {
+      "resolution": "3328x2790",
+      "max_fps": 120,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 6883,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "crop",
+      "crop_factor": 1.38,
+      "notes": "3.3K 6:5，Compact Drive 2TB 最高格率（未開 Sensor Overdrive）。位元率依每格檔案大小換算"
+    },
+    {
+      "resolution": "3328x2790",
+      "max_fps": 210,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 12046,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "crop",
+      "crop_factor": 1.38,
+      "notes": "3.3K 6:5，Sensor Overdrive 模式（動態範圍減少、EI 1600，需謹慎使用；原廠官網說明）。位元率依每格檔案大小換算"
+    },
+    {
+      "resolution": "3328x2790",
+      "max_fps": 120,
+      "codec": "Apple ProRes（4444 XQ／4444／422 HQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.38,
+      "notes": "3.3K 6:5，Compact Drive 2TB 最高格率；4444 XQ 最高 90 fps；原廠格式表未列 ProRes 位元率、位元深度與色彩取樣"
+    },
+    {
+      "resolution": "3840x1608",
+      "max_fps": 120,
+      "codec": "Apple ProRes（4444 XQ／4444／422 HQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 1.38,
+      "notes": "3.3K 6:5 以 2 倍變形鏡頭拍攝，輸出 3.8K 2.39:1（需變形鏡頭解壓縮），Compact Drive 2TB 最高格率；原廠格式表未列 ProRes 位元率、位元深度與色彩取樣"
+    },
+    {
+      "resolution": "2048x1152",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 770,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.25,
+      "notes": "2K 16:9 S16（Super 16 範圍）。位元率依原廠每格檔案大小（4.01 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）"
+    },
+    {
+      "resolution": "2048x1152",
+      "max_fps": 330,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 10586,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.25,
+      "notes": "2K 16:9 S16（Super 16 範圍），Compact Drive 2TB 最高格率。位元率依原廠每格檔案大小（4.01 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）"
+    },
+    {
+      "resolution": "2048x1152",
+      "max_fps": 24,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 372,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "crop",
+      "crop_factor": 2.25,
+      "notes": "2K 16:9 S16。位元率依原廠每格檔案大小（1.94 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）；ARRICORE 為 RGB 編碼、非 RAW"
+    },
+    {
+      "resolution": "2048x1152",
+      "max_fps": 330,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 5122,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "crop",
+      "crop_factor": 2.25,
+      "notes": "2K 16:9 S16，Compact Drive 2TB 最高格率（未開 Sensor Overdrive）。位元率依每格檔案大小換算"
+    },
+    {
+      "resolution": "2048x1152",
+      "max_fps": 660,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 10243,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "crop",
+      "crop_factor": 2.25,
+      "notes": "2K 16:9 S16，Sensor Overdrive 模式（動態範圍減少、EI 1600，需謹慎使用；原廠官網說明）。位元率依每格檔案大小換算"
+    },
+    {
+      "resolution": "2048x1152",
+      "max_fps": 330,
+      "codec": "Apple ProRes（4444 XQ／4444／422 HQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 2.25,
+      "notes": "2K 16:9 S16，Compact Drive 2TB 最高格率；原廠格式表未列 ProRes 位元率、位元深度與色彩取樣"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 682,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.4,
+      "notes": "HD 16:9 S16（Super 16 範圍）。位元率依原廠每格檔案大小（3.55 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 330,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 9372,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.4,
+      "notes": "HD 16:9 S16（Super 16 範圍），Compact Drive 2TB 最高格率。位元率依原廠每格檔案大小（3.55 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 323,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "crop",
+      "crop_factor": 2.4,
+      "notes": "HD 16:9 S16。位元率依原廠每格檔案大小（1.68 MB）× 格率 × 8 換算（1 MB = 10⁶ 位元組）；ARRICORE 為 RGB 編碼、非 RAW"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 330,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 4435,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "crop",
+      "crop_factor": 2.4,
+      "notes": "HD 16:9 S16，Compact Drive 2TB 最高格率（未開 Sensor Overdrive）。位元率依每格檔案大小換算"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 660,
+      "codec": "ARRICORE",
+      "bitrate_mbps": 8870,
+      "bit_depth": "Unknown",
+      "chroma": "RGB",
+      "crop": "crop",
+      "crop_factor": 2.4,
+      "notes": "HD 16:9 S16，Sensor Overdrive 模式（動態範圍減少、EI 1600，需謹慎使用；原廠官網說明）。位元率依每格檔案大小換算"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 330,
+      "codec": "Apple ProRes（4444 XQ／4444／422 HQ）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "crop",
+      "crop_factor": 2.4,
+      "notes": "HD 16:9 S16，Compact Drive 2TB 最高格率；原廠格式表未列 ProRes 位元率、位元深度與色彩取樣"
+    }
+  ],
+  "source_name": "ARRI Formats and Resolutions Overview V6.3（PDF，第 1 頁 ALEXA 35 Xtreme Premium model）",
+  "source_url": "https://www.arri.com/resource/blob/405022/a7f09a1b2b341f7231be2503b9660c84/2026-07-arri-formatsandresolutionsoverview-v6-3-data.pdf",
+  "extra_sources": [
+    {
+      "source_name": "ARRI 官網：ALEXA 35 Xtreme（Technical Data）",
+      "source_url": "https://www.arri.com/en/camera-systems/cameras/alexa-35-xtreme"
+    },
+    {
+      "source_name": "ARRI ARRICORE White Paper（2025-07）",
+      "source_url": "https://www.arri.com/resource/blob/398926/ca39dbb4d8b392c50800bd1027f7942f/2025-07-arri-arricore-whitepaper-en-data.pdf"
+    }
+  ],
+  "last_verified": "2026-10-17",
+  "editor_notes": "1) 格式表（Premium model，SUP 6.1 以上）以「Compact Drive 2TB」最高格率為 max_fps；表上三個數字依序是 Compact Drive Express 1TB／Compact Drive 1TB／Compact Drive 2TB，Express 與 1TB 的格率較低，高格率需 High Speed 授權。ProRes 範圍 a-b 表示 4444 XQ 為 a、4444 與 422 HQ 為 b（已寫在各列 notes）。Base 機型 ARRICORE／ProRes／ARRIRAW 最高 60 fps（Base 格式表另列），未逐列收錄。2) ARRIRAW、ARRICORE 位元率由原廠「每格大小（MB）」× 格率 × 8 換算，各列另有 24 fps 與最高格率；其他格率與格率成正比。ARRICORE 為固定位元率（原廠白皮書），白皮書說資料量約為 ARRIRAW 的一半，與格式表每格大小相符。3) Sensor Overdrive（僅 ARRICORE）：原廠說明動態範圍高光端減少 6 stops、基礎感光度升至 EI 1600，ARRICORE 各格式另列 Overdrive 最高格率（如 2K／HD 660 fps）。4) ProRes 位元率、位元深度與色彩取樣、ARRIRAW／ARRICORE 位元深度，ARRI 沒有寫（白皮書只說感光元件 18-bit 線性資料以對數編碼存成 RGB，未寫檔案位元深度），寫 Unknown。5) 【需核對】ProRes 最高格率：格式表（Compact Drive 2TB）4.6K 3:2 Open Gate 為 120 fps，但官網 Technical Data 寫「ProRes 4444 4.6K 3:2 Open Gate: 90 / 120 fps」，4.6K 16:9、4K 16:9 的數字也與格式表 1TB 欄不完全一致（官網 110/150、135/150；格式表 1TB 欄為 70-150、90-150），可能是官網 1TB 欄把 XQ 與 4444 分開寫，建議到實機或最新 Manual 核對。本檔 max_fps 取格式表。6) 感光元件 14.58 MP 由原廠光點數 4608×3164 換算。官網只寫 EI 160–6400，沒寫 Base ISO（Sensor Overdrive 時為 EI 1600），故 base_iso 為 Unknown。7) crop_factor 為 27.99 ÷ 該格式感光範圍寬度換算；4.6K 16:9 感光範圍寬度與 Open Gate 相同故不裁切。8) 官網頁面沒有明寫發表日期（只有說明書 2025-07-31 上傳），announced 為 Unknown。"
+}

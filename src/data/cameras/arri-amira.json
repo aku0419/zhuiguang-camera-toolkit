@@ -1,0 +1,301 @@
+{
+  "slug": "arri-amira",
+  "brand": "ARRI",
+  "model": "AMIRA",
+  "aliases": [
+    "Amira",
+    "ARRI AMIRA"
+  ],
+  "type": "電影機（紀錄片／肩扛型）",
+  "announced": "Unknown",
+  "max_resolution": "3840×2160（ProRes 4K UHD，需授權）／ARRIRAW 2880×1620",
+  "sensor": {
+    "format": "Super35",
+    "width_mm": 26.4,
+    "height_mm": 14.85,
+    "resolution_mp": 5.76
+  },
+  "base_iso": [
+    800
+  ],
+  "log": [
+    "Log C（原廠只寫 Log C，未標版本）"
+  ],
+  "raw": "內錄 ARRIRAW 2.8K 16:9（需 ARRIRAW 授權）",
+  "open_gate": false,
+  "lens_mount": "PL／EF／B4／LPL／Leitz M（可換）",
+  "media": [
+    "CFast 2.0（僅限 ARRI 認可型號清單）"
+  ],
+  "timecode": "有（BNC LTC 時間碼輸入／輸出）",
+  "sdi": "有（2 路 SDI 輸出，1.5G／3G／6G；另有 SDI Return／Sync 輸入）",
+  "hdmi": "Unknown（原廠規格未列 HDMI 輸出）",
+  "dynamic_range_claimed": "14+ stops（EI 160–3200 全範圍，原廠以 DRTC-1 測量）",
+  "recording_modes": [
+    {
+      "resolution": "2880x1620",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 1386,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.11,
+      "notes": "ARRIRAW 2.8K 16:9（需 ARRIRAW 授權）。位元率依原廠每格 7,218,472 位元組 × 24fps 換算（1 MB = 10⁶ 位元組）；最高 48fps 見另一列"
+    },
+    {
+      "resolution": "2880x1620",
+      "max_fps": 48,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 2772,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.11,
+      "notes": "ARRIRAW 2.8K 16:9（需 ARRIRAW 授權），最高 48fps。位元率依每格檔案大小 × 48fps 換算（換算值，原廠未直接列出）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": 90,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.11,
+      "notes": "HD；原廠說明書「Bit rate (VBR, 24fps, 1920x1080)」，原文單位 Mb/s；其他解析度、格率原廠未列"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 125,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.11,
+      "notes": "HD；原廠說明書「Bit rate (VBR, 24fps, 1920x1080)」，原文單位 Mb/s；其他解析度、格率原廠未列"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 185,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.11,
+      "notes": "HD；原廠說明書「Bit rate (VBR, 24fps, 1920x1080)」，原文單位 Mb/s；其他解析度、格率原廠未列"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "Apple ProRes 4444（需 Advanced 授權）",
+      "bitrate_mbps": 280,
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "crop",
+      "crop_factor": 1.11,
+      "notes": "HD；原廠說明書「Bit rate (VBR, 24fps, 1920x1080)」，原文單位 Mb/s；其他解析度、格率原廠未列"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "Apple ProRes 4444 XQ（需 Premium 授權）",
+      "bitrate_mbps": 420,
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "crop",
+      "crop_factor": 1.11,
+      "notes": "HD；原廠說明書「Bit rate (VBR, 24fps, 1920x1080)」，原文單位 Mb/s；其他解析度、格率原廠未列"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "MPEG-2 HD 422",
+      "bitrate_mbps": 50,
+      "bit_depth": 8,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.11,
+      "notes": "MPEG-2 HD，23.976–59.94fps（只能錄同步格率）；原廠說明書 50 Mb/s；AMIRA 才有此模式"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 200,
+      "codec": "Apple ProRes 422 LT／422／422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.11,
+      "notes": "ProRes HD；位元率除 1920x1080 24fps 外原廠未列；最高格率為使用 120GB 以上 CFast 卡的數值（60GB 卡 4444 為 137fps、XQ 為 91fps）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 200,
+      "codec": "Apple ProRes 4444（需 Advanced 授權）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "crop",
+      "crop_factor": 1.11,
+      "notes": "ProRes HD；位元率除 1920x1080 24fps 外原廠未列；最高格率為使用 120GB 以上 CFast 卡的數值（60GB 卡 4444 為 137fps、XQ 為 91fps）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "Apple ProRes 4444 XQ（需 Premium 授權）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "crop",
+      "crop_factor": 1.11,
+      "notes": "ProRes HD；位元率除 1920x1080 24fps 外原廠未列；最高格率為使用 120GB 以上 CFast 卡的數值（60GB 卡 4444 為 137fps、XQ 為 91fps）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 200,
+      "codec": "Apple ProRes 422 LT／422／422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.0,
+      "notes": "ProRes S16 HD（1600x900 感光元件中央裁切放大）；位元率除 1920x1080 24fps 外原廠未列；最高格率為 120GB 以上 CFast 卡數值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 200,
+      "codec": "Apple ProRes 4444（需 Advanced 授權）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "crop",
+      "crop_factor": 2.0,
+      "notes": "ProRes S16 HD（1600x900 感光元件中央裁切放大）；位元率除 1920x1080 24fps 外原廠未列；最高格率為 120GB 以上 CFast 卡數值"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 120,
+      "codec": "Apple ProRes 4444 XQ（需 Premium 授權）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "crop",
+      "crop_factor": 2.0,
+      "notes": "ProRes S16 HD（1600x900 感光元件中央裁切放大）；位元率除 1920x1080 24fps 外原廠未列；最高格率為 120GB 以上 CFast 卡數值"
+    },
+    {
+      "resolution": "2048x1152",
+      "max_fps": 200,
+      "codec": "Apple ProRes 422 LT／422／422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "ProRes 2K；位元率除 1920x1080 24fps 外原廠未列；最高格率為 120GB 以上 CFast 卡數值（60GB 卡較低）"
+    },
+    {
+      "resolution": "2048x1152",
+      "max_fps": 200,
+      "codec": "Apple ProRes 4444（需 Advanced 授權）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "ProRes 2K；位元率除 1920x1080 24fps 外原廠未列；最高格率為 120GB 以上 CFast 卡數值（60GB 卡較低）"
+    },
+    {
+      "resolution": "2048x1152",
+      "max_fps": 120,
+      "codec": "Apple ProRes 4444 XQ（需 Premium 授權）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "crop",
+      "crop_factor": 1.12,
+      "notes": "ProRes 2K；位元率除 1920x1080 24fps 外原廠未列；最高格率為 120GB 以上 CFast 卡數值（60GB 卡較低）"
+    },
+    {
+      "resolution": "3200x1800",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 LT／422／422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ProRes 3.2K；位元率除 1920x1080 24fps 外原廠未列；最高格率為 120GB 以上 CFast 卡數值"
+    },
+    {
+      "resolution": "3200x1800",
+      "max_fps": 60,
+      "codec": "Apple ProRes 4444（需 Advanced 授權）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "none",
+      "notes": "ProRes 3.2K；位元率除 1920x1080 24fps 外原廠未列；最高格率為 120GB 以上 CFast 卡數值"
+    },
+    {
+      "resolution": "3200x1800",
+      "max_fps": 30,
+      "codec": "Apple ProRes 4444 XQ（需 Premium 授權）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "none",
+      "notes": "ProRes 3.2K；位元率除 1920x1080 24fps 外原廠未列；最高格率為 120GB 以上 CFast 卡數值"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 LT／422／422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "ProRes 4K UHD（由 3200x1800 感光元件區域放大；需 4K UHD 授權）；位元率除 1920x1080 24fps 外原廠未列；最高格率為 120GB 以上 CFast 卡數值"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 4444（需 Advanced 授權）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "none",
+      "notes": "ProRes 4K UHD（由 3200x1800 感光元件區域放大；需 4K UHD 授權）；位元率除 1920x1080 24fps 外原廠未列；最高格率為 120GB 以上 CFast 卡數值"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "Apple ProRes 4444 XQ（需 Premium 授權）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "none",
+      "notes": "ProRes 4K UHD（由 3200x1800 感光元件區域放大；需 4K UHD 授權）；位元率除 1920x1080 24fps 外原廠未列；最高格率為 120GB 以上 CFast 卡數值"
+    }
+  ],
+  "source_name": "ARRI Formats and Resolutions Overview V6.3（PDF）第 3 頁 AMIRA & ALEXA Mini（SUP 6.1）",
+  "source_url": "https://www.arri.com/resource/blob/405022/a7f09a1b2b341f7231be2503b9660c84/2026-07-arri-formatsandresolutionsoverview-v6-3-data.pdf",
+  "extra_sources": [
+    {
+      "source_name": "ARRI 官網：AMIRA（Technical Data）",
+      "source_url": "https://www.arri.com/en/cine-systems/cine-cameras/amira"
+    },
+    {
+      "source_name": "ARRI AMIRA SUP 5.4 User Manual（PDF）",
+      "source_url": "https://www.arri.com/resource/blob/154656/bf3b8b67de6d02516e123e52cb8d83e8/amira-sup-5-4-user-manual-data.pdf"
+    },
+    {
+      "source_name": "ARRI Supported Recording Media Overview（PDF，2025-08-01）",
+      "source_url": "https://www.arri.com/resource/blob/245836/49966789de228c0eacc3394b3240dfa2/supported-recording-media-overview-data.pdf"
+    }
+  ],
+  "last_verified": "2026-10-17",
+  "editor_notes": "1) 感光元件：官網寫 AMIRA 最大有效感光區 3200×1800（26.40×14.85 mm），本檔照此填；同一顆 ALEV III 感光元件在 ALEXA Mini 上可用 3424×2202，AMIRA 沒有 Open Gate，所以 open_gate 為 false。2) ProRes 位元率只有 SUP 5.4 說明書的「1920x1080、24fps、VBR」資料率，其他解析度／格率原廠沒有表，Unknown（ARRI 的 Formats & Data Rate Calculator 網站在此環境連不上，請負責人核對）。3) ProRes 4444 需 Advanced 授權、4444 XQ 需 Premium 授權、4K UHD 需 4K UHD 授權、ARRIRAW 需 ARRIRAW 授權（說明書）。4) 最高格率採說明書附錄表 120GB 以上 CFast 卡欄；60GB 卡 4444／XQ 較低，已寫在 notes。5) 發表日官網沒寫，Unknown。感光元件百萬像素由 3200×1800 換算。crop_factor 以 3200 寬感光區 26.40 mm 換算。6) 「Log C」官網與說明書都只寫 Log C，未標版本。"
+}

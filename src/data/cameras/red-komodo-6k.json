@@ -37,7 +37,7 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "原廠：最高約 280 MB/s。原廠以 6K 17:9、23.98fps 計算的約略資料量（MB/s × 8 換算成 Mbps），實際依畫面複雜度而異"
+      "notes": "原廠：最高約 280 MB/s（約 30 分鐘／512 GB）。原廠 R3D Quality 頁：以 6K 17:9、23.98fps 計，約略資料量（MB/s × 8 換算成 Mbps），實際依畫面複雜度而異"
     },
     {
       "resolution": "6144x3240",
@@ -47,7 +47,7 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "預設畫質，約 175 MB/s。原廠以 6K 17:9、23.98fps 計算的約略資料量（MB/s × 8 換算成 Mbps），實際依畫面複雜度而異"
+      "notes": "預設畫質，約 175 MB/s（約 48 分鐘／512 GB）。原廠 R3D Quality 頁：以 6K 17:9、23.98fps 計，約略資料量（MB/s × 8 換算成 Mbps），實際依畫面複雜度而異"
     },
     {
       "resolution": "6144x3240",
@@ -57,7 +57,7 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "約 110 MB/s。原廠以 6K 17:9、23.98fps 計算的約略資料量（MB/s × 8 換算成 Mbps），實際依畫面複雜度而異"
+      "notes": "約 110 MB/s（約 1 小時 17 分／512 GB）。原廠 R3D Quality 頁：以 6K 17:9、23.98fps 計，約略資料量（MB/s × 8 換算成 Mbps），實際依畫面複雜度而異"
     },
     {
       "resolution": "6144x2592",
@@ -67,7 +67,7 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "6K 2.4:1 最高 50fps"
+      "notes": "6K 2.4:1；與 6K 17:9 同寬，不裁切。原廠未列此格式的資料量"
     },
     {
       "resolution": "5120x2700",
@@ -77,7 +77,7 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "crop",
-      "notes": "5K 17:9；只使用感光元件的一部分（Sensor Window），不是從 6K 縮小",
+      "notes": "5K 17:9；只使用感光元件的一部分（Sensor Window），不是從 6K 縮小；倍率為 27.03 ÷ 窗口寬度（換算）",
       "crop_factor": 1.2
     },
     {
@@ -88,18 +88,8 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "crop",
-      "notes": "4K 17:9；只使用感光元件的一部分（Sensor Window），不是從 6K 縮小",
+      "notes": "4K 17:9；原廠：HQ／MQ／LQ 皆可到 60fps；只使用感光元件的一部分（Sensor Window），不是從 6K 縮小；倍率為 27.03 ÷ 窗口寬度（換算）",
       "crop_factor": 1.5
-    },
-    {
-      "resolution": "4096x2160",
-      "max_fps": 60,
-      "codec": "Apple ProRes 422 HQ",
-      "bitrate_mbps": "Unknown",
-      "bit_depth": "Unknown",
-      "chroma": "Unknown",
-      "crop": "Unknown",
-      "notes": "原廠規格未寫 ProRes 位元率"
     },
     {
       "resolution": "2048x1080",
@@ -109,8 +99,28 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "crop",
-      "notes": "2K 17:9；只使用感光元件的一部分（Sensor Window），不是從 6K 縮小",
+      "notes": "2K 17:9；原廠：HQ／MQ／LQ 皆可到 120fps；只使用感光元件的一部分（Sensor Window），不是從 6K 縮小；倍率為 27.03 ÷ 窗口寬度（換算）",
       "crop_factor": 3.0
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "原廠規格未寫 ProRes 位元率、位元深度與是否裁切；色彩取樣依 ProRes 422 規格"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "原廠規格未寫 ProRes 位元率、位元深度與是否裁切"
     },
     {
       "resolution": "2048x1080",
@@ -118,8 +128,19 @@
       "codec": "Apple ProRes 422 HQ",
       "bitrate_mbps": "Unknown",
       "bit_depth": "Unknown",
-      "chroma": "Unknown",
-      "crop": "Unknown"
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "原廠規格未寫 ProRes 位元率、位元深度與是否裁切"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 120,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "原廠規格未寫 ProRes 位元率、位元深度與是否裁切"
     }
   ],
   "source_name": "RED KOMODO 操作手冊 v1.3：技術規格",
@@ -128,8 +149,12 @@
     {
       "source_name": "RED KOMODO 操作手冊 v1.3：R3D Quality",
       "source_url": "https://docs.red.com/955-0190_v1.3/955-0190_v1.3_REV-1.3_RED_PS_KOMODO_Operation_Guide/Content/4_Menus/ProjSet/R3D_Quality.htm"
+    },
+    {
+      "source_name": "RED KOMODO 操作手冊 v1.3：Format（感光元件窗口尺寸）",
+      "source_url": "https://docs.red.com/955-0190_v1.3/955-0190_v1.3_REV-1.3_RED_PS_KOMODO_Operation_Guide/Content/4_Menus/ProjSet/Format.htm"
     }
   ],
-  "last_verified": "2026-10-06",
-  "editor_notes": "全域快門感光元件。各解析度的 R3D 資料量原廠只列 6K 17:9 23.98fps。低解析度為感光元件裁切（Sensor Window）：RED 官方表格 4K 17:9 使用 18.02 × 9.50 mm、2K 使用 9.01 × 4.75 mm（負責人核對）；倍率以相同 17:9 比例相對 6K 計算。Log3G10 名稱出自 IPP2 色彩管理，規格頁只寫 IPP2。原生 ISO 規格頁未寫。"
+  "last_verified": "2026-10-17",
+  "editor_notes": "全域快門感光元件。R3D 資料量原廠只列 6K 17:9 23.98fps（HQ／MQ／LQ），其他格式與 ProRes 位元率原廠未列。各窗口尺寸來自操作手冊 Format 頁（6K 17:9 27.03×14.26、2.4:1 27.03×11.40、5K 22.53×11.88、4K 18.02×9.50、2K 9.01×4.75 mm），crop_factor 為 27.03÷窗口寬度的換算。6K 16:9（5760×3240）手冊 Format 頁有列，但規格頁沒給此格式最高格率，因此未列入錄影模式（請負責人核對）。ProRes 422 HQ／422 為規格頁寫的 4K 最高 60fps、2K 最高 120fps；ProRes 的位元率、位元深度、是否裁切原廠未寫。Log3G10 名稱出自 IPP2 色彩管理，規格頁只寫 IPP2。原生 ISO、發表日規格頁未寫。"
 }

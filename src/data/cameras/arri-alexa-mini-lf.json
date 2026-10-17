@@ -13,22 +13,26 @@
     "format": "Large Format（LF）",
     "width_mm": 36.7,
     "height_mm": 25.54,
-    "resolution_mp": "Unknown"
+    "resolution_mp": 13.77
   },
-  "base_iso": "Unknown",
+  "base_iso": [
+    800
+  ],
   "log": [
-    "ARRI LogC3"
+    "ARRI LogC3",
+    "ARRI LogC4"
   ],
-  "raw": "內錄 ARRIRAW",
+  "raw": "內錄 ARRIRAW（MXF 封裝，Codex Compact Drive）",
   "open_gate": true,
-  "lens_mount": "ARRI LPL（可用 PL 轉接環）",
+  "lens_mount": "ARRI LPL（可用 PL 轉接環；另有 EF（LBUS）、Leitz M 接環）",
   "media": [
-    "Codex Compact Drive（1TB／2TB）"
+    "Codex Compact Drive 1TB（CA08-1024）",
+    "Codex Compact Drive 2TB（CB16-2048）"
   ],
-  "timecode": "Unknown",
-  "sdi": "有（6G-SDI，可 4K 監看）",
-  "hdmi": "Unknown",
-  "dynamic_range_claimed": "Unknown",
+  "timecode": "有（LEMO 5 針 LTC 時間碼輸入／輸出；SYNC IN BNC 可接 Genlock）",
+  "sdi": "有（2 路 BNC：SDI 1 只輸出 HD，最高 3G；SDI 2 可輸出 UHD，6G 4:2:2 UHD 最高 30p）",
+  "hdmi": "Unknown（原廠規格未列 HDMI 輸出）",
+  "dynamic_range_claimed": "14+ stops（EI 160–3200 全範圍，原廠以 DRTC-1 測量）",
   "recording_modes": [
     {
       "resolution": "4448x3096",
@@ -38,17 +42,27 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "4.5K LF 3:2 Open Gate，最高 40fps。位元率依原廠每格檔案大小 × 24fps 換算（1 MB = 10⁶ 位元組）；最高格率見格率欄"
+      "notes": "4.5K LF 3:2 Open Gate。位元率依原廠每格 20,876,584 位元組 × 24fps 換算（1 MB = 10⁶ 位元組）；最高 40fps 見另一列"
     },
     {
       "resolution": "4448x3096",
       "max_fps": 40,
-      "codec": "ProRes",
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 6681,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4.5K LF 3:2 Open Gate，最高 40fps。位元率依每格檔案大小 × 40fps 換算（換算值，原廠未直接列出）"
+    },
+    {
+      "resolution": "4448x2346",
+      "max_fps": 50,
+      "codec": "ARRIRAW",
       "bitrate_mbps": "Unknown",
       "bit_depth": "Unknown",
-      "chroma": "Unknown",
+      "chroma": "RAW",
       "crop": "none",
-      "notes": "4.5K LF 3:2 Open Gate；原廠未列 ProRes 位元率"
+      "notes": "4.5K LF 1.89:1，最高 50fps。只在 SUP 7.3.2 說明書列出，原廠格式總表（V6.3）與每格檔案大小未列，位元率寫 Unknown；僅裁上下，水平視角不變"
     },
     {
       "resolution": "4448x1856",
@@ -58,7 +72,17 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "4.5K LF 2.39:1，最高 60fps。位元率依原廠每格檔案大小 × 24fps 換算（1 MB = 10⁶ 位元組）；最高格率見格率欄"
+      "notes": "4.5K LF 2.39:1。位元率依原廠每格 12,603,304 位元組 × 24fps 換算（1 MB = 10⁶ 位元組）；最高 60fps 見另一列；僅裁上下，水平視角不變"
+    },
+    {
+      "resolution": "4448x1856",
+      "max_fps": 60,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 6050,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "4.5K LF 2.39:1，最高 60fps。位元率依每格檔案大小 × 60fps 換算（換算值，原廠未直接列出）；僅裁上下，水平視角不變"
     },
     {
       "resolution": "3840x2160",
@@ -68,17 +92,41 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "crop",
-      "notes": "3.8K LF 16:9，最高 60fps。位元率依原廠每格檔案大小 × 24fps 換算（1 MB = 10⁶ 位元組）；最高格率見格率欄"
+      "crop_factor": 1.16,
+      "notes": "3.8K LF 16:9（UHD）。位元率依原廠每格 12,661,672 位元組 × 24fps 換算（1 MB = 10⁶ 位元組）；最高 60fps 見另一列"
     },
     {
       "resolution": "3840x2160",
-      "max_fps": 48,
-      "codec": "ProRes",
-      "bitrate_mbps": "Unknown",
+      "max_fps": 60,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 6078,
       "bit_depth": "Unknown",
-      "chroma": "Unknown",
-      "crop": "none",
-      "notes": "4.3K LF 16:9 區域縮放成 UHD"
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.16,
+      "notes": "3.8K LF 16:9（UHD），最高 60fps。位元率依每格檔案大小 × 60fps 換算（換算值，原廠未直接列出）"
+    },
+    {
+      "resolution": "2880x2880",
+      "max_fps": 24,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 2390,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.54,
+      "notes": "2.8K LF 1:1。位元率依原廠每格 12,445,696 位元組 × 24fps 換算（1 MB = 10⁶ 位元組）；最高 60fps 見另一列"
+    },
+    {
+      "resolution": "2880x2880",
+      "max_fps": 60,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 5974,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.54,
+      "notes": "2.8K LF 1:1，最高 60fps。位元率依每格檔案大小 × 60fps 換算（換算值，原廠未直接列出）"
     },
     {
       "resolution": "3424x2202",
@@ -88,27 +136,279 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "crop",
-      "notes": "3.4K S35 3:2（Super35 範圍），最高 60fps。位元率依原廠每格檔案大小 × 24fps 換算（1 MB = 10⁶ 位元組）；最高格率見格率欄"
+      "crop_factor": 1.3,
+      "notes": "3.4K S35 3:2（Super 35 範圍）。位元率依原廠每格 11,529,544 位元組 × 24fps 換算（1 MB = 10⁶ 位元組）；最高 60fps 見另一列"
+    },
+    {
+      "resolution": "3424x2202",
+      "max_fps": 60,
+      "codec": "ARRIRAW",
+      "bitrate_mbps": 5534,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.3,
+      "notes": "3.4K S35 3:2（Super 35 範圍），最高 60fps。位元率依每格檔案大小 × 60fps 換算（換算值，原廠未直接列出）"
+    },
+    {
+      "resolution": "4448x3096",
+      "max_fps": 40,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4.5K LF 3:2 Open Gate；原廠未列 ProRes 位元率；檔案容器 4480x3096（左右各補 16 像素）"
+    },
+    {
+      "resolution": "4448x3096",
+      "max_fps": 40,
+      "codec": "Apple ProRes 4444／4444 XQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "none",
+      "notes": "4.5K LF 3:2 Open Gate；原廠未列 ProRes 位元率；檔案容器 4480x3096（左右各補 16 像素）"
+    },
+    {
+      "resolution": "4448x1856",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "4.5K LF 2.39:1；原廠未列 ProRes 位元率；檔案容器 4480x1856；僅裁上下，水平視角不變"
+    },
+    {
+      "resolution": "4448x1856",
+      "max_fps": 60,
+      "codec": "Apple ProRes 4444／4444 XQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "none",
+      "notes": "4.5K LF 2.39:1；原廠未列 ProRes 位元率；檔案容器 4480x1856；僅裁上下，水平視角不變"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.03,
+      "notes": "4.3K LF 16:9 輸出 UHD；原廠未列 ProRes 位元率；SUP 7.3.2 說明書寫 40fps，與原廠格式總表 V6.3 的 48fps 不一致"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 48,
+      "codec": "Apple ProRes 4444／4444 XQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "crop",
+      "crop_factor": 1.03,
+      "notes": "4.3K LF 16:9 輸出 UHD；原廠未列 ProRes 位元率；SUP 7.3.2 說明書寫 40fps，與原廠格式總表 V6.3 的 48fps 不一致"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 75,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.03,
+      "notes": "4.3K LF 16:9 輸出 HD；原廠未列 ProRes 位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 75,
+      "codec": "Apple ProRes 4444／4444 XQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "crop",
+      "crop_factor": 1.03,
+      "notes": "4.3K LF 16:9 輸出 HD；原廠未列 ProRes 位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.16,
+      "notes": "3.8K LF 16:9 輸出 UHD；原廠未列 ProRes 位元率"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "Apple ProRes 4444／4444 XQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "crop",
+      "crop_factor": 1.16,
+      "notes": "3.8K LF 16:9 輸出 UHD；原廠未列 ProRes 位元率"
+    },
+    {
+      "resolution": "2048x1152",
+      "max_fps": 90,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.16,
+      "notes": "3.8K LF 16:9 輸出 2K；原廠未列 ProRes 位元率"
+    },
+    {
+      "resolution": "2048x1152",
+      "max_fps": 90,
+      "codec": "Apple ProRes 4444／4444 XQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "crop",
+      "crop_factor": 1.16,
+      "notes": "3.8K LF 16:9 輸出 2K；原廠未列 ProRes 位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 90,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.16,
+      "notes": "3.8K LF 16:9 輸出 HD；原廠未列 ProRes 位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 90,
+      "codec": "Apple ProRes 4444／4444 XQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "crop",
+      "crop_factor": 1.16,
+      "notes": "3.8K LF 16:9 輸出 HD；原廠未列 ProRes 位元率"
+    },
+    {
+      "resolution": "2880x2880",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.54,
+      "notes": "2.8K LF 1:1；原廠未列 ProRes 位元率；檔案容器 3072x3024（含補邊）"
+    },
+    {
+      "resolution": "2880x2880",
+      "max_fps": 60,
+      "codec": "Apple ProRes 4444／4444 XQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "crop",
+      "crop_factor": 1.54,
+      "notes": "2.8K LF 1:1；原廠未列 ProRes 位元率；檔案容器 3072x3024（含補邊）"
+    },
+    {
+      "resolution": "3200x1800",
+      "max_fps": 75,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.39,
+      "notes": "3.2K S35 16:9；原廠未列 ProRes 位元率"
+    },
+    {
+      "resolution": "3200x1800",
+      "max_fps": 75,
+      "codec": "Apple ProRes 4444／4444 XQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "crop",
+      "crop_factor": 1.39,
+      "notes": "3.2K S35 16:9；原廠未列 ProRes 位元率"
+    },
+    {
+      "resolution": "2880x2160",
+      "max_fps": 75,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 1.54,
+      "notes": "2.8K S35 4:3；原廠未列 ProRes 位元率；檔案容器 3072x2160（原廠格式總表）"
+    },
+    {
+      "resolution": "2880x2160",
+      "max_fps": 75,
+      "codec": "Apple ProRes 4444／4444 XQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "crop",
+      "crop_factor": 1.54,
+      "notes": "2.8K S35 4:3；原廠未列 ProRes 位元率；檔案容器 3072x2160（原廠格式總表）"
     },
     {
       "resolution": "1920x1080",
       "max_fps": 100,
-      "codec": "ProRes",
+      "codec": "Apple ProRes 422 HQ",
       "bitrate_mbps": "Unknown",
-      "bit_depth": "Unknown",
-      "chroma": "Unknown",
+      "bit_depth": 10,
+      "chroma": "4:2:2",
       "crop": "crop",
-      "notes": "2.8K S35 16:9 區域縮放成 HD"
+      "crop_factor": 1.54,
+      "notes": "2.8K S35 16:9 輸出 HD；原廠未列 ProRes 位元率"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 100,
+      "codec": "Apple ProRes 4444／4444 XQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": 12,
+      "chroma": "4:4:4",
+      "crop": "crop",
+      "crop_factor": 1.54,
+      "notes": "2.8K S35 16:9 輸出 HD；原廠未列 ProRes 位元率"
     }
   ],
-  "source_name": "ARRI Formats and Resolutions Overview V6.3（PDF，第 3 頁 ALEXA Mini LF）",
+  "source_name": "ARRI Formats and Resolutions Overview V6.3（PDF）第 3 頁 ALEXA Mini LF（SUP 7.1 以上）",
   "source_url": "https://www.arri.com/resource/blob/405022/a7f09a1b2b341f7231be2503b9660c84/2026-07-arri-formatsandresolutionsoverview-v6-3-data.pdf",
   "extra_sources": [
     {
-      "source_name": "ARRI 官網：ALEXA Mini LF",
-      "source_url": "https://www.arri.com/en/camera-systems/cameras/alexa-mini-lf"
+      "source_name": "ARRI 官網：ALEXA Mini LF（Technical Data）",
+      "source_url": "https://www.arri.com/en/cine-systems/cine-cameras/alexa-mini-lf"
+    },
+    {
+      "source_name": "ARRI ALEXA Mini LF SUP 7.3.2 User Manual（PDF）",
+      "source_url": "https://www.arri.com/resource/blob/396566/dc4492e9149f5b0696d4fdea351ea5e0/alexa-mini-lf-sup-7-3-2-user-manual-data.pdf"
+    },
+    {
+      "source_name": "ARRI ALEXA Mini LF Recording Formats Sheet（PDF）",
+      "source_url": "https://www.arri.com/resource/blob/261408/46205a6cdd14c7667b1bc9fc6e3a91a9/alexa-mini-lf-recording-format-sheet-din-a4-data.pdf"
+    },
+    {
+      "source_name": "ARRI Supported Recording Media Overview（PDF，2025-08-01）",
+      "source_url": "https://www.arri.com/resource/blob/245836/49966789de228c0eacc3394b3240dfa2/supported-recording-media-overview-data.pdf"
     }
   ],
-  "last_verified": "2026-10-06",
-  "editor_notes": "格式表（SUP 7.1 以上）提供 ARRIRAW 每格位元組數。動態範圍、EI、時間碼端子在目前官網頁面上沒有讀到，先標 Unknown。"
+  "last_verified": "2026-10-17",
+  "editor_notes": "1) ARRIRAW 位元率：原廠格式總表給每格位元組數，換算為 24fps 與最高格率兩列；1 MB = 10⁶ 位元組。2) ProRes（422 HQ／4444／4444 XQ）位元率：原廠官網與 SUP 7.3.2 說明書都沒有資料率表（ARRI 的 Formats & Data Rate Calculator 網站在此環境連不上），一律 Unknown，請負責人用該計算器核對。3) 互相矛盾：4.3K LF 16:9 UHD ProRes，格式總表與官網寫 48fps、SUP 7.3.2 說明書寫 40fps（本檔用 48，說明書 40 寫在 notes）；官網寫感測器最高 90fps，說明書規格表寫 100fps、使用範圍寫 Up to 120 fps（均未採用，以各格式列為準）；說明書規格表 Color Output 寫 LogC3，內文與 ProRes 錄影寫 LogC4，所以 log 兩者都列，請負責人確認。4) ARRIRAW 位元深度：說明書寫「12bit log／13 bit log」意思不明，bit_depth 寫 Unknown。5) 4.5K LF 1.89:1 模式只出現在說明書，總表沒有。6) 感光元件百萬像素由原廠像素數 4448×3096 換算。7) 發表日官網沒寫，Unknown。crop_factor 以 Open Gate 寬度 36.70 mm 換算（水平視角比）。ProRes 檔案容器寬度含補邊者已在 notes 註明。"
 }

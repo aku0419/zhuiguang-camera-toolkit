@@ -17,17 +17,17 @@
   },
   "base_iso": "Unknown",
   "log": [
-    "Log3G10（IPP2）"
+    "Log3G10（IPP2，REDWideGamutRGB）"
   ],
-  "raw": "內錄 REDCODE RAW（R3D，HQ／MQ／LQ／ELQ）；也可錄 Apple ProRes",
-  "open_gate": false,
-  "lens_mount": "Nikon Z（鎖定式；可用 RED PL 轉接環）",
+  "raw": "內錄 REDCODE RAW（R3D，HQ／MQ／LQ／ELQ，16 位元 RAW）；也可錄 Apple ProRes；另有 R3D＋ProRes Proxy",
+  "open_gate": true,
+  "lens_mount": "Nikon Z（內建鎖定式，有電子通訊；可用 RED PL 轉接環裝 /i PL 鏡頭，也可用其他 Nikon Z 接環轉接）",
   "media": [
-    "CFexpress Type B（RED 品牌或認證卡）"
+    "CFexpress Type B（RED 品牌或原廠認證卡，最高約 800 MB/s）"
   ],
-  "timecode": "LTC Timecode 輸入（經 9-pin EXT 端子）",
-  "sdi": "雙 12G-SDI",
-  "hdmi": "無",
+  "timecode": "LTC Timecode 輸入（經 9-pin EXT 端子）；Tri-Level Genlock 輸入（9-pin EXT）",
+  "sdi": "雙 12G-SDI（可切 6G／3G／1.5G；12G 最高 4096x2160 4:2:2 60p）",
+  "hdmi": "無（原廠規格未列 HDMI 輸出）",
   "dynamic_range_claimed": "17+ stops",
   "recording_modes": [
     {
@@ -38,7 +38,7 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "8K 17:9 最高 60fps。原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）"
+      "notes": "原廠 R3D Quality 表以 24P 計算的資料量（425 MB/s × 8 換算成 Mbps）。8K 17:9 最高 60 fps（RAW 最高格率依畫質而異，見下方最高格率列）"
     },
     {
       "resolution": "8192x4320",
@@ -48,7 +48,7 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "預設畫質。原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）"
+      "notes": "預設畫質。原廠 R3D Quality 表以 24P 計算的資料量（298 MB/s × 8 換算成 Mbps）。8K 17:9 最高 60 fps（RAW 最高格率依畫質而異，見下方最高格率列）"
     },
     {
       "resolution": "8192x4320",
@@ -58,7 +58,7 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）"
+      "notes": "原廠 R3D Quality 表以 24P 計算的資料量（186 MB/s × 8 換算成 Mbps）。8K 17:9 最高 60 fps（RAW 最高格率依畫質而異，見下方最高格率列）"
     },
     {
       "resolution": "8192x4320",
@@ -68,7 +68,17 @@
       "bit_depth": "Unknown",
       "chroma": "RAW",
       "crop": "none",
-      "notes": "原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）"
+      "notes": "原廠 R3D Quality 表以 24P 計算的資料量（100 MB/s × 8 換算成 Mbps）。8K 17:9 最高 60 fps（RAW 最高格率依畫質而異，見下方最高格率列）"
+    },
+    {
+      "resolution": "8192x4320",
+      "max_fps": 60,
+      "codec": "REDCODE RAW HQ／MQ／LQ／ELQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "原廠「Best Available REDCODE Settings」：8K 17:9 這幾種畫質最高到此格率；原廠沒有給此格率的資料量，位元率未知"
     },
     {
       "resolution": "6144x3240",
@@ -79,7 +89,7 @@
       "chroma": "RAW",
       "crop": "crop",
       "crop_factor": 1.33,
-      "notes": "6K 17:9（Super35 範圍）最高 80fps。只使用感光元件的一部分（Sensor Window），不是從 8K 縮小。原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）"
+      "notes": "原廠 R3D Quality 表以 24P 計算的資料量（239 MB/s × 8 換算成 Mbps）。只使用感光元件的一部分（Sensor Window，Super 35 範圍），不是從 8K 縮小；6K 17:9 最高 80 fps"
     },
     {
       "resolution": "6144x3240",
@@ -90,7 +100,62 @@
       "chroma": "RAW",
       "crop": "crop",
       "crop_factor": 1.33,
-      "notes": "原廠以 24fps 計算的資料量（MB/s × 8 換算成 Mbps）"
+      "notes": "原廠 R3D Quality 表以 24P 計算的資料量（168 MB/s × 8 換算成 Mbps）。只使用感光元件的一部分（Sensor Window，Super 35 範圍），不是從 8K 縮小；6K 17:9 最高 80 fps"
+    },
+    {
+      "resolution": "6144x3240",
+      "max_fps": 24,
+      "codec": "REDCODE RAW LQ",
+      "bitrate_mbps": 840,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.33,
+      "notes": "原廠 R3D Quality 表以 24P 計算的資料量（105 MB/s × 8 換算成 Mbps）。只使用感光元件的一部分（Sensor Window，Super 35 範圍），不是從 8K 縮小；6K 17:9 最高 80 fps"
+    },
+    {
+      "resolution": "6144x3240",
+      "max_fps": 24,
+      "codec": "REDCODE RAW ELQ",
+      "bitrate_mbps": 520,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.33,
+      "notes": "原廠 R3D Quality 表以 24P 計算的資料量（65 MB/s × 8 換算成 Mbps）。只使用感光元件的一部分（Sensor Window，Super 35 範圍），不是從 8K 縮小；6K 17:9 最高 80 fps"
+    },
+    {
+      "resolution": "6144x3240",
+      "max_fps": 80,
+      "codec": "REDCODE RAW HQ／MQ／LQ／ELQ",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.33,
+      "notes": "XE 規格頁「最高格率表」寫 6K 17:9 為 80 fps，但同頁「Best Available REDCODE」寫 HQ／MQ／LQ／ELQ 到 96 fps，兩者互相矛盾；此處採最高格率表的 80，待核對。位元率未知"
+    },
+    {
+      "resolution": "7168x3780",
+      "max_fps": 70,
+      "codec": "REDCODE RAW",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.14,
+      "notes": "7K 17:9，原廠最高格率表的數字。只使用感光元件的一部分（Sensor Window），不是從 8K 縮小；原廠沒有給此解析度的資料量"
+    },
+    {
+      "resolution": "5120x2700",
+      "max_fps": 96,
+      "codec": "REDCODE RAW",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.6,
+      "notes": "5K 17:9，原廠最高格率表的數字。只使用感光元件的一部分（Sensor Window），不是從 8K 縮小；原廠沒有給此解析度的資料量"
     },
     {
       "resolution": "4096x2160",
@@ -101,17 +166,18 @@
       "chroma": "RAW",
       "crop": "crop",
       "crop_factor": 2.0,
-      "notes": "4K 17:9。只使用感光元件的一部分（Sensor Window），不是從 8K 縮小"
+      "notes": "4K 17:9，原廠最高格率表的數字。只使用感光元件的一部分（Sensor Window），不是從 8K 縮小；原廠沒有給此解析度的資料量；原廠 Best Available 列出 HQ／MQ／LQ／ELQ 都可到此格率；XE 規格頁最高格率表寫 4K 17:9 為 120 fps，但「Best Available」寫到 240 fps，互相矛盾，採最高格率表（待核對）"
     },
     {
-      "resolution": "4096x2160",
-      "max_fps": 120,
-      "codec": "Apple ProRes 4444 XQ／422 HQ 等",
+      "resolution": "3072x1620",
+      "max_fps": 160,
+      "codec": "REDCODE RAW",
       "bitrate_mbps": "Unknown",
       "bit_depth": "Unknown",
-      "chroma": "Unknown",
-      "crop": "Unknown",
-      "notes": "ProRes 最高 4K 120P；原廠未列 ProRes 位元率"
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.67,
+      "notes": "3K 17:9，原廠最高格率表的數字。只使用感光元件的一部分（Sensor Window），不是從 8K 縮小；原廠沒有給此解析度的資料量"
     },
     {
       "resolution": "2048x1080",
@@ -122,17 +188,95 @@
       "chroma": "RAW",
       "crop": "crop",
       "crop_factor": 4.0,
-      "notes": "2K 17:9。只使用感光元件的一部分（Sensor Window），不是從 8K 縮小"
+      "notes": "2K 17:9，原廠最高格率表的數字。只使用感光元件的一部分（Sensor Window），不是從 8K 縮小；原廠沒有給此解析度的資料量；原廠 Best Available 列出 HQ／MQ／LQ／ELQ 都可到此格率；XE 規格頁最高格率表寫 2K 17:9 為 240 fps，但「Best Available」寫到 480 fps，互相矛盾，採最高格率表（待核對）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes 4444 XQ",
+      "bitrate_mbps": 1697,
+      "bit_depth": "Unknown",
+      "chroma": "4:4:4:4",
+      "crop": "none",
+      "notes": "原廠表的資料量是 4K 17:9、24 FPS；ProRes 最高 120P，資料量隨格率增加（原廠未列其他格率）。XE 說明書該頁未能開啟，此資料量採用同系列 [X] 8K VV 說明書的同一張表，請核對。位元深度原廠未寫"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes 4444",
+      "bitrate_mbps": 1131,
+      "bit_depth": "Unknown",
+      "chroma": "4:4:4:4",
+      "crop": "none",
+      "notes": "原廠表的資料量是 4K 17:9、24 FPS；ProRes 最高 120P，資料量隨格率增加（原廠未列其他格率）。XE 說明書該頁未能開啟，此資料量採用同系列 [X] 8K VV 說明書的同一張表，請核對。位元深度原廠未寫"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 HQ",
+      "bitrate_mbps": 754,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "原廠表的資料量是 4K 17:9、24 FPS；ProRes 最高 120P，資料量隨格率增加（原廠未列其他格率）。XE 說明書該頁未能開啟，此資料量採用同系列 [X] 8K VV 說明書的同一張表，請核對。位元深度原廠未寫"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422",
+      "bitrate_mbps": 503,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "原廠表的資料量是 4K 17:9、24 FPS；ProRes 最高 120P，資料量隨格率增加（原廠未列其他格率）。XE 說明書該頁未能開啟，此資料量採用同系列 [X] 8K VV 說明書的同一張表，請核對。位元深度原廠未寫"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "Apple ProRes 422 LT",
+      "bitrate_mbps": 350,
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "原廠表的資料量是 4K 17:9、24 FPS；ProRes 最高 120P，資料量隨格率增加（原廠未列其他格率）。XE 說明書該頁未能開啟，此資料量採用同系列 [X] 8K VV 說明書的同一張表，請核對。位元深度原廠未寫"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "Apple ProRes（4444 XQ／4444／422 HQ／422／422 LT）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "Unknown",
+      "crop": "Unknown",
+      "notes": "原廠規格：ProRes 專用錄影最高 4K 120P；120P 的資料量原廠沒給"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "Apple ProRes 422 HQ（Proxy 錄製）",
+      "bitrate_mbps": "Unknown",
+      "bit_depth": "Unknown",
+      "chroma": "4:2:2",
+      "crop": "Unknown",
+      "notes": "原廠規格：Proxy 錄製最高 ProRes 422 HQ、2K 60P；此模式的資料量原廠沒給"
     }
   ],
   "source_name": "RED V-RAPTOR XE 操作手冊：技術規格",
   "source_url": "https://docs.red.com/955-0233/955-0233_V2.1%20Rev-A%20RED%20PS,%20V-RAPTOR%20XE%20Operation%20Guide%20HTML/Content/B_TechSpecs/Specs_V-RAPTOR%20XE.htm",
+  "last_verified": "2026-10-17",
+  "editor_notes": "全域快門感光元件。XE 最高格率約為 [X] 的一半（8K 17:9 為 60 fps）。XE 規格頁「最高格率表」與「Best Available REDCODE」互相矛盾（6K：80 vs 96；4K：120 vs 240；2K：240 vs 480），本檔採最高格率表，請負責人核對。R3D 資料量為原廠 R3D Quality 表（8K／6K 17:9 的 24P，MB/s × 8）。ProRes 資料量因 XE 說明書該頁未能開啟，採用 [X] 8K VV 說明書的同一張表，請核對。crop_factor 以 8K 17:9 視窗寬度 40.96 mm 為基準換算（原廠 Sensor Format 表的視窗寬度：7K 35.84、6K 30.72、5K 25.60、4K 20.48、3K 15.36、2K 10.24 mm）。發表日期 2025-09 沿用舊檔，來源是 Nikon 新聞稿（2025-09-10），不是 RED 官方頁面，請核對。base_iso：原廠只寫監看用 ISO，沒有 Base ISO，故 Unknown。open_gate 依 8K 17:9 = 全部有效像素寫 true（舊版為 false）。本檔未列 2.4:1、2:1、16:9、1:1 與變形鏡頭模式。",
   "extra_sources": [
     {
-      "source_name": "RED V-RAPTOR XE 操作手冊：R3D Quality",
+      "source_name": "RED V-RAPTOR XE 操作手冊：R3D Quality（資料量）",
       "source_url": "https://docs.red.com/955-0233/955-0233_V2.1%20Rev-A%20RED%20PS,%20V-RAPTOR%20XE%20Operation%20Guide%20HTML/Content/4_Menus/b_ProjSet/R3D_Quality.htm"
+    },
+    {
+      "source_name": "RED V-RAPTOR XE 操作手冊：Sensor Format（視窗尺寸）",
+      "source_url": "https://docs.red.com/955-0233/955-0233_V2.1%20Rev-A%20RED%20PS,%20V-RAPTOR%20XE%20Operation%20Guide%20HTML/Content/4_Menus/b_ProjSet/Format/Format.htm"
+    },
+    {
+      "source_name": "RED V-RAPTOR [X] 8K VV 操作手冊：File Format（ProRes 資料量，XE 未能開啟時的參考）",
+      "source_url": "https://docs.red.com/955-0225/955-0225_V1.7+Rev-B+RED+PS,+V-RAPTOR+[X]+8K+VV+Operation+Guide+HTML/Content/4_Menus/b_ProjSet/FileFormat.htm"
     }
-  ],
-  "last_verified": "2026-10-06",
-  "editor_notes": "全域快門感光元件。R3D 資料量原廠只列 8K 與 6K 17:9 的 24P。低解析度為感光元件裁切（Sensor Window），倍率以相同 17:9 比例相對 8K：7K≈1.14、6K≈1.33、5K=1.6、4K=2.0、3K≈2.67、2K=4.0（負責人依 RED 官方文件核對）。XE 的最高格率約為 [X] 的一半（8K 60fps）。發表日期依 Nikon 新聞稿（2025-09-10）。"
+  ]
 }

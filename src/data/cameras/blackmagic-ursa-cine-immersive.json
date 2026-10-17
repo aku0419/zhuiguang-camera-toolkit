@@ -1,0 +1,126 @@
+{
+  "slug": "blackmagic-ursa-cine-immersive",
+  "brand": "Blackmagic Design",
+  "model": "URSA Cine Immersive",
+  "aliases": [
+    "Blackmagic URSA Cine Immersive"
+  ],
+  "type": "電影機（沉浸式立體）",
+  "announced": "Unknown",
+  "max_resolution": "8160×7200 每眼（8K 立體沉浸式，雙感光元件）",
+  "sensor": {
+    "format": "Immersive 專用（雙感光元件，每眼約 23.66×20.88 mm）",
+    "width_mm": 23.66,
+    "height_mm": 20.88,
+    "resolution_mp": 58.8
+  },
+  "base_iso": "Unknown",
+  "log": [
+    "Film 動態範圍（Blackmagic RAW）",
+    "Extended Video 動態範圍（Blackmagic RAW）",
+    "Video 動態範圍（Blackmagic RAW）"
+  ],
+  "raw": "內錄 Blackmagic RAW：固定位元率（Constant Bitrate 5:1／8:1／12:1／18:1）或固定畫質（Constant Quality Q0／Q1／Q3／Q5）；兩眼各 8160x7200，90fps",
+  "open_gate": "Unknown",
+  "lens_mount": "無（固定立體鏡頭組：兩顆 180° 以上魚眼鏡頭，不可換）",
+  "media": [
+    "Blackmagic Media Module 8TB（內建儲存，隨機附 1 個）",
+    "Blackmagic Media Module 16TB（選購）"
+  ],
+  "timecode": "BNC Reference／Timecode 輸入（Tri-Sync、Black Burst、Timecode）；內建高精度時間碼時鐘（每 8 小時漂移不到 1 格）",
+  "sdi": "12G-SDI 輸出 2 路；速率 1.5G／3G／6G／12G",
+  "hdmi": "無（以 USB-C 接 URSA Cine EVF、PYXIS Monitor 或 DisplayPort 螢幕）",
+  "dynamic_range_claimed": "16 stops",
+  "recording_modes": [
+    {
+      "resolution": "8160x7200",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 5:1",
+      "bitrate_mbps": 6832,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 立體沉浸式：左右眼各 8,160×7,200，資料量為兩眼合計；原廠以 24fps 計算的資料量（854 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8160x7200",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 8:1",
+      "bitrate_mbps": 4272,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 立體沉浸式：左右眼各 8,160×7,200，資料量為兩眼合計；原廠以 24fps 計算的資料量（534 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8160x7200",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 12:1",
+      "bitrate_mbps": 2848,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 立體沉浸式：左右眼各 8,160×7,200，資料量為兩眼合計；原廠以 24fps 計算的資料量（356 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8160x7200",
+      "max_fps": 24,
+      "codec": "Blackmagic RAW 18:1",
+      "bitrate_mbps": 1896,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 立體沉浸式：左右眼各 8,160×7,200，資料量為兩眼合計；原廠以 24fps 計算的資料量（237 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8160x7200",
+      "max_fps": 90,
+      "codec": "Blackmagic RAW 5:1",
+      "bitrate_mbps": 25624,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 立體沉浸式：左右眼各 8,160×7,200，資料量為兩眼合計；原廠以 90fps 計算的資料量（3203 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8160x7200",
+      "max_fps": 90,
+      "codec": "Blackmagic RAW 8:1",
+      "bitrate_mbps": 16016,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 立體沉浸式：左右眼各 8,160×7,200，資料量為兩眼合計；原廠以 90fps 計算的資料量（2002 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8160x7200",
+      "max_fps": 90,
+      "codec": "Blackmagic RAW 12:1",
+      "bitrate_mbps": 10680,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 立體沉浸式：左右眼各 8,160×7,200，資料量為兩眼合計；原廠以 90fps 計算的資料量（1335 MB/s × 8 換算成 Mbps）"
+    },
+    {
+      "resolution": "8160x7200",
+      "max_fps": 90,
+      "codec": "Blackmagic RAW 18:1",
+      "bitrate_mbps": 7112,
+      "bit_depth": "Unknown",
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "8K 立體沉浸式：左右眼各 8,160×7,200，資料量為兩眼合計；原廠以 90fps 計算的資料量（889 MB/s × 8 換算成 Mbps）"
+    }
+  ],
+  "source_name": "Blackmagic Design 官網：URSA Cine 技術規格",
+  "source_url": "https://www.blackmagicdesign.com/products/blackmagicursacine/techspecs",
+  "last_verified": "2026-10-17",
+  "extra_sources": [
+    {
+      "source_name": "Blackmagic URSA Cine Immersive 使用指南（原廠 PDF，2025 年 10 月版）",
+      "source_url": "https://documents.blackmagicdesign.com/UserManuals/BlackmagicURSACineImmersiveGuide.pdf"
+    }
+  ],
+  "editor_notes": "【核對】1) 專為 Apple Immersive Video 設計；兩顆 8K 感光元件各 8,160×7,200，鏡頭固定、光圈約 f4.5、內建 ND 清除／2／4／6／8 檔。解析度欄只寫單眼尺寸，位元率為左右眼合計。2) 位元率來自原廠使用指南 Data Rate Tables（24fps 與 90fps 兩組，MB/s × 8 換算 Mbps）；固定位元率只有 5:1／8:1／12:1／18:1，Q0～Q5 固定畫質只給範圍，未收。3) 位元深度、色彩取樣原廠沒寫，位元深度 Unknown；open_gate 這種概念不適用，填 Unknown。4) 感光元件尺寸 23.66×20.88 mm 取自標準版 Tech Specs 頁；百萬像素由 8,160×7,200 算出（約 58.8，使用指南寫 58 megapixel）。5) base_iso 填 800：使用指南寫 ISO 範圍 200～3200、optimum ISO 800（非 Base ISO 字樣）。6) 發表日官網未寫，Unknown。7) 網站「片幅」分類會把 sensor.format 不是 Full Frame／Super 35／APS-C／M43 的機型歸入「中片幅／大片幅」，但這台感光元件（對角線約 31.5 mm）比全片幅小，歸類不準確，需負責人決定怎麼處理。"
+}
