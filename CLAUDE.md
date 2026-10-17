@@ -140,6 +140,7 @@
 - RED：用 RED 官方 Operation Guide（`docs.red.com`，HTML）與官網機型頁整理。已有 6 台：KOMODO 6K、KOMODO-X、V-RAPTOR 8K VV、V-RAPTOR [X] 8K VV、V-RAPTOR XL [X] 8K VV、V-RAPTOR XE。REDCODE 位元率原廠只給 8K／6K 17:9 的 24p（MB/s × 8），其餘 Unknown；位元深度原廠沒寫。RED 官方沒有「V-RAPTOR [X] 8K S35」說明書（只有非 [X] 的 V-RAPTOR 8K S35 與 XL 8K S35，還沒收）。DSMC2 舊機身（Epic-W、Gemini、Helium、Monstro、Scarlet-W、Raven）沒收。
 - ARRI：用 ARRI 官方 Formats and Resolutions Overview PDF（V6.3，ARRIRAW 每格大小 × 格率 × 8 換算位元率）與官網機型頁、各機型說明書。已有 7 台：ALEXA 35、ALEXA 35 Xtreme、ALEXA Mini LF、ALEXA Mini、ALEXA LF、AMIRA、ALEXA SXT W。ProRes 位元率 ARRI 沒給（tools.arri.com 的 Data Rate Calculator 這個環境連不上），多數 Unknown。ALEXA 65 官網沒有機型頁（只剩出租），沒收。
 - Blackmagic：只放 URSA Cine 系列（負責人決定）：12K LF、17K 65、Immersive 共 3 台；資料來自官方 Tech Specs 頁與使用說明書 PDF（Blackmagic RAW 資料量 MB/s × 8）。官網另有 12K LF 100G、Immersive 100G 兩個獨立機型名稱，只是網路介面不同，沒收。Immersive（Apple Vision Pro 立體沉浸式拍攝用，雙感光元件）負責人決定保留，相機列表的片幅篩選另設「特殊（沉浸式）」分類（`cameras.js` 的 `formatGroup`）。
+- 負責人決定（2026-10）：網站以動態影像為主，固定鏡頭的隨身相機（Sony ZV-1／RX100、Canon PowerShot、Fujifilm X100、Panasonic LX100 等，以拍照為主）先不收，有需要再討論。
 - C300 Mark III、C500 Mark II 的感光元件毫米尺寸只有搜尋摘要、沒能開啟原廠頁面，依規定寫 Unknown，待負責人核對。
 - 錄影模式超過 12 筆時，相機頁預設只顯示前 12 筆，按「顯示全部」展開（`[slug].astro` 的小段 script，沒有 JavaScript 時顯示全部）。
 - 相機 JSON 的 `extra_sources` 欄位名稱是 `source_name`、`source_url`（不是 name／url），格式錯建置會失敗。
