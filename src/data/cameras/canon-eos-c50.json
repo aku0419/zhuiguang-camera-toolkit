@@ -1,0 +1,2505 @@
+{
+  "slug": "canon-eos-c50",
+  "brand": "Canon",
+  "model": "EOS C50",
+  "aliases": [
+    "C50",
+    "EOS C50"
+  ],
+  "type": "電影機（Cinema EOS）",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Full Frame",
+    "width_mm": "Unknown",
+    "height_mm": "Unknown",
+    "resolution_mp": 32.4
+  },
+  "base_iso": [
+    800,
+    6400
+  ],
+  "log": [
+    "Canon Log 2",
+    "Canon Log 3"
+  ],
+  "raw": "可內錄 Cinema RAW Light（12-bit，HQ／ST／LT，CRM 檔，只能錄到 CFexpress 卡）：Full Frame 3:2 為 6960x4640（最高 30p）、Full Frame 為 6960x3672（最高 60p）、Super 35mm（裁切）5036x2656、Super 16mm（裁切）2524x1332。",
+  "open_gate": true,
+  "lens_mount": "Canon RF",
+  "media": [
+    "CFexpress Type B ×1（可錄 RAW）",
+    "SD／SDHC／SDXC（UHS-II）×1"
+  ],
+  "timecode": "TIME CODE 端子（DIN 1.0/2.3，輸入／輸出）；HDMI 可輸出時間碼（Canon 專有標準）",
+  "sdi": "無",
+  "hdmi": "Type A（標準尺寸），僅輸出",
+  "dynamic_range_claimed": "原廠宣稱：Full Frame 模式 15+ 級、Super 35mm 裁切模式 16 級",
+  "recording_modes": [
+    {
+      "resolution": "6960x4640",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 1440,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2；24.00p 為 1450 Mbps；最高 30p"
+    },
+    {
+      "resolution": "6960x4640",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 1510,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2；最高 30p"
+    },
+    {
+      "resolution": "6960x4640",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 1800,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2；最高 30p"
+    },
+    {
+      "resolution": "6960x4640",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 936,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2；24.00p 為 937 Mbps；最高 30p"
+    },
+    {
+      "resolution": "6960x4640",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 976,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2；最高 30p"
+    },
+    {
+      "resolution": "6960x4640",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 1170,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2；最高 30p"
+    },
+    {
+      "resolution": "6960x3672",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 2320,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame；最高 30p"
+    },
+    {
+      "resolution": "6960x3672",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 2420,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame；最高 30p"
+    },
+    {
+      "resolution": "6960x3672",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 2900,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame；最高 30p"
+    },
+    {
+      "resolution": "6960x3672",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 1150,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame"
+    },
+    {
+      "resolution": "6960x3672",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 1190,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame"
+    },
+    {
+      "resolution": "6960x3672",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 1430,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame"
+    },
+    {
+      "resolution": "6960x3672",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 2380,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame"
+    },
+    {
+      "resolution": "6960x3672",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 2860,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame"
+    },
+    {
+      "resolution": "6960x3672",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 742,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame"
+    },
+    {
+      "resolution": "6960x3672",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 773,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame"
+    },
+    {
+      "resolution": "6960x3672",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 927,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame"
+    },
+    {
+      "resolution": "6960x3672",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 1550,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame"
+    },
+    {
+      "resolution": "6960x3672",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 1860,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame"
+    },
+    {
+      "resolution": "5036x2656",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 1220,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.47,
+      "notes": "感測器模式：Super 35mm（裁切）；最高 30p"
+    },
+    {
+      "resolution": "5036x2656",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 1270,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.47,
+      "notes": "感測器模式：Super 35mm（裁切）；最高 30p"
+    },
+    {
+      "resolution": "5036x2656",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 1520,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.47,
+      "notes": "感測器模式：Super 35mm（裁切）；最高 30p"
+    },
+    {
+      "resolution": "5036x2656",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 599,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.47,
+      "notes": "感測器模式：Super 35mm（裁切）"
+    },
+    {
+      "resolution": "5036x2656",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 624,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.47,
+      "notes": "感測器模式：Super 35mm（裁切）"
+    },
+    {
+      "resolution": "5036x2656",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 748,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.47,
+      "notes": "感測器模式：Super 35mm（裁切）"
+    },
+    {
+      "resolution": "5036x2656",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 1250,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.47,
+      "notes": "感測器模式：Super 35mm（裁切）"
+    },
+    {
+      "resolution": "5036x2656",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 1500,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.47,
+      "notes": "感測器模式：Super 35mm（裁切）"
+    },
+    {
+      "resolution": "5036x2656",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 389,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.47,
+      "notes": "感測器模式：Super 35mm（裁切）；24.00p 為 390 Mbps"
+    },
+    {
+      "resolution": "5036x2656",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 406,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.47,
+      "notes": "感測器模式：Super 35mm（裁切）"
+    },
+    {
+      "resolution": "5036x2656",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 486,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.47,
+      "notes": "感測器模式：Super 35mm（裁切）"
+    },
+    {
+      "resolution": "5036x2656",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 811,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.47,
+      "notes": "感測器模式：Super 35mm（裁切）"
+    },
+    {
+      "resolution": "5036x2656",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 972,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 1.47,
+      "notes": "感測器模式：Super 35mm（裁切）"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 308,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 321,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 385,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 642,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 769,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 152,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 158,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 190,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 316,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 379,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 99,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 103,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 123,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 206,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 246,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 480,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 375,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 450,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 1000,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 750,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 900,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 480,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 375,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 450,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 1000,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 750,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 900,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 480,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 375,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 450,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 1000,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 750,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 900,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 480,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 240,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 375,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 450,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 1000,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 750,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 500,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 1200,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 900,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 120,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 125,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 120,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 125,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 120,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 125,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 120,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 125,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 100,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 225,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 225,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 135,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 225,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 225,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 25,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 50,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 100,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 25,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 50,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none"
+    },
+    {
+      "resolution": "6912x4608",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Intra-frame）",
+      "bitrate_mbps": 1620,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2；僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "6912x4608",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Intra-frame）",
+      "bitrate_mbps": 1080,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2；僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "6912x4608",
+      "max_fps": 25,
+      "codec": "XF-HEVC S（Intra-frame）",
+      "bitrate_mbps": 1350,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2；僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "6912x4608",
+      "max_fps": 25,
+      "codec": "XF-HEVC S（Intra-frame）",
+      "bitrate_mbps": 900,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2；僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "6912x4608",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Intra-frame）",
+      "bitrate_mbps": 1730,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2；僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "6912x4608",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Intra-frame）",
+      "bitrate_mbps": 1300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2；僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "6912x4608",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Intra-frame）",
+      "bitrate_mbps": 864,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2；僅 CFexpress 卡可錄"
+    },
+    {
+      "resolution": "6912x4608",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 486,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2"
+    },
+    {
+      "resolution": "6912x4608",
+      "max_fps": 24,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2"
+    },
+    {
+      "resolution": "6912x4608",
+      "max_fps": 25,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 486,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2"
+    },
+    {
+      "resolution": "6912x4608",
+      "max_fps": 25,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2"
+    },
+    {
+      "resolution": "6912x4608",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 486,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2"
+    },
+    {
+      "resolution": "6912x4608",
+      "max_fps": 30,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 360,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "感測器模式：Full Frame 3:2"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 900,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值；120p 僅 900／600 Mbps 可選，僅 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值；僅 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 180,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 180,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 225,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 180,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 180,
+      "codec": "XF-HEVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 10,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 900,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值；僅 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 600,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值；僅 CFexpress 卡"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 150,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 180,
+      "codec": "XF-AVC S（Intra-frame）",
+      "bitrate_mbps": 300,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 180,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 180,
+      "codec": "XF-AVC S（Long GOP）",
+      "bitrate_mbps": 35,
+      "bit_depth": 8,
+      "chroma": "4:2:0",
+      "crop": "none",
+      "notes": "慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 150,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 769,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 150,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 379,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "2524x1332",
+      "max_fps": 150,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 246,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    }
+  ],
+  "source_name": "Canon EOS C50 Advanced User Guide（VIDEO edition）PDF，PUB. DIE-0595-000B：Specifications 與 Video Recording Configuration",
+  "source_url": "https://gdlp01.c-wss.com/gds/3/0300052803/03/eosc50-aug3-video-en.pdf",
+  "last_verified": "2026-10-17",
+  "editor_notes": "請負責人核對：(1) 格率以 NTSC 名義值記錄（23.98→24、29.97→30、59.94→60），25／50 另列；24.00p 與 23.98p 位元率少數差 1～10 Mbps，已在 notes 標出。(2) 感光元件尺寸（mm）說明書與 Canon 台灣官網都沒寫，標 Unknown；有效像素 3240 萬來自規格表（總像素約 3420 萬）。(3) 發表日期說明書沒寫，標 Unknown（Canon 台灣新聞稿日期為 2026-04-01，但不一定等於全球發表日）。(4) open_gate 標 true：Full Frame 3:2 模式 6960x4640 約等於全部有效像素，Canon 台灣官網也寫「Open Gate 全片幅錄製：使用整塊 CMOS 感光元件」。(5) 6960x3672／4096x2160 等 Full Frame 16:9 模式、3840／1920 的視角會再略窄（說明書的等效倍率：6960/4096/2048 為 1.062，3840/1920 為 1.122），表中 crop 仍標 none；Super 35mm（裁切）倍率 1.47（5036／4096／2048）或 1.54（3840／1920）、Super 16mm（裁切）約 2.92。XF-AVC／XF-AVC S／XF-HEVC S 的 4K／2K 在 Super 35mm（裁切）模式（最高 60p）與 Super 16mm（裁切）模式（最高 150p）使用同樣位元率，未另列。(6) 標「僅 CFexpress 卡」的高位元率（1200／1000／900／750 Mbps 與 6912x4608 Intra-frame）SD 卡不能錄。(7) 另有垂直／方形裁切錄影（1080x2048、1080x1920、1080x1080，XF-HEVC S 19～50 Mbps、XF-AVC S Intra 64～300 Mbps）與代理檔、1080i，說明書只列位元率清單、沒有逐格率對照，未放進表格。(8) 位元深度與色彩取樣依錄影格式固定，說明書沒有依 Canon Log／PQ／一般色調分開寫。(9) 高格率（120p／150p／180p）列為慢動作／快動作（S&F）模式的最高拍攝幀率，位元率沿用 59.94p 的標示值；Full Frame 模式 2K 120～180p 視角約裁切 12%（Canon 台灣官網）。基礎 ISO：Canon Log 2／3 與 RAW 為 800／6400；Canon 709／PQ／HLG／BT.709 Wide DR 為 400／3200；BT.709 Standard 為 160／1250。",
+  "extra_sources": [
+    {
+      "source_name": "Canon 台灣官網：EOS C50 產品頁（規格表：動態範圍、媒體、端子）",
+      "source_url": "https://tw.canon/zh_TW/consumer/eos-c50/main/product"
+    }
+  ]
+}

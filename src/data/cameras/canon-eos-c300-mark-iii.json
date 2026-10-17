@@ -1,0 +1,1236 @@
+{
+  "slug": "canon-eos-c300-mark-iii",
+  "brand": "Canon",
+  "model": "EOS C300 Mark III",
+  "aliases": [
+    "C300 Mark III",
+    "C300 III",
+    "C300 Mk III",
+    "C300 Mark 3"
+  ],
+  "type": "電影機（Cinema EOS）",
+  "announced": "Unknown",
+  "sensor": {
+    "format": "Super 35",
+    "width_mm": "Unknown",
+    "height_mm": "Unknown",
+    "resolution_mp": 8.85
+  },
+  "base_iso": [
+    800
+  ],
+  "log": [
+    "Canon Log 2",
+    "Canon Log 3"
+  ],
+  "raw": "可內錄 Cinema RAW Light（12-bit，RAW HQ／ST／LT，CRM 檔；韌體 1.0.8.1 起；舊版單一「RAW」選項 50p／60p 為 10-bit），只能錄到 CFexpress 卡：Super 35mm 4096x2160、Super 16mm（裁切）2048x1080。",
+  "open_gate": false,
+  "lens_mount": "Canon EF",
+  "media": [
+    "CFexpress Type B ×2（主短片：RAW 與 XF-AVC）",
+    "SD／SDHC／SDXC ×1（代理檔與照片）"
+  ],
+  "timecode": "TIME CODE 端子（BNC，輸入／輸出）；支援 Genlock 輸入；SDI 可輸出時間碼（VITC／LTC）",
+  "sdi": "SDI OUT 端子（BNC，支援 12G／6G／3G／HD-SDI）＋ MON. 端子（BNC）",
+  "hdmi": "HDMI OUT 端子（僅輸出；規格表未註明接頭型式）",
+  "dynamic_range_claimed": "Unknown",
+  "recording_modes": [
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 807,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 841,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 1010,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 1690,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 2020,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 397,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；24.00p 為 398 Mbps"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 414,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 497,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 828,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 993,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 258,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；24.00p 為 259 Mbps"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 269,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 323,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 538,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 645,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 205,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 213,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 256,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 426,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 511,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 101,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 105,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 126,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 210,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 252,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 66,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 69,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 82,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 137,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 164,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light，舊版單一「RAW」選項）",
+      "bitrate_mbps": 1000,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為說明書標示的近似值；50p／60p 為 10-bit，24p／25p／30p 為 12-bit"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light，舊版單一「RAW」選項）",
+      "bitrate_mbps": 1000,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為說明書標示的近似值；50p／60p 為 10-bit，24p／25p／30p 為 12-bit"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light，舊版單一「RAW」選項）",
+      "bitrate_mbps": 1000,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為說明書標示的近似值；50p／60p 為 10-bit，24p／25p／30p 為 12-bit"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light，舊版單一「RAW」選項）",
+      "bitrate_mbps": 1000,
+      "bit_depth": 10,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為說明書標示的近似值；50p／60p 為 10-bit，24p／25p／30p 為 12-bit"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light，舊版單一「RAW」選項）",
+      "bitrate_mbps": 1000,
+      "bit_depth": 10,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；位元率為說明書標示的近似值；50p／60p 為 10-bit，24p／25p／30p 為 12-bit"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "RAW（Cinema RAW Light，舊版單一「RAW」選項）",
+      "bitrate_mbps": 250,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為說明書標示的近似值；50p／60p 為 10-bit，24p／25p／30p 為 12-bit"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "RAW（Cinema RAW Light，舊版單一「RAW」選項）",
+      "bitrate_mbps": 250,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為說明書標示的近似值；50p／60p 為 10-bit，24p／25p／30p 為 12-bit"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "RAW（Cinema RAW Light，舊版單一「RAW」選項）",
+      "bitrate_mbps": 250,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為說明書標示的近似值；50p／60p 為 10-bit，24p／25p／30p 為 12-bit"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "RAW（Cinema RAW Light，舊版單一「RAW」選項）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為說明書標示的近似值；50p／60p 為 10-bit，24p／25p／30p 為 12-bit"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "RAW（Cinema RAW Light，舊版單一「RAW」選項）",
+      "bitrate_mbps": 250,
+      "bit_depth": 10,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；位元率為說明書標示的近似值；50p／60p 為 10-bit，24p／25p／30p 為 12-bit"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 410,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 410,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 410,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 810,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 260,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 810,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 260,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 410,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 24,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 410,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 25,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 410,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 30,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 810,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 50,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 260,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 810,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "3840x2160",
+      "max_fps": 60,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 260,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 310,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 310,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 310,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 310,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "1280x720",
+      "max_fps": 50,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 24,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "1280x720",
+      "max_fps": 60,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 24,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 310,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 310,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 24,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 25,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 160,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 30,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 310,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 50,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 310,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "1920x1080",
+      "max_fps": 60,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "1280x720",
+      "max_fps": 50,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 24,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "1280x720",
+      "max_fps": 60,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 24,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 810,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 260,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 180,
+      "codec": "XF-AVC（Intra-frame）",
+      "bitrate_mbps": 310,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 180,
+      "codec": "XF-AVC（Long GOP）",
+      "bitrate_mbps": 50,
+      "bit_depth": 10,
+      "chroma": "4:2:2",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 2020,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 993,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "4096x2160",
+      "max_fps": 120,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 645,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "none",
+      "notes": "感測器模式：Super 35mm；慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 180,
+      "codec": "RAW（Cinema RAW Light HQ）",
+      "bitrate_mbps": 511,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 180,
+      "codec": "RAW（Cinema RAW Light ST）",
+      "bitrate_mbps": 252,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    },
+    {
+      "resolution": "2048x1080",
+      "max_fps": 180,
+      "codec": "RAW（Cinema RAW Light LT）",
+      "bitrate_mbps": 164,
+      "bit_depth": 12,
+      "chroma": "RAW",
+      "crop": "crop",
+      "crop_factor": 2.92,
+      "notes": "感測器模式：Super 16mm（裁切）；慢動作／快動作錄影（S&F）的最高拍攝幀率，檔案以 59.94p 播放，位元率為 59.94p 的原廠標示值"
+    }
+  ],
+  "source_name": "Canon EOS C300 Mark III／EOS C500 Mark II Instruction Manual（英文版 PDF，PUB. DIE-0549-000K）：Available Video Configuration Settings 與 Specifications",
+  "source_url": "https://gdlp01.c-wss.com/gds/5/0300042345/10/eosc300mk3-500mk2-im15-en.pdf",
+  "last_verified": "2026-10-17",
+  "editor_notes": "【已改為 Unknown】感光元件毫米尺寸原本只有搜尋摘要的數字、沒能開啟原廠規格頁確認，依規定不採用；請負責人對照 Canon 官方規格頁後再補。 請負責人核對：(1) 這份說明書同時涵蓋 C300 Mark III 與 C500 Mark II；依選單表格，C300 Mark III 的感測器模式只有 Super 35mm 與 Super 16mm（裁切），本檔據此整理。(2) 格率以 NTSC 名義值記錄（23.98→24、29.97→30、59.94→60），25／50 另列；24.00p 與 23.98p 的 RAW 位元率少數差 1～2 Mbps，已標在 notes。(3) 感光元件尺寸 26.4 x 13.8 mm 來自 Canon 台灣官網規格頁的搜尋摘要，我沒能直接開啟該頁面（tw.canon 該機型網址無法下載），請核對；說明書只寫有效像素約 885 萬（4096x2160）、Super 35mm 等效倍率 1.460（水平解析度 4096／2048）或 1.534（3840／1920）。(4) 發表日期、動態範圍說明書沒寫，標 Unknown（Canon 台灣官網摘要提到 Canon Log 2 可達 16 級以上，但我沒能直接確認，所以不填）。(5) 基礎 ISO：說明書寫 Canon Log 2／Log 3／PQ 的建議最低感光度為 ISO 800（RAW 最低 ISO 800），HLG／BT.709 Wide DR 為 400，BT.709 Normal／Standard 為 160；說明書沒有提到雙原生 ISO，所以只填 800。(6) 鏡頭接環說明書寫 Canon EF（含 EF Cinema 鏡頭）；另有 PL 接環版與可更換接環，說明書規格段沒有詳述。(7) XF-AVC 只有 4:2:2 10-bit，沒有 XF-HEVC S／XF-AVC S。1920x1080 Intra-frame 160 Mbps 另有 59.94i／50.00i，1080i 未放進表格。(8) 高格率列為慢動作／快動作（S&F）模式最高拍攝幀率：Super 35mm 模式最高 120p、Super 16mm（裁切）最高 180p，位元率沿用 59.94p 標示值。(9) 位元深度與色彩取樣依錄影格式固定，說明書沒有依 Canon Log／PQ／一般色調分開寫。代理檔未放進表格。",
+  "extra_sources": [
+    {
+      "source_name": "Canon 日本官網：Cinema EOS 說明書列表（確認 C300 Mark III／C500 Mark II 共用說明書）",
+      "source_url": "https://canon.jp/support/manual/cinema-eos"
+    }
+  ]
+}
