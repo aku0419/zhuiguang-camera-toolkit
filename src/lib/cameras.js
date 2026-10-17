@@ -56,6 +56,7 @@ function pixels(res) {
 
 // 篩選用的片幅分類（原廠名稱五花八門，列表頁統一成四類）
 export function formatGroup(f) {
+  if (/Immersive/i.test(f)) return "特殊（沉浸式）";
   if (/M43|Four Thirds/i.test(f)) return "M43";
   if (/Super ?35|APS-C/i.test(f)) return "Super35／APS-C";
   if (/^Full Frame/i.test(f)) return "全片幅";
