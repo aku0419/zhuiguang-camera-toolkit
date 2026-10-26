@@ -1,0 +1,30 @@
+{
+  "slug": "canon-ef28mm-f-2-8-is-usm",
+  "brand": "Canon",
+  "series": "EF",
+  "model": "EF28mm f/2.8 IS USM",
+  "type": "prime",
+  "focal_min": 28,
+  "focal_max": 28,
+  "max_aperture": 2.8,
+  "mount": "Canon EF",
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "鏡頭內防手震（IS）",
+  "min_focus": "0.23 m",
+  "magnification": "0.2×",
+  "filter_mm": 58,
+  "size_text": "未知（原廠資料未標示）",
+  "weight_g": 260,
+  "aperture_blades": 7,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://global.canon/en/c-museum/product/ef421.html",
+  "af_drive": "超音波馬達（USM）",
+  "source_name": "Canon Camera Museum（Canon 全球官方資料庫，英文）",
+  "last_verified": "2026-10-26"
+}

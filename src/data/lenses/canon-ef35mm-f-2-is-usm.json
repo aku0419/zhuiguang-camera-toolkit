@@ -1,0 +1,30 @@
+{
+  "slug": "canon-ef35mm-f-2-is-usm",
+  "brand": "Canon",
+  "series": "EF",
+  "model": "EF35mm f/2 IS USM",
+  "type": "prime",
+  "focal_min": 35,
+  "focal_max": 35,
+  "max_aperture": 2,
+  "mount": "Canon EF",
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "鏡頭內防手震（IS）",
+  "min_focus": "0.24 m",
+  "magnification": "0.24×",
+  "filter_mm": 67,
+  "size_text": "未知（原廠資料未標示）",
+  "weight_g": 335,
+  "aperture_blades": 8,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://global.canon/en/c-museum/product/ef426.html",
+  "af_drive": "超音波馬達（USM）",
+  "source_name": "Canon Camera Museum（Canon 全球官方資料庫，英文）",
+  "last_verified": "2026-10-26"
+}

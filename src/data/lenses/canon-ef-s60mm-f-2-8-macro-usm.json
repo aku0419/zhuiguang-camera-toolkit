@@ -1,0 +1,30 @@
+{
+  "slug": "canon-ef-s60mm-f-2-8-macro-usm",
+  "brand": "Canon",
+  "series": "EF-S",
+  "model": "EF-S60mm f/2.8 Macro USM",
+  "type": "prime",
+  "focal_min": 60,
+  "focal_max": 60,
+  "max_aperture": 2.8,
+  "mount": "Canon EF",
+  "coverage": "APS-C",
+  "autofocus": "AF／MF",
+  "stabilization": "無（型號未標示 IS）",
+  "min_focus": "0.2 m",
+  "magnification": "1×",
+  "filter_mm": 52,
+  "size_text": "未知（原廠資料未標示）",
+  "weight_g": 335,
+  "aperture_blades": 7,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://global.canon/en/c-museum/product/ef386.html",
+  "af_drive": "超音波馬達（USM）",
+  "source_name": "Canon Camera Museum（Canon 全球官方資料庫，英文）",
+  "last_verified": "2026-10-26"
+}

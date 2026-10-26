@@ -1,0 +1,30 @@
+{
+  "slug": "canon-ef-s35mm-f-2-8-macro-is-stm",
+  "brand": "Canon",
+  "series": "EF-S",
+  "model": "EF-S35mm f/2.8 Macro IS STM",
+  "type": "prime",
+  "focal_min": 35,
+  "focal_max": 35,
+  "max_aperture": 2.8,
+  "mount": "Canon EF",
+  "coverage": "APS-C",
+  "autofocus": "AF／MF",
+  "stabilization": "鏡頭內防手震（IS）",
+  "min_focus": "0.13 m",
+  "magnification": "1×",
+  "filter_mm": 49,
+  "size_text": "未知（原廠資料未標示）",
+  "weight_g": 190,
+  "aperture_blades": 7,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://global.canon/en/c-museum/product/ef460.html",
+  "af_drive": "步進馬達（STM）",
+  "source_name": "Canon Camera Museum（Canon 全球官方資料庫，英文）",
+  "last_verified": "2026-10-26"
+}

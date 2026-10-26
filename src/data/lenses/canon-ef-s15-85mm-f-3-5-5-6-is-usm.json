@@ -1,0 +1,31 @@
+{
+  "slug": "canon-ef-s15-85mm-f-3-5-5-6-is-usm",
+  "brand": "Canon",
+  "series": "EF-S",
+  "model": "EF-S15-85mm f/3.5-5.6 IS USM",
+  "type": "zoom",
+  "focal_min": 15,
+  "focal_max": 85,
+  "max_aperture": 3.5,
+  "max_aperture_tele": 5.6,
+  "mount": "Canon EF",
+  "coverage": "APS-C",
+  "autofocus": "AF／MF",
+  "stabilization": "鏡頭內防手震（IS）",
+  "min_focus": "0.35 m",
+  "magnification": "0.21×",
+  "filter_mm": 72,
+  "size_text": "未知（原廠資料未標示）",
+  "weight_g": 575,
+  "aperture_blades": 7,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://global.canon/en/c-museum/product/ef403.html",
+  "af_drive": "超音波馬達（USM）",
+  "source_name": "Canon Camera Museum（Canon 全球官方資料庫，英文）",
+  "last_verified": "2026-10-26"
+}

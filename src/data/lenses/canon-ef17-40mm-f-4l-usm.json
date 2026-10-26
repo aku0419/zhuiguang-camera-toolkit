@@ -1,0 +1,31 @@
+{
+  "slug": "canon-ef17-40mm-f-4l-usm",
+  "brand": "Canon",
+  "series": "L",
+  "model": "EF17-40mm f/4L USM",
+  "type": "zoom",
+  "focal_min": 17,
+  "focal_max": 40,
+  "max_aperture": 4,
+  "mount": "Canon EF",
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "無（型號未標示 IS）",
+  "min_focus": "0.28 m",
+  "magnification": "0.24×",
+  "filter_mm": 77,
+  "diameter_mm": 83.5,
+  "length_mm": 96.8,
+  "weight_g": 475,
+  "aperture_blades": 7,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://global.canon/en/c-museum/product/ef373.html",
+  "af_drive": "超音波馬達（USM）",
+  "source_name": "Canon Camera Museum（Canon 全球官方資料庫，英文）",
+  "last_verified": "2026-10-26"
+}
