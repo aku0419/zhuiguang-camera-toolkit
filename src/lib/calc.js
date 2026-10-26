@@ -421,3 +421,17 @@ export function compassName(deg) {
   const names = ["北", "北北東", "東北", "東北東", "東", "東南東", "東南", "南南東", "南", "南南西", "西南", "西南西", "西", "西北西", "西北", "北北西"];
   return names[Math.round((((deg % 360) + 360) % 360) / 22.5) % 16];
 }
+
+// ---- 構圖取景（手機相機畫面上疊出「某焦段拍出來的範圍」）----
+// 手機畫面長邊的視角由「手機鏡頭等效焦段」推出（35mm 全片幅長邊 36mm）；
+// 再算出相機（感光元件 sensorW × sensorH mm）用 focalMm 拍攝、錄成 aspect（寬 ÷ 高）時，
+// 在 viewW × viewH 像素的畫面上佔多大。回傳 { w, h, hfov }（像素與水平視角度數）。
+export function framingBox({ focalMm, sensorW, sensorH, aspect, phoneEq, viewW, viewH }) {
+  if (![focalMm, sensorW, sensorH, aspect, phoneEq, viewW, viewH].every((v) => v > 0)) return null;
+  const fovLong = 2 * Math.atan(18 / phoneEq);
+  const fPx = (Math.max(viewW, viewH) / 2) / Math.tan(fovLong / 2);
+  const sensorAspect = sensorW / sensorH;
+  const [recW, recH] = aspect >= sensorAspect ? [sensorW, sensorW / aspect] : [sensorH * aspect, sensorH];
+  const hfov = (2 * Math.atan(recW / (2 * focalMm)) * 180) / Math.PI;
+  return { w: (fPx * recW) / focalMm, h: (fPx * recH) / focalMm, hfov };
+}

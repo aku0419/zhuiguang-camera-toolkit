@@ -1,0 +1,217 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ToolHead from "../../components/ToolHead.astro";
+import Chips from "../../components/Chips.astro";
+import CameraPicker from "../../components/CameraPicker.astro";
+import { FORMATS } from "../../lib/calc.js";
+const FOCALS = [14, 18, 24, 35, 50, 85, 135, 200];
+const RATIOS = [
+  { v: 16 / 9, t: "16:9（一般影片）" }, { v: 2.39, t: "2.39:1（電影寬銀幕）" }, { v: 1.85, t: "1.85:1" },
+  { v: 4 / 3, t: "4:3" }, { v: 1.5, t: "3:2（照片）" }, { v: 1, t: "1:1（正方形）" },
+  { v: 4 / 5, t: "4:5（直式社群）" }, { v: 9 / 16, t: "9:16（直式影片）" },
+];
+---
+<BaseLayout title="構圖取景" description="用手機相機先看畫面：選你的攝影機和焦段，在手機畫面上疊出那顆鏡頭拍出來的範圍框。選機位、決定用哪顆鏡頭很好用。" section="tools">
+  <ToolHead title="構圖取景" question="這顆鏡頭拍出來會是多大的畫面？用手機先看。" />
+  <div class="tool">
+    <CameraPicker />
+    <div class="field" id="fmt-field">
+      <label for="fmt">相機片幅</label>
+      <select id="fmt">{FORMATS.map((f) => <option value={f.id} data-factor={f.factor}>{f.label}</option>)}</select>
+    </div>
+    <div class="field">
+      <label for="ratio">錄影畫面比例</label>
+      <select id="ratio">{RATIOS.map((r) => <option value={r.v}>{r.t}</option>)}</select>
+    </div>
+    <div class="field">
+      <label for="phone">手機鏡頭（35mm 等效焦段）</label>
+      <div class="inrow"><input id="phone" type="number" inputmode="decimal" min="8" max="300" step="any" value="24" /><span class="unit">mm</span></div>
+      <Chips label="手機鏡頭" values={[13, 24, 48, 77, 120]} />
+      <span class="hint">一般手機的主鏡頭約 24mm，超廣角約 13mm，望遠 2、3、5 倍約 48、77、120mm。</span>
+    </div>
+    <div class="field">
+      <span class="label">要顯示的焦段框</span>
+      <div class="chips" id="focals" role="group" aria-label="要顯示的焦段框">
+        {FOCALS.map((f) => <button type="button" class="chip" data-f={f} aria-pressed={f === 35 || f === 50 || f === 85 ? "true" : "false"}>{f}mm</button>)}
+      </div>
+    </div>
+    <button type="button" class="btn primary" id="fr-open">開啟手機相機取景</button>
+    <p class="hint" id="fr-msg" aria-live="polite"></p>
+    <ul class="notes">
+      <li>請<b>橫拿手機</b>，框會比較好看；直拿也能用。取景時有滑桿可以連續調焦段。</li>
+      <li>範圍框是<b>估算</b>：手機鏡頭的實際視角會因機型、防手震與錄影裁切有些差異。如果框和你用真的鏡頭拍出來的不一樣，可以改上面的「手機鏡頭」數字微調。</li>
+      <li>選了相機會用那台的感光元件尺寸；相機開啟裁切模式（例如 4K 120p）時，實際範圍會更窄，這裡不會算進去。</li>
+      <li>相機畫面只在你的手機螢幕上顯示，不錄影、不拍照、不儲存，也不會傳送到任何地方。</li>
+    </ul>
+  </div>
+
+  <div class="fr" id="fr" hidden>
+    <video id="fr-video" playsinline muted autoplay></video>
+    <canvas id="fr-canvas"></canvas>
+    <div class="fr-top">
+      <p id="fr-info"></p>
+      <div class="fr-tr">
+        <select id="fr-ratio" aria-label="畫面比例">{RATIOS.map((r) => <option value={r.v}>{r.t}</option>)}</select>
+        <button type="button" id="fr-close">關閉</button>
+      </div>
+    </div>
+    <div class="fr-bottom">
+      <div class="fr-row">
+        <label>焦段 <b id="fr-focal">50mm</b></label>
+        <input id="fr-slider" type="range" min="0" max="1000" step="1" />
+      </div>
+      <div class="fr-chips" id="fr-chips"></div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+  .fr{position:fixed;inset:0;z-index:100;background:#000;color:#fff;overflow:hidden}
+  .fr video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .fr canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
+  .fr-top{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:flex-start;gap:8px;padding:calc(env(safe-area-inset-top) + 10px) 12px 8px;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,0))}
+  .fr-top p{margin:0;font-size:14px;text-shadow:0 1px 3px #000}
+  .fr-top button,.fr select{white-space:nowrap;flex:none;background:rgba(0,0,0,.55);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:8px;padding:8px 12px;font-size:14px;font-weight:700;cursor:pointer}
+  .fr-bottom{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:8px;padding:28px 12px calc(env(safe-area-inset-bottom) + 12px);background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7))}
+  .fr-row{display:flex;align-items:center;gap:10px}
+  .fr-row label{font-size:14px;white-space:nowrap}
+  .fr-row input{flex:1;min-width:0;accent-color:var(--accent)}
+  .fr-tr{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+  .fr-tr select{max-width:150px;font-weight:500;width:auto}
+  @media (max-height:500px){.fr-tr{flex-direction:row}.fr-bottom{padding-top:16px}}
+  .fr-chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px}
+  .fr-chips button{flex:none;border:1px solid rgba(255,255,255,.5);background:rgba(0,0,0,.55);color:#fff;border-radius:16px;padding:5px 12px;font-size:14px;font-family:var(--mono);cursor:pointer}
+  .fr-chips button[aria-pressed="true"]{background:#fff;color:#000;border-color:#fff}
+</style>
+
+<script>
+  import { framingBox, FORMATS, fmt } from "../../lib/calc.js";
+  import { bindChips, num, cameraPicker } from "../../lib/ui.js";
+  const $ = (id: string) => document.getElementById(id)!;
+  const sel = $("fmt") as HTMLSelectElement, ratio = $("ratio") as HTMLSelectElement, phone = $("phone") as HTMLInputElement;
+  const fmtField = $("fmt-field"), msg = $("fr-msg");
+  const overlay = $("fr"), video = $("fr-video") as HTMLVideoElement, canvas = $("fr-canvas") as HTMLCanvasElement;
+  const info = $("fr-info"), focalOut = $("fr-focal"), slider = $("fr-slider") as HTMLInputElement;
+  const frRatio = $("fr-ratio") as HTMLSelectElement, frChips = $("fr-chips");
+  let getCam: () => any = () => null;
+  getCam = cameraPicker(() => { sizeInfo(); });
+  bindChips(document.querySelector(".chips")!, phone, () => draw());
+
+  // 目前相機的感光元件尺寸（mm）；沒選相機就用片幅的通用倍率推算（全片幅 36 × 24）
+  function sensor() {
+    const cam = getCam();
+    const has = cam && cam.width_mm && cam.height_mm;
+    if (cam && !has && cam.format_id && !sel.dataset.touched) sel.value = cam.format_id;
+    fmtField.hidden = !!has;
+    if (has) return { w: cam.width_mm as number, h: cam.height_mm as number, name: cam.name as string, factor: Math.hypot(36, 24) / Math.hypot(cam.width_mm, cam.height_mm) };
+    const k = cam && cam.crop_factor ? cam.crop_factor : FORMATS.find((x) => x.id === sel.value)!.factor;
+    return { w: 36 / k, h: 24 / k, name: cam ? cam.name : "", factor: k };
+  }
+  const sizeInfo = () => { sensor(); };
+  sizeInfo();
+  sel.addEventListener("change", () => { sel.dataset.touched = "1"; });
+
+  // 要顯示的焦段框（頁面上的選擇）
+  const FOCALS = [...document.querySelectorAll<HTMLElement>("#focals [data-f]")];
+  FOCALS.forEach((b) => b.addEventListener("click", () => b.setAttribute("aria-pressed", String(b.getAttribute("aria-pressed") !== "true"))));
+  const shown = () => FOCALS.filter((b) => b.getAttribute("aria-pressed") === "true").map((b) => Number(b.dataset.f));
+
+  // 取景中的焦段滑桿：8–400mm，對數刻度
+  const FMIN = 8, FMAX = 400;
+  const fromSlider = () => Math.round(FMIN * Math.pow(FMAX / FMIN, Number(slider.value) / 1000));
+  const toSlider = (f: number) => String(Math.round((Math.log(f / FMIN) / Math.log(FMAX / FMIN)) * 1000));
+  let active = 50;
+
+  function buildChips() {
+    frChips.innerHTML = "";
+    for (const f of FOCALS.map((b) => Number(b.dataset.f))) {
+      const b = document.createElement("button");
+      b.type = "button"; b.textContent = `${f}`; b.dataset.f = String(f);
+      b.setAttribute("aria-pressed", String(shown().includes(f)));
+      b.addEventListener("click", () => {
+        // 點一下：切換這個焦段框的顯示，並把它設成目前焦段
+        const page = FOCALS.find((x) => Number(x.dataset.f) === f)!;
+        const on = page.getAttribute("aria-pressed") !== "true";
+        page.setAttribute("aria-pressed", String(on)); b.setAttribute("aria-pressed", String(on));
+        if (on) { active = f; slider.value = toSlider(f); }
+        draw();
+      });
+      frChips.append(b);
+    }
+  }
+
+  function draw() {
+    if (overlay.hidden) return;
+    const dpr = window.devicePixelRatio || 1;
+    const W = canvas.clientWidth, H = canvas.clientHeight;
+    if (canvas.width !== Math.round(W * dpr) || canvas.height !== Math.round(H * dpr)) { canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr); }
+    const ctx = canvas.getContext("2d")!;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
+    const s = sensor(), asp = Number(frRatio.value), eq = num(phone);
+    const list = [...new Set([...shown(), active])].sort((a, b) => b - a);
+    list.sort((a, b) => Number(a === active) - Number(b === active));   // 目前焦段最後畫，疊在最上面
+    for (const f of list) {
+      const b = framingBox({ focalMm: f, sensorW: s.w, sensorH: s.h, aspect: asp, phoneEq: eq, viewW: W, viewH: H });
+      if (!b) continue;
+      const isActive = f === active;
+      const x = W / 2 - b.w / 2, y = H / 2 - b.h / 2;
+      ctx.save();
+      if (!isActive) ctx.setLineDash([8, 6]);
+      ctx.lineWidth = isActive ? 3 : 1.5;
+      ctx.strokeStyle = isActive ? "#ffd54f" : "rgba(255,255,255,.85)";
+      ctx.shadowColor = "rgba(0,0,0,.7)"; ctx.shadowBlur = 3;
+      ctx.strokeRect(x, y, b.w, b.h);
+      ctx.restore();
+      if (isActive) {                                  // 目前焦段：畫三分法格線
+        ctx.save(); ctx.strokeStyle = "rgba(255,213,79,.5)"; ctx.lineWidth = 1;
+        for (let i = 1; i <= 2; i++) {
+          ctx.beginPath(); ctx.moveTo(x + (b.w * i) / 3, y); ctx.lineTo(x + (b.w * i) / 3, y + b.h); ctx.moveTo(x, y + (b.h * i) / 3); ctx.lineTo(x + b.w, y + (b.h * i) / 3); ctx.stroke();
+        }
+        ctx.restore();
+      }
+      // 標籤：放在框的左上角內側；框比畫面大時貼在畫面邊緣
+      const lx = Math.max(8, Math.min(W - 70, x + 6)), ly = Math.max(70, Math.min(H - 130, y + 18));
+      ctx.font = `bold ${isActive ? 16 : 13}px sans-serif`; ctx.textAlign = "left"; ctx.textBaseline = "middle";
+      ctx.fillStyle = isActive ? "#ffd54f" : "#fff"; ctx.shadowColor = "#000"; ctx.shadowBlur = 4;
+      ctx.fillText(`${f}mm`, lx, ly); ctx.shadowBlur = 0;
+    }
+    // 畫面中央十字
+    ctx.strokeStyle = "rgba(255,255,255,.6)"; ctx.lineWidth = 1.2; ctx.beginPath();
+    ctx.moveTo(W / 2 - 8, H / 2); ctx.lineTo(W / 2 + 8, H / 2); ctx.moveTo(W / 2, H / 2 - 8); ctx.lineTo(W / 2, H / 2 + 8); ctx.stroke();
+
+    const cur = framingBox({ focalMm: active, sensorW: s.w, sensorH: s.h, aspect: asp, phoneEq: eq, viewW: W, viewH: H });
+    focalOut.textContent = `${active}mm`;
+    info.textContent = `${s.name || "通用相機"}　${active}mm${Math.abs(s.factor - 1) > 0.03 ? `（全片幅等效 ${fmt(active * s.factor, 0)}mm）` : ""}　水平視角 ${cur ? fmt(cur.hfov, 1) : "—"}°`;
+  }
+
+  let stream: MediaStream | null = null;
+  async function openStream() {
+    stream?.getTracks().forEach((t) => t.stop());
+    stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: "environment" }, width: { ideal: 1920 }, height: { ideal: 1080 } }, audio: false });
+    video.srcObject = stream;
+    await video.play().catch(() => {});
+  }
+  const close = () => {
+    stream?.getTracks().forEach((t) => t.stop()); stream = null; video.srcObject = null;
+    overlay.hidden = true; document.body.style.overflow = "";
+  };
+
+  $("fr-open").addEventListener("click", async () => {
+    msg.textContent = "";
+    if (!navigator.mediaDevices?.getUserMedia) { msg.textContent = "這個瀏覽器不能使用相機，請改用手機的 Safari 或 Chrome。"; return; }
+    if (shown().length === 0) { msg.textContent = "請至少選一個要顯示的焦段框。"; return; }
+    const first = shown().includes(50) ? 50 : shown()[0];
+    active = first; slider.value = toSlider(first); frRatio.value = ratio.value;
+    try { await openStream(); }
+    catch { msg.textContent = "沒有取得相機權限。請到手機的設定允許這個網站使用相機後，再試一次。"; return; }
+    overlay.hidden = false; document.body.style.overflow = "hidden";
+    buildChips(); draw();
+  });
+  $("fr-close").addEventListener("click", close);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !overlay.hidden) close(); });
+  slider.addEventListener("input", () => { active = fromSlider(); draw(); });
+  frRatio.addEventListener("change", () => { ratio.value = frRatio.value; draw(); });
+  window.addEventListener("resize", draw);
+  new ResizeObserver(draw).observe(canvas);
+  window.addEventListener("pagehide", close);
+</script>

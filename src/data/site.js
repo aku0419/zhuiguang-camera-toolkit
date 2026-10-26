@@ -80,6 +80,10 @@ export const TOOLS = [
     q: "5600K 換 3200K 要加什麼校正片？", keywords: ["色溫", "mired", "K", "Kelvin", "鎢絲燈", "日光", "校正片", "CTO", "CTB", "燈光"],
   },
   {
+    id: "framing", href: "/tools/framing/", name: "構圖取景",
+    q: "用手機看，這顆鏡頭拍出來有多大？", keywords: ["取景", "構圖", "取景框", "焦段", "手機", "相機", "framing", "viewfinder", "director viewfinder", "鏡頭選擇", "機位", "勘景"],
+  },
+  {
     id: "sun-path", href: "/tools/sun-path/", name: "太陽軌跡",
     q: "那天幾點日出日落？黃金時刻是什麼時候？", keywords: ["日出", "日落", "黃金時刻", "藍調時刻", "golden hour", "blue hour", "太陽", "方位", "GPS", "指南針", "sunrise", "sunset", "外景", "勘景"],
   },
@@ -122,7 +126,7 @@ export const TOOL_GROUPS = [
   { id: "exposure", name: "曝光與快門", icon: "aperture", color: "#d9480f",
     ids: ["shutter-angle", "frame-rate", "exposure-stops", "exposure-guide", "nd-filter", "light-units", "color-temperature"] },
   { id: "lens", name: "鏡頭與構圖", icon: "frame", color: "#1c7ed6",
-    ids: ["focal-length", "field-of-view", "depth-of-field", "depth-of-field-table", "aspect-ratio"] },
+    ids: ["framing", "focal-length", "field-of-view", "depth-of-field", "depth-of-field-table", "aspect-ratio"] },
   { id: "record", name: "錄影與記憶卡", icon: "card", color: "#2b8a3e",
     ids: ["recording-capacity", "card-time", "shoot-storage", "timecode"] },
   { id: "film", name: "底片", icon: "film", color: "#9c36b5",

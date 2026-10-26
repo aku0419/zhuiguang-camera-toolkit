@@ -5,7 +5,7 @@ import {
   shutterFromAngle, frameRate, equivalentFocal, FORMATS, cropFactorFromSize,
   capacityGB, recordSeconds, toMbps, fmtDuration, fmtSize, neededMBps, sdVideoClass,
   ndInfo, parseShutter, fmtShutter, aspectOf, cropToRatio, depthOfField, stopsBetween,
-  fieldOfView, sunnyAperture, ndStopsNeeded, shootStorage,
+  fieldOfView, framingBox, sunnyAperture, ndStopsNeeded, shootStorage,
   frameSizeAt, desqueezedRatio, mired, miredShift, luxToEV, luxToFc, TC_RATES, tcToFrames, framesToTc,
   filmRuntime, filmFeetFor, filmFeetPerMinute, fmtMinSec,
   eiAdjusted, eiStopsBetween, apertureForEI, filmCost, sunPosition, sunTimes, fmtClock, compassName,
@@ -238,4 +238,18 @@ test("方位名稱與時間格式", () => {
   assert.equal(compassName(257), "西南西");
   assert.equal(fmtClock(Date.UTC(2026, 9, 26, 0, 0), 8), "08:00");
   assert.equal(fmtClock(null, 8), "—");
+});
+
+test("構圖取景：全片幅 50mm 在 24mm 手機鏡頭的畫面上佔多大", () => {
+  const b = framingBox({ focalMm: 50, sensorW: 36, sensorH: 24, aspect: 1.5, phoneEq: 24, viewW: 1920, viewH: 1080 });
+  assert.ok(Math.abs(b.w - 921.6) < 0.5);
+  assert.ok(Math.abs(b.h - 614.4) < 0.5);
+  assert.ok(Math.abs(b.hfov - 39.6) < 0.1);
+  // 16:9 錄影只用到感光元件的一部分高度，寬度不變
+  const c = framingBox({ focalMm: 50, sensorW: 36, sensorH: 24, aspect: 16 / 9, phoneEq: 24, viewW: 1920, viewH: 1080 });
+  assert.ok(Math.abs(c.w - 921.6) < 0.5 && Math.abs(c.h - 518.4) < 0.5);
+  // 焦段越長範圍越小；和手機鏡頭一樣的視角剛好填滿長邊
+  const d = framingBox({ focalMm: 24, sensorW: 36, sensorH: 24, aspect: 1.5, phoneEq: 24, viewW: 1920, viewH: 1080 });
+  assert.ok(Math.abs(d.w - 1920) < 1);
+  assert.equal(framingBox({ focalMm: 0, sensorW: 36, sensorH: 24, aspect: 1.5, phoneEq: 24, viewW: 1, viewH: 1 }), null);
 });
