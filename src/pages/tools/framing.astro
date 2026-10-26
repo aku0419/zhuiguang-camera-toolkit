@@ -68,6 +68,7 @@ const brands = [...new Set(camerasForTools.map((c) => c.brand))];
     <p class="hint" id="fr-msg" aria-live="polite"></p>
     <ul class="notes">
       <li>請<b>橫拿手機</b>，框會比較好看；直拿也能用。</li>
+      <li>這個工具只模擬<b>畫面範圍</b>（焦段與視角）。景深、虛化、亮度是手機鏡頭自己的，不會因為你選了某個光圈或鏡頭而改變，這些要看真的鏡頭，或用「景深」工具估算。</li>
       <li>範圍框是<b>估算</b>：手機鏡頭的實際視角會因機型、防手震與錄影裁切有些差異。如果框和你用真的鏡頭拍出來的不一樣，可以改上面的「手機鏡頭」數字微調。</li>
       <li>選了相機會用那台的感光元件尺寸；選了「Open Gate」就是用整個感光元件的比例。相機開啟裁切模式（例如 4K 120p）時，實際範圍會更窄，這裡不會算進去。</li>
       <li>鏡頭資料來自逐光的鏡頭資料庫，只列出有收錄的鏡頭。接環相容與「可能暗角」只是提醒，實際以原廠說明為準。</li>
@@ -330,8 +331,10 @@ const brands = [...new Set(camerasForTools.map((c) => c.brand))];
     const eqTxt = Math.abs(s.factor - 1) > 0.03 ? `全片幅等效 ${fmt(active * s.factor, 0)}mm` : "";
     const focalTxt = lensName.includes(`${active}mm`) ? eqTxt : `${active}mm${eqTxt ? `（${eqTxt}）` : ""}`;
     const ratioTxt = frRatio.options[frRatio.selectedIndex].text;
+    const zooms = picked.filter((l) => l.t === "zoom");
+    const zoomRange = zooms.length ? `${Math.min(...zooms.map((z) => z.f1))}–${Math.max(...zooms.map((z) => z.f2))}mm` : "";
     return {
-      s, cur, lensName, focalTxt, ratioTxt,
+      s, cur, lensName, focalTxt, ratioTxt, zoomRange,
       line: [s.name || "通用相機", lensName, focalTxt, `水平視角 ${cur ? fmt(cur.hfov, 1) : "—"}°`].filter(Boolean).join("　"),
     };
   }
@@ -363,6 +366,7 @@ const brands = [...new Set(camerasForTools.map((c) => c.brand))];
     const items: { t: string; head?: boolean }[] = [
       { t: [st.s.name || "通用相機", st.lensName].filter(Boolean).join("　"), head: true },
       { t: [st.focalTxt, `水平視角 ${st.cur ? fmt(st.cur.hfov, 1) : "—"}°`].filter(Boolean).join("　") },
+      ...(st.zoomRange ? [{ t: `鏡頭焦段範圍 ${st.zoomRange}` }] : []),
       { t: `畫面比例 ${st.ratioTxt}　感光元件 ${fmt(st.s.w, 1)} × ${fmt(st.s.h, 1)} mm` },
       { t: `顯示焦段 ${[...new Set([...shown, active])].sort((a, b) => a - b).map((f) => `${f}mm`).join("、")}` },
       { t: `手機鏡頭估算 ${fmt(num(phone), 0)}mm　${stamp}　逐光` },
