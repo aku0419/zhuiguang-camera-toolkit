@@ -435,3 +435,12 @@ export function framingBox({ focalMm, sensorW, sensorH, aspect, phoneEq, viewW, 
   const hfov = (2 * Math.atan(recW / (2 * focalMm)) * 180) / Math.PI;
   return { w: (fPx * recW) / focalMm, h: (fPx * recH) / focalMm, hfov };
 }
+
+// 鏡頭涵蓋範圍（對角線 mm，約略值）；有原廠標的 image_circle_mm 就用原廠的
+export const COVERAGE_DIAG = { "Full Frame": 43.3, "APS-C": 28.4, Super35: 31.1, "Medium Format": 55, "Large Format": 46, "Micro Four Thirds": 21.6 };
+// 鏡頭涵蓋範圍可能比感光元件小（邊緣可能暗角）時回傳 true；資料不足時回傳 false
+export function lensMayVignette(coverage, imageCircleMm, sensorW, sensorH) {
+  const circle = imageCircleMm > 0 ? imageCircleMm : COVERAGE_DIAG[coverage];
+  if (!(circle > 0) || !(sensorW > 0) || !(sensorH > 0)) return false;
+  return circle < Math.hypot(sensorW, sensorH) * 0.92;
+}

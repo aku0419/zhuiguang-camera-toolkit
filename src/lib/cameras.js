@@ -108,6 +108,8 @@ function formatId(f) {
 export const camerasForTools = cameras.map((c) => ({
   slug: c.slug,
   name: c.name,
+  brand: c.brand,
+  lens_mount: typeof c.lens_mount === "string" ? c.lens_mount : "",
   format: c.sensor.format,
   format_id: formatId(c.sensor.format),
   crop_factor: c.crop_factor,

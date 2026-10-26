@@ -5,7 +5,7 @@ import {
   shutterFromAngle, frameRate, equivalentFocal, FORMATS, cropFactorFromSize,
   capacityGB, recordSeconds, toMbps, fmtDuration, fmtSize, neededMBps, sdVideoClass,
   ndInfo, parseShutter, fmtShutter, aspectOf, cropToRatio, depthOfField, stopsBetween,
-  fieldOfView, framingBox, sunnyAperture, ndStopsNeeded, shootStorage,
+  fieldOfView, framingBox, lensMayVignette, sunnyAperture, ndStopsNeeded, shootStorage,
   frameSizeAt, desqueezedRatio, mired, miredShift, luxToEV, luxToFc, TC_RATES, tcToFrames, framesToTc,
   filmRuntime, filmFeetFor, filmFeetPerMinute, fmtMinSec,
   eiAdjusted, eiStopsBetween, apertureForEI, filmCost, sunPosition, sunTimes, fmtClock, compassName,
@@ -252,4 +252,12 @@ test("構圖取景：全片幅 50mm 在 24mm 手機鏡頭的畫面上佔多大",
   const d = framingBox({ focalMm: 24, sensorW: 36, sensorH: 24, aspect: 1.5, phoneEq: 24, viewW: 1920, viewH: 1080 });
   assert.ok(Math.abs(d.w - 1920) < 1);
   assert.equal(framingBox({ focalMm: 0, sensorW: 36, sensorH: 24, aspect: 1.5, phoneEq: 24, viewW: 1, viewH: 1 }), null);
+});
+
+test("鏡頭涵蓋範圍比感光元件小時提醒可能暗角", () => {
+  assert.equal(lensMayVignette("APS-C", null, 36, 24), true);        // APS-C 鏡頭裝全片幅機身
+  assert.equal(lensMayVignette("Full Frame", null, 23.5, 15.6), false);
+  assert.equal(lensMayVignette("Super35", 31.1, 36, 24), true);
+  assert.equal(lensMayVignette("Large Format", 46, 36, 24), false);
+  assert.equal(lensMayVignette("Unknown", null, 36, 24), false);      // 沒資料就不亂提醒
 });
