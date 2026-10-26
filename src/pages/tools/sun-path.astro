@@ -75,7 +75,7 @@ const PLACES = [
         <input id="sky-slider" type="range" min="0" max="1439" step="1" value="720" />
         <button type="button" class="chip" id="sky-exit">退出全螢幕</button>
       </div>
-      <figcaption>立體圖：圓盤是地面（四周是方位），弧線是太陽這一天的路徑，點是每小時的位置。<b>左右拖曳</b>可以轉動方向，<b>兩指捏合</b>（電腦用滾輪）可以放大縮小；開啟指南針後，畫面會跟著手機轉，手機立起來就變成正面看、放平就變成俯視。</figcaption>
+      <figcaption>立體圖：圓盤是地面（四周是方位），弧線是太陽這一天的路徑，點是每小時的位置，<b style="color:#e07a00">橘色</b>是黃金時刻、<b style="color:#3b78e7">藍色</b>是藍調時刻（在地平線下，會穿進圓盤）。<b>左右拖曳</b>可以轉動方向，<b>兩指捏合</b>（電腦用滾輪）可以放大縮小；開啟指南針後，畫面會跟著手機轉，手機立起來就變成正面看、放平就變成俯視。</figcaption>
     </figure>
 
     <div class="field">
@@ -366,14 +366,16 @@ const PLACES = [
       ctx.strokeStyle = col; ctx.lineWidth = 1.6; ctx.stroke();
     }
 
-    // 太陽路徑（地平線以上；後面的線較淡，前面的較亮）
+    // 太陽路徑（白天黃、黃金時刻橘、藍調時刻藍；藍調在地平線下，畫到 −6.5° 為止）
+    ctx.lineCap = "round";
     let prev: ReturnType<typeof project> | null = null;
     for (const p of path) {
-      if (p.alt < 0) { prev = null; continue; }
+      if (p.alt < -6.5) { prev = null; continue; }
       const q = project(...dir(p.az, p.alt));
       if (prev) {
         ctx.beginPath(); ctx.moveTo(prev.x, prev.y); ctx.lineTo(q.x, q.y);
-        ctx.strokeStyle = "#ffc21f"; ctx.lineWidth = 2.6 * Math.min(1.5, Math.max(0.7, q.k / 118)); ctx.stroke();
+        ctx.strokeStyle = p.alt > 6 ? "#ffe066" : p.alt > -4 ? "#ff8a00" : "#4f8cff";
+        ctx.lineWidth = (p.alt > 6 ? 2.6 : 5) * Math.min(1.5, Math.max(0.7, q.k / 118)); ctx.stroke();   // 黃金、藍調時刻畫粗一點才看得到
       }
       prev = q;
     }
