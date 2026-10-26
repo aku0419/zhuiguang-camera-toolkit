@@ -60,7 +60,7 @@ const PLACES = [
       <svg id="alt-chart" viewBox="0 0 360 170" role="img" aria-label="一天中太陽高度的變化"></svg>
       <figcaption>太陽高度（一整天）。深色是夜晚、藍色是藍調時刻、黃色是黃金時刻。</figcaption>
     </figure>
-    <figure class="sun-fig">
+    <figure class="sun-fig" id="sky-fig">
       <canvas id="sky" aria-label="太陽軌跡立體圖"></canvas>
       <div class="inrow sun-views">
         <button type="button" class="chip" data-pitch="86">俯視</button>
@@ -68,6 +68,12 @@ const PLACES = [
         <button type="button" class="chip" data-pitch="14">正面</button>
         <button type="button" class="chip" id="play">播放一天</button>
         <button type="button" class="chip" id="ar-open">AR 模式（開相機）</button>
+        <button type="button" class="chip" id="sky-full">全螢幕</button>
+      </div>
+      <div class="sun-fullbar" id="sky-fullbar" hidden>
+        <label>時間 <b id="sky-clock">--:--</b></label>
+        <input id="sky-slider" type="range" min="0" max="1439" step="1" value="720" />
+        <button type="button" class="chip" id="sky-exit">退出全螢幕</button>
       </div>
       <figcaption>立體圖：圓盤是地面（四周是方位），弧線是太陽這一天的路徑，點是每小時的位置。<b>左右拖曳</b>可以轉動方向；開啟指南針後，畫面會跟著手機轉，手機立起來就變成正面看、放平就變成俯視。</figcaption>
     </figure>
@@ -157,6 +163,19 @@ const PLACES = [
   .ar-row input[type=range]{flex:1;min-width:0}
   .ar-row select{flex:1;min-width:0;background:rgba(0,0,0,.55);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:8px;padding:8px;font-size:14px;width:auto}
   .ar-warn,.ar-hint{margin:0;font-size:12px;opacity:.85;text-shadow:0 1px 3px #000}
+
+  .sun-fig.full{position:fixed;inset:0;z-index:90;margin:0;background:#0b0d12}
+  .sun-fig.full canvas{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;border:0;border-radius:0}
+  .sun-fig.full figcaption,.sun-fig.full #ar-open{display:none}
+  .sun-fig.full .sun-views{position:absolute;left:8px;right:8px;bottom:calc(env(safe-area-inset-bottom) + 62px);justify-content:center;z-index:2;margin:0}
+  .sun-fig.full .sun-views .chip{background:rgba(0,0,0,.6);color:#fff;border-color:rgba(255,255,255,.5)}
+  .sun-fig.full .sun-fullbar{position:absolute;left:12px;right:12px;bottom:calc(env(safe-area-inset-bottom) + 12px);width:auto;max-width:none;z-index:2}
+  @media (max-height:500px){.sun-fig.full .sun-views{top:8px;bottom:auto;left:auto;right:8px;justify-content:flex-end}}
+  .sun-fullbar{display:flex;align-items:center;gap:8px;width:100%;max-width:560px;color:#fff}
+  .sun-fullbar[hidden]{display:none}
+  .sun-fullbar label,.sun-fullbar b{font-size:14px;white-space:nowrap;color:#fff}
+  .sun-fullbar input{flex:1;min-width:0;accent-color:var(--accent)}
+  .sun-fullbar .chip{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.5);white-space:nowrap}
   @media (min-width:560px){.sun-times{grid-template-columns:repeat(4,1fr)}}
 </style>
 
@@ -175,6 +194,7 @@ const PLACES = [
   const timesEl = document.getElementById("times")!, clockEl = document.getElementById("clock")!, nowInfo = document.getElementById("nowinfo")!;
   const altChart = document.getElementById("alt-chart")!;
   const sky = document.getElementById("sky") as HTMLCanvasElement;
+  const skyFigEl = document.getElementById("sky-fig")!;
   const gpsBtn = $("gps"), gpsMsg = document.getElementById("gps-msg")!;
   const compassBtn = $("compass-btn"), calibBtn = $("calib"), compassInfo = document.getElementById("compass-info")!;
   const playBtn = $("play");
@@ -281,14 +301,16 @@ const PLACES = [
   const DEG = Math.PI / 180;
   function render3D() {
     if (!scene) return;
-    const cssW = sky.clientWidth || 320;
+    const cssW = sky.clientWidth || 320, cssH = sky.clientHeight || cssW;
     const dpr = window.devicePixelRatio || 1;
-    if (sky.width !== Math.round(cssW * dpr)) { sky.width = Math.round(cssW * dpr); sky.height = sky.width; }
+    if (sky.width !== Math.round(cssW * dpr) || sky.height !== Math.round(cssH * dpr)) { sky.width = Math.round(cssW * dpr); sky.height = Math.round(cssH * dpr); }
     const ctx = sky.getContext("2d")!;
-    const S = sky.width;
     ctx.setTransform(1, 0, 0, 1, 0, 0);
-    ctx.clearRect(0, 0, S, S);
-    ctx.scale(S / 320, S / 320);        // 之後都用 320×320 的座標
+    ctx.clearRect(0, 0, sky.width, sky.height);
+    const full = skyFigEl.classList.contains("full");
+    const k = (Math.min(sky.width, sky.height) / 320) * (full ? 1.1 : 1);   // 之後都用 320×320 的座標
+    ctx.translate((sky.width - 320 * k) / 2, (sky.height - 320 * k) * (full ? (sky.height < 500 * dpr ? 0.3 : 0.38) : 0.5));
+    ctx.scale(k, k);
 
     const cy_ = Math.cos(yaw * DEG), sy_ = Math.sin(yaw * DEG);
     const cp = Math.cos(pitch * DEG), sp = Math.sin(pitch * DEG);
@@ -389,7 +411,9 @@ const PLACES = [
     }
     // 左上角：面對的方向
     ctx.font = "bold 12px sans-serif"; ctx.textAlign = "left"; ctx.fillStyle = "rgba(255,255,255,.8)";
-    ctx.fillText(`面向 ${compassName(yaw)}（${fmt(((yaw % 360) + 360) % 360, 0)}°）`, 10, 18);
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.font = `bold ${12 * dpr}px sans-serif`;
+    ctx.fillText(`面向 ${compassName(yaw)}（${fmt(((yaw % 360) + 360) % 360, 0)}°）`, 10 * dpr, (full ? 34 : 18) * dpr);
     drawnYaw = yaw; drawnPitch = pitch;
   }
 
@@ -415,6 +439,7 @@ const PLACES = [
     playBtn.textContent = "暫停";
     timer = window.setInterval(() => {
       slider.value = String((Number(slider.value) + 6) % 1440);
+      skySlider.value = slider.value; syncSkyClock();
       refresh();
     }, 50);
   });
@@ -510,6 +535,26 @@ const PLACES = [
     compassInfo.textContent = `已校正（修正 ${fmt(offset, 0)}°）。`;
     refresh();
   });
+
+  // ---- 立體圖全螢幕（iPhone 不支援一般元素的原生全螢幕，所以用「蓋滿整個畫面」的方式，有支援的瀏覽器再加上原生全螢幕）----
+  const skyFig = document.getElementById("sky-fig")!, skyFullBtn = $("sky-full"), skyBar = document.getElementById("sky-fullbar")!;
+  const skySlider = $("sky-slider"), skyClock = document.getElementById("sky-clock")!;
+  function setSkyFull(on: boolean) {
+    skyFig.classList.toggle("full", on);
+    skyBar.hidden = !on;
+    skyFullBtn.hidden = on;
+    document.body.style.overflow = on ? "hidden" : "";
+    if (on) { skySlider.value = slider.value; syncSkyClock(); skyFig.requestFullscreen?.().catch(() => {}); }
+    else if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {});
+    scheduleRender(); setTimeout(scheduleRender, 120);
+  }
+  const syncSkyClock = () => { const m = Number(skySlider.value); skyClock.textContent = `${pad(Math.floor(m / 60))}:${pad(m % 60)}`; };
+  skyFullBtn.addEventListener("click", () => setSkyFull(true));
+  document.getElementById("sky-exit")!.addEventListener("click", () => setSkyFull(false));
+  skySlider.addEventListener("input", () => { slider.value = skySlider.value; syncSkyClock(); refresh(); });
+  slider.addEventListener("input", () => { skySlider.value = slider.value; syncSkyClock(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && skyFig.classList.contains("full")) setSkyFull(false); });
+  document.addEventListener("fullscreenchange", () => { if (!document.fullscreenElement && skyFig.classList.contains("full")) setSkyFull(false); });
 
   // ============ AR 模式：相機畫面疊上太陽軌跡 ============
   const arEl = document.getElementById("ar")!;
