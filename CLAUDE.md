@@ -92,6 +92,8 @@
 
 - 攝影助理檢查清單 `/tools/camera-checklist/`：開拍前一天、出發前、每個鏡位設定、收工後 4 段（共 30 項）＋攝影報告欄位建議；可勾選（只存在該瀏覽器的 localStorage）、列印（勾選狀態會印出來）、選相機會顯示那台的記憶卡／接環／Log／時間碼／HDMI／SDI（資料來自相機 JSON）；相機頁有「檢查清單」按鈕（`?camera=`）。清單是一般流程，不含機型規格；場記與器材清單等製片表單放初光。
 
+- 太陽軌跡 `/tools/sun-path/`：選地點（清單、手機定位、或自己輸入經緯度）與日期，算出日出、日落、正午、黃金時刻（太陽高度 −4°～+6°）、藍調時刻（−6°～−4°，標示「估算」）、太陽方位與高度，畫出一天的高度曲線與俯視軌跡圖；可選時間看太陽位置；可開手機指南針（iPhone 用 `webkitCompassHeading`，Android 用 `deviceorientationabsolute`）看太陽在自己的哪一側，並可「對著太陽校正」（偏差存在該瀏覽器的 localStorage）。算式在 `calc.js`（`sunPosition`、`sunTimes`、`fmtClock`、`compassName`），台北 2026-10-26 的日出 05:57、日落 17:17、方位 103.2°／256.6° 有測試對照。位置與方向只在瀏覽器計算，不傳送、不儲存；`vercel.json` 的 Permissions-Policy 因此把 `geolocation` 開成 `(self)`（相機仍禁用），隱私權政策第一點與 `/about/` 已寫明。指南針網頁版精準度比原生 App 差，已在頁面說明。之後預計做「構圖取景」（用手機相機畫焦段框，會需要開放 `camera=(self)` 並同步更新隱私說明）。
+
 ## 底片（進行中）
 
 - 底片頁 `/film/`：片幅對照（Super 8 常規／延伸畫框、16mm、Super 16、35mm 2／3／4 孔、VistaVision、65mm 5 孔、IMAX 15 孔）：每格孔數、每呎格數、畫面大小、畫面比例、等效倍率、24fps 一卷可拍多久，可帶倍率去等效焦段工具（`?crop=`）。資料在 `src/data/film-formats.js`，只採 Kodak 官方資料（Film Format Choices 2024、Essential Reference Guide for Filmmakers），標來源與查證日期；Kodak 沒寫的（標準 16mm 的畫面大小）寫未知，不猜。

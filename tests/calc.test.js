@@ -8,7 +8,7 @@ import {
   fieldOfView, sunnyAperture, ndStopsNeeded, shootStorage,
   frameSizeAt, desqueezedRatio, mired, miredShift, luxToEV, luxToFc, TC_RATES, tcToFrames, framesToTc,
   filmRuntime, filmFeetFor, filmFeetPerMinute, fmtMinSec,
-  eiAdjusted, eiStopsBetween, apertureForEI, filmCost,
+  eiAdjusted, eiStopsBetween, apertureForEI, filmCost, sunPosition, sunTimes, fmtClock, compassName,
 } from "../src/lib/calc.js";
 import { FILM_FORMATS } from "../src/data/film-formats.js";
 import { summarize, pageLabel } from "../src/lib/online-summary.js";
@@ -211,4 +211,31 @@ test("底片成本粗估：成片 10 分鐘、拍攝比 5:1、35mm 4 孔 24fps �
   assert.equal(r.perFinalMinute, 1020);
   assert.equal(filmCost({ finalSeconds: 600, ratio: 0.5, fps: 24, framesPerFoot: 16, rollFeet: 400, rollPrice: 100 }), null);
   assert.ok(Math.abs(filmCost({ finalSeconds: 600, ratio: 1, fps: 24, framesPerFoot: 16, rollFeet: 400, rollPrice: 100, wastePct: 10 }).feet - 990) < 1e-6); // 900 呎 + 10% 餘裕
+});
+
+test("太陽軌跡：台北 2026-10-26 日出約 05:57、日落約 17:17，日出方位約 103°、日落約 257°", () => {
+  const t = sunTimes(2026, 10, 26, 25.0330, 121.5654, 8);
+  const mins = (ms) => { const [h, m] = fmtClock(ms, 8).split(":").map(Number); return h * 60 + m; };
+  assert.ok(Math.abs(mins(t.sunrise) - (5 * 60 + 57)) <= 2);
+  assert.ok(Math.abs(mins(t.sunset) - (17 * 60 + 17)) <= 2);
+  assert.ok(Math.abs(sunPosition(t.sunrise, 25.0330, 121.5654).azimuth - 103.2) < 1);
+  assert.ok(Math.abs(sunPosition(t.sunset, 25.0330, 121.5654).azimuth - 256.6) < 1);
+  assert.ok(t.blueMorningStart < t.goldenMorningStart && t.goldenMorningStart < t.sunrise && t.sunrise < t.goldenMorningEnd);
+  assert.ok(t.goldenEveningStart < t.sunset && t.sunset < t.goldenEveningEnd && t.blueEveningEnd > t.blueEveningStart);
+});
+
+test("太陽軌跡：赤道春分正午太陽接近天頂；北極圈外夏至永晝", () => {
+  const t = sunTimes(2026, 3, 20, 0, 0, 0);
+  assert.ok(t.noonAltitude > 88);
+  const p = sunTimes(2026, 6, 21, 78, 15, 2);
+  assert.equal(p.alwaysUp, true);
+  assert.equal(p.sunrise, null);
+});
+
+test("方位名稱與時間格式", () => {
+  assert.equal(compassName(0), "北");
+  assert.equal(compassName(103), "東南東");
+  assert.equal(compassName(257), "西南西");
+  assert.equal(fmtClock(Date.UTC(2026, 9, 26, 0, 0), 8), "08:00");
+  assert.equal(fmtClock(null, 8), "—");
 });

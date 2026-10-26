@@ -357,3 +357,67 @@ export function filmCost({ finalSeconds, ratio, fps, framesPerFoot, wastePct = 0
   const total = stockCost + procCost + scanCost;
   return { shotSeconds, feet, rolls, stockCost, procCost, scanCost, total, perFinalMinute: total / (finalSeconds / 60) };
 }
+
+// ---- 太陽位置與日出日落（經緯度＋日期；純數學，不需要網路）----
+// 算法：常見的低精度天文公式（Meeus），日出日落誤差通常在 1～2 分鐘內。
+const RAD = Math.PI / 180;
+const DAY_MS = 86400000;
+
+// 太陽的方位角（從北方順時針，0～360°）與高度角（度）。ms 是 UTC 毫秒。
+export function sunPosition(ms, lat, lon) {
+  const d = ms / DAY_MS - 0.5 + 2440588 - 2451545;           // 離 J2000 幾天
+  const M = RAD * (357.5291 + 0.98560028 * d);                // 平近點角
+  const C = RAD * (1.9148 * Math.sin(M) + 0.02 * Math.sin(2 * M) + 0.0003 * Math.sin(3 * M));
+  const L = M + C + RAD * 102.9372 + Math.PI;                 // 黃經
+  const e = RAD * 23.4397;
+  const dec = Math.asin(Math.sin(e) * Math.sin(L));           // 赤緯
+  const ra = Math.atan2(Math.cos(e) * Math.sin(L), Math.cos(L));
+  const H = RAD * (280.16 + 360.9856235 * d) + RAD * lon - ra; // 時角（東經為正）
+  const phi = RAD * lat;
+  const alt = Math.asin(Math.sin(phi) * Math.sin(dec) + Math.cos(phi) * Math.cos(dec) * Math.cos(H));
+  const azSouth = Math.atan2(Math.sin(H), Math.cos(H) * Math.sin(phi) - Math.tan(dec) * Math.cos(phi));
+  return { azimuth: (azSouth / RAD + 180 + 360) % 360, altitude: alt / RAD };
+}
+
+// 某一天（當地日期）的日出、日落、黃金時刻、藍調時刻。tz 是 UTC 時差（小時，台灣 8）。
+// 時間都是 UTC 毫秒；這天沒有（極區）就是 null。
+// 黃金時刻＝太陽高度 −4°～+6°；藍調時刻＝−6°～−4°（各軟體定義不同，是估算）。
+export function sunTimes(year, month, day, lat, lon, tz) {
+  const start = Date.UTC(year, month - 1, day) - tz * 3600000;
+  const N = 1440;
+  const alts = [];
+  for (let i = 0; i <= N; i++) alts.push(sunPosition(start + i * 60000, lat, lon).altitude);
+  const cross = (level, rising) => {
+    for (let i = 0; i < N; i++) {
+      const a = alts[i] - level, b = alts[i + 1] - level;
+      if (rising ? a < 0 && b >= 0 : a >= 0 && b < 0) return start + (i + a / (a - b)) * 60000;
+    }
+    return null;
+  };
+  let noonI = 0;
+  for (let i = 1; i <= N; i++) if (alts[i] > alts[noonI]) noonI = i;
+  const sunrise = cross(-0.833, true), sunset = cross(-0.833, false);
+  return {
+    start,
+    blueMorningStart: cross(-6, true), blueMorningEnd: cross(-4, true),
+    goldenMorningStart: cross(-4, true), goldenMorningEnd: cross(6, true),
+    sunrise, noon: start + noonI * 60000, noonAltitude: alts[noonI], sunset,
+    goldenEveningStart: cross(6, false), goldenEveningEnd: cross(-4, false),
+    blueEveningStart: cross(-4, false), blueEveningEnd: cross(-6, false),
+    dayMinutes: sunrise != null && sunset != null ? (sunset - sunrise) / 60000 : null,
+    alwaysUp: alts.every((a) => a > -0.833), alwaysDown: alts.every((a) => a <= -0.833),
+  };
+}
+
+// 時間（UTC 毫秒）換成「HH:MM」（依時差 tz）
+export function fmtClock(ms, tz) {
+  if (ms == null) return "—";
+  const d = new Date(ms + tz * 3600000);
+  return `${String(d.getUTCHours()).padStart(2, "0")}:${String(d.getUTCMinutes()).padStart(2, "0")}`;
+}
+
+// 方位角（度）換成方位名稱，例如 103° → 「東南東」
+export function compassName(deg) {
+  const names = ["北", "北北東", "東北", "東北東", "東", "東南東", "東南", "南南東", "南", "南南西", "西南", "西南西", "西", "西北西", "西北", "北北西"];
+  return names[Math.round((((deg % 360) + 360) % 360) / 22.5) % 16];
+}

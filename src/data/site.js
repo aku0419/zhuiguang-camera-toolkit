@@ -21,6 +21,7 @@ export const PROBLEMS = [
   { q: "為什麼電影都拍 24 格？常見格率有哪些？", href: "/glossary/#why-24" },
   { q: "想拍慢動作，要設幾 fps？", href: "/tools/frame-rate/" },
   { q: "白天戶外，要加幾級 ND？", href: "/tools/exposure-guide/" },
+  { q: "外景要幾點到？黃金時刻是什麼時候？", href: "/tools/sun-path/" },
   { q: "這顆鏡頭裝在我的相機上拍多寬？", href: "/tools/field-of-view/" },
   { q: "背景想要模糊，光圈要開多大？", href: "/tools/depth-of-field/" },
   { q: "記憶卡要買多大、多快？", href: "/tools/recording-capacity/?mode=card" },
@@ -77,6 +78,10 @@ export const TOOLS = [
   {
     id: "color-temperature", href: "/tools/color-temperature/", name: "色溫換算",
     q: "5600K 換 3200K 要加什麼校正片？", keywords: ["色溫", "mired", "K", "Kelvin", "鎢絲燈", "日光", "校正片", "CTO", "CTB", "燈光"],
+  },
+  {
+    id: "sun-path", href: "/tools/sun-path/", name: "太陽軌跡",
+    q: "那天幾點日出日落？黃金時刻是什麼時候？", keywords: ["日出", "日落", "黃金時刻", "藍調時刻", "golden hour", "blue hour", "太陽", "方位", "GPS", "指南針", "sunrise", "sunset", "外景", "勘景"],
   },
   {
     id: "light-units", href: "/tools/light-units/", name: "照度換算",
