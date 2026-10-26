@@ -1,0 +1,31 @@
+{
+  "slug": "canon-ef85mm-f-1-8-usm",
+  "brand": "Canon",
+  "series": "EF",
+  "model": "EF85mm f/1.8 USM",
+  "type": "prime",
+  "focal_min": 85,
+  "focal_max": 85,
+  "max_aperture": 1.8,
+  "mount": "Canon EF",
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "無（型號未標示 IS）",
+  "min_focus": "0.85 m",
+  "magnification": "0.13×",
+  "filter_mm": 58,
+  "diameter_mm": 75,
+  "length_mm": 71.5,
+  "weight_g": 425,
+  "aperture_blades": 8,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://global.canon/en/c-museum/product/ef313.html",
+  "af_drive": "超音波馬達（USM）",
+  "source_name": "Canon Camera Museum（Canon 全球官方資料庫，英文）",
+  "last_verified": "2026-10-26"
+}

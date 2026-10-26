@@ -1,0 +1,31 @@
+{
+  "slug": "canon-ef70-200mm-f-2-8l-is-iii-usm",
+  "brand": "Canon",
+  "series": "L",
+  "model": "EF70-200mm f/2.8L IS III USM",
+  "type": "zoom",
+  "focal_min": 70,
+  "focal_max": 200,
+  "max_aperture": 2.8,
+  "mount": "Canon EF",
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "鏡頭內防手震（IS）",
+  "min_focus": "1.2 m",
+  "magnification": "0.21×（200mm 端）",
+  "filter_mm": 77,
+  "diameter_mm": 88.8,
+  "length_mm": 199,
+  "weight_g": 1480,
+  "aperture_blades": 8,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://global.canon/en/c-museum/product/ef469.html",
+  "af_drive": "超音波馬達（USM）",
+  "source_name": "Canon Camera Museum（Canon 全球官方資料庫，英文）",
+  "last_verified": "2026-10-26"
+}

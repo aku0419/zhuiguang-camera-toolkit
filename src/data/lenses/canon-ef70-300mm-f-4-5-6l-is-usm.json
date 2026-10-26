@@ -1,0 +1,31 @@
+{
+  "slug": "canon-ef70-300mm-f-4-5-6l-is-usm",
+  "brand": "Canon",
+  "series": "L",
+  "model": "EF70-300mm f/4-5.6L IS USM",
+  "type": "zoom",
+  "focal_min": 70,
+  "focal_max": 300,
+  "max_aperture": 4,
+  "max_aperture_tele": 5.6,
+  "mount": "Canon EF",
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "鏡頭內防手震（IS）",
+  "min_focus": "1.2 m",
+  "magnification": "0.21×",
+  "filter_mm": 67,
+  "size_text": "未知（原廠資料未標示）",
+  "weight_g": 1050,
+  "aperture_blades": 8,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://global.canon/en/c-museum/product/ef407.html",
+  "af_drive": "超音波馬達（USM）",
+  "source_name": "Canon Camera Museum（Canon 全球官方資料庫，英文）",
+  "last_verified": "2026-10-26"
+}

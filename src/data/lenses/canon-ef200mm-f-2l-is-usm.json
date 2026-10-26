@@ -1,0 +1,30 @@
+{
+  "slug": "canon-ef200mm-f-2l-is-usm",
+  "brand": "Canon",
+  "series": "L",
+  "model": "EF200mm f/2L IS USM",
+  "type": "prime",
+  "focal_min": 200,
+  "focal_max": 200,
+  "max_aperture": 2,
+  "mount": "Canon EF",
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "鏡頭內防手震（IS）",
+  "min_focus": "1.9 m",
+  "magnification": "0.12×",
+  "filter_note": "原廠資料未標示",
+  "size_text": "未知（原廠資料未標示）",
+  "weight_g": 2520,
+  "aperture_blades": 8,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://global.canon/en/c-museum/product/ef397.html",
+  "af_drive": "超音波馬達（USM）",
+  "source_name": "Canon Camera Museum（Canon 全球官方資料庫，英文）",
+  "last_verified": "2026-10-26"
+}

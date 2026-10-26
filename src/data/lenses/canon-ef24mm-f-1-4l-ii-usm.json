@@ -1,0 +1,30 @@
+{
+  "slug": "canon-ef24mm-f-1-4l-ii-usm",
+  "brand": "Canon",
+  "series": "L",
+  "model": "EF24mm f/1.4L II USM",
+  "type": "prime",
+  "focal_min": 24,
+  "focal_max": 24,
+  "max_aperture": 1.4,
+  "mount": "Canon EF",
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "無（型號未標示 IS）",
+  "min_focus": "0.25 m",
+  "magnification": "0.17×",
+  "filter_mm": 77,
+  "size_text": "未知（原廠資料未標示）",
+  "weight_g": 650,
+  "aperture_blades": 8,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://global.canon/en/c-museum/product/ef400.html",
+  "af_drive": "超音波馬達（USM）",
+  "source_name": "Canon Camera Museum（Canon 全球官方資料庫，英文）",
+  "last_verified": "2026-10-26"
+}

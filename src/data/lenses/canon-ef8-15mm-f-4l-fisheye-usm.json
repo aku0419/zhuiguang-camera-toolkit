@@ -1,0 +1,30 @@
+{
+  "slug": "canon-ef8-15mm-f-4l-fisheye-usm",
+  "brand": "Canon",
+  "series": "L",
+  "model": "EF8-15mm f/4L Fisheye USM",
+  "type": "zoom",
+  "focal_min": 8,
+  "focal_max": 15,
+  "max_aperture": 4,
+  "mount": "Canon EF",
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "無（型號未標示 IS）",
+  "min_focus": "0.15 m",
+  "magnification": "0.34×",
+  "filter_note": "原廠資料未標示",
+  "size_text": "未知（原廠資料未標示）",
+  "weight_g": 540,
+  "aperture_blades": 7,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://global.canon/en/c-museum/product/ef415.html",
+  "af_drive": "超音波馬達（USM）",
+  "source_name": "Canon Camera Museum（Canon 全球官方資料庫，英文）",
+  "last_verified": "2026-10-26"
+}
