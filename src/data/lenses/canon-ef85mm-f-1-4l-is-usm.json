@@ -1,0 +1,31 @@
+{
+  "slug": "canon-ef85mm-f-1-4l-is-usm",
+  "brand": "Canon",
+  "series": "L",
+  "model": "EF85mm f/1.4L IS USM",
+  "type": "prime",
+  "focal_min": 85,
+  "focal_max": 85,
+  "max_aperture": 1.4,
+  "mount": "Canon EF",
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "鏡頭內防手震（IS）",
+  "min_focus": "0.85 m",
+  "magnification": "0.12×",
+  "filter_mm": 77,
+  "diameter_mm": 88.6,
+  "length_mm": 105.4,
+  "weight_g": 950,
+  "aperture_blades": 9,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://global.canon/en/c-museum/product/ef466.html",
+  "af_drive": "超音波馬達（USM）",
+  "source_name": "Canon Camera Museum（Canon 全球官方資料庫，英文）",
+  "last_verified": "2026-10-26"
+}

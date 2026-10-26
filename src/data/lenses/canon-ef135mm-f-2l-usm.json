@@ -1,0 +1,31 @@
+{
+  "slug": "canon-ef135mm-f-2l-usm",
+  "brand": "Canon",
+  "series": "L",
+  "model": "EF135mm f/2L USM",
+  "type": "prime",
+  "focal_min": 135,
+  "focal_max": 135,
+  "max_aperture": 2,
+  "mount": "Canon EF",
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "無（型號未標示 IS）",
+  "min_focus": "0.9 m",
+  "magnification": "0.19×",
+  "filter_mm": 72,
+  "diameter_mm": 82.5,
+  "length_mm": 112,
+  "weight_g": 750,
+  "aperture_blades": 8,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://global.canon/en/c-museum/product/ef335.html",
+  "af_drive": "超音波馬達（USM）",
+  "source_name": "Canon Camera Museum（Canon 全球官方資料庫，英文）",
+  "last_verified": "2026-10-26"
+}

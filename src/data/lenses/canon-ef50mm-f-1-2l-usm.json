@@ -1,0 +1,31 @@
+{
+  "slug": "canon-ef50mm-f-1-2l-usm",
+  "brand": "Canon",
+  "series": "L",
+  "model": "EF50mm f/1.2L USM",
+  "type": "prime",
+  "focal_min": 50,
+  "focal_max": 50,
+  "max_aperture": 1.2,
+  "mount": "Canon EF",
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "無（型號未標示 IS）",
+  "min_focus": "0.45 m",
+  "magnification": "0.15×",
+  "filter_mm": 72,
+  "diameter_mm": 85.8,
+  "length_mm": 65.5,
+  "weight_g": 590,
+  "aperture_blades": 8,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://global.canon/en/c-museum/product/ef392.html",
+  "af_drive": "超音波馬達（USM）",
+  "source_name": "Canon Camera Museum（Canon 全球官方資料庫，英文）",
+  "last_verified": "2026-10-26"
+}

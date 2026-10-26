@@ -1,0 +1,31 @@
+{
+  "slug": "canon-ef100mm-f-2-8-macro-usm",
+  "brand": "Canon",
+  "series": "EF",
+  "model": "EF100mm f/2.8 Macro USM",
+  "type": "prime",
+  "focal_min": 100,
+  "focal_max": 100,
+  "max_aperture": 2.8,
+  "mount": "Canon EF",
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "無（型號未標示 IS）",
+  "min_focus": "0.31 m",
+  "magnification": "1×",
+  "filter_mm": 58,
+  "diameter_mm": 79,
+  "length_mm": 119,
+  "weight_g": 600,
+  "aperture_blades": 8,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://global.canon/en/c-museum/product/ef357.html",
+  "af_drive": "超音波馬達（USM）",
+  "source_name": "Canon Camera Museum（Canon 全球官方資料庫，英文）",
+  "last_verified": "2026-10-26"
+}

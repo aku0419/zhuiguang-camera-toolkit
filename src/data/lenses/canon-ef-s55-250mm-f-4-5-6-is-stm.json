@@ -1,0 +1,31 @@
+{
+  "slug": "canon-ef-s55-250mm-f-4-5-6-is-stm",
+  "brand": "Canon",
+  "series": "EF-S",
+  "model": "EF-S55-250mm f/4-5.6 IS STM",
+  "type": "zoom",
+  "focal_min": 55,
+  "focal_max": 250,
+  "max_aperture": 4,
+  "max_aperture_tele": 5.6,
+  "mount": "Canon EF",
+  "coverage": "APS-C",
+  "autofocus": "AF／MF",
+  "stabilization": "鏡頭內防手震（IS）",
+  "min_focus": "0.85 m",
+  "magnification": "0.29×",
+  "filter_mm": 58,
+  "size_text": "未知（原廠資料未標示）",
+  "weight_g": 375,
+  "aperture_blades": 7,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://global.canon/en/c-museum/product/ef430.html",
+  "af_drive": "步進馬達（STM）",
+  "source_name": "Canon Camera Museum（Canon 全球官方資料庫，英文）",
+  "last_verified": "2026-10-26"
+}
