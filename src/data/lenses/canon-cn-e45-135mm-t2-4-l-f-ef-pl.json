@@ -1,0 +1,38 @@
+{
+  "slug": "canon-cn-e45-135mm-t2-4-l-f-ef-pl",
+  "brand": "Canon",
+  "series": "CN-E 電影變焦",
+  "model": "CN-E45-135mm T2.4 L F（EF／PL）",
+  "type": "zoom",
+  "focal_min": 45,
+  "focal_max": 135,
+  "max_aperture": 2.4,
+  "aperture_type": "T",
+  "mount": "Canon EF／PL（可換接環版本）",
+  "mounts": [
+    "Canon EF",
+    "PL"
+  ],
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF",
+    "PL"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "1.0 m",
+  "magnification": "Unknown",
+  "filter_mm": null,
+  "filter_note": "規格未列",
+  "aperture_blades": 11,
+  "front_diameter_mm": 114.0,
+  "size_text": "131.2 × 133.6 × 246.4 mm（EF）／238.4 mm（PL）（寬 × 高 × 深）",
+  "weight_g": 3400,
+  "weight_note": "原廠標示約 3.4 kg",
+  "source_url": "https://tw.canon/zh_TW/consumer/cn-e45-135mm-t2-4-l-f-ef-pl/main/product",
+  "source_name": "Canon 台灣官方產品頁（規格）",
+  "last_verified": "2026-10-26"
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "canon-ef-s10-18mm-f-4-5-5-6-is-stm",
+  "brand": "Canon",
+  "series": "EF-S",
+  "model": "EF-S10-18mm f/4.5-5.6 IS STM",
+  "type": "zoom",
+  "focal_min": 10,
+  "focal_max": 18,
+  "max_aperture": 4.5,
+  "mount": "Canon EF",
+  "coverage": "APS-C",
+  "autofocus": "AF／MF",
+  "stabilization": "鏡頭內防手震（IS）約 4 級（CIPA 標準）",
+  "min_focus": "0.22 m",
+  "magnification": "0.15×",
+  "filter_mm": 67,
+  "diameter_mm": 74.6,
+  "length_mm": 72.0,
+  "weight_g": 240,
+  "aperture_blades": 7,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://tw.canon/zh_TW/consumer/ef-s10-18mm-f-4-5-5-6-is-stm/main/product",
+  "af_drive": "步進馬達（STM）",
+  "max_aperture_tele": 5.6,
+  "source_name": "Canon 台灣官方產品頁（規格）",
+  "last_verified": "2026-10-26"
+}

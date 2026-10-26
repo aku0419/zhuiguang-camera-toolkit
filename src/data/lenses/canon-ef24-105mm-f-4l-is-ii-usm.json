@@ -1,0 +1,31 @@
+{
+  "slug": "canon-ef24-105mm-f-4l-is-ii-usm",
+  "brand": "Canon",
+  "series": "L",
+  "model": "EF24-105mm f/4L IS II USM",
+  "type": "zoom",
+  "focal_min": 24,
+  "focal_max": 105,
+  "max_aperture": 4,
+  "mount": "Canon EF",
+  "coverage": "Full Frame",
+  "autofocus": "AF／MF",
+  "stabilization": "鏡頭內防手震（IS）約 4 級（CIPA 標準）",
+  "min_focus": "0.45 m",
+  "magnification": "0.24×（105mm 端）；0.07×（24mm 端）",
+  "filter_mm": 77,
+  "diameter_mm": 83.5,
+  "length_mm": 118,
+  "weight_g": 795,
+  "aperture_blades": 10,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://tw.canon/zh_TW/consumer/ef24-105mm-f-4l-is-ii-usm/main/product",
+  "af_drive": "環型超音波馬達",
+  "source_name": "Canon 台灣官方產品頁（規格）",
+  "last_verified": "2026-10-26"
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "canon-cn-e20-50mm-t2-4-l-f-ef-pl",
+  "brand": "Canon",
+  "series": "CN-E 電影變焦",
+  "model": "CN-E20-50mm T2.4 L F（EF／PL）",
+  "type": "zoom",
+  "focal_min": 20,
+  "focal_max": 50,
+  "max_aperture": 2.4,
+  "aperture_type": "T",
+  "mount": "Canon EF／PL（可換接環版本）",
+  "mounts": [
+    "Canon EF",
+    "PL"
+  ],
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF",
+    "PL"
+  ],
+  "coverage": "Full Frame",
+  "autofocus": "Unknown",
+  "stabilization": "Unknown",
+  "min_focus": "0.6 m",
+  "magnification": "Unknown",
+  "filter_mm": null,
+  "filter_note": "規格未列",
+  "aperture_blades": 11,
+  "front_diameter_mm": 114.0,
+  "size_text": "131.2 × 133.6 × 241.3 mm（EF）／233.3 mm（PL）（寬 × 高 × 深）",
+  "weight_g": 3300,
+  "weight_note": "原廠標示約 3.3 kg",
+  "source_url": "https://tw.canon/zh_TW/consumer/cn-e20-50mm-t2-4-l-f-ef-pl/main/product",
+  "source_name": "Canon 台灣官方產品頁（規格）",
+  "last_verified": "2026-10-26"
+}

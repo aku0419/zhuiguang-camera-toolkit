@@ -1,0 +1,33 @@
+{
+  "slug": "canon-ts-e17mm-f-4l",
+  "brand": "Canon",
+  "series": "TS-E 移軸",
+  "model": "TS-E17mm f/4L",
+  "type": "prime",
+  "focal_min": 17,
+  "focal_max": 17,
+  "max_aperture": 4,
+  "mount": "Canon EF",
+  "coverage": "Full Frame",
+  "autofocus": "MF",
+  "stabilization": "無（型號未標示 IS）",
+  "min_focus": "0.25 m",
+  "magnification": "0.14×",
+  "filter_mm": null,
+  "diameter_mm": 88.9,
+  "length_mm": 106.7,
+  "weight_g": 820,
+  "aperture_blades": 8,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://tw.canon/zh_TW/consumer/ts-e17mm-f-4l/main/product",
+  "af_drive": "手動對焦",
+  "filter_note": "不適用（無法裝一般濾鏡）",
+  "size_note": "傾斜 ±6.5°／平移 ±12 mm；鏡頭可旋轉 ±90°。前端為凸出鏡片，不能裝一般濾鏡。",
+  "source_name": "Canon 台灣官方產品頁（規格）",
+  "last_verified": "2026-10-26"
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "canon-ts-e90mm-f-2-8l-macro",
+  "brand": "Canon",
+  "series": "TS-E 移軸",
+  "model": "TS-E90mm f/2.8L Macro",
+  "type": "prime",
+  "focal_min": 90,
+  "focal_max": 90,
+  "max_aperture": 2.8,
+  "mount": "Canon EF",
+  "coverage": "Full Frame",
+  "autofocus": "MF",
+  "stabilization": "無（型號未標示 IS）",
+  "min_focus": "0.39 m",
+  "magnification": "0.5×",
+  "filter_mm": 77,
+  "diameter_mm": 86.9,
+  "length_mm": 116.5,
+  "weight_g": 915,
+  "aperture_blades": 9,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://tw.canon/zh_TW/consumer/ts-e90mm-f-2-8l-macro/main/product",
+  "af_drive": "手動對焦",
+  "size_note": "傾斜 ±10°／平移 ±12 mm；鏡頭可旋轉 ±90°。",
+  "source_name": "Canon 台灣官方產品頁（規格）",
+  "last_verified": "2026-10-26"
+}

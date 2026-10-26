@@ -1,0 +1,32 @@
+{
+  "slug": "canon-ts-e24mm-f-3-5l-ii",
+  "brand": "Canon",
+  "series": "TS-E 移軸",
+  "model": "TS-E24mm f/3.5L II",
+  "type": "prime",
+  "focal_min": 24,
+  "focal_max": 24,
+  "max_aperture": 3.5,
+  "mount": "Canon EF",
+  "coverage": "Full Frame",
+  "autofocus": "MF",
+  "stabilization": "無（型號未標示 IS）",
+  "min_focus": "0.21 m",
+  "magnification": "0.34×",
+  "filter_mm": 82,
+  "diameter_mm": 88.5,
+  "length_mm": 106.9,
+  "weight_g": 780,
+  "aperture_blades": 8,
+  "mount_match": [
+    "Canon EF",
+    "／EF／",
+    "／EF（",
+    "PL／EF"
+  ],
+  "source_url": "https://tw.canon/zh_TW/consumer/ts-e24mm-f-3-5l-ii/main/product",
+  "af_drive": "手動對焦",
+  "size_note": "傾斜 ±8.5°／平移 ±12 mm；鏡頭可旋轉 ±90°。",
+  "source_name": "Canon 台灣官方產品頁（規格）",
+  "last_verified": "2026-10-26"
+}
