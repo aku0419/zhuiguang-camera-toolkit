@@ -75,7 +75,7 @@ const PLACES = [
         <input id="sky-slider" type="range" min="0" max="1439" step="1" value="720" />
         <button type="button" class="chip" id="sky-exit">退出全螢幕</button>
       </div>
-      <figcaption>立體圖：圓盤是地面（四周是方位），弧線是太陽這一天的路徑，點是每小時的位置。<b>左右拖曳</b>可以轉動方向；開啟指南針後，畫面會跟著手機轉，手機立起來就變成正面看、放平就變成俯視。</figcaption>
+      <figcaption>立體圖：圓盤是地面（四周是方位），弧線是太陽這一天的路徑，點是每小時的位置。<b>左右拖曳</b>可以轉動方向，<b>兩指捏合</b>（電腦用滾輪）可以放大縮小；開啟指南針後，畫面會跟著手機轉，手機立起來就變成正面看、放平就變成俯視。</figcaption>
     </figure>
 
     <div class="field">
@@ -206,7 +206,7 @@ const PLACES = [
   let offset = 0;
   try { offset = Number(localStorage.getItem("zg-compass-offset")) || 0; } catch { /* 不能存也沒關係 */ }
   // 立體圖視角：yaw ＝畫面「前方」是哪個方位；pitch ＝從幾度往下看（90 俯視、0 正面）
-  let yaw = 180, pitch = 36;
+  let yaw = 180, pitch = 30, zoom = 1.45;   // zoom：立體圖放大倍數（雙指捏合或滾輪調整）
   let drawnYaw = yaw, drawnPitch = pitch;
 
   const pad = (n: number) => String(n).padStart(2, "0");
@@ -308,7 +308,7 @@ const PLACES = [
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.clearRect(0, 0, sky.width, sky.height);
     const full = skyFigEl.classList.contains("full");
-    const k = (Math.min(sky.width, sky.height) / 320) * (sky.width < sky.height * 0.9 ? 1.3 : 1.1);   // 之後都用 320×320 的座標
+    const k = (Math.min(sky.width, sky.height) / 320) * zoom;   // 之後都用 320×320 的座標
     ctx.translate((sky.width - 320 * k) / 2, (sky.height - 320 * k) * (full ? (sky.height < 500 * dpr ? 0.3 : 0.38) : 0.5));
     ctx.scale(k, k);
 
@@ -423,13 +423,27 @@ const PLACES = [
 
   // 左右拖曳轉方向（沒開指南針時）
   let dragX: number | null = null;
-  sky.addEventListener("pointerdown", (e) => { if (heading == null) { dragX = e.clientX; sky.setPointerCapture(e.pointerId); sky.style.cursor = "grabbing"; } });
+  const touches = new Map<number, { x: number; y: number }>();
+  let pinch0 = 0, zoom0 = 1;
+  const clampZoom = (z: number) => Math.max(0.8, Math.min(3, z));
+  sky.addEventListener("pointerdown", (e) => {
+    touches.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    sky.setPointerCapture(e.pointerId);
+    if (touches.size === 2) { const [a, b] = [...touches.values()]; pinch0 = Math.hypot(a.x - b.x, a.y - b.y); zoom0 = zoom; dragX = null; }
+    else if (heading == null) { dragX = e.clientX; sky.style.cursor = "grabbing"; }
+  });
   sky.addEventListener("pointermove", (e) => {
+    if (touches.has(e.pointerId)) touches.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (touches.size === 2 && pinch0 > 0) {
+      const [a, b] = [...touches.values()];
+      zoom = clampZoom(zoom0 * Math.hypot(a.x - b.x, a.y - b.y) / pinch0); scheduleRender(); return;
+    }
     if (dragX == null) return;
     yaw = (yaw - (e.clientX - dragX) * 0.6 + 360) % 360; dragX = e.clientX; scheduleRender();
   });
-  const endDrag = () => { dragX = null; sky.style.cursor = "grab"; };
+  const endDrag = (e: PointerEvent) => { touches.delete(e.pointerId); pinch0 = 0; dragX = null; sky.style.cursor = "grab"; };
   sky.addEventListener("pointerup", endDrag); sky.addEventListener("pointercancel", endDrag);
+  sky.addEventListener("wheel", (e) => { e.preventDefault(); zoom = clampZoom(zoom * (e.deltaY < 0 ? 1.1 : 1 / 1.1)); scheduleRender(); }, { passive: false });
   document.querySelectorAll<HTMLElement>("[data-pitch]").forEach((b) => b.addEventListener("click", () => { pitch = Number(b.dataset.pitch); scheduleRender(); }));
 
   // 播放一天
