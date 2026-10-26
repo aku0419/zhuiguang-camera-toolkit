@@ -71,7 +71,7 @@ const brands = [...new Set(camerasForTools.map((c) => c.brand))];
       <li>範圍框是<b>估算</b>：手機鏡頭的實際視角會因機型、防手震與錄影裁切有些差異。如果框和你用真的鏡頭拍出來的不一樣，可以改上面的「手機鏡頭」數字微調。</li>
       <li>選了相機會用那台的感光元件尺寸；選了「Open Gate」就是用整個感光元件的比例。相機開啟裁切模式（例如 4K 120p）時，實際範圍會更窄，這裡不會算進去。</li>
       <li>鏡頭資料來自逐光的鏡頭資料庫，只列出有收錄的鏡頭。接環相容與「可能暗角」只是提醒，實際以原廠說明為準。</li>
-      <li>相機畫面只在你的手機螢幕上顯示，不錄影、不拍照、不儲存，也不會傳送到任何地方。</li>
+      <li>相機畫面只在你的手機螢幕上顯示，不錄影、不儲存，也不會傳送到任何地方。取景時按「截圖」，才會在你的手機裡產生一張帶著目前設定說明的圖片，由你自己決定存到哪裡。</li>
     </ul>
   </div>
 
@@ -82,9 +82,10 @@ const brands = [...new Set(camerasForTools.map((c) => c.brand))];
       <p id="fr-info"></p>
       <div class="fr-tr">
         <select id="fr-ratio" aria-label="畫面比例">{RATIOS.map((r) => <option value={r.v}>{r.t}</option>)}</select>
-        <button type="button" id="fr-close">關閉</button>
+        <div class="fr-btns"><button type="button" id="fr-shot">截圖</button><button type="button" id="fr-close">關閉</button></div>
       </div>
     </div>
+    <p class="fr-toast" id="fr-toast" hidden></p>
     <div class="fr-bottom">
       <div class="fr-row" id="fr-slider-row">
         <label>焦段 <b id="fr-focal">50mm</b></label>
@@ -107,6 +108,8 @@ const brands = [...new Set(camerasForTools.map((c) => c.brand))];
   .fr-row label{font-size:14px;white-space:nowrap}
   .fr-row input{flex:1;min-width:0;accent-color:var(--accent)}
   .fr-tr{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+  .fr-btns{display:flex;gap:6px}
+  .fr-toast{position:absolute;left:50%;bottom:140px;transform:translateX(-50%);margin:0;background:rgba(0,0,0,.75);color:#fff;padding:8px 16px;border-radius:999px;font-size:14px}
   .fr-tr select{max-width:150px;font-weight:500;width:auto}
   @media (max-height:500px){.fr-tr{flex-direction:row}.fr-bottom{padding-top:16px}}
   .fr-chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px}
@@ -283,13 +286,8 @@ const brands = [...new Set(camerasForTools.map((c) => c.brand))];
   }
   const aspectNow = (s: { w: number; h: number }) => (frRatio.value === "open" ? s.w / s.h : Number(frRatio.value));
 
-  function draw() {
-    if (overlay.hidden) return;
-    const dpr = window.devicePixelRatio || 1;
-    const W = canvas.clientWidth, H = canvas.clientHeight;
-    if (canvas.width !== Math.round(W * dpr) || canvas.height !== Math.round(H * dpr)) { canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr); }
-    const ctx = canvas.getContext("2d")!;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
+  // 把所有焦段框畫在 W × H 的畫面上（取景畫面與截圖共用）
+  function paintFrames(ctx: CanvasRenderingContext2D, W: number, H: number, forShot = false) {
     const s = sensor(), asp = aspectNow(s), eq = num(phone);
     const list = [...new Set([...shown, active])].sort((a, b) => b - a);
     list.sort((a, b) => Number(a === active) - Number(b === active));   // 目前焦段最後畫，疊在最上面
@@ -312,22 +310,101 @@ const brands = [...new Set(camerasForTools.map((c) => c.brand))];
         }
         ctx.restore();
       }
-      const lx = Math.max(8, Math.min(W - 70, x + 6)), ly = Math.max(70, Math.min(H - 130, y + 18));
+      const lx = Math.max(8, Math.min(W - 70, x + 6)), ly = forShot ? Math.max(20, Math.min(H - 20, y + 18)) : Math.max(70, Math.min(H - 130, y + 18));
       ctx.font = `bold ${isActive ? 16 : 13}px sans-serif`; ctx.textAlign = "left"; ctx.textBaseline = "middle";
       ctx.fillStyle = isActive ? "#ffd54f" : "#fff"; ctx.shadowColor = "#000"; ctx.shadowBlur = 4;
       ctx.fillText(`${f}mm`, lx, ly); ctx.shadowBlur = 0;
     }
-    ctx.strokeStyle = "rgba(255,255,255,.6)"; ctx.lineWidth = 1.2; ctx.beginPath();
-    ctx.moveTo(W / 2 - 8, H / 2); ctx.lineTo(W / 2 + 8, H / 2); ctx.moveTo(W / 2, H / 2 - 8); ctx.lineTo(W / 2, H / 2 + 8); ctx.stroke();
+    if (!forShot) {
+      ctx.strokeStyle = "rgba(255,255,255,.6)"; ctx.lineWidth = 1.2; ctx.beginPath();
+      ctx.moveTo(W / 2 - 8, H / 2); ctx.lineTo(W / 2 + 8, H / 2); ctx.moveTo(W / 2, H / 2 - 8); ctx.lineTo(W / 2, H / 2 + 8); ctx.stroke();
+    }
+  }
 
+  // 目前選擇的狀態（取景畫面上方的文字、截圖下方的說明共用）
+  function state(W: number, H: number) {
+    const s = sensor(), asp = aspectNow(s), eq = num(phone);
     const cur = framingBox({ focalMm: active, sensorW: s.w, sensorH: s.h, aspect: asp, phoneEq: eq, viewW: W, viewH: H });
-    focalOut.textContent = `${active}mm`;
     const lens = lensFor(active);
     const lensName = lens ? `${lens.b} ${lens.m}` : picked.length ? `${picked[0].b} ${picked[0].r}` : "";
     const eqTxt = Math.abs(s.factor - 1) > 0.03 ? `全片幅等效 ${fmt(active * s.factor, 0)}mm` : "";
     const focalTxt = lensName.includes(`${active}mm`) ? eqTxt : `${active}mm${eqTxt ? `（${eqTxt}）` : ""}`;
-    info.textContent = [s.name || "通用相機", lensName, focalTxt, `水平視角 ${cur ? fmt(cur.hfov, 1) : "—"}°`].filter(Boolean).join("　");
+    const ratioTxt = frRatio.options[frRatio.selectedIndex].text;
+    return {
+      s, cur, lensName, focalTxt, ratioTxt,
+      line: [s.name || "通用相機", lensName, focalTxt, `水平視角 ${cur ? fmt(cur.hfov, 1) : "—"}°`].filter(Boolean).join("　"),
+    };
   }
+
+  function draw() {
+    if (overlay.hidden) return;
+    const dpr = window.devicePixelRatio || 1;
+    const W = canvas.clientWidth, H = canvas.clientHeight;
+    if (canvas.width !== Math.round(W * dpr) || canvas.height !== Math.round(H * dpr)) { canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr); }
+    const ctx = canvas.getContext("2d")!;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
+    paintFrames(ctx, W, H);
+    focalOut.textContent = `${active}mm`;
+    info.textContent = state(W, H).line;
+  }
+
+  // 截圖：目前相機畫面（跟螢幕上看到的一樣的範圍）＋焦段框，下方加一條寫著目前選擇的說明
+  function pad2(n: number) { return String(n).padStart(2, "0"); }
+  async function shot() {
+    const W = canvas.clientWidth, H = canvas.clientHeight, vw = video.videoWidth, vh = video.videoHeight;
+    if (!vw || !vh) { toast("相機畫面還沒準備好，再按一次。"); return; }
+    const sc = Math.max(W / vw, H / vh);                  // object-fit: cover 的縮放
+    const sw = W / sc, sh = H / sc, sx = (vw - sw) / 2, sy = (vh - sh) / 2;
+    const k = sw / W;                                      // 畫面座標 → 截圖像素
+    const st = state(W, H);
+    const fs = Math.max(16, Math.round(sw / (sw > sh ? 48 : 30)));          // 說明文字大小
+    const now = new Date();
+    const stamp = `${now.getFullYear()}-${pad2(now.getMonth() + 1)}-${pad2(now.getDate())} ${pad2(now.getHours())}:${pad2(now.getMinutes())}`;
+    const items: { t: string; head?: boolean }[] = [
+      { t: [st.s.name || "通用相機", st.lensName].filter(Boolean).join("　"), head: true },
+      { t: [st.focalTxt, `水平視角 ${st.cur ? fmt(st.cur.hfov, 1) : "—"}°`].filter(Boolean).join("　") },
+      { t: `畫面比例 ${st.ratioTxt}　感光元件 ${fmt(st.s.w, 1)} × ${fmt(st.s.h, 1)} mm` },
+      { t: `顯示焦段 ${[...new Set([...shown, active])].sort((a, b) => a - b).map((f) => `${f}mm`).join("、")}` },
+      { t: `手機鏡頭估算 ${fmt(num(phone), 0)}mm　${stamp}　逐光` },
+    ];
+    const font = (head?: boolean) => `${head ? "bold " : ""}${fs}px "Chiron Hei HK", -apple-system, "PingFang TC", sans-serif`;
+    const out = document.createElement("canvas");
+    out.width = Math.round(sw);
+    const c = out.getContext("2d")!;
+    // 太長的行自動換行
+    const maxW = out.width - fs * 1.2;
+    const rows: { t: string; head?: boolean }[] = [];
+    for (const it of items) {
+      c.font = font(it.head);
+      let cur = "";
+      for (const ch of it.t) {
+        if (c.measureText(cur + ch).width > maxW && cur) { rows.push({ t: cur, head: it.head }); cur = ch; } else cur += ch;
+      }
+      if (cur) rows.push({ t: cur, head: it.head });
+    }
+    const lh = fs * 1.45, band = Math.round(lh * rows.length + fs);
+    out.height = Math.round(sh) + band;       // 改尺寸會清空畫布，所以要在這之後才開始畫
+    c.drawImage(video, sx, sy, sw, sh, 0, 0, out.width, Math.round(sh));
+    c.save(); c.scale(k, k); paintFrames(c, W, H, true); c.restore();
+    c.fillStyle = "#14181d"; c.fillRect(0, Math.round(sh), out.width, band);
+    c.textBaseline = "top"; c.textAlign = "left";
+    rows.forEach((r, n) => { c.font = font(r.head); c.fillStyle = r.head ? "#ffd54f" : "#e7ebef"; c.fillText(r.t, fs * 0.6, Math.round(sh) + fs * 0.5 + n * lh); });
+    const blob: Blob | null = await new Promise((res) => out.toBlob(res, "image/png"));
+    if (!blob) { toast("截圖失敗，請再試一次。"); return; }
+    const d = new Date(), name = `逐光取景-${d.getFullYear()}${pad2(d.getMonth() + 1)}${pad2(d.getDate())}-${pad2(d.getHours())}${pad2(d.getMinutes())}${pad2(d.getSeconds())}.png`;
+    const file = new File([blob], name, { type: "image/png" });
+    try {
+      if ((navigator as any).canShare?.({ files: [file] })) { await (navigator as any).share({ files: [file] }); toast("已產生截圖"); return; }
+    } catch (e: any) { if (e && e.name === "AbortError") return; }
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = name; document.body.append(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 10000);
+    toast("已下載截圖");
+  }
+  const toastEl = $("fr-toast");
+  let toastT = 0;
+  function toast(t: string) { toastEl.textContent = t; toastEl.hidden = false; clearTimeout(toastT); toastT = window.setTimeout(() => (toastEl.hidden = true), 2500); }
+  $("fr-shot").addEventListener("click", shot);
 
   let stream: MediaStream | null = null;
   async function openStream() {
