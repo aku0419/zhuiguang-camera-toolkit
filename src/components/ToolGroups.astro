@@ -1,0 +1,18 @@
+---
+// 工具分組顯示：每組一個代表色與圖示，兩欄小卡片（手機也一次看到很多）
+import Icon from "./Icon.astro";
+import { toolGroups } from "../data/site.js";
+---
+{toolGroups().map((g) => (
+  <section class="tgroup" style={`--gc:${g.color}`}>
+    <h3 class="tgroup-h"><span class="tgroup-ico"><Icon name={g.icon} size={20} /></span>{g.name}<small>{g.tools.length}</small></h3>
+    <div class="tgrid">
+      {g.tools.map((t) => (
+        <a class="tcard" href={t.href}>
+          <b>{t.name}</b>
+          <span>{t.q}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+))}

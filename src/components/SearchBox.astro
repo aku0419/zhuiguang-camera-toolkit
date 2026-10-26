@@ -19,6 +19,8 @@
       items = d; hay = items.map((it) => norm(it.title + " " + it.text));
     }).catch(() => { loading = null; }));
     input.addEventListener("focus", load, { once: true });
+    // 從其他頁的搜尋圖示進來（/?search=1）就直接focus 搜尋框
+    if (location.pathname === "/" && /[?&]search=1/.test(location.search)) setTimeout(() => input.focus(), 300);
     let active = -1;
 
     const render = async () => {

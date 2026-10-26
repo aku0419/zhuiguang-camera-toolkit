@@ -1,40 +1,54 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SearchBox from "../components/SearchBox.astro";
-import { sections, TOOLS, PROBLEMS } from "../data/site.js";
+import ToolGroups from "../components/ToolGroups.astro";
+import Icon from "../components/Icon.astro";
+import { sections, PROBLEMS, TOOLS } from "../data/site.js";
 import { cameras } from "../lib/cameras.js";
+
+const ICON: Record<string, string> = { cameras: "camera", lenses: "lens", media: "card", film: "film", tools: "tools" };
+const COLOR: Record<string, string> = { cameras: "#d9480f", lenses: "#1c7ed6", media: "#2b8a3e", film: "#9c36b5", tools: "#0c8599" };
+const entries = sections(cameras.length > 0);
+const FIRST = 4;
+const SHORT: Record<string, string> = { cameras: "規格與格式", lenses: "接環與焦段", media: "格式與速度", film: "Kodak 底片" };
 ---
 <BaseLayout description="免費的中文攝影工具與器材資料庫：快門角度、升降格、等效焦段、錄影容量計算，攝影機規格與錄影格式查詢。給影視科學生、學生劇組與獨立影像工作者。">
-  <p class="eyebrow">Camera Toolkit</p>
-  <h1>逐光｜攝影工具組</h1>
-  <SearchBox />
+  <section class="hero">
+    <p class="eyebrow">Camera Toolkit</p>
+    <h1>逐光｜攝影工具組</h1>
+    <SearchBox />
+  </section>
 
-  <h2>遇到什麼問題？</h2>
-  <ul class="problems">
-    {PROBLEMS.map((p) => <li><a href={p.href}>{p.q}</a></li>)}
-  </ul>
-
-  <p class="cam-count">看不懂名詞？<a href="/glossary/">名詞小辭典</a></p>
-
-  <h2>全部工具</h2>
-  <div class="grid">
-    {TOOLS.map((t) => (
-      <a class="card" href={t.href}>
-        <h3>{t.name}</h3>
-        <p>{t.q}</p>
-      </a>
-    ))}
-  </div>
-
-  <h2>資料庫</h2>
-  <div class="grid">
-    {sections(cameras.length > 0).filter((s) => s.id !== "tools").map((s) => (
-      <a class={s.ready ? "card" : "card soon"} href={s.href}>
-        <span class="k">{s.en}</span>
-        <h3>{s.zh}</h3>
-        <p>{s.desc}</p>
+  <div class="entries">
+    {entries.map((s) => (
+      <a class={`entry${s.id === "tools" ? " wide" : ""}${s.ready ? "" : " soon"}`} href={s.href} style={`--gc:${COLOR[s.id]}`}>
+        <span class="entry-ico"><Icon name={ICON[s.id]} size={26} /></span>
+        <span class="entry-txt">
+          <b>{s.zh}</b>
+          <small>{s.id === "tools" ? `${TOOLS.length} 個計算工具` : SHORT[s.id] ?? s.desc}</small>
+        </span>
         {!s.ready && <span class="pill">即將推出</span>}
       </a>
     ))}
   </div>
+
+  <h2>遇到什麼問題？</h2>
+  <ul class="problems">
+    {PROBLEMS.map((p, i) => <li class={i >= FIRST ? "more-q" : undefined}><a href={p.href}>{p.q}</a></li>)}
+  </ul>
+  <details class="more-details">
+    <summary data-open="收合" data-closed={`看全部 ${PROBLEMS.length} 個問題`}></summary>
+  </details>
+
+  <h2>全部工具</h2>
+  <ToolGroups />
+
+  <p class="cam-count">看不懂名詞？<a href="/glossary/">名詞小辭典</a></p>
 </BaseLayout>
+
+<script>
+  // 「看全部問題」：預設只顯示前幾個
+  const list = document.querySelector<HTMLElement>(".problems")!;
+  const det = document.querySelector<HTMLDetailsElement>(".more-details")!;
+  det.addEventListener("toggle", () => list.classList.toggle("all", det.open));
+</script>

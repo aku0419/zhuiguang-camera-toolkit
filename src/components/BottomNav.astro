@@ -1,0 +1,45 @@
+---
+// 手機底部固定選單（電腦版不顯示）：首頁、攝影機、鏡頭、工具、更多
+import Icon from "./Icon.astro";
+const { current } = Astro.props;
+const tabs = [
+  { id: "home", zh: "首頁", href: "/", icon: "home" },
+  { id: "cameras", zh: "攝影機", href: "/cameras/", icon: "camera" },
+  { id: "lenses", zh: "鏡頭", href: "/lenses/", icon: "lens" },
+  { id: "tools", zh: "工具", href: "/tools/", icon: "tools" },
+];
+const more = [
+  { zh: "記憶卡", href: "/media/", icon: "card" },
+  { zh: "底片", href: "/film/", icon: "film" },
+  { zh: "名詞小辭典", href: "/glossary/", icon: "book" },
+  { zh: "關於逐光與資料來源", href: "/about/", icon: "info" },
+];
+const moreActive = ["media", "film", "glossary"].includes(current);
+---
+<nav class="bnav" aria-label="底部選單">
+  {tabs.map((t) => (
+    <a href={t.href} aria-current={current === t.id ? "page" : undefined}><Icon name={t.icon} size={22} /><span>{t.zh}</span></a>
+  ))}
+  <button type="button" id="more-open" aria-haspopup="dialog" aria-current={moreActive ? "page" : undefined}><Icon name="more" size={22} /><span>更多</span></button>
+</nav>
+<div class="msheet" id="more-sheet" hidden>
+  <div class="msheet-panel" role="dialog" aria-label="更多">
+    <ul>
+      {more.map((m) => (
+        <li><a href={m.href}><Icon name={m.icon} size={20} /><span>{m.zh}</span><Icon name="chevron" size={16} /></a></li>
+      ))}
+      <li><button type="button" id="more-report"><Icon name="report" size={20} /><span>回報問題</span><Icon name="chevron" size={16} /></button></li>
+    </ul>
+    <button type="button" class="msheet-close" id="more-close">關閉</button>
+  </div>
+</div>
+<script>
+  const sheet = document.getElementById("more-sheet")!;
+  const open = () => { sheet.hidden = false; };
+  const close = () => { sheet.hidden = true; };
+  document.getElementById("more-open")?.addEventListener("click", open);
+  document.getElementById("more-close")?.addEventListener("click", close);
+  sheet.addEventListener("click", (e) => { if (e.target === sheet) close(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+  document.getElementById("more-report")?.addEventListener("click", () => { close(); document.getElementById("fb-open")?.click(); });
+</script>

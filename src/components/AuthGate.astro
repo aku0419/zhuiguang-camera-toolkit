@@ -15,8 +15,19 @@
     }
     const box = document.getElementById("account");
     if (box) {
-      box.querySelector("span").textContent = user.email || "";
-      box.querySelector("button").addEventListener("click", () => signOut());
+      const mail = user.email || "";
+      box.querySelector(".acct-mail")!.textContent = mail;
+      const avatar = document.getElementById("avatar")!, menu = document.getElementById("acct-menu")!;
+      avatar.textContent = (mail[0] || "?").toUpperCase();
+      avatar.addEventListener("click", (e) => {
+        e.stopPropagation();
+        menu.hidden = !menu.hidden;
+        avatar.setAttribute("aria-expanded", String(!menu.hidden));
+      });
+      document.addEventListener("click", (e) => {
+        if (!menu.hidden && !box.contains(e.target as Node)) { menu.hidden = true; avatar.setAttribute("aria-expanded", "false"); }
+      });
+      document.getElementById("signout")!.addEventListener("click", () => signOut());
       box.hidden = false;
     }
     // 管理者才看得到「管理」連結（結果記在這個分頁，不用每頁都問一次）

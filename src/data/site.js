@@ -116,3 +116,19 @@ export const TOOLS = [
     q: "256GB 卡、400Mbps 可以錄多久？", keywords: ["記憶卡", "card", "可錄時間", "SD", "CFexpress"],
   },
 ];
+
+// 工具分組（首頁與工具頁用）：color 是這組的代表色
+export const TOOL_GROUPS = [
+  { id: "exposure", name: "曝光與快門", icon: "aperture", color: "#d9480f",
+    ids: ["shutter-angle", "frame-rate", "exposure-stops", "exposure-guide", "nd-filter", "light-units", "color-temperature"] },
+  { id: "lens", name: "鏡頭與構圖", icon: "frame", color: "#1c7ed6",
+    ids: ["focal-length", "field-of-view", "depth-of-field", "depth-of-field-table", "aspect-ratio"] },
+  { id: "record", name: "錄影與記憶卡", icon: "card", color: "#2b8a3e",
+    ids: ["recording-capacity", "card-time", "shoot-storage", "timecode"] },
+  { id: "film", name: "底片", icon: "film", color: "#9c36b5",
+    ids: ["film-length", "film-exposure", "film-cost"] },
+  { id: "field", name: "現場與準備", icon: "sun", color: "#0c8599",
+    ids: ["sun-path", "camera-checklist"] },
+];
+export const toolGroups = () =>
+  TOOL_GROUPS.map((g) => ({ ...g, tools: g.ids.map((id) => TOOLS.find((t) => t.id === id)).filter(Boolean) }));

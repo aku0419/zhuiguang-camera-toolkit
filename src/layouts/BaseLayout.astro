@@ -3,6 +3,8 @@ import "../styles/global.css";
 import { SITE_NAME, DISCLAIMER, SECTIONS } from "../data/site.js";
 import ReportButton from "../components/ReportButton.astro";
 import AuthGate from "../components/AuthGate.astro";
+import BottomNav from "../components/BottomNav.astro";
+import Icon from "../components/Icon.astro";
 
 interface Props {
   title?: string;
@@ -52,10 +54,16 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
           ))}
         </nav>}
         {gate && (
-          <div class="account" id="account" hidden>
-            <a class="admin-link" id="admin-link" href="/admin/" hidden>管理</a>
-            <span></span>
-            <button type="button">登出</button>
+          <div class="head-right">
+            {!isHome && <a class="icon-btn" href="/?search=1" aria-label="搜尋"><Icon name="search" size={20} /></a>}
+            <div class="account" id="account" hidden>
+              <button type="button" class="avatar" id="avatar" aria-haspopup="true" aria-expanded="false" aria-label="帳號選單"></button>
+              <div class="acct-menu" id="acct-menu" hidden>
+                <span class="acct-mail"></span>
+                <a class="admin-link" id="admin-link" href="/admin/" hidden>管理</a>
+                <button type="button" id="signout">登出</button>
+              </div>
+            </div>
           </div>
         )}
       </header>
@@ -82,6 +90,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       </footer>
     </div>
     <ReportButton />
+    {gate && <BottomNav current={isHome ? "home" : section} />}
     {gate && <AuthGate />}
   </body>
 </html>
