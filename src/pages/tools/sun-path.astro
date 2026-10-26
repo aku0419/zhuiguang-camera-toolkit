@@ -609,7 +609,7 @@ const PLACES = [
     arRaf = requestAnimationFrame(arDraw);
     const dpr = window.devicePixelRatio || 1;
     const W = arCanvas.clientWidth, H = arCanvas.clientHeight;
-    if (arCanvas.width !== Math.round(W * dpr)) { arCanvas.width = Math.round(W * dpr); arCanvas.height = Math.round(H * dpr); }
+    if (arCanvas.width !== Math.round(W * dpr) || arCanvas.height !== Math.round(H * dpr)) { arCanvas.width = Math.round(W * dpr); arCanvas.height = Math.round(H * dpr); }   // 轉橫放時寬高要一起更新，不然畫面會被拉扁
     const ctx = arCanvas.getContext("2d")!;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, W, H);
@@ -625,7 +625,7 @@ const PLACES = [
       const dx = R[0][0] * ex + R[1][0] * ey + R[2][0] * ez;
       const dy = R[0][1] * ex + R[1][1] * ey + R[2][1] * ez;
       const dz = R[0][2] * ex + R[1][2] * ey + R[2][2] * ez;
-      if (dz > -0.02) return { x: 0, y: 0, vis: false };
+      if (dz > -0.2) return { x: 0, y: 0, vis: false };   // 太靠近視線側邊／背後的點不畫，避免座標爆大、線條亂飛
       const [rx, ry] = ang === 90 ? [-dy, dx] : ang === 270 ? [dy, -dx] : ang === 180 ? [-dx, -dy] : [dx, dy];
       return { x: W / 2 + (f * rx) / -dz, y: H / 2 - (f * ry) / -dz, vis: true };
     };
