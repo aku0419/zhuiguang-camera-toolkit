@@ -67,6 +67,7 @@ const PLACES = [
         <button type="button" class="chip" data-pitch="40">斜視</button>
         <button type="button" class="chip" data-pitch="14">正面</button>
         <button type="button" class="chip" id="play">播放一天</button>
+        <button type="button" class="chip" id="ar-open">AR 模式（開相機）</button>
       </div>
       <figcaption>立體圖：圓盤是地面（四周是方位），弧線是太陽這一天的路徑，點是每小時的位置。<b>左右拖曳</b>可以轉動方向；開啟指南針後，畫面會跟著手機轉，手機立起來就變成正面看、放平就變成俯視。</figcaption>
     </figure>
@@ -87,6 +88,34 @@ const PLACES = [
       <li>算法是常見的天文公式，日出日落通常誤差 1～2 分鐘。需要精準時間（例如拍攝關鍵鏡頭）請以現場為準。</li>
       <li>時差預設是你手機的時區。到國外拍攝時，請把時差改成當地的。</li>
     </ul>
+  </div>
+
+  <div class="ar" id="ar" hidden>
+    <video id="ar-video" playsinline muted autoplay></video>
+    <canvas id="ar-canvas"></canvas>
+    <div class="ar-top">
+      <p id="ar-info">相機啟動中……</p>
+      <button type="button" id="ar-close" aria-label="關閉 AR 模式">關閉</button>
+    </div>
+    <div class="ar-bottom">
+      <p class="ar-warn">請不要用相機或眼睛長時間直視太陽。</p>
+      <div class="ar-row">
+        <label>時間 <b id="ar-clock">--:--</b></label>
+        <input id="ar-slider" type="range" min="0" max="1439" step="1" value="720" />
+        <button type="button" id="ar-now">現在</button>
+      </div>
+      <div class="ar-row">
+        <select id="ar-lens" aria-label="手機鏡頭">
+          <option value="13">超廣角（約 13mm）</option>
+          <option value="24" selected>主鏡頭（約 24mm）</option>
+          <option value="48">2 倍（約 48mm）</option>
+          <option value="77">3 倍（約 77mm）</option>
+          <option value="120">5 倍（約 120mm）</option>
+        </select>
+        <button type="button" id="ar-calib">太陽在畫面中央，按此校正</button>
+      </div>
+      <p class="ar-hint" id="ar-hint"></p>
+    </div>
   </div>
 </BaseLayout>
 
@@ -114,6 +143,20 @@ const PLACES = [
   .sun-views{margin-top:8px;flex-wrap:wrap}
   .sun-fig figcaption{font-size:13px;color:var(--muted);margin-top:4px}
   .sun-fig text{font-family:var(--mono);fill:var(--muted);font-size:9px}
+
+  .ar{position:fixed;inset:0;z-index:100;background:#000;color:#fff;overflow:hidden}
+  .ar video,.ar canvas{position:absolute;inset:0;width:100%;height:100%}
+  .ar video{object-fit:cover}
+  .ar canvas{touch-action:none}
+  .ar-top{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:flex-start;gap:8px;padding:calc(env(safe-area-inset-top) + 10px) 12px 8px;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,0))}
+  .ar-top p{margin:0;font-size:14px;min-width:0;text-shadow:0 1px 3px #000}
+  .ar-top button,.ar-bottom button{white-space:nowrap;flex:none;background:rgba(0,0,0,.55);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:8px;padding:8px 12px;font-size:14px;font-weight:700;cursor:pointer}
+  .ar-bottom{position:absolute;bottom:0;left:0;right:0;padding:24px 12px calc(env(safe-area-inset-bottom) + 12px);background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.65));display:flex;flex-direction:column;gap:8px}
+  .ar-row{display:flex;align-items:center;gap:8px}
+  .ar-row label{font-size:14px;white-space:nowrap}
+  .ar-row input[type=range]{flex:1;min-width:0}
+  .ar-row select{flex:1;min-width:0;background:rgba(0,0,0,.55);color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:8px;padding:8px;font-size:14px;width:auto}
+  .ar-warn,.ar-hint{margin:0;font-size:12px;opacity:.85;text-shadow:0 1px 3px #000}
   @media (min-width:560px){.sun-times{grid-template-columns:repeat(4,1fr)}}
 </style>
 
@@ -405,14 +448,19 @@ const PLACES = [
 
   // ---- 指南針與傾斜 ----
   let listening = false;
+  let oriAlpha: number | null = null, oriBeta: number | null = null, oriGamma: number | null = null;
   const angDiff = (a: number, b: number) => ((a - b + 540) % 360) - 180;
   function onOrientation(ev: any) {
     let h: number | null = null;
     if (typeof ev.webkitCompassHeading === "number") h = ev.webkitCompassHeading;       // iPhone
     else if (ev.absolute && typeof ev.alpha === "number") h = (360 - ev.alpha) % 360;    // Android
     if (typeof ev.beta === "number") tiltBeta = ev.beta;
+    if (typeof ev.beta === "number") oriBeta = oriBeta == null ? ev.beta : oriBeta + (ev.beta - oriBeta) * 0.35;
+    if (typeof ev.gamma === "number") oriGamma = oriGamma == null ? ev.gamma : oriGamma + (ev.gamma - oriGamma) * 0.35;
     if (h == null || !isFinite(h)) return;
     rawHeading = h;
+    const aAbs = (360 - h + 360) % 360;       // 換成「W3C 定義的 alpha」（逆時針、從北算）
+    oriAlpha = oriAlpha == null ? aAbs : (oriAlpha + angDiff(aAbs, oriAlpha) * 0.35 + 360) % 360;
     const target = (h + offset + 360) % 360;
     heading = heading == null ? target : (heading + angDiff(target, heading) * 0.3 + 360) % 360;   // 平滑一點，畫面比較不會抖
     yaw = heading;
@@ -425,20 +473,27 @@ const PLACES = [
   let refreshPending = false;
   function scheduleRefresh() { if (refreshPending) return; refreshPending = true; requestAnimationFrame(() => { refreshPending = false; refresh(); }); }
 
-  compassBtn.addEventListener("click", async () => {
+  // 向使用者要求方向感測器的權限並開始聆聽。回傳是否可用（桌機沒有感測器會是 false）
+  async function enableSensors(): Promise<boolean> {
     const DOE: any = (window as any).DeviceOrientationEvent;
-    if (!DOE) { compassInfo.textContent = "這個瀏覽器沒有方向感測器，請改用手機。"; return; }
+    if (!DOE) return false;
     try {
       if (typeof DOE.requestPermission === "function") {
         const r = await DOE.requestPermission();
-        if (r !== "granted") { compassInfo.textContent = "你沒有允許使用動作與方向。可以到手機的設定 → Safari 再開啟。"; return; }
+        if (r !== "granted") return false;
       }
-    } catch { compassInfo.textContent = "無法取得方向感測器的權限。"; return; }
+    } catch { return false; }
     if (!listening) {
       listening = true;
       window.addEventListener("deviceorientationabsolute", onOrientation as any, true);
       window.addEventListener("deviceorientation", onOrientation as any, true);
     }
+    return true;
+  }
+
+  compassBtn.addEventListener("click", async () => {
+    if (!(window as any).DeviceOrientationEvent) { compassInfo.textContent = "這個瀏覽器沒有方向感測器，請改用手機。"; return; }
+    if (!(await enableSensors())) { compassInfo.textContent = "你沒有允許使用動作與方向（或無法取得權限）。可以到手機的設定 → Safari 再開啟。"; return; }
     compassBtn.textContent = "指南針已開啟";
     calibBtn.hidden = false;
     compassInfo.textContent = "請把手機拿平，畫出 8 字形晃一下，讓指南針校準……";
@@ -455,6 +510,208 @@ const PLACES = [
     compassInfo.textContent = `已校正（修正 ${fmt(offset, 0)}°）。`;
     refresh();
   });
+
+  // ============ AR 模式：相機畫面疊上太陽軌跡 ============
+  const arEl = document.getElementById("ar")!;
+  const arVideo = document.getElementById("ar-video") as HTMLVideoElement;
+  const arCanvas = document.getElementById("ar-canvas") as HTMLCanvasElement;
+  const arInfo = document.getElementById("ar-info")!, arHint = document.getElementById("ar-hint")!;
+  const arSlider = $("ar-slider"), arClock = document.getElementById("ar-clock")!, arLens = $("ar-lens");
+  let arActive = false, arStream: MediaStream | null = null, arRaf = 0;
+  let manualYaw = 180, manualPitch = 15;   // 沒有感測器時，用手指拖曳看四周
+
+  // 裝置座標 → 地球座標的旋轉矩陣（W3C：Rz(alpha)·Rx(beta)·Ry(gamma)）
+  function rotation(alphaDeg: number, betaDeg: number, gammaDeg: number) {
+    const a = alphaDeg * DEG, b = betaDeg * DEG, g = gammaDeg * DEG;
+    const ca = Math.cos(a), sa = Math.sin(a), cb = Math.cos(b), sb = Math.sin(b), cg = Math.cos(g), sg = Math.sin(g);
+    return [
+      [ca * cg - sa * sb * sg, -cb * sa, cg * sa * sb + ca * sg],
+      [cg * sa + ca * sb * sg, ca * cb, sa * sg - ca * cg * sb],
+      [-cb * sg, sb, cb * cg],
+    ];
+  }
+  const screenAngle = () => ((screen.orientation && screen.orientation.angle) || (window as any).orientation || 0 + 360) % 360;
+
+  function arPose() {
+    let alpha: number, beta: number, gamma: number, sensor = false;
+    if (oriAlpha != null && oriBeta != null) {
+      alpha = (oriAlpha - offset + 360) % 360; beta = oriBeta; gamma = oriGamma ?? 0; sensor = true;
+    } else {
+      alpha = (360 - manualYaw + 360) % 360; beta = 90 + manualPitch; gamma = 0;
+    }
+    const R = rotation(alpha, beta, gamma);
+    // 相機（手機背面）看的方向 ＝ 裝置的 −z 軸
+    const cx = -R[0][2], cy = -R[1][2], cz = -R[2][2];
+    return { R, sensor, camAz: ((Math.atan2(cx, cy) / DEG) + 360) % 360, camAlt: Math.asin(Math.max(-1, Math.min(1, cz))) / DEG };
+  }
+
+  function arDraw() {
+    if (!arActive) return;
+    arRaf = requestAnimationFrame(arDraw);
+    const dpr = window.devicePixelRatio || 1;
+    const W = arCanvas.clientWidth, H = arCanvas.clientHeight;
+    if (arCanvas.width !== Math.round(W * dpr)) { arCanvas.width = Math.round(W * dpr); arCanvas.height = Math.round(H * dpr); }
+    const ctx = arCanvas.getContext("2d")!;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    if (!scene) return;
+    const { R, sensor, camAz, camAlt } = arPose();
+    const fovLong = 2 * Math.atan(18 / Number(arLens.value));         // 手機畫面「長邊」的視角
+    const f = (Math.max(W, H) / 2) / Math.tan(fovLong / 2);
+    const ang = screenAngle();
+    // 地球方向 → 螢幕座標
+    const project = (az: number, alt: number) => {
+      const a = az * DEG, h = alt * DEG;
+      const ex = Math.sin(a) * Math.cos(h), ey = Math.cos(a) * Math.cos(h), ez = Math.sin(h);
+      const dx = R[0][0] * ex + R[1][0] * ey + R[2][0] * ez;
+      const dy = R[0][1] * ex + R[1][1] * ey + R[2][1] * ez;
+      const dz = R[0][2] * ex + R[1][2] * ey + R[2][2] * ez;
+      if (dz > -0.02) return { x: 0, y: 0, vis: false };
+      const [rx, ry] = ang === 90 ? [-dy, dx] : ang === 270 ? [dy, -dx] : ang === 180 ? [-dx, -dy] : [dx, dy];
+      return { x: W / 2 + (f * rx) / -dz, y: H / 2 - (f * ry) / -dz, vis: true };
+    };
+    const onScreen = (q: { x: number; y: number; vis: boolean }) => q.vis && q.x > -40 && q.x < W + 40 && q.y > -40 && q.y < H + 40;
+
+    // 地平線
+    ctx.lineWidth = 1.5; ctx.strokeStyle = "rgba(255,255,255,.75)"; ctx.setLineDash([6, 5]);
+    let prev: any = null;
+    ctx.beginPath();
+    for (let az = 0; az <= 360; az += 2) {
+      const q = project(az, 0);
+      if (q.vis && prev && prev.vis && Math.abs(q.x - prev.x) < W) ctx.lineTo(q.x, q.y); else if (q.vis) ctx.moveTo(q.x, q.y);
+      prev = q;
+    }
+    ctx.stroke(); ctx.setLineDash([]);
+    // 方位文字
+    ctx.font = "bold 15px sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "bottom";
+    for (const [n, a] of [["北", 0], ["東北", 45], ["東", 90], ["東南", 135], ["南", 180], ["西南", 225], ["西", 270], ["西北", 315]] as const) {
+      const q = project(a, 0);
+      if (!onScreen(q)) continue;
+      ctx.fillStyle = a === 0 ? "#ff7b6b" : "#fff"; ctx.shadowColor = "#000"; ctx.shadowBlur = 4;
+      ctx.fillText(`${n} ${a}°`, q.x, q.y - 6); ctx.shadowBlur = 0;
+    }
+
+    // 太陽路徑（顏色：白天黃白、黃金時刻橘、藍調藍）
+    const pathCol = (alt: number) => alt > 6 ? "#fff3b0" : alt > -4 ? "#ffa726" : alt > -6.5 ? "#6ea8ff" : "rgba(255,255,255,.18)";
+    ctx.lineWidth = 4; ctx.lineCap = "round";
+    const P = scene.path;
+    for (let i = 1; i < P.length; i++) {
+      if (P[i].alt < -10 || P[i - 1].alt < -10) continue;
+      const a = project(P[i - 1].az, P[i - 1].alt), b = project(P[i].az, P[i].alt);
+      if (!a.vis || !b.vis || Math.abs(a.x - b.x) > W) continue;
+      ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+      ctx.strokeStyle = pathCol(P[i].alt); ctx.shadowColor = "rgba(0,0,0,.6)"; ctx.shadowBlur = 3; ctx.stroke(); ctx.shadowBlur = 0;
+    }
+    // 每小時的點
+    ctx.font = "bold 13px sans-serif"; ctx.textAlign = "left"; ctx.textBaseline = "middle";
+    for (let h = 0; h < 24; h++) {
+      const pt = P[h * 12];
+      if (!pt || pt.alt < -6) continue;
+      const q = project(pt.az, pt.alt);
+      if (!onScreen(q)) continue;
+      ctx.beginPath(); ctx.arc(q.x, q.y, 5, 0, 7); ctx.fillStyle = "#fff"; ctx.fill(); ctx.strokeStyle = "#e8890c"; ctx.lineWidth = 2; ctx.stroke();
+      ctx.fillStyle = "#fff"; ctx.shadowColor = "#000"; ctx.shadowBlur = 4; ctx.fillText(`${h}:00`, q.x + 9, q.y); ctx.shadowBlur = 0;
+    }
+    // 日出日落標記
+    for (const [ms, label, col] of [[scene.t.sunrise, "日出", "#ffa24d"], [scene.t.sunset, "日落", "#ff5a4d"]] as const) {
+      if (ms == null) continue;
+      const pos = sunPosition(ms, scene.la, scene.lo), q = project(pos.azimuth, 0);
+      if (!onScreen(q)) continue;
+      ctx.beginPath(); ctx.moveTo(q.x, q.y); ctx.lineTo(q.x, q.y - 30); ctx.strokeStyle = col; ctx.lineWidth = 3; ctx.stroke();
+      ctx.font = "bold 14px sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "bottom"; ctx.fillStyle = col; ctx.shadowColor = "#000"; ctx.shadowBlur = 4;
+      ctx.fillText(`${label} ${fmtClock(ms, scene.z)}`, q.x, q.y - 33); ctx.shadowBlur = 0;
+    }
+
+    // 目前選的時間的太陽
+    const minute = Number(arSlider.value);
+    const sun = sunPosition(scene.t.start + minute * 60000, scene.la, scene.lo);
+    const sq = project(sun.azimuth, sun.altitude);
+    if (onScreen(sq)) {
+      const g = ctx.createRadialGradient(sq.x, sq.y, 2, sq.x, sq.y, 46);
+      g.addColorStop(0, "rgba(255,240,170,.95)"); g.addColorStop(1, "rgba(255,200,60,0)");
+      ctx.beginPath(); ctx.arc(sq.x, sq.y, 46, 0, 7); ctx.fillStyle = g; ctx.fill();
+      ctx.beginPath(); ctx.arc(sq.x, sq.y, 13, 0, 7); ctx.fillStyle = "#ffe08a"; ctx.fill(); ctx.strokeStyle = "#e8890c"; ctx.lineWidth = 3; ctx.stroke();
+      ctx.font = "bold 14px sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "top"; ctx.fillStyle = "#fff"; ctx.shadowColor = "#000"; ctx.shadowBlur = 4;
+      ctx.fillText(`${arClock.textContent}　高度 ${fmt(sun.altitude, 0)}°`, sq.x, sq.y + 18); ctx.shadowBlur = 0;
+    } else {
+      // 太陽不在畫面裡：在邊緣畫箭頭指方向
+      const dAz = angDiff(sun.azimuth, camAz), dAlt = sun.altitude - camAlt;
+      const ax = Math.max(-1, Math.min(1, dAz / 40)), ay = Math.max(-1, Math.min(1, -dAlt / 40));
+      const len = Math.hypot(ax, ay) || 1;
+      const ex = W / 2 + (ax / len) * (W / 2 - 34), ey = H / 2 + (ay / len) * (H / 2 - 120);
+      const rot = Math.atan2(ay, ax);
+      ctx.save(); ctx.translate(ex, ey); ctx.rotate(rot);
+      ctx.beginPath(); ctx.moveTo(18, 0); ctx.lineTo(-12, -13); ctx.lineTo(-12, 13); ctx.closePath(); ctx.fillStyle = "#ffd54f"; ctx.fill(); ctx.restore();
+    }
+    // 畫面中央十字
+    ctx.strokeStyle = "rgba(255,255,255,.7)"; ctx.lineWidth = 1.5; ctx.beginPath();
+    ctx.moveTo(W / 2 - 10, H / 2); ctx.lineTo(W / 2 + 10, H / 2); ctx.moveTo(W / 2, H / 2 - 10); ctx.lineTo(W / 2, H / 2 + 10); ctx.stroke();
+
+    const dAz = angDiff(sun.azimuth, camAz);
+    const where = sun.altitude < -0.833 ? "太陽在地平線下" : onScreen(sq) ? "太陽在畫面裡" : `太陽在你的${dAz > 0 ? "右" : "左"}邊 ${fmt(Math.abs(dAz), 0)}°、${sun.altitude - camAlt > 0 ? "上" : "下"}方 ${fmt(Math.abs(sun.altitude - camAlt), 0)}°`;
+    arInfo.textContent = `面向 ${compassName(camAz)} ${fmt(camAz, 0)}°　仰角 ${camAlt >= 0 ? "+" : ""}${fmt(camAlt, 0)}°　${where}`;
+    arHint.textContent = sensor ? "圖上的太陽路徑，是這個地點與時間太陽會經過的位置。如果和真正的太陽差一段距離，請把畫面中央對準真正的太陽，按「校正」。" : "沒有收到方向感測器的資料，目前用手指左右、上下拖曳來看四周。";
+  }
+
+  const syncArClock = () => { const m = Number(arSlider.value); arClock.textContent = `${pad(Math.floor(m / 60))}:${pad(m % 60)}`; };
+  arSlider.addEventListener("input", () => { slider.value = arSlider.value; syncArClock(); refresh(); });
+  document.getElementById("ar-now")!.addEventListener("click", () => {
+    date.value = todayStr(); recompute(); slider.value = String(nowMinute()); arSlider.value = slider.value; syncArClock(); refresh();
+  });
+  // 沒有感測器時，用手指拖曳看四周
+  let arDrag: { x: number; y: number } | null = null;
+  arCanvas.addEventListener("pointerdown", (e) => { arDrag = { x: e.clientX, y: e.clientY }; arCanvas.setPointerCapture(e.pointerId); });
+  arCanvas.addEventListener("pointermove", (e) => {
+    if (!arDrag || oriAlpha != null) return;
+    manualYaw = (manualYaw - (e.clientX - arDrag.x) * 0.15 + 360) % 360;
+    manualPitch = Math.max(-80, Math.min(85, manualPitch + (e.clientY - arDrag.y) * 0.15));
+    arDrag = { x: e.clientX, y: e.clientY };
+  });
+  arCanvas.addEventListener("pointerup", () => { arDrag = null; });
+
+  async function openStream(deviceId?: string) {
+    if (arStream) arStream.getTracks().forEach((t) => t.stop());
+    const video: MediaTrackConstraints = deviceId ? { deviceId: { exact: deviceId } } : { facingMode: { ideal: "environment" }, width: { ideal: 1920 }, height: { ideal: 1080 } };
+    arStream = await navigator.mediaDevices.getUserMedia({ video, audio: false });
+    arVideo.srcObject = arStream;
+    await arVideo.play().catch(() => {});
+  }
+  // 選了超廣角或望遠，就盡量改用手機上對應的鏡頭（瀏覽器有提供才會成功）
+  arLens.addEventListener("change", async () => {
+    try {
+      const devs = (await navigator.mediaDevices.enumerateDevices()).filter((d) => d.kind === "videoinput");
+      const v = Number(arLens.value);
+      const want = v <= 13 ? /ultra|超廣角|0\.5/i : v >= 48 ? /tele|望遠/i : /back camera|後置相機|rear camera|後鏡頭(?!.*(ultra|tele))/i;
+      const hit = devs.find((d) => want.test(d.label) && !(v === 24 && /ultra|tele|超廣角|望遠/i.test(d.label)));
+      if (hit) await openStream(hit.deviceId);
+    } catch { /* 切不過去就維持原本的鏡頭，只改視角假設 */ }
+  });
+
+  document.getElementById("ar-open")!.addEventListener("click", async () => {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) { gpsMsg.textContent = "這個瀏覽器不能使用相機，請改用手機的 Safari 或 Chrome。"; return; }
+    arEl.hidden = false; document.body.style.overflow = "hidden";
+    arInfo.textContent = "請在跳出的詢問中允許相機與動作方向……";
+    date.value = todayStr(); recompute(); slider.value = String(nowMinute()); arSlider.value = slider.value; syncArClock();
+    await enableSensors();
+    try { await openStream(); }
+    catch { arInfo.textContent = "沒有取得相機權限。請到手機的設定允許這個網站使用相機後，再試一次。"; return; }
+    arActive = true; cancelAnimationFrame(arRaf); arDraw();
+  });
+  document.getElementById("ar-close")!.addEventListener("click", () => {
+    arActive = false; cancelAnimationFrame(arRaf);
+    if (arStream) { arStream.getTracks().forEach((t) => t.stop()); arStream = null; }
+    arVideo.srcObject = null; arEl.hidden = true; document.body.style.overflow = "";
+  });
+  document.getElementById("ar-calib")!.addEventListener("click", () => {
+    if (oriAlpha == null) { arHint.textContent = "沒有方向感測器的資料，沒辦法校正。"; return; }
+    const real = sunPosition(Date.now(), num(lat), num(lon));
+    if (real.altitude < 0) { arHint.textContent = "現在太陽在地平線下，沒辦法對著太陽校正。"; return; }
+    const { camAz } = arPose();
+    offset = ((offset + angDiff(real.azimuth, camAz)) + 540) % 360 - 180;
+    try { localStorage.setItem("zg-compass-offset", String(offset)); } catch { /* 不能存也沒關係 */ }
+    arHint.textContent = `已校正（修正 ${fmt(offset, 0)}°）。`;
+  });
+
 
   recompute();
 </script>
