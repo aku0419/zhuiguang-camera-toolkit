@@ -166,7 +166,7 @@ const PLACES = [
 
   .sun-fig.full{position:fixed;inset:0;z-index:90;margin:0;background:#0b0d12}
   .sun-fig.full canvas{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;border:0;border-radius:0}
-  .sun-fig.full figcaption,.sun-fig.full #ar-open{display:none}
+  .sun-fig.full figcaption{display:none}
   .sun-fig.full .sun-views{position:absolute;left:8px;right:8px;bottom:calc(env(safe-area-inset-bottom) + 62px);justify-content:center;z-index:2;margin:0}
   .sun-fig.full .sun-views .chip{background:rgba(0,0,0,.6);color:#fff;border-color:rgba(255,255,255,.5)}
   .sun-fig.full .sun-fullbar{position:absolute;left:12px;right:12px;bottom:calc(env(safe-area-inset-bottom) + 12px);width:auto;max-width:none;z-index:2}
@@ -734,6 +734,7 @@ const PLACES = [
 
   document.getElementById("ar-open")!.addEventListener("click", async () => {
     if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) { gpsMsg.textContent = "這個瀏覽器不能使用相機，請改用手機的 Safari 或 Chrome。"; return; }
+    if (skyFig.classList.contains("full")) setSkyFull(false);
     arEl.hidden = false; document.body.style.overflow = "hidden";
     arInfo.textContent = "請在跳出的詢問中允許相機與動作方向……";
     date.value = todayStr(); recompute(); slider.value = String(nowMinute()); arSlider.value = slider.value; syncArClock();
