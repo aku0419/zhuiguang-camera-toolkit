@@ -61,8 +61,14 @@ const PLACES = [
       <figcaption>太陽高度（一整天）。深色是夜晚、藍色是藍調時刻、黃色是黃金時刻。</figcaption>
     </figure>
     <figure class="sun-fig">
-      <svg id="polar" viewBox="0 0 320 320" role="img" aria-label="太陽軌跡俯視圖"></svg>
-      <figcaption>俯視圖：上方是北，圓心是頭頂，圓邊是地平線。點是每小時太陽的位置。</figcaption>
+      <canvas id="sky" aria-label="太陽軌跡立體圖"></canvas>
+      <div class="inrow sun-views">
+        <button type="button" class="chip" data-pitch="86">俯視</button>
+        <button type="button" class="chip" data-pitch="40">斜視</button>
+        <button type="button" class="chip" data-pitch="14">正面</button>
+        <button type="button" class="chip" id="play">播放一天</button>
+      </div>
+      <figcaption>立體圖：圓盤是地面（四周是方位），弧線是太陽這一天的路徑，點是每小時的位置。<b>左右拖曳</b>可以轉動方向；開啟指南針後，畫面會跟著手機轉，手機立起來就變成正面看、放平就變成俯視。</figcaption>
     </figure>
 
     <div class="field">
@@ -72,7 +78,7 @@ const PLACES = [
         <button type="button" class="btn" id="calib" hidden>對著太陽校正</button>
       </div>
       <p class="sun-now" id="compass-info"></p>
-      <span class="hint">開啟後，圖上會多出你面對的方向，並告訴你太陽在你的哪一側。指南針附近有金屬或磁鐵會偏，可以在看得到太陽時，把手機上方對準太陽，按「對著太陽校正」。</span>
+      <span class="hint">開啟後，立體圖會跟著手機的方向與傾斜轉動，並告訴你太陽在你的哪一側。指南針附近有金屬或磁鐵會偏，可以在看得到太陽時，把手機上方對準太陽，按「對著太陽校正」。</span>
     </div>
 
     <ul class="notes">
@@ -103,7 +109,9 @@ const PLACES = [
   .sun-now{font-size:15px;margin:6px 0 0}
   .sun-now b{font-family:var(--mono);font-weight:500}
   .sun-fig{margin:0 0 16px}
-  .sun-fig svg{width:100%;height:auto;display:block;background:var(--soft);border:1px solid var(--line);border-radius:8px}
+  .sun-fig svg,.sun-fig canvas{width:100%;height:auto;display:block;background:var(--soft);border:1px solid var(--line);border-radius:8px}
+  .sun-fig canvas{aspect-ratio:1 / 1;touch-action:pan-y;cursor:grab;background:#0b0d12;border-color:#222}
+  .sun-views{margin-top:8px;flex-wrap:wrap}
   .sun-fig figcaption{font-size:13px;color:var(--muted);margin-top:4px}
   .sun-fig text{font-family:var(--mono);fill:var(--muted);font-size:9px}
   @media (min-width:560px){.sun-times{grid-template-columns:repeat(4,1fr)}}
@@ -122,45 +130,47 @@ const PLACES = [
   const $ = (id: string) => document.getElementById(id) as HTMLInputElement;
   const place = $("place"), lat = $("lat"), lon = $("lon"), date = $("date"), tz = $("tz"), slider = $("slider");
   const timesEl = document.getElementById("times")!, clockEl = document.getElementById("clock")!, nowInfo = document.getElementById("nowinfo")!;
-  const altChart = document.getElementById("alt-chart")!, polar = document.getElementById("polar")!;
+  const altChart = document.getElementById("alt-chart")!;
+  const sky = document.getElementById("sky") as HTMLCanvasElement;
   const gpsBtn = $("gps"), gpsMsg = document.getElementById("gps-msg")!;
   const compassBtn = $("compass-btn"), calibBtn = $("calib"), compassInfo = document.getElementById("compass-info")!;
+  const playBtn = $("play");
 
-  let heading: number | null = null;       // 手機面對的方向（已校正）
+  // 手機方向：raw 是感測器讀到的；heading 是校正後的
   let rawHeading: number | null = null;
+  let heading: number | null = null;
+  let tiltBeta: number | null = null;
   let offset = 0;
   try { offset = Number(localStorage.getItem("zg-compass-offset")) || 0; } catch { /* 不能存也沒關係 */ }
+  // 立體圖視角：yaw ＝畫面「前方」是哪個方位；pitch ＝從幾度往下看（90 俯視、0 正面）
+  let yaw = 180, pitch = 36;
+  let drawnYaw = yaw, drawnPitch = pitch;
 
   const pad = (n: number) => String(n).padStart(2, "0");
   const todayStr = () => { const d = new Date(Date.now() + num(tz) * 3600000); return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}`; };
-  const parts = () => { const [y, m, d] = date.value.split("-").map(Number); return { y, m, d }; };
-  const minuteToMs = (min: number, start: number) => start + min * 60000;
-
-  // 瀏覽器所在時區當預設時差
+  const nowMinute = () => { const d = new Date(Date.now() + num(tz) * 3600000); return d.getUTCHours() * 60 + d.getUTCMinutes(); };
   tz.value = String(-new Date().getTimezoneOffset() / 60);
   date.value = todayStr();
-  const nowMinute = () => { const d = new Date(Date.now() + num(tz) * 3600000); return d.getUTCHours() * 60 + d.getUTCMinutes(); };
   slider.value = String(nowMinute());
 
-  function valid() { return isFinite(num(lat)) && isFinite(num(lon)) && isFinite(num(tz)) && date.value; }
+  function valid() { return isFinite(num(lat)) && isFinite(num(lon)) && isFinite(num(tz)) && !!date.value; }
 
-  const polarXY = (az: number, alt: number, R: number, c: number) => {
-    const r = R * (1 - Math.max(alt, -5) / 90);
-    const a = (az * Math.PI) / 180;
-    return [c + r * Math.sin(a), c - r * Math.cos(a)] as const;
-  };
+  // ---- 計算結果（地點、日期改了才重算）----
+  type Scene = { t: ReturnType<typeof sunTimes>; la: number; lo: number; z: number; path: { min: number; az: number; alt: number }[]; chartBase: string };
+  let scene: Scene | null = null;
 
-  function draw() {
-    if (!valid()) { timesEl.innerHTML = "<p>請輸入緯度、經度、日期與時差。</p>"; return; }
-    const { y, m, d } = parts();
+  function recompute() {
+    if (!valid()) { scene = null; timesEl.innerHTML = "<p>請輸入緯度、經度、日期與時差。</p>"; return; }
+    const [y, m, d] = date.value.split("-").map(Number);
     const la = num(lat), lo = num(lon), z = num(tz);
     const t = sunTimes(y, m, d, la, lo, z);
-    const minute = Number(slider.value);
-    const nowMs = minuteToMs(minute, t.start);
-    const pos = sunPosition(nowMs, la, lo);
-    clockEl.textContent = `${pad(Math.floor(minute / 60))}:${pad(minute % 60)}`;
+    const path: Scene["path"] = [];
+    for (let min = 0; min <= 1440; min += 5) {
+      const p = sunPosition(t.start + min * 60000, la, lo);
+      path.push({ min, az: p.azimuth, alt: p.altitude });
+    }
 
-    const at = (ms: number | null) => (ms == null ? "" : `方位 ${fmt(sunPosition(ms, la, lo).azimuth, 0)}°`);
+    const at = (ms: number | null) => (ms == null ? "" : `方位 ${fmt(sunPosition(ms, la, lo).azimuth, 0)}°（${compassName(sunPosition(ms, la, lo).azimuth)}）`);
     const c = (cls: string, k: string, a: number | null, b: number | null, sub = "") =>
       `<div class="${cls}"><p class="k">${k}</p><p class="v">${a == null ? "—" : fmtClock(a, z)}${b != null ? "～" + fmtClock(b, z) : ""}</p>${sub ? `<p class="s">${sub}</p>` : ""}</div>`;
     if (t.alwaysUp || t.alwaysDown) {
@@ -169,100 +179,213 @@ const PLACES = [
       timesEl.innerHTML =
         c("blue", "早上藍調（估算）", t.blueMorningStart, t.blueMorningEnd) +
         c("gold", "早上黃金（估算）", t.goldenMorningStart, t.goldenMorningEnd) +
-        c("", "日出", t.sunrise, null, `${at(t.sunrise)}（${compassName(sunPosition(t.sunrise ?? t.start, la, lo).azimuth)}）`) +
+        c("", "日出", t.sunrise, null, at(t.sunrise)) +
         c("", "正午（最高）", t.noon, null, `高度 ${fmt(t.noonAltitude, 0)}°`) +
-        c("", "日落", t.sunset, null, `${at(t.sunset)}（${compassName(sunPosition(t.sunset ?? t.start, la, lo).azimuth)}）`) +
+        c("", "日落", t.sunset, null, at(t.sunset)) +
         c("gold", "傍晚黃金（估算）", t.goldenEveningStart, t.goldenEveningEnd) +
         c("blue", "傍晚藍調（估算）", t.blueEveningStart, t.blueEveningEnd) +
         `<div><p class="k">白天長度</p><p class="v">${t.dayMinutes == null ? "—" : `${Math.floor(t.dayMinutes / 60)}時${pad(Math.round(t.dayMinutes % 60))}分`}</p></div>`;
     }
 
-    // 目前選的時間
-    const shadow = pos.altitude > 0.5 ? `，物體影子長度約是高度的 ${fmt(1 / Math.tan((pos.altitude * Math.PI) / 180), 1)} 倍` : "";
-    nowInfo.innerHTML = pos.altitude > -0.833
-      ? `太陽在<b>${compassName(pos.azimuth)}</b>（方位 ${fmt(pos.azimuth, 0)}°），高度 <b>${fmt(pos.altitude, 0)}°</b>${shadow}。`
-      : `太陽在地平線下（高度 ${fmt(pos.altitude, 0)}°）。`;
-
-    // 圖一：高度曲線＋時段色帶
-    const W = 360, H = 170, L = 26, R = 8, T = 8, B = 20;
-    const aMin = -30, aMax = 90;
+    // 高度曲線的底圖（不含目前時間的標記）
+    const W = 360, H = 170, L = 26, R = 8, T = 8, B = 20, aMin = -30, aMax = 90;
     const px = (min: number) => L + ((W - L - R) * min) / 1440;
     const py = (a: number) => T + ((H - T - B) * (aMax - Math.min(aMax, Math.max(aMin, a)))) / (aMax - aMin);
-    let bands = "", line = "";
     const cols: string[] = [];
     for (let i = 0; i < 144; i++) {
-      const a = sunPosition(minuteToMs(i * 10 + 5, t.start), la, lo).altitude;
+      const a = path[i * 2 + 1].alt;
       cols.push(a > 6 ? "" : a > -4 ? "rgba(245,176,40,.38)" : a > -6 ? "rgba(80,130,210,.35)" : "rgba(20,28,60,.28)");
     }
-    for (let i = 0; i < 144;) {   // 把相鄰同色的時段合併成一條，避免出現接縫
+    let bands = "";
+    for (let i = 0; i < 144;) {   // 相鄰同色的時段合併成一條，避免接縫
       let j = i;
       while (j < 144 && cols[j] === cols[i]) j++;
       if (cols[i]) bands += `<rect x="${px(i * 10)}" y="${T}" width="${px(j * 10) - px(i * 10)}" height="${H - T - B}" fill="${cols[i]}"/>`;
       i = j;
     }
-    for (let min = 0; min <= 1440; min += 10) {
-      const a = sunPosition(minuteToMs(min, t.start), la, lo).altitude;
-      line += `${min === 0 ? "M" : "L"}${px(min).toFixed(1)},${py(a).toFixed(1)}`;
-    }
+    let line = "";
+    path.forEach((p, i) => { line += `${i === 0 ? "M" : "L"}${px(p.min).toFixed(1)},${py(p.alt).toFixed(1)}`; });
     const ticks = [0, 3, 6, 9, 12, 15, 18, 21, 24].map((h) => `<text x="${px(h * 60)}" y="${H - 6}" text-anchor="middle">${h}</text>`).join("");
     const yt = [0, 30, 60, 90].map((a) => `<line x1="${L}" x2="${W - R}" y1="${py(a)}" y2="${py(a)}" stroke="currentColor" opacity="${a === 0 ? 0.55 : 0.15}"/><text x="${L - 3}" y="${py(a) + 3}" text-anchor="end">${a}°</text>`).join("");
+    scene = { t, la, lo, z, path, chartBase: `${bands}${yt}${ticks}<path d="${line}" fill="none" stroke="#e8890c" stroke-width="2"/>` };
+    (scene as any).px = px; (scene as any).py = py; (scene as any).H = H; (scene as any).T = T; (scene as any).B = B;
+    refresh();
+  }
+
+  // ---- 目前選的時間（滑桿動就更新）----
+  function refresh() {
+    if (!scene) return;
+    const { t, la, lo } = scene;
+    const minute = Number(slider.value);
+    const pos = sunPosition(t.start + minute * 60000, la, lo);
+    clockEl.textContent = `${pad(Math.floor(minute / 60))}:${pad(minute % 60)}`;
+    const shadow = pos.altitude > 0.5 ? `，物體影子長度約是高度的 ${fmt(1 / Math.tan((pos.altitude * Math.PI) / 180), 1)} 倍` : "";
+    nowInfo.innerHTML = pos.altitude > -0.833
+      ? `太陽在<b>${compassName(pos.azimuth)}</b>（方位 ${fmt(pos.azimuth, 0)}°），高度 <b>${fmt(pos.altitude, 0)}°</b>${shadow}。`
+      : `太陽在地平線下（高度 ${fmt(pos.altitude, 0)}°）。`;
+    const { px, py, H, T, B } = scene as any;
     const mx = px(minute), my = py(pos.altitude);
-    altChart.innerHTML = `${bands}${yt}${ticks}<path d="${line}" fill="none" stroke="#e8890c" stroke-width="2"/><line x1="${mx}" x2="${mx}" y1="${T}" y2="${H - B}" stroke="currentColor" opacity=".45" stroke-dasharray="3 3"/><circle cx="${mx}" cy="${my}" r="5" fill="#ffc83d" stroke="#b86c00" stroke-width="1.5"/>`;
-
-    // 圖二：俯視圖
-    const S = 320, C = 160, RR = 128;
-    let ring = "";
-    for (const a of [0, 30, 60]) ring += `<circle cx="${C}" cy="${C}" r="${RR * (1 - a / 90)}" fill="none" stroke="currentColor" opacity="${a === 0 ? 0.55 : 0.14}"/>`;
-    const dirs = [["北", 0], ["東", 90], ["南", 180], ["西", 270]]
-      .map(([n, a]) => { const [x, y] = polarXY(a as number, -5, RR + 15, C); return `<text x="${x}" y="${y + 4}" text-anchor="middle" style="font-size:12px;font-weight:700">${n}</text>`; }).join("");
-    let path = "", dots = "", started = false;
-    for (let min = 0; min <= 1440; min += 5) {
-      const p = sunPosition(minuteToMs(min, t.start), la, lo);
-      if (p.altitude < -0.833) { started = false; continue; }
-      const [x, y] = polarXY(p.azimuth, p.altitude, RR, C);
-      path += `${started ? "L" : "M"}${x.toFixed(1)},${y.toFixed(1)}`; started = true;
-    }
-    for (let h = 0; h < 24; h++) {
-      const p = sunPosition(minuteToMs(h * 60, t.start), la, lo);
-      if (p.altitude < 0) continue;
-      const [x, y] = polarXY(p.azimuth, p.altitude, RR, C);
-      dots += `<circle cx="${x}" cy="${y}" r="2.6" fill="#e8890c"/>${h % 2 === 0 ? `<text x="${x + 5}" y="${y - 4}">${h}</text>` : ""}`;
-    }
-    let rays = "";
-    for (const [ms, col] of [[t.sunrise, "#e8890c"], [t.sunset, "#c0392b"]] as const) {
-      if (ms == null) continue;
-      const [x, y] = polarXY(sunPosition(ms, la, lo).azimuth, 0, RR, C);
-      rays += `<line x1="${C}" y1="${C}" x2="${x}" y2="${y}" stroke="${col}" stroke-width="1.5" opacity=".8"/>`;
-    }
-    let head = "";
+    altChart.innerHTML = `${scene.chartBase}<line x1="${mx}" x2="${mx}" y1="${T}" y2="${H - B}" stroke="currentColor" opacity=".45" stroke-dasharray="3 3"/><circle cx="${mx}" cy="${my}" r="5" fill="#ffc83d" stroke="#b86c00" stroke-width="1.5"/>`;
     if (heading != null) {
-      const [x, y] = polarXY(heading, 0, RR, C);
-      head = `<line x1="${C}" y1="${C}" x2="${x}" y2="${y}" stroke="#2b8a3e" stroke-width="3"/><circle cx="${x}" cy="${y}" r="5" fill="#2b8a3e"/>`;
+      const diff = ((pos.azimuth - heading + 540) % 360) - 180;
+      const side = pos.altitude < -0.833 ? "（太陽在地平線下）" : Math.abs(diff) < 8 ? "，在你的<b>正前方</b>" : Math.abs(diff) > 172 ? "，在你的<b>正後方</b>" : `，在你的<b>${diff > 0 ? "右" : "左"}邊 ${fmt(Math.abs(diff), 0)}°</b>`;
+      compassInfo.innerHTML = `你面對 <b>${compassName(heading)}</b>（${fmt(heading, 0)}°）；圖上選的時間${side}。`;
     }
-    const [sx, sy] = polarXY(pos.azimuth, pos.altitude, RR, C);
-    const sun = pos.altitude > -0.833 ? `<circle cx="${sx}" cy="${sy}" r="8" fill="#ffc83d" stroke="#b86c00" stroke-width="1.5"/>` : "";
-    polar.setAttribute("viewBox", `0 0 ${S} ${S}`);
-    polar.innerHTML = `${ring}${rays}<path d="${path}" fill="none" stroke="#e8890c" stroke-width="2"/>${dots}${dirs}${head}${sun}`;
-
-    updateCompassInfo(pos.azimuth);
+    render3D();
   }
 
-  function updateCompassInfo(sunAz: number) {
-    if (heading == null) return;
-    let diff = ((sunAz - heading + 540) % 360) - 180;  // 太陽在你的右（＋）或左（－）幾度
-    const side = Math.abs(diff) < 8 ? "正前方" : Math.abs(diff) > 172 ? "正後方" : diff > 0 ? `右邊 ${fmt(Math.abs(diff), 0)}°` : `左邊 ${fmt(Math.abs(diff), 0)}°`;
-    compassInfo.innerHTML = `你面對 <b>${compassName(heading)}</b>（${fmt(heading, 0)}°）；圖上選的時間，太陽在你的<b>${side}</b>。`;
+  // ---- 立體圖（自己用畫布畫，不需要外部程式庫）----
+  const DEG = Math.PI / 180;
+  function render3D() {
+    if (!scene) return;
+    const cssW = sky.clientWidth || 320;
+    const dpr = window.devicePixelRatio || 1;
+    if (sky.width !== Math.round(cssW * dpr)) { sky.width = Math.round(cssW * dpr); sky.height = sky.width; }
+    const ctx = sky.getContext("2d")!;
+    const S = sky.width;
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, S, S);
+    ctx.scale(S / 320, S / 320);        // 之後都用 320×320 的座標
+
+    const cy_ = Math.cos(yaw * DEG), sy_ = Math.sin(yaw * DEG);
+    const cp = Math.cos(pitch * DEG), sp = Math.sin(pitch * DEG);
+    const D = 3.4, F = 2.6;
+    // 世界座標（x 東、y 北、z 上）→ 畫面
+    const project = (x: number, y: number, z: number) => {
+      const xr = x * cy_ - y * sy_;                 // 向右
+      const yf = x * sy_ + y * cy_;                 // 向前（畫面往遠處）
+      const u = z * cp + yf * sp;                   // 向上
+      const dz = yf * cp - z * sp;                  // 深度
+      const k = (F / (D + dz)) * 118;
+      return { x: 160 + xr * k, y: 175 - u * k, k };
+    };
+    const dir = (az: number, alt: number, r = 1) => {
+      const a = az * DEG, h = alt * DEG;
+      return [Math.sin(a) * Math.cos(h) * r, Math.cos(a) * Math.cos(h) * r, Math.sin(h) * r] as const;
+    };
+
+    // 地面圓盤
+    ctx.beginPath();
+    for (let a = 0; a <= 360; a += 5) { const q = project(...dir(a, 0)); a === 0 ? ctx.moveTo(q.x, q.y) : ctx.lineTo(q.x, q.y); }
+    ctx.fillStyle = "rgba(255,255,255,.05)"; ctx.fill();
+    ctx.strokeStyle = "rgba(255,255,255,.55)"; ctx.lineWidth = 1.2; ctx.stroke();
+    // 高度環（30°、60°）
+    for (const alt of [30, 60]) {
+      ctx.beginPath();
+      for (let a = 0; a <= 360; a += 6) { const q = project(...dir(a, alt)); a === 0 ? ctx.moveTo(q.x, q.y) : ctx.lineTo(q.x, q.y); }
+      ctx.strokeStyle = "rgba(255,255,255,.13)"; ctx.lineWidth = 1; ctx.stroke();
+    }
+    // 方位刻度與文字
+    ctx.font = "bold 12px sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    for (let a = 0; a < 360; a += 15) {
+      const q1 = project(...dir(a, 0, 1)), q2 = project(...dir(a, 0, a % 90 === 0 ? 0.93 : 0.96));
+      ctx.beginPath(); ctx.moveTo(q1.x, q1.y); ctx.lineTo(q2.x, q2.y);
+      ctx.strokeStyle = "rgba(255,255,255,.4)"; ctx.lineWidth = 1; ctx.stroke();
+    }
+    for (const [n, a] of [["北", 0], ["東", 90], ["南", 180], ["西", 270]] as const) {
+      const q = project(...dir(a, 0, 1.12));
+      ctx.fillStyle = a === 0 ? "#ff6b5b" : "#e6e6e6"; ctx.fillText(n, q.x, q.y);
+    }
+    ctx.font = "9px sans-serif";
+    for (const [n, a] of [["東北", 45], ["東南", 135], ["西南", 225], ["西北", 315]] as const) {
+      const q = project(...dir(a, 0, 1.1)); ctx.fillStyle = "rgba(255,255,255,.55)"; ctx.fillText(n, q.x, q.y);
+    }
+
+    // 日出、日落方向
+    const { t, la, lo, path } = scene;
+    for (const [ms, col] of [[t.sunrise, "#ffa24d"], [t.sunset, "#ff5a4d"]] as const) {
+      if (ms == null) continue;
+      const az = sunPosition(ms, la, lo).azimuth;
+      const o = project(0, 0, 0), q = project(...dir(az, 0));
+      ctx.beginPath(); ctx.moveTo(o.x, o.y); ctx.lineTo(q.x, q.y);
+      ctx.strokeStyle = col; ctx.lineWidth = 1.6; ctx.stroke();
+    }
+
+    // 太陽路徑（地平線以上；後面的線較淡，前面的較亮）
+    let prev: ReturnType<typeof project> | null = null;
+    for (const p of path) {
+      if (p.alt < 0) { prev = null; continue; }
+      const q = project(...dir(p.az, p.alt));
+      if (prev) {
+        ctx.beginPath(); ctx.moveTo(prev.x, prev.y); ctx.lineTo(q.x, q.y);
+        ctx.strokeStyle = "#ffc21f"; ctx.lineWidth = 2.6 * Math.min(1.5, Math.max(0.7, q.k / 118)); ctx.stroke();
+      }
+      prev = q;
+    }
+    // 每小時的點與文字
+    ctx.font = "bold 10px sans-serif"; ctx.textAlign = "left";
+    for (let h = 0; h < 24; h++) {
+      const p = path[h * 12];
+      if (!p || p.alt < 0) continue;
+      const q = project(...dir(p.az, p.alt));
+      ctx.beginPath(); ctx.arc(q.x, q.y, 2.6, 0, 7); ctx.fillStyle = "#ffb000"; ctx.fill();
+      if (h % 2 === 0) { ctx.fillStyle = "#ffd36b"; ctx.fillText(`${h}h`, q.x + 5, q.y - 5); }
+    }
+    // 現在的太陽：連到地面的投影線
+    const minute = Number(slider.value);
+    const pos = sunPosition(t.start + minute * 60000, la, lo);
+    if (pos.altitude > -0.833) {
+      const sq = project(...dir(pos.azimuth, pos.altitude)), gq = project(...dir(pos.azimuth, 0)), oq = project(0, 0, 0);
+      ctx.setLineDash([3, 3]);
+      ctx.beginPath(); ctx.moveTo(sq.x, sq.y); ctx.lineTo(gq.x, gq.y); ctx.strokeStyle = "rgba(255,230,150,.6)"; ctx.lineWidth = 1; ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(oq.x, oq.y); ctx.lineTo(gq.x, gq.y); ctx.stroke();
+      ctx.setLineDash([]);
+      const r = 9 * Math.min(1.5, Math.max(0.75, sq.k / 118));
+      const g = ctx.createRadialGradient(sq.x, sq.y, 1, sq.x, sq.y, r * 2.2);
+      g.addColorStop(0, "rgba(255,240,170,.9)"); g.addColorStop(1, "rgba(255,200,60,0)");
+      ctx.beginPath(); ctx.arc(sq.x, sq.y, r * 2.2, 0, 7); ctx.fillStyle = g; ctx.fill();
+      ctx.beginPath(); ctx.arc(sq.x, sq.y, r, 0, 7); ctx.fillStyle = "#ffe08a"; ctx.fill();
+    }
+    // 你的位置（圓心）與面對的方向
+    const o = project(0, 0, 0);
+    ctx.beginPath(); ctx.arc(o.x, o.y, 4, 0, 7); ctx.fillStyle = "#35c46a"; ctx.fill();
+    if (heading != null) {
+      const q = project(...dir(heading, 0, 0.5));
+      ctx.beginPath(); ctx.moveTo(o.x, o.y); ctx.lineTo(q.x, q.y); ctx.strokeStyle = "#35c46a"; ctx.lineWidth = 3; ctx.stroke();
+      ctx.beginPath(); ctx.arc(q.x, q.y, 4, 0, 7); ctx.fill();
+    }
+    // 左上角：面對的方向
+    ctx.font = "bold 12px sans-serif"; ctx.textAlign = "left"; ctx.fillStyle = "rgba(255,255,255,.8)";
+    ctx.fillText(`面向 ${compassName(yaw)}（${fmt(((yaw % 360) + 360) % 360, 0)}°）`, 10, 18);
+    drawnYaw = yaw; drawnPitch = pitch;
   }
+
+  let renderPending = false;
+  function scheduleRender() { if (renderPending) return; renderPending = true; requestAnimationFrame(() => { renderPending = false; render3D(); }); }
+  window.addEventListener("resize", scheduleRender);
+
+  // 左右拖曳轉方向（沒開指南針時）
+  let dragX: number | null = null;
+  sky.addEventListener("pointerdown", (e) => { if (heading == null) { dragX = e.clientX; sky.setPointerCapture(e.pointerId); sky.style.cursor = "grabbing"; } });
+  sky.addEventListener("pointermove", (e) => {
+    if (dragX == null) return;
+    yaw = (yaw - (e.clientX - dragX) * 0.6 + 360) % 360; dragX = e.clientX; scheduleRender();
+  });
+  const endDrag = () => { dragX = null; sky.style.cursor = "grab"; };
+  sky.addEventListener("pointerup", endDrag); sky.addEventListener("pointercancel", endDrag);
+  document.querySelectorAll<HTMLElement>("[data-pitch]").forEach((b) => b.addEventListener("click", () => { pitch = Number(b.dataset.pitch); scheduleRender(); }));
+
+  // 播放一天
+  let timer: number | null = null;
+  playBtn.addEventListener("click", () => {
+    if (timer != null) { clearInterval(timer); timer = null; playBtn.textContent = "播放一天"; return; }
+    playBtn.textContent = "暫停";
+    timer = window.setInterval(() => {
+      slider.value = String((Number(slider.value) + 6) % 1440);
+      refresh();
+    }, 50);
+  });
 
   // ---- 地點 ----
   place.addEventListener("change", () => {
     const p = PLACES[place.value];
     if (p) { lat.value = String(p.lat); lon.value = String(p.lon); tz.value = String(p.tz); }
-    draw();
+    recompute();
   });
-  for (const el of [lat, lon, tz]) el.addEventListener("input", () => { if (el !== tz) place.value = "custom"; draw(); });
-  for (const el of [date, slider]) el.addEventListener("input", draw);
-  document.getElementById("now")!.addEventListener("click", () => { date.value = todayStr(); slider.value = String(nowMinute()); draw(); });
+  for (const el of [lat, lon, tz]) el.addEventListener("input", () => { if (el !== tz) place.value = "custom"; recompute(); });
+  date.addEventListener("input", recompute);
+  slider.addEventListener("input", refresh);
+  document.getElementById("now")!.addEventListener("click", () => { date.value = todayStr(); slider.value = String(nowMinute()); recompute(); });
 
   gpsBtn.addEventListener("click", () => {
     if (!("geolocation" in navigator)) { gpsMsg.textContent = "這個瀏覽器不支援定位，請從清單選地點或自己輸入經緯度。"; return; }
@@ -273,26 +396,34 @@ const PLACES = [
         tz.value = String(-new Date().getTimezoneOffset() / 60);
         place.value = "custom";
         gpsMsg.textContent = "已使用目前位置。位置只在你的手機瀏覽器裡計算，不會傳送到任何地方。";
-        draw();
+        recompute();
       },
       (e) => { gpsMsg.textContent = e.code === 1 ? "你沒有允許定位。可以改從清單選地點，或自己輸入經緯度。" : "抓不到位置，請稍後再試，或自己輸入經緯度。"; },
       { enableHighAccuracy: false, timeout: 15000, maximumAge: 60000 }
     );
   });
 
-  // ---- 指南針 ----
+  // ---- 指南針與傾斜 ----
   let listening = false;
+  const angDiff = (a: number, b: number) => ((a - b + 540) % 360) - 180;
   function onOrientation(ev: any) {
     let h: number | null = null;
     if (typeof ev.webkitCompassHeading === "number") h = ev.webkitCompassHeading;       // iPhone
     else if (ev.absolute && typeof ev.alpha === "number") h = (360 - ev.alpha) % 360;    // Android
+    if (typeof ev.beta === "number") tiltBeta = ev.beta;
     if (h == null || !isFinite(h)) return;
     rawHeading = h;
-    heading = (h + offset + 360) % 360;
-    scheduleDraw();
+    const target = (h + offset + 360) % 360;
+    heading = heading == null ? target : (heading + angDiff(target, heading) * 0.3 + 360) % 360;   // 平滑一點，畫面比較不會抖
+    yaw = heading;
+    if (tiltBeta != null) {
+      const targetPitch = Math.min(86, Math.max(12, 90 - tiltBeta));
+      pitch = pitch + (targetPitch - pitch) * 0.25;
+    }
+    scheduleRefresh();
   }
-  let pending = false;
-  function scheduleDraw() { if (pending) return; pending = true; requestAnimationFrame(() => { pending = false; draw(); }); }
+  let refreshPending = false;
+  function scheduleRefresh() { if (refreshPending) return; refreshPending = true; requestAnimationFrame(() => { refreshPending = false; refresh(); }); }
 
   compassBtn.addEventListener("click", async () => {
     const DOE: any = (window as any).DeviceOrientationEvent;
@@ -318,12 +449,12 @@ const PLACES = [
     if (rawHeading == null) return;
     const p = sunPosition(Date.now(), num(lat), num(lon));
     if (p.altitude < 0) { compassInfo.textContent = "現在太陽在地平線下，沒辦法對著太陽校正。"; return; }
-    offset = ((p.azimuth - rawHeading + 540) % 360) - 180;
+    offset = angDiff(p.azimuth, rawHeading);
     try { localStorage.setItem("zg-compass-offset", String(offset)); } catch { /* 不能存也沒關係 */ }
-    heading = (rawHeading + offset + 360) % 360;
+    heading = (rawHeading + offset + 360) % 360; yaw = heading;
     compassInfo.textContent = `已校正（修正 ${fmt(offset, 0)}°）。`;
-    draw();
+    refresh();
   });
 
-  draw();
+  recompute();
 </script>
