@@ -1,0 +1,15 @@
+{
+  "name": "逐光｜攝影工具組",
+  "short_name": "逐光",
+  "description": "給影視科學生的免費攝影工具與器材資料庫",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#1b232c",
+  "theme_color": "#1b232c",
+  "lang": "zh-Hant-TW",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

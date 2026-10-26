@@ -88,6 +88,7 @@
 - 頁尾有自願斗內區塊（綠界連結 `https://p.ecpay.com.tw/A02519C`，新分頁開啟），首頁不放標語。斗內按鈕下方有小字灰色「斗內說明」與製作者聯絡資訊（Email 為 mailto 連結），服務條款第七點也有重複付款處理說明。
 - 全站搜尋清單不放在首頁 HTML 裡，第一次點搜尋框才下載 `/search-index.json`（來源 `src/lib/search-index.js`），資料變多時首頁也不會變慢。鏡頭列表卡片用 `content-visibility:auto`。
 - 首頁不顯示上方選單（首頁卡片就是入口），進到其他頁才出現。
+- 加到手機主畫面的圖示：`public/apple-touch-icon.png`（180）、`icon-192.png`、`icon-512.png`（深色底、橘色 logo），`public/manifest.webmanifest` 的 `display` 刻意設成 `browser`（不用全螢幕獨立視窗），因為 Google 登入在 iPhone 的全螢幕模式可能出問題；主畫面名稱「逐光」。
 - 網站左上 logo 跟初光一樣：英文粗體在前（ZHUIGUANG）、小的中文在後（逐光）。
 
 - 攝影助理檢查清單 `/tools/camera-checklist/`：開拍前一天、出發前、每個鏡位設定、收工後 4 段（共 30 項）＋攝影報告欄位建議；可勾選（只存在該瀏覽器的 localStorage）、列印（勾選狀態會印出來）、選相機會顯示那台的記憶卡／接環／Log／時間碼／HDMI／SDI（資料來自相機 JSON）；相機頁有「檢查清單」按鈕（`?camera=`）。清單是一般流程，不含機型規格；場記與器材清單等製片表單放初光。
