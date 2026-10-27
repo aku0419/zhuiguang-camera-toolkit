@@ -368,3 +368,24 @@ html.gate body{visibility:hidden}
 }
 @media print{.bnav,.msheet{display:none!important}}
 @media (min-width:720px){.problems li.more-q{display:block}.more-details{display:none}}
+
+/* ===== 介面微調（design-taste 試驗）：圖示不放淡色方塊、顏色只留給主要動作、標題縮小、今天的日出日落 ===== */
+.entry-ico,.tgroup-ico{background:none;color:var(--ink);width:auto;height:auto;border-radius:0}
+.entry-ico{width:34px}
+.tgroup-ico{margin-right:-2px}
+.entry:hover{border-color:var(--ink)}
+.tcard{border-left:1px solid var(--line)}
+.tcard:hover{border-color:var(--ink)}
+.hero h1{font-size:clamp(22px,4vw,28px);margin-bottom:12px}
+.fb-btn{box-shadow:none}
+.today{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px 12px;margin:14px 0 0;padding:14px 16px;background:var(--paper);border:1px solid var(--line);border-radius:12px;text-decoration:none;color:var(--ink)}
+.today:hover{border-color:var(--ink)}
+.today-h{grid-column:1 / -1;font-size:13px;color:var(--muted)}
+.today-c{display:flex;flex-direction:column;min-width:0}
+.today-c small{font-size:12.5px;color:var(--muted)}
+.today-c b{font-family:var(--display);font-size:26px;font-weight:600;line-height:1.15;font-variant-numeric:tabular-nums;white-space:nowrap}
+.today-go{grid-column:1 / -1;margin-top:4px;font-size:14px;font-weight:700;color:var(--accent)}
+@media (max-width:430px){.today-c b{font-size:22px}.today{grid-template-columns:1fr 1.7fr 1fr}}
+@media (min-width:720px){.today{grid-template-columns:auto 1fr 1.4fr 1fr auto;align-items:center;gap:0 24px}.today-h,.today-go{grid-column:auto;margin:0}}
+.fb-btn{background:#cf450e}
+.today-go{color:#cf450e}

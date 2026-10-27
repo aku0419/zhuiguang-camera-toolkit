@@ -14,7 +14,6 @@ const SHORT: Record<string, string> = { cameras: "規格與格式", lenses: "接
 ---
 <BaseLayout description="免費的中文攝影工具與器材資料庫：快門角度、升降格、等效焦段、錄影容量計算，攝影機規格與錄影格式查詢。給影視科學生、學生劇組與獨立影像工作者。">
   <section class="hero">
-    <p class="eyebrow">Camera Toolkit</p>
     <h1>逐光｜攝影工具組</h1>
     <SearchBox />
   </section>
@@ -32,6 +31,14 @@ const SHORT: Record<string, string> = { cameras: "規格與格式", lenses: "接
     ))}
   </div>
 
+  <a class="today" href="/tools/sun-path/" id="today" aria-label="今天台北的日出、黃金時刻與日落，點進去看太陽軌跡">
+    <span class="today-h">今天・台北</span>
+    <span class="today-c"><small>日出</small><b id="t-rise">—</b></span>
+    <span class="today-c wide"><small>傍晚黃金時刻</small><b id="t-golden">—</b></span>
+    <span class="today-c"><small>日落</small><b id="t-set">—</b></span>
+    <span class="today-go">看太陽軌跡</span>
+  </a>
+
   <h2>遇到什麼問題？</h2>
   <ul class="problems">
     {PROBLEMS.map((p, i) => <li class={i >= FIRST ? "more-q" : undefined}><a href={p.href}>{p.q}</a></li>)}
@@ -47,6 +54,16 @@ const SHORT: Record<string, string> = { cameras: "規格與格式", lenses: "接
 </BaseLayout>
 
 <script>
+  // 今天台北的日出、黃金時刻、日落（用瀏覽器算，不傳送任何資料）
+  import { sunTimes, fmtClock } from "../lib/calc.js";
+  (() => {
+    const [y, m, d] = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Taipei", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()).split("-").map(Number);
+    const t = sunTimes(y, m, d, 25.033, 121.5654, 8);
+    const f = (ms: number | null) => (ms == null ? "—" : fmtClock(ms, 8));
+    document.getElementById("t-rise")!.textContent = f(t.sunrise);
+    document.getElementById("t-set")!.textContent = f(t.sunset);
+    document.getElementById("t-golden")!.textContent = `${f(t.goldenEveningStart)}–${f(t.goldenEveningEnd)}`;
+  })();
   // 「看全部問題」：預設只顯示前幾個
   const list = document.querySelector<HTMLElement>(".problems")!;
   const det = document.querySelector<HTMLDetailsElement>(".more-details")!;
