@@ -36,7 +36,7 @@
       prev = p;
     }
     for (const h of [6, 9, 12, 15, 18]) if (h * 60 > M0 + 70 && h * 60 < M1 - 70)
-      svg += `<text x="${X(h * 60)}" y="292" text-anchor="middle" fill="#9aa5b1" font-size="13">${String(h).padStart(2, "0")}:00</text>`;
+      svg += `<text x="${X(h * 60)}" y="292" text-anchor="middle" fill="#999" font-size="13">${String(h).padStart(2, "0")}:00</text>`;
     const nowMin = Math.max(M0, Math.min(M1, (Date.now() - t.start) / 60000));
     const na = sunPosition(t.start + nowMin * 60000, LAT, LON).altitude;
     svg += `<circle cx="${X(nowMin).toFixed(1)}" cy="${Y(na).toFixed(1)}" r="9" fill="#fff3b0" stroke="#ff8a00" stroke-width="3"/>`;

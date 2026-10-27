@@ -8,6 +8,8 @@ const brands = [...new Set(cameras.map((c) => c.brand))];
 ---
 <BaseLayout title="登入" description="給攝影師的免費工具箱：攝影機與鏡頭資料庫、快門角度、景深、ND、太陽軌跡與手機取景。用 Google 帳號登入逐光。" gate={false} bodyClass="login-page">
   <section class="lp-hero">
+    <svg class="lp-guides" viewBox="0 0 3 3" preserveAspectRatio="none" aria-hidden="true"><line x1="1" y1="0" x2="1" y2="3"/><line x1="2" y1="0" x2="2" y2="3"/><line x1="0" y1="1" x2="3" y2="1"/><line x1="0" y1="2" x2="3" y2="2"/></svg>
+    <i class="lp-corner tl" aria-hidden="true"></i><i class="lp-corner tr" aria-hidden="true"></i><i class="lp-corner bl" aria-hidden="true"></i><i class="lp-corner br" aria-hidden="true"></i>
     <div class="lp-wrap">
       <div class="lp-brand"><img src="/logo.svg" alt="" width="30" height="30" /><b>Zhuiguang</b><span>逐光</span></div>
       <div class="lp-hero-grid">
@@ -23,28 +25,20 @@ const brands = [...new Set(cameras.map((c) => c.brand))];
     </div>
   </section>
 
-  <section class="lp-fields">
-    <div class="lp-field orange"><div>
-      <span class="n">{cameras.length}</span>
-      <h2>台攝影機</h2>
-      <p>錄影模式、位元率、記憶卡、Log、時間碼。{brands.join("、")}。</p>
-    </div></div>
-    <div class="lp-field gold"><div>
-      <span class="n">{lenses.length}</span>
-      <h2>支鏡頭</h2>
-      <p>接環、涵蓋片幅、焦段，自動列出能裝在哪些相機上。</p>
-    </div></div>
-    <div class="lp-field light"><div>
-      <span class="n">{TOOLS.length}</span>
-      <h2>個計算工具</h2>
-      <p>快門角度、升降格、ND、景深、錄影容量、太陽軌跡，手機就能算。</p>
-    </div></div>
+  <section class="lp-read">
+    <div class="lp-wrap">
+      <dl class="lp-nums">
+        <div><dt>台攝影機</dt><dd><span class="n">{cameras.length}</span></dd><span class="d">錄影模式、位元率、記憶卡、Log、時間碼。{brands.join("、")}。</span></div>
+        <div><dt>支鏡頭</dt><dd><span class="n">{lenses.length}</span></dd><span class="d">接環、涵蓋片幅、焦段，自動列出能裝在哪些相機上。</span></div>
+        <div><dt>個計算工具</dt><dd><span class="n">{TOOLS.length}</span></dd><span class="d">快門角度、升降格、ND、景深、錄影容量、太陽軌跡，手機就能算。</span></div>
+      </dl>
+    </div>
   </section>
 
   <section class="lp-finder">
     <div class="lp-wrap">
       <svg viewBox="0 0 600 340" role="img" aria-label="手機取景示意：在畫面上同時疊出 35、50、85 毫米拍出來的範圍框">
-        <rect width="600" height="340" fill="#1a2027"/>
+        <rect width="600" height="340" fill="#181818"/>
         <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="square">
           <path d="M26 66V26h40M534 26h40v40M574 274v40h-40M66 314H26v-40"/>
         </g>
@@ -71,13 +65,10 @@ const brands = [...new Set(cameras.map((c) => c.brand))];
     </div>
   </section>
 
-  <section class="lp-cta">
+  <section class="lp-end">
     <div class="lp-wrap">
-      <p class="big" aria-hidden="true">逐光</p>
-      <div>
-        <p>免費使用，用 Google 帳號登入。</p>
-        <p style="margin-top:14px"><button class="btn" type="button" data-login>用 Google 帳號登入</button></p>
-      </div>
+      <h2>下一次出門拍之前，先來看看光。</h2>
+      <button class="btn primary gbtn" type="button" data-login>用 Google 帳號登入</button>
     </div>
   </section>
 

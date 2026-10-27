@@ -1,16 +1,16 @@
 /* 逐光全站樣式。配色、字體沿用初光（First Light）。手機優先。 */
 :root{
-  --bg:#eef0f2; --paper:#ffffff; --ink:#1b232c; --muted:#5d6874; --line:#d5dae0; --soft:#f5f6f8;
+  --bg:#efefef; --paper:#ffffff; --ink:#171717; --muted:#666666; --line:#d9d9d9; --soft:#f6f6f6;
   --accent:#d9480f; --accent-ink:#ffffff; --accent-soft:#fdebe1; --warn:#c92a2a; --ok:#2b8a3e;
   --display:"Barlow Condensed","Chiron Hei HK",system-ui,sans-serif;
   --body:"Chiron Hei HK",-apple-system,"PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#12161b; --paper:#1a2027; --ink:#e7ebef; --muted:#9aa5b1; --line:#2e3742; --soft:#20272f;
+  --bg:#0f0f0f; --paper:#181818; --ink:#ececec; --muted:#999999; --line:#2c2c2c; --soft:#202020;
   --accent:#ff7a3d; --accent-ink:#1a1006; --accent-soft:#3a2116; --warn:#ff8787; --ok:#69db7c; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#12161b; --paper:#1a2027; --ink:#e7ebef; --muted:#9aa5b1; --line:#2e3742; --soft:#20272f;
+  --bg:#0f0f0f; --paper:#181818; --ink:#ececec; --muted:#999999; --line:#2c2c2c; --soft:#202020;
   --accent:#ff7a3d; --accent-ink:#1a1006; --accent-soft:#3a2116; --warn:#ff8787; --ok:#69db7c; color-scheme:dark}
 
 *{box-sizing:border-box}
@@ -385,17 +385,17 @@ html.gate body{visibility:hidden}
 .sunarc svg text{font-family:var(--body)}
 .sunarc-read{display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:4px 12px;margin:10px 0 0}
 .sunarc-read div{min-width:0}
-.sunarc-read dt{font-size:12.5px;color:#9aa5b1}
+.sunarc-read dt{font-size:12.5px;color:#999}
 .sunarc-read dd{margin:0;font-family:var(--display);font-size:30px;font-weight:600;line-height:1.15;color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap}
 @media (max-width:430px){.sunarc-read dd{font-size:23px}}
-.today-card{display:block;margin:14px 0 0;padding:16px 16px 14px;background:#12161b;color:#e7ebef;border-radius:12px;text-decoration:none}
+.today-card{display:block;margin:14px 0 0;padding:16px 16px 14px;background:#0f0f0f;color:#ececec;border-radius:12px;text-decoration:none}
 .today-card:hover{outline:2px solid #ff8a00;outline-offset:2px}
-.today-h{margin:0 0 6px;font-size:13px;color:#9aa5b1}
+.today-h{margin:0 0 6px;font-size:13px;color:#999}
 .today-go{display:inline-block;margin-top:10px;font-size:14px;font-weight:700;color:#ff8a00}
 @media (min-width:720px){.today-card{display:grid;grid-template-columns:1fr 1.15fr;gap:4px 28px;align-items:center;padding:20px 24px}.today-h{grid-column:1 / -1}.today-go{grid-column:1 / -1}}
 
 /* ===== 登入頁（給攝影師看的首頁）===== */
-body.login-page{--bg:#12161b;--paper:#1a2027;--ink:#e7ebef;--muted:#9aa5b1;--line:#2e3742;--soft:#20272f;--accent:#ff7a3d;--accent-ink:#1a1006;overflow-x:clip}
+body.login-page{--bg:#0f0f0f;--paper:#181818;--ink:#ececec;--muted:#999999;--line:#2c2c2c;--soft:#202020;--accent:#ff7a3d;--accent-ink:#1a1006;overflow-x:clip}
 .login-page .site{max-width:none;padding-inline:0;padding-top:0}
 .login-page .topbar{display:none}
 .login-page main{display:block}
@@ -415,24 +415,32 @@ body.login-page{--bg:#12161b;--paper:#1a2027;--ink:#e7ebef;--muted:#9aa5b1;--lin
 .lp-note a{color:inherit}
 .lp-err{font-size:14px;color:#ffa8a8;margin:12px 0 0}
 @media (min-width:860px){.lp-hero-grid{grid-template-columns:1fr 1.1fr}}
-.lp-fields{display:grid}
-.lp-field{padding:56px 16px 64px;display:flex;flex-direction:column;justify-content:flex-start;min-height:340px}
-.lp-field > div{max-width:420px;margin-inline:auto;width:100%}
-.lp-field .n{font-family:var(--display);font-size:clamp(96px,22vw,168px);line-height:.9;font-weight:700;display:block}
-.lp-field h2{font-size:24px;margin:8px 0 8px}
-.lp-field p{margin:0;font-size:16px;line-height:1.65;max-width:34ch}
-.lp-field.orange{background:#d9480f;color:#fff}
-.lp-field.gold{background:#ffd54f;color:#1a1006}
-.lp-field.light{background:#e7ebef;color:#12161b}
-@media (min-width:860px){.lp-fields{grid-template-columns:repeat(3,1fr)}.lp-field{padding:72px 32px 80px;min-height:420px}.lp-field > div{margin:0}}
 .lp-finder{padding:88px 0}
 .lp-finder .lp-wrap{display:grid;gap:36px;align-items:center}
 .lp-finder h2{font-size:clamp(30px,5.5vw,52px);line-height:1.15;margin:0 0 16px}
 .lp-finder p{font-size:17px;line-height:1.7;margin:0 0 12px;max-width:34ch}
 .lp-finder svg{display:block;width:100%;height:auto}
 @media (min-width:860px){.lp-finder .lp-wrap{grid-template-columns:1.15fr 1fr}}
-.lp-cta{background:#d9480f;color:#fff;padding:72px 0 64px;overflow:hidden}
-.lp-cta .big{font-size:clamp(120px,32vw,360px);line-height:.95;font-weight:700;letter-spacing:-.03em;margin:0 0 24px}
-.lp-cta .lp-wrap{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px}
-.lp-cta .btn{background:#fff;border-color:#fff;color:#12161b;padding:14px 26px;font-size:17px}
-.lp-cta p{margin:0;font-size:17px}
+
+/* ===== 登入頁（攝影師的取景視窗）：中性近黑、取景三分線與四角、相機顯示屏式的數字、橘色只當快門鈕 ===== */
+.lp-hero{position:relative;padding:28px 0 88px}
+.lp-guides{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.lp-guides line{stroke:#fff;stroke-opacity:.09;stroke-width:1;vector-effect:non-scaling-stroke}
+.lp-corner{position:absolute;width:28px;height:28px;border:0 solid rgba(255,255,255,.55)}
+.lp-corner.tl{left:16px;top:16px;border-width:2px 0 0 2px}
+.lp-corner.tr{right:16px;top:16px;border-width:2px 2px 0 0}
+.lp-corner.bl{left:16px;bottom:16px;border-width:0 0 2px 2px}
+.lp-corner.br{right:16px;bottom:16px;border-width:0 2px 2px 0}
+.lp-hero .lp-wrap{position:relative}
+.lp-read{padding:88px 0}
+.lp-nums{display:grid;gap:40px;margin:0}
+.lp-nums dt{display:flex;align-items:center;gap:8px;font-size:18px;color:var(--ink);order:2;margin-top:6px}
+.lp-nums dt::before{content:"";width:8px;height:8px;border-radius:50%;background:#d9480f;flex:none}
+.lp-nums dd{margin:0;order:1}
+.lp-nums .n{font-family:var(--display);font-size:clamp(88px,20vw,150px);line-height:.9;font-weight:600;letter-spacing:-.01em;display:block}
+.lp-nums .d{display:block;order:3;font-size:15px;line-height:1.65;color:var(--muted);margin-top:6px;max-width:32ch}
+.lp-nums > div{display:flex;flex-direction:column}
+@media (min-width:860px){.lp-nums{grid-template-columns:repeat(3,1fr);gap:48px}}
+.lp-end{padding:96px 0 72px}
+.lp-end h2{font-size:clamp(30px,5.5vw,56px);line-height:1.2;margin:0 0 28px;max-width:16em}
+.lp-end .gbtn{margin-top:0}
