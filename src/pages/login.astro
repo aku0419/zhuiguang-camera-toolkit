@@ -1,15 +1,86 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SunArc from "../components/SunArc.astro";
+import { cameras } from "../lib/cameras.js";
+import { lenses } from "../lib/lenses.js";
+import { TOOLS } from "../data/site.js";
+const brands = [...new Set(cameras.map((c) => c.brand))];
 ---
-<BaseLayout title="登入" description="用 Google 帳號登入逐光｜攝影工具組。" gate={false}>
-  <div class="login">
-    <p class="eyebrow">Sign in</p>
-    <h1>登入逐光</h1>
-    <p class="lead">用 Google 帳號登入就能使用全部查詢與計算工具，免費。</p>
-    <button class="btn primary gbtn" type="button" id="login">用 Google 帳號登入</button>
-    <p class="hint" id="err" hidden></p>
-    <p class="hint">登入只會用到你的 Google 帳號 Email，用來辨識你是誰。詳情見<a href="/privacy/">隱私權政策</a>與<a href="/terms/">服務條款</a>。登入即表示你同意這兩份文件。</p>
-  </div>
+<BaseLayout title="登入" description="給攝影師的免費工具箱：攝影機與鏡頭資料庫、快門角度、景深、ND、太陽軌跡與手機取景。用 Google 帳號登入逐光。" gate={false} bodyClass="login-page">
+  <section class="lp-hero">
+    <div class="lp-wrap">
+      <div class="lp-brand"><img src="/logo.svg" alt="" width="30" height="30" /><b>Zhuiguang</b><span>逐光</span></div>
+      <div class="lp-hero-grid">
+        <div class="lp-copy">
+          <h1 aria-label="逐光｜攝影工具組">逐光<span>攝影工具組</span></h1>
+          <p class="lp-sub">給攝影師的免費工具箱：查機型、配鏡頭、算曝光，連日落時間都幫你算好。</p>
+          <button class="btn primary gbtn" type="button" data-login>用 Google 帳號登入</button>
+          <p class="lp-err" id="err" hidden></p>
+          <p class="lp-note">完全免費。登入只會用到你的 Google 帳號 Email，用來辨識你是誰。詳情見<a href="/privacy/">隱私權政策</a>與<a href="/terms/">服務條款</a>，登入即表示你同意這兩份文件。</p>
+        </div>
+        <SunArc />
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-fields">
+    <div class="lp-field orange"><div>
+      <span class="n">{cameras.length}</span>
+      <h2>台攝影機</h2>
+      <p>錄影模式、位元率、記憶卡、Log、時間碼。{brands.join("、")}。</p>
+    </div></div>
+    <div class="lp-field gold"><div>
+      <span class="n">{lenses.length}</span>
+      <h2>支鏡頭</h2>
+      <p>接環、涵蓋片幅、焦段，自動列出能裝在哪些相機上。</p>
+    </div></div>
+    <div class="lp-field light"><div>
+      <span class="n">{TOOLS.length}</span>
+      <h2>個計算工具</h2>
+      <p>快門角度、升降格、ND、景深、錄影容量、太陽軌跡，手機就能算。</p>
+    </div></div>
+  </section>
+
+  <section class="lp-finder">
+    <div class="lp-wrap">
+      <svg viewBox="0 0 600 340" role="img" aria-label="手機取景示意：在畫面上同時疊出 35、50、85 毫米拍出來的範圍框">
+        <rect width="600" height="340" fill="#1a2027"/>
+        <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="square">
+          <path d="M26 66V26h40M534 26h40v40M574 274v40h-40M66 314H26v-40"/>
+        </g>
+        <g fill="none" stroke="#fff" stroke-width="1.5" stroke-dasharray="8 6">
+          <rect x="70" y="40.5" width="460" height="259"/>
+          <rect x="217" y="123.25" width="166" height="93.5"/>
+        </g>
+        <rect x="139" y="79.5" width="322" height="181" fill="none" stroke="#ffd54f" stroke-width="3"/>
+        <g stroke="#ffd54f" stroke-opacity=".5" stroke-width="1">
+          <path d="M246.3 79.5v181M353.7 79.5v181M139 139.8h322M139 200.2h322"/>
+        </g>
+        <g font-weight="700" font-size="15">
+          <text x="80" y="62" fill="#fff">35mm</text>
+          <text x="149" y="101" fill="#ffd54f" font-size="17">50mm</text>
+          <text x="227" y="145" fill="#fff">85mm</text>
+        </g>
+        <text x="30" y="332" fill="#ffd54f" font-size="15">Sony FX3　50mm　水平視角 39.2°　16:9</text>
+      </svg>
+      <div>
+        <h2>用手機先取景</h2>
+        <p>選你的攝影機和鏡頭，手機相機一開，畫面上就出現 35、50、85mm 拍出來的範圍框。</p>
+        <p>還能把太陽的路徑疊在眼前的景色上，先知道光會從哪裡來。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-cta">
+    <div class="lp-wrap">
+      <p class="big" aria-hidden="true">逐光</p>
+      <div>
+        <p>免費使用，用 Google 帳號登入。</p>
+        <p style="margin-top:14px"><button class="btn" type="button" data-login>用 Google 帳號登入</button></p>
+      </div>
+    </div>
+  </section>
+
   <script>
     import { configured, currentUser, signInWithGoogle, safeNext } from "../lib/auth.js";
     const err = document.getElementById("err");
@@ -27,7 +98,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         location.replace(next);
       }
     })();
-    document.getElementById("login").addEventListener("click", async () => {
+    for (const b of document.querySelectorAll("[data-login]")) b.addEventListener("click", async () => {
       if (!configured) { show("登入功能還在設定中，暫時無法登入，抱歉。"); return; }
       try { await signInWithGoogle(); }
       catch (e) { show("登入沒有成功，請再試一次。如果一直失敗，請用「回報問題」告訴我們。"); }

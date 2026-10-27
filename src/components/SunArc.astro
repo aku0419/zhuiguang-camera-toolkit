@@ -1,0 +1,45 @@
+---
+// 今天台北的太陽高度曲線：黃金時刻（橘）、藍調時刻（藍）、現在的位置，加上日出、黃金時刻、日落時間。
+// 用瀏覽器算（沿用太陽軌跡工具的算式），不傳送任何資料。
+---
+<figure class="sunarc" data-sunarc>
+  <svg viewBox="0 0 640 300" role="img" aria-label="今天台北的太陽高度曲線，標出黃金時刻與藍調時刻"></svg>
+  <dl class="sunarc-read">
+    <div><dt>日出</dt><dd data-r="rise">—</dd></div>
+    <div class="wide"><dt>傍晚黃金時刻</dt><dd data-r="golden">—</dd></div>
+    <div><dt>日落</dt><dd data-r="set">—</dd></div>
+  </dl>
+</figure>
+<script>
+  import { sunTimes, sunPosition, fmtClock } from "../lib/calc.js";
+  for (const box of document.querySelectorAll<HTMLElement>("[data-sunarc]")) {
+    const LAT = 25.033, LON = 121.5654, TZ = 8;
+    const [y, m, d] = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Taipei", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()).split("-").map(Number);
+    const t = sunTimes(y, m, d, LAT, LON, TZ);
+    const f = (ms: number | null) => (ms == null ? "—" : fmtClock(ms, TZ));
+    const set = (k: string, v: string) => { const el = box.querySelector(`[data-r="${k}"]`); if (el) el.textContent = v; };
+    set("rise", f(t.sunrise)); set("set", f(t.sunset)); set("golden", `${f(t.goldenEveningStart)}–${f(t.goldenEveningEnd)}`);
+
+    const W = 640, X0 = 20, X1 = 620, HY = 250, K = 3;      // 地平線在 y=250，每度高 3 像素
+    // 只畫日出前 1.5 小時到日落後 1.5 小時，曲線才會撐滿畫面
+    const rs = t.sunrise != null ? (t.sunrise - t.start) / 60000 : 0, ss = t.sunset != null ? (t.sunset - t.start) / 60000 : 1440;
+    const M0 = Math.max(0, rs - 90), M1 = Math.min(1440, ss + 90), N = 240, step = (M1 - M0) / N;
+    const X = (min: number) => X0 + ((X1 - X0) * (min - M0)) / (M1 - M0);
+    const Y = (alt: number) => HY - Math.max(-12, Math.min(72, alt)) * K;
+    const col = (alt: number): [string, number] => alt > 6 ? ["#ffe066", 4] : alt > -4 ? ["#ff8a00", 8] : alt > -6 ? ["#4f8cff", 8] : ["#3a4552", 2];
+    let svg = `<line x1="${X0}" y1="${HY}" x2="${X1}" y2="${HY}" stroke="#3a4552" stroke-width="1"/>`;
+    let prev: { x: number; y: number } | null = null;
+    for (let i = 0; i <= N; i++) {
+      const min = M0 + i * step, alt = sunPosition(t.start + min * 60000, LAT, LON).altitude;
+      const p = { x: X(min), y: Y(alt) };
+      if (prev) { const [c, w] = col(alt); svg += `<line x1="${prev.x.toFixed(1)}" y1="${prev.y.toFixed(1)}" x2="${p.x.toFixed(1)}" y2="${p.y.toFixed(1)}" stroke="${c}" stroke-width="${w}" stroke-linecap="round"/>`; }
+      prev = p;
+    }
+    for (const h of [6, 9, 12, 15, 18]) if (h * 60 > M0 + 70 && h * 60 < M1 - 70)
+      svg += `<text x="${X(h * 60)}" y="292" text-anchor="middle" fill="#9aa5b1" font-size="13">${String(h).padStart(2, "0")}:00</text>`;
+    const nowMin = Math.max(M0, Math.min(M1, (Date.now() - t.start) / 60000));
+    const na = sunPosition(t.start + nowMin * 60000, LAT, LON).altitude;
+    svg += `<circle cx="${X(nowMin).toFixed(1)}" cy="${Y(na).toFixed(1)}" r="9" fill="#fff3b0" stroke="#ff8a00" stroke-width="3"/>`;
+    box.querySelector("svg")!.innerHTML = svg;
+  }
+</script>

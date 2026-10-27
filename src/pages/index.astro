@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import SearchBox from "../components/SearchBox.astro";
 import ToolGroups from "../components/ToolGroups.astro";
 import Icon from "../components/Icon.astro";
+import SunArc from "../components/SunArc.astro";
 import { sections, PROBLEMS, TOOLS } from "../data/site.js";
 import { cameras } from "../lib/cameras.js";
 
@@ -31,11 +32,9 @@ const SHORT: Record<string, string> = { cameras: "規格與格式", lenses: "接
     ))}
   </div>
 
-  <a class="today" href="/tools/sun-path/" id="today" aria-label="今天台北的日出、黃金時刻與日落，點進去看太陽軌跡">
-    <span class="today-h">今天・台北</span>
-    <span class="today-c"><small>日出</small><b id="t-rise">—</b></span>
-    <span class="today-c wide"><small>傍晚黃金時刻</small><b id="t-golden">—</b></span>
-    <span class="today-c"><small>日落</small><b id="t-set">—</b></span>
+  <a class="today-card" href="/tools/sun-path/" aria-label="今天台北的太陽高度、日出、黃金時刻與日落，點進去看太陽軌跡">
+    <p class="today-h">今天・台北</p>
+    <SunArc />
     <span class="today-go">看太陽軌跡</span>
   </a>
 
@@ -54,16 +53,6 @@ const SHORT: Record<string, string> = { cameras: "規格與格式", lenses: "接
 </BaseLayout>
 
 <script>
-  // 今天台北的日出、黃金時刻、日落（用瀏覽器算，不傳送任何資料）
-  import { sunTimes, fmtClock } from "../lib/calc.js";
-  (() => {
-    const [y, m, d] = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Taipei", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()).split("-").map(Number);
-    const t = sunTimes(y, m, d, 25.033, 121.5654, 8);
-    const f = (ms: number | null) => (ms == null ? "—" : fmtClock(ms, 8));
-    document.getElementById("t-rise")!.textContent = f(t.sunrise);
-    document.getElementById("t-set")!.textContent = f(t.sunset);
-    document.getElementById("t-golden")!.textContent = `${f(t.goldenEveningStart)}–${f(t.goldenEveningEnd)}`;
-  })();
   // 「看全部問題」：預設只顯示前幾個
   const list = document.querySelector<HTMLElement>(".problems")!;
   const det = document.querySelector<HTMLDetailsElement>(".more-details")!;

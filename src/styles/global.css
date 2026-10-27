@@ -378,14 +378,61 @@ html.gate body{visibility:hidden}
 .tcard:hover{border-color:var(--ink)}
 .hero h1{font-size:clamp(22px,4vw,28px);margin-bottom:12px}
 .fb-btn{box-shadow:none}
-.today{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px 12px;margin:14px 0 0;padding:14px 16px;background:var(--paper);border:1px solid var(--line);border-radius:12px;text-decoration:none;color:var(--ink)}
-.today:hover{border-color:var(--ink)}
-.today-h{grid-column:1 / -1;font-size:13px;color:var(--muted)}
-.today-c{display:flex;flex-direction:column;min-width:0}
-.today-c small{font-size:12.5px;color:var(--muted)}
-.today-c b{font-family:var(--display);font-size:26px;font-weight:600;line-height:1.15;font-variant-numeric:tabular-nums;white-space:nowrap}
-.today-go{grid-column:1 / -1;margin-top:4px;font-size:14px;font-weight:700;color:var(--accent)}
-@media (max-width:430px){.today-c b{font-size:22px}.today{grid-template-columns:1fr 1.7fr 1fr}}
-@media (min-width:720px){.today{grid-template-columns:auto 1fr 1.4fr 1fr auto;align-items:center;gap:0 24px}.today-h,.today-go{grid-column:auto;margin:0}}
-.fb-btn{background:#cf450e}
-.today-go{color:#cf450e}
+
+/* ===== 太陽曲線（首頁、登入頁共用）===== */
+.sunarc{margin:0}
+.sunarc svg{display:block;width:100%;height:auto}
+.sunarc svg text{font-family:var(--body)}
+.sunarc-read{display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:4px 12px;margin:10px 0 0}
+.sunarc-read div{min-width:0}
+.sunarc-read dt{font-size:12.5px;color:#9aa5b1}
+.sunarc-read dd{margin:0;font-family:var(--display);font-size:30px;font-weight:600;line-height:1.15;color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (max-width:430px){.sunarc-read dd{font-size:23px}}
+.today-card{display:block;margin:14px 0 0;padding:16px 16px 14px;background:#12161b;color:#e7ebef;border-radius:12px;text-decoration:none}
+.today-card:hover{outline:2px solid #ff8a00;outline-offset:2px}
+.today-h{margin:0 0 6px;font-size:13px;color:#9aa5b1}
+.today-go{display:inline-block;margin-top:10px;font-size:14px;font-weight:700;color:#ff8a00}
+@media (min-width:720px){.today-card{display:grid;grid-template-columns:1fr 1.15fr;gap:4px 28px;align-items:center;padding:20px 24px}.today-h{grid-column:1 / -1}.today-go{grid-column:1 / -1}}
+
+/* ===== 登入頁（給攝影師看的首頁）===== */
+body.login-page{--bg:#12161b;--paper:#1a2027;--ink:#e7ebef;--muted:#9aa5b1;--line:#2e3742;--soft:#20272f;--accent:#ff7a3d;--accent-ink:#1a1006;overflow-x:clip}
+.login-page .site{max-width:none;padding-inline:0;padding-top:0}
+.login-page .topbar{display:none}
+.login-page main{display:block}
+.login-page .foot{max-width:1080px;margin-inline:auto;padding:24px 16px 48px}
+.lp-wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.lp-hero{padding:28px 0 72px}
+.lp-brand{display:flex;align-items:center;gap:10px;margin-bottom:56px}
+.lp-brand img{width:30px;height:30px}
+.lp-brand b{font-family:var(--display);font-size:22px;letter-spacing:.06em;text-transform:uppercase}
+.lp-brand span{font-size:13px;color:var(--muted)}
+.lp-hero-grid{display:grid;gap:40px;align-items:center}
+.lp-copy h1{font-size:clamp(84px,20vw,168px);line-height:.95;letter-spacing:-.02em;margin:0 0 20px;font-weight:700}
+.lp-copy h1 span{display:block;font-size:clamp(26px,5vw,44px);letter-spacing:0;line-height:1.3;margin-top:10px;color:var(--muted)}
+.lp-sub{font-size:clamp(17px,2.4vw,22px);line-height:1.6;margin:0 0 28px;max-width:30ch;color:var(--ink)}
+.login-page .gbtn{width:auto;padding:14px 26px;font-size:17px;background:#d9480f;border-color:#d9480f;color:#fff}
+.lp-note{font-size:13.5px;color:var(--muted);margin:14px 0 0;max-width:46ch}
+.lp-note a{color:inherit}
+.lp-err{font-size:14px;color:#ffa8a8;margin:12px 0 0}
+@media (min-width:860px){.lp-hero-grid{grid-template-columns:1fr 1.1fr}}
+.lp-fields{display:grid}
+.lp-field{padding:56px 16px 64px;display:flex;flex-direction:column;justify-content:flex-start;min-height:340px}
+.lp-field > div{max-width:420px;margin-inline:auto;width:100%}
+.lp-field .n{font-family:var(--display);font-size:clamp(96px,22vw,168px);line-height:.9;font-weight:700;display:block}
+.lp-field h2{font-size:24px;margin:8px 0 8px}
+.lp-field p{margin:0;font-size:16px;line-height:1.65;max-width:34ch}
+.lp-field.orange{background:#d9480f;color:#fff}
+.lp-field.gold{background:#ffd54f;color:#1a1006}
+.lp-field.light{background:#e7ebef;color:#12161b}
+@media (min-width:860px){.lp-fields{grid-template-columns:repeat(3,1fr)}.lp-field{padding:72px 32px 80px;min-height:420px}.lp-field > div{margin:0}}
+.lp-finder{padding:88px 0}
+.lp-finder .lp-wrap{display:grid;gap:36px;align-items:center}
+.lp-finder h2{font-size:clamp(30px,5.5vw,52px);line-height:1.15;margin:0 0 16px}
+.lp-finder p{font-size:17px;line-height:1.7;margin:0 0 12px;max-width:34ch}
+.lp-finder svg{display:block;width:100%;height:auto}
+@media (min-width:860px){.lp-finder .lp-wrap{grid-template-columns:1.15fr 1fr}}
+.lp-cta{background:#d9480f;color:#fff;padding:72px 0 64px;overflow:hidden}
+.lp-cta .big{font-size:clamp(120px,32vw,360px);line-height:.95;font-weight:700;letter-spacing:-.03em;margin:0 0 24px}
+.lp-cta .lp-wrap{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px}
+.lp-cta .btn{background:#fff;border-color:#fff;color:#12161b;padding:14px 26px;font-size:17px}
+.lp-cta p{margin:0;font-size:17px}
