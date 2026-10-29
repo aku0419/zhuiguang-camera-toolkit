@@ -5,10 +5,10 @@ import ToolHead from "../../components/ToolHead.astro";
 <BaseLayout title="曝光級數計算器" description="比較兩組光圈、快門、ISO，算出差幾級（stop）。例如 f/4 改成 f/2.8 多 1 級。" section="tools">
   <ToolHead title="曝光級數計算器" question="兩組曝光設定，差幾級？" />
   <div class="tool">
-    <p class="label" style="font-weight:700">原本的設定 A</p>
+    <p class="label" style="font-weight:500">原本的設定 A</p>
     <div class="field"><div class="inrow"><span class="unit">f/</span><input id="a-n" type="number" inputmode="decimal" min="0.5" step="any" value="4" aria-label="A 光圈" /><input id="a-t" type="text" value="1/50" aria-label="A 快門" /><input id="a-i" type="number" inputmode="numeric" min="1" step="any" value="400" aria-label="A ISO" /></div>
       <span class="hint">光圈 ／ 快門（1/50 或 0.5 秒）／ ISO</span></div>
-    <p class="label" style="font-weight:700">想改成的設定 B</p>
+    <p class="label" style="font-weight:500">想改成的設定 B</p>
     <div class="field"><div class="inrow"><span class="unit">f/</span><input id="b-n" type="number" inputmode="decimal" min="0.5" step="any" value="2.8" aria-label="B 光圈" /><input id="b-t" type="text" value="1/50" aria-label="B 快門" /><input id="b-i" type="number" inputmode="numeric" min="1" step="any" value="400" aria-label="B ISO" /></div>
       <span class="hint">光圈 ／ 快門 ／ ISO</span></div>
     <div class="result" aria-live="polite">
